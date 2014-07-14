@@ -6,7 +6,7 @@
   "repository": "https://github.com/75lb/documenter-md.git",
   "main": "./lib/documenter-md.js",
   "bin": {
-    "documenter-md": "bin/cli.js"
+    "dmd": "bin/cli.js"
   },
   "keywords": [],
   "engines": {
@@ -22,5 +22,8 @@
     "boil-js": "^0.2",
     "object-tools": "^1.1.1",
     "string-tools": "^0.1.5"
+  },
+  "devDependencies": {
+    "tape": "^2.13.3"
   }
 }

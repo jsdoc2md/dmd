@@ -4,3 +4,88 @@
 [![Dependency Status](https://david-dm.org/75lb/documenter-md.svg)](https://david-dm.org/75lb/documenter-md)
 
 #documenter-md
+
+
+##Templating
+Running `jsdoc2md` without a `--template` generates documentation with the default template, which looks like this:
+
+    {{>index}}
+    {{>modules}}
+    {{>globals}}
+    {{>others}}
+    
+###{{>index}}
+Only output if there are at least two modules defined. 
+
+    #Index
+    
+    * Modules
+      * {{>module-name}}
+        * {{>member-names}}
+    * Global
+      * {{>global-name}}
+
+###{{>modules}}
+Outputs one {{>module}} partial per module.
+
+###{{>globals}}
+
+    #Global
+    {{>global-index}}
+    {{>members}}
+
+###{{>members}}
+
+    {{#each (members in=data)}}{{>member}}{{/each~}}
+    {{#each (functions in=data)}}{{>function}}{{/each~}}
+    {{#each (namespaces in=data)}}{{>namespace}}{{/each~}}
+    {{#each (constants in=data)}}{{>constant}}{{/each~}}
+    {{#each (typedefs in=data)}}{{>typedef}}{{/each~}}
+    {{#each (events in=data)}}{{>event}}{{/each~}}
+    {{#each (classes in=data)}}{{>class}}{{/each~}}
+
+###{{>module}}
+
+    {{>head}}
+    {{>body}}
+    {{>module-exported}}  (either a class with index, function or object with index)
+
+###{{>head}}
+
+    {{>anchor}}
+    {{>heading}}{{>name}}
+    
+###{{>body}}
+
+    {{>fields}}
+    
+###{{>fields}}
+
+    {{>description~}}
+    {{>params~}}
+    {{>deprecated~}}
+    {{>augments~}}
+    {{>memberof~}}
+    {{>type~}}
+    {{>default~}}
+    {{>returns~}}
+    {{>access~}}
+    {{>enum~}}
+    {{>readOnly~}}
+    {{>since~}}
+    {{>version~}}
+    {{>authors~}}
+    {{>license~}}
+    {{>copyright~}}
+    {{>examples~}}
+
+###{{>module-exported}}
+
+    {{>class}}, {{>function}} or {{>module-index}} and {{>members}}
+
+###{{>class}}
+
+    {{>head}}
+    {{>body~}}
+    {{>class-members-index~}}
+    {{>members-grouped~}}
