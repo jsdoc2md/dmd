@@ -15,7 +15,7 @@ test("returns correct data", function(t){
     
     fs.createReadStream("test/fixture/class.json").pipe(dmd()).on("readable", function(){
         var md = this.read();
-        t.ok(/this module exports a class constructor/.test(md));
+        if (md) t.ok(/this module exports a class constructor/.test(md.toString()));
     });
 });
 
@@ -30,7 +30,7 @@ test("cli check", function(t){
     });
     handle.on("close", function(){
         var md = fs.readFileSync("tmp/class.md", "utf8");
-        t.ok(/this module exports a class constructor/.test(md));
+        if (md) t.ok(/this module exports a class constructor/.test(md.toString()));
     });
 });
 

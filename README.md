@@ -7,7 +7,7 @@
 Documenter is a transform stream taking javascript doclet data in (produced by jsdoc-parse or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Synopsis
-```sh
+```
 $ # inspect some doclet data
 $ cat examples/doclet.json
 [
