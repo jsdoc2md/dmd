@@ -131,3 +131,21 @@ Outputs one {{>module}} partial per module.
     {{>body~}}
     {{>class-members-index~}}
     {{>members-grouped~}}
+    
+#API Reference
+<a name="module_documenter-md"></a>
+##documenterMd(options) ⏏
+Transforms doclet data into markdown documentation
+
+**Params**
+
+- options `object` - The render options
+  - [template] `string` - A handlebars template to insert your documentation into.
+  - [partials] `string` | `Array.<string>` - overrides
+  - [helpers] `string` | `Array.<string>` - overrides
+  - [heading-depth] `number` - Root heading depth, defaults to 2.
+
+**Returns**: `stream` - A readable stream containing the rendered markdown  
+
+
+*documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*

@@ -3,4 +3,6 @@
 
 var documenterMd = require("../");
 
-process.stdin.pipe(documenterMd()).pipe(process.stdout);
+process.stdin.pipe(documenterMd({
+    partials: "test/fixture/head.hbs"
+})).pipe(process.stdout);
