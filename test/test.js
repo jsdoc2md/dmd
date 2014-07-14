@@ -34,3 +34,6 @@ test("cli check", function(t){
     });
 });
 
+test("partials");
+test("headers");
+test("plugins");
