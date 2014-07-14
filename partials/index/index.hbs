@@ -1,10 +1,30 @@
-{{#if (sizeBetween (modules) 2) ~}}
+{{!#if (sizeBetween (modules) 2) ~}}
 
 {{>heading}}Index
 
 {{>indent}}* Modules
 {{index-depth-bump~}}
 {{#each (modules)~}}
+{{>index-row}}
+{{index-depth-bump~}}
+{{>index-children~}}
+{{index-depth-drop~}}
+{{/each}}
+{{index-depth-drop~}}
+
+{{>indent}}* Classes
+{{index-depth-bump~}}
+{{#each (classes)~}}
+{{>index-row}}
+{{index-depth-bump~}}
+{{>index-children~}}
+{{index-depth-drop~}}
+{{/each}}
+{{index-depth-drop~}}
+
+{{>indent}}* Namespaces
+{{index-depth-bump~}}
+{{#each (namespaces)~}}
 {{>index-row}}
 {{index-depth-bump~}}
 {{>index-children~}}
@@ -19,4 +39,4 @@
 {{index-depth-drop~}}
 {{/with~}}
 
-{{/if~}}
+{{!/if~}}
