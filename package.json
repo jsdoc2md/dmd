@@ -1,10 +1,10 @@
 {
-  "name": "documenter-md",
+  "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.1.0",
-  "description": "documenter-md",
-  "repository": "https://github.com/75lb/documenter-md.git",
-  "main": "./lib/documenter-md.js",
+  "description": "dmd",
+  "repository": "https://github.com/75lb/dmd.git",
+  "main": "./lib/dmd.js",
   "bin": {
     "dmd": "bin/cli.js"
   },

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 
-var documenterMd = require("../");
+var dmd = require("../");
 
-process.stdin.pipe(documenterMd({
+process.stdin.pipe(dmd({
     // partials: "test/fixture/head.hbs"
     // plugins: [ "documenter-md-patch" ]
 })).pipe(process.stdout);

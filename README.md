@@ -1,9 +1,9 @@
-[![view on npm](http://img.shields.io/npm/v/documenter-md.svg)](https://www.npmjs.org/package/documenter-md)
-[![npm module downloads per month](http://img.shields.io/npm/dm/documenter-md.svg)](https://www.npmjs.org/package/documenter-md)
-[![Build Status](https://travis-ci.org/75lb/documenter-md.svg?branch=master)](https://travis-ci.org/75lb/documenter-md)
-[![Dependency Status](https://david-dm.org/75lb/documenter-md.svg)](https://david-dm.org/75lb/documenter-md)
+[![view on npm](http://img.shields.io/npm/v/dmd.svg)](https://www.npmjs.org/package/dmd)
+[![npm module downloads per month](http://img.shields.io/npm/dm/dmd.svg)](https://www.npmjs.org/package/dmd)
+[![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
+[![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
-#documenter-md
+#dmd
 A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Synopsis
@@ -29,11 +29,11 @@ I am a global variable
 ###As a library
 Install:
 ```sh
-$ npm install documenter-md --save
+$ npm install dmd --save
 ```
 Example:
 ```js
-var documenterMd = require("documenter-md");
+var documenterMd = require("dmd");
 
 process.stdin.pipe(documenterMd()).pipe(process.stdout);
 ```
@@ -41,7 +41,7 @@ process.stdin.pipe(documenterMd()).pipe(process.stdout);
 ###At the command line
 Install the `dmd` tool globally: 
 ```sh
-$ npm install -g documenter-md
+$ npm install -g dmd
 ```
 Example:
 ```sh
@@ -133,17 +133,17 @@ Outputs one {{>module}} partial per module.
     {{>members-grouped~}}
     
 #API Reference
-<a name="module_documenter-md"></a>
-##documenterMd(options) ⏏
+<a name="module_dmd"></a>
+##dmd(options) ⏏
 Transforms doclet data into markdown documentation
 
 **Params**
 
 - options `object` - The render options
   - [template] `string` - A handlebars template to insert your documentation into.
-  - [partials] `string` | `Array.<string>` - overrides
-  - [helpers] `string` | `Array.<string>` - overrides
-  - [plugins] `string` | `Array.<string>` - packages containing overrides
+  - [partial] `string` | `Array.<string>` - overrides
+  - [helper] `string` | `Array.<string>` - overrides
+  - [plugin] `string` | `Array.<string>` - packages containing overrides
   - [heading-depth] `number` - Root heading depth, defaults to 2.
 
 **Returns**: `stream` - A readable stream containing the rendered markdown  
