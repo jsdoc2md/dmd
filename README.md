@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/documenter-md.svg)](https://david-dm.org/75lb/documenter-md)
 
 #documenter-md
-Documenter is a transform stream taking javascript doclet data in (produced by jsdoc-parse or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+A transform stream taking javascript doclet data in (produced by jsdoc-parse or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Synopsis
 ```
@@ -23,6 +23,29 @@ $ cat examples/doclet.json | dmd
 
 ##fatUse
 I am a global variable
+```
+
+##Usage
+###As a library
+Install:
+```sh
+$ npm install documenter-md --save
+```
+Example:
+```js
+var documenterMd = require("documenter-md");
+
+process.stdin.pipe(documenterMd()).pipe(process.stdout);
+```
+
+###At the command line
+Install the `dmd` tool globally: 
+```sh
+$ npm install -g documenter-md
+```
+Example:
+```sh
+$ cat examples/doclet.json | dmd
 ```
 
 ##Templating
