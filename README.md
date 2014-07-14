@@ -8,7 +8,6 @@ Documenter is a transform stream taking javascript doclet data in (produced by j
 
 ##Synopsis
 ```
-$ # inspect some doclet data
 $ cat examples/doclet.json
 [
     {
@@ -18,7 +17,7 @@ $ cat examples/doclet.json
         "scope": "global"
     }
 ]
-$ # pipe it through document-md
+
 $ cat examples/doclet.json | dmd
 #Global
 
