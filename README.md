@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/documenter-md.svg)](https://david-dm.org/75lb/documenter-md)
 
 #documenter-md
-A transform stream taking javascript doclet data in (produced by jsdoc-parse or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Synopsis
 ```
@@ -143,6 +143,7 @@ Transforms doclet data into markdown documentation
   - [template] `string` - A handlebars template to insert your documentation into.
   - [partials] `string` | `Array.<string>` - overrides
   - [helpers] `string` | `Array.<string>` - overrides
+  - [plugins] `string` | `Array.<string>` - packages containing overrides
   - [heading-depth] `number` - Root heading depth, defaults to 2.
 
 **Returns**: `stream` - A readable stream containing the rendered markdown  
