@@ -1,0 +1,8 @@
+[
+    {
+        "name": "fatUse",
+        "kind": "member",
+        "description": "I am a global variable",
+        "scope": "global"
+    }
+]
