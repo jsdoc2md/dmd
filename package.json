@@ -1,0 +1,26 @@
+{
+  "name": "documenter-md",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "documenter-md",
+  "repository": "https://github.com/75lb/documenter-md.git",
+  "main": "./lib/documenter-md.js",
+  "bin": {
+    "documenter-md": "bin/cli.js"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "lint": "jshint lib/*.js bin/*.js test/*.js; echo",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo"
+  },
+  "dependencies": {
+    "array-tools": "^1.1.5",
+    "documenter": "0.0.0",
+    "object-tools": "^1.1.1",
+    "string-tools": "^0.1.5"
+  }
+}

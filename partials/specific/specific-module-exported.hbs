@@ -1,0 +1,7 @@
+{{#if name~}}
+  {{#with (findWhere @root kind="module" name=name)~}}
+  {{>module-exported~}}
+  {{/with~}}
+{{else~}}
+  {{>module-exported~}}
+{{/if~}}
