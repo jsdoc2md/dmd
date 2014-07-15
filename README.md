@@ -65,7 +65,7 @@ Transforms doclet data into markdown documentation
   - [plugin] `string` | `Array.<string>` - packages containing overrides
   - [heading-depth] `number` - Root heading depth, defaults to 2.
 
-**Returns**: `stream` - A readable stream containing the rendered markdown  
+**Returns**: `stream` - A transform stream - pipe doclet data in to receive rendered markdown.  
 
 
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
