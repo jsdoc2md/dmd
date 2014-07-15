@@ -1,3 +1,4 @@
+{{heading-depth-bump~}}
 {{#if (constructorHasDocs)}}{{set "isConstructor" true~}}{{>function}}{{/if~}}
 {{#with (children)~}}
 {{#each (members)}}{{>member}}{{/each~}}
@@ -8,3 +9,4 @@
 {{#each (events)}}{{>event}}{{/each~}}
 {{#each (classes)}}{{>class}}{{/each~}}
 {{/with~}}
+{{heading-depth-drop~}}

@@ -4,7 +4,7 @@ module.exports = function(handlebars){
     handlebars.registerHelper("class", function(options){
         var selectedClass = a.findWhere(options.data.root, {
             kind: "class",
-            name: new RegExp(options.hash.name)
+            name: new RegExp("^(module:)?" + options.hash.name + "$")
         });
         if (selectedClass){
             return options.fn(selectedClass);
