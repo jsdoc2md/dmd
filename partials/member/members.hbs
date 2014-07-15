@@ -1,7 +1,10 @@
-{{#each (members in=data)}}{{>member}}{{/each~}}
-{{#each (functions in=data)}}{{>function}}{{/each~}}
-{{#each (namespaces in=data)}}{{>namespace}}{{/each~}}
-{{#each (constants in=data)}}{{>constant}}{{/each~}}
-{{#each (typedefs in=data)}}{{>typedef}}{{/each~}}
-{{#each (events in=data)}}{{>event}}{{/each~}}
-{{#each (classes in=data)}}{{>class}}{{/each~}}
+{{#if (constructorHasDocs)}}{{set "isConstructor" true~}}{{>function}}{{/if~}}
+{{#with (children)~}}
+{{#each (members)}}{{>member}}{{/each~}}
+{{#each (functions)}}{{>function}}{{/each~}}
+{{#each (namespaces)}}{{>namespace}}{{/each~}}
+{{#each (constants)}}{{>constant}}{{/each~}}
+{{#each (typedefs)}}{{>typedef}}{{/each~}}
+{{#each (events)}}{{>event}}{{/each~}}
+{{#each (classes)}}{{>class}}{{/each~}}
+{{/with~}}
