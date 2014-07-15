@@ -7,6 +7,7 @@ module.exports = function(handlebars){
             name: new RegExp("^(module:)?" + options.hash.name + "$")
         });
         if (selectedClass){
+            selectedClass.isConstructor = false;
             return options.fn(selectedClass);
         } else {
             return "ERROR: CLASS NOT FOUND"
