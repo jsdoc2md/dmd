@@ -1,4 +1,4 @@
-{{!#if (sizeBetween (modules) 2) ~}}
+{{#if (sizeBetween (allMembers) 3) ~}}
 
 {{>heading}}Index
 
@@ -14,7 +14,7 @@
 
 {{>indent}}* Classes
 {{index-depth-bump~}}
-{{#each (classes)~}}
+{{#each (orphanClasses)~}}
 {{>index-row}}
 {{index-depth-bump~}}
 {{>index-children~}}
@@ -39,4 +39,4 @@
 {{index-depth-drop~}}
 {{/with~}}
 
-{{!/if~}}
+{{/if~}}

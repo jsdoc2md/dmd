@@ -1,5 +1,5 @@
 {{>index~}}
-{{>modules~}}
-{{>classes~}}
-{{>namespaces~}}
+{{#each (modules)}}{{>module}}{{/each~}}
+{{#each (orphanClasses)}}{{>class}}{{/each~}}
+{{#each (orphanNamespaces)}}{{>namespace}}{{/each~}}
 {{>globals}}
