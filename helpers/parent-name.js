@@ -12,7 +12,9 @@ module.exports = function(handlebars){
                 return this.scope === "instance"
                     ? instantiate(parentClass.alias || parentClass.name)
                     : parentClass.alias || parentClass.name;
+            } else {
+                return this.memberof;
             }
-        }        
+        }
     });
 };
