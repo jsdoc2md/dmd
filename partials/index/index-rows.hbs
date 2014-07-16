@@ -1,7 +1,0 @@
-{{#each (groupByKind data)}}{{>index-row}}{{/each~}}
-
-{{#each (classes in=data)~}}
-  {{set "isConstructor" false~}}{{>index-row~}}
-  {{#if (constructorHasDocs)}}{{set "isConstructor" true}}{{>index-row~}}{{/if~}}
-  {{>index-children~}}
-{{/each~}}
