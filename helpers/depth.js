@@ -27,11 +27,11 @@ module.exports = function(handlebars){
         options.data.root.options._indexDepth = 0;
     });
 
-    handlebars.registerHelper("index-depth-bump", function(options){
+    handlebars.registerHelper("≥", function(options){
         options.data.root.options._indexDepth++;
     });
 
-    handlebars.registerHelper("index-depth-drop", function(options){
+    handlebars.registerHelper("≤", function(options){
         options.data.root.options._indexDepth--;
     });
 

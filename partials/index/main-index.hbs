@@ -1,0 +1,38 @@
+{{#if (sizeBetween (allMembers) 3) ~}}
+
+{{>heading}}Index
+
+{{#if (sizeBetween (modules) 1)~}}
+**Modules**
+
+{{#each (modules)~}}
+  {{>index~}}
+{{/each~}}
+
+{{/if~}}
+
+{{#if (sizeBetween (orphanClasses) 1)}}
+**Classes**
+
+{{#each (orphanClasses)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (namespaces) 1)}}
+**Namespaces**
+
+{{#each (namespaces)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (globals) 1)}}
+**Global**
+
+{{#each (globals)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{/if}}

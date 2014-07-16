@@ -1,50 +1,19 @@
-{{#if (sizeBetween (allMembers) 3) ~}}
-
-{{>heading}}Index
-
-{{#if (sizeBetween (modules) 1)~}}
-{{>indent}}* Modules
-{{index-depth-bump~}}
-{{#each (modules)~}}
-{{>index-row}}
-{{index-depth-bump~}}
-{{>index-children~}}
-{{index-depth-drop~}}
-{{/each}}
-{{index-depth-drop~}}
-{{/if~}}
-
-{{#if (sizeBetween (orphanClasses) 1)~}}
-{{>indent}}* Classes
-{{index-depth-bump~}}
-{{#each (orphanClasses)~}}
-{{>index-row}}
-{{index-depth-bump~}}
-{{>index-children~}}
-{{index-depth-drop~}}
-{{/each}}
-{{index-depth-drop~}}
-{{/if~}}
-
-{{#if (sizeBetween (namespaces) 1)~}}
-{{>indent}}* Namespaces
-{{index-depth-bump~}}
-{{#each (namespaces)~}}
-{{>index-row}}
-{{index-depth-bump~}}
-{{>index-children~}}
-{{index-depth-drop~}}
-{{/each}}
-{{index-depth-drop~}}
-{{/if~}}
-
-{{#if (sizeBetween (globals) 1)~}}
-{{>indent}}* Global
-{{#with (globals)~}}
-{{index-depth-bump~}}
-{{>index-rows data=this}}
-{{index-depth-drop~}}
-{{/with~}}
-{{/if~}}
-
-{{/if~}}
+{{>index-row~}}
+{{#if (equal kind "module")~}}
+  {{#with (exported)~}}
+    {{#unless (equal kind "module")~}}{{≥~}}{{>index-row~}}{{/unless~}}
+    {{≥~}}
+    {{#each (children)~}}
+      {{>index~}}
+    {{/each~}}
+    {{#unless (equal kind "module")~}}{{≤~}}{{/unless~}}
+    {{≤~}}
+  {{/with~}}
+{{else~}}
+  {{≥~}}
+  {{>constructor~}}
+  {{#each (children)~}}
+    {{>index~}}
+  {{/each~}}
+  {{≤~}}
+{{/if}}

@@ -1,6 +1,7 @@
 {{#with (globals)~}}
 {{>heading}}Global
 {{#if (sizeBetween this 2)~}}
+  {{index-depth-bump~}}
   {{>index-rows data=this}}
 {{/if~}}
 {{>members~}}

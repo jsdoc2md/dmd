@@ -1,9 +1,5 @@
 {{#if (sizeBetween (children) 2) }}{{index-depth-reset~}}
 
 **Members**
-
-{{#if (constructorHasDocs)}}{{set "isConstructor" true}}{{>index-row}}
-{{/if~}}
-
-{{>index-children}}
+{{>index-children~}}
 {{/if}}

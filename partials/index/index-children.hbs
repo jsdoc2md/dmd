@@ -1,13 +1,10 @@
-{{#with (children)~}}
+{{index-depth-bump~}}
 
-{{#with (instance-scope in=this)~}}
-{{>index-rows data=this~}}
-{{/with~}}
-{{#with (static-scope in=this)~}}
-{{>index-rows data=this~}}
-{{/with~}}
-{{#with (inner-scope in=this)~}}
-{{>index-rows data=this~}}
+{{set "isConstructor" false~}}
+{{#if (constructorHasDocs)}}{{set "isConstructor" true}}{{>index-row~}}{{/if~}}
+
+{{#with (groupByScope (children)) ~}}
+  {{>index-rows data=this~}}
 {{/with~}}
 
-{{/with~}}
+{{index-depth-drop~}}
