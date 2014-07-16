@@ -11,10 +11,11 @@
 
 {{/if~}}
 
-{{#if (sizeBetween (orphanClasses) 1)}}
+{{#with (parents)~}}
+{{#if (sizeBetween (classes) 1)}}
 **Classes**
 
-{{#each (orphanClasses)~}}
+{{#each (classes)~}}
   {{>index~}}
 {{/each~}}
 {{/if~}}
@@ -27,12 +28,46 @@
 {{/each~}}
 {{/if~}}
 
-{{#if (sizeBetween (globals) 1)}}
-**Global**
+{{#if (sizeBetween (constants) 1)}}
+**Constants**
 
-{{#each (globals)~}}
+{{#each (constants)~}}
   {{>index~}}
 {{/each~}}
 {{/if~}}
 
+{{#if (sizeBetween (events) 1)}}
+**Events**
+
+{{#each (events)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (functions) 1)}}
+**Functions**
+
+{{#each (functions)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (members) 1)}}
+**Vars**
+
+{{#each (members)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (typedefs) 1)}}
+**Typedefs**
+
+{{#each (typedefs)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+
+{{/with}}
 {{/if}}

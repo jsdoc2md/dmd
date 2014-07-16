@@ -1,6 +1,6 @@
 {{>heading}}Global
 {{#if (sizeBetween (globals) 2)~}}
-  {{#each (globals)~}}
+  {{#each (groupByKind (globals))~}}
     {{>index~}}
   {{/each~}}
 {{/if}}
