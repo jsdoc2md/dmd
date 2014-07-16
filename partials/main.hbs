@@ -1,5 +1,10 @@
 {{>main-index~}}
 {{#each (modules)}}{{>module}}{{/each~}}
-{{#each (orphanClasses)}}{{>class}}{{/each~}}
-{{#each (orphanNamespaces)}}{{>namespace}}{{/each~}}
-{{>globals}}
+{{#with (parents)~}}
+  {{#each (classes)}}{{>class}}{{/each~}}
+  {{#each (namespaces)}}{{>namespace}}{{/each~}}
+  {{#each (events)}}{{>event}}{{/each~}}
+  {{#each (functions)}}{{>function}}{{/each~}}
+  {{#each (members)}}{{>member}}{{/each~}}
+  {{#each (typedefs)}}{{>typedef}}{{/each~}}
+{{/with}}
