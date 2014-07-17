@@ -12,9 +12,13 @@
       {{heading-depth-drop~}}
     {{/with~}}
   {{else~}}
+
+{{#if (sizeBetween (children) 2)~}}
 **Members**
 
 {{>index}}
+{{/if~}}
 {{>members~}}
+
   {{/if~}}
 {{/if~}}

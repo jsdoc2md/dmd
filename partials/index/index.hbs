@@ -4,7 +4,7 @@
   {{#with (exported)~}}
     {{#unless (equal kind "module")~}}{{≥~}}{{>index-row~}}{{/unless~}}
     {{≥~}}
-    {{#each (children)~}}
+    {{#each (groupByKind (children))~}}
       {{>index~}}
     {{/each~}}
     {{#unless (equal kind "module")~}}{{≤~}}{{/unless~}}
@@ -13,7 +13,7 @@
 {{else~}}
   {{≥~}}
   {{>constructor~}}
-  {{#each (children)~}}
+  {{#each (groupByKind (children))~}}
     {{>index~}}
   {{/each~}}
   {{≤~}}
