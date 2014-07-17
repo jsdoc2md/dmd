@@ -6,6 +6,8 @@ module.exports = function(handlebars){
             "!kind": /module|package/,
             memberof: undefined,
             "!longname": /^module:/
-        });
+        }).concat(a.where(options.data.root, {
+            kind: "module"
+        }));
     });
 };
