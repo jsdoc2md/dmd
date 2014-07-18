@@ -1,6 +1,6 @@
 {{>main-index~}}
-{{#each (modules)}}{{>module}}{{/each~}}
 {{#with (parents)~}}
+  {{#each (modules)}}{{>module}}{{/each~}}
   {{#each (classes)}}{{>class}}{{/each~}}
   {{#each (namespaces)}}{{>namespace}}{{/each~}}
   {{#each (events)}}{{>event}}{{/each~}}

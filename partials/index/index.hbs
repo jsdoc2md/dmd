@@ -4,6 +4,7 @@
   {{#with (exported)~}}
     {{#unless (equal kind "module")~}}{{≥~}}{{>index-row~}}{{/unless~}}
     {{≥~}}
+    {{>constructor~}}
     {{#each (groupByKind (children))~}}
       {{>index~}}
     {{/each~}}

@@ -8,7 +8,7 @@ A transform stream taking javascript doclet data in (produced by [jsdoc-parse](h
 
 ##Synopsis
 ```
-$ cat examples/doclet.json
+$ cat examples/input/doclet.json
 [
     {
         "name": "fatUse",
@@ -18,7 +18,7 @@ $ cat examples/doclet.json
     }
 ]
 
-$ cat examples/doclet.json | dmd
+$ cat examples/input/doclet.json | dmd
 #Global
 
 ##fatUse

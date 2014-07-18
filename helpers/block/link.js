@@ -5,7 +5,7 @@ module.exports = function(handlebars){
         return util.format(
             "[%s](#%s)", 
             options.fn(this), 
-            handlebars.helpers.anchorName(this.longname)
+            handlebars.helpers.anchorName.call(this, options)
         );
     });
 };
