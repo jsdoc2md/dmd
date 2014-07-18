@@ -22,6 +22,7 @@ module.exports = function(handlebars){
             } else {
                 var linked = a.findWhere(options.data.root, { longname: longname });
                 if (linked){
+                    linked.isConstructor = false;
                     if (fullName) fullName = fullName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     var linkText = fullName ? fullName.replace(longname, linked.name) : linked.name;
                     return util.format("[%s](#%s)", linkText, handlebars.helpers.anchorName.call(linked, options));
