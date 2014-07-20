@@ -1,0 +1,63 @@
+{{#if (sizeBetween (modules) 1)}}
+**Modules**
+
+{{#each (modules)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (classes) 1)}}
+**Classes**
+
+{{#each (classes)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (namespaces) 1)}}
+**Namespaces**
+
+{{#each (namespaces)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (constants) 1)}}
+**Constants**
+
+{{#each (constants)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (events) 1)}}
+**Events**
+
+{{#each (events)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (functions) 1)}}
+**Functions**
+
+{{#each (functions)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (members) 1)}}
+**Members**
+
+{{#each (members)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}
+
+{{#if (sizeBetween (typedefs) 1)}}
+**Typedefs**
+
+{{#each (typedefs)~}}
+  {{>index~}}
+{{/each~}}
+{{/if~}}

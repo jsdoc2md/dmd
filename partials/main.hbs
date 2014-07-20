@@ -1,10 +1,5 @@
 {{>main-index~}}
-{{#with (parents)~}}
-  {{#each (modules)}}{{>module}}{{/each~}}
-  {{#each (classes)}}{{>class}}{{/each~}}
-  {{#each (namespaces)}}{{>namespace}}{{/each~}}
-  {{#each (events)}}{{>event}}{{/each~}}
-  {{#each (functions)}}{{>function}}{{/each~}}
-  {{#each (members)}}{{>member}}{{/each~}}
-  {{#each (typedefs)}}{{>typedef}}{{/each~}}
-{{/with}}
+{{#each (groupBySection (parents))~}}
+  {{>section~}}
+{{/each}}
+  

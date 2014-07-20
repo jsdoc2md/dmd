@@ -1,12 +1,6 @@
 {{heading-depth-bump~}}
 {{#if (constructorHasDocs)}}{{set "isConstructor" true~}}{{>function}}{{/if~}}
-{{#with (children)~}}
-{{#each (members)}}{{>member}}{{/each~}}
-{{#each (functions)}}{{>function}}{{/each~}}
-{{#each (namespaces)}}{{>namespace}}{{/each~}}
-{{#each (constants)}}{{>constant}}{{/each~}}
-{{#each (typedefs)}}{{>typedef}}{{/each~}}
-{{#each (events)}}{{>event}}{{/each~}}
-{{#each (classes)}}{{>class}}{{/each~}}
-{{/with~}}
+{{#each (groupByKind (children))~}}
+  {{>section~}}
+{{/each~}}
 {{heading-depth-drop~}}

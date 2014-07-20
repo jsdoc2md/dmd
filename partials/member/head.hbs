@@ -1,2 +1,6 @@
-{{>anchor~}}
-{{>heading}}{{>name}}
+{{#if mainIndex~}}
+  {{>main-index-head~}}
+{{else~}}
+  {{>anchor~}}
+  {{>heading}}{{>name}}
+{{/if}}
