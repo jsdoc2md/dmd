@@ -3,6 +3,7 @@ var a = require("array-tools");
 module.exports = function(handlebars){
     handlebars.registerHelper("groupBySection", function(data){
         if(!Array.isArray(data)) throw new Error("[groupBySection] requires an array as input");
+        data = data.slice(0);
         var output = [];
         output = output.concat(a.extract(data, { kind: "module" }));
         output = output.concat(a.extract(data, { kind: "class" }));
