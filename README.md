@@ -4,11 +4,18 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 #dmd
-A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or ny source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+
+##Partials
+
+| Partial name  | Description |
+| ------------- | ----------- |
+| main.hbs | The template that is rendered, taking the doclet json as input |
+
 
 ##Synopsis
-```
-$ cat examples/doclet.json
+`examples/input/doclet.json`:
+```json
 [
     {
         "name": "fatUse",
@@ -17,8 +24,9 @@ $ cat examples/doclet.json
         "scope": "global"
     }
 ]
-
-$ cat examples/doclet.json | dmd
+```
+```
+$ cat examples/input/doclet.json | dmd
 #Global
 
 ##fatUse
@@ -52,7 +60,7 @@ $ cat examples/doclet.json | dmd
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
     
 #API Reference
-<a name="module_dmd"></a>
+<a name="exp_module_dmd"></a>
 ##dmd(options) ⏏
 Transforms doclet data into markdown documentation
 
