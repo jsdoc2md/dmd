@@ -39,7 +39,7 @@ test("linkify", function (t) {
 
     fs.createReadStream("test/fixture/class.json").pipe(dmd()).on("readable", function () {
         var md = this.read();
-        t.ok(md.toString().indexOf('[instance](http://zombo.com)') >= 0);
+        if (md) t.ok(md.toString().indexOf('[instance](http://zombo.com)') >= 0);
     });
 
 });
