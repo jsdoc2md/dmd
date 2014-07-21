@@ -1,4 +1,5 @@
 var a = require("array-tools"),
+    url = require('url'),
     util = require("util");
 
 module.exports = function(handlebars){
@@ -20,13 +21,26 @@ module.exports = function(handlebars){
             if (builtInType){
                 return "`" + (fullName || longname) + "`";
             } else {
-                var linked = a.findWhere(options.data.root, { longname: longname });
+                var linked = a.findWhere(options.data.root, { longname: longname }),
+                    mask;
                 if (linked){
                     linked.isConstructor = false;
                     if (fullName) fullName = fullName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     var linkText = fullName ? fullName.replace(longname, linked.name) : linked.name;
-                    return util.format("[%s](#%s)", linkText, handlebars.helpers.anchorName.call(linked, options));
+                    mask = options.monospace ? "`[%s](#%s)`" : "[%s](#%s)";
+                    return util.format(mask, linkText, handlebars.helpers.anchorName.call(linked, options));
                 } else {
+                    if (url.parse(fullName || longname).protocol) {
+                        switch (options.style) {
+                            case 'code':
+                                mask = '`[%s](%s)`';
+                                break;
+                            case 'plain':
+                            default:
+                                mask = '[%s](%s)';
+                        }
+                        return util.format(mask, options.caption || fullName || longname, fullName || longname);
+                    }
                     return "`" + (fullName || longname) + "`";
                 }
             }
