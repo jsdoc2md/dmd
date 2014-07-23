@@ -1,4 +1,5 @@
 var a = require("array-tools"),
+    url = require('url'),
     util = require("util");
 
 module.exports = function(handlebars){
@@ -15,19 +16,32 @@ module.exports = function(handlebars){
                 longname = longname.match(re)[1];
             }
             
-            var builtInType = /^(string|object|number|boolean|array)$/i.test(longname);
+            var builtInType = /^(string|object|number|boolean|array|regexp|date)$/i.test(longname);
             
             if (builtInType){
-                return "`" + (fullName || longname) + "`";
+                return options.hash.style !== 'plain' ? "`" + (fullName || longname) + "`" : fullName || longname;
             } else {
-                var linked = a.findWhere(options.data.root, { longname: longname });
+                var linked = a.findWhere(options.data.root, { longname: longname }),
+                    mask;
                 if (linked){
                     linked.isConstructor = false;
                     if (fullName) fullName = fullName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     var linkText = fullName ? fullName.replace(longname, linked.name) : linked.name;
-                    return util.format("[%s](#%s)", linkText, handlebars.helpers.anchorName.call(linked, options));
+                    mask = options.hash.style === 'code' ? "<code>[%s](#%s)</code>" : "[%s](#%s)";
+                    return util.format(mask, linkText, handlebars.helpers.anchorName.call(linked, options));
                 } else {
-                    return "`" + (fullName || longname) + "`";
+                    if (url.parse(fullName || longname).protocol) {
+                        switch (options.hash.style) {
+                            case 'code':
+                                mask = '<code>[%s](%s)</code>';
+                                break;
+                            case 'plain':
+                            default:
+                                mask = '[%s](%s)';
+                        }
+                        return util.format(mask, options.hash.caption || fullName || longname, fullName || longname);
+                    }
+                    return options.hash.style !== 'plain' ? "`" + (fullName || longname) + "`" : fullName || longname;
                 }
             }
         }

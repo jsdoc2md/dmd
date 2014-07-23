@@ -34,6 +34,16 @@ test("cli check", function(t){
     });
 });
 
+test("linkify", function (t) {
+    t.plan(1);
+
+    fs.createReadStream("test/fixture/class.json").pipe(dmd()).on("readable", function () {
+        var md = this.read();
+        if (md) t.ok(md.toString().indexOf('[instance](http://zombo.com)') >= 0);
+    });
+
+});
+
 test("partials");
 test("headers");
 test("plugins");
