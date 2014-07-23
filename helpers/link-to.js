@@ -16,10 +16,10 @@ module.exports = function(handlebars){
                 longname = longname.match(re)[1];
             }
             
-            var builtInType = /^(string|object|number|boolean|array)$/i.test(longname);
+            var builtInType = /^(string|object|number|boolean|array|regexp|date)$/i.test(longname);
             
             if (builtInType){
-                return "`" + (fullName || longname) + "`";
+                return options.hash.style !== 'plain' ? "`" + (fullName || longname) + "`" : fullName || longname;
             } else {
                 var linked = a.findWhere(options.data.root, { longname: longname }),
                     mask;
@@ -27,21 +27,21 @@ module.exports = function(handlebars){
                     linked.isConstructor = false;
                     if (fullName) fullName = fullName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     var linkText = fullName ? fullName.replace(longname, linked.name) : linked.name;
-                    mask = options.monospace ? "`[%s](#%s)`" : "[%s](#%s)";
+                    mask = options.hash.style === 'code' ? "<code>[%s](#%s)</code>" : "[%s](#%s)";
                     return util.format(mask, linkText, handlebars.helpers.anchorName.call(linked, options));
                 } else {
                     if (url.parse(fullName || longname).protocol) {
-                        switch (options.style) {
+                        switch (options.hash.style) {
                             case 'code':
-                                mask = '`[%s](%s)`';
+                                mask = '<code>[%s](%s)</code>';
                                 break;
                             case 'plain':
                             default:
                                 mask = '[%s](%s)';
                         }
-                        return util.format(mask, options.caption || fullName || longname, fullName || longname);
+                        return util.format(mask, options.hash.caption || fullName || longname, fullName || longname);
                     }
-                    return "`" + (fullName || longname) + "`";
+                    return options.hash.style !== 'plain' ? "`" + (fullName || longname) + "`" : fullName || longname;
                 }
             }
         }

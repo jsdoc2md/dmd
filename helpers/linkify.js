@@ -16,10 +16,8 @@ module.exports = function (handlebars) {
             var caption = parsedLink[1] || parsedLink[4] || parsedLink[6];
             var style = !!parsedLink[2];
             var target = parsedLink[3] || parsedLink[5];
-            links[parsedLink[0]] = handlebars.helpers.linkTo.call(this, target, o.extend({}, options, {
-                style: style,
-                caption: caption
-            }));
+            options.hash = o.extend({}, options.hash, {style: style, caption: caption});
+            links[parsedLink[0]] = handlebars.helpers.linkTo.call(this, target, options);
         });
         for (var link in links) {
             if (links.hasOwnProperty(link)) {
