@@ -58,5 +58,5 @@
     "memberof": "module:file-set",
     "scope": "instance",
     "codeName": "FileSet.prototype.delete"
-  },
+  }
 ]
