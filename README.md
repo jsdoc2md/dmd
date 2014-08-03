@@ -4,13 +4,15 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 #dmd
-A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or ny source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Partials
 
 | Partial name  | Description |
 | ------------- | ----------- |
-| main.hbs | The template that is rendered, taking the doclet json as input |
+| main.hbs | The template that is rendered, taking the doclet json as input. The jsdoc2md `--json` option will display that data. |
+| main-index.hbs | The main index. Will only be display if at least 2 "parent" identifiers are documented. |
+
 
 
 ##Synopsis
@@ -66,12 +68,12 @@ Transforms doclet data into markdown documentation
 
 **Params**
 
-- options `object` - The render options
-  - [template] `string` - A handlebars template to insert your documentation into.
-  - [partial] `string` | `Array.<string>` - overrides
-  - [helper] `string` | `Array.<string>` - overrides
-  - [plugin] `string` | `Array.<string>` - packages containing overrides
-  - [heading-depth] `number` - Root heading depth, defaults to 2.
+- options `object` - The render options  
+  - \[template\] `string` - A handlebars template to insert your documentation into.  
+  - \[partial\] `string` | `Array.<string>` - overrides  
+  - \[helper\] `string` | `Array.<string>` - overrides  
+  - \[plugin\] `string` | `Array.<string>` - packages containing overrides  
+  - \[heading-depth\] `number` - Root heading depth, defaults to 2.  
 
 **Returns**: `stream` - A transform stream - pipe doclet data in to receive rendered markdown.  
 

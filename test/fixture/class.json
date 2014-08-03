@@ -59,11 +59,4 @@
     "scope": "instance",
     "codeName": "FileSet.prototype.delete"
   },
-  {
-    "files": [
-      "/Users/Lloyd/Documents/75lb/jsdoc-to-markdown/test/input/commonjs/class.js"
-    ],
-    "kind": "package",
-    "longname": "package:undefined"
-  }
 ]

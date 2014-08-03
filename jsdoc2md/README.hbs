@@ -6,11 +6,22 @@
 #dmd
 A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
-##Partials
+##Customise
+No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.
+
+| Helper name  | Description |
+| ------------ | ----------- |
+
+
+##Default Template
+
+###Partials
 
 | Partial name  | Description |
 | ------------- | ----------- |
-| main.hbs | The template that is rendered, taking the doclet json as input |
+| main.hbs | The template that is rendered, taking the doclet json as input. The jsdoc2md `--json` option will display that data. |
+| main-index.hbs | The main index. Will only be display if at least 2 "parent" identifiers are documented. |
+
 
 
 ##Synopsis
