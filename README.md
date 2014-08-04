@@ -3,10 +3,21 @@
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
+***documentation in progress***
+
 #dmd
 A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
-##Partials
+##Customise
+No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.
+
+| Helper name  | Description |
+| ------------ | ----------- |
+
+
+##Default Template
+
+###Partials
 
 | Partial name  | Description |
 | ------------- | ----------- |
@@ -43,9 +54,9 @@ $ npm install dmd --save
 ```
 Example:
 ```js
-var documenterMd = require("dmd");
+var dmd = require("dmd");
 
-process.stdin.pipe(documenterMd()).pipe(process.stdout);
+process.stdin.pipe(dmd()).pipe(process.stdout);
 ```
 
 ###At the command line
