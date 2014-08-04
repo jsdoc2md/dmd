@@ -3,12 +3,14 @@
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
+***documentation in progress***
+
 #dmd
 A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
 ##Synopsis
 ```
-$ cat examples/doclet.json
+$ cat examples/input/doclet.json
 [
     {
         "name": "fatUse",
@@ -18,7 +20,7 @@ $ cat examples/doclet.json
     }
 ]
 
-$ cat examples/doclet.json | dmd
+$ cat examples/input/doclet.json | dmd
 #Global
 
 ##fatUse
@@ -33,9 +35,9 @@ $ npm install dmd --save
 ```
 Example:
 ```js
-var documenterMd = require("dmd");
+var dmd = require("dmd");
 
-process.stdin.pipe(documenterMd()).pipe(process.stdout);
+process.stdin.pipe(dmd()).pipe(process.stdout);
 ```
 
 ###At the command line
@@ -52,18 +54,18 @@ $ cat examples/doclet.json | dmd
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
     
 #API Reference
-<a name="module_dmd"></a>
+<a name="exp_module_dmd"></a>
 ##dmd(options) ⏏
 Transforms doclet data into markdown documentation
 
 **Params**
 
-- options `object` - The render options
-  - [template] `string` - A handlebars template to insert your documentation into.
-  - [partial] `string` | `Array.<string>` - overrides
-  - [helper] `string` | `Array.<string>` - overrides
-  - [plugin] `string` | `Array.<string>` - packages containing overrides
-  - [heading-depth] `number` - Root heading depth, defaults to 2.
+- options `object` - The render options  
+  - \[template\] `string` - A handlebars template to insert your documentation into.  
+  - \[partial\] `string` | `Array.<string>` - overrides  
+  - \[helper\] `string` | `Array.<string>` - overrides  
+  - \[plugin\] `string` | `Array.<string>` - packages containing overrides  
+  - \[heading-depth\] `number` - Root heading depth, defaults to 2.  
 
 **Returns**: `stream` - A transform stream - pipe doclet data in to receive rendered markdown.  
 
