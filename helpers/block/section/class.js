@@ -1,15 +1,14 @@
 var a = require("array-tools");
 
 /**
-@module
+@module helpers
 */
 module.exports = function(handlebars){
     
     /**
     A block helper rendering the contained template in the context of the specified class. 
     
-    @param options.hash {object} - A hash of args passed into the helper
-    @param options.hash.name {string} - The class name to return
+    @param name {string} - The class name to return
     @example
     This template
 

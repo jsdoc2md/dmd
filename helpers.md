@@ -1,16 +1,14 @@
-<a name="module_block/section/class"></a>
-#block/section/class
-<a name="module_block/section/class..getClass"></a>
-##block/section/class~getClass(options)
+<a name="module_helpers"></a>
+#helpers
+<a name="module_helpers..getClass"></a>
+##helpers~getClass(name)
 A block helper rendering the contained template in the context of the specified class.
 
 **Params**
 
-- options `object` - Helper options  
-  - hash `object` - A hash of args passed into the helper  
-  - name `string` - The class name to return  
+- name `string` - The class name to return  
 
-**Scope**: inner function of [block/section/class](#module_block/section/class)  
+**Scope**: inner function of [helpers](#module_helpers)  
 **Example**  
 This template
 
