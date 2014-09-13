@@ -1,41 +1,32 @@
 <ul>
 {{#identifiers memberof=undefind}}
-<li>{{>name}}</li>
+<li>{{>name}}
+  <ul>
+    {{#identifiers memberof=longname sortBy="kind"}}
+    <li>{{>name}}
+      <ul>
+      {{#identifiers memberof=longname sortBy="kind"}}
+      <li>{{>name}}</li>
+      {{/identifiers}}
+      </ul>
+    </li>
+    {{/identifiers}}
+  </ul>
+</li>
 {{/identifiers}}
 </ul>
 
-{{#identifiers memberof=undefind}}
-<h2>{{>name}}</h2>
-<dl>
-  <dt>kind</dt><dd>{{kind}}</dd>
-  <dt>description</dt><dd>{{description}}</dd>
-  <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
-  <dt>examples</dt><dd><code>{{examples}}</code></dd>
-  <dt>scope</dt><dd><code>{{scope}}</code></dd>
+{{#identifiers memberof=undefind sortBy="kind"}}
+  <h2>{{>name}}</h2>
+  {{>identifier-body}}
 
-</dl>
+  {{#identifiers memberof=longname sortBy="kind"}}
+    <h3>{{>name}}</h3>
+    {{>identifier-body}}
 
-{{#identifiers memberof=longname}}
-<h3>{{>name}}</h3>
-<dl>
-  <dt>kind</dt><dd>{{kind}}</dd>
-  <dt>description</dt><dd>{{description}}</dd>
-  <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
-  <dt>examples</dt><dd><code>{{examples}}</code></dd>
-  <dt>memberof</dt><dd><code>{{scope}} {{kind}} of {{linkTo memberof}}</code></dd>
-</dl>
-
-{{#identifiers memberof=longname}}
-<h4>{{>name}}</h4>
-<dl>
-  <dt>kind</dt><dd>{{kind}}</dd>
-  <dt>description</dt><dd>{{description}}</dd>
-  <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
-  <dt>examples</dt><dd><code>{{examples}}</code></dd>
-  <dt>memberof</dt><dd><code>{{scope}} {{kind}} of {{linkTo memberof}}</code></dd>
-</dl>
-{{/identifiers}}
-
-{{/identifiers}}
-
+    {{#identifiers memberof=longname sortBy="kind"}}
+      <h4>{{>name}}</h4>
+      {{>identifier-body}}
+    {{/identifiers}}
+  {{/identifiers}}
 {{/identifiers}}

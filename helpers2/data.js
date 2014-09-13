@@ -23,14 +23,18 @@ function parents(options){
 
 function identifiers(options){
     var query = {};
+    var sortBy = options.hash.sortBy;
+    delete options.hash.sortBy;
+    
     for (var prop in options.hash){
         query[prop] = options.hash[prop];
     }
-    return a.where(options.data.root, query).sort(groupByKind);
+    var output = a.where(options.data.root, query);
+    if (sortBy === "kind") output = output.sort(sortByKind);
+    return output;
 }
 
-function groupByKind(a, b){
+function sortByKind(a, b){
     var order = ["member", "function", "namespace", "constant", "typedef", "event", "class"];
-
     return order.indexOf(a.kind) - order.indexOf(b.kind);
 }

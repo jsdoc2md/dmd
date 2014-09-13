@@ -41,4 +41,19 @@ description
 </panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>360</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Module
+--
+name
+longname
+kind="module"</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

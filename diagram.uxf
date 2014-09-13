@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
-      <y>50</y>
+      <x>20</x>
+      <y>60</y>
       <w>550</w>
       <h>690</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>20</x>
-      <y>80</y>
+      <x>40</x>
+      <y>90</y>
       <w>500</w>
       <h>300</h>
     </coordinates>
@@ -27,8 +27,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>20</x>
-      <y>390</y>
+      <x>40</x>
+      <y>400</y>
       <w>500</w>
       <h>330</h>
     </coordinates>
@@ -38,8 +38,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>50</x>
-      <y>120</y>
+      <x>70</x>
+      <y>130</y>
       <w>430</w>
       <h>30</h>
     </coordinates>
@@ -49,8 +49,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>790</x>
-      <y>40</y>
+      <x>810</x>
+      <y>50</y>
       <w>180</w>
       <h>90</h>
     </coordinates>
@@ -60,8 +60,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>50</x>
-      <y>160</y>
+      <x>70</x>
+      <y>170</y>
       <w>430</w>
       <h>190</h>
     </coordinates>
@@ -71,8 +71,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>720</x>
-      <y>160</y>
+      <x>740</x>
+      <y>170</y>
       <w>180</w>
       <h>90</h>
     </coordinates>
@@ -82,8 +82,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>920</x>
-      <y>160</y>
+      <x>940</x>
+      <y>170</y>
       <w>180</w>
       <h>90</h>
     </coordinates>
@@ -93,8 +93,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>630</x>
-      <y>300</y>
+      <x>650</x>
+      <y>310</y>
       <w>240</w>
       <h>290</h>
     </coordinates>
@@ -104,8 +104,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>660</x>
-      <y>330</y>
+      <x>680</x>
+      <y>340</y>
       <w>180</w>
       <h>50</h>
     </coordinates>
@@ -115,8 +115,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>660</x>
-      <y>390</y>
+      <x>680</x>
+      <y>400</y>
       <w>180</w>
       <h>50</h>
     </coordinates>
@@ -126,8 +126,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>660</x>
-      <y>450</y>
+      <x>680</x>
+      <y>460</y>
       <w>180</w>
       <h>50</h>
     </coordinates>
@@ -137,8 +137,8 @@ context: parents, min 2</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>660</x>
-      <y>510</y>
+      <x>680</x>
+      <y>520</y>
       <w>180</w>
       <h>50</h>
     </coordinates>
