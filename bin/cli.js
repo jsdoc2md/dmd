@@ -4,7 +4,8 @@
 var cliArgs = require("command-line-args"),
     dope = require("console-dope"),
     dmd = require("../"),
-    domain = require("domain");
+    domain = require("domain"),
+    fs = require("fs");
 
 var cli = cliArgs([
     { name: "template", alias: "t", type: String,
@@ -46,6 +47,10 @@ try{
 if (argv.help){
     dope.log(usage);
     process.exit(0);
+}
+
+if (argv.template){
+    argv.template = fs.readFileSync(argv.template, "utf8");
 }
 
 process.stdin.pipe(dmd(argv)).pipe(process.stdout);

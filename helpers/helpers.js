@@ -1,3 +1,6 @@
+var dataHelpers = require("../helpers2/data");
+var blockHelpers = require("../helpers2/block");
+
 module.exports = function(handlebars){
     require("./alias-name.js")(handlebars);
     require("./anchor-name.js")(handlebars);
@@ -30,7 +33,6 @@ module.exports = function(handlebars){
     require("./data/modules.js")(handlebars);
     require("./data/namespaces.js")(handlebars);
     require("./data/no-scope.js")(handlebars);
-    require("./data/parents.js")(handlebars);
     require("./data/set.js")(handlebars);
     require("./data/static-scope.js")(handlebars);
     require("./data/typedefs.js")(handlebars);
@@ -40,4 +42,10 @@ module.exports = function(handlebars){
     require("./block/section/main-index.js")(handlebars);
     require("./block/section/module.js")(handlebars);
     require("./block/link.js")(handlebars);
+    
+    for (var helper in dataHelpers){
+        handlebars.registerHelper(helper, dataHelpers[helper]);
+    }
+    // handlebars.registerHelper("getIdentifiers", dataHelpers.identifiers);
+    handlebars.registerHelper("identifiers", blockHelpers.identifiers);
 };

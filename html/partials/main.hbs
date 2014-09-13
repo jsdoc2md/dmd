@@ -1,9 +1,41 @@
-{{#class name="file-set"}}
+<ul>
+{{#identifiers memberof=undefind}}
+<li>{{>name}}</li>
+{{/identifiers}}
+</ul>
 
-<h2>{{name}}</h2>
+{{#identifiers memberof=undefind}}
+<h2>{{>name}}</h2>
 <dl>
+  <dt>kind</dt><dd>{{kind}}</dd>
   <dt>description</dt><dd>{{description}}</dd>
   <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
+  <dt>examples</dt><dd><code>{{examples}}</code></dd>
+  <dt>scope</dt><dd><code>{{scope}}</code></dd>
+
 </dl>
 
-{{/class}}
+{{#identifiers memberof=longname}}
+<h3>{{>name}}</h3>
+<dl>
+  <dt>kind</dt><dd>{{kind}}</dd>
+  <dt>description</dt><dd>{{description}}</dd>
+  <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
+  <dt>examples</dt><dd><code>{{examples}}</code></dd>
+  <dt>memberof</dt><dd><code>{{scope}} {{kind}} of {{linkTo memberof}}</code></dd>
+</dl>
+
+{{#identifiers memberof=longname}}
+<h4>{{>name}}</h4>
+<dl>
+  <dt>kind</dt><dd>{{kind}}</dd>
+  <dt>description</dt><dd>{{description}}</dd>
+  <dt>params</dt><dd>{{#each params}}{{type.names}} {{description}}{{/each}}</dd>
+  <dt>examples</dt><dd><code>{{examples}}</code></dd>
+  <dt>memberof</dt><dd><code>{{scope}} {{kind}} of {{linkTo memberof}}</code></dd>
+</dl>
+{{/identifiers}}
+
+{{/identifiers}}
+
+{{/identifiers}}
