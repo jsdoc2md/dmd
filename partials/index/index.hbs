@@ -1,10 +1,17 @@
+{{! context: identifier ~}}
+{{!
+* name
+  * member
+  * member
+~}}
+
 {{set "isConstructor" false~}}
 {{>index-row~}}
 {{#if (equal kind "module")~}}
   {{#with (exported)~}}
     {{#unless (equal kind "module")~}}{{≥~}}{{>index-row~}}{{/unless~}}
     {{≥~}}
-    {{>constructor~}}
+    {{>constructor-index-row~}}
     {{#each (groupByKind (children))~}}
       {{>index~}}
     {{/each~}}
@@ -13,7 +20,7 @@
   {{/with~}}
 {{else~}}
   {{≥~}}
-  {{>constructor~}}
+  {{>constructor-index-row~}}
   {{#each (groupByKind (children))~}}
     {{>index~}}
   {{/each~}}

@@ -18,7 +18,7 @@ module.exports = function(handlebars){
 
     outputs:
     
-        The name of this class is "Clive" and it documents 3 properties. 
+        The name of this class is "dmd" and it documents 3 properties. 
     
     */
     function getClass(options){
@@ -30,7 +30,7 @@ module.exports = function(handlebars){
             selectedClass.isConstructor = false;
             return options.fn(selectedClass);
         } else {
-            return "ERROR: CLASS NOT FOUND"
+            return "ERROR, CLASS NOT FOUND: " + options.hash.name;
         }
     }
     handlebars.registerHelper("class", getClass);
