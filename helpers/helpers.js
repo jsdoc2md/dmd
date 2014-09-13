@@ -34,7 +34,7 @@ module.exports = function(handlebars){
     require("./data/set.js")(handlebars);
     require("./data/static-scope.js")(handlebars);
     require("./data/typedefs.js")(handlebars);
-    require("./block/collection/identifiers.js")(handlebars);
+    require("./block/collection/parents-grouped.js")(handlebars);
     require("./block/section/class.js")(handlebars);
     require("./block/section/function.js")(handlebars);
     require("./block/section/main-index.js")(handlebars);

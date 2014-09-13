@@ -19,3 +19,7 @@ function parents(options){
         kind: "module"
     }));
 }
+
+function identifiers(options){
+    
+}
