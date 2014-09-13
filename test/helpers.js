@@ -1,6 +1,6 @@
 var test = require("tape");
 var helpers = require("../helpers2/data");
-var data = require("./fixture/class");
+var data = require("./fixture/module");
 
 console.log(helpers.parents({ data: { root: data } }));
 console.log(data)
