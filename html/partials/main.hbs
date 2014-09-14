@@ -1,31 +1,22 @@
 <ul>
 {{#identifiers memberof=undefind}}
-<li>{{>name}}
-  <ul>
-    {{#identifiers memberof=longname sortBy="kind"}}
-    <li>{{>name}}
-      <ul>
-      {{#identifiers memberof=longname sortBy="kind"}}
-      <li>{{>name}}</li>
-      {{/identifiers}}
-      </ul>
-    </li>
-    {{/identifiers}}
-  </ul>
-</li>
+{{>index~}}
 {{/identifiers}}
 </ul>
 
 {{#identifiers memberof=undefind sortBy="kind"}}
   <h2>{{>name}}</h2>
+  <p>{{#md}}{{{description}}}{{/md}}</p>
   {{>identifier-body}}
 
   {{#identifiers memberof=longname sortBy="kind"}}
     <h3>{{>name}}</h3>
+    <p>{{#md}}{{{description}}}{{/md}}</p>
     {{>identifier-body}}
 
     {{#identifiers memberof=longname sortBy="kind"}}
       <h4>{{>name}}</h4>
+      <p>{{#md}}{{{description}}}{{/md}}</p>
       {{>identifier-body}}
     {{/identifiers}}
   {{/identifiers}}

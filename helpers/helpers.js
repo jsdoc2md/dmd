@@ -27,7 +27,6 @@ module.exports = function(handlebars){
     require("./data/inner-scope.js")(handlebars);
     require("./data/instance-scope.js")(handlebars);
     require("./data/is-class.js")(handlebars);
-    require("./data/is-exported.js")(handlebars);
     require("./data/kinds.js")(handlebars);
     require("./data/members.js")(handlebars);
     require("./data/modules.js")(handlebars);
@@ -41,11 +40,11 @@ module.exports = function(handlebars){
     require("./block/section/function.js")(handlebars);
     require("./block/section/main-index.js")(handlebars);
     require("./block/section/module.js")(handlebars);
-    require("./block/link.js")(handlebars);
     
     for (var helper in dataHelpers){
         handlebars.registerHelper(helper, dataHelpers[helper]);
     }
-    // handlebars.registerHelper("getIdentifiers", dataHelpers.identifiers);
-    handlebars.registerHelper("identifiers", blockHelpers.identifiers);
+    for (var helper in blockHelpers){
+        handlebars.registerHelper(helper, blockHelpers[helper]);
+    }
 };

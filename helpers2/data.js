@@ -1,4 +1,5 @@
 var a = require("array-tools");
+var util = require("util");
 
 /**
 helpers which return data
@@ -6,6 +7,8 @@ helpers which return data
 */
 exports.parents = parents;
 exports.identifiers = identifiers;
+exports.isExported = isExported;
+exports.anchorName = anchorName;
 
 /**
 Returns an array of the parent elements
@@ -21,6 +24,10 @@ function parents(options){
     }));
 }
 
+/**
+Returns an array of identifiers matching the query
+@params [sortBy] {string} - "kind" will sort by kind
+*/
 function identifiers(options){
     var query = {};
     var sortBy = options.hash.sortBy;
@@ -37,4 +44,21 @@ function identifiers(options){
 function sortByKind(a, b){
     var order = ["member", "function", "namespace", "constant", "typedef", "event", "class"];
     return order.indexOf(a.kind) - order.indexOf(b.kind);
+}
+
+function isExported(options){
+    var output =
+        this.kind !== "module" &&
+        a.exists(options.data.root, { kind: "module", longname: this.longname });
+    return output;
+}
+
+function anchorName(options){
+    if (!this.longname) throw new Error("[anchorName helper] cannot create a link without a longname");
+    return util.format(
+        "%s%s%s", 
+        isExported.call(this, options) ? "exp_" : "",
+        this.isConstructor ? "new_" : "", 
+        this.longname.replace(/:/g, "_").replace(/~/g, "..")
+    );
 }

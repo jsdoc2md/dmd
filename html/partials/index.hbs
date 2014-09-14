@@ -1,0 +1,9 @@
+{{! context: identifier }}
+
+<li>{{>name}}
+  <ul>
+    {{#identifiers memberof=longname sortBy="kind"}}
+    {{>index~}}
+    {{/identifiers}}
+  </ul>
+</li>
