@@ -20,7 +20,8 @@
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/**/*.js; echo",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo",
     "all": "dmd < test/fixture/module.json > tmp/module.md",
-    "html": "cat test/fixture/globals.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/globals.html; cat test/fixture/handbrake.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/handbrake.html; cat test/fixture/module.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/module.html; "
+    "html": "cat test/fixture/globals.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/globals.html; cat test/fixture/handbrake.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/handbrake.html; cat test/fixture/module.json | dmd --partial html/**/*.hbs --template tmp/docs.hbs > tmp/module.html; ",
+    "watch": "baldrick --do 'npm run html' --when '**/*.hbs' --change --speak;"
   },
   "dependencies": {
     "array-tools": "^1.3.0",

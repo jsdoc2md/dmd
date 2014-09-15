@@ -1,0 +1,18 @@
+{{! context: identifier }}
+
+{{~heading-depth-bump~}}
+
+<h{{heading-depth}}>{{>name}}</h{{heading-depth}}>
+<p>{{#md}}{{{description}}}{{/md}}</p>
+<dl>
+  {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
+  {{#if params}}<dt>params</dt><dd>{{#md}}{{#each params}}{{type.names}} {{{description}}}{{/each}}{{/md}}</dd>{{/if}}
+  {{#if examples}}<dt>examples</dt><dd><code>{{#md}}{{{examples}}}{{/md}}</code></dd>{{/if}}
+  {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
+</dl>
+
+{{#identifiers memberof=longname sortBy="kind"~}}
+  {{>identifier~}}
+{{/identifiers~}}
+
+{{heading-depth-drop~}}
