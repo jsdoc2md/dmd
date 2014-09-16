@@ -5,7 +5,6 @@ module.exports = function(handlebars){
     require("./alias-name.js")(handlebars);
     require("./constructor-has-docs.js")(handlebars);
     require("./depth.js")(handlebars);
-    require("./exported.js")(handlebars);
     require("./link-to.js")(handlebars);
     require("./linkify.js")(handlebars);
     require("./method-sig.js")(handlebars);
@@ -15,8 +14,8 @@ module.exports = function(handlebars){
     require("./data/all-members.js")(handlebars);
     require("./data/classes.js")(handlebars);
     require("./data/constants.js")(handlebars);
-    require("./data/events.js")(handlebars);
     require("./data/exported.js")(handlebars);
+    require("./data/events.js")(handlebars);
     require("./data/functions.js")(handlebars);
     require("./data/globals.js")(handlebars);
     require("./data/group-by-kind.js")(handlebars);

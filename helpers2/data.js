@@ -10,6 +10,7 @@ exports.identifiers = identifiers;
 exports.isExported = isExported;
 exports.anchorName = anchorName;
 exports.children = children;
+exports.exported = exported;
 
 /**
 Returns an array of the top-level elements which have no parents
@@ -84,8 +85,27 @@ function anchorName(options){
 return the indentifiers which are a `memberof` this one
 @params [sortBy] {string} - "kind"
 @context {identifier}
-@returns {array}
+@returns {identifier[]}
 */
 function children(options){
-    return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
+    if (this.kind === "module"){
+        var exp = exported.call(this, options);
+        if (exp.kind === "class"){
+            return [];
+        } else {
+            return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
+        }
+    } else {
+        return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
+    }
+}
+
+/**
+returns the exported identifier of this module
+@context {identifier} - only works on a module
+@returns {identifier}
+*/
+function exported(options){
+    var exported = a.findWhere(options.data.root, { "!kind": "module", name: this.longname });
+    return exported || this;
 }

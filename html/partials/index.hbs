@@ -2,8 +2,8 @@
 
 <li>{{>name}}
   <ul>
-    {{#identifiers memberof=longname sortBy="kind"}}
+    {{#eachChildren sortBy="kind"}}
     {{>index~}}
-    {{/identifiers}}
+    {{/eachChildren}}
   </ul>
 </li>
