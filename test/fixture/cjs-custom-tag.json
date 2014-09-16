@@ -1,0 +1,31 @@
+[
+  {
+    "description": "This is the module description",
+    "kind": "module",
+    "name": "function-tools",
+    "tags": [
+      {
+        "originalTitle": "variableName",
+        "title": "variablename",
+        "text": "f",
+        "value": "f"
+      },
+      {
+        "originalTitle": "context",
+        "title": "context",
+        "text": "{customContext}",
+        "value": "{customContext}"
+      }
+    ],
+    "longname": "module:function-tools"
+  },
+  {
+    "description": "the main function description",
+    "name": "one",
+    "longname": "module:function-tools.one",
+    "kind": "function",
+    "memberof": "module:function-tools",
+    "scope": "static",
+    "codeName": "exports.one"
+  }
+]

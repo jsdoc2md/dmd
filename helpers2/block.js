@@ -7,7 +7,11 @@ exports.identifiers = identifiers;
 exports.md = md;
 
 /**
-Returns a markdown link to the 
+Returns a markdown anchor-link to the 
+@context {identifier}
+@returns {string}
+@example
+`{{#link}}{{>name}}{{/link}}` returns 
 */
 function link(options){
     return util.format(
@@ -17,6 +21,18 @@ function link(options){
     );
 }
 
+/**
+converts the supplied text to markdown
+@returns {string}
+*/
+function md(options){
+    return marked(options.fn(this).toString());
+}
+
+/**
+render the supplied block for each identifier in the query
+@returns {string}
+*/
 function identifiers(options){
     var identifiers = dataHelpers.identifiers(options);
     return identifiers.reduce(function(prev, curr){
@@ -24,6 +40,6 @@ function identifiers(options){
     }, "");
 }
 
-function md(options){
-    return marked(options.fn(this).toString());
+function children(options){
+    
 }

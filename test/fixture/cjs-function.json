@@ -1,0 +1,50 @@
+[
+  {
+    "description": "This is the module description",
+    "kind": "module",
+    "name": "function",
+    "author": [
+      "Lloyd <75pound@gmail.com>"
+    ],
+    "since": "v0.10.28",
+    "longname": "module:function"
+  },
+  {
+    "description": "the main function description",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "a second input",
+        "name": "two"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "name": "module:function",
+    "longname": "module:function",
+    "kind": "function",
+    "codeName": "module.exports"
+  }
+]

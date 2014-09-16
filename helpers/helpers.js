@@ -3,7 +3,6 @@ var blockHelpers = require("../helpers2/block");
 
 module.exports = function(handlebars){
     require("./alias-name.js")(handlebars);
-    require("./anchor-name.js")(handlebars);
     require("./constructor-has-docs.js")(handlebars);
     require("./depth.js")(handlebars);
     require("./exported.js")(handlebars);
@@ -14,7 +13,6 @@ module.exports = function(handlebars){
     require("./parent-name.js")(handlebars);
     require("./parent.js")(handlebars);
     require("./data/all-members.js")(handlebars);
-    require("./data/children.js")(handlebars);
     require("./data/classes.js")(handlebars);
     require("./data/constants.js")(handlebars);
     require("./data/events.js")(handlebars);

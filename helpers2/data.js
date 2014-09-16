@@ -9,9 +9,10 @@ exports.parents = parents;
 exports.identifiers = identifiers;
 exports.isExported = isExported;
 exports.anchorName = anchorName;
+exports.children = children;
 
 /**
-Returns an array of the parent elements
+Returns an array of the top-level elements which have no parents
 @returns {array} 
 */
 function parents(options){
@@ -27,6 +28,7 @@ function parents(options){
 /**
 Returns an array of identifiers matching the query
 @params [sortBy] {string} - "kind" will sort by kind
+@returns {array}
 */
 function identifiers(options){
     var query = {};
@@ -46,6 +48,10 @@ function sortByKind(a, b){
     return order.indexOf(a.kind) - order.indexOf(b.kind);
 }
 
+/**
+@context {identifier}
+@returns {boolean}
+*/
 function isExported(options){
     var output =
         this.kind !== "module" &&
@@ -53,6 +59,11 @@ function isExported(options){
     return output;
 }
 
+/**
+returns a unique ID string suitable for use as an `href`.
+@context {identifier}
+@returns {string}
+*/
 function anchorName(options){
     if (!this.longname) throw new Error("[anchorName helper] cannot create a link without a longname");
     return util.format(
@@ -61,4 +72,14 @@ function anchorName(options){
         this.isConstructor ? "new_" : "", 
         this.longname.replace(/:/g, "_").replace(/~/g, "..")
     );
+}
+
+
+/**
+return the indentifiers which are a `memberof` this one
+@context {identifier}
+@returns {array}
+*/
+function children(options){
+    return a.where(options.data.root, { memberof: this.longname });
 }
