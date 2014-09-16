@@ -5,6 +5,7 @@ var marked = require("marked");
 exports.link = link;
 exports.identifiers = identifiers;
 exports.md = md;
+exports.children = children;
 
 /**
 Returns a markdown anchor-link to the 
@@ -40,6 +41,15 @@ function identifiers(options){
     }, "");
 }
 
+/**
+render the supplied block for each child of the current identifier
+@context {identifier}
+@returns {string}
+*/
 function children(options){
-    
+    var c = dataHelpers.children(options);
+    // return JSON.stringify(c, null, "  ");
+    return c.reduce(function(prev, curr){
+        return prev + options.fn(curr);
+    }, "");
 }

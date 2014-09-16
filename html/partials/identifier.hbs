@@ -11,8 +11,8 @@
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
 </dl>
 
-{{#identifiers memberof=longname sortBy="kind"~}}
-  {{>identifier~}}
-{{/identifiers~}}
+{{#children sortBy="kind"~}}
+<pre>{{>identifier~}}</pre>
+{{/children~}}
 
 {{heading-depth-drop~}}

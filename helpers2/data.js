@@ -38,9 +38,15 @@ function identifiers(options){
     for (var prop in options.hash){
         query[prop] = options.hash[prop];
     }
-    var output = a.where(options.data.root, query);
-    if (sortBy === "kind") output = output.sort(sortByKind);
-    return output;
+    return sort(a.where(options.data.root, query), sortBy);
+}
+
+function sort(array, sortBy){
+    if (sortBy === "kind"){
+        return array.sort(sortByKind);
+    } else {
+        return array;
+    }
 }
 
 function sortByKind(a, b){
@@ -74,12 +80,12 @@ function anchorName(options){
     );
 }
 
-
 /**
 return the indentifiers which are a `memberof` this one
+@params [sortBy] {string} - "kind"
 @context {identifier}
 @returns {array}
 */
 function children(options){
-    return a.where(options.data.root, { memberof: this.longname });
+    return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
 }
