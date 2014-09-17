@@ -1,6 +1,6 @@
-{{heading-depth-bump~}}
+{{headingDepthIncrement~}}
 {{#if (constructorHasDocs)}}{{set "isConstructor" true~}}{{>function}}{{/if~}}
 {{#each (groupByKind (children))~}}
   {{>identifier~}}
 {{/each~}}
-{{heading-depth-drop~}}
+{{headingDepthDecrement~}}

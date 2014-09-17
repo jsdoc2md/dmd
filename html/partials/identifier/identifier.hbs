@@ -3,10 +3,19 @@
 {{~headingDepthIncrement~}}
 
 <h{{headingDepth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{headingDepth}}>
-<p>{{#md}}{{{description}}}{{/md}}</p>
+<p>{{#md}}{{{linkify description}}}{{/md}}</p>
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
-  {{#if params}}<dt>params</dt><dd>{{#md}}{{#each params}}{{type.names}} {{{description}}}{{/each}}{{/md}}</dd>{{/if}}
+  {{#if params}}
+  <dt>params</dt>
+  <dd>
+    {{#each params}}
+    {{#if @first}}<ul>{{/if}}
+    <li>{{name}} <code>{{type.names}}</code> {{#md2}}{{{linkify description}}}{{/md2}}</li>
+    {{#if @last}}</ul>{{/if}}
+    {{/each}}
+  </dd>
+  {{/if}}
   {{#if examples}}<dt>examples</dt><dd><code>{{#md}}{{{examples}}}{{/md}}</code></dd>{{/if}}
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
 </dl>

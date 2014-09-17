@@ -4,6 +4,8 @@ var a = require("array-tools"),
 
 module.exports = function (handlebars) {
     handlebars.registerHelper("linkify", function (text, options) {
+        if (!text) return "";
+        
         var linksRx = /(\[.+\])?\{@link\s+.*?\}/gmi,
             targetRx = /(?:\[(.+)\])?{@link(code|plain)?\s+?(?:(?:([^|]+)\|(.*))|(.+?)(?:\s+(.*))?)\}/mi,
             linkTags,

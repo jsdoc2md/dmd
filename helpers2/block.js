@@ -5,6 +5,7 @@ var marked = require("marked");
 exports.link = link;
 exports.identifiers = identifiers;
 exports.md = md;
+exports.md2 = md2;
 exports.eachChildren = eachChildren;
 exports.ifClass = ifClass;
 exports.ifConstructor = ifConstructor;
@@ -34,6 +35,9 @@ converts the supplied text to markdown
 */
 function md(options){
     return marked(options.fn(this).toString());
+}
+function md2(options){
+    return marked.inlineLexer(options.fn(this).toString(), []);
 }
 
 /**
