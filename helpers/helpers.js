@@ -2,7 +2,6 @@ var dataHelpers = require("../helpers2/data");
 var blockHelpers = require("../helpers2/block");
 
 module.exports = function(handlebars){
-    require("./alias-name.js")(handlebars);
     require("./constructor-has-docs.js")(handlebars);
     require("./depth.js")(handlebars);
     require("./link-to.js")(handlebars);

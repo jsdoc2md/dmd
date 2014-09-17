@@ -21,6 +21,7 @@ exports.isTypedef = isTypedef;
 exports.isCallback = isCallback;
 exports.isModule = isModule;
 exports.methodSig = methodSig;
+exports.aliasName = aliasName;
 
 /**
 Returns an array of the top-level elements which have no parents
@@ -167,4 +168,21 @@ function methodSig(){
             return param.optional ? "[" + param.name + "]" : param.name;
         }
     }).join(", ");
+}
+
+/**
+Returns the `alias` of this identifiers parent module, else `this.name`
+@context {identifier}
+@returns {string}
+*/
+function aliasName(options){
+    var alias = a.findWhere(options.data.root, { longname: this.longname, kind: "module" });
+    var name = "";
+    if (alias){
+        name = alias.alias || alias.name;
+    } else {
+        name = this.name;
+    }
+    if (/module:/.test(this.name)) name = this.codeName;
+    return name;
 }
