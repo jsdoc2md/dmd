@@ -35,7 +35,7 @@ test("children of a class", function(t){
     t.end();
 });
 
-test.only("sort", function(t){
+test("sort", function(t){
     l(dataHelpers.sort(unsorted, "scope,kind"));
     t.end();
 });

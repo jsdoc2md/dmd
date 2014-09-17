@@ -1,8 +1,8 @@
 {{! context: identifier }}
 
-{{~heading-depth-bump~}}
+{{~headingDepthIncrement~}}
 
-<h{{heading-depth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{heading-depth}}>
+<h{{headingDepth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{headingDepth}}>
 <p>{{#md}}{{{description}}}{{/md}}</p>
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
@@ -11,8 +11,8 @@
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
 </dl>
 
-{{#eachChildren sortBy="scope,kind"~}}
+{{#each (children sortBy="scope,kind")~}}
   {{>identifier~}}
-{{/eachChildren~}}
+{{/each~}}
 
-{{heading-depth-drop~}}
+{{headingDepthDecrement~}}

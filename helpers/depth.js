@@ -1,8 +1,4 @@
 module.exports = function(handlebars){
-    handlebars.registerHelper("heading-depth", function(options){
-        return options.data.root.options._headingDepth + (options.data.root.options["heading-depth"]);
-    });
-
     handlebars.registerHelper("heading-depth-set", function(depth, options){
         options.data.root.options._headingDepth = depth;
     });
@@ -11,14 +7,6 @@ module.exports = function(handlebars){
         options.data.root.options._headingDepth = 0;
     });
 
-    handlebars.registerHelper("heading-depth-bump", function(options){
-        options.data.root.options._headingDepth++;
-    });
-
-    handlebars.registerHelper("heading-depth-drop", function(options){
-        options.data.root.options._headingDepth--;
-    });
-    
     handlebars.registerHelper("index-depth", function(options){
         return options.data.root.options._indexDepth;
     });

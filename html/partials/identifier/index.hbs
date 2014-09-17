@@ -1,9 +1,9 @@
 {{! context: identifier }}
 
 <li><a href="#{{{anchorName}}}">{{>name}}</a>
-  <ul>
-    {{#eachChildren sortBy="scope,kind"}}
+  {{#each (children sortBy="scope,kind")}}
+    {{#if @first}}<ul>{{/if}}
     {{>index~}}
-    {{/eachChildren}}
-  </ul>
+    {{#if @last}}</ul>{{/if}}
+  {{/each}}
 </li>

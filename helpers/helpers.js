@@ -1,5 +1,6 @@
 var dataHelpers = require("../helpers2/data");
 var blockHelpers = require("../helpers2/block");
+var varHelpers = require("../helpers2/vars");
 
 module.exports = function(handlebars){
     require("./constructor-has-docs.js")(handlebars);
@@ -40,5 +41,8 @@ module.exports = function(handlebars){
     }
     for (var helper in blockHelpers){
         handlebars.registerHelper(helper, blockHelpers[helper]);
+    }
+    for (var helper in varHelpers){
+        handlebars.registerHelper(helper, varHelpers[helper]);
     }
 };
