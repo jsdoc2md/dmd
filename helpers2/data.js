@@ -26,7 +26,7 @@ exports.parentName = parentName;
 
 /**
 Returns an array of the top-level elements which have no parents
-@returns {array} 
+@returns {array}
 */
 function parents(options){
     return a.where(options.data.root, {
@@ -47,7 +47,7 @@ function identifiers(options){
     var query = {};
     var sortBy = options.hash.sortBy;
     delete options.hash.sortBy;
-    
+
     for (var prop in options.hash){
         query[prop] = options.hash[prop];
     }
@@ -68,14 +68,13 @@ function sortByKind(a, b){
 }
 
 /**
+BROKEN IN STYLE 3
 @context {identifier}
 @returns {boolean}
 */
 function isExported(options){
-    var output =
-        this.kind !== "module" &&
+    return this.kind !== "module" &&
         a.exists(options.data.root, { kind: "module", longname: this.longname });
-    return output;
 }
 
 /**
@@ -86,9 +85,9 @@ returns a unique ID string suitable for use as an `href`.
 function anchorName(options){
     if (!this.longname) throw new Error("[anchorName helper] cannot create a link without a longname");
     return util.format(
-        "%s%s%s", 
+        "%s%s%s",
         isExported.call(this, options) ? "exp_" : "",
-        this.isConstructor ? "new_" : "", 
+        this.isConstructor ? "new_" : "",
         this.longname.replace(/:/g, "_").replace(/~/g, "..")
     );
 }
@@ -202,6 +201,8 @@ function parentName(options){
     if (this.memberof && this.kind !== "constructor"){
         var parentClass = a.findWhere(options.data.root, { longname: this.memberof });
         if (parentClass) {
+            /* don't bother with a parentName for exported classes */
+            if (this.kind === "class" && parentClass.kind === "module") return "";
             var name = parentClass.alias || parentClass.name;
             return this.scope === "instance"
                 ? instantiate(name) : name;
