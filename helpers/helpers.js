@@ -7,7 +7,6 @@ module.exports = function(handlebars){
     require("./depth.js")(handlebars);
     require("./link-to.js")(handlebars);
     require("./linkify.js")(handlebars);
-    require("./method-sig.js")(handlebars);
     require("./or.js")(handlebars);
     require("./parent-name.js")(handlebars);
     require("./parent.js")(handlebars);

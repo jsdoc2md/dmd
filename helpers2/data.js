@@ -11,6 +11,16 @@ exports.isExported = isExported;
 exports.anchorName = anchorName;
 exports.children = children;
 exports.exported = exported;
+exports.isClass = isClass;
+exports.isConstructor = isConstructor;
+exports.isFunction = isFunction;
+exports.isConstant = isConstant;
+exports.isEvent = isEvent;
+exports.isEnum = isEnum;
+exports.isTypedef = isTypedef;
+exports.isCallback = isCallback;
+exports.isModule = isModule;
+exports.methodSig = methodSig;
 
 /**
 Returns an array of the top-level elements which have no parents
@@ -108,4 +118,53 @@ returns the exported identifier of this module
 function exported(options){
     var exported = a.findWhere(options.data.root, { "!kind": "module", name: this.longname });
     return exported || this;
+}
+
+/**
+@context {identifier}
+@returns {boolean}
+*/
+function isClass(){
+    return this.kind === "class";
+}
+function isConstructor(){
+    return this.kind === "constructor";
+}
+function isFunction(){
+    return this.kind === "function";
+}
+function isConstant(){
+    return this.kind === "constant";
+}
+function isEvent(){
+    return this.kind === "event";
+}
+function isEnum(){
+    return this.isEnum;
+}
+function isTypedef(){
+    return this.kind === "typedef" && this.type.names[0] !== "function";
+}
+function isCallback(){
+    return this.kind === "typedef" && this.type.names[0] === "function";
+}
+function isModule(){
+    return this.kind === "module";
+}
+
+/**
+Returns the method signature, e.g. `(options, [onComplete])`
+@context {identifier}
+@returns {string}
+*/
+function methodSig(){
+    return a.arrayify(this.params).filter(function(param){
+        return param.name && !/\w+\.\w+/.test(param.name);
+    }).map(function(param){
+        if (param.variable){
+            return param.optional ? "[..." + param.name + "]" : "..." + param.name;
+        } else {
+            return param.optional ? "[" + param.name + "]" : param.name;
+        }
+    }).join(", ");
 }

@@ -13,6 +13,7 @@ exports.ifEvent = ifEvent;
 exports.ifEnum = ifEnum;
 exports.ifTypedef = ifTypedef;
 exports.ifCallback = ifCallback;
+exports.ifModule = ifModule;
 
 /**
 Returns a markdown anchor-link to the 
@@ -57,23 +58,26 @@ function eachChildren(options){
 }
 
 function ifClass(options){
-    if (this.kind === "class") return options.fn(this);
+    if (dataHelpers.isClass.call(this)) return options.fn(this);
 }
 function ifConstructor(options){
-    if (this.kind === "constructor") return options.fn(this);
+    if (dataHelpers.isConstructor.call(this)) return options.fn(this);
 }
 function ifConstant(options){
-    if (this.kind === "constant") return options.fn(this);
+    if (dataHelpers.isConstant.call(this)) return options.fn(this);
 }
 function ifEvent(options){
-    if (this.kind === "event") return options.fn(this);
+    if (dataHelpers.isEvent.call(this)) return options.fn(this);
 }
 function ifEnum(options){
-    if (this.isEnum) return options.fn(this);
+    if (dataHelpers.isEnum.call(this)) return options.fn(this);
 }
 function ifTypedef(options){
-    if (this.kind === "typedef" && this.type.names[0] !== "function") return options.fn(this);
+    if (dataHelpers.isTypedef.call(this)) return options.fn(this);
 }
 function ifCallback(options){
-    if (this.kind === "typedef" && this.type.names[0] === "function") return options.fn(this);
+    if (dataHelpers.isCallback.call(this)) return options.fn(this);
+}
+function ifModule(options){
+    if (dataHelpers.isModule.call(this)) return options.fn(this);
 }
