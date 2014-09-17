@@ -2,7 +2,7 @@
 
 {{~heading-depth-bump~}}
 
-<h{{heading-depth}}>{{>name}}</h{{heading-depth}}>
+<h{{heading-depth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{heading-depth}}>
 <p>{{#md}}{{{description}}}{{/md}}</p>
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
@@ -11,7 +11,7 @@
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
 </dl>
 
-{{#eachChildren sortBy="kind"~}}
+{{#eachChildren sortBy="scope,kind"~}}
   {{>identifier~}}
 {{/eachChildren~}}
 

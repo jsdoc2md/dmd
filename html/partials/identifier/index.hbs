@@ -1,8 +1,8 @@
 {{! context: identifier }}
 
-<li>{{>name}}
+<li><a href="#{{{anchorName}}}">{{>name}}</a>
   <ul>
-    {{#eachChildren sortBy="kind"}}
+    {{#eachChildren sortBy="scope,kind"}}
     {{>index~}}
     {{/eachChildren}}
   </ul>

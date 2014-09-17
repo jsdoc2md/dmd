@@ -7,6 +7,7 @@ helpers which return data
 */
 exports.parents = parents;
 exports.identifiers = identifiers;
+exports.sort = sort;
 exports.isExported = isExported;
 exports.anchorName = anchorName;
 exports.children = children;
@@ -30,7 +31,7 @@ Returns an array of the top-level elements which have no parents
 */
 function parents(options){
     return a.where(options.data.root, {
-        "!kind": /module|package/,
+        "!kind": /module/,
         memberof: undefined,
         "!longname": /^module:/
     }).concat(a.where(options.data.root, {
@@ -57,14 +58,35 @@ function identifiers(options){
 function sort(array, sortBy){
     if (sortBy === "kind"){
         return array.sort(sortByKind);
+    } else if (sortBy === "scope"){
+        return array.sort(sortByScope);
+    } else if (sortBy === "kind,scope"){
+        return array.sort(sortByKindScope);
+    } else if (sortBy === "scope,kind"){
+        return array.sort(sortByScopeKind);
     } else {
         return array;
     }
 }
 
+var order = {
+    kind: ["constructor", "member", "function", "namespace", "constant", "typedef", "event", "class"],
+    scope: ["instance", "static", "global", "inner"]
+};
+
 function sortByKind(a, b){
-    var order = ["member", "function", "namespace", "constant", "typedef", "event", "class"];
-    return order.indexOf(a.kind) - order.indexOf(b.kind);
+    return order.kind.indexOf(a.kind) - order.kind.indexOf(b.kind);
+}
+function sortByKindScope(a, b){
+    var result = order.kind.indexOf(a.kind) - order.kind.indexOf(b.kind);
+    return result === 0 ? sortByScope(a, b) : result;
+}
+function sortByScope(a, b){
+    return order.scope.indexOf(a.scope) - order.scope.indexOf(b.scope);
+}
+function sortByScopeKind(a, b){
+    var result = order.scope.indexOf(a.scope) - order.scope.indexOf(b.scope);
+    return result === 0 ? sortByKind(a, b) : result;
 }
 
 /**

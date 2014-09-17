@@ -1,0 +1,20 @@
+[
+    { "name": "class", "kind": "class"},
+    { "name": "member", "kind": "member", "scope": "static"},
+    { "name": "function", "kind": "function"},
+    { "name": "typedef", "kind": "typedef"},
+    { "name": "constructor", "kind": "constructor"},
+    { "name": "module", "kind": "module"},
+    { "name": "constant", "kind": "constant"},
+    { "name": "namespace", "kind": "namespace"},
+    { "name": "event", "kind": "event"},
+    { "name": "class2", "kind": "class"},
+    { "name": "member2", "kind": "member", "scope": "instance"},
+    { "name": "function2", "kind": "function"},
+    { "name": "typedef2", "kind": "typedef"},
+    { "name": "constructor2", "kind": "constructor"},
+    { "name": "module2", "kind": "module"},
+    { "name": "constant2", "kind": "constant"},
+    { "name": "namespace2", "kind": "namespace"},
+    { "name": "event2", "kind": "event"}
+]
