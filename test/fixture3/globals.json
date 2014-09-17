@@ -1,0 +1,1303 @@
+[
+  {
+    "description": "Called when an async operation completes",
+    "kind": "typedef",
+    "name": "onComplete",
+    "type": {
+      "names": [
+        "function"
+      ]
+    },
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "an error, or `null`",
+        "name": "err"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "the result info",
+        "name": "result"
+      }
+    ],
+    "longname": "onComplete",
+    "scope": "global"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "the filename",
+        "name": "filename"
+      },
+      {
+        "type": {
+          "names": [
+            "onComplete"
+          ]
+        },
+        "description": "the callback",
+        "name": "done"
+      }
+    ],
+    "name": "read",
+    "longname": "read",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "read"
+  },
+  {
+    "kind": "class",
+    "classdesc": "a class with all of the things",
+    "author": [
+      "75lb <75pound@gmail.com>"
+    ],
+    "deprecated": true,
+    "since": "v0.10.28",
+    "augments": [
+      "Number"
+    ],
+    "name": "All",
+    "longname": "All",
+    "scope": "global",
+    "codeName": "All"
+  },
+  {
+    "description": "the constructor description",
+    "kind": "constructor",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "an input",
+        "name": "input"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "description": "optional shit",
+        "name": "options"
+      }
+    ],
+    "examples": [
+      "```js\nvar yeah = new Everything(true);\n```"
+    ],
+    "name": "All",
+    "memberof": "All",
+    "longname": "newAll",
+    "scope": "global",
+    "codeName": "All"
+  },
+  {
+    "description": "the ingredients on top",
+    "defaultvalue": "mud, lettuce",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "since": "v1.0.0",
+    "name": "topping",
+    "longname": "All#topping",
+    "kind": "member",
+    "memberof": "All",
+    "scope": "instance",
+    "codeName": "this.topping"
+  },
+  {
+    "description": "the general size",
+    "name": "size",
+    "longname": "All#size",
+    "kind": "member",
+    "memberof": "All",
+    "scope": "instance",
+    "codeName": "this.size"
+  },
+  {
+    "description": "This function has all tags set",
+    "deprecated": true,
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "a second input",
+        "name": "two"
+      }
+    ],
+    "author": [
+      "Lloyd <75pound@gmail.com>"
+    ],
+    "since": "v0.10.28",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "examples": [
+      "```js\nall.allTogether(true);\n```"
+    ],
+    "name": "allThings",
+    "longname": "All#allThings",
+    "kind": "function",
+    "memberof": "All",
+    "scope": "instance",
+    "codeName": "All.prototype.allThings"
+  },
+  {
+    "description": "a rarseclart inner",
+    "name": "some",
+    "longname": "All#allThings~some",
+    "kind": "member",
+    "memberof": "All#allThings",
+    "scope": "inner",
+    "codeName": "some"
+  },
+  {
+    "kind": "class",
+    "classdesc": "simple class description",
+    "augments": [
+      "Object"
+    ],
+    "name": "Person",
+    "longname": "Person",
+    "scope": "global",
+    "codeName": "Person"
+  },
+  {
+    "description": "a constructor description",
+    "kind": "constructor",
+    "name": "Person",
+    "memberof": "Person",
+    "longname": "newPerson",
+    "scope": "global",
+    "codeName": "Person"
+  },
+  {
+    "kind": "class",
+    "name": "Car",
+    "longname": "Car",
+    "scope": "global",
+    "codeName": "Car"
+  },
+  {
+    "description": "a constructor with args",
+    "kind": "constructor",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "description": "optional shit",
+        "name": "options"
+      }
+    ],
+    "name": "Car",
+    "memberof": "Car",
+    "longname": "newCar",
+    "scope": "global",
+    "codeName": "Car"
+  },
+  {
+    "kind": "class",
+    "classdesc": "a class which extends",
+    "augments": [
+      "Pipe"
+    ],
+    "name": "Pipe",
+    "longname": "Pipe",
+    "scope": "global",
+    "codeName": "Pipe"
+  },
+  {
+    "kind": "class",
+    "classdesc": "a class with all trimmings",
+    "augments": [
+      "Pipe"
+    ],
+    "author": [
+      "75lb <75pound@gmail.com>"
+    ],
+    "deprecated": true,
+    "since": "v0.10.28",
+    "name": "Everything",
+    "longname": "Everything",
+    "scope": "global",
+    "codeName": "Everything"
+  },
+  {
+    "description": "the constructor description",
+    "kind": "constructor",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "an input",
+        "name": "input"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "description": "optional shit",
+        "name": "options"
+      }
+    ],
+    "examples": [
+      "```js\nvar yeah = new Everything(true);\n```"
+    ],
+    "name": "Everything",
+    "memberof": "Everything",
+    "longname": "newEverything",
+    "scope": "global",
+    "codeName": "Everything"
+  },
+  {
+    "description": "Fired when rice is ready",
+    "kind": "event",
+    "name": "cooked",
+    "memberof": "Rice",
+    "longname": "Rice#event:cooked",
+    "scope": "instance"
+  },
+  {
+    "description": "Fired when rice is cooking",
+    "kind": "event",
+    "name": "cooking",
+    "memberof": "Rice",
+    "longname": "Rice#event:cooking",
+    "scope": "instance"
+  },
+  {
+    "kind": "class",
+    "name": "Rice",
+    "longname": "Rice",
+    "scope": "global",
+    "codeName": "Rice"
+  },
+  {
+    "kind": "class",
+    "name": "Something",
+    "longname": "Something",
+    "scope": "global",
+    "codeName": "Something"
+  },
+  {
+    "description": "method description",
+    "name": "methodOne",
+    "longname": "Something#methodOne",
+    "kind": "function",
+    "memberof": "Something",
+    "scope": "instance",
+    "codeName": "Something.prototype.methodOne"
+  },
+  {
+    "description": "This function has all tags set",
+    "deprecated": true,
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "a second input",
+        "name": "two"
+      }
+    ],
+    "author": [
+      "Lloyd <75pound@gmail.com>"
+    ],
+    "since": "v0.10.28",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "examples": [
+      "```js\nsomething.allTogether(true);\n```"
+    ],
+    "name": "allTogether",
+    "longname": "Something#allTogether",
+    "kind": "function",
+    "memberof": "Something",
+    "scope": "instance",
+    "codeName": "Something.prototype.allTogether"
+  },
+  {
+    "kind": "class",
+    "name": "Pizza",
+    "longname": "Pizza",
+    "scope": "global",
+    "codeName": "Pizza"
+  },
+  {
+    "description": "the ingredients on top",
+    "defaultvalue": "mud, lettuce",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "since": "v1.0.0",
+    "name": "topping",
+    "longname": "Pizza#topping",
+    "kind": "member",
+    "memberof": "Pizza",
+    "scope": "instance",
+    "codeName": "this.topping"
+  },
+  {
+    "description": "the general size",
+    "name": "size",
+    "longname": "Pizza#size",
+    "kind": "member",
+    "memberof": "Pizza",
+    "scope": "instance",
+    "codeName": "this.size"
+  },
+  {
+    "description": "the first important constant",
+    "kind": "constant",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "name": "CONST_ONE",
+    "longname": "CONST_ONE",
+    "scope": "global",
+    "codeName": "CONST_ONE"
+  },
+  {
+    "description": "This variable has all tags set",
+    "deprecated": true,
+    "kind": "constant",
+    "type": {
+      "names": [
+        "boolean"
+      ]
+    },
+    "readonly": true,
+    "author": [
+      "Lloyd Brookes <lloyd@brookes.com>"
+    ],
+    "since": "v0.10.28",
+    "examples": [
+      "```js\nvar CONST_TWO = true;\n```"
+    ],
+    "name": "CONST_TWO",
+    "longname": "CONST_TWO",
+    "scope": "global",
+    "codeName": "CONST_TWO"
+  },
+  {
+    "description": "this function has a wonderful custom tag",
+    "tags": [
+      {
+        "originalTitle": "createdIn",
+        "title": "createdin",
+        "text": "Nigeria",
+        "value": "Nigeria"
+      }
+    ],
+    "name": "customTaggedFunction",
+    "longname": "customTaggedFunction",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "customTaggedFunction"
+  },
+  {
+    "description": "Enum for the `type` value",
+    "readonly": true,
+    "kind": "member",
+    "isEnum": true,
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "name": "eFileType",
+    "longname": "eFileType",
+    "scope": "global",
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "longname": "eFileType.NOEXIST",
+        "name": "NOEXIST",
+        "defaultvalue": "0",
+        "memberof": "eFileType",
+        "kind": "member",
+        "scope": "static",
+        "codeName": "NOEXIST"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "longname": "eFileType.FILE",
+        "name": "FILE",
+        "defaultvalue": "1",
+        "memberof": "eFileType",
+        "kind": "member",
+        "scope": "static",
+        "codeName": "FILE"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "longname": "eFileType.DIR",
+        "name": "DIR",
+        "defaultvalue": "2",
+        "memberof": "eFileType",
+        "kind": "member",
+        "scope": "static",
+        "codeName": "DIR"
+      }
+    ],
+    "codeName": "eFileType"
+  },
+  {
+    "name": "NOEXIST",
+    "longname": "eFileType.NOEXIST",
+    "kind": "member",
+    "memberof": "eFileType",
+    "scope": "static",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "0",
+    "codeName": "NOEXIST"
+  },
+  {
+    "name": "FILE",
+    "longname": "eFileType.FILE",
+    "kind": "member",
+    "memberof": "eFileType",
+    "scope": "static",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "1",
+    "codeName": "FILE"
+  },
+  {
+    "name": "DIR",
+    "longname": "eFileType.DIR",
+    "kind": "member",
+    "memberof": "eFileType",
+    "scope": "static",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "2",
+    "codeName": "DIR"
+  },
+  {
+    "description": "a global function",
+    "name": "globalFunc",
+    "longname": "globalFunc",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "globalFunc"
+  },
+  {
+    "description": "a function with an example",
+    "examples": [
+      "```js\nvar result = exampled();\n```"
+    ],
+    "name": "exampled",
+    "longname": "exampled",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "exampled"
+  },
+  {
+    "description": "a function with multiple examples",
+    "examples": [
+      "```js\nvar another = 100;\n```",
+      "```js\nvar next = \"p\";\n```"
+    ],
+    "name": "multiExampled",
+    "longname": "multiExampled",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "multiExampled"
+  },
+  {
+    "access": "protected",
+    "name": "_protected",
+    "longname": "_protected",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "_protected"
+  },
+  {
+    "author": [
+      "Clive Jones <clive@jones.com>"
+    ],
+    "name": "withAuthor",
+    "longname": "withAuthor",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "withAuthor"
+  },
+  {
+    "deprecated": true,
+    "name": "oldFunction",
+    "longname": "oldFunction",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "oldFunction"
+  },
+  {
+    "since": "v0.10.28",
+    "name": "newFunction",
+    "longname": "newFunction",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "newFunction"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      }
+    ],
+    "name": "withParam",
+    "longname": "withParam",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "withParam"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "name": "two"
+      }
+    ],
+    "name": "withParams",
+    "longname": "withParams",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "withParams"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "description": "this one is optional",
+        "name": "two"
+      }
+    ],
+    "name": "withOptional",
+    "longname": "withOptional",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "withOptional"
+  },
+  {
+    "description": "this description has \n\n- bullet\n- points\n\nand needs this line to separate the above list from the below",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "a second input",
+        "name": "two"
+      }
+    ],
+    "name": "withBullets",
+    "longname": "withBullets",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "withBullets"
+  },
+  {
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "name": "returnsSomething",
+    "longname": "returnsSomething",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "returnsSomething"
+  },
+  {
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "this return has a description"
+      }
+    ],
+    "name": "returnsSomethingDesc",
+    "longname": "returnsSomethingDesc",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "returnsSomethingDesc"
+  },
+  {
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "name": "returnsSeveral",
+    "longname": "returnsSeveral",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "returnsSeveral"
+  },
+  {
+    "description": "This function has all tags set",
+    "deprecated": true,
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The input string",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "a second input",
+        "name": "two"
+      }
+    ],
+    "author": [
+      "Lloyd <75pound@gmail.com>"
+    ],
+    "since": "v0.10.28",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "examples": [
+      "```js\nallTogether(true);\n```"
+    ],
+    "name": "allTogether",
+    "longname": "allTogether",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "allTogether"
+  },
+  {
+    "description": "a visible global",
+    "name": "visible",
+    "longname": "visible",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "visible"
+  },
+  {
+    "description": "A module. Refer to it using {@link module:foo/bar}.",
+    "kind": "module",
+    "name": "foo/bar",
+    "longname": "module:foo/bar"
+  },
+  {
+    "description": "The built in string object. Refer to it with {@link external:String}.",
+    "kind": "external",
+    "name": "String",
+    "longname": "external:String",
+    "scope": "inner",
+    "memberof": "module:foo/bar"
+  },
+  {
+    "description": "An event. Refer to with {@link module:foo/bar.event:MyEvent}.",
+    "kind": "event",
+    "name": "event:MyEvent",
+    "memberof": "module:foo/bar",
+    "longname": "module:foo/bar.event:MyEvent",
+    "scope": "static"
+  },
+  {
+    "description": "See {@link LinkClass} and [LinkClass's foo property]{@link LinkClass#foo}.\nAlso check out {@link http://www.google.com|Google} and {@link http://github.com GitHub}.",
+    "name": "linkFunction",
+    "longname": "module:foo/bar~linkFunction",
+    "kind": "function",
+    "scope": "inner",
+    "memberof": "module:foo/bar",
+    "codeName": "linkFunction"
+  },
+  {
+    "kind": "class",
+    "name": "LinkClass",
+    "longname": "module:foo/bar~LinkClass",
+    "scope": "inner",
+    "memberof": "module:foo/bar",
+    "codeName": "LinkClass"
+  },
+  {
+    "description": "A class.",
+    "kind": "constructor",
+    "name": "LinkClass",
+    "longname": "module:foo/bar~newLinkClass",
+    "scope": "inner",
+    "memberof": "module:foo/bar~LinkClass",
+    "codeName": "LinkClass"
+  },
+  {
+    "description": "foo property",
+    "name": "foo",
+    "longname": "module:foo/bar~LinkClass#foo",
+    "kind": "member",
+    "memberof": "module:foo/bar~LinkClass",
+    "scope": "instance",
+    "codeName": "this.foo"
+  },
+  {
+    "description": "a global variable",
+    "name": "variable",
+    "longname": "variable",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "variable"
+  },
+  {
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "name": "typed",
+    "longname": "typed",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "typed"
+  },
+  {
+    "type": {
+      "names": [
+        "string",
+        "number"
+      ]
+    },
+    "name": "types",
+    "longname": "types",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "types"
+  },
+  {
+    "description": "a var with an example",
+    "examples": [
+      "```js\nvar another = 100;\n```"
+    ],
+    "name": "exampled",
+    "longname": "exampled",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "exampled"
+  },
+  {
+    "description": "a var with multiple examples",
+    "examples": [
+      "```js\nvar another = 100;\n```",
+      "```js\nvar next = \"p\";\n```"
+    ],
+    "name": "examples",
+    "longname": "examples",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "examples"
+  },
+  {
+    "access": "protected",
+    "name": "_protected",
+    "longname": "_protected",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "_protected"
+  },
+  {
+    "author": [
+      "Clive Jones <clive@jones.com>"
+    ],
+    "name": "withAuthor",
+    "longname": "withAuthor",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "withAuthor"
+  },
+  {
+    "defaultvalue": "23",
+    "name": "hasDefault",
+    "longname": "hasDefault",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "hasDefault"
+  },
+  {
+    "defaultvalue": "{\"one\":1,\"two\":2}",
+    "defaultvaluetype": "object",
+    "name": "hasDefaultObject",
+    "longname": "hasDefaultObject",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "hasDefaultObject"
+  },
+  {
+    "deprecated": true,
+    "name": "deprecated",
+    "longname": "deprecated",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "deprecated"
+  },
+  {
+    "readonly": true,
+    "name": "readOnly",
+    "longname": "readOnly",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "readOnly"
+  },
+  {
+    "since": "v0.10.28",
+    "name": "hasSince",
+    "longname": "hasSince",
+    "kind": "member",
+    "scope": "global",
+    "codeName": "hasSince"
+  },
+  {
+    "kind": "namespace",
+    "name": "car",
+    "longname": "car",
+    "scope": "global",
+    "codeName": "car"
+  },
+  {
+    "description": "the round things",
+    "name": "wheels",
+    "longname": "car.wheels",
+    "kind": "member",
+    "memberof": "car",
+    "scope": "static",
+    "codeName": "wheels"
+  },
+  {
+    "description": "the electronics that always go wrong",
+    "name": "sensors",
+    "longname": "car.sensors",
+    "kind": "member",
+    "memberof": "car",
+    "scope": "static",
+    "codeName": "sensors"
+  },
+  {
+    "description": "start the car",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      }
+    ],
+    "name": "start",
+    "longname": "car.start",
+    "kind": "function",
+    "memberof": "car",
+    "scope": "static",
+    "codeName": "start"
+  },
+  {
+    "description": "decribes the current conditions",
+    "kind": "namespace",
+    "name": "env",
+    "longname": "car#env",
+    "memberof": "car",
+    "scope": "instance",
+    "codeName": "this.env"
+  },
+  {
+    "description": "what kind of day is it",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "choppy",
+    "name": "weather",
+    "longname": "car#env.weather",
+    "kind": "member",
+    "memberof": "car#env",
+    "scope": "static",
+    "codeName": "weather"
+  },
+  {
+    "description": "road condition",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "wet",
+    "name": "roads",
+    "longname": "car#env.roads",
+    "kind": "member",
+    "memberof": "car#env",
+    "scope": "static",
+    "codeName": "roads"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "the function options",
+        "name": "options"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "first option",
+        "name": "options.one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "second option",
+        "name": "options.two"
+      }
+    ],
+    "name": "doSomething",
+    "longname": "doSomething",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "doSomething"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "the function options",
+        "name": "options"
+      }
+    ],
+    "name": "doAnother",
+    "longname": "doAnother",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "doAnother"
+  },
+  {
+    "description": "This function takes variable input",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "the property(s) as input",
+        "name": "prop"
+      }
+    ],
+    "name": "pluck",
+    "longname": "pluck",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "pluck"
+  },
+  {
+    "kind": "class",
+    "name": "Plucker",
+    "longname": "Plucker",
+    "scope": "global",
+    "codeName": "Plucker"
+  },
+  {
+    "description": "This function takes variable input",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "an input",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "the property(s) as input",
+        "name": "args"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "more input",
+        "name": "three"
+      }
+    ],
+    "name": "doPluck",
+    "longname": "Plucker#doPluck",
+    "kind": "function",
+    "memberof": "Plucker",
+    "scope": "instance",
+    "codeName": "Plucker.prototype.doPluck"
+  },
+  {
+    "description": "ensure you have some-module installed",
+    "requires": [
+      "module:some-module"
+    ],
+    "name": "requirer",
+    "longname": "requirer",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "requirer"
+  },
+  {
+    "description": "A number, or a string containing a number.",
+    "kind": "typedef",
+    "name": "NumberLike",
+    "type": {
+      "names": [
+        "number",
+        "string"
+      ]
+    },
+    "longname": "NumberLike",
+    "scope": "global"
+  },
+  {
+    "description": "Set the magic number.",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "NumberLike"
+          ]
+        },
+        "description": "The magic number.",
+        "name": "x"
+      }
+    ],
+    "name": "setMagicNumber",
+    "longname": "setMagicNumber",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "setMagicNumber"
+  },
+  {
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "the function options",
+        "name": "options"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "first option",
+        "name": "options.one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "second option",
+        "name": "options.two"
+      }
+    ],
+    "name": "doSomething",
+    "longname": "doSomething",
+    "kind": "function",
+    "scope": "global",
+    "codeName": "doSomething"
+  }
+]
