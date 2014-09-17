@@ -7,7 +7,6 @@ module.exports = function(handlebars){
     require("./link-to.js")(handlebars);
     require("./linkify.js")(handlebars);
     require("./or.js")(handlebars);
-    require("./parent-name.js")(handlebars);
     require("./parent.js")(handlebars);
     require("./data/all-members.js")(handlebars);
     require("./data/classes.js")(handlebars);

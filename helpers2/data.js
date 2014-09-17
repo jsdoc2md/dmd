@@ -22,6 +22,7 @@ exports.isCallback = isCallback;
 exports.isModule = isModule;
 exports.methodSig = methodSig;
 exports.aliasName = aliasName;
+exports.parentName = parentName;
 
 /**
 Returns an array of the top-level elements which have no parents
@@ -172,6 +173,7 @@ function methodSig(){
 
 /**
 Returns the `alias` of this identifiers parent module, else `this.name`
+@deprecated
 @context {identifier}
 @returns {string}
 */
@@ -185,4 +187,27 @@ function aliasName(options){
     }
     if (/module:/.test(this.name)) name = this.codeName;
     return name;
+}
+
+function instantiate(input){
+    return input.charAt(0).toLowerCase() + input.slice(1);
+}
+
+/**
+returns the parent name, instantiated if necessary
+@deprecated
+@context {identifier}
+@returns {string}
+*/
+function parentName(options){
+    if (this.memberof){
+        var parentClass = a.findWhere(options.data.root, { longname: this.memberof });
+        if (parentClass) {
+            var name = parentClass.alias || parentClass.name;
+            return this.scope === "instance"
+                ? instantiate(name) : name;
+        } else {
+            return this.memberof;
+        }
+    }
 }

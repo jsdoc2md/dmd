@@ -1,0 +1,5 @@
+{{#unless (isEvent)~}}
+  {{parentName~}}
+  {{#if (equal-some scope "static" "instance")}}.{{~/if~}}
+  {{#if (equal-some scope "inner")}}~{{/if~}}
+{{/unless~}}

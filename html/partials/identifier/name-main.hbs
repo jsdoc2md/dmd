@@ -1,11 +1,7 @@
 {{#if (isEvent)~}}
   "{{{name}~}}"
 {{~else~}}
-  {{#if (isModule)~}}
     {{{name}~}}
-  {{else~}}
-    {{{aliasName}~}}
-  {{/if~}}
 {{/if~}}
 {{#if (isFunction)}}({{methodSig}}){{/if~}}
 {{#if (isConstructor)}}({{methodSig}}){{/if~}}
