@@ -118,7 +118,7 @@ returns the exported identifier of this module
 @returns {identifier}
 */
 function exported(options){
-    var exported = a.findWhere(options.data.root, { "!kind": "module", name: this.longname });
+    var exported = a.findWhere(options.data.root, { "!kind": "module", longname: this.longname });
     return exported || this;
 }
 
@@ -195,12 +195,11 @@ function instantiate(input){
 
 /**
 returns the parent name, instantiated if necessary
-@deprecated
 @context {identifier}
 @returns {string}
 */
 function parentName(options){
-    if (this.memberof){
+    if (this.memberof && this.kind !== "constructor"){
         var parentClass = a.findWhere(options.data.root, { longname: this.memberof });
         if (parentClass) {
             var name = parentClass.alias || parentClass.name;

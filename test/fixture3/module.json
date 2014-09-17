@@ -12,7 +12,7 @@
     "kind": "class",
     "classdesc": "this class returns a set of files",
     "alias": "module:file-set",
-    "name": "module:file-set",
+    "name": "FileSet",
     "longname": "module:file-set",
     "codeName": "FileSet"
   },
