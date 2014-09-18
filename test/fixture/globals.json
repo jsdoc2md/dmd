@@ -1,13 +1,9 @@
 [
   {
-    "description": "Called when an async operation completes",
-    "kind": "typedef",
+    "id": "onComplete",
     "name": "onComplete",
-    "type": {
-      "names": [
-        "function"
-      ]
-    },
+    "kind": "typedef",
+    "description": "Called when an async operation completes",
     "params": [
       {
         "type": {
@@ -28,10 +24,18 @@
         "name": "result"
       }
     ],
-    "longname": "onComplete",
+    "type": {
+      "names": [
+        "function"
+      ]
+    },
     "scope": "global"
   },
   {
+    "id": "read",
+    "name": "read",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -52,16 +56,29 @@
         "name": "done"
       }
     ],
-    "name": "read",
-    "longname": "read",
-    "kind": "function",
-    "scope": "global",
     "codeName": "read"
   },
   {
-    "description": "the constructor description",
+    "id": "All",
+    "name": "All",
+    "scope": "global",
     "kind": "class",
-    "classdesc": "a class with all of the things",
+    "augments": [
+      "Number"
+    ],
+    "author": [
+      "75lb <75pound@gmail.com>"
+    ],
+    "deprecated": true,
+    "codeName": "All",
+    "description": "a class with all of the things"
+  },
+  {
+    "id": "All◊",
+    "name": "All",
+    "kind": "constructor",
+    "description": "the constructor description",
+    "memberof": "All",
     "params": [
       {
         "type": {
@@ -83,50 +100,41 @@
         "name": "options"
       }
     ],
-    "author": [
-      "75lb <75pound@gmail.com>"
-    ],
-    "deprecated": true,
-    "since": "v0.10.28",
-    "augments": [
-      "Number"
-    ],
     "examples": [
       "```js\nvar yeah = new Everything(true);\n```"
-    ],
-    "name": "All",
-    "longname": "All",
-    "scope": "global",
-    "codeName": "All"
+    ]
   },
   {
+    "id": "All#topping",
+    "name": "topping",
+    "scope": "instance",
+    "kind": "member",
     "description": "the ingredients on top",
-    "defaultvalue": "mud, lettuce",
+    "memberof": "All",
     "type": {
       "names": [
         "string"
       ]
     },
-    "since": "v1.0.0",
-    "name": "topping",
-    "longname": "All#topping",
-    "kind": "member",
-    "memberof": "All",
-    "scope": "instance",
+    "defaultvalue": "mud, lettuce",
     "codeName": "this.topping"
   },
   {
-    "description": "the general size",
+    "id": "All#size",
     "name": "size",
-    "longname": "All#size",
-    "kind": "member",
-    "memberof": "All",
     "scope": "instance",
+    "kind": "member",
+    "description": "the general size",
+    "memberof": "All",
     "codeName": "this.size"
   },
   {
+    "id": "All#allThings",
+    "name": "allThings",
+    "scope": "instance",
+    "kind": "function",
     "description": "This function has all tags set",
-    "deprecated": true,
+    "memberof": "All",
     "params": [
       {
         "type": {
@@ -145,57 +153,68 @@
         },
         "description": "a second input",
         "name": "two"
-      }
-    ],
-    "author": [
-      "Lloyd <75pound@gmail.com>"
-    ],
-    "since": "v0.10.28",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "object",
-            "string"
-          ]
-        },
-        "description": "this return has several types"
       }
     ],
     "examples": [
       "```js\nall.allTogether(true);\n```"
     ],
-    "name": "allThings",
-    "longname": "All#allThings",
-    "kind": "function",
-    "memberof": "All",
-    "scope": "instance",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "this return has several types"
+      }
+    ],
+    "author": [
+      "Lloyd <75pound@gmail.com>"
+    ],
+    "deprecated": true,
     "codeName": "All.prototype.allThings"
   },
   {
-    "description": "a rarseclart inner",
+    "id": "All#allThings~some",
     "name": "some",
-    "longname": "All#allThings~some",
-    "kind": "member",
-    "memberof": "All#allThings",
     "scope": "inner",
+    "kind": "member",
+    "description": "a rarseclart inner",
+    "memberof": "All#allThings",
     "codeName": "some"
   },
   {
-    "description": "a constructor description",
+    "id": "Person",
+    "name": "Person",
+    "scope": "global",
     "kind": "class",
-    "classdesc": "simple class description",
     "augments": [
       "Object"
     ],
-    "name": "Person",
-    "longname": "Person",
-    "scope": "global",
-    "codeName": "Person"
+    "codeName": "Person",
+    "description": "simple class description"
   },
   {
-    "description": "a constructor with args",
+    "id": "Person◊",
+    "name": "Person",
+    "kind": "constructor",
+    "description": "a constructor description",
+    "memberof": "Person"
+  },
+  {
+    "id": "Car",
+    "name": "Car",
+    "scope": "global",
     "kind": "class",
+    "codeName": "Car"
+  },
+  {
+    "id": "Car◊",
+    "name": "Car",
+    "kind": "constructor",
+    "description": "a constructor with args",
+    "memberof": "Car",
     "params": [
       {
         "type": {
@@ -207,30 +226,46 @@
         "description": "optional shit",
         "name": "options"
       }
-    ],
-    "name": "Car",
-    "longname": "Car",
-    "scope": "global",
-    "codeName": "Car"
+    ]
   },
   {
-    "kind": "class",
-    "classdesc": "a class which extends",
-    "augments": [
-      "Pipe"
-    ],
+    "id": "Pipe",
     "name": "Pipe",
-    "longname": "Pipe",
     "scope": "global",
-    "codeName": "Pipe"
-  },
-  {
-    "description": "the constructor description",
     "kind": "class",
-    "classdesc": "a class with all trimmings",
     "augments": [
       "Pipe"
     ],
+    "codeName": "Pipe",
+    "description": "a class which extends"
+  },
+  {
+    "id": "Pipe◊",
+    "name": "Pipe",
+    "kind": "constructor",
+    "memberof": "Pipe"
+  },
+  {
+    "id": "Everything",
+    "name": "Everything",
+    "scope": "global",
+    "kind": "class",
+    "augments": [
+      "Pipe"
+    ],
+    "author": [
+      "75lb <75pound@gmail.com>"
+    ],
+    "deprecated": true,
+    "codeName": "Everything",
+    "description": "a class with all trimmings"
+  },
+  {
+    "id": "Everything◊",
+    "name": "Everything",
+    "kind": "constructor",
+    "description": "the constructor description",
+    "memberof": "Everything",
     "params": [
       {
         "type": {
@@ -252,61 +287,68 @@
         "name": "options"
       }
     ],
-    "author": [
-      "75lb <75pound@gmail.com>"
-    ],
-    "deprecated": true,
-    "since": "v0.10.28",
     "examples": [
       "```js\nvar yeah = new Everything(true);\n```"
-    ],
-    "name": "Everything",
-    "longname": "Everything",
-    "scope": "global",
-    "codeName": "Everything"
+    ]
   },
   {
-    "description": "Fired when rice is ready",
-    "kind": "event",
+    "id": "Rice#event:cooked",
     "name": "cooked",
-    "memberof": "Rice",
-    "longname": "Rice#event:cooked",
-    "scope": "instance"
-  },
-  {
-    "description": "Fired when rice is cooking",
+    "scope": "instance",
     "kind": "event",
-    "name": "cooking",
-    "memberof": "Rice",
-    "longname": "Rice#event:cooking",
-    "scope": "instance"
+    "description": "Fired when rice is ready",
+    "memberof": "Rice"
   },
   {
-    "kind": "class",
+    "id": "Rice#event:cooking",
+    "name": "cooking",
+    "scope": "instance",
+    "kind": "event",
+    "description": "Fired when rice is cooking",
+    "memberof": "Rice"
+  },
+  {
+    "id": "Rice",
     "name": "Rice",
-    "longname": "Rice",
     "scope": "global",
+    "kind": "class",
     "codeName": "Rice"
   },
   {
-    "kind": "class",
+    "id": "Rice◊",
+    "name": "Rice",
+    "kind": "constructor",
+    "memberof": "Rice"
+  },
+  {
+    "id": "Something",
     "name": "Something",
-    "longname": "Something",
     "scope": "global",
+    "kind": "class",
     "codeName": "Something"
   },
   {
-    "description": "method description",
+    "id": "Something◊",
+    "name": "Something",
+    "kind": "constructor",
+    "memberof": "Something"
+  },
+  {
+    "id": "Something#methodOne",
     "name": "methodOne",
-    "longname": "Something#methodOne",
-    "kind": "function",
-    "memberof": "Something",
     "scope": "instance",
+    "kind": "function",
+    "description": "method description",
+    "memberof": "Something",
     "codeName": "Something.prototype.methodOne"
   },
   {
+    "id": "Something#allTogether",
+    "name": "allTogether",
+    "scope": "instance",
+    "kind": "function",
     "description": "This function has all tags set",
-    "deprecated": true,
+    "memberof": "Something",
     "params": [
       {
         "type": {
@@ -327,10 +369,9 @@
         "name": "two"
       }
     ],
-    "author": [
-      "Lloyd <75pound@gmail.com>"
+    "examples": [
+      "```js\nsomething.allTogether(true);\n```"
     ],
-    "since": "v0.10.28",
     "returns": [
       {
         "type": {
@@ -342,65 +383,71 @@
         "description": "this return has several types"
       }
     ],
-    "examples": [
-      "```js\nsomething.allTogether(true);\n```"
+    "author": [
+      "Lloyd <75pound@gmail.com>"
     ],
-    "name": "allTogether",
-    "longname": "Something#allTogether",
-    "kind": "function",
-    "memberof": "Something",
-    "scope": "instance",
+    "deprecated": true,
     "codeName": "Something.prototype.allTogether"
   },
   {
-    "kind": "class",
+    "id": "Pizza",
     "name": "Pizza",
-    "longname": "Pizza",
     "scope": "global",
+    "kind": "class",
     "codeName": "Pizza"
   },
   {
+    "id": "Pizza◊",
+    "name": "Pizza",
+    "kind": "constructor",
+    "memberof": "Pizza"
+  },
+  {
+    "id": "Pizza#topping",
+    "name": "topping",
+    "scope": "instance",
+    "kind": "member",
     "description": "the ingredients on top",
-    "defaultvalue": "mud, lettuce",
+    "memberof": "Pizza",
     "type": {
       "names": [
         "string"
       ]
     },
-    "since": "v1.0.0",
-    "name": "topping",
-    "longname": "Pizza#topping",
-    "kind": "member",
-    "memberof": "Pizza",
-    "scope": "instance",
+    "defaultvalue": "mud, lettuce",
     "codeName": "this.topping"
   },
   {
-    "description": "the general size",
+    "id": "Pizza#size",
     "name": "size",
-    "longname": "Pizza#size",
-    "kind": "member",
-    "memberof": "Pizza",
     "scope": "instance",
+    "kind": "member",
+    "description": "the general size",
+    "memberof": "Pizza",
     "codeName": "this.size"
   },
   {
-    "description": "the first important constant",
+    "id": "CONST_ONE",
+    "name": "CONST_ONE",
+    "scope": "global",
     "kind": "constant",
+    "description": "the first important constant",
     "type": {
       "names": [
         "number"
       ]
     },
-    "name": "CONST_ONE",
-    "longname": "CONST_ONE",
-    "scope": "global",
     "codeName": "CONST_ONE"
   },
   {
-    "description": "This variable has all tags set",
-    "deprecated": true,
+    "id": "CONST_TWO",
+    "name": "CONST_TWO",
+    "scope": "global",
     "kind": "constant",
+    "description": "This variable has all tags set",
+    "examples": [
+      "```js\nvar CONST_TWO = true;\n```"
+    ],
     "type": {
       "names": [
         "boolean"
@@ -410,96 +457,39 @@
     "author": [
       "Lloyd Brookes <lloyd@brookes.com>"
     ],
-    "since": "v0.10.28",
-    "examples": [
-      "```js\nvar CONST_TWO = true;\n```"
-    ],
-    "name": "CONST_TWO",
-    "longname": "CONST_TWO",
-    "scope": "global",
+    "deprecated": true,
     "codeName": "CONST_TWO"
   },
   {
-    "description": "this function has a wonderful custom tag",
-    "tags": [
-      {
-        "originalTitle": "createdIn",
-        "title": "createdin",
-        "text": "Nigeria",
-        "value": "Nigeria"
-      }
-    ],
+    "id": "customTaggedFunction",
     "name": "customTaggedFunction",
-    "longname": "customTaggedFunction",
-    "kind": "function",
     "scope": "global",
+    "kind": "function",
+    "description": "this function has a wonderful custom tag",
+    "createdin": "Nigeria",
     "codeName": "customTaggedFunction"
   },
   {
-    "description": "Enum for the `type` value",
-    "readonly": true,
+    "id": "eFileType",
+    "name": "eFileType",
+    "scope": "global",
     "kind": "member",
-    "isEnum": true,
+    "description": "Enum for the `type` value",
     "type": {
       "names": [
         "number"
       ]
     },
-    "name": "eFileType",
-    "longname": "eFileType",
-    "scope": "global",
-    "properties": [
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "longname": "eFileType.NOEXIST",
-        "name": "NOEXIST",
-        "defaultvalue": "0",
-        "memberof": "eFileType",
-        "kind": "member",
-        "scope": "static",
-        "codeName": "NOEXIST"
-      },
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "longname": "eFileType.FILE",
-        "name": "FILE",
-        "defaultvalue": "1",
-        "memberof": "eFileType",
-        "kind": "member",
-        "scope": "static",
-        "codeName": "FILE"
-      },
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "longname": "eFileType.DIR",
-        "name": "DIR",
-        "defaultvalue": "2",
-        "memberof": "eFileType",
-        "kind": "member",
-        "scope": "static",
-        "codeName": "DIR"
-      }
-    ],
+    "readonly": true,
+    "isEnum": true,
     "codeName": "eFileType"
   },
   {
+    "id": "eFileType.NOEXIST",
     "name": "NOEXIST",
-    "longname": "eFileType.NOEXIST",
+    "scope": "static",
     "kind": "member",
     "memberof": "eFileType",
-    "scope": "static",
     "type": {
       "names": [
         "number"
@@ -509,11 +499,11 @@
     "codeName": "NOEXIST"
   },
   {
+    "id": "eFileType.FILE",
     "name": "FILE",
-    "longname": "eFileType.FILE",
+    "scope": "static",
     "kind": "member",
     "memberof": "eFileType",
-    "scope": "static",
     "type": {
       "names": [
         "number"
@@ -523,11 +513,11 @@
     "codeName": "FILE"
   },
   {
+    "id": "eFileType.DIR",
     "name": "DIR",
-    "longname": "eFileType.DIR",
+    "scope": "static",
     "kind": "member",
     "memberof": "eFileType",
-    "scope": "static",
     "type": {
       "names": [
         "number"
@@ -537,71 +527,74 @@
     "codeName": "DIR"
   },
   {
-    "description": "a global function",
+    "id": "globalFunc",
     "name": "globalFunc",
-    "longname": "globalFunc",
-    "kind": "function",
     "scope": "global",
+    "kind": "function",
+    "description": "a global function",
     "codeName": "globalFunc"
   },
   {
+    "id": "exampled",
+    "name": "exampled",
+    "scope": "global",
+    "kind": "function",
     "description": "a function with an example",
     "examples": [
       "```js\nvar result = exampled();\n```"
     ],
-    "name": "exampled",
-    "longname": "exampled",
-    "kind": "function",
-    "scope": "global",
     "codeName": "exampled"
   },
   {
+    "id": "multiExampled",
+    "name": "multiExampled",
+    "scope": "global",
+    "kind": "function",
     "description": "a function with multiple examples",
     "examples": [
       "```js\nvar another = 100;\n```",
       "```js\nvar next = \"p\";\n```"
     ],
-    "name": "multiExampled",
-    "longname": "multiExampled",
-    "kind": "function",
-    "scope": "global",
     "codeName": "multiExampled"
   },
   {
-    "access": "protected",
+    "id": "_protected",
     "name": "_protected",
-    "longname": "_protected",
-    "kind": "function",
     "scope": "global",
+    "kind": "function",
+    "access": "protected",
     "codeName": "_protected"
   },
   {
+    "id": "withAuthor",
+    "name": "withAuthor",
+    "scope": "global",
+    "kind": "function",
     "author": [
       "Clive Jones <clive@jones.com>"
     ],
-    "name": "withAuthor",
-    "longname": "withAuthor",
-    "kind": "function",
-    "scope": "global",
     "codeName": "withAuthor"
   },
   {
-    "deprecated": true,
+    "id": "oldFunction",
     "name": "oldFunction",
-    "longname": "oldFunction",
-    "kind": "function",
     "scope": "global",
+    "kind": "function",
+    "deprecated": true,
     "codeName": "oldFunction"
   },
   {
-    "since": "v0.10.28",
+    "id": "newFunction",
     "name": "newFunction",
-    "longname": "newFunction",
-    "kind": "function",
     "scope": "global",
+    "kind": "function",
     "codeName": "newFunction"
   },
   {
+    "id": "withParam",
+    "name": "withParam",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -613,13 +606,13 @@
         "name": "one"
       }
     ],
-    "name": "withParam",
-    "longname": "withParam",
-    "kind": "function",
-    "scope": "global",
     "codeName": "withParam"
   },
   {
+    "id": "withParams",
+    "name": "withParams",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -639,13 +632,13 @@
         "name": "two"
       }
     ],
-    "name": "withParams",
-    "longname": "withParams",
-    "kind": "function",
-    "scope": "global",
     "codeName": "withParams"
   },
   {
+    "id": "withOptional",
+    "name": "withOptional",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -667,13 +660,13 @@
         "name": "two"
       }
     ],
-    "name": "withOptional",
-    "longname": "withOptional",
-    "kind": "function",
-    "scope": "global",
     "codeName": "withOptional"
   },
   {
+    "id": "withBullets",
+    "name": "withBullets",
+    "scope": "global",
+    "kind": "function",
     "description": "this description has \n\n- bullet\n- points\n\nand needs this line to separate the above list from the below",
     "params": [
       {
@@ -695,13 +688,13 @@
         "name": "two"
       }
     ],
-    "name": "withBullets",
-    "longname": "withBullets",
-    "kind": "function",
-    "scope": "global",
     "codeName": "withBullets"
   },
   {
+    "id": "returnsSomething",
+    "name": "returnsSomething",
+    "scope": "global",
+    "kind": "function",
     "returns": [
       {
         "type": {
@@ -711,13 +704,13 @@
         }
       }
     ],
-    "name": "returnsSomething",
-    "longname": "returnsSomething",
-    "kind": "function",
-    "scope": "global",
     "codeName": "returnsSomething"
   },
   {
+    "id": "returnsSomethingDesc",
+    "name": "returnsSomethingDesc",
+    "scope": "global",
+    "kind": "function",
     "returns": [
       {
         "type": {
@@ -728,13 +721,13 @@
         "description": "this return has a description"
       }
     ],
-    "name": "returnsSomethingDesc",
-    "longname": "returnsSomethingDesc",
-    "kind": "function",
-    "scope": "global",
     "codeName": "returnsSomethingDesc"
   },
   {
+    "id": "returnsSeveral",
+    "name": "returnsSeveral",
+    "scope": "global",
+    "kind": "function",
     "returns": [
       {
         "type": {
@@ -746,15 +739,14 @@
         "description": "this return has several types"
       }
     ],
-    "name": "returnsSeveral",
-    "longname": "returnsSeveral",
-    "kind": "function",
-    "scope": "global",
     "codeName": "returnsSeveral"
   },
   {
+    "id": "allTogether",
+    "name": "allTogether",
+    "scope": "global",
+    "kind": "function",
     "description": "This function has all tags set",
-    "deprecated": true,
     "params": [
       {
         "type": {
@@ -775,10 +767,9 @@
         "name": "two"
       }
     ],
-    "author": [
-      "Lloyd <75pound@gmail.com>"
+    "examples": [
+      "```js\nallTogether(true);\n```"
     ],
-    "since": "v0.10.28",
     "returns": [
       {
         "type": {
@@ -790,214 +781,220 @@
         "description": "this return has several types"
       }
     ],
-    "examples": [
-      "```js\nallTogether(true);\n```"
+    "author": [
+      "Lloyd <75pound@gmail.com>"
     ],
-    "name": "allTogether",
-    "longname": "allTogether",
-    "kind": "function",
-    "scope": "global",
+    "deprecated": true,
     "codeName": "allTogether"
   },
   {
-    "description": "a visible global",
+    "id": "visible",
     "name": "visible",
-    "longname": "visible",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "description": "a visible global",
     "codeName": "visible"
   },
   {
-    "description": "A module. Refer to it using {@link module:foo/bar}.",
-    "kind": "module",
+    "id": "module:foo/bar",
     "name": "foo/bar",
-    "longname": "module:foo/bar"
+    "kind": "module",
+    "description": "A module. Refer to it using {@link module:foo/bar}."
   },
   {
-    "description": "The built in string object. Refer to it with {@link external:String}.",
-    "kind": "external",
+    "id": "external:String",
     "name": "String",
-    "longname": "external:String",
     "scope": "inner",
+    "kind": "external",
+    "description": "The built in string object. Refer to it with {@link external:String}.",
     "memberof": "module:foo/bar"
   },
   {
-    "description": "An event. Refer to with {@link module:foo/bar.event:MyEvent}.",
-    "kind": "event",
+    "id": "module:foo/bar.event:MyEvent",
     "name": "event:MyEvent",
-    "memberof": "module:foo/bar",
-    "longname": "module:foo/bar.event:MyEvent",
-    "scope": "static"
+    "scope": "static",
+    "kind": "event",
+    "description": "An event. Refer to with {@link module:foo/bar.event:MyEvent}.",
+    "memberof": "module:foo/bar"
   },
   {
-    "description": "See {@link LinkClass} and [LinkClass's foo property]{@link LinkClass#foo}.\nAlso check out {@link http://www.google.com|Google} and {@link http://github.com GitHub}.",
+    "id": "module:foo/bar~linkFunction",
     "name": "linkFunction",
-    "longname": "module:foo/bar~linkFunction",
-    "kind": "function",
     "scope": "inner",
+    "kind": "function",
+    "description": "See {@link LinkClass} and [LinkClass's foo property]{@link LinkClass#foo}.\nAlso check out {@link http://www.google.com|Google} and {@link http://github.com GitHub}.",
     "memberof": "module:foo/bar",
     "codeName": "linkFunction"
   },
   {
-    "description": "A class.",
-    "kind": "class",
+    "id": "module:foo/bar~LinkClass",
     "name": "LinkClass",
-    "longname": "module:foo/bar~LinkClass",
     "scope": "inner",
+    "kind": "class",
     "memberof": "module:foo/bar",
     "codeName": "LinkClass"
   },
   {
-    "description": "foo property",
+    "id": "module:foo/bar~LinkClass◊",
+    "name": "LinkClass",
+    "kind": "constructor",
+    "description": "A class.",
+    "memberof": "module:foo/bar~LinkClass"
+  },
+  {
+    "id": "module:foo/bar~LinkClass#foo",
     "name": "foo",
-    "longname": "module:foo/bar~LinkClass#foo",
-    "kind": "member",
-    "memberof": "module:foo/bar~LinkClass",
     "scope": "instance",
+    "kind": "member",
+    "description": "foo property",
+    "memberof": "module:foo/bar~LinkClass",
     "codeName": "this.foo"
   },
   {
-    "description": "a global variable",
+    "id": "variable",
     "name": "variable",
-    "longname": "variable",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "description": "a global variable",
     "codeName": "variable"
   },
   {
+    "id": "typed",
+    "name": "typed",
+    "scope": "global",
+    "kind": "member",
     "type": {
       "names": [
         "string"
       ]
     },
-    "name": "typed",
-    "longname": "typed",
-    "kind": "member",
-    "scope": "global",
     "codeName": "typed"
   },
   {
+    "id": "types",
+    "name": "types",
+    "scope": "global",
+    "kind": "member",
     "type": {
       "names": [
         "string",
         "number"
       ]
     },
-    "name": "types",
-    "longname": "types",
-    "kind": "member",
-    "scope": "global",
     "codeName": "types"
   },
   {
+    "id": "exampled",
+    "name": "exampled",
+    "scope": "global",
+    "kind": "member",
     "description": "a var with an example",
     "examples": [
       "```js\nvar another = 100;\n```"
     ],
-    "name": "exampled",
-    "longname": "exampled",
-    "kind": "member",
-    "scope": "global",
     "codeName": "exampled"
   },
   {
+    "id": "examples",
+    "name": "examples",
+    "scope": "global",
+    "kind": "member",
     "description": "a var with multiple examples",
     "examples": [
       "```js\nvar another = 100;\n```",
       "```js\nvar next = \"p\";\n```"
     ],
-    "name": "examples",
-    "longname": "examples",
-    "kind": "member",
-    "scope": "global",
     "codeName": "examples"
   },
   {
-    "access": "protected",
+    "id": "_protected",
     "name": "_protected",
-    "longname": "_protected",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "access": "protected",
     "codeName": "_protected"
   },
   {
+    "id": "withAuthor",
+    "name": "withAuthor",
+    "scope": "global",
+    "kind": "member",
     "author": [
       "Clive Jones <clive@jones.com>"
     ],
-    "name": "withAuthor",
-    "longname": "withAuthor",
-    "kind": "member",
-    "scope": "global",
     "codeName": "withAuthor"
   },
   {
-    "defaultvalue": "23",
+    "id": "hasDefault",
     "name": "hasDefault",
-    "longname": "hasDefault",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "defaultvalue": "23",
     "codeName": "hasDefault"
   },
   {
-    "defaultvalue": "{\"one\":1,\"two\":2}",
-    "defaultvaluetype": "object",
+    "id": "hasDefaultObject",
     "name": "hasDefaultObject",
-    "longname": "hasDefaultObject",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "defaultvalue": "{\"one\":1,\"two\":2}",
     "codeName": "hasDefaultObject"
   },
   {
-    "deprecated": true,
+    "id": "deprecated",
     "name": "deprecated",
-    "longname": "deprecated",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "deprecated": true,
     "codeName": "deprecated"
   },
   {
-    "readonly": true,
+    "id": "readOnly",
     "name": "readOnly",
-    "longname": "readOnly",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
+    "readonly": true,
     "codeName": "readOnly"
   },
   {
-    "since": "v0.10.28",
+    "id": "hasSince",
     "name": "hasSince",
-    "longname": "hasSince",
-    "kind": "member",
     "scope": "global",
+    "kind": "member",
     "codeName": "hasSince"
   },
   {
-    "kind": "namespace",
+    "id": "car",
     "name": "car",
-    "longname": "car",
     "scope": "global",
+    "kind": "namespace",
     "codeName": "car"
   },
   {
-    "description": "the round things",
+    "id": "car.wheels",
     "name": "wheels",
-    "longname": "car.wheels",
-    "kind": "member",
-    "memberof": "car",
     "scope": "static",
+    "kind": "member",
+    "description": "the round things",
+    "memberof": "car",
     "codeName": "wheels"
   },
   {
-    "description": "the electronics that always go wrong",
+    "id": "car.sensors",
     "name": "sensors",
-    "longname": "car.sensors",
-    "kind": "member",
-    "memberof": "car",
     "scope": "static",
+    "kind": "member",
+    "description": "the electronics that always go wrong",
+    "memberof": "car",
     "codeName": "sensors"
   },
   {
+    "id": "car.start",
+    "name": "start",
+    "scope": "static",
+    "kind": "function",
     "description": "start the car",
+    "memberof": "car",
     "params": [
       {
         "type": {
@@ -1014,53 +1011,52 @@
         }
       }
     ],
-    "name": "start",
-    "longname": "car.start",
-    "kind": "function",
-    "memberof": "car",
-    "scope": "static",
     "codeName": "start"
   },
   {
-    "description": "decribes the current conditions",
-    "kind": "namespace",
+    "id": "car#env",
     "name": "env",
-    "longname": "car#env",
-    "memberof": "car",
     "scope": "instance",
+    "kind": "namespace",
+    "description": "decribes the current conditions",
+    "memberof": "car",
     "codeName": "this.env"
   },
   {
+    "id": "car#env.weather",
+    "name": "weather",
+    "scope": "static",
+    "kind": "member",
     "description": "what kind of day is it",
+    "memberof": "car#env",
     "type": {
       "names": [
         "string"
       ]
     },
     "defaultvalue": "choppy",
-    "name": "weather",
-    "longname": "car#env.weather",
-    "kind": "member",
-    "memberof": "car#env",
-    "scope": "static",
     "codeName": "weather"
   },
   {
+    "id": "car#env.roads",
+    "name": "roads",
+    "scope": "static",
+    "kind": "member",
     "description": "road condition",
+    "memberof": "car#env",
     "type": {
       "names": [
         "string"
       ]
     },
     "defaultvalue": "wet",
-    "name": "roads",
-    "longname": "car#env.roads",
-    "kind": "member",
-    "memberof": "car#env",
-    "scope": "static",
     "codeName": "roads"
   },
   {
+    "id": "doSomething",
+    "name": "doSomething",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -1090,13 +1086,13 @@
         "name": "options.two"
       }
     ],
-    "name": "doSomething",
-    "longname": "doSomething",
-    "kind": "function",
-    "scope": "global",
     "codeName": "doSomething"
   },
   {
+    "id": "doAnother",
+    "name": "doAnother",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -1108,13 +1104,13 @@
         "name": "options"
       }
     ],
-    "name": "doAnother",
-    "longname": "doAnother",
-    "kind": "function",
-    "scope": "global",
     "codeName": "doAnother"
   },
   {
+    "id": "pluck",
+    "name": "pluck",
+    "scope": "global",
+    "kind": "function",
     "description": "This function takes variable input",
     "params": [
       {
@@ -1128,21 +1124,28 @@
         "name": "prop"
       }
     ],
-    "name": "pluck",
-    "longname": "pluck",
-    "kind": "function",
-    "scope": "global",
     "codeName": "pluck"
   },
   {
-    "kind": "class",
+    "id": "Plucker",
     "name": "Plucker",
-    "longname": "Plucker",
     "scope": "global",
+    "kind": "class",
     "codeName": "Plucker"
   },
   {
+    "id": "Plucker◊",
+    "name": "Plucker",
+    "kind": "constructor",
+    "memberof": "Plucker"
+  },
+  {
+    "id": "Plucker#doPluck",
+    "name": "doPluck",
+    "scope": "instance",
+    "kind": "function",
     "description": "This function takes variable input",
+    "memberof": "Plucker",
     "params": [
       {
         "type": {
@@ -1174,38 +1177,37 @@
         "name": "three"
       }
     ],
-    "name": "doPluck",
-    "longname": "Plucker#doPluck",
-    "kind": "function",
-    "memberof": "Plucker",
-    "scope": "instance",
     "codeName": "Plucker.prototype.doPluck"
   },
   {
+    "id": "requirer",
+    "name": "requirer",
+    "scope": "global",
+    "kind": "function",
     "description": "ensure you have some-module installed",
     "requires": [
       "module:some-module"
     ],
-    "name": "requirer",
-    "longname": "requirer",
-    "kind": "function",
-    "scope": "global",
     "codeName": "requirer"
   },
   {
-    "description": "A number, or a string containing a number.",
-    "kind": "typedef",
+    "id": "NumberLike",
     "name": "NumberLike",
+    "kind": "typedef",
+    "description": "A number, or a string containing a number.",
     "type": {
       "names": [
         "number",
         "string"
       ]
     },
-    "longname": "NumberLike",
     "scope": "global"
   },
   {
+    "id": "setMagicNumber",
+    "name": "setMagicNumber",
+    "scope": "global",
+    "kind": "function",
     "description": "Set the magic number.",
     "params": [
       {
@@ -1218,13 +1220,13 @@
         "name": "x"
       }
     ],
-    "name": "setMagicNumber",
-    "longname": "setMagicNumber",
-    "kind": "function",
-    "scope": "global",
     "codeName": "setMagicNumber"
   },
   {
+    "id": "doSomething",
+    "name": "doSomething",
+    "scope": "global",
+    "kind": "function",
     "params": [
       {
         "type": {
@@ -1254,10 +1256,6 @@
         "name": "options.two"
       }
     ],
-    "name": "doSomething",
-    "longname": "doSomething",
-    "kind": "function",
-    "scope": "global",
     "codeName": "doSomething"
   }
 ]

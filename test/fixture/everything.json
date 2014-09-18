@@ -1,0 +1,233 @@
+[
+  {
+    "id": "module:cjs/class",
+    "name": "cjs/class",
+    "kind": "module",
+    "description": "exports a class",
+    "typicalname": "exp"
+  },
+  {
+    "id": "module:cjs/class^ExportedClass",
+    "name": "ExportedClass",
+    "kind": "class",
+    "alias": "module:cjs/class",
+    "isExported": true,
+    "codeName": "ExportedClass",
+    "description": "the exported class",
+    "memberof": "module:cjs/class"
+  },
+  {
+    "id": "module:cjs/class^ExportedClass◊",
+    "name": "ExportedClass",
+    "kind": "constructor",
+    "description": "the exported contructor",
+    "memberof": "module:cjs/class^ExportedClass"
+  },
+  {
+    "id": "module:cjs/class^ExportedClass#prop",
+    "name": "prop",
+    "scope": "instance",
+    "kind": "member",
+    "description": "instance property",
+    "memberof": "module:cjs/class^ExportedClass",
+    "codeName": "this.prop"
+  },
+  {
+    "id": "module:cjs/class^ExportedClass.staticProp",
+    "name": "staticProp",
+    "scope": "static",
+    "kind": "member",
+    "description": "a static property for the exported class",
+    "memberof": "module:cjs/class^ExportedClass",
+    "codeName": "ExportedClass.staticProp"
+  },
+  {
+    "id": "module:cjs/class^ExportedClass~innerProp",
+    "name": "innerProp",
+    "scope": "inner",
+    "kind": "member",
+    "description": "inner module property",
+    "memberof": "module:cjs/class^ExportedClass",
+    "codeName": "innerProp"
+  },
+  {
+    "id": "module:functionAlias",
+    "name": "functionAlias",
+    "kind": "module",
+    "description": "exports a pointer to a function",
+    "typicalname": "pf"
+  },
+  {
+    "id": "module:functionAlias^pointerFunction",
+    "name": "pointerFunction",
+    "kind": "function",
+    "description": "the function",
+    "alias": "module:functionAlias",
+    "isExported": true,
+    "codeName": "pointerFunction",
+    "memberof": "module:functionAlias"
+  },
+  {
+    "id": "module:cjs/function",
+    "name": "cjs/function",
+    "kind": "module",
+    "description": "module two exports a function",
+    "typicalname": "$"
+  },
+  {
+    "id": "module:cjs/function~prop",
+    "name": "prop",
+    "scope": "inner",
+    "kind": "member",
+    "description": "inner property",
+    "memberof": "module:cjs/function",
+    "codeName": "prop"
+  },
+  {
+    "id": "module:teams",
+    "name": "teams",
+    "kind": "module",
+    "description": "module one"
+  },
+  {
+    "id": "module:teams^teams",
+    "name": "teams",
+    "kind": "member",
+    "description": "the teams",
+    "alias": "module:teams",
+    "isExported": true,
+    "codeName": "teams",
+    "memberof": "module:teams"
+  },
+  {
+    "id": "module:cjs/object",
+    "name": "cjs/object",
+    "kind": "module",
+    "description": "module one",
+    "typicalname": "obj"
+  },
+  {
+    "id": "module:cjs/object.one",
+    "name": "one",
+    "scope": "static",
+    "kind": "member",
+    "description": "the first property",
+    "memberof": "module:cjs/object",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "codeName": "exports.one"
+  },
+  {
+    "id": "module:cjs/object.two",
+    "name": "two",
+    "scope": "static",
+    "kind": "function",
+    "description": "the second property, a function",
+    "memberof": "module:cjs/object",
+    "examples": [
+      "this is the example"
+    ],
+    "codeName": "exports.two"
+  },
+  {
+    "id": "globalVar",
+    "name": "globalVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "a global var",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "\"something\"",
+    "codeName": "globalVar"
+  },
+  {
+    "id": "globalFunction",
+    "name": "globalFunction",
+    "scope": "global",
+    "kind": "function",
+    "description": "a global function",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "first param",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "second param",
+        "name": "two"
+      }
+    ],
+    "codeName": "globalFunction"
+  },
+  {
+    "id": "GlobalClass",
+    "name": "GlobalClass",
+    "scope": "global",
+    "kind": "class",
+    "augments": [
+      "String"
+    ],
+    "codeName": "GlobalClass",
+    "description": "a global class"
+  },
+  {
+    "id": "GlobalClass◊",
+    "name": "GlobalClass",
+    "kind": "constructor",
+    "description": "the global class constructor",
+    "memberof": "GlobalClass",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "first param",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "second param",
+        "name": "two"
+      }
+    ]
+  },
+  {
+    "id": "GlobalClass#propOne",
+    "name": "propOne",
+    "scope": "instance",
+    "kind": "member",
+    "description": "an instance property",
+    "memberof": "GlobalClass",
+    "codeName": "this.propOne"
+  },
+  {
+    "id": "GlobalClass.propTwo",
+    "name": "propTwo",
+    "scope": "static",
+    "kind": "member",
+    "description": "a static property",
+    "memberof": "GlobalClass",
+    "codeName": "GlobalClass.propTwo"
+  }
+]

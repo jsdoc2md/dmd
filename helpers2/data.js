@@ -221,11 +221,11 @@ returns the parent name, instantiated if necessary
 */
 function parentName(options){
     if (this.memberof && this.kind !== "constructor"){
-        var parentClass = a.findWhere(options.data.root, { id: this.memberof });
-        if (parentClass) {
+        var parent = a.findWhere(options.data.root, { id: this.memberof });
+        if (parent) {
             /* don't bother with a parentName for exported classes */
-            if (this.kind === "class" && parentClass.kind === "module") return "";
-            var name = parentClass.alias || parentClass.name;
+            if (this.kind === "class" && parent.kind === "module") return "";
+            var name = parent.typicalname || parent.name;
             return this.scope === "instance"
                 ? instantiate(name) : name;
         } else {

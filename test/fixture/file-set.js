@@ -44,6 +44,11 @@
     "kind": "member",
     "description": "The full list of unique paths found, and not found.",
     "memberof": "module:file-set^FileSet",
+    "type": {
+      "names": [
+        "Array.<string>"
+      ]
+    },
     "codeName": "this.list"
   },
   {
@@ -53,6 +58,11 @@
     "kind": "member",
     "description": "The existing files found",
     "memberof": "module:file-set^FileSet",
+    "type": {
+      "names": [
+        "Array.<string>"
+      ]
+    },
     "codeName": "this.files"
   },
   {
@@ -62,6 +72,11 @@
     "kind": "member",
     "description": "The existing directories found",
     "memberof": "module:file-set^FileSet",
+    "type": {
+      "names": [
+        "Array.<string>"
+      ]
+    },
     "codeName": "this.dirs"
   },
   {
@@ -71,6 +86,11 @@
     "kind": "member",
     "description": "Paths which were not found",
     "memberof": "module:file-set^FileSet",
+    "type": {
+      "names": [
+        "Array.<string>"
+      ]
+    },
     "codeName": "this.notExisting"
   },
   {
@@ -101,6 +121,13 @@
     "kind": "member",
     "description": "Enum for the `type` value of each record in `fileSet.list`",
     "memberof": "module:file-set^FileSet",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "readonly": true,
+    "isEnum": true,
     "codeName": "FileSet.eFileType"
   },
   {
@@ -109,6 +136,12 @@
     "scope": "static",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "0",
     "codeName": "NOEXIST"
   },
   {
@@ -117,6 +150,12 @@
     "scope": "static",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "1",
     "codeName": "FILE"
   },
   {
@@ -125,6 +164,12 @@
     "scope": "static",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "2",
     "codeName": "DIR"
   }
 ]
