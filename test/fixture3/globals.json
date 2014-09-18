@@ -28,7 +28,7 @@
         "name": "result"
       }
     ],
-    "longname": "onComplete",
+    "id": "onComplete",
     "scope": "global"
   },
   {
@@ -53,7 +53,7 @@
       }
     ],
     "name": "read",
-    "longname": "read",
+    "id": "read",
     "kind": "function",
     "scope": "global",
     "codeName": "read"
@@ -70,7 +70,7 @@
       "Number"
     ],
     "name": "All",
-    "longname": "All",
+    "id": "All",
     "scope": "global",
     "codeName": "All"
   },
@@ -103,7 +103,7 @@
     ],
     "name": "All",
     "memberof": "All",
-    "longname": "newAll",
+    "id": "newAll",
     "codeName": "All"
   },
   {
@@ -116,7 +116,7 @@
     },
     "since": "v1.0.0",
     "name": "topping",
-    "longname": "All#topping",
+    "id": "All#topping",
     "kind": "member",
     "memberof": "All",
     "scope": "instance",
@@ -125,7 +125,7 @@
   {
     "description": "the general size",
     "name": "size",
-    "longname": "All#size",
+    "id": "All#size",
     "kind": "member",
     "memberof": "All",
     "scope": "instance",
@@ -173,7 +173,7 @@
       "```js\nall.allTogether(true);\n```"
     ],
     "name": "allThings",
-    "longname": "All#allThings",
+    "id": "All#allThings",
     "kind": "function",
     "memberof": "All",
     "scope": "instance",
@@ -182,7 +182,7 @@
   {
     "description": "a rarseclart inner",
     "name": "some",
-    "longname": "All#allThings~some",
+    "id": "All#allThings~some",
     "kind": "member",
     "memberof": "All#allThings",
     "scope": "inner",
@@ -195,7 +195,7 @@
       "Object"
     ],
     "name": "Person",
-    "longname": "Person",
+    "id": "Person",
     "scope": "global",
     "codeName": "Person"
   },
@@ -204,14 +204,14 @@
     "kind": "constructor",
     "name": "Person",
     "memberof": "Person",
-    "longname": "newPerson",
+    "id": "newPerson",
     "scope": "global",
     "codeName": "Person"
   },
   {
     "kind": "class",
     "name": "Car",
-    "longname": "Car",
+    "id": "Car",
     "scope": "global",
     "codeName": "Car"
   },
@@ -232,7 +232,7 @@
     ],
     "name": "Car",
     "memberof": "Car",
-    "longname": "newCar",
+    "id": "newCar",
     "scope": "global",
     "codeName": "Car"
   },
@@ -243,7 +243,7 @@
       "Pipe"
     ],
     "name": "Pipe",
-    "longname": "Pipe",
+    "id": "Pipe",
     "scope": "global",
     "codeName": "Pipe"
   },
@@ -259,7 +259,7 @@
     "deprecated": true,
     "since": "v0.10.28",
     "name": "Everything",
-    "longname": "Everything",
+    "id": "Everything",
     "scope": "global",
     "codeName": "Everything"
   },
@@ -292,7 +292,7 @@
     ],
     "name": "Everything",
     "memberof": "Everything",
-    "longname": "newEverything",
+    "id": "newEverything",
     "scope": "global",
     "codeName": "Everything"
   },
@@ -301,7 +301,7 @@
     "kind": "event",
     "name": "cooked",
     "memberof": "Rice",
-    "longname": "Rice#event:cooked",
+    "id": "Rice#event:cooked",
     "scope": "instance"
   },
   {
@@ -309,27 +309,27 @@
     "kind": "event",
     "name": "cooking",
     "memberof": "Rice",
-    "longname": "Rice#event:cooking",
+    "id": "Rice#event:cooking",
     "scope": "instance"
   },
   {
     "kind": "class",
     "name": "Rice",
-    "longname": "Rice",
+    "id": "Rice",
     "scope": "global",
     "codeName": "Rice"
   },
   {
     "kind": "class",
     "name": "Something",
-    "longname": "Something",
+    "id": "Something",
     "scope": "global",
     "codeName": "Something"
   },
   {
     "description": "method description",
     "name": "methodOne",
-    "longname": "Something#methodOne",
+    "id": "Something#methodOne",
     "kind": "function",
     "memberof": "Something",
     "scope": "instance",
@@ -377,7 +377,7 @@
       "```js\nsomething.allTogether(true);\n```"
     ],
     "name": "allTogether",
-    "longname": "Something#allTogether",
+    "id": "Something#allTogether",
     "kind": "function",
     "memberof": "Something",
     "scope": "instance",
@@ -386,7 +386,7 @@
   {
     "kind": "class",
     "name": "Pizza",
-    "longname": "Pizza",
+    "id": "Pizza",
     "scope": "global",
     "codeName": "Pizza"
   },
@@ -400,7 +400,7 @@
     },
     "since": "v1.0.0",
     "name": "topping",
-    "longname": "Pizza#topping",
+    "id": "Pizza#topping",
     "kind": "member",
     "memberof": "Pizza",
     "scope": "instance",
@@ -409,7 +409,7 @@
   {
     "description": "the general size",
     "name": "size",
-    "longname": "Pizza#size",
+    "id": "Pizza#size",
     "kind": "member",
     "memberof": "Pizza",
     "scope": "instance",
@@ -424,7 +424,7 @@
       ]
     },
     "name": "CONST_ONE",
-    "longname": "CONST_ONE",
+    "id": "CONST_ONE",
     "scope": "global",
     "codeName": "CONST_ONE"
   },
@@ -446,7 +446,7 @@
       "```js\nvar CONST_TWO = true;\n```"
     ],
     "name": "CONST_TWO",
-    "longname": "CONST_TWO",
+    "id": "CONST_TWO",
     "scope": "global",
     "codeName": "CONST_TWO"
   },
@@ -461,7 +461,7 @@
       }
     ],
     "name": "customTaggedFunction",
-    "longname": "customTaggedFunction",
+    "id": "customTaggedFunction",
     "kind": "function",
     "scope": "global",
     "codeName": "customTaggedFunction"
@@ -477,7 +477,7 @@
       ]
     },
     "name": "eFileType",
-    "longname": "eFileType",
+    "id": "eFileType",
     "scope": "global",
     "properties": [
       {
@@ -486,7 +486,7 @@
             "number"
           ]
         },
-        "longname": "eFileType.NOEXIST",
+        "id": "eFileType.NOEXIST",
         "name": "NOEXIST",
         "defaultvalue": "0",
         "memberof": "eFileType",
@@ -500,7 +500,7 @@
             "number"
           ]
         },
-        "longname": "eFileType.FILE",
+        "id": "eFileType.FILE",
         "name": "FILE",
         "defaultvalue": "1",
         "memberof": "eFileType",
@@ -514,7 +514,7 @@
             "number"
           ]
         },
-        "longname": "eFileType.DIR",
+        "id": "eFileType.DIR",
         "name": "DIR",
         "defaultvalue": "2",
         "memberof": "eFileType",
@@ -527,7 +527,7 @@
   },
   {
     "name": "NOEXIST",
-    "longname": "eFileType.NOEXIST",
+    "id": "eFileType.NOEXIST",
     "kind": "member",
     "memberof": "eFileType",
     "scope": "static",
@@ -541,7 +541,7 @@
   },
   {
     "name": "FILE",
-    "longname": "eFileType.FILE",
+    "id": "eFileType.FILE",
     "kind": "member",
     "memberof": "eFileType",
     "scope": "static",
@@ -555,7 +555,7 @@
   },
   {
     "name": "DIR",
-    "longname": "eFileType.DIR",
+    "id": "eFileType.DIR",
     "kind": "member",
     "memberof": "eFileType",
     "scope": "static",
@@ -570,7 +570,7 @@
   {
     "description": "a global function",
     "name": "globalFunc",
-    "longname": "globalFunc",
+    "id": "globalFunc",
     "kind": "function",
     "scope": "global",
     "codeName": "globalFunc"
@@ -581,7 +581,7 @@
       "```js\nvar result = exampled();\n```"
     ],
     "name": "exampled",
-    "longname": "exampled",
+    "id": "exampled",
     "kind": "function",
     "scope": "global",
     "codeName": "exampled"
@@ -593,7 +593,7 @@
       "```js\nvar next = \"p\";\n```"
     ],
     "name": "multiExampled",
-    "longname": "multiExampled",
+    "id": "multiExampled",
     "kind": "function",
     "scope": "global",
     "codeName": "multiExampled"
@@ -601,7 +601,7 @@
   {
     "access": "protected",
     "name": "_protected",
-    "longname": "_protected",
+    "id": "_protected",
     "kind": "function",
     "scope": "global",
     "codeName": "_protected"
@@ -611,7 +611,7 @@
       "Clive Jones <clive@jones.com>"
     ],
     "name": "withAuthor",
-    "longname": "withAuthor",
+    "id": "withAuthor",
     "kind": "function",
     "scope": "global",
     "codeName": "withAuthor"
@@ -619,7 +619,7 @@
   {
     "deprecated": true,
     "name": "oldFunction",
-    "longname": "oldFunction",
+    "id": "oldFunction",
     "kind": "function",
     "scope": "global",
     "codeName": "oldFunction"
@@ -627,7 +627,7 @@
   {
     "since": "v0.10.28",
     "name": "newFunction",
-    "longname": "newFunction",
+    "id": "newFunction",
     "kind": "function",
     "scope": "global",
     "codeName": "newFunction"
@@ -645,7 +645,7 @@
       }
     ],
     "name": "withParam",
-    "longname": "withParam",
+    "id": "withParam",
     "kind": "function",
     "scope": "global",
     "codeName": "withParam"
@@ -671,7 +671,7 @@
       }
     ],
     "name": "withParams",
-    "longname": "withParams",
+    "id": "withParams",
     "kind": "function",
     "scope": "global",
     "codeName": "withParams"
@@ -699,7 +699,7 @@
       }
     ],
     "name": "withOptional",
-    "longname": "withOptional",
+    "id": "withOptional",
     "kind": "function",
     "scope": "global",
     "codeName": "withOptional"
@@ -727,7 +727,7 @@
       }
     ],
     "name": "withBullets",
-    "longname": "withBullets",
+    "id": "withBullets",
     "kind": "function",
     "scope": "global",
     "codeName": "withBullets"
@@ -743,7 +743,7 @@
       }
     ],
     "name": "returnsSomething",
-    "longname": "returnsSomething",
+    "id": "returnsSomething",
     "kind": "function",
     "scope": "global",
     "codeName": "returnsSomething"
@@ -760,7 +760,7 @@
       }
     ],
     "name": "returnsSomethingDesc",
-    "longname": "returnsSomethingDesc",
+    "id": "returnsSomethingDesc",
     "kind": "function",
     "scope": "global",
     "codeName": "returnsSomethingDesc"
@@ -778,7 +778,7 @@
       }
     ],
     "name": "returnsSeveral",
-    "longname": "returnsSeveral",
+    "id": "returnsSeveral",
     "kind": "function",
     "scope": "global",
     "codeName": "returnsSeveral"
@@ -825,7 +825,7 @@
       "```js\nallTogether(true);\n```"
     ],
     "name": "allTogether",
-    "longname": "allTogether",
+    "id": "allTogether",
     "kind": "function",
     "scope": "global",
     "codeName": "allTogether"
@@ -833,7 +833,7 @@
   {
     "description": "a visible global",
     "name": "visible",
-    "longname": "visible",
+    "id": "visible",
     "kind": "member",
     "scope": "global",
     "codeName": "visible"
@@ -842,13 +842,13 @@
     "description": "A module. Refer to it using {@link module:foo/bar}.",
     "kind": "module",
     "name": "foo/bar",
-    "longname": "module:foo/bar"
+    "id": "module:foo/bar"
   },
   {
     "description": "The built in string object. Refer to it with {@link external:String}.",
     "kind": "external",
     "name": "String",
-    "longname": "external:String",
+    "id": "external:String",
     "scope": "inner",
     "memberof": "module:foo/bar"
   },
@@ -857,13 +857,13 @@
     "kind": "event",
     "name": "event:MyEvent",
     "memberof": "module:foo/bar",
-    "longname": "module:foo/bar.event:MyEvent",
+    "id": "module:foo/bar.event:MyEvent",
     "scope": "static"
   },
   {
     "description": "See {@link LinkClass} and [LinkClass's foo property]{@link LinkClass#foo}.\nAlso check out {@link http://www.google.com|Google} and {@link http://github.com GitHub}.",
     "name": "linkFunction",
-    "longname": "module:foo/bar~linkFunction",
+    "id": "module:foo/bar~linkFunction",
     "kind": "function",
     "scope": "inner",
     "memberof": "module:foo/bar",
@@ -872,7 +872,7 @@
   {
     "kind": "class",
     "name": "LinkClass",
-    "longname": "module:foo/bar~LinkClass",
+    "id": "module:foo/bar~LinkClass",
     "scope": "inner",
     "memberof": "module:foo/bar",
     "codeName": "LinkClass"
@@ -881,7 +881,7 @@
     "description": "A class.",
     "kind": "constructor",
     "name": "LinkClass",
-    "longname": "module:foo/bar~newLinkClass",
+    "id": "module:foo/bar~newLinkClass",
     "scope": "inner",
     "memberof": "module:foo/bar~LinkClass",
     "codeName": "LinkClass"
@@ -889,7 +889,7 @@
   {
     "description": "foo property",
     "name": "foo",
-    "longname": "module:foo/bar~LinkClass#foo",
+    "id": "module:foo/bar~LinkClass#foo",
     "kind": "member",
     "memberof": "module:foo/bar~LinkClass",
     "scope": "instance",
@@ -898,7 +898,7 @@
   {
     "description": "a global variable",
     "name": "variable",
-    "longname": "variable",
+    "id": "variable",
     "kind": "member",
     "scope": "global",
     "codeName": "variable"
@@ -910,7 +910,7 @@
       ]
     },
     "name": "typed",
-    "longname": "typed",
+    "id": "typed",
     "kind": "member",
     "scope": "global",
     "codeName": "typed"
@@ -923,7 +923,7 @@
       ]
     },
     "name": "types",
-    "longname": "types",
+    "id": "types",
     "kind": "member",
     "scope": "global",
     "codeName": "types"
@@ -934,7 +934,7 @@
       "```js\nvar another = 100;\n```"
     ],
     "name": "exampled",
-    "longname": "exampled",
+    "id": "exampled",
     "kind": "member",
     "scope": "global",
     "codeName": "exampled"
@@ -946,7 +946,7 @@
       "```js\nvar next = \"p\";\n```"
     ],
     "name": "examples",
-    "longname": "examples",
+    "id": "examples",
     "kind": "member",
     "scope": "global",
     "codeName": "examples"
@@ -954,7 +954,7 @@
   {
     "access": "protected",
     "name": "_protected",
-    "longname": "_protected",
+    "id": "_protected",
     "kind": "member",
     "scope": "global",
     "codeName": "_protected"
@@ -964,7 +964,7 @@
       "Clive Jones <clive@jones.com>"
     ],
     "name": "withAuthor",
-    "longname": "withAuthor",
+    "id": "withAuthor",
     "kind": "member",
     "scope": "global",
     "codeName": "withAuthor"
@@ -972,7 +972,7 @@
   {
     "defaultvalue": "23",
     "name": "hasDefault",
-    "longname": "hasDefault",
+    "id": "hasDefault",
     "kind": "member",
     "scope": "global",
     "codeName": "hasDefault"
@@ -981,7 +981,7 @@
     "defaultvalue": "{\"one\":1,\"two\":2}",
     "defaultvaluetype": "object",
     "name": "hasDefaultObject",
-    "longname": "hasDefaultObject",
+    "id": "hasDefaultObject",
     "kind": "member",
     "scope": "global",
     "codeName": "hasDefaultObject"
@@ -989,7 +989,7 @@
   {
     "deprecated": true,
     "name": "deprecated",
-    "longname": "deprecated",
+    "id": "deprecated",
     "kind": "member",
     "scope": "global",
     "codeName": "deprecated"
@@ -997,7 +997,7 @@
   {
     "readonly": true,
     "name": "readOnly",
-    "longname": "readOnly",
+    "id": "readOnly",
     "kind": "member",
     "scope": "global",
     "codeName": "readOnly"
@@ -1005,7 +1005,7 @@
   {
     "since": "v0.10.28",
     "name": "hasSince",
-    "longname": "hasSince",
+    "id": "hasSince",
     "kind": "member",
     "scope": "global",
     "codeName": "hasSince"
@@ -1013,14 +1013,14 @@
   {
     "kind": "namespace",
     "name": "car",
-    "longname": "car",
+    "id": "car",
     "scope": "global",
     "codeName": "car"
   },
   {
     "description": "the round things",
     "name": "wheels",
-    "longname": "car.wheels",
+    "id": "car.wheels",
     "kind": "member",
     "memberof": "car",
     "scope": "static",
@@ -1029,7 +1029,7 @@
   {
     "description": "the electronics that always go wrong",
     "name": "sensors",
-    "longname": "car.sensors",
+    "id": "car.sensors",
     "kind": "member",
     "memberof": "car",
     "scope": "static",
@@ -1054,7 +1054,7 @@
       }
     ],
     "name": "start",
-    "longname": "car.start",
+    "id": "car.start",
     "kind": "function",
     "memberof": "car",
     "scope": "static",
@@ -1064,7 +1064,7 @@
     "description": "decribes the current conditions",
     "kind": "namespace",
     "name": "env",
-    "longname": "car#env",
+    "id": "car#env",
     "memberof": "car",
     "scope": "instance",
     "codeName": "this.env"
@@ -1078,7 +1078,7 @@
     },
     "defaultvalue": "choppy",
     "name": "weather",
-    "longname": "car#env.weather",
+    "id": "car#env.weather",
     "kind": "member",
     "memberof": "car#env",
     "scope": "static",
@@ -1093,7 +1093,7 @@
     },
     "defaultvalue": "wet",
     "name": "roads",
-    "longname": "car#env.roads",
+    "id": "car#env.roads",
     "kind": "member",
     "memberof": "car#env",
     "scope": "static",
@@ -1130,7 +1130,7 @@
       }
     ],
     "name": "doSomething",
-    "longname": "doSomething",
+    "id": "doSomething",
     "kind": "function",
     "scope": "global",
     "codeName": "doSomething"
@@ -1148,7 +1148,7 @@
       }
     ],
     "name": "doAnother",
-    "longname": "doAnother",
+    "id": "doAnother",
     "kind": "function",
     "scope": "global",
     "codeName": "doAnother"
@@ -1168,7 +1168,7 @@
       }
     ],
     "name": "pluck",
-    "longname": "pluck",
+    "id": "pluck",
     "kind": "function",
     "scope": "global",
     "codeName": "pluck"
@@ -1176,7 +1176,7 @@
   {
     "kind": "class",
     "name": "Plucker",
-    "longname": "Plucker",
+    "id": "Plucker",
     "scope": "global",
     "codeName": "Plucker"
   },
@@ -1214,7 +1214,7 @@
       }
     ],
     "name": "doPluck",
-    "longname": "Plucker#doPluck",
+    "id": "Plucker#doPluck",
     "kind": "function",
     "memberof": "Plucker",
     "scope": "instance",
@@ -1226,7 +1226,7 @@
       "module:some-module"
     ],
     "name": "requirer",
-    "longname": "requirer",
+    "id": "requirer",
     "kind": "function",
     "scope": "global",
     "codeName": "requirer"
@@ -1241,7 +1241,7 @@
         "string"
       ]
     },
-    "longname": "NumberLike",
+    "id": "NumberLike",
     "scope": "global"
   },
   {
@@ -1258,7 +1258,7 @@
       }
     ],
     "name": "setMagicNumber",
-    "longname": "setMagicNumber",
+    "id": "setMagicNumber",
     "kind": "function",
     "scope": "global",
     "codeName": "setMagicNumber"
@@ -1294,7 +1294,7 @@
       }
     ],
     "name": "doSomething",
-    "longname": "doSomething",
+    "id": "doSomething",
     "kind": "function",
     "scope": "global",
     "codeName": "doSomething"

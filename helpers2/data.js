@@ -33,7 +33,7 @@ function parents(options){
     return a.where(options.data.root, {
         "!kind": /module/,
         memberof: undefined,
-        "!longname": /^module:/
+        "!id": /^module:/
     }).concat(a.where(options.data.root, {
         kind: "module"
     }));
@@ -96,7 +96,7 @@ BROKEN IN STYLE 3
 */
 function isExported(options){
     return this.kind !== "module" &&
-        a.exists(options.data.root, { kind: "module", longname: this.longname });
+        a.exists(options.data.root, { kind: "module", id: this.id });
 }
 
 /**
@@ -105,12 +105,12 @@ returns a unique ID string suitable for use as an `href`.
 @returns {string}
 */
 function anchorName(options){
-    if (!this.longname) throw new Error("[anchorName helper] cannot create a link without a longname");
+    if (!this.id) throw new Error("[anchorName helper] cannot create a link without a id");
     return util.format(
         "%s%s%s",
         isExported.call(this, options) ? "exp_" : "",
         this.isConstructor ? "new_" : "",
-        this.longname.replace(/:/g, "_").replace(/~/g, "..")
+        this.id.replace(/:/g, "_").replace(/~/g, "..")
     );
 }
 
@@ -126,10 +126,10 @@ function children(options){
         if (exp.kind === "class"){
             return [];
         } else {
-            return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
+            return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
         }
     } else {
-        return sort(a.where(options.data.root, { memberof: this.longname }), options.hash.sortBy);
+        return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
     }
 }
 
@@ -139,7 +139,7 @@ returns the exported identifier of this module
 @returns {identifier}
 */
 function exported(options){
-    var exported = a.findWhere(options.data.root, { "!kind": "module", longname: this.longname });
+    var exported = a.findWhere(options.data.root, { "!kind": "module", id: this.id });
     return exported || this;
 }
 
@@ -199,7 +199,7 @@ Returns the `alias` of this identifiers parent module, else `this.name`
 @returns {string}
 */
 function aliasName(options){
-    var alias = a.findWhere(options.data.root, { longname: this.longname, kind: "module" });
+    var alias = a.findWhere(options.data.root, { id: this.id, kind: "module" });
     var name = "";
     if (alias){
         name = alias.alias || alias.name;
@@ -221,7 +221,7 @@ returns the parent name, instantiated if necessary
 */
 function parentName(options){
     if (this.memberof && this.kind !== "constructor"){
-        var parentClass = a.findWhere(options.data.root, { longname: this.memberof });
+        var parentClass = a.findWhere(options.data.root, { id: this.memberof });
         if (parentClass) {
             /* don't bother with a parentName for exported classes */
             if (this.kind === "class" && parentClass.kind === "module") return "";

@@ -6,13 +6,13 @@
     "examples": [
       "```js\nvar fileSet = require(\"file-set\");\n```"
     ],
-    "longname": "module:file-set"
+    "id": "module:file-set"
   },
   {
     "kind": "class",
     "classdesc": "Expands file patterns, returning the matched and unmatched files and directories",
     "name": "FileSet",
-    "longname": "module:file-set^FileSet",
+    "id": "module:file-set^FileSet",
     "memberof": "module:file-set",
     "codeName": "FileSet"
   },
@@ -31,7 +31,7 @@
       }
     ],
     "name": "FileSet",
-    "longname": "module:file-set^newFileSet",
+    "id": "module:file-set^newFileSet",
     "memberof": "module:file-set^FileSet",
     "codeName": "FileSet"
   },
@@ -43,7 +43,7 @@
       ]
     },
     "name": "list",
-    "longname": "module:file-set#list",
+    "id": "module:file-set#list",
     "kind": "member",
     "memberof": "module:file-set^FileSet",
     "scope": "instance",
@@ -57,7 +57,7 @@
       ]
     },
     "name": "files",
-    "longname": "module:file-set#files",
+    "id": "module:file-set#files",
     "kind": "member",
     "memberof": "module:file-set^FileSet",
     "scope": "instance",
@@ -71,7 +71,7 @@
       ]
     },
     "name": "dirs",
-    "longname": "module:file-set#dirs",
+    "id": "module:file-set#dirs",
     "kind": "member",
     "memberof": "module:file-set^FileSet",
     "scope": "instance",
@@ -85,7 +85,7 @@
       ]
     },
     "name": "notExisting",
-    "longname": "module:file-set#notExisting",
+    "id": "module:file-set#notExisting",
     "kind": "member",
     "memberof": "module:file-set^FileSet",
     "scope": "instance",
@@ -106,7 +106,7 @@
       }
     ],
     "name": "add",
-    "longname": "module:file-set#add",
+    "id": "module:file-set#add",
     "kind": "function",
     "memberof": "module:file-set^FileSet",
     "scope": "instance",
@@ -123,7 +123,7 @@
       ]
     },
     "name": "eFileType",
-    "longname": "module:file-set.eFileType",
+    "id": "module:file-set.eFileType",
     "memberof": "module:file-set^FileSet",
     "scope": "static",
     "properties": [
@@ -135,7 +135,7 @@
           ]
         },
         "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.NOEXIST",
+        "id": "module:file-set.eFileType.NOEXIST",
         "name": "NOEXIST",
         "kind": "member",
         "defaultvalue": "0",
@@ -149,7 +149,7 @@
           ]
         },
         "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.FILE",
+        "id": "module:file-set.eFileType.FILE",
         "name": "FILE",
         "kind": "member",
         "defaultvalue": "1",
@@ -163,7 +163,7 @@
           ]
         },
         "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.DIR",
+        "id": "module:file-set.eFileType.DIR",
         "name": "DIR",
         "kind": "member",
         "defaultvalue": "2",
@@ -174,7 +174,7 @@
   },
   {
     "name": "NOEXIST",
-    "longname": "module:file-set.eFileType.NOEXIST",
+    "id": "module:file-set.eFileType.NOEXIST",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
     "scope": "static",
@@ -188,7 +188,7 @@
   },
   {
     "name": "FILE",
-    "longname": "module:file-set.eFileType.FILE",
+    "id": "module:file-set.eFileType.FILE",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
     "scope": "static",
@@ -202,7 +202,7 @@
   },
   {
     "name": "DIR",
-    "longname": "module:file-set.eFileType.DIR",
+    "id": "module:file-set.eFileType.DIR",
     "kind": "member",
     "memberof": "module:file-set.eFileType",
     "scope": "static",
