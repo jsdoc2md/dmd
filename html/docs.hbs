@@ -12,6 +12,20 @@
     </style>
   </head>
   <body>
-    {{>main}}
+    <div class="row1">
+      
+    </div>
+    <div class="row2">
+      <div class="col1">
+        <ul>
+        {{#identifiers memberof=undefind sortBy="kind"~}}
+          {{>index~}}
+        {{/identifiers~}}
+        </ul>
+      </div>
+      <div class="col2">
+        docs
+      </div>
+    </div>
   </body>
 </html>

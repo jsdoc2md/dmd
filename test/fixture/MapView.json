@@ -1,0 +1,304 @@
+[
+  {
+    "id": "module:MapView",
+    "name": "MapView",
+    "kind": "module",
+    "description": "MapView encapsulates a Google maps view so it can be used with famo.us.\n\nAdditionally it adds methods to set the position and zoom-factor of the map using transitions.\nUse `MapModifier` and `MapStateModifier` to place famo.us renderables on the map, much like google-maps markers.\n\n**Map-types**\n\n|Value|Description|\n|---|---|\n|MapType.GOOGLEMAPS (default)|Google-maps.|\n|MapType.LEAFLET|Leaflet.js.|"
+  },
+  {
+    "id": "module:MapView^MapView",
+    "name": "MapView",
+    "kind": "class",
+    "isExported": true,
+    "alias": "module:MapView",
+    "codeName": "MapView",
+    "memberof": "module:MapView"
+  },
+  {
+    "id": "module:MapView^MapView◊",
+    "name": "MapView",
+    "kind": "constructor",
+    "memberof": "module:MapView^MapView",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "Options.",
+        "name": "options"
+      },
+      {
+        "type": {
+          "names": [
+            "MapType"
+          ]
+        },
+        "description": "Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET).",
+        "name": "options.type"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'.",
+        "name": "options.mapOptions"
+      },
+      {
+        "type": {
+          "names": [
+            "String"
+          ]
+        },
+        "optional": true,
+        "description": "Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface.",
+        "name": "options.id"
+      },
+      {
+        "type": {
+          "names": [
+            "Transition"
+          ]
+        },
+        "optional": true,
+        "description": "Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used).",
+        "name": "options.zoomTransition"
+      }
+    ]
+  },
+  {
+    "id": "module:MapView^MapView.DEFAULT_OPTIONS",
+    "name": "DEFAULT_OPTIONS",
+    "scope": "static",
+    "kind": "member",
+    "memberof": "module:MapView^MapView",
+    "access": "protected",
+    "codeName": "MapView.DEFAULT_OPTIONS"
+  },
+  {
+    "id": "module:MapView^MapView#getMap",
+    "name": "getMap",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the internal map-object. This object may not yet have been initialized, the map is only\nguarenteed to be valid after the 'load' event has been emited.",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Map"
+          ]
+        },
+        "description": "Map object."
+      }
+    ],
+    "codeName": "MapView.prototype.getMap"
+  },
+  {
+    "id": "module:MapView^MapView#setPosition",
+    "name": "setPosition",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Set the center of the map to the given geographical coordinates.",
+    "memberof": "module:MapView^MapView",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "LatLng"
+          ]
+        },
+        "description": "Position in geographical coordinates.",
+        "name": "position"
+      },
+      {
+        "type": {
+          "names": [
+            "Transitionable"
+          ]
+        },
+        "optional": true,
+        "description": "Transitionable.",
+        "name": "transition"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "optional": true,
+        "description": "callback to call after transition completes.",
+        "name": "callback"
+      }
+    ],
+    "codeName": "MapView.prototype.setPosition"
+  },
+  {
+    "id": "module:MapView^MapView#getPosition",
+    "name": "getPosition",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the current center position of the map, in geographical coordinates.",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "LatLng"
+          ]
+        },
+        "description": "Position in geographical coordinates."
+      }
+    ],
+    "codeName": "MapView.prototype.getPosition"
+  },
+  {
+    "id": "module:MapView^MapView#getFinalPosition",
+    "name": "getFinalPosition",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the destination center position of the map, in geographical coordinates.",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "LatLng"
+          ]
+        },
+        "description": "Position in geographical coordinates."
+      }
+    ],
+    "codeName": "MapView.prototype.getFinalPosition"
+  },
+  {
+    "id": "module:MapView^MapView#getZoom",
+    "name": "getZoom",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.\nE.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending\nat 5, over time. The used zoomTransition can be set as an option.",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Number"
+          ]
+        },
+        "description": "Zoom-level."
+      }
+    ],
+    "codeName": "MapView.prototype.getZoom"
+  },
+  {
+    "id": "module:MapView^MapView#pointFromPosition",
+    "name": "pointFromPosition",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the position in pixels (relative to the left-top of the container) for the given geographical position.",
+    "memberof": "module:MapView^MapView",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "LatLng"
+          ]
+        },
+        "description": "in geographical coordinates.",
+        "name": "position"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Point"
+          ]
+        },
+        "description": "Position in pixels, relative to the left-top of the mapView."
+      }
+    ],
+    "codeName": "MapView.prototype.pointFromPosition"
+  },
+  {
+    "id": "module:MapView^MapView#positionFromPoint",
+    "name": "positionFromPoint",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).",
+    "memberof": "module:MapView^MapView",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Point"
+          ]
+        },
+        "description": "Position in pixels, relative to the left-top of the mapView.",
+        "name": "point"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "LatLng"
+          ]
+        },
+        "description": "Position in geographical coordinates."
+      }
+    ],
+    "codeName": "MapView.prototype.positionFromPoint"
+  },
+  {
+    "id": "module:MapView^MapView#getSize",
+    "name": "getSize",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Get the size of the map-view in pixels.",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array.Number"
+          ]
+        },
+        "description": "Size of the mapView."
+      }
+    ],
+    "codeName": "MapView.prototype.getSize"
+  },
+  {
+    "id": "module:MapView^MapView#halt",
+    "name": "halt",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Halts any pending transitions.",
+    "memberof": "module:MapView^MapView",
+    "codeName": "MapView.prototype.halt"
+  },
+  {
+    "id": "module:MapView^MapView#isActive",
+    "name": "isActive",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Is there at least one action pending completion?",
+    "memberof": "module:MapView^MapView",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Bool"
+          ]
+        },
+        "description": "True when there are active transitions running."
+      }
+    ],
+    "codeName": "MapView.prototype.isActive"
+  }
+]

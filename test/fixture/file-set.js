@@ -13,8 +13,8 @@
     "id": "module:file-set^FileSet",
     "name": "FileSet",
     "kind": "class",
-    "alias": "module:file-set",
     "isExported": true,
+    "alias": "module:file-set",
     "codeName": "FileSet",
     "description": "Expands file patterns, returning the matched and unmatched files and directories",
     "memberof": "module:file-set"

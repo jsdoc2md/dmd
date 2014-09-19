@@ -10,8 +10,8 @@
     "id": "module:cjs/class^ExportedClass",
     "name": "ExportedClass",
     "kind": "class",
-    "alias": "module:cjs/class",
     "isExported": true,
+    "alias": "module:cjs/class",
     "codeName": "ExportedClass",
     "description": "the exported class",
     "memberof": "module:cjs/class"
@@ -63,8 +63,8 @@
     "kind": "function",
     "description": "the function",
     "alias": "module:functionAlias",
-    "isExported": true,
     "codeName": "pointerFunction",
+    "isExported": true,
     "memberof": "module:functionAlias"
   },
   {
@@ -95,8 +95,8 @@
     "kind": "member",
     "description": "the teams",
     "alias": "module:teams",
-    "isExported": true,
     "codeName": "teams",
+    "isExported": true,
     "memberof": "module:teams"
   },
   {

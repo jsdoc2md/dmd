@@ -1,0 +1,771 @@
+[
+  {
+    "id": "module:decipher.debaser.debaserRunConfig",
+    "name": "debaserRunConfig",
+    "scope": "static",
+    "kind": "member",
+    "memberof": "module:decipher.debaser"
+  },
+  {
+    "id": "sinon.stub",
+    "name": "stub",
+    "scope": "static",
+    "kind": "mixin",
+    "description": "A stub function.  (Almost) all functions available to Sinon.JS stubs.",
+    "memberof": "sinon",
+    "see": [
+      "http://sinonjs.org/docs/#stubs"
+    ]
+  },
+  {
+    "id": "sinon.Stub",
+    "name": "Stub",
+    "scope": "static",
+    "kind": "mixin",
+    "description": "A Stub object.  Returned when using an `*onCall*` method, instead of a {@link sinon.stub stub}.  In this context, use {@link sinon.Stub.end end()} to return to a {@link Debaser} instance. \n> The `create()`, `resetBehavior()` and `isPresent()` functions of the Sinon.JS \"stub\" API are not used.  If someone needs these, please {@link https://github.com/decipherinc/angular-debaser/issues/ create an issue} and provide a use case.",
+    "memberof": "sinon"
+  },
+  {
+    "id": "base",
+    "name": "base",
+    "kind": "mixin"
+  },
+  {
+    "id": "base.module",
+    "name": "module",
+    "scope": "static",
+    "kind": "mixin",
+    "memberof": "base"
+  },
+  {
+    "id": "base.func",
+    "name": "func",
+    "scope": "static",
+    "kind": "mixin",
+    "memberof": "base"
+  },
+  {
+    "id": "base.object",
+    "name": "object",
+    "scope": "static",
+    "kind": "mixin",
+    "memberof": "base"
+  },
+  {
+    "id": "base.module.withObject",
+    "name": "withObject",
+    "scope": "static",
+    "kind": "mixin",
+    "memberof": "base.module"
+  },
+  {
+    "id": "base.module.withFunc",
+    "name": "withFunc",
+    "scope": "static",
+    "kind": "mixin",
+    "memberof": "base.module"
+  },
+  {
+    "id": "DebaserOptions",
+    "name": "DebaserOptions",
+    "scope": "global",
+    "kind": "typedef",
+    "description": "Default options",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    }
+  },
+  {
+    "id": "<anonymous>~install",
+    "name": "install",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Attaches {@link debaser} and {@link debase} to the `window` object.\nRegisters `setup()`/`teardown()` or `beforeEach()`/`afterEach()` functions to retrieve the current spec.",
+    "memberof": "<anonymous>",
+    "codeName": "install"
+  },
+  {
+    "id": "<anonymous>~hasCurrentSpec",
+    "name": "hasCurrentSpec",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Whether or not we are currently running in a spec.",
+    "memberof": "<anonymous>",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        }
+      }
+    ],
+    "codeName": "hasCurrentSpec"
+  },
+  {
+    "id": "debaser",
+    "name": "debaser",
+    "scope": "global",
+    "kind": "function",
+    "description": "The object by this method exposes {@link Action actions}, which are chainable.  Each action \"queues up\" something to be stubbed, be that a module, function, object, or whatever.  When you have queued all your actions, execute {@link Debaser#debase debase()} and the stubs will be provided.",
+    "alias": "window.debaser",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "String",
+            "Object"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "DebaserOptions.name",
+        "description": "Optional name of Debaser.  Only useful if using\nmultiple instances.  If omitted, this is considered the `opts` parameter.",
+        "name": "name"
+      },
+      {
+        "type": {
+          "names": [
+            "DebaserOptions"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "{}",
+        "description": "Options to modify angular-debaser's behavior; see {@link DebaserOptions}.",
+        "name": "options"
+      }
+    ],
+    "examples": [
+      "// Defaults\nvar d = debaser({\n debugEnabled: false,\n autoScope: true\n skipConfigs: true\n});\n\n// Named\nvar d = debaser('foo', {\n debugEnabled: false,\n autoScope: true\n skipConfigs: true\n});"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Debaser"
+          ]
+        }
+      }
+    ],
+    "codeName": "debaser"
+  },
+  {
+    "id": "<anonymous>~configure",
+    "name": "configure",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Provides an anonymous AngularJS module to set up some initial values before {@link module:decipher.debaser} is bootstrapped.",
+    "memberof": "<anonymous>",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "DebaserOptions"
+          ]
+        },
+        "optional": true,
+        "description": "Override {@link DebaserOptions} with this object.",
+        "name": "options"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      }
+    ],
+    "codeName": "configure"
+  },
+  {
+    "id": "<anonymous>~configure~debaserSetup",
+    "name": "debaserSetup",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Provides two constants, `debaserOptions`, which is set to a {@link DebaserOptions}\nobject when calling {@link debaser}; and `decipher.debaser.__runConfig` which is internal data\nto be used when calling {@link debase} or {@link Debaser#debase}.",
+    "memberof": "<anonymous>~configure",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "auto.$provide"
+          ]
+        },
+        "description": "{@link https://code.angularjs.org/1.2.20/docs/api/auto/service/$provide.html|auto.$provide docs}",
+        "name": "$provide"
+      }
+    ],
+    "codeName": "debaserSetup"
+  },
+  {
+    "id": "<anonymous>~getInstance",
+    "name": "getInstance",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Retrieve an existing Debaser instance by name.",
+    "memberof": "<anonymous>",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of instance",
+        "name": "name"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Debaser"
+          ]
+        }
+      }
+    ],
+    "codeName": "getInstance"
+  },
+  {
+    "id": "<anonymous>~hasInstance",
+    "name": "hasInstance",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Whether or not an instance with name exists.",
+    "memberof": "<anonymous>",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of instance",
+        "name": "name"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        }
+      }
+    ],
+    "codeName": "hasInstance"
+  },
+  {
+    "id": "debase",
+    "name": "debase",
+    "scope": "global",
+    "kind": "function",
+    "description": "Convenience method.  Retrieves the default {@link Debaser} instance (whatever that may be) and runs its {@link Debaser#debase debase()} method.",
+    "alias": "window.debase",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "description": "Name of {@link Debaser} instance to call {@link Debaser#debase} upon.",
+        "name": "name"
+      }
+    ],
+    "examples": [
+      "before(function() {\n  debaser()\n    .func('foo')\n    .object('bar')\n});\n\nbeforeEach(debase);\n\n// above equivalent to:\n\nvar d;\nbefore(function() {\n  d = debaser()\n    .func('foo')\n    .object('bar')\n});\n\nbeforeEach(function() {\n  d.debase();\n});"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "function",
+            "Debaser"
+          ]
+        }
+      }
+    ],
+    "codeName": "debase"
+  },
+  {
+    "id": "globalHelpers.callDebase",
+    "name": "callDebase",
+    "scope": "static",
+    "kind": "function",
+    "description": "Calls {@link Debaser#debase} with proper persistance options.  Unlike {@link Debaser#debase}, will return a {@link Debaser} instance.",
+    "memberof": "globalHelpers",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Debaser"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "loadAction.Action◊",
+    "name": "Action",
+    "kind": "constructor",
+    "description": "Creates a new Action object.",
+    "memberof": "loadAction.Action",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "Raw action object",
+        "name": "action"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "angular.noop",
+        "description": "Function to call with the return value of the main Function to call",
+        "name": "action.callback"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "description": "Object containing main Function to call",
+        "name": "action.object"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "Main Function to call",
+        "name": "action.func"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "null",
+        "description": "Context to call main Function with",
+        "name": "action.context"
+      },
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "[]",
+        "description": "Arguments to function",
+        "name": "action.args"
+      }
+    ]
+  },
+  {
+    "id": "<anonymous>~Aspect#createProxy~proxy",
+    "name": "proxy",
+    "scope": "inner",
+    "kind": "function",
+    "memberof": "<anonymous>~Aspect#createProxy",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Debaser",
+            "*"
+          ]
+        }
+      }
+    ],
+    "codeName": "proxy"
+  },
+  {
+    "id": "<anonymous>~Config",
+    "name": "Config",
+    "scope": "inner",
+    "kind": "class",
+    "memberof": "<anonymous>",
+    "codeName": "Config"
+  },
+  {
+    "id": "<anonymous>~Config◊",
+    "name": "Config",
+    "kind": "constructor",
+    "memberof": "<anonymous>~Config",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object",
+            "string"
+          ]
+        },
+        "description": "Raw {@link Behavior} configuration object, or {@link Aspect} name",
+        "name": "o"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "description": "Name of {@link Aspect} this configuration belongs to",
+        "name": "aspect_name"
+      }
+    ]
+  },
+  {
+    "id": "Debaser",
+    "name": "Debaser",
+    "scope": "global",
+    "kind": "class",
+    "codeName": "Debaser"
+  },
+  {
+    "id": "Debaser◊",
+    "name": "Debaser",
+    "kind": "constructor",
+    "description": "Provides an object with which you can stub AngularJS dependencies.  Do not attempt to instantiate this class directly; use the {@link debaser} function instead.",
+    "memberof": "Debaser",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "__default__",
+        "description": "Name of Debaser instance",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "<anonymous>~Debaser#debase",
+    "name": "debase",
+    "scope": "instance",
+    "kind": "function",
+    "description": "All previously queued stubs will be installed upon execution of this method.",
+    "memberof": "<anonymous>~Debaser",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "optional": true,
+        "description": "Options",
+        "name": "opts"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "false",
+        "description": "If true, retain the queue.  Only used in a non-spec context; {@link debase window.debase} can call it with this option.  You probably don't want to specify this yourself.",
+        "name": "opts.persist"
+      }
+    ],
+    "returns": [
+      {
+        "description": "undefined"
+      }
+    ],
+    "codeName": "Debaser.prototype.debase"
+  },
+  {
+    "id": "Action",
+    "name": "Action",
+    "kind": "typedef",
+    "description": "These functions will always return {@link Debaser} instances, however, the mixins used will change.  The \"root\" mixin is the {@link base} mixin.  All other mixins \"inherit\" from this one, meaning the {@link base} methods *will always be available*.",
+    "examples": [
+      "debaser\n  .object('Foo') // we are now in the `base.object` mixin.\n  .withFunc('bar') // we are now in the `base.withFunc` mixin.\n  // however, since these mixins are inherited, we always have access to \n  // method `object`, which is on the `base` mixin.\n  .object('Baz')\n  .debase(); // go!\n  // `Foo` and `Baz` are now injectable; `Foo` has a static function `bar`\n  "
+    ],
+    "type": {
+      "names": [
+        "function"
+      ]
+    },
+    "scope": "global"
+  },
+  {
+    "id": "base#module",
+    "name": "module",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Stubs a module, or bootstraps an existing module.",
+    "memberof": "base",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Module name to bootstrap/stub.",
+        "name": "name"
+      },
+      {
+        "type": {
+          "names": [
+            "Array.<String>"
+          ]
+        },
+        "optional": true,
+        "description": "Any dependencies of this module.",
+        "name": "deps"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.module"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "module"
+  },
+  {
+    "id": "base.module#withDep",
+    "name": "withDep",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Adds dependencies to the current module.  Potentially useful if you have a dependency chain `A -> B -> C` and you wish to stub `B` but not `A` or `C`.",
+    "memberof": "base.module",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "Module dependency",
+        "name": "dep"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.module"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "withDep"
+  },
+  {
+    "id": "base.module#withDeps",
+    "name": "withDeps",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Like {@link base.module.withDep withDep}, but accepts an array instead.",
+    "memberof": "base.module",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<String>"
+          ]
+        },
+        "description": "Array of module dependencies",
+        "name": "arr"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.module"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "withDeps"
+  },
+  {
+    "id": "base#func",
+    "name": "func",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Creates an injectable function.",
+    "memberof": "base",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of injectable",
+        "name": "name"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.func"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "func"
+  },
+  {
+    "id": "base#object",
+    "name": "object",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Creates an injectable object.",
+    "memberof": "base",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of injectable",
+        "name": "name"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "optional": true,
+        "description": "If supplied, will inject this object instead.  If {@link http://sinonjs.org Sinon.JS) is present, the object's functions will be spied upon.",
+        "name": "base"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.object"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "object"
+  },
+  {
+    "id": "base.object#withFunc",
+    "name": "withFunc",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Provides a function on the object, or injectable function on the module.  If used in a module context, then provides a constant.  If {@link http://sinonjs.org Sinon.JS} is present,",
+    "memberof": "base.object",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of member function or injectable function",
+        "name": "name"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.object",
+            "base.module",
+            "base.module.withObject"
+          ]
+        }
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "withFunc"
+  },
+  {
+    "id": "<anonymous>~withObject",
+    "name": "withObject",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Provides a *constant* injectable object on the module.",
+    "memberof": "<anonymous>",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of injectable object",
+        "name": "name"
+      }
+    ],
+    "see": [
+      "Action"
+    ],
+    "codeName": "withObject"
+  },
+  {
+    "id": "sinon.Stub#end",
+    "name": "end",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Gives you a {@link Debaser} instance back if you have been setting things up via `*onCall*` methods.",
+    "memberof": "sinon.Stub",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "base.func",
+            "base.module.withFunc"
+          ]
+        }
+      }
+    ]
+  }
+]
