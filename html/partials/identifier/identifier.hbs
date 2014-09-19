@@ -3,7 +3,7 @@
 {{~headingDepthIncrement~}}
 
 <h{{headingDepth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{headingDepth}}>
-<p>{{#md}}{{{linkify description}}}{{/md}}</p>
+{{#md}}{{{linkify description}}}{{/md}}
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
   {{#if params}}
@@ -17,11 +17,11 @@
   </dd>
   {{/if}}
   {{#if examples}}<dt>examples</dt><dd><code>{{#md}}{{{examples}}}{{/md}}</code></dd>{{/if}}
-  {{#if memberof}}<dt>memberof</dt><dd><code>{{#md}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md}}</code></dd>{{/if}}
+  {{#if memberof}}<dt>memberof</dt><dd><code>{{#md2}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md2}}</code></dd>{{/if}}
 </dl>
 
 {{#each (children sortBy="scope,kind")~}}
-  {{>identifier~}}
+{{>identifier~}}
 {{/each~}}
 
 {{headingDepthDecrement~}}

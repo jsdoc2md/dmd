@@ -1,0 +1,18 @@
+html { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; }
+dt,dd { display: inline-block; margin: 0; vertical-align: top;}
+dt { width: 25%; }
+dd { width: 74%; }
+p, pre { margin: 0; }
+body { margin: 0; }
+
+.deprecated { text-decoration: line-through; }
+
+.flexbox-row { display: flex; flex-direction: row; }
+.flexbox-col { display: flex; flex-direction: column; }
+.flex-fixed { flex: 0 0 auto; }
+.flex-full { flex: 1 1 auto; }
+.horiz-space { padding-right: 2em; }
+
+.box-fill-viewport { height: 100vh; padding: 0.5em; box-sizing: border-box;}
+.overflow-scroll { overflow: scroll; }
+.overflow-hidden { overflow: hidden; }

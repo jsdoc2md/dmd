@@ -2,29 +2,27 @@
 <html>
   <head>
     <title>Docs</title>
-    <style>
-    html { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; }
-    dt,dd { display: inline-block; margin: 0; vertical-align: top;}
-    dt { width: 25%; }
-    dd { width: 74%; }
-    p, pre { margin: 0; }
-    .deprecated { text-decoration: line-through; }
-    </style>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/html/docs.css" type="text/css">
   </head>
-  <body>
-    <div class="row1">
-      
-    </div>
-    <div class="row2">
-      <div class="col1">
-        <ul>
-        {{#identifiers memberof=undefind sortBy="kind"~}}
-          {{>index~}}
-        {{/identifiers~}}
-        </ul>
+  <body class="overflow-hidden">
+    <div class="flexbox-col box-fill-viewport">
+      <div class="row1 flex-fixed">
+        <h1>API Reference</h1>
       </div>
-      <div class="col2">
-        docs
+      <div class="row2 flexbox-row">
+        <div class="col1 horiz-space flex-fixed overflow-scroll">
+          <ul>
+          {{#identifiers memberof=undefind sortBy="kind"~}}
+            {{>index~}}
+          {{/identifiers}}
+          </ul>
+        </div>
+        <div class="col2 overflow-scroll flex-full">
+        {{#identifiers memberof=undefind sortBy="kind"}}
+          {{>identifier~}}
+        {{/identifiers}}
+        </div>
       </div>
     </div>
   </body>

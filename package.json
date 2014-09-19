@@ -34,5 +34,6 @@
   },
   "devDependencies": {
     "tape": "^2.13.3"
-  }
+  },
+  "local-web-server": { "port": 8080 }
 }
