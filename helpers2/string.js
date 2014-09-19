@@ -9,41 +9,43 @@ helpers which return strings
 @module
 */
 exports.linkTo = linkTo;
+exports.anchorName = anchorName;
 
 /**
+@params id {string} - the id to convert into a link
 @params options.hash.style {string} - `plain` or `code`
 @returns {string}
 */
-function linkTo(longname, options){
-    if (!longname) return "";
+function linkTo(id, options){
+    if (!id) return "";
 
     var re = /<(.*)>/;
     var fullName = "";
-    if (Array.isArray(longname)){
-        return longname.map(function(name){
+    if (Array.isArray(id)){
+        return id.map(function(name){
             return linkTo(name, options);
         });
     } else {
-        if (re.test(longname)){
-            fullName = longname;
-            longname = longname.match(re)[1];
+        if (re.test(id)){
+            fullName = id;
+            id = id.match(re)[1];
         }
 
-        var builtInType = /^(string|object|number|boolean|array|regexp|date)$/i.test(longname);
+        var builtInType = /^(string|object|number|boolean|array|regexp|date)$/i.test(id);
 
         if (builtInType){
-            return options.hash.style !== "plain" ? "`" + (fullName || longname) + "`" : fullName || longname;
+            return options.hash.style !== "plain" ? "`" + (fullName || id) + "`" : fullName || id;
         } else {
-            var linked = a.findWhere(options.data.root, { longname: longname }),
+            var linked = a.findWhere(options.data.root, { id: id }),
                 mask;
             if (linked){
                 linked.isConstructor = false;
                 if (fullName) fullName = fullName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                var linkText = fullName ? fullName.replace(longname, linked.name) : linked.name;
+                var linkText = fullName ? fullName.replace(id, linked.name) : linked.name;
                 mask = options.hash.style === "code" ? "<code>[%s](#%s)</code>" : "[%s](#%s)";
-                return util.format(mask, linkText, handlebars.helpers.anchorName.call(linked, options));
+                return util.format(mask, linkText, anchorName.call(linked, options));
             } else {
-                if (url.parse(fullName || longname).protocol) {
+                if (url.parse(fullName || id).protocol) {
                     switch (options.hash.style) {
                         case "code":
                             mask = "<code>[%s](%s)</code>";
@@ -52,10 +54,25 @@ function linkTo(longname, options){
                         default:
                             mask = "[%s](%s)";
                     }
-                    return util.format(mask, options.hash.caption || fullName || longname, fullName || longname);
+                    return util.format(mask, options.hash.caption || fullName || id, fullName || id);
                 }
-                return options.hash.style !== "plain" ? "`" + (fullName || longname) + "`" : fullName || longname;
+                return options.hash.style !== "plain" ? "`" + (fullName || id) + "`" : fullName || id;
             }
         }
     }
+}
+
+/**
+returns a unique ID string suitable for use as an `href`.
+@context {identifier}
+@returns {string}
+*/
+function anchorName(options){
+    if (!this.id) throw new Error("[anchorName helper] cannot create a link without a id");
+    return util.format(
+        "%s%s%s",
+        this.isExported ? "exp_" : "",
+        this.kind === "constructor" ? "new_" : "",
+        this.id.replace(/:/g, "_").replace(/~/g, "..")
+    );
 }

@@ -8,8 +8,6 @@ helpers which return data
 exports.parents = parents;
 exports.identifiers = identifiers;
 exports.sort = sort;
-exports.isExported = isExported;
-exports.anchorName = anchorName;
 exports.children = children;
 exports.exported = exported;
 exports.isClass = isClass;
@@ -87,31 +85,6 @@ function sortByScope(a, b){
 function sortByScopeKind(a, b){
     var result = order.scope.indexOf(a.scope) - order.scope.indexOf(b.scope);
     return result === 0 ? sortByKind(a, b) : result;
-}
-
-/**
-BROKEN IN STYLE 3
-@context {identifier}
-@returns {boolean}
-*/
-function isExported(options){
-    return this.kind !== "module" &&
-        a.exists(options.data.root, { kind: "module", id: this.id });
-}
-
-/**
-returns a unique ID string suitable for use as an `href`.
-@context {identifier}
-@returns {string}
-*/
-function anchorName(options){
-    if (!this.id) throw new Error("[anchorName helper] cannot create a link without a id");
-    return util.format(
-        "%s%s%s",
-        isExported.call(this, options) ? "exp_" : "",
-        this.isConstructor ? "new_" : "",
-        this.id.replace(/:/g, "_").replace(/~/g, "..")
-    );
 }
 
 /**
