@@ -1,5 +1,5 @@
 <li>
-  <a href="#{{{anchorName}}}">{{>name}}</a>
+  <a href="#{{{anchorName}}}">{{>name no-return-sig=true}}</a>
   {{#each (children sortBy="scope,kind")}}
     {{#if @first}}<ul>{{/if}}
     {{>index~}}

@@ -1,11 +1,11 @@
 var dataHelpers = require("../helpers2/data");
 var blockHelpers = require("../helpers2/block");
 var varHelpers = require("../helpers2/vars");
+var stringHelpers = require("../helpers2/string");
 
 module.exports = function(handlebars){
     require("./constructor-has-docs.js")(handlebars);
     require("./depth.js")(handlebars);
-    require("./link-to.js")(handlebars);
     require("./linkify.js")(handlebars);
     require("./or.js")(handlebars);
     require("./parent.js")(handlebars);
@@ -36,13 +36,9 @@ module.exports = function(handlebars){
     require("./block/section/main-index.js")(handlebars);
     require("./block/section/module.js")(handlebars);
     
-    for (var helper in dataHelpers){
-        handlebars.registerHelper(helper, dataHelpers[helper]);
-    }
-    for (var helper in blockHelpers){
-        handlebars.registerHelper(helper, blockHelpers[helper]);
-    }
-    for (var helper in varHelpers){
-        handlebars.registerHelper(helper, varHelpers[helper]);
-    }
+    handlebars.registerHelper(dataHelpers);
+    handlebars.registerHelper(blockHelpers);
+    handlebars.registerHelper(varHelpers);
+    handlebars.registerHelper(stringHelpers);
+
 };
