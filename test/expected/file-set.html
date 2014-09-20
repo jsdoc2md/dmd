@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docs</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/html/docs.css">
+    <link rel="stylesheet" href="/html/coy.css">
+  </head>
+  <body class="overflow-hidden">
+    <div class="flexbox-col box-fill-viewport">
+      <div class="row1 flex-fixed">
+        <h1>API Reference</h1>
+      </div>
+      <div class="row2 flexbox-row">
+        <div class="col1 horiz-space flex-fixed overflow-scroll">
+          <h3>Modules</h3><ul><li>
+  <a href="#module_file-set">module: file-set</a>
+  
+    <ul>
+    <li>
+  <a href="#exp_module_file-set^FileSet">class: FileSet ⏏</a>
+  
+    <ul>
+    <li>
+  <a href="#new_module_file-set^FileSet◊">new FileSet(patternList)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet#list">fileSet.list</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet#files">fileSet.files</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet#dirs">fileSet.dirs</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet#notExisting">fileSet.notExisting</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet#add">fileSet.add(files)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_file-set^FileSet.eFileType">FileSet.eFileType</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+          
+
+          
+
+          
+        </div>
+        <div class="col2 overflow-scroll flex-full">
+        
+          <h2><a name="module_file-set">module: file-set</a></h2>
+<p>Exports a contructor taking a list of file patterns as input, returning a <code>file-set</code> instance containing the expanded patterns split into separate lists of <code>files</code>, <code>dirs</code> and <code>notExisting</code>.</p>
+
+
+
+
+
+<strong>Example</strong>
+<pre><code class="language-javascript">var fileSet = require(&quot;file-set&quot;);
+</code></pre>
+
+
+
+<dl>
+  <dt>kind</dt><dd>module</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <dt>typicalname</dt><dd>FileSet</dd>
+  
+  
+</dl>
+
+<h3><a name="exp_module_file-set^FileSet">class: FileSet ⏏</a></h3>
+<p>Expands file patterns, returning the matched and unmatched files and directories</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>class</dd>
+  
+  <dt>memberof</dt><dd><code> class of <a href="#module_file-set">file-set</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="new_module_file-set^FileSet◊">new FileSet(patternList)</a></h4>
+
+
+<strong>Params</strong>
+<ul>
+<li>patternList <code>string,Array.&lt;string&gt;</code> A pattern, or array of patterns to expand</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>constructor</dd>
+  
+  <dt>memberof</dt><dd><code> constructor of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet#list">fileSet.list</a></h4>
+<p>The full list of unique paths found, and not found.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet#files">fileSet.files</a></h4>
+<p>The existing files found</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet#dirs">fileSet.dirs</a></h4>
+<p>The existing directories found</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet#notExisting">fileSet.notExisting</a></h4>
+<p>Paths which were not found</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet#add">fileSet.add(files)</a></h4>
+<p>add file patterns to the set</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>files <code>string,Array.&lt;string&gt;</code> A pattern, or array of patterns to expand</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_file-set^FileSet.eFileType">FileSet.eFileType</a></h4>
+<p>Enum for the <code>type</code> value of each record in <code>fileSet.list</code></p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>static</dd>
+  <dt>memberof</dt><dd><code>static member of <a href="#exp_module_file-set^FileSet">FileSet</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="/html/prism.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@ var util = require("util");
 helpers which return data
 @module
 */
-exports.parents = parents;
+exports.orphans = orphans;
 exports.identifiers = identifiers;
 exports.sort = sort;
 exports.children = children;
@@ -27,14 +27,10 @@ exports.parentName = parentName;
 Returns an array of the top-level elements which have no parents
 @returns {array}
 */
-function parents(options){
+function orphans(options){    
     return a.where(options.data.root, {
-        "!kind": /module/,
-        memberof: undefined,
-        "!id": /^module:/
-    }).concat(a.where(options.data.root, {
-        kind: "module"
-    }));
+        memberof: undefined
+    });
 }
 
 /**

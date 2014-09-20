@@ -21,6 +21,7 @@
 
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
+  {{#if scope}}<dt>scope</dt><dd>{{scope}}</dd>{{/if}}
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md2}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md2}}</code></dd>{{/if}}
   {{#if augments}}<dt>augments</dt><dd>{{augments}}</dd>{{/if}}
   {{#if type}}<dt>type</dt><dd>{{type.names}}</dd>{{/if}}

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docs</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/html/docs.css">
+    <link rel="stylesheet" href="/html/coy.css">
+  </head>
+  <body class="overflow-hidden">
+    <div class="flexbox-col box-fill-viewport">
+      <div class="row1 flex-fixed">
+        <h1>API Reference</h1>
+      </div>
+      <div class="row2 flexbox-row">
+        <div class="col1 horiz-space flex-fixed overflow-scroll">
+          <h3>Modules</h3><ul><li>
+  <a href="#module_MapView">module: MapView</a>
+  
+    <ul>
+    <li>
+  <a href="#exp_module_MapView^MapView">class: MapView ⏏</a>
+  
+    <ul>
+    <li>
+  <a href="#new_module_MapView^MapView◊">new MapView(options)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#isActive">mapView.isActive()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#getMap">mapView.getMap()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#setPosition">mapView.setPosition(position, [transition], [callback])</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#getPosition">mapView.getPosition()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#getFinalPosition">mapView.getFinalPosition()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#halt">mapView.halt()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#pointFromPosition">mapView.pointFromPosition(position)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#positionFromPoint">mapView.positionFromPoint(point)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#getSize">mapView.getSize()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView#getZoom">mapView.getZoom()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_MapView^MapView.DEFAULT_OPTIONS">MapView.DEFAULT_OPTIONS</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+          
+
+          
+
+          
+        </div>
+        <div class="col2 overflow-scroll flex-full">
+        
+          <h2><a name="module_MapView">module: MapView</a></h2>
+<p>MapView encapsulates a Google maps view so it can be used with famo.us.</p>
+<p>Additionally it adds methods to set the position and zoom-factor of the map using transitions.
+Use <code>MapModifier</code> and <code>MapStateModifier</code> to place famo.us renderables on the map, much like google-maps markers.</p>
+<p><strong>Map-types</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MapType.GOOGLEMAPS (default)</td>
+<td>Google-maps.</td>
+</tr>
+<tr>
+<td>MapType.LEAFLET</td>
+<td>Leaflet.js.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>module</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h3><a name="exp_module_MapView^MapView">class: MapView ⏏</a></h3>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>class</dd>
+  
+  <dt>memberof</dt><dd><code> class of <a href="#module_MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="new_module_MapView^MapView◊">new MapView(options)</a></h4>
+
+
+<strong>Params</strong>
+<ul>
+<li>options <code>Object</code> Options.</li>
+
+<li>options.type <code>MapType</code> Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET).</li>
+
+<li>options.mapOptions <code>Object</code> Options that are passed directly to the Map object. The options should include the &#39;center&#39; and &#39;zoom&#39;.</li>
+
+<li>options.id <code>String</code> Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface.</li>
+
+<li>options.zoomTransition <code>Transition</code> Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used).</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>constructor</dd>
+  
+  <dt>memberof</dt><dd><code> constructor of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#isActive">mapView.isActive() -> `Bool`</a></h4>
+<p>Is there at least one action pending completion?</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#getMap">mapView.getMap() -> `Map`</a></h4>
+<p>Get the internal map-object. This object may not yet have been initialized, the map is only
+guarenteed to be valid after the &#39;load&#39; event has been emited.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#setPosition">mapView.setPosition(position, [transition], [callback])</a></h4>
+<p>Set the center of the map to the given geographical coordinates.</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>position <code>LatLng</code> Position in geographical coordinates.</li>
+
+<li>transition <code>Transitionable</code> Transitionable.</li>
+
+<li>callback <code>function</code> callback to call after transition completes.</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#getPosition">mapView.getPosition() -> `LatLng`</a></h4>
+<p>Get the current center position of the map, in geographical coordinates.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#getFinalPosition">mapView.getFinalPosition() -> `LatLng`</a></h4>
+<p>Get the destination center position of the map, in geographical coordinates.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#halt">mapView.halt()</a></h4>
+<p>Halts any pending transitions.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#pointFromPosition">mapView.pointFromPosition(position) -> `Point`</a></h4>
+<p>Get the position in pixels (relative to the left-top of the container) for the given geographical position.</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>position <code>LatLng</code> in geographical coordinates.</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#positionFromPoint">mapView.positionFromPoint(point) -> `LatLng`</a></h4>
+<p>Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>point <code>Point</code> Position in pixels, relative to the left-top of the mapView.</li>
+</ul>
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#getSize">mapView.getSize() -> `Array.Number`</a></h4>
+<p>Get the size of the map-view in pixels.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView#getZoom">mapView.getZoom() -> `Number`</a></h4>
+<p>Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.
+E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
+at 5, over time. The used zoomTransition can be set as an option.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance function of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_MapView^MapView.DEFAULT_OPTIONS">MapView.DEFAULT_OPTIONS</a></h4>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>static</dd>
+  <dt>memberof</dt><dd><code>static member of <a href="#exp_module_MapView^MapView">MapView</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <dt>access</dt><dd>protected</dd>
+  
+  
+  
+  
+  
+  
+</dl>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="/html/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docs</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/html/docs.css">
+    <link rel="stylesheet" href="/html/coy.css">
+  </head>
+  <body class="overflow-hidden">
+    <div class="flexbox-col box-fill-viewport">
+      <div class="row1 flex-fixed">
+        <h1>API Reference</h1>
+      </div>
+      <div class="row2 flexbox-row">
+        <div class="col1 horiz-space flex-fixed overflow-scroll">
+          <h3>Modules</h3><ul><li>
+  <a href="#module_handbrake-js">module: handbrake-js</a>
+  
+    <ul>
+    <li>
+  <a href="#module_handbrake-js.cliOptions">hbjs.cliOptions</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js.spawn">hbjs.spawn(options)</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js.exec">hbjs.exec(options, [onComplete])</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake">class: hbjs~Handbrake</a>
+  
+    <ul>
+    <li>
+  <a href="#new_module_handbrake-js..Handbrake◊">new Handbrake()</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#output">handbrake.output</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#options">handbrake.options</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_start">event: "start"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_begin">event: "begin"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_progress">event: "progress"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_output">event: "output"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_error">event: "error"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_end">event: "end"</a>
+  
+</li>
+
+  
+    
+    <li>
+  <a href="#module_handbrake-js..Handbrake#event_complete">event: "complete"</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+          
+
+          
+
+          
+        </div>
+        <div class="col2 overflow-scroll flex-full">
+        
+          <h2><a name="module_handbrake-js">module: handbrake-js</a></h2>
+<p>Handbrake for node.js.</p>
+
+
+
+
+
+<strong>Example</strong>
+<pre><code class="language-javascript">var hbjs = require(&quot;handbrake-js&quot;);
+</code></pre>
+
+
+
+<dl>
+  <dt>kind</dt><dd>module</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <dt>typicalname</dt><dd>hbjs</dd>
+  
+  
+</dl>
+
+<h3><a name="module_handbrake-js.cliOptions">hbjs.cliOptions</a></h3>
+<p><a href="https://github.com/75lb/command-line-args">Command-line-args</a> option definitions, useful when building a CLI.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>static</dd>
+  <dt>memberof</dt><dd><code>static member of <a href="#module_handbrake-js">handbrake-js</a></code></dd>
+  
+  <dt>type</dt><dd>array</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h3><a name="module_handbrake-js.spawn">hbjs.spawn(options) -> [Handbrake](#module_handbrake-js..Handbrake)</a></h3>
+<p>Spawns a HandbrakeCLI process with the supplied <a href="https://trac.handbrake.fr/wiki/CLIGuide#options">options</a>, returning an instance of <code>Handbrake</code> on which you can listen for events.</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>options <code>Object,Array</code> <a href="https://trac.handbrake.fr/wiki/CLIGuide#options">Options</a> to pass directly to HandbrakeCLI</li>
+</ul>
+
+
+
+<strong>Example</strong>
+<pre><code class="language-javascript">var hbjs = require(&quot;handbrake-js&quot;);
+
+hbjs.spawn(options)
+    .on(&quot;error&quot;, console.error)
+    .on(&quot;output&quot;, console.log);
+</code></pre>
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>static</dd>
+  <dt>memberof</dt><dd><code>static function of <a href="#module_handbrake-js">handbrake-js</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h3><a name="module_handbrake-js.exec">hbjs.exec(options, [onComplete])</a></h3>
+<p>Runs HandbrakeCLI with the supplied <a href="https://trac.handbrake.fr/wiki/CLIGuide#options">options</a> calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.</p>
+
+
+<strong>Params</strong>
+<ul>
+<li>options <code>Object</code> <a href="https://trac.handbrake.fr/wiki/CLIGuide#options">Options</a> to pass directly to HandbrakeCLI</li>
+
+<li>onComplete <code>function</code> If passed, <code>onComplete(err, stdout, stderr)</code> will be called on completion, <code>stdout</code> and <code>stderr</code> being strings containing the HandbrakeCLI output.</li>
+</ul>
+
+
+
+<strong>Example</strong>
+<pre><code class="language-javascript">var hbjs = require(&quot;handbrake-js&quot;);
+
+hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
+    if (err) throw err;
+    console.log(stdout);
+});
+</code></pre>
+
+
+
+<dl>
+  <dt>kind</dt><dd>function</dd>
+  <dt>scope</dt><dd>static</dd>
+  <dt>memberof</dt><dd><code>static function of <a href="#module_handbrake-js">handbrake-js</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h3><a name="module_handbrake-js..Handbrake">class: hbjs~Handbrake</a></h3>
+<p>A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by <code>hbjs.spawn()</code>.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>class</dd>
+  <dt>scope</dt><dd>inner</dd>
+  <dt>memberof</dt><dd><code>inner class of <a href="#module_handbrake-js">handbrake-js</a></code></dd>
+  <dt>augments</dt><dd>EventEmitter</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="new_module_handbrake-js..Handbrake◊">new Handbrake()</a></h4>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>constructor</dd>
+  
+  <dt>memberof</dt><dd><code> constructor of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#output">handbrake.output</a></h4>
+<p>A <code>String</code> containing all handbrakeCLI output</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#options">handbrake.options</a></h4>
+<p>the options HandbrakeCLI was spawned with</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>member</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance member of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_start">event: "start"</a></h4>
+<p>Fired as HandbrakeCLI is launched. Nothing has happened yet.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_begin">event: "begin"</a></h4>
+<p>Fired when encoding begins. If you&#39;re expecting an encode and this never fired, something went wrong.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_progress">event: "progress"</a></h4>
+<p>Fired at regular intervals passing a <code>progress</code> object containing:</p>
+<ul>
+<li>taskNumber <code>Number</code> current task index</li>
+<li>taskCount <code>Number</code> total tasks in the queue</li>
+<li>percentComplete <code>Number</code></li>
+<li>fps <code>Number</code> Frames per second</li>
+<li>avgFps <code>Number</code> Average frames per second</li>
+<li>eta <code>String</code> Estimated time until completion</li>
+<li>task <code>String</code> Task description, either &quot;Encoding&quot; or &quot;Muxing&quot;</li>
+</ul>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_output">event: "output"</a></h4>
+<p>An aggregate of <code>stdout</code> and <code>stderr</code> output from the underlying HandbrakeCLI process.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_error">event: "error"</a></h4>
+<p>All operational exceptions are delivered via this event. Passes an <code>Error</code> instance, the <code>name</code> value of which will be one of:</p>
+<ul>
+<li>HandbrakeCLINotFound</li>
+<li>HandbrakeCLIError</li>
+<li>NoTitleFound</li>
+<li>HandbrakeCLICrash</li>
+<li>ValidationError</li>
+</ul>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_end">event: "end"</a></h4>
+<p>Fired on successful completion of an encoding task. Always follows a <code>begin</code> event, with some <code>progress</code> in between.</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+<h4><a name="module_handbrake-js..Handbrake#event_complete">event: "complete"</a></h4>
+<p>Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..</p>
+
+
+
+
+
+
+<dl>
+  <dt>kind</dt><dd>event</dd>
+  <dt>scope</dt><dd>instance</dd>
+  <dt>memberof</dt><dd><code>instance event of <a href="#module_handbrake-js..Handbrake">Handbrake</a></code></dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</dl>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="/html/prism.js"></script>
+  </body>
+</html>

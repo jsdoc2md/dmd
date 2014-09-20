@@ -3,6 +3,7 @@
 var a = require("array-tools");
 var util = require("util");
 var url = require("url");
+var marked = require("marked");
 
 /**
 helpers which return strings
@@ -10,6 +11,9 @@ helpers which return strings
 */
 exports.linkTo = linkTo;
 exports.anchorName = anchorName;
+exports.link = link;
+exports.md = md;
+exports.md2 = md2;
 
 /**
 @params id {string} - the id to convert into a link
@@ -75,4 +79,29 @@ function anchorName(options){
         this.kind === "constructor" ? "new_" : "",
         this.id.replace(/:/g, "_").replace(/~/g, "..")
     );
+}
+
+/**
+Returns a markdown anchor-link to the 
+@context {identifier}
+@example
+`{{#link}}{{>name}}{{/link}}` returns 
+*/
+function link(options){
+    return util.format(
+        "[%s](#%s)", 
+        options.fn(this), 
+        dataHelpers.anchorName.call(this, options)
+    );
+}
+
+/**
+converts the supplied text to markdown
+*/
+function md(options){
+    var output = marked(options.fn(this).toString());
+    return output.replace("lang-js", "language-javascript");
+}
+function md2(options){
+    return marked.inlineLexer(options.fn(this).toString(), []);
 }

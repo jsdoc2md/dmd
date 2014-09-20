@@ -13,16 +13,28 @@
       </div>
       <div class="row2 flexbox-row">
         <div class="col1 horiz-space flex-fixed overflow-scroll">
-          <ul>
-          {{#identifiers memberof=undefind sortBy="kind"~}}
-            {{>index~}}
-          {{/identifiers}}
-          </ul>
+          {{#modules sortBy="kind"~}}
+          {{#if @first~}}<h3>Modules</h3><ul>{{/if~}}
+          {{>index~}}
+          {{#if @last}}</ul>{{/if}}
+          {{/modules}}
+
+          {{#globals sortBy="kind"~}}
+          {{#if @first~}}<h3>Globals</h3><ul>{{/if~}}
+          {{>index~}}
+          {{#if @last}}</ul>{{/if}}
+          {{/globals}}
+
+          {{#misc sortBy="kind"~}}
+          {{#if @first~}}<h3>Misc</h3><ul>{{/if~}}
+          {{>index~}}
+          {{#if @last}}</ul>{{/if}}
+          {{/misc}}
         </div>
         <div class="col2 overflow-scroll flex-full">
-        {{#identifiers memberof=undefind sortBy="kind"}}
-          {{>identifier~}}
-        {{/identifiers}}
+        {{#orphans sortBy="kind"}}
+          {{>identifier}}
+        {{/orphans~}}
         </div>
       </div>
     </div>

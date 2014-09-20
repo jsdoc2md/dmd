@@ -133,48 +133,6 @@
     "codeName": "exports.two"
   },
   {
-    "id": "globalVar",
-    "name": "globalVar",
-    "scope": "global",
-    "kind": "member",
-    "description": "a global var",
-    "type": {
-      "names": [
-        "string"
-      ]
-    },
-    "defaultvalue": "\"something\"",
-    "codeName": "globalVar"
-  },
-  {
-    "id": "globalFunction",
-    "name": "globalFunction",
-    "scope": "global",
-    "kind": "function",
-    "description": "a global function",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "description": "first param",
-        "name": "one"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "second param",
-        "name": "two"
-      }
-    ],
-    "codeName": "globalFunction"
-  },
-  {
     "id": "GlobalClass",
     "name": "GlobalClass",
     "scope": "global",
@@ -229,5 +187,119 @@
     "description": "a static property",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.propTwo"
+  },
+  {
+    "id": "globalFunction",
+    "name": "globalFunction",
+    "scope": "global",
+    "kind": "function",
+    "description": "a global function",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "first param",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "second param",
+        "name": "two"
+      }
+    ],
+    "codeName": "globalFunction"
+  },
+  {
+    "id": "phantom",
+    "name": "phantom",
+    "kind": "mixin",
+    "description": "phantom mixin"
+  },
+  {
+    "id": "Eventful",
+    "name": "Eventful",
+    "scope": "global",
+    "kind": "mixin",
+    "description": "This provides methods used for event handling. It's not meant to\nbe used directly.",
+    "codeName": "Eventful"
+  },
+  {
+    "id": "Eventful.on",
+    "name": "on",
+    "scope": "static",
+    "kind": "function",
+    "description": "Register a handler function to be called whenever this event is fired.",
+    "memberof": "Eventful",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of the event.",
+        "name": "eventName"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "The handler to call.",
+        "name": "handler"
+      }
+    ],
+    "codeName": "on"
+  },
+  {
+    "id": "Eventful.fire",
+    "name": "fire",
+    "scope": "static",
+    "kind": "function",
+    "description": "Fire an event, causing all handlers for that event name to run.",
+    "memberof": "Eventful",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of the event.",
+        "name": "eventName"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The data provided to each handler.",
+        "name": "eventData"
+      }
+    ],
+    "codeName": "fire"
+  },
+  {
+    "id": "globalVar",
+    "name": "globalVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "a global var",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "\"something\"",
+    "codeName": "globalVar"
   }
 ]
