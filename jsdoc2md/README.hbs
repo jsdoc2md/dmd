@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
-***documentation in progress***
+***preview release, no much documentation, new version and docs coming soon***
 
 #dmd
 A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
