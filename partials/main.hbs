@@ -1,2 +1,13 @@
-{{>main-index~}}
-{{>docs~}}
+{{#modules~}}
+{{#if @first~}}{{string-repeat "#" (headingDepth)}}Modules
+{{/if~}}
+{{>index~}}
+{{/modules}}
+{{#globals~}}
+{{#if @first~}}{{string-repeat "#" (headingDepth)}}Globals
+{{/if~}}
+{{>index~}}
+{{/globals}}
+
+{{#orphans sortBy="kind"}}
+{{/orphans~}}

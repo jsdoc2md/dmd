@@ -13,7 +13,7 @@
       </div>
       <div class="row2 flexbox-row">
         <div class="col1 horiz-space flex-fixed overflow-scroll">
-          {{#modules sortBy="kind"~}}
+          {{#modules~}}
           {{#if @first~}}<h3>Modules</h3><ul>{{/if~}}
           {{>index~}}
           {{#if @last}}</ul>{{/if}}

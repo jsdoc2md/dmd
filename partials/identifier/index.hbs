@@ -1,0 +1,6 @@
+{{string-repeat "  " (depth)}}* {{>name}}
+{{#each (children)~}}
+{{~depthIncrement~}}
+{{>index~}}
+{{~depthDecrement~}}
+{{/each}}

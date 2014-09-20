@@ -28,7 +28,8 @@
     "h3": "cat test/fixture/handbrake.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/handbrake.html;",
     "h4": "cat test/fixture/lodash.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/lodash.html;",
     "h5": "cat test/fixture/MapView.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/MapView.html;",
-    "h": "npm run h1; npm run h2; npm run h3; npm run h4; npm run h5; echo"
+    "h": "npm run h1; npm run h2; npm run h3; npm run h4; npm run h5; echo",
+    "m1": "cat test/fixture/everything.json | dmd > test/md/everything.md;"
   },
   "dependencies": {
     "array-tools": "^1.3.0",

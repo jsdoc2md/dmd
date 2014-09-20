@@ -1,6 +1,6 @@
 {{! context: identifier }}
 
-{{~headingDepthIncrement~}}
+{{~depthIncrement~}}
 
 <h{{headingDepth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{headingDepth}}>
 {{#md}}{{{linkify description}}}{{/md}}
@@ -45,4 +45,4 @@
 {{>identifier~}}
 {{/each~}}
 
-{{headingDepthDecrement~}}
+{{depthDecrement~}}

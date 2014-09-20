@@ -21,3 +21,5 @@ a[href] { color: rgb(71, 16, 178); }
 .deprecated { text-decoration: line-through; }
 th, td { border: 1px solid silver; }
 /*code { background-color: #eee; font-family: Monaco, Consolas, "Lucida Console", monospace; }*/
+.col1 li { list-style-type: none; }
+.col1 ul { margin: 0; padding-left: 1em; }

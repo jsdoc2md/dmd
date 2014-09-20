@@ -1,15 +1,15 @@
 {{#if (exportedClass)~}}
   {{#with (exportedClass)~}}
-    {{headingDepthIncrement~}}
+    {{depthIncrement~}}
     {{>class~}}
-    {{headingDepthDecrement~}}
+    {{depthDecrement~}}
   {{/with~}}
 {{else~}}
   {{#if (exportedFunction)~}}
     {{#with (exportedFunction)~}}
-      {{headingDepthIncrement~}}
+      {{depthIncrement~}}
       {{>function~}}
-      {{headingDepthDecrement~}}
+      {{depthDecrement~}}
     {{/with~}}
   {{else~}}
 
