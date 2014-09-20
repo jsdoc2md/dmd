@@ -1,13 +1,13 @@
 ##Modules
-* file-set
-  * class: FileSet ⏏
-    * new FileSet(patternList)
-    * fileSet.list
-    * fileSet.files
-    * fileSet.dirs
-    * fileSet.notExisting
-    * fileSet.add(files)
-    * FileSet.eFileType
+* [file-set](#module_file-set)
+  * [class: FileSet ⏏](#exp_module_file-set^FileSet)
+    * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+    * [fileSet.list](#module_file-set^FileSet#list)
+    * [fileSet.files](#module_file-set^FileSet#files)
+    * [fileSet.dirs](#module_file-set^FileSet#dirs)
+    * [fileSet.notExisting](#module_file-set^FileSet#notExisting)
+    * [fileSet.add(files)](#module_file-set^FileSet#add)
+    * [FileSet.eFileType](#module_file-set^FileSet.eFileType)
 
 
 
@@ -21,9 +21,28 @@ Exports a contructor taking a list of file patterns as input, returning a `file-
 var fileSet = require("file-set");
 ```
 
+* [file-set](#module_file-set)
+  * [class: FileSet ⏏](#exp_module_file-set^FileSet)
+    * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+    * [fileSet.list](#module_file-set^FileSet#list)
+    * [fileSet.files](#module_file-set^FileSet#files)
+    * [fileSet.dirs](#module_file-set^FileSet#dirs)
+    * [fileSet.notExisting](#module_file-set^FileSet#notExisting)
+    * [fileSet.add(files)](#module_file-set^FileSet#add)
+    * [FileSet.eFileType](#module_file-set^FileSet.eFileType)
+
 <a name="exp_module_file-set^FileSet"></a>
 ###class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
+
+  * [class: FileSet ⏏](#exp_module_file-set^FileSet)
+    * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+    * [fileSet.list](#module_file-set^FileSet#list)
+    * [fileSet.files](#module_file-set^FileSet#files)
+    * [fileSet.dirs](#module_file-set^FileSet#dirs)
+    * [fileSet.notExisting](#module_file-set^FileSet#notExisting)
+    * [fileSet.add(files)](#module_file-set^FileSet#add)
+    * [FileSet.eFileType](#module_file-set^FileSet.eFileType)
 
 <a name="new_module_file-set^FileSet◊"></a>
 ####new FileSet(patternList)
@@ -31,21 +50,31 @@ Expands file patterns, returning the matched and unmatched files and directories
 
 - patternList `string` | `Array.<string>` - A pattern, or array of patterns to expand  
 
+    * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+
 <a name="module_file-set^FileSet#list"></a>
 ####fileSet.list
 The full list of unique paths found, and not found.
+
+    * [fileSet.list](#module_file-set^FileSet#list)
 
 <a name="module_file-set^FileSet#files"></a>
 ####fileSet.files
 The existing files found
 
+    * [fileSet.files](#module_file-set^FileSet#files)
+
 <a name="module_file-set^FileSet#dirs"></a>
 ####fileSet.dirs
 The existing directories found
 
+    * [fileSet.dirs](#module_file-set^FileSet#dirs)
+
 <a name="module_file-set^FileSet#notExisting"></a>
 ####fileSet.notExisting
 Paths which were not found
+
+    * [fileSet.notExisting](#module_file-set^FileSet#notExisting)
 
 <a name="module_file-set^FileSet#add"></a>
 ####fileSet.add(files)
@@ -55,7 +84,11 @@ add file patterns to the set
 
 - files `string` | `Array.<string>` - A pattern, or array of patterns to expand  
 
+    * [fileSet.add(files)](#module_file-set^FileSet#add)
+
 <a name="module_file-set^FileSet.eFileType"></a>
 ####FileSet.eFileType
 Enum for the `type` value of each record in `fileSet.list`
+
+    * [FileSet.eFileType](#module_file-set^FileSet.eFileType)
 

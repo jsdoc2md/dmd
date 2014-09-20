@@ -10,7 +10,6 @@ helpers which return strings
 */
 exports.linkTo = linkTo;
 exports.anchorName = anchorName;
-exports.link = link;
 exports.md = md;
 exports.md2 = md2;
 
@@ -77,20 +76,6 @@ function anchorName(options){
         this.isExported ? "exp_" : "",
         this.kind === "constructor" ? "new_" : "",
         this.id.replace(/:/g, "_").replace(/~/g, "..")
-    );
-}
-
-/**
-Returns a markdown anchor-link to the 
-@context {identifier}
-@example
-`{{#link}}{{>name}}{{/link}}` returns 
-*/
-function link(options){
-    return util.format(
-        "[%s](#%s)", 
-        options.fn(this), 
-        dataHelpers.anchorName.call(this, options)
     );
 }
 

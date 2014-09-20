@@ -1,4 +1,4 @@
-{{string-repeat "  " (depth)}}* {{>name}}
+{{>index-indent}}* [{{>name}}](#{{{anchorName}}})
 {{#each (children)~}}
 {{~depthIncrement~}}
 {{>index~}}

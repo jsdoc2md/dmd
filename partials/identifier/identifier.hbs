@@ -17,8 +17,10 @@
 {{>license~}}
 {{>copyright~}}
 {{>examples~}}
+
+{{>index}}
 {{#each (children sortBy="scope,kind")~}}
 {{~depthIncrement~}}
 {{>identifier~}}
 {{~depthDecrement~}}
-{{/each~}}
+{{/each}}
