@@ -1,13 +1,14 @@
 {{#modules~}}
-{{#if @first~}}{{string-repeat "#" (headingDepth)}}Modules
+{{#if @first~}}{{>heading-indent}}Modules
 {{/if~}}
 {{>index~}}
 {{/modules}}
 {{#globals~}}
-{{#if @first~}}{{string-repeat "#" (headingDepth)}}Globals
+{{#if @first~}}{{>heading-indent}}Globals
 {{/if~}}
 {{>index~}}
 {{/globals}}
 
 {{#orphans sortBy="kind"}}
+{{>identifier~}}
 {{/orphans~}}

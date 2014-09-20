@@ -1,5 +1,4 @@
 "use strict";
-
 var a = require("array-tools");
 var util = require("util");
 var url = require("url");

@@ -1,0 +1,24 @@
+<a name="{{{anchorName}}}"></a>
+{{>heading-indent}}{{>name}}
+{{>description~}}
+{{>params~}}
+{{>deprecated~}}
+{{>augments~}}
+{{>memberof~}}
+{{>type~}}
+{{>default~}}
+{{>returns~}}
+{{>access~}}
+{{>enum~}}
+{{>readOnly~}}
+{{>since~}}
+{{>version~}}
+{{>authors~}}
+{{>license~}}
+{{>copyright~}}
+{{>examples~}}
+{{#each (children sortBy="scope,kind")~}}
+{{~depthIncrement~}}
+{{>identifier~}}
+{{~depthDecrement~}}
+{{/each~}}
