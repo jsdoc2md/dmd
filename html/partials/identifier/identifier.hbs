@@ -4,20 +4,40 @@
 
 <h{{headingDepth}}><a name="{{{anchorName}}}">{{>name}}</a></h{{headingDepth}}>
 {{#md}}{{{linkify description}}}{{/md}}
+
+{{#if params~}}
+<strong>Params</strong>
+{{#each params~}}
+{{#if @first}}<ul>{{/if}}
+<li>{{name}} <code>{{type.names}}</code> {{#md2}}{{{linkify description}}}{{/md2}}</li>
+{{#if @last}}</ul>{{/if~}}
+{{/each}}
+{{/if}}
+
+{{#if examples}}
+<strong>Example</strong>
+{{#md}}{{{examples}}}{{/md}}
+{{/if}}
+
 <dl>
   {{#if kind}}<dt>kind</dt><dd>{{kind}}</dd>{{/if}}
-  {{#if params}}
-  <dt>params</dt>
-  <dd>
-    {{#each params}}
-    {{#if @first}}<ul>{{/if}}
-    <li>{{name}} <code>{{type.names}}</code> {{#md2}}{{{linkify description}}}{{/md2}}</li>
-    {{#if @last}}</ul>{{/if}}
-    {{/each}}
-  </dd>
-  {{/if}}
-  {{#if examples}}<dt>examples</dt><dd><code>{{#md}}{{{examples}}}{{/md}}</code></dd>{{/if}}
   {{#if memberof}}<dt>memberof</dt><dd><code>{{#md2}}{{scope}} {{kind}} of {{linkTo memberof}}{{/md2}}</code></dd>{{/if}}
+  {{#if augments}}<dt>augments</dt><dd>{{augments}}</dd>{{/if}}
+  {{#if type}}<dt>type</dt><dd>{{type.names}}</dd>{{/if}}
+  {{#if defaultvalue}}<dt>defaultvalue</dt><dd>{{defaultvalue}}</dd>{{/if}}
+  {{#if readonly}}<dt>readonly</dt><dd>{{readonly}}</dd>{{/if}}
+  {{#if isEnum}}<dt>isEnum</dt><dd>{{isEnum}}</dd>{{/if}}
+  {{#if optional}}<dt>optional</dt><dd>{{optional}}</dd>{{/if}}
+  {{#if nullable}}<dt>nullable</dt><dd>{{nullable}}</dd>{{/if}}
+  {{#if variable}}<dt>variable</dt><dd>{{variable}}</dd>{{/if}}
+  {{#if author}}<dt>author</dt><dd>{{author}}</dd>{{/if}}
+  {{#if access}}<dt>access</dt><dd>{{access}}</dd>{{/if}}
+  {{#if requires}}<dt>requires</dt><dd>{{requires}}</dd>{{/if}}
+  {{#if licenses}}<dt>licenses</dt><dd>{{licenses}}</dd>{{/if}}
+  {{#if version}}<dt>version</dt><dd>{{version}}</dd>{{/if}}
+  {{#if typicalname}}<dt>typicalname</dt><dd>{{typicalname}}</dd>{{/if}}
+  {{#if category}}<dt>category</dt><dd>{{category}}</dd>{{/if}}
+  {{#if see}}<dt>see</dt><dd>{{see}}</dd>{{/if}}
 </dl>
 
 {{#each (children sortBy="scope,kind")~}}

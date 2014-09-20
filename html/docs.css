@@ -19,3 +19,5 @@ body { margin: 0; }
 html { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.4;}
 a[href] { color: rgb(71, 16, 178); }
 .deprecated { text-decoration: line-through; }
+th, td { border: 1px solid silver; }
+/*code { background-color: #eee; font-family: Monaco, Consolas, "Lucida Console", monospace; }*/

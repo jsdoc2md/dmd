@@ -34,7 +34,8 @@ function link(options){
 converts the supplied text to markdown
 */
 function md(options){
-    return marked(options.fn(this).toString());
+    var output = marked(options.fn(this).toString());
+    return output.replace("lang-js", "language-javascript");
 }
 function md2(options){
     return marked.inlineLexer(options.fn(this).toString(), []);
