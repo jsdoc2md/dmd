@@ -14,7 +14,7 @@
       <div class="row2 flexbox-row">
         <div class="col1 horiz-space flex-fixed overflow-scroll">
           <h3>Modules</h3><ul><li>
-  <a href="#module_cjs/class">module: cjs/class</a>
+  <a href="#module_cjs/class">cjs/class</a>
   
     <ul>
     <li>
@@ -54,11 +54,11 @@
 </li>
 
           <li>
-  <a href="#module_functionAlias">module: functionAlias</a>
+  <a href="#module_cjs/function-alias">cjs/function-alias</a>
   
     <ul>
     <li>
-  <a href="#exp_module_functionAlias^pointerFunction">pointerFunction() ⏏</a>
+  <a href="#exp_module_cjs/function-alias^sum">sum(one, two) ⏏</a>
   
 </li>
 </ul>
@@ -66,11 +66,11 @@
 </li>
 
           <li>
-  <a href="#module_cjs/function">module: cjs/function</a>
+  <a href="#module_cjs/object-alias">cjs/object-alias</a>
   
     <ul>
     <li>
-  <a href="#module_cjs/function..prop">$~prop</a>
+  <a href="#exp_module_cjs/object-alias^teams">teams ⏏</a>
   
 </li>
 </ul>
@@ -78,19 +78,7 @@
 </li>
 
           <li>
-  <a href="#module_teams">module: teams</a>
-  
-    <ul>
-    <li>
-  <a href="#exp_module_teams^teams">teams ⏏</a>
-  
-</li>
-</ul>
-  
-</li>
-
-          <li>
-  <a href="#module_cjs/object">module: cjs/object</a>
+  <a href="#module_cjs/object">cjs/object</a>
   
     <ul>
     <li>
@@ -142,7 +130,7 @@
 </li>
 
           <li>
-  <a href="#Eventful">Eventful</a>
+  <a href="#Eventful">mixin: Eventful</a>
   
     <ul>
     <li>
@@ -168,7 +156,7 @@
           
 
           <h3>Misc</h3><ul><li>
-  <a href="#phantom">phantom</a>
+  <a href="#phantom">mixin: phantom</a>
   
 </li>
 </ul>
@@ -176,7 +164,7 @@
         </div>
         <div class="col2 overflow-scroll flex-full">
         
-          <h2><a name="module_cjs/class">module: cjs/class</a></h2>
+          <h2><a name="module_cjs/class">cjs/class</a></h2>
 <p>exports a class</p>
 
 
@@ -358,7 +346,7 @@
 
 
         
-          <h2><a name="module_functionAlias">module: functionAlias</a></h2>
+          <h2><a name="module_cjs/function-alias">cjs/function-alias</a></h2>
 <p>exports a pointer to a function</p>
 
 
@@ -383,15 +371,21 @@
   
   
   
-  <dt>typicalname</dt><dd>pf</dd>
+  
   
   
 </dl>
 
-<h3><a name="exp_module_functionAlias^pointerFunction">pointerFunction() ⏏</a></h3>
+<h3><a name="exp_module_cjs/function-alias^sum">sum(one, two) -> `number` ⏏</a></h3>
 <p>the function</p>
 
 
+<strong>Params</strong>
+<ul>
+<li>one <code>number</code> the first number</li>
+
+<li>two <code>number</code> the second number</li>
+</ul>
 
 
 
@@ -399,7 +393,7 @@
 <dl>
   <dt>kind</dt><dd>function</dd>
   
-  <dt>memberof</dt><dd><code> function of <a href="#module_functionAlias">functionAlias</a></code></dd>
+  <dt>memberof</dt><dd><code> function of <a href="#module_cjs/function-alias">cjs/function-alias</a></code></dd>
   
   
   
@@ -420,69 +414,7 @@
 
 
         
-          <h2><a name="module_cjs/function">module: cjs/function</a></h2>
-<p>module two exports a function</p>
-
-
-
-
-
-
-<dl>
-  <dt>kind</dt><dd>module</dd>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <dt>typicalname</dt><dd>$</dd>
-  
-  
-</dl>
-
-<h3><a name="module_cjs/function..prop">$~prop</a></h3>
-<p>inner property</p>
-
-
-
-
-
-
-<dl>
-  <dt>kind</dt><dd>member</dd>
-  <dt>scope</dt><dd>inner</dd>
-  <dt>memberof</dt><dd><code>inner member of <a href="#module_cjs/function">cjs/function</a></code></dd>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</dl>
-
-
-        
-          <h2><a name="module_teams">module: teams</a></h2>
+          <h2><a name="module_cjs/object-alias">cjs/object-alias</a></h2>
 <p>module one</p>
 
 
@@ -512,7 +444,7 @@
   
 </dl>
 
-<h3><a name="exp_module_teams^teams">teams ⏏</a></h3>
+<h3><a name="exp_module_cjs/object-alias^teams">teams ⏏</a></h3>
 <p>the teams</p>
 
 
@@ -523,7 +455,7 @@
 <dl>
   <dt>kind</dt><dd>member</dd>
   
-  <dt>memberof</dt><dd><code> member of <a href="#module_teams">teams</a></code></dd>
+  <dt>memberof</dt><dd><code> member of <a href="#module_cjs/object-alias">cjs/object-alias</a></code></dd>
   
   
   
@@ -544,7 +476,7 @@
 
 
         
-          <h2><a name="module_cjs/object">module: cjs/object</a></h2>
+          <h2><a name="module_cjs/object">cjs/object</a></h2>
 <p>module one</p>
 
 
@@ -806,7 +738,7 @@
 
 
         
-          <h2><a name="phantom">phantom</a></h2>
+          <h2><a name="phantom">mixin: phantom</a></h2>
 <p>phantom mixin</p>
 
 
@@ -838,7 +770,7 @@
 
 
         
-          <h2><a name="Eventful">Eventful</a></h2>
+          <h2><a name="Eventful">mixin: Eventful</a></h2>
 <p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
 

@@ -80,16 +80,7 @@ return the indentifiers which are a `memberof` this one
 @returns {identifier[]}
 */
 function children(options){
-    if (this.kind === "module"){
-        var exp = exported.call(this, options);
-        if (exp.kind === "class"){
-            return [];
-        } else {
-            return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
-        }
-    } else {
-        return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
-    }
+    return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
 }
 
 /**
