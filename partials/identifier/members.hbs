@@ -1,6 +1,0 @@
-{{depthIncrement~}}
-{{#if (constructorHasDocs)}}{{set "isConstructor" true~}}{{>function}}{{/if~}}
-{{#each (groupByKind (children))~}}
-  {{>identifier~}}
-{{/each~}}
-{{depthDecrement~}}

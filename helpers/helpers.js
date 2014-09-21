@@ -6,11 +6,7 @@ var boolHelpers = require("../helpers2/bool");
 
 module.exports = function(handlebars){
     require("./constructor-has-docs.js")(handlebars);
-    require("./depth.js")(handlebars);
     require("./linkify.js")(handlebars);
-    require("./or.js")(handlebars);
-    require("./parent.js")(handlebars);
-    require("./data/all-members.js")(handlebars);
     require("./data/classes.js")(handlebars);
     require("./data/constants.js")(handlebars);
     require("./data/exported.js")(handlebars);
@@ -20,16 +16,10 @@ module.exports = function(handlebars){
     require("./data/group-by-kind.js")(handlebars);
     require("./data/group-by-scope.js")(handlebars);
     require("./data/group-by-section.js")(handlebars);
-    require("./data/inner-scope.js")(handlebars);
-    require("./data/instance-scope.js")(handlebars);
-    require("./data/is-class.js")(handlebars);
     require("./data/kinds.js")(handlebars);
     require("./data/members.js")(handlebars);
     require("./data/modules.js")(handlebars);
     require("./data/namespaces.js")(handlebars);
-    require("./data/no-scope.js")(handlebars);
-    require("./data/set.js")(handlebars);
-    require("./data/static-scope.js")(handlebars);
     require("./data/typedefs.js")(handlebars);
     require("./block/collection/parents-grouped.js")(handlebars);
     require("./block/section/class.js")(handlebars);
