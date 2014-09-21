@@ -12,12 +12,6 @@
     "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`."
   },
   {
-    "id": "module:handbrake-js~Handbrake◊",
-    "name": "Handbrake",
-    "kind": "constructor",
-    "memberof": "module:handbrake-js~Handbrake"
-  },
-  {
     "id": "module:handbrake-js~Handbrake#output",
     "name": "output",
     "scope": "instance",

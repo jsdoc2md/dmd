@@ -81,8 +81,11 @@ return the indentifiers which are a `memberof` this one
 @returns {identifier[]}
 */
 function children(options){
-    var output = sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
-    if (output.length >= (options.hash.min || 0)) return output;
+    var min = options.hash.min;
+    delete options.hash.min;
+    options.hash.memberof = this.id;
+    var output = identifiers(options);
+    if (output.length >= (min || 0)) return output;
 }
 
 /**

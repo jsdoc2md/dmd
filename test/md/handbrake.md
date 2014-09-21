@@ -12,7 +12,6 @@ var hbjs = require("handbrake-js");
   * [hbjs.spawn(options)](#module_handbrake-js.spawn)
   * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
-    * [new Handbrake()](#new_module_handbrake-js..Handbrake◊)
     * [handbrake.output](#module_handbrake-js..Handbrake#output)
     * [handbrake.options](#module_handbrake-js..Handbrake#options)
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
@@ -71,8 +70,6 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 
 **Extends**: `EventEmitter`  
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
-<a name="new_module_handbrake-js..Handbrake◊"></a>
-####new Handbrake()
 <a name="module_handbrake-js..Handbrake#output"></a>
 ####handbrake.output
 A `String` containing all handbrakeCLI output

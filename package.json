@@ -23,6 +23,7 @@
     "html": "./html.sh",
     "watch": "baldrick --do 'npm run html' --when '**/*.hbs' --change --speak;",
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*.js' > test/fixture/everything.json",
+    "p3": "jsdoc-parse ../handbrake-js/lib/* > test/fixture/handbrake.json",
     "h1": "cat test/fixture/everything.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/everything.html;",
     "h2": "cat test/fixture/file-set.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/file-set.html;",
     "h3": "cat test/fixture/handbrake.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/handbrake.html;",
