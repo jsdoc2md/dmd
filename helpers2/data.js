@@ -76,11 +76,13 @@ function sortByScopeKind(a, b){
 /**
 return the indentifiers which are a `memberof` this one
 @params [sortBy] {string} - "kind"
+@params [min] {number} - only returns if there are `min` children
 @context {identifier}
 @returns {identifier[]}
 */
 function children(options){
-    return sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
+    var output = sort(a.where(options.data.root, { memberof: this.id }), options.hash.sortBy);
+    if (output.length >= (options.hash.min || 0)) return output;
 }
 
 /**

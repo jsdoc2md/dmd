@@ -28,13 +28,6 @@
 ##cjs/class
 exports a class
 
-* [cjs/class](#module_cjs/class)
-  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
-    * [new ExportedClass()](#new_module_cjs/class^ExportedClass◊)
-    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
-    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
-    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
-
 <a name="exp_module_cjs/class^ExportedClass"></a>
 ###class: ExportedClass ⏏
 the exported class
@@ -60,9 +53,6 @@ inner module property
 ##cjs/function-alias
 exports a pointer to a function
 
-* [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two) ⏏](#exp_module_cjs/function-alias^sum)
-
 <a name="exp_module_cjs/function-alias^sum"></a>
 ###sum(one, two) ⏏
 the function
@@ -76,9 +66,6 @@ the function
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 module one
-
-* [cjs/object-alias](#module_cjs/object-alias)
-  * [teams ⏏](#exp_module_cjs/object-alias^teams)
 
 <a name="exp_module_cjs/object-alias^teams"></a>
 ###teams ⏏
@@ -140,13 +127,9 @@ a global function
 - one `number` - first param  
 - two `string` - second param  
 
-* [globalFunction(one, two)](#globalFunction)
-
 <a name="phantom"></a>
 ##mixin: phantom
 phantom mixin
-
-* [mixin: phantom](#phantom)
 
 <a name="Eventful"></a>
 ##mixin: Eventful
@@ -181,5 +164,3 @@ a global var
 
 **Type**: `string`  
 **Default**: `"something"`  
-* [globalVar](#globalVar)
-
