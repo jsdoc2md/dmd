@@ -51,27 +51,17 @@
     "codeName": "innerProp"
   },
   {
-    "id": "module:functionAlias",
-    "name": "functionAlias",
+    "id": "module:cjs/function-alias",
+    "name": "cjs/function-alias",
     "kind": "module",
-    "description": "exports a pointer to a function",
-    "typicalname": "pf"
+    "description": "exports a pointer to a function"
   },
   {
-    "id": "module:functionAlias^pointerFunction",
-    "name": "pointerFunction",
+    "id": "module:cjs/function-alias^sum",
+    "name": "sum",
     "kind": "function",
     "description": "the function",
-    "alias": "module:functionAlias",
-    "codeName": "pointerFunction",
-    "isExported": true,
-    "memberof": "module:functionAlias"
-  },
-  {
-    "id": "module:cjs/function",
-    "name": "cjs/function",
-    "kind": "module",
-    "description": "module two exports the `add` function",
+    "alias": "module:cjs/function-alias",
     "params": [
       {
         "type": {
@@ -79,7 +69,8 @@
             "number"
           ]
         },
-        "description": "the first number"
+        "description": "the first number",
+        "name": "one"
       },
       {
         "type": {
@@ -87,7 +78,8 @@
             "number"
           ]
         },
-        "description": "the second number"
+        "description": "the second number",
+        "name": "two"
       }
     ],
     "returns": [
@@ -99,23 +91,26 @@
         },
         "description": "- the calculation result"
       }
-    ]
+    ],
+    "codeName": "sum",
+    "isExported": true,
+    "memberof": "module:cjs/function-alias"
   },
   {
-    "id": "module:teams",
-    "name": "teams",
+    "id": "module:cjs/object-alias",
+    "name": "cjs/object-alias",
     "kind": "module",
     "description": "module one"
   },
   {
-    "id": "module:teams^teams",
+    "id": "module:cjs/object-alias^teams",
     "name": "teams",
     "kind": "member",
     "description": "the teams",
-    "alias": "module:teams",
+    "alias": "module:cjs/object-alias",
     "codeName": "teams",
     "isExported": true,
-    "memberof": "module:teams"
+    "memberof": "module:cjs/object-alias"
   },
   {
     "id": "module:cjs/object",

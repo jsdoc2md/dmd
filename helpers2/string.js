@@ -12,6 +12,7 @@ exports.linkTo = linkTo;
 exports.anchorName = anchorName;
 exports.md = md;
 exports.md2 = md2;
+exports.methodSig = methodSig;
 
 /**
 @params id {string} - the id to convert into a link
@@ -88,4 +89,21 @@ function md(options){
 }
 function md2(options){
     return marked.inlineLexer(options.fn(this).toString(), []);
+}
+
+/**
+Returns the method signature, e.g. `(options, [onComplete])`
+@context {identifier}
+@returns {string}
+*/
+function methodSig(){
+    return a.arrayify(this.params).filter(function(param){
+        return param.name && !/\w+\.\w+/.test(param.name);
+    }).map(function(param){
+        if (param.variable){
+            return param.optional ? "[..." + param.name + "]" : "..." + param.name;
+        } else {
+            return param.optional ? "[" + param.name + "]" : param.name;
+        }
+    }).join(", ");
 }

@@ -5,11 +5,10 @@
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
-* [functionAlias](#module_functionAlias)
-  * [pointerFunction() ⏏](#exp_module_functionAlias^pointerFunction)
-* [cjs/function](#module_cjs/function)
-* [teams](#module_teams)
-  * [teams ⏏](#exp_module_teams^teams)
+* [cjs/function-alias](#module_cjs/function-alias)
+  * [sum(one, two) ⏏](#exp_module_cjs/function-alias^sum)
+* [cjs/object-alias](#module_cjs/object-alias)
+  * [teams ⏏](#exp_module_cjs/object-alias^teams)
 * [cjs/object](#module_cjs/object)
   * [obj.one](#module_cjs/object.one)
   * [obj.two()](#module_cjs/object.two)
@@ -57,37 +56,31 @@ a static property for the exported class
 inner module property
 
 **Scope**: inner member of [ExportedClass](#exp_module_cjs/class^ExportedClass)  
-<a name="module_functionAlias"></a>
-##functionAlias
+<a name="module_cjs/function-alias"></a>
+##cjs/function-alias
 exports a pointer to a function
 
-* [functionAlias](#module_functionAlias)
-  * [pointerFunction() ⏏](#exp_module_functionAlias^pointerFunction)
+* [cjs/function-alias](#module_cjs/function-alias)
+  * [sum(one, two) ⏏](#exp_module_cjs/function-alias^sum)
 
-<a name="exp_module_functionAlias^pointerFunction"></a>
-###pointerFunction() ⏏
+<a name="exp_module_cjs/function-alias^sum"></a>
+###sum(one, two) ⏏
 the function
-
-<a name="module_cjs/function"></a>
-##cjs/function
-module two exports the `add` function
 
 **Params**
 
--  `number` - the first number  
--  `number` - the second number  
+- one `number` - the first number  
+- two `number` - the second number  
 
 **Returns**: `number` - - the calculation result  
-* [cjs/function](#module_cjs/function)
-
-<a name="module_teams"></a>
-##teams
+<a name="module_cjs/object-alias"></a>
+##cjs/object-alias
 module one
 
-* [teams](#module_teams)
-  * [teams ⏏](#exp_module_teams^teams)
+* [cjs/object-alias](#module_cjs/object-alias)
+  * [teams ⏏](#exp_module_cjs/object-alias^teams)
 
-<a name="exp_module_teams^teams"></a>
+<a name="exp_module_cjs/object-alias^teams"></a>
 ###teams ⏏
 the teams
 
