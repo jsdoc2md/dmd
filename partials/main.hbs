@@ -1,3 +1,4 @@
+{{#if (showMainIndex)~}}
 {{#modules~}}
 {{#if @first~}}{{>heading-indent}}Modules
 {{/if~}}
@@ -8,7 +9,8 @@
 {{/if~}}
 {{>index~}}
 {{/globals}}
+{{/if~}}
 
-{{#orphans sortBy="kind"}}
+{{#orphans sortBy="kind"~}}
 {{>identifier~}}
 {{/orphans~}}

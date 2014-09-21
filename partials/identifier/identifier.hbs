@@ -18,7 +18,9 @@
 {{>copyright~}}
 {{>examples~}}
 
+{{#if (lt (depth) 1)}}
 {{>index}}
+{{/if}}
 {{#each (children sortBy="scope,kind")~}}
 {{~depthIncrement~}}
 {{>identifier~}}
