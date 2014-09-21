@@ -15,6 +15,7 @@ exports.isEnum = isEnum;
 exports.isTypedef = isTypedef;
 exports.isCallback = isCallback;
 exports.isModule = isModule;
+exports.isMixin = isMixin;
 exports.showMainIndex = showMainIndex;
 
 /**
@@ -47,6 +48,9 @@ function isCallback(){
 }
 function isModule(){
     return this.kind === "module";
+}
+function isMixin(){
+    return this.kind === "mixin";
 }
 function showMainIndex(options){
     return dataHelpers.orphans.call(this, options).length > 1;

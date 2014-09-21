@@ -19,7 +19,7 @@
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 * [globalFunction(one, two)](#globalFunction)
-* [Eventful](#Eventful)
+* [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 * [globalVar](#globalVar)
@@ -143,17 +143,17 @@ a global function
 * [globalFunction(one, two)](#globalFunction)
 
 <a name="phantom"></a>
-##phantom
+##mixin: phantom
 phantom mixin
 
-* [phantom](#phantom)
+* [mixin: phantom](#phantom)
 
 <a name="Eventful"></a>
-##Eventful
+##mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
 
-* [Eventful](#Eventful)
+* [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 
