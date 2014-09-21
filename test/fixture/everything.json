@@ -71,17 +71,35 @@
     "id": "module:cjs/function",
     "name": "cjs/function",
     "kind": "module",
-    "description": "module two exports a function",
-    "typicalname": "$"
-  },
-  {
-    "id": "module:cjs/function~prop",
-    "name": "prop",
-    "scope": "inner",
-    "kind": "member",
-    "description": "inner property",
-    "memberof": "module:cjs/function",
-    "codeName": "prop"
+    "description": "module two exports the `add` function",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "the first number"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "the second number"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "- the calculation result"
+      }
+    ]
   },
   {
     "id": "module:teams",

@@ -7,8 +7,10 @@ Handbrake for node.js.
 var hbjs = require("handbrake-js");
 ```
 
-
 * [handbrake-js](#module_handbrake-js)
+  * [hbjs.cliOptions](#module_handbrake-js.cliOptions)
+  * [hbjs.spawn(options)](#module_handbrake-js.spawn)
+  * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
     * [new Handbrake()](#new_module_handbrake-js..Handbrake◊)
     * [handbrake.output](#module_handbrake-js..Handbrake#output)
@@ -20,17 +22,12 @@ var hbjs = require("handbrake-js");
     * [event: "error"](#module_handbrake-js..Handbrake#event_error)
     * [event: "end"](#module_handbrake-js..Handbrake#event_end)
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
-  * [hbjs.spawn(options)](#module_handbrake-js.spawn)
-  * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
-  * [hbjs.cliOptions](#module_handbrake-js.cliOptions)
-
 
 <a name="module_handbrake-js.cliOptions"></a>
 ###hbjs.cliOptions
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
 **Type**: `array`  
-
 <a name="module_handbrake-js.spawn"></a>
 ###hbjs.spawn(options)
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
@@ -48,7 +45,6 @@ hbjs.spawn(options)
     .on("error", console.error)
     .on("output", console.log);
 ```
-
 
 <a name="module_handbrake-js.exec"></a>
 ###hbjs.exec(options, [onComplete])
@@ -69,36 +65,29 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
 });
 ```
 
-
 <a name="module_handbrake-js..Handbrake"></a>
 ###class: hbjs~Handbrake
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
 **Extends**: `EventEmitter`  
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
-
 <a name="new_module_handbrake-js..Handbrake◊"></a>
 ####new Handbrake()
-
 <a name="module_handbrake-js..Handbrake#output"></a>
 ####handbrake.output
 A `String` containing all handbrakeCLI output
-
 
 <a name="module_handbrake-js..Handbrake#options"></a>
 ####handbrake.options
 the options HandbrakeCLI was spawned with
 
-
 <a name="module_handbrake-js..Handbrake#event_start"></a>
 ####event: "start"
 Fired as HandbrakeCLI is launched. Nothing has happened yet.
 
-
 <a name="module_handbrake-js..Handbrake#event_begin"></a>
 ####event: "begin"
 Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.
-
 
 <a name="module_handbrake-js..Handbrake#event_progress"></a>
 ####event: "progress"
@@ -112,11 +101,9 @@ Fired at regular intervals passing a `progress` object containing:
 - eta `String` Estimated time until completion
 - task `String` Task description, either "Encoding" or "Muxing"
 
-
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 ####event: "output"
 An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.
-
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
 ####event: "error"
@@ -128,14 +115,11 @@ All operational exceptions are delivered via this event. Passes an `Error` insta
 - HandbrakeCLICrash
 - ValidationError
 
-
 <a name="module_handbrake-js..Handbrake#event_end"></a>
 ####event: "end"
 Fired on successful completion of an encoding task. Always follows a `begin` event, with some `progress` in between.
 
-
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 ####event: "complete"
 Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..
-
 
