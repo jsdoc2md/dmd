@@ -100,7 +100,7 @@
     "id": "module:cjs/object-alias",
     "name": "cjs/object-alias",
     "kind": "module",
-    "description": "module one"
+    "description": "a module exporting an object"
   },
   {
     "id": "module:cjs/object-alias^teams",
@@ -116,7 +116,7 @@
     "id": "module:cjs/object",
     "name": "cjs/object",
     "kind": "module",
-    "description": "module one",
+    "description": "a module exporting `exports` directly",
     "typicalname": "obj"
   },
   {

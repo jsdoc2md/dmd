@@ -35,7 +35,9 @@
     "m5": "cat test/fixture/MapView.json | dmd > test/md/MapView.md;",
     "m": "npm run m1; npm run m2; npm run m3; npm run m4; npm run m5; echo",
     "t1": "cat test/fixture/everything.json | dmd --template test/template/module.hbs > test/md/module.md",
-    "t2": "cat test/fixture/file-set.json | dmd --template test/template/exported-class.hbs > test/md/exported-class.md"
+    "t2": "cat test/fixture/file-set.json | dmd --template test/template/exported-class.hbs > test/md/exported-class.md",
+    "t3": "cat test/fixture/everything.json | dmd --template test/template/class.hbs > test/md/class.md",
+    "t4": "cat test/fixture/everything.json | dmd --template test/template/modules.hbs > test/md/modules.md"
   },
   "dependencies": {
     "array-tools": "^1.3.0",
