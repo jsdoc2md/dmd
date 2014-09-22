@@ -9,6 +9,8 @@ exports.orphans = orphans;
 exports.globals = globals;
 exports.modules = modules;
 exports.module = module;
+exports.classes = classes;
+exports.class = class_;
 exports.misc = misc;
 
 /**
@@ -46,8 +48,25 @@ render the supplied block for the specified module
 */
 function module(options){
     options.hash.kind = "module";
-    var module = listHelpers.identifiers(options)[0];
-    return module ? options.fn(module) : "ERROR, Cannot find module. Query: " + JSON.stringify(options.hash);
+    var result = listHelpers.identifiers(options)[0];
+    return result ? options.fn(result) : "ERROR, Cannot find module. Query: ";
+}
+
+/**
+render the block for each class
+*/
+function classes(options){
+    options.hash = { kind: "class" };
+    return boil._handlebars.helpers.each(listHelpers.identifiers(options), options);
+}
+
+/**
+render the supplied block for the specified class
+*/
+function class_(options){
+    options.hash.kind = "class";
+    var result = listHelpers.identifiers(options)[0];
+    return result ? options.fn(result) : "ERROR, Cannot find class. Query: ";
 }
 
 
