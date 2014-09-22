@@ -1,6 +1,7 @@
 "use strict";
 var a = require("array-tools");
 var o = require("object-tools");
+var boil = require("boil-js");
 var util = require("util");
 var url = require("url");
 var marked = require("marked");
@@ -128,7 +129,7 @@ function linkify(text, options) {
         var style = !!parsedLink[2];
         var target = parsedLink[3] || parsedLink[5];
         options.hash = o.extend({}, options.hash, {style: style, caption: caption});
-        links[parsedLink[0]] = handlebars.helpers.linkTo.call(this, target, options);
+        links[parsedLink[0]] = boil._handlebars.helpers.linkTo.call(this, target, options);
     });
     for (var link in links) {
         if (links.hasOwnProperty(link)) {

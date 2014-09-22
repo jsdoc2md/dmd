@@ -76,7 +76,7 @@ the function
 **Returns**: `number` - - the calculation result  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
-module one
+a module exporting an object
 
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams ⏏](#exp_module_cjs/object-alias^teams)
@@ -87,7 +87,7 @@ the teams
 
 <a name="module_cjs/object"></a>
 ##cjs/object
-module one
+a module exporting `exports` directly
 
 * [cjs/object](#module_cjs/object)
   * [obj.one](#module_cjs/object.one)

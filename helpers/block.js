@@ -49,7 +49,7 @@ render the supplied block for the specified module
 function module(options){
     options.hash.kind = "module";
     var result = listHelpers.identifiers(options)[0];
-    return result ? options.fn(result) : "ERROR, Cannot find module. Query: ";
+    return result ? options.fn(result) : "ERROR, Cannot find module.";
 }
 
 /**
@@ -66,7 +66,7 @@ render the supplied block for the specified class
 function class_(options){
     options.hash.kind = "class";
     var result = listHelpers.identifiers(options)[0];
-    return result ? options.fn(result) : "ERROR, Cannot find class. Query: ";
+    return result ? options.fn(result) : "ERROR, Cannot find class.";
 }
 
 
