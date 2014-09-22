@@ -1,6 +1,6 @@
 var a = require("array-tools");
 var util = require("util");
-var dataHelpers = require("./data");
+var listHelpers = require("./list");
 
 /**
 helpers which return booleans
@@ -53,5 +53,5 @@ function isMixin(){
     return this.kind === "mixin";
 }
 function showMainIndex(options){
-    return dataHelpers.orphans.call(this, options).length > 1;
+    return listHelpers.orphans.call(this, options).length > 1;
 }

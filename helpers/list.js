@@ -7,11 +7,7 @@ helpers which return data
 */
 exports.orphans = orphans;
 exports.identifiers = identifiers;
-exports.sort = sort;
 exports.children = children;
-exports.exported = exported;
-exports.aliasName = aliasName;
-exports.parentName = parentName;
 
 /**
 Returns an array of the top-level elements which have no parents
@@ -86,58 +82,4 @@ function children(options){
     options.hash.memberof = this.id;
     var output = identifiers(options);
     if (output.length >= (min || 0)) return output;
-}
-
-/**
-returns the exported identifier of this module
-@context {identifier} - only works on a module
-@returns {identifier}
-*/
-function exported(options){
-    var exported = a.findWhere(options.data.root, { "!kind": "module", id: this.id });
-    return exported || this;
-}
-
-/**
-Returns the `alias` of this identifiers parent module, else `this.name`
-@deprecated
-@context {identifier}
-@returns {string}
-*/
-function aliasName(options){
-    var alias = a.findWhere(options.data.root, { id: this.id, kind: "module" });
-    var name = "";
-    if (alias){
-        name = alias.alias || alias.name;
-    } else {
-        name = this.name;
-    }
-    if (/module:/.test(this.name)) name = this.codeName;
-    return name;
-}
-
-function instantiate(input){
-    return input.charAt(0).toLowerCase() + input.slice(1);
-}
-
-/**
-returns the parent name, instantiated if necessary
-@context {identifier}
-@returns {string}
-*/
-function parentName(options){
-    /* don't bother with a parentName for exported identifiers */
-    if (this.isExported) return "";
-    
-    if (this.memberof && this.kind !== "constructor"){
-        var parent = a.findWhere(options.data.root, { id: this.memberof });
-        if (parent) {
-            // if (this.kind === "class" && parent.kind === "module" && this.scope !== "inner") return "";
-            var name = parent.typicalname || parent.name;
-            return this.scope === "instance"
-                ? instantiate(name) : name;
-        } else {
-            return this.memberof;
-        }
-    }
 }

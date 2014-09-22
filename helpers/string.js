@@ -15,6 +15,7 @@ exports.md = md;
 exports.md2 = md2;
 exports.methodSig = methodSig;
 exports.linkify = linkify;
+exports.parentName = parentName;
 
 /**
 @params id {string} - the id to convert into a link
@@ -135,4 +136,30 @@ function linkify(text, options) {
         }
     }
     return text;
+}
+
+/**
+returns the parent name, instantiated if necessary
+@context {identifier}
+@returns {string}
+*/
+function parentName(options){
+    function instantiate(input){
+        return input.charAt(0).toLowerCase() + input.slice(1);
+    }
+    
+    /* don't bother with a parentName for exported identifiers */
+    if (this.isExported) return "";
+    
+    if (this.memberof && this.kind !== "constructor"){
+        var parent = a.findWhere(options.data.root, { id: this.memberof });
+        if (parent) {
+            // if (this.kind === "class" && parent.kind === "module" && this.scope !== "inner") return "";
+            var name = parent.typicalname || parent.name;
+            return this.scope === "instance"
+                ? instantiate(name) : name;
+        } else {
+            return this.memberof;
+        }
+    }
 }
