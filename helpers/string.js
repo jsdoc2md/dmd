@@ -18,6 +18,7 @@ exports.methodSig = methodSig;
 exports.linkify = linkify;
 exports.parentName = parentName;
 exports.option = option;
+exports.indent = indent;
 
 /**
 @params id {string} - the id to convert into a link
@@ -171,4 +172,8 @@ returns a dmd option, e.g. "sort-by", "heading-depth" etc.
 */
 function option(name, options){
     return options.data.root.options[name];
+}
+
+function indent(input){
+    return input.replace(/^/mg, "    ");
 }

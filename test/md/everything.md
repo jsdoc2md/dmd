@@ -13,11 +13,12 @@
   * [obj.one](#module_cjs/object.one)
   * [obj.two()](#module_cjs/object.two)
 
-##Globals
+##Global
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass◊)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
+* [exampleVar](#exampleVar)
 * [globalFunction(one, two)](#globalFunction)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
@@ -73,7 +74,7 @@ the function
 - one `number` - the first number  
 - two `number` - the second number  
 
-**Returns**: `number` - - the calculation result  
+**Returns**: `number` - the calculation result  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
@@ -104,7 +105,6 @@ the second property, a function
 
 **Example**  
 this is the example
-
 <a name="GlobalClass"></a>
 ##class: GlobalClass
 a global class
@@ -131,6 +131,18 @@ an instance property
 <a name="GlobalClass.propTwo"></a>
 ###GlobalClass.propTwo
 a static property
+
+<a name="exampleVar"></a>
+##exampleVar
+an example var
+
+**Type**: `string`  
+**Default**: `"something"`  
+**Example**  
+var thisVar = funtion(){
+    return "a value";
+};
+* [exampleVar](#exampleVar)
 
 <a name="globalFunction"></a>
 ##globalFunction(one, two)

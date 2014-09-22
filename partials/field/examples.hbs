@@ -1,4 +1,10 @@
 {{#if examples}}{{#each examples}}**Example**  
+{{#if (option "example-code-gfm")}}```{{option "example-code-gfm"}}
 {{{this}}}
+```
+{{else}}{{#if (option "example-code")}}
+{{{indent this}}}
 
+{{else}}{{{this}}}
+{{/if}}{{/if~}}
 {{/each}}{{/if~}}

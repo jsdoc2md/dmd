@@ -89,7 +89,7 @@
             "number"
           ]
         },
-        "description": "- the calculation result"
+        "description": "the calculation result"
       }
     ],
     "codeName": "sum",
@@ -200,6 +200,23 @@
     "description": "a static property",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.propTwo"
+  },
+  {
+    "id": "exampleVar",
+    "name": "exampleVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "an example var",
+    "examples": [
+      "var thisVar = funtion(){\n    return \"a value\";\n};"
+    ],
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "\"something\"",
+    "codeName": "exampleVar"
   },
   {
     "id": "globalFunction",

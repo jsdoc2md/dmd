@@ -6,7 +6,6 @@ Exports a contructor taking a list of file patterns as input, returning a `file-
 ```js
 var fileSet = require("file-set");
 ```
-
 * [file-set](#module_file-set)
   * [class: FileSet ⏏](#exp_module_file-set^FileSet)
     * [new FileSet(patternList)](#new_module_file-set^FileSet◊)

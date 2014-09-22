@@ -6,7 +6,6 @@ Handbrake for node.js.
 ```js
 var hbjs = require("handbrake-js");
 ```
-
 * [handbrake-js](#module_handbrake-js)
   * [hbjs.cliOptions](#module_handbrake-js.cliOptions)
   * [hbjs.spawn(options)](#module_handbrake-js.spawn)
@@ -44,7 +43,6 @@ hbjs.spawn(options)
     .on("error", console.error)
     .on("output", console.log);
 ```
-
 <a name="module_handbrake-js.exec"></a>
 ###hbjs.exec(options, [onComplete])
 Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
@@ -63,7 +61,6 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
     console.log(stdout);
 });
 ```
-
 <a name="module_handbrake-js..Handbrake"></a>
 ###class: hbjs~Handbrake
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
