@@ -36,7 +36,9 @@ function identifiers(options){
 }
 
 function sort(array, sortBy){
-    if (sortBy === "kind"){
+    if (sortBy === "none"){
+        return array;
+    } else if (sortBy === "kind"){
         return array.sort(sortByKind);
     } else if (sortBy === "scope"){
         return array.sort(sortByScope);
@@ -45,7 +47,7 @@ function sort(array, sortBy){
     } else if (sortBy === "scope,kind"){
         return array.sort(sortByScopeKind);
     } else {
-        return array;
+        return array.sort(sortByProperty(sortBy));
     }
 }
 
@@ -67,6 +69,13 @@ function sortByScope(a, b){
 function sortByScopeKind(a, b){
     var result = order.scope.indexOf(a.scope) - order.scope.indexOf(b.scope);
     return result === 0 ? sortByKind(a, b) : result;
+}
+function  sortByProperty(property){
+    return function(a, b){
+        if (a[property] < b[property]) return -1;
+        if (a[property] > b[property]) return 1;
+        return 0;
+    };
 }
 
 /**

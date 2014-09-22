@@ -56,7 +56,7 @@
     "string-tools": "~0.1.5"
   },
   "devDependencies": {
-    "tape": "^2.13.3"
+    "tape": "^3"
   },
   "local-web-server": { "port": 8080 }
 }
