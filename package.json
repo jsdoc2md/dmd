@@ -17,10 +17,8 @@
   },
   "scripts": {
     "test": "tape test/*.js",
-    "lint": "jshint lib/*.js bin/*.js test/*.js helpers/**/*.js helpers2/**/*.js; echo",
+    "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo",
-    "all": "dmd < test/fixture/module.json > test/expected/module.md; dmd < test/fixture/handbrake.json > test/expected/handbrake.md",
-    "html": "./html.sh",
     "watch": "baldrick --do 'npm run html' --when '**/*.hbs' --change --speak;",
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*.js' > test/fixture/everything.json",
     "p3": "jsdoc-parse ../handbrake-js/lib/* > test/fixture/handbrake.json",
@@ -35,7 +33,8 @@
     "m3": "cat test/fixture/handbrake.json | dmd > test/md/handbrake.md;",
     "m4": "cat test/fixture/lodash.json | dmd > test/md/lodash.md;",
     "m5": "cat test/fixture/MapView.json | dmd > test/md/MapView.md;",
-    "m": "npm run m1; npm run m2; npm run m3; npm run m4; npm run m5; echo"
+    "m": "npm run m1; npm run m2; npm run m3; npm run m4; npm run m5; echo",
+    "t1": "cat test/fixture/everything.json | dmd --template test/template/module.hbs > test/md/module.md"
   },
   "dependencies": {
     "array-tools": "^1.3.0",

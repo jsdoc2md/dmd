@@ -74,7 +74,7 @@ returns a unique ID string suitable for use as an `href`.
 @returns {string}
 */
 function anchorName(options){
-    if (!this.id) throw new Error("[anchorName helper] cannot create a link without a id");
+    if (!this.id) throw new Error("[anchorName helper] cannot create a link without a id: " + JSON.stringify(this));
     return util.format(
         "%s%s%s",
         this.isExported ? "exp_" : "",
