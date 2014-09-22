@@ -7,29 +7,7 @@ var cliArgs = require("command-line-args"),
     domain = require("domain"),
     fs = require("fs");
 
-var cli = cliArgs([
-    { name: "template", alias: "t", type: String,
-      description: "A custom handlebars template to insert the rendered documentation into"
-    },
-    { name: "verbose", alias: "v", type: Boolean,
-      description: "More verbose error reporting"
-    },
-    { name: "help", alias: "h", type: Boolean,
-      description: "Print usage information"
-    },
-    { name: "heading-depth", type: Number,
-      description: "root heading depth, defaults to 1 (`#`)."
-    },
-    { name: "plugin", type: Array, alias: "p",
-      description: "Use an installed package containing helper and/or partial overrides"
-    },
-    { name: "helper", type: Array,
-      description: "handlebars helper files to override or extend the default set"
-    },
-    { name: "partial", type: Array,
-      description: "handlebars partial files to override or extend the default set"
-    }
-]);
+var cli = cliArgs(dmd.cliOptions);
 var usage = cli.getUsage({
     title: "dmd",
     header: "API docs with markdown",
@@ -39,7 +17,7 @@ var usage = cli.getUsage({
 });
 
 try{
-    var argv = cli.parse({ unexpectedType: "string" });
+    var argv = cli.parse();
 } catch(err){
     halt(err);
 }

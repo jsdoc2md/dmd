@@ -1,5 +1,5 @@
 {{>index-indent}}* [{{>name}}](#{{{anchorName}}})
-{{#each (children sortBy="scope,kind")~}}
+{{#each (children sortBy=(option "sort-by"))~}}
 {{~depthIncrement~}}
 {{>index~}}
 {{~depthDecrement~}}

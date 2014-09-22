@@ -17,6 +17,7 @@ exports.md2 = md2;
 exports.methodSig = methodSig;
 exports.linkify = linkify;
 exports.parentName = parentName;
+exports.option = option;
 
 /**
 @params id {string} - the id to convert into a link
@@ -163,4 +164,11 @@ function parentName(options){
             return this.memberof;
         }
     }
+}
+
+/**
+returns a dmd option, e.g. "sort-by", "heading-depth" etc.
+*/
+function option(name, options){
+    return options.data.root.options[name];
 }

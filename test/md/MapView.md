@@ -15,17 +15,17 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 * [MapView](#module_MapView)
   * [class: MapView ⏏](#exp_module_MapView^MapView)
     * [new MapView(options)](#new_module_MapView^MapView◊)
-    * [mapView.isActive()](#module_MapView^MapView#isActive)
+    * [MapView.DEFAULT_OPTIONS](#module_MapView^MapView.DEFAULT_OPTIONS)
     * [mapView.getMap()](#module_MapView^MapView#getMap)
     * [mapView.setPosition(position, [transition], [callback])](#module_MapView^MapView#setPosition)
     * [mapView.getPosition()](#module_MapView^MapView#getPosition)
     * [mapView.getFinalPosition()](#module_MapView^MapView#getFinalPosition)
-    * [mapView.halt()](#module_MapView^MapView#halt)
+    * [mapView.getZoom()](#module_MapView^MapView#getZoom)
     * [mapView.pointFromPosition(position)](#module_MapView^MapView#pointFromPosition)
     * [mapView.positionFromPoint(point)](#module_MapView^MapView#positionFromPoint)
     * [mapView.getSize()](#module_MapView^MapView#getSize)
-    * [mapView.getZoom()](#module_MapView^MapView#getZoom)
-    * [MapView.DEFAULT_OPTIONS](#module_MapView^MapView.DEFAULT_OPTIONS)
+    * [mapView.halt()](#module_MapView^MapView#halt)
+    * [mapView.isActive()](#module_MapView^MapView#isActive)
 
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏
@@ -40,11 +40,9 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
   - \[id\] `String` - Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface.  
   - \[zoomTransition\] `Transition` - Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used).  
 
-<a name="module_MapView^MapView#isActive"></a>
-####mapView.isActive()
-Is there at least one action pending completion?
-
-**Returns**: `Bool` - True when there are active transitions running.  
+<a name="module_MapView^MapView.DEFAULT_OPTIONS"></a>
+####MapView.DEFAULT_OPTIONS
+**Access**: protected  
 <a name="module_MapView^MapView#getMap"></a>
 ####mapView.getMap()
 Get the internal map-object. This object may not yet have been initialized, the map is only
@@ -71,10 +69,13 @@ Get the current center position of the map, in geographical coordinates.
 Get the destination center position of the map, in geographical coordinates.
 
 **Returns**: `LatLng` - Position in geographical coordinates.  
-<a name="module_MapView^MapView#halt"></a>
-####mapView.halt()
-Halts any pending transitions.
+<a name="module_MapView^MapView#getZoom"></a>
+####mapView.getZoom()
+Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.
+E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
+at 5, over time. The used zoomTransition can be set as an option.
 
+**Returns**: `Number` - Zoom-level.  
 <a name="module_MapView^MapView#pointFromPosition"></a>
 ####mapView.pointFromPosition(position)
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
@@ -98,13 +99,12 @@ Get the geographical coordinates for a given position in pixels (relative to the
 Get the size of the map-view in pixels.
 
 **Returns**: `Array.Number` - Size of the mapView.  
-<a name="module_MapView^MapView#getZoom"></a>
-####mapView.getZoom()
-Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.
-E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
-at 5, over time. The used zoomTransition can be set as an option.
+<a name="module_MapView^MapView#halt"></a>
+####mapView.halt()
+Halts any pending transitions.
 
-**Returns**: `Number` - Zoom-level.  
-<a name="module_MapView^MapView.DEFAULT_OPTIONS"></a>
-####MapView.DEFAULT_OPTIONS
-**Access**: protected  
+<a name="module_MapView^MapView#isActive"></a>
+####mapView.isActive()
+Is there at least one action pending completion?
+
+**Returns**: `Bool` - True when there are active transitions running.  

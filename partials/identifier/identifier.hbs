@@ -24,7 +24,7 @@
 {{#if (children min=2)~}}{{#unless isExported}}{{>index}}{{/unless}}
 {{/if~}}{{/if~}}
 
-{{#each (children sortBy="scope,kind")~}}
+{{#each (children sortBy=(option "sort-by"))~}}
 {{~depthIncrement~}}
 {{>identifier~}}
 {{~depthDecrement~}}
