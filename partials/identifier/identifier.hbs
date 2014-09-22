@@ -18,8 +18,10 @@
 {{>copyright~}}
 {{>examples~}}
 
-{{#if (lt (depth) 1)~}}{{#if (children min=2)~}}
+{{#if (lt (depth) 1)~}}
 {{>index}}
+{{else~}}
+{{#if (children min=2)~}}{{#unless isExported}}{{>index}}{{/unless}}
 {{/if~}}{{/if~}}
 
 {{#each (children sortBy="scope,kind")~}}

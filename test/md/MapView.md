@@ -12,8 +12,24 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
 
+* [MapView](#module_MapView)
+  * [class: MapView ⏏](#exp_module_MapView^MapView)
+    * [new MapView(options)](#new_module_MapView^MapView◊)
+    * [mapView.isActive()](#module_MapView^MapView#isActive)
+    * [mapView.getMap()](#module_MapView^MapView#getMap)
+    * [mapView.setPosition(position, [transition], [callback])](#module_MapView^MapView#setPosition)
+    * [mapView.getPosition()](#module_MapView^MapView#getPosition)
+    * [mapView.getFinalPosition()](#module_MapView^MapView#getFinalPosition)
+    * [mapView.halt()](#module_MapView^MapView#halt)
+    * [mapView.pointFromPosition(position)](#module_MapView^MapView#pointFromPosition)
+    * [mapView.positionFromPoint(point)](#module_MapView^MapView#positionFromPoint)
+    * [mapView.getSize()](#module_MapView^MapView#getSize)
+    * [mapView.getZoom()](#module_MapView^MapView#getZoom)
+    * [MapView.DEFAULT_OPTIONS](#module_MapView^MapView.DEFAULT_OPTIONS)
+
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏
+
 <a name="new_module_MapView^MapView◊"></a>
 ####new MapView(options)
 **Params**

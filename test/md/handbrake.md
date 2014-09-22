@@ -70,6 +70,17 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 
 **Extends**: `EventEmitter`  
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
+  * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
+    * [handbrake.output](#module_handbrake-js..Handbrake#output)
+    * [handbrake.options](#module_handbrake-js..Handbrake#options)
+    * [event: "start"](#module_handbrake-js..Handbrake#event_start)
+    * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
+    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
+    * [event: "output"](#module_handbrake-js..Handbrake#event_output)
+    * [event: "error"](#module_handbrake-js..Handbrake#event_error)
+    * [event: "end"](#module_handbrake-js..Handbrake#event_end)
+    * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
+
 <a name="module_handbrake-js..Handbrake#output"></a>
 ####handbrake.output
 A `String` containing all handbrakeCLI output

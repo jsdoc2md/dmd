@@ -1,5 +1,6 @@
 "use strict";
 var a = require("array-tools");
+var o = require("object-tools");
 var util = require("util");
 var url = require("url");
 var marked = require("marked");
@@ -13,6 +14,7 @@ exports.anchorName = anchorName;
 exports.md = md;
 exports.md2 = md2;
 exports.methodSig = methodSig;
+exports.linkify = linkify;
 
 /**
 @params id {string} - the id to convert into a link
@@ -106,4 +108,31 @@ function methodSig(){
             return param.optional ? "[" + param.name + "]" : param.name;
         }
     }).join(", ");
+}
+
+
+function linkify(text, options) {
+    if (!text) return "";
+    
+    var linksRx = /(\[.+\])?\{@link\s+.*?\}/gmi,
+        targetRx = /(?:\[(.+)\])?{@link(code|plain)?\s+?(?:(?:([^|]+)\|(.*))|(.+?)(?:\s+(.*))?)\}/mi,
+        linkTags,
+        links = {};
+    if (!(linkTags = text.match(linksRx))) {
+        return text;
+    }
+    linkTags.forEach(function (linkTag) {
+        var parsedLink = linkTag.match(targetRx);
+        var caption = parsedLink[1] || parsedLink[4] || parsedLink[6];
+        var style = !!parsedLink[2];
+        var target = parsedLink[3] || parsedLink[5];
+        options.hash = o.extend({}, options.hash, {style: style, caption: caption});
+        links[parsedLink[0]] = handlebars.helpers.linkTo.call(this, target, options);
+    });
+    for (var link in links) {
+        if (links.hasOwnProperty(link)) {
+            text = text.replace(link, links[link]);
+        }
+    }
+    return text;
 }
