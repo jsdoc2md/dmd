@@ -504,6 +504,19 @@ initialize();
 An object environment feature flags.
 
 **Type**: `Object`  
+  * [_.support](#_.support)
+    * [support.support.nodeClass](#_.support.support.nodeClass)
+    * [support.support.argsClass](#_.support.support.argsClass)
+    * [support.support.enumPrototypes](#_.support.support.enumPrototypes)
+    * [support.support.funcDecomp](#_.support.support.funcDecomp)
+    * [support.support.funcNames](#_.support.support.funcNames)
+    * [support.support.enumErrorProps](#_.support.support.enumErrorProps)
+    * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings)
+    * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows)
+    * [support.support.ownLast](#_.support.support.ownLast)
+    * [support.support.spliceObjects](#_.support.support.spliceObjects)
+    * [support.support.unindexedChars](#_.support.support.unindexedChars)
+
 <a name="_.support.support.nodeClass"></a>
 ####support.support.nodeClass
 Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
@@ -1380,6 +1393,22 @@ lodash.isFunction(lodash.add);
 lodash.isFunction(lodash.sub);
 // => true
 ```
+  * [_.runInContext([context])](#_.runInContext)
+    * [runInContext~reNative](#_.runInContext..reNative)
+    * [runInContext~Array](#_.runInContext..Array)
+    * [runInContext~document](#_.runInContext..document)
+    * [runInContext~fnToString](#_.runInContext..fnToString)
+    * [runInContext~hasOwnProperty](#_.runInContext..hasOwnProperty)
+    * [runInContext~oldDash](#_.runInContext..oldDash)
+    * [runInContext~toString](#_.runInContext..toString)
+    * [runInContext~arrayProto](#_.runInContext..arrayProto)
+    * [runInContext~ArrayBuffer](#_.runInContext..ArrayBuffer)
+    * [runInContext~Float64Array](#_.runInContext..Float64Array)
+    * [runInContext~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+    * [runInContext~metaMap](#_.runInContext..metaMap)
+    * [runInContext~ctorByClass](#_.runInContext..ctorByClass)
+    * [runInContext~nonEnumProps](#_.runInContext..nonEnumProps)
+
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative
 Used to detect if a method is native

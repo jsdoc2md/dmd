@@ -18,9 +18,8 @@
 {{>copyright~}}
 {{>examples~}}
 
-{{!-- Always show an index at the top level, otherwise only when object has min 2 properties and is not exported --}}
-{{~#if (descendants min=2)~}}{{#unless isExported}}{{~#if (lt (depth) 1)~}}{{>index}}
-{{/if}}{{/unless}}{{/if~}}
+{{#if (descendants min=2)~}}{{#unless isExported}}{{>index}}
+{{/unless}}{{/if~}}
 
 {{#each (children sortBy=(option "sort-by"))~}}
 {{~depthIncrement~}}
