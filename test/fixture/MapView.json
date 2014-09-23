@@ -75,6 +75,11 @@
     "scope": "static",
     "kind": "member",
     "memberof": "module:MapView^MapView",
+    "properties": [
+      {
+        "name": "DEFAULT_OPTIONS"
+      }
+    ],
     "access": "protected",
     "codeName": "MapView.DEFAULT_OPTIONS"
   },

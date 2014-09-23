@@ -128,6 +128,95 @@
     },
     "readonly": true,
     "isEnum": true,
+    "properties": [
+      {
+        "scope": "static",
+        "comment": "",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "memberof": "module:file-set.eFileType",
+        "longname": "module:file-set.eFileType.NOEXIST",
+        "name": "NOEXIST",
+        "meta": {
+          "range": [
+            2941,
+            2951
+          ],
+          "filename": "file-set.js",
+          "lineno": 107,
+          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
+          "code": {
+            "id": "astnode100000344",
+            "name": "NOEXIST",
+            "type": "Literal",
+            "value": "0"
+          }
+        },
+        "kind": "member",
+        "defaultvalue": "0"
+      },
+      {
+        "scope": "static",
+        "comment": "",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "memberof": "module:file-set.eFileType",
+        "longname": "module:file-set.eFileType.FILE",
+        "name": "FILE",
+        "meta": {
+          "range": [
+            2957,
+            2964
+          ],
+          "filename": "file-set.js",
+          "lineno": 108,
+          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
+          "code": {
+            "id": "astnode100000346",
+            "name": "FILE",
+            "type": "Literal",
+            "value": "1"
+          }
+        },
+        "kind": "member",
+        "defaultvalue": "1"
+      },
+      {
+        "scope": "static",
+        "comment": "",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "memberof": "module:file-set.eFileType",
+        "longname": "module:file-set.eFileType.DIR",
+        "name": "DIR",
+        "meta": {
+          "range": [
+            2970,
+            2976
+          ],
+          "filename": "file-set.js",
+          "lineno": 109,
+          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
+          "code": {
+            "id": "astnode100000348",
+            "name": "DIR",
+            "type": "Literal",
+            "value": "2"
+          }
+        },
+        "kind": "member",
+        "defaultvalue": "2"
+      }
+    ],
     "codeName": "FileSet.eFileType"
   },
   {
