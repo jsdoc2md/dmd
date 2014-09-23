@@ -18,8 +18,14 @@
 {{>copyright~}}
 {{>examples~}}
 
-{{#if (descendants min=2)~}}{{#unless isExported}}{{>index}}
-{{/unless}}{{/if~}}
+{{#if (descendants min=2)~}}
+{{#if isExported~}}
+{{#if (equal (depth) 0)}}{{>index}}
+{{/if~}}
+{{else~}}
+{{>index}}
+{{/if~}}
+{{/if~}}
 
 {{#each (children sortBy=(option "sort-by"))~}}
 {{~depthIncrement~}}

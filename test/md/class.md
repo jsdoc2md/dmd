@@ -9,6 +9,7 @@ a global class
   * [new GlobalClass(one, two)](#new_GlobalClass◊)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
+
 <a name="new_GlobalClass◊"></a>
 ###new GlobalClass(one, two)
 the global class constructor

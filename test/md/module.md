@@ -10,6 +10,7 @@ exports a class
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+
 <a name="exp_module_cjs/class^ExportedClass"></a>
 ###class: ExportedClass ⏏
 the exported class
