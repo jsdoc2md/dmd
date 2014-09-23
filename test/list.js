@@ -24,6 +24,20 @@ test("sort by none", function(t){
     options.hash.sortBy = "none";
     t.deepEqual(listHelpers.identifiers(options), [
         { one: "fff" }, { one: "aaa" }, { one: "ggg" }
-    ])
+    ]);
+    t.end();
+});
+
+test.only("descendants", function(t){
+    var options = makeOptions([
+        { id: "one" }, { id: "two", memberof: "one" }, { id: "three", memberof: "two" }, { id: "four"}
+    ]);
+    t.deepEqual(listHelpers.descendants.call({ id: "one" }, options), [
+        { id: 'two', memberof: 'one' }, { id: 'three', memberof: 'two' }
+    ]);
+    t.deepEqual(listHelpers.descendants.call({ id: "two" }, options), [
+        { id: 'three', memberof: 'two' }
+    ]);
+    t.deepEqual(listHelpers.descendants.call({ id: "four" }, options), []);
     t.end();
 });

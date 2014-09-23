@@ -8,12 +8,13 @@ helpers which return data
 exports.orphans = orphans;
 exports.identifiers = identifiers;
 exports.children = children;
+exports.descendants = descendants;
 
 /**
 Returns an array of the top-level elements which have no parents
 @returns {array}
 */
-function orphans(options){    
+function orphans(options){
     return a.where(options.data.root, {
         memberof: undefined
     });
@@ -90,5 +91,29 @@ function children(options){
     delete options.hash.min;
     options.hash.memberof = this.id;
     var output = identifiers(options);
+    if (output.length >= (min || 0)) return output;
+}
+
+/**
+return a flat list containing all decendants
+@params [sortBy] {string} - "kind"
+@params [min] {number} - only returns if there are `min` children
+@context {identifier}
+@returns {identifier[]}
+*/
+function descendants(options){
+    var min = options.hash.min;
+    delete options.hash.min;
+    options.hash.memberof = this.id;
+    var output = [];
+    function iterate(childrenList){
+        if (childrenList.length){
+            childrenList.forEach(function(child){
+                output.push(child);
+                iterate(children.call(child, options));
+            });
+        }
+    }
+    iterate(children.call(this, options));
     if (output.length >= (min || 0)) return output;
 }
