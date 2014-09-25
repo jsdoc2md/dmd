@@ -130,16 +130,16 @@
     "isEnum": true,
     "properties": [
       {
+        "kind": "member",
         "scope": "static",
-        "comment": "",
         "type": {
           "names": [
             "number"
           ]
         },
+        "defaultvalue": "0",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.NOEXIST",
-        "name": "NOEXIST",
         "meta": {
           "range": [
             2941,
@@ -155,20 +155,20 @@
             "value": "0"
           }
         },
-        "kind": "member",
-        "defaultvalue": "0"
+        "name": "NOEXIST",
+        "comment": ""
       },
       {
+        "kind": "member",
         "scope": "static",
-        "comment": "",
         "type": {
           "names": [
             "number"
           ]
         },
+        "defaultvalue": "1",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.FILE",
-        "name": "FILE",
         "meta": {
           "range": [
             2957,
@@ -184,20 +184,20 @@
             "value": "1"
           }
         },
-        "kind": "member",
-        "defaultvalue": "1"
+        "name": "FILE",
+        "comment": ""
       },
       {
+        "kind": "member",
         "scope": "static",
-        "comment": "",
         "type": {
           "names": [
             "number"
           ]
         },
+        "defaultvalue": "2",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.DIR",
-        "name": "DIR",
         "meta": {
           "range": [
             2970,
@@ -213,8 +213,8 @@
             "value": "2"
           }
         },
-        "kind": "member",
-        "defaultvalue": "2"
+        "name": "DIR",
+        "comment": ""
       }
     ],
     "codeName": "FileSet.eFileType"

@@ -52,5 +52,5 @@ add file patterns to the set
 Enum for the `type` value of each record in `fileSet.list`
 
 **Type**: `number`  
-**Properties**:   
+**Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  

@@ -26,11 +26,6 @@
     "p4": "jsdoc-parse ~/Documents/vendor/lodash/lodash.js > test/fixture/lodash.json",
     "p5": "jsdoc-parse ~/Documents/vendor/famous-map/MapView.js > test/fixture/MapView.json",
     "p6": "jsdoc-parse ~/Documents/vendor/angular-debaser/debaser.js > test/fixture/debaser.json",
-    "h1": "cat test/fixture/everything.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/everything.html;",
-    "h2": "cat test/fixture/file-set.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/file-set.html;",
-    "h3": "cat test/fixture/handbrake.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/handbrake.html;",
-    "h4": "cat test/fixture/lodash.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/lodash.html;",
-    "h5": "cat test/fixture/MapView.json | dmd --partial 'html/**/*.hbs' --template html/docs.hbs > test/expected/MapView.html;",
     "m1": "cat test/fixture/everything.json | dmd > test/md/everything.md;",
     "m2": "cat test/fixture/file-set.json | dmd > test/md/file-set.md;",
     "m3": "cat test/fixture/handbrake.json | dmd > test/md/handbrake.md;",
@@ -44,7 +39,7 @@
     "h": "npm run h1; npm run h2; npm run h3; npm run h4; npm run h5; echo",
     "m": "npm run m1; npm run m2; npm run m3; npm run m4; npm run m5; echo",
     "t": "npm run t1; npm run t2; npm run t3; npm run t4; ",
-    "all": "npm run p; npm run h; npm run m; npm run t; "
+    "all": "npm run p; npm run m; npm run t; "
   },
   "dependencies": {
     "array-tools": "^1.3.0",
