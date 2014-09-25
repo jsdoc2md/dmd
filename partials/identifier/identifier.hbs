@@ -27,8 +27,8 @@
 {{/if~}}
 {{/if~}}
 
-{{#each (children sortBy=(option "sort-by"))~}}
+{{#children sortBy=(option "sort-by")~}}
 {{~depthIncrement~}}
 {{>identifier~}}
 {{~depthDecrement~}}
-{{/each}}
+{{/children}}
