@@ -1,200 +1,200 @@
 <a name="_"></a>
-##class: _ -> `Object`
+##`class: _` -> `Object`
 **Returns**: `Object` - Returns a `lodash` instance.  
-* [class: _ -> `Object`](#_)
+* [`class: _` -> `Object`](#_)
   * [](#new__())
-  * [_.isArray -> `boolean`](#_.isArray)
-  * [_.chain -> `*`](#_.chain)
-  * [_.toString -> `string`](#_.toString)
-  * [_.valueOf -> `*`](#_.valueOf)
-  * [_.countBy -> `Object`](#_.countBy)
-  * [_.groupBy -> `Object`](#_.groupBy)
-  * [_.indexBy -> `Object`](#_.indexBy)
-  * [_.partition -> `Array`](#_.partition)
-  * [_.once -> `function`](#_.once)
-  * [_.support](#_.support)
-    * [support.support.nodeClass](#_.support.support.nodeClass)
-    * [support.support.argsClass](#_.support.support.argsClass)
-    * [support.support.enumPrototypes](#_.support.support.enumPrototypes)
-    * [support.support.funcDecomp](#_.support.support.funcDecomp)
-    * [support.support.funcNames](#_.support.support.funcNames)
-    * [support.support.enumErrorProps](#_.support.support.enumErrorProps)
-    * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings)
-    * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows)
-    * [support.support.ownLast](#_.support.support.ownLast)
-    * [support.support.spliceObjects](#_.support.support.spliceObjects)
-    * [support.support.unindexedChars](#_.support.support.unindexedChars)
-  * [_.isFinite -> `boolean`](#_.isFinite)
-  * [_.isPlainObject -> `boolean`](#_.isPlainObject)
-  * [_.extend -> `Object`](#_.extend)
-  * [_.keys -> `Array`](#_.keys)
-  * [_.merge -> `Object`](#_.merge)
-  * [_.camelCase -> `string`](#_.camelCase)
-  * [_.kebabCase -> `string`](#_.kebabCase)
-  * [_.snakeCase -> `string`](#_.snakeCase)
-  * [_.now](#_.now)
-  * [_.pull(array, [...values]) -> `Array`](#_.pull)
-  * [_.pullAt(array, [...indexes]) -> `Array`](#_.pullAt)
-  * [_.remove(array, [predicate], [thisArg]) -> `Array`](#_.remove)
-  * [_.tail(array) -> `Array`](#_.tail)
-  * [_.slice(array, [start], [end]) -> `Array`](#_.slice)
-  * [_.sortedIndex(array, value, [iteratee], [thisArg]) -> `number`](#_.sortedIndex)
-  * [_.sortedLastIndex(array, value, [iteratee], [thisArg]) -> `number`](#_.sortedLastIndex)
-  * [_.take(array, [n]) -> `Array`](#_.take)
-  * [_.takeRight(array, [n]) -> `Array`](#_.takeRight)
-  * [_.takeRightWhile(array, [predicate], [thisArg]) -> `Array`](#_.takeRightWhile)
-  * [_.takeWhile(array, [predicate], [thisArg]) -> `Array`](#_.takeWhile)
-  * [_.union([...arrays]) -> `Array`](#_.union)
-  * [_.unique(array, [isSorted], [iteratee], [thisArg]) -> `Array`](#_.unique)
-  * [_.unzip(array) -> `Array`](#_.unzip)
-  * [_.without(array, [...values]) -> `Array`](#_.without)
-  * [_.xor([...arrays]) -> `Array`](#_.xor)
-  * [_.zip([...arrays]) -> `Array`](#_.zip)
-  * [_.object(props, [vals]) -> `Object`](#_.object)
-  * [_.chain(value) -> `Object`](#_.chain)
-  * [_.tap(value, interceptor, [thisArg]) -> `*`](#_.tap)
-  * [_.thru(value, interceptor, [thisArg]) -> `*`](#_.thru)
-  * [_.runInContext([context]) -> `function`](#_.runInContext)
-    * [runInContext~reNative](#_.runInContext..reNative)
-    * [runInContext~Array](#_.runInContext..Array)
-    * [runInContext~document](#_.runInContext..document)
-    * [runInContext~fnToString](#_.runInContext..fnToString)
-    * [runInContext~hasOwnProperty](#_.runInContext..hasOwnProperty)
-    * [runInContext~oldDash](#_.runInContext..oldDash)
-    * [runInContext~toString](#_.runInContext..toString)
-    * [runInContext~arrayProto](#_.runInContext..arrayProto)
-    * [runInContext~ArrayBuffer](#_.runInContext..ArrayBuffer)
-    * [runInContext~Float64Array](#_.runInContext..Float64Array)
-    * [runInContext~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-    * [runInContext~metaMap](#_.runInContext..metaMap)
-    * [runInContext~ctorByClass](#_.runInContext..ctorByClass)
-    * [runInContext~nonEnumProps](#_.runInContext..nonEnumProps)
-  * [_.chunk(array, [size]) -> `Array`](#_.chunk)
-  * [_.compact(array) -> `Array`](#_.compact)
-  * [_.at(collection, [...props]) -> `Array`](#_.at)
-  * [_.include(collection, target, [fromIndex]) -> `boolean`](#_.include)
-  * [_.difference(array, [...values]) -> `Array`](#_.difference)
-  * [_.all(collection, [predicate], [thisArg]) -> `boolean`](#_.all)
-  * [_.select(collection, [predicate], [thisArg]) -> `Array`](#_.select)
-  * [_.detect(collection, [predicate], [thisArg]) -> `*`](#_.detect)
-  * [_.findLast(collection, [predicate], [thisArg]) -> `*`](#_.findLast)
-  * [_.findWhere(collection, source) -> `*`](#_.findWhere)
-  * [_.each(collection, [iteratee], [thisArg]) -> `Array`,`Object`,`string`](#_.each)
-  * [_.eachRight(collection, [iteratee], [thisArg]) -> `Array`,`Object`,`string`](#_.eachRight)
-  * [_.drop(array, [n]) -> `Array`](#_.drop)
-  * [_.dropRight(array, [n]) -> `Array`](#_.dropRight)
-  * [_.invoke(collection, methodName, [...args]) -> `Array`](#_.invoke)
-  * [_.collect(collection, [iteratee], [thisArg]) -> `Array`](#_.collect)
-  * [_.max(collection, [iteratee], [thisArg]) -> `*`](#_.max)
-  * [_.min(collection, [iteratee], [thisArg]) -> `*`](#_.min)
-  * [_.dropRightWhile(array, [predicate], [thisArg]) -> `Array`](#_.dropRightWhile)
-  * [_.pluck(collection, key) -> `Array`](#_.pluck)
-  * [_.foldr(collection, [iteratee], [accumulator], [thisArg]) -> `*`](#_.foldr)
-  * [_.reject(collection, [predicate], [thisArg]) -> `Array`](#_.reject)
-  * [_.sample(collection, [n]) -> `*`](#_.sample)
-  * [_.shuffle(collection) -> `Array`](#_.shuffle)
-  * [_.size(collection) -> `number`](#_.size)
-  * [_.any(collection, [predicate], [thisArg]) -> `boolean`](#_.any)
-  * [_.sortBy(collection, [iteratee], [thisArg]) -> `Array`](#_.sortBy)
-  * [_.toArray(collection) -> `Array`](#_.toArray)
-  * [_.where(collection, source) -> `Array`](#_.where)
-  * [_.after(n, func) -> `function`](#_.after)
-  * [_.before(n, func) -> `function`](#_.before)
-  * [_.bind(func, [thisArg], [...args]) -> `function`](#_.bind)
-  * [_.bindAll(object, [methodNames]) -> `Object`](#_.bindAll)
-  * [_.bindKey(object, key, [...args]) -> `function`](#_.bindKey)
-  * [_.curry(func, [arity]) -> `function`](#_.curry)
-  * [_.curryRight(func, [arity]) -> `function`](#_.curryRight)
-  * [_.debounce(func, wait, [options]) -> `function`](#_.debounce)
-  * [_.defer(func, [...args]) -> `number`](#_.defer)
-  * [_.delay(func, wait, [...args]) -> `number`](#_.delay)
-  * [_.flow([...funcs]) -> `function`](#_.flow)
-  * [_.memoize(func, [resolver]) -> `function`](#_.memoize)
-  * [_.negate(predicate) -> `function`](#_.negate)
-  * [_.dropWhile(array, [predicate], [thisArg]) -> `Array`](#_.dropWhile)
-  * [_.partial(func, [...args]) -> `function`](#_.partial)
-  * [_.partialRight(func, [...args]) -> `function`](#_.partialRight)
-  * [_.throttle(func, wait, [options]) -> `function`](#_.throttle)
-  * [_.wrap(value, wrapper) -> `function`](#_.wrap)
-  * [_.clone(value, [isDeep], [customizer], [thisArg]) -> `*`](#_.clone)
-  * [_.cloneDeep(value, [customizer], [thisArg]) -> `*`](#_.cloneDeep)
-  * [_.isArguments(value) -> `boolean`](#_.isArguments)
-  * [_.findIndex(array, [predicate], [thisArg]) -> `number`](#_.findIndex)
-  * [_.isBoolean(value) -> `boolean`](#_.isBoolean)
-  * [_.isDate(value) -> `boolean`](#_.isDate)
-  * [_.isElement(value) -> `boolean`](#_.isElement)
-  * [_.isEmpty(value) -> `boolean`](#_.isEmpty)
-  * [_.isEqual(value, other, [customizer], [thisArg]) -> `boolean`](#_.isEqual)
-  * [_.isError(value) -> `boolean`](#_.isError)
-  * [_.findLastIndex(array, [predicate], [thisArg]) -> `number`](#_.findLastIndex)
-  * [_.isFunction(value) -> `boolean`](#_.isFunction)
-  * [_.isObject(value) -> `boolean`](#_.isObject)
-  * [_.isNaN(value) -> `boolean`](#_.isNaN)
-  * [_.isNative(value) -> `boolean`](#_.isNative)
-  * [_.isNull(value) -> `boolean`](#_.isNull)
-  * [_.isNumber(value) -> `boolean`](#_.isNumber)
-  * [_.head(array) -> `*`](#_.head)
-  * [_.isRegExp(value) -> `boolean`](#_.isRegExp)
-  * [_.isString(value) -> `boolean`](#_.isString)
-  * [_.isUndefined(value) -> `boolean`](#_.isUndefined)
-  * [_.flatten(array, [isDeep]) -> `Array`](#_.flatten)
-  * [_.create(prototype, [properties]) -> `Object`](#_.create)
-  * [_.defaults(object, [...sources]) -> `Object`](#_.defaults)
-  * [_.findKey(object, [predicate], [thisArg]) -> `string`,`undefined`](#_.findKey)
-  * [_.findLastKey(object, [predicate], [thisArg]) -> `string`,`undefined`](#_.findLastKey)
-  * [_.forIn(object, [iteratee], [thisArg]) -> `Object`](#_.forIn)
-  * [_.forInRight(object, [iteratee], [thisArg]) -> `Object`](#_.forInRight)
-  * [_.forOwn(object, [iteratee], [thisArg]) -> `Object`](#_.forOwn)
-  * [_.forOwnRight(object, [iteratee], [thisArg]) -> `Object`](#_.forOwnRight)
-  * [_.methods(object) -> `Array`](#_.methods)
-  * [_.has(object, key) -> `boolean`](#_.has)
-  * [_.invert(object, [multiValue]) -> `Object`](#_.invert)
-  * [_.flattenDeep(array) -> `Array`](#_.flattenDeep)
-  * [_.keysIn(object) -> `Array`](#_.keysIn)
-  * [_.mapValues(object, [iteratee], [thisArg]) -> `Object`](#_.mapValues)
-  * [_.indexOf(array, value, [fromIndex]) -> `number`](#_.indexOf)
-  * [_.omit(object, [...predicate], [thisArg]) -> `Object`](#_.omit)
-  * [_.pairs(object) -> `Array`](#_.pairs)
-  * [_.pick(object, [...predicate], [thisArg]) -> `Object`](#_.pick)
-  * [_.transform(object, [iteratee], [accumulator], [thisArg]) -> `*`](#_.transform)
-  * [_.values(object) -> `Array`](#_.values)
-  * [_.valuesIn(object) -> `Array`](#_.valuesIn)
-  * [_.initial(array) -> `Array`](#_.initial)
-  * [_.capitalize([string]) -> `string`](#_.capitalize)
-  * [_.deburr([string]) -> `string`](#_.deburr)
-  * [_.endsWith([string], [target], [position]) -> `boolean`](#_.endsWith)
-  * [_.escape([string]) -> `string`](#_.escape)
-  * [_.escapeRegExp([string]) -> `string`](#_.escapeRegExp)
-  * [_.intersection([...arrays]) -> `Array`](#_.intersection)
-  * [_.pad([string], [length], [chars]) -> `string`](#_.pad)
-  * [_.padLeft([string], [length], [chars]) -> `string`](#_.padLeft)
-  * [_.padRight([string], [length], [chars]) -> `string`](#_.padRight)
-  * [_.repeat([string], [n]) -> `string`](#_.repeat)
-  * [_.last(array) -> `*`](#_.last)
-  * [_.startsWith([string], [target], [position]) -> `boolean`](#_.startsWith)
-  * [_.template([string], [options]) -> `function`](#_.template)
-  * [_.trim([string], [chars]) -> `string`](#_.trim)
-  * [_.trimLeft([string], [chars]) -> `string`](#_.trimLeft)
-  * [_.trimRight([string], [chars]) -> `string`](#_.trimRight)
-  * [_.trunc([string], [options]) -> `string`](#_.trunc)
-  * [_.unescape([string]) -> `string`](#_.unescape)
-  * [_.words([string], [pattern]) -> `Array`](#_.words)
-  * [_.attempt(func) -> `*`](#_.attempt)
-  * [_.iteratee([func], [thisArg]) -> `function`](#_.iteratee)
-  * [_.constant(value) -> `function`](#_.constant)
-  * [_.identity(value) -> `*`](#_.identity)
-  * [_.matches(source) -> `function`](#_.matches)
-  * [_.mixin([object], source, [options]) -> `function`,`Object`](#_.mixin)
-  * [_.noConflict() -> `function`](#_.noConflict)
-  * [_.noop()](#_.noop)
-  * [_.lastIndexOf(array, value, [fromIndex]) -> `number`](#_.lastIndexOf)
-  * [_.parseInt(value, [radix]) -> `number`](#_.parseInt)
-  * [_.property(key) -> `function`](#_.property)
-  * [_.random([min], [max], [floating]) -> `number`](#_.random)
-  * [_.range([start], end, [step]) -> `Array`](#_.range)
-  * [_.result(object, key, [defaultValue]) -> `*`](#_.result)
-  * [_.times(n, [iteratee], [thisArg]) -> `Array`](#_.times)
-  * [_.uniqueId([prefix]) -> `string`](#_.uniqueId)
+  * [`_.isArray` -> `boolean`](#_.isArray)
+  * [`_.chain` -> `*`](#_.chain)
+  * [`_.toString` -> `string`](#_.toString)
+  * [`_.valueOf` -> `*`](#_.valueOf)
+  * [`_.countBy` -> `Object`](#_.countBy)
+  * [`_.groupBy` -> `Object`](#_.groupBy)
+  * [`_.indexBy` -> `Object`](#_.indexBy)
+  * [`_.partition` -> `Array`](#_.partition)
+  * [`_.once` -> `function`](#_.once)
+  * [`_.support`](#_.support)
+    * [`support.support.nodeClass`](#_.support.support.nodeClass)
+    * [`support.support.argsClass`](#_.support.support.argsClass)
+    * [`support.support.enumPrototypes`](#_.support.support.enumPrototypes)
+    * [`support.support.funcDecomp`](#_.support.support.funcDecomp)
+    * [`support.support.funcNames`](#_.support.support.funcNames)
+    * [`support.support.enumErrorProps`](#_.support.support.enumErrorProps)
+    * [`support.support.nonEnumStrings`](#_.support.support.nonEnumStrings)
+    * [`support.support.nonEnumShadows`](#_.support.support.nonEnumShadows)
+    * [`support.support.ownLast`](#_.support.support.ownLast)
+    * [`support.support.spliceObjects`](#_.support.support.spliceObjects)
+    * [`support.support.unindexedChars`](#_.support.support.unindexedChars)
+  * [`_.isFinite` -> `boolean`](#_.isFinite)
+  * [`_.isPlainObject` -> `boolean`](#_.isPlainObject)
+  * [`_.extend` -> `Object`](#_.extend)
+  * [`_.keys` -> `Array`](#_.keys)
+  * [`_.merge` -> `Object`](#_.merge)
+  * [`_.camelCase` -> `string`](#_.camelCase)
+  * [`_.kebabCase` -> `string`](#_.kebabCase)
+  * [`_.snakeCase` -> `string`](#_.snakeCase)
+  * [`_.now`](#_.now)
+  * [`_.pull(array, [...values])` -> `Array`](#_.pull)
+  * [`_.pullAt(array, [...indexes])` -> `Array`](#_.pullAt)
+  * [`_.remove(array, [predicate], [thisArg])` -> `Array`](#_.remove)
+  * [`_.tail(array)` -> `Array`](#_.tail)
+  * [`_.slice(array, [start], [end])` -> `Array`](#_.slice)
+  * [`_.sortedIndex(array, value, [iteratee], [thisArg])` -> `number`](#_.sortedIndex)
+  * [`_.sortedLastIndex(array, value, [iteratee], [thisArg])` -> `number`](#_.sortedLastIndex)
+  * [`_.take(array, [n])` -> `Array`](#_.take)
+  * [`_.takeRight(array, [n])` -> `Array`](#_.takeRight)
+  * [`_.takeRightWhile(array, [predicate], [thisArg])` -> `Array`](#_.takeRightWhile)
+  * [`_.takeWhile(array, [predicate], [thisArg])` -> `Array`](#_.takeWhile)
+  * [`_.union([...arrays])` -> `Array`](#_.union)
+  * [`_.unique(array, [isSorted], [iteratee], [thisArg])` -> `Array`](#_.unique)
+  * [`_.unzip(array)` -> `Array`](#_.unzip)
+  * [`_.without(array, [...values])` -> `Array`](#_.without)
+  * [`_.xor([...arrays])` -> `Array`](#_.xor)
+  * [`_.zip([...arrays])` -> `Array`](#_.zip)
+  * [`_.object(props, [vals])` -> `Object`](#_.object)
+  * [`_.chain(value)` -> `Object`](#_.chain)
+  * [`_.tap(value, interceptor, [thisArg])` -> `*`](#_.tap)
+  * [`_.thru(value, interceptor, [thisArg])` -> `*`](#_.thru)
+  * [`_.runInContext([context])` -> `function`](#_.runInContext)
+    * [`runInContext~reNative`](#_.runInContext..reNative)
+    * [`runInContext~Array`](#_.runInContext..Array)
+    * [`runInContext~document`](#_.runInContext..document)
+    * [`runInContext~fnToString`](#_.runInContext..fnToString)
+    * [`runInContext~hasOwnProperty`](#_.runInContext..hasOwnProperty)
+    * [`runInContext~oldDash`](#_.runInContext..oldDash)
+    * [`runInContext~toString`](#_.runInContext..toString)
+    * [`runInContext~arrayProto`](#_.runInContext..arrayProto)
+    * [`runInContext~ArrayBuffer`](#_.runInContext..ArrayBuffer)
+    * [`runInContext~Float64Array`](#_.runInContext..Float64Array)
+    * [`runInContext~FLOAT64_BYTES_PER_ELEMENT`](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+    * [`runInContext~metaMap`](#_.runInContext..metaMap)
+    * [`runInContext~ctorByClass`](#_.runInContext..ctorByClass)
+    * [`runInContext~nonEnumProps`](#_.runInContext..nonEnumProps)
+  * [`_.chunk(array, [size])` -> `Array`](#_.chunk)
+  * [`_.compact(array)` -> `Array`](#_.compact)
+  * [`_.at(collection, [...props])` -> `Array`](#_.at)
+  * [`_.include(collection, target, [fromIndex])` -> `boolean`](#_.include)
+  * [`_.difference(array, [...values])` -> `Array`](#_.difference)
+  * [`_.all(collection, [predicate], [thisArg])` -> `boolean`](#_.all)
+  * [`_.select(collection, [predicate], [thisArg])` -> `Array`](#_.select)
+  * [`_.detect(collection, [predicate], [thisArg])` -> `*`](#_.detect)
+  * [`_.findLast(collection, [predicate], [thisArg])` -> `*`](#_.findLast)
+  * [`_.findWhere(collection, source)` -> `*`](#_.findWhere)
+  * [`_.each(collection, [iteratee], [thisArg])` -> `Array | Object | string`](#_.each)
+  * [`_.eachRight(collection, [iteratee], [thisArg])` -> `Array | Object | string`](#_.eachRight)
+  * [`_.drop(array, [n])` -> `Array`](#_.drop)
+  * [`_.dropRight(array, [n])` -> `Array`](#_.dropRight)
+  * [`_.invoke(collection, methodName, [...args])` -> `Array`](#_.invoke)
+  * [`_.collect(collection, [iteratee], [thisArg])` -> `Array`](#_.collect)
+  * [`_.max(collection, [iteratee], [thisArg])` -> `*`](#_.max)
+  * [`_.min(collection, [iteratee], [thisArg])` -> `*`](#_.min)
+  * [`_.dropRightWhile(array, [predicate], [thisArg])` -> `Array`](#_.dropRightWhile)
+  * [`_.pluck(collection, key)` -> `Array`](#_.pluck)
+  * [`_.foldr(collection, [iteratee], [accumulator], [thisArg])` -> `*`](#_.foldr)
+  * [`_.reject(collection, [predicate], [thisArg])` -> `Array`](#_.reject)
+  * [`_.sample(collection, [n])` -> `*`](#_.sample)
+  * [`_.shuffle(collection)` -> `Array`](#_.shuffle)
+  * [`_.size(collection)` -> `number`](#_.size)
+  * [`_.any(collection, [predicate], [thisArg])` -> `boolean`](#_.any)
+  * [`_.sortBy(collection, [iteratee], [thisArg])` -> `Array`](#_.sortBy)
+  * [`_.toArray(collection)` -> `Array`](#_.toArray)
+  * [`_.where(collection, source)` -> `Array`](#_.where)
+  * [`_.after(n, func)` -> `function`](#_.after)
+  * [`_.before(n, func)` -> `function`](#_.before)
+  * [`_.bind(func, [thisArg], [...args])` -> `function`](#_.bind)
+  * [`_.bindAll(object, [methodNames])` -> `Object`](#_.bindAll)
+  * [`_.bindKey(object, key, [...args])` -> `function`](#_.bindKey)
+  * [`_.curry(func, [arity])` -> `function`](#_.curry)
+  * [`_.curryRight(func, [arity])` -> `function`](#_.curryRight)
+  * [`_.debounce(func, wait, [options])` -> `function`](#_.debounce)
+  * [`_.defer(func, [...args])` -> `number`](#_.defer)
+  * [`_.delay(func, wait, [...args])` -> `number`](#_.delay)
+  * [`_.flow([...funcs])` -> `function`](#_.flow)
+  * [`_.memoize(func, [resolver])` -> `function`](#_.memoize)
+  * [`_.negate(predicate)` -> `function`](#_.negate)
+  * [`_.dropWhile(array, [predicate], [thisArg])` -> `Array`](#_.dropWhile)
+  * [`_.partial(func, [...args])` -> `function`](#_.partial)
+  * [`_.partialRight(func, [...args])` -> `function`](#_.partialRight)
+  * [`_.throttle(func, wait, [options])` -> `function`](#_.throttle)
+  * [`_.wrap(value, wrapper)` -> `function`](#_.wrap)
+  * [`_.clone(value, [isDeep], [customizer], [thisArg])` -> `*`](#_.clone)
+  * [`_.cloneDeep(value, [customizer], [thisArg])` -> `*`](#_.cloneDeep)
+  * [`_.isArguments(value)` -> `boolean`](#_.isArguments)
+  * [`_.findIndex(array, [predicate], [thisArg])` -> `number`](#_.findIndex)
+  * [`_.isBoolean(value)` -> `boolean`](#_.isBoolean)
+  * [`_.isDate(value)` -> `boolean`](#_.isDate)
+  * [`_.isElement(value)` -> `boolean`](#_.isElement)
+  * [`_.isEmpty(value)` -> `boolean`](#_.isEmpty)
+  * [`_.isEqual(value, other, [customizer], [thisArg])` -> `boolean`](#_.isEqual)
+  * [`_.isError(value)` -> `boolean`](#_.isError)
+  * [`_.findLastIndex(array, [predicate], [thisArg])` -> `number`](#_.findLastIndex)
+  * [`_.isFunction(value)` -> `boolean`](#_.isFunction)
+  * [`_.isObject(value)` -> `boolean`](#_.isObject)
+  * [`_.isNaN(value)` -> `boolean`](#_.isNaN)
+  * [`_.isNative(value)` -> `boolean`](#_.isNative)
+  * [`_.isNull(value)` -> `boolean`](#_.isNull)
+  * [`_.isNumber(value)` -> `boolean`](#_.isNumber)
+  * [`_.head(array)` -> `*`](#_.head)
+  * [`_.isRegExp(value)` -> `boolean`](#_.isRegExp)
+  * [`_.isString(value)` -> `boolean`](#_.isString)
+  * [`_.isUndefined(value)` -> `boolean`](#_.isUndefined)
+  * [`_.flatten(array, [isDeep])` -> `Array`](#_.flatten)
+  * [`_.create(prototype, [properties])` -> `Object`](#_.create)
+  * [`_.defaults(object, [...sources])` -> `Object`](#_.defaults)
+  * [`_.findKey(object, [predicate], [thisArg])` -> `string | undefined`](#_.findKey)
+  * [`_.findLastKey(object, [predicate], [thisArg])` -> `string | undefined`](#_.findLastKey)
+  * [`_.forIn(object, [iteratee], [thisArg])` -> `Object`](#_.forIn)
+  * [`_.forInRight(object, [iteratee], [thisArg])` -> `Object`](#_.forInRight)
+  * [`_.forOwn(object, [iteratee], [thisArg])` -> `Object`](#_.forOwn)
+  * [`_.forOwnRight(object, [iteratee], [thisArg])` -> `Object`](#_.forOwnRight)
+  * [`_.methods(object)` -> `Array`](#_.methods)
+  * [`_.has(object, key)` -> `boolean`](#_.has)
+  * [`_.invert(object, [multiValue])` -> `Object`](#_.invert)
+  * [`_.flattenDeep(array)` -> `Array`](#_.flattenDeep)
+  * [`_.keysIn(object)` -> `Array`](#_.keysIn)
+  * [`_.mapValues(object, [iteratee], [thisArg])` -> `Object`](#_.mapValues)
+  * [`_.indexOf(array, value, [fromIndex])` -> `number`](#_.indexOf)
+  * [`_.omit(object, [...predicate], [thisArg])` -> `Object`](#_.omit)
+  * [`_.pairs(object)` -> `Array`](#_.pairs)
+  * [`_.pick(object, [...predicate], [thisArg])` -> `Object`](#_.pick)
+  * [`_.transform(object, [iteratee], [accumulator], [thisArg])` -> `*`](#_.transform)
+  * [`_.values(object)` -> `Array`](#_.values)
+  * [`_.valuesIn(object)` -> `Array`](#_.valuesIn)
+  * [`_.initial(array)` -> `Array`](#_.initial)
+  * [`_.capitalize([string])` -> `string`](#_.capitalize)
+  * [`_.deburr([string])` -> `string`](#_.deburr)
+  * [`_.endsWith([string], [target], [position])` -> `boolean`](#_.endsWith)
+  * [`_.escape([string])` -> `string`](#_.escape)
+  * [`_.escapeRegExp([string])` -> `string`](#_.escapeRegExp)
+  * [`_.intersection([...arrays])` -> `Array`](#_.intersection)
+  * [`_.pad([string], [length], [chars])` -> `string`](#_.pad)
+  * [`_.padLeft([string], [length], [chars])` -> `string`](#_.padLeft)
+  * [`_.padRight([string], [length], [chars])` -> `string`](#_.padRight)
+  * [`_.repeat([string], [n])` -> `string`](#_.repeat)
+  * [`_.last(array)` -> `*`](#_.last)
+  * [`_.startsWith([string], [target], [position])` -> `boolean`](#_.startsWith)
+  * [`_.template([string], [options])` -> `function`](#_.template)
+  * [`_.trim([string], [chars])` -> `string`](#_.trim)
+  * [`_.trimLeft([string], [chars])` -> `string`](#_.trimLeft)
+  * [`_.trimRight([string], [chars])` -> `string`](#_.trimRight)
+  * [`_.trunc([string], [options])` -> `string`](#_.trunc)
+  * [`_.unescape([string])` -> `string`](#_.unescape)
+  * [`_.words([string], [pattern])` -> `Array`](#_.words)
+  * [`_.attempt(func)` -> `*`](#_.attempt)
+  * [`_.iteratee([func], [thisArg])` -> `function`](#_.iteratee)
+  * [`_.constant(value)` -> `function`](#_.constant)
+  * [`_.identity(value)` -> `*`](#_.identity)
+  * [`_.matches(source)` -> `function`](#_.matches)
+  * [`_.mixin([object], source, [options])` -> `function | Object`](#_.mixin)
+  * [`_.noConflict()` -> `function`](#_.noConflict)
+  * [`_.noop()`](#_.noop)
+  * [`_.lastIndexOf(array, value, [fromIndex])` -> `number`](#_.lastIndexOf)
+  * [`_.parseInt(value, [radix])` -> `number`](#_.parseInt)
+  * [`_.property(key)` -> `function`](#_.property)
+  * [`_.random([min], [max], [floating])` -> `number`](#_.random)
+  * [`_.range([start], end, [step])` -> `Array`](#_.range)
+  * [`_.result(object, key, [defaultValue])` -> `*`](#_.result)
+  * [`_.times(n, [iteratee], [thisArg])` -> `Array`](#_.times)
+  * [`_.uniqueId([prefix])` -> `string`](#_.uniqueId)
 
 <a name="new__()"></a>
 ###
@@ -265,7 +265,7 @@ _.isArray(squares.value());
 // => true
 ```
 <a name="_.isArray"></a>
-###_.isArray -> `boolean`
+###`_.isArray` -> `boolean`
 Checks if `value` is classified as an `Array` object.
 
 **Params**
@@ -282,7 +282,7 @@ _.isArray([1, 2, 3]);
 // => false
 ```
 <a name="_.chain"></a>
-###_.chain -> `*`
+###`_.chain` -> `*`
 Enables explicit method chaining on the wrapper object.
 
 **Returns**: `*` - Returns the wrapper object.  
@@ -305,7 +305,7 @@ _(users).chain()
 // => { 'age': 36 }
 ```
 <a name="_.toString"></a>
-###_.toString -> `string`
+###`_.toString` -> `string`
 Produces the result of coercing the unwrapped value to a string.
 
 **Returns**: `string` - Returns the coerced string value.  
@@ -315,7 +315,7 @@ _([1, 2, 3]).toString();
 // => '1,2,3'
 ```
 <a name="_.valueOf"></a>
-###_.valueOf -> `*`
+###`_.valueOf` -> `*`
 Extracts the unwrapped value from its wrapper.
 
 **Returns**: `*` - Returns the unwrapped value.  
@@ -325,7 +325,7 @@ _([1, 2, 3]).valueOf();
 // => [1, 2, 3]
 ```
 <a name="_.countBy"></a>
-###_.countBy -> `Object`
+###`_.countBy` -> `Object`
 Creates an object composed of keys generated from the results of running
 each element of `collection` through `iteratee`. The corresponding value
 of each key is the number of times the key was returned by `iteratee`.
@@ -360,7 +360,7 @@ _.countBy(['one', 'two', 'three'], 'length');
 // => { '3': 2, '5': 1 }
 ```
 <a name="_.groupBy"></a>
-###_.groupBy -> `Object`
+###`_.groupBy` -> `Object`
 Creates an object composed of keys generated from the results of running
 each element of `collection` through `iteratee`. The corresponding
 value of each key is an array of the elements responsible for generating
@@ -396,7 +396,7 @@ _.groupBy(['one', 'two', 'three'], 'length');
 // => { '3': ['one', 'two'], '5': ['three'] }
 ```
 <a name="_.indexBy"></a>
-###_.indexBy -> `Object`
+###`_.indexBy` -> `Object`
 Creates an object composed of keys generated from the results of running
 each element of the collection through `iteratee`. The corresponding value
 of each key is the last element responsible for generating the key. The
@@ -436,7 +436,7 @@ _.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, 
 // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
 ```
 <a name="_.partition"></a>
-###_.partition -> `Array`
+###`_.partition` -> `Array`
 Creates an array of elements split into two groups, the first of which
 contains elements the predicate returns truthy for, while the second of which
 contains elements the predicate returns falsey for. The predicate is bound
@@ -481,7 +481,7 @@ _.map(_.partition(users, 'blocked'), function(array) { return _.pluck(array, 'us
 // => [['fred'], ['barney', 'pebbles']]
 ```
 <a name="_.once"></a>
-###_.once -> `function`
+###`_.once` -> `function`
 Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first call. The `func` is invoked
 with the `this` binding of the created function.
@@ -500,36 +500,36 @@ initialize();
 // `initialize` invokes `createApplication` once
 ```
 <a name="_.support"></a>
-###_.support
+###`_.support`
 An object environment feature flags.
 
 **Type**: `Object`  
-  * [_.support](#_.support)
-    * [support.support.nodeClass](#_.support.support.nodeClass)
-    * [support.support.argsClass](#_.support.support.argsClass)
-    * [support.support.enumPrototypes](#_.support.support.enumPrototypes)
-    * [support.support.funcDecomp](#_.support.support.funcDecomp)
-    * [support.support.funcNames](#_.support.support.funcNames)
-    * [support.support.enumErrorProps](#_.support.support.enumErrorProps)
-    * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings)
-    * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows)
-    * [support.support.ownLast](#_.support.support.ownLast)
-    * [support.support.spliceObjects](#_.support.support.spliceObjects)
-    * [support.support.unindexedChars](#_.support.support.unindexedChars)
+  * [`_.support`](#_.support)
+    * [`support.support.nodeClass`](#_.support.support.nodeClass)
+    * [`support.support.argsClass`](#_.support.support.argsClass)
+    * [`support.support.enumPrototypes`](#_.support.support.enumPrototypes)
+    * [`support.support.funcDecomp`](#_.support.support.funcDecomp)
+    * [`support.support.funcNames`](#_.support.support.funcNames)
+    * [`support.support.enumErrorProps`](#_.support.support.enumErrorProps)
+    * [`support.support.nonEnumStrings`](#_.support.support.nonEnumStrings)
+    * [`support.support.nonEnumShadows`](#_.support.support.nonEnumShadows)
+    * [`support.support.ownLast`](#_.support.support.ownLast)
+    * [`support.support.spliceObjects`](#_.support.support.spliceObjects)
+    * [`support.support.unindexedChars`](#_.support.support.unindexedChars)
 
 <a name="_.support.support.nodeClass"></a>
-####support.support.nodeClass
+####`support.support.nodeClass`
 Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.argsClass"></a>
-####support.support.argsClass
+####`support.support.argsClass`
 Detect if the `[[Class]]` of `arguments` objects is resolvable
 (all but Firefox < 4, IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.enumPrototypes"></a>
-####support.support.enumPrototypes
+####`support.support.enumPrototypes`
 Detect if `prototype` properties are enumerable by default.
 
 Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
@@ -539,31 +539,31 @@ property to `true`.
 
 **Type**: `boolean`  
 <a name="_.support.support.funcDecomp"></a>
-####support.support.funcDecomp
+####`support.support.funcDecomp`
 Detect if functions can be decompiled by `Function#toString`
 (all but Firefox OS certified apps, older Opera mobile browsers, and
 the PlayStation 3; forced `false` for Windows 8 apps).
 
 **Type**: `boolean`  
 <a name="_.support.support.funcNames"></a>
-####support.support.funcNames
+####`support.support.funcNames`
 Detect if `Function#name` is supported (all but IE).
 
 **Type**: `boolean`  
 <a name="_.support.support.enumErrorProps"></a>
-####support.support.enumErrorProps
+####`support.support.enumErrorProps`
 Detect if `name` or `message` properties of `Error.prototype` are
 enumerable by default (IE < 9, Safari < 5.1).
 
 **Type**: `boolean`  
 <a name="_.support.support.nonEnumStrings"></a>
-####support.support.nonEnumStrings
+####`support.support.nonEnumStrings`
 Detect if string indexes are non-enumerable
 (IE < 9, RingoJS, Rhino, Narwhal).
 
 **Type**: `boolean`  
 <a name="_.support.support.nonEnumShadows"></a>
-####support.support.nonEnumShadows
+####`support.support.nonEnumShadows`
 Detect if properties shadowing those on `Object.prototype` are
 non-enumerable.
 
@@ -572,13 +572,13 @@ are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
 
 **Type**: `boolean`  
 <a name="_.support.support.ownLast"></a>
-####support.support.ownLast
+####`support.support.ownLast`
 Detect if own properties are iterated after inherited properties
 (IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.spliceObjects"></a>
-####support.support.spliceObjects
+####`support.support.spliceObjects`
 Detect if `Array#shift` and `Array#splice` augment array-like objects
 correctly.
 
@@ -591,7 +591,7 @@ in IE 9.
 
 **Type**: `boolean`  
 <a name="_.support.support.unindexedChars"></a>
-####support.support.unindexedChars
+####`support.support.unindexedChars`
 Detect lack of support for accessing string characters by index.
 
 IE < 8 can't access characters by index. IE 8 can only access characters
@@ -599,7 +599,7 @@ by index on string literals, not string objects.
 
 **Type**: `boolean`  
 <a name="_.isFinite"></a>
-###_.isFinite -> `boolean`
+###`_.isFinite` -> `boolean`
 Checks if `value` is a finite primitive number.
 
 **Note:** This method is based on ES6 `Number.isFinite`. See the
@@ -629,7 +629,7 @@ _.isFinite(Infinity);
 // => false
 ```
 <a name="_.isPlainObject"></a>
-###_.isPlainObject -> `boolean`
+###`_.isPlainObject` -> `boolean`
 Checks if `value` is an object created by the `Object` constructor or has
 a `[[Prototype]]` of `null`.
 
@@ -661,7 +661,7 @@ _.isPlainObject(Object.create(null));
 // => true
 ```
 <a name="_.extend"></a>
-###_.extend -> `Object`
+###`_.extend` -> `Object`
 Assigns own enumerable properties of source object(s) to the destination
 object. Subsequent sources overwrite property assignments of previous sources.
 If `customizer` is provided it is invoked to produce the assigned values.
@@ -689,7 +689,7 @@ defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 'sla
 // => { 'user': 'barney', 'age': 36, 'employer': 'slate' }
 ```
 <a name="_.keys"></a>
-###_.keys -> `Array`
+###`_.keys` -> `Array`
 Creates an array of the own enumerable property names of `object`.
 
 **Params**
@@ -710,7 +710,7 @@ _.keys(new Shape);
 // => ['x', 'y'] (iteration order is not guaranteed)
 ```
 <a name="_.merge"></a>
-###_.merge -> `Object`
+###`_.merge` -> `Object`
 Recursively merges own enumerable properties of the source object(s), that
 don't resolve to `undefined` into the destination object. Subsequent sources
 overwrite property assignments of previous sources. If `customizer` is
@@ -756,7 +756,7 @@ _.merge(food, otherFood, function(a, b) {
 // => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot] }
 ```
 <a name="_.camelCase"></a>
-###_.camelCase -> `string`
+###`_.camelCase` -> `string`
 Converts `string` to camel case.
 See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 
@@ -777,7 +777,7 @@ _.camelCase('__hello_world__');
 // => 'helloWorld'
 ```
 <a name="_.kebabCase"></a>
-###_.kebabCase -> `string`
+###`_.kebabCase` -> `string`
 Converts `string` to kebab case (a.k.a. spinal case).
 See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
 more details.
@@ -799,7 +799,7 @@ _.kebabCase('__hello_world__');
 // => 'hello-world'
 ```
 <a name="_.snakeCase"></a>
-###_.snakeCase -> `string`
+###`_.snakeCase` -> `string`
 Converts `string` to snake case.
 See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
 
@@ -820,7 +820,7 @@ _.snakeCase('helloWorld');
 // => 'hello_world'
 ```
 <a name="_.now"></a>
-###_.now
+###`_.now`
 Gets the number of milliseconds that have elapsed since the Unix epoch
 (1 January 1970 00:00:00 UTC).
 
@@ -830,7 +830,7 @@ _.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
 // => logs the number of milliseconds it took for the deferred function to be invoked
 ```
 <a name="_.pull"></a>
-###_.pull(array, [...values]) -> `Array`
+###`_.pull(array, [...values])` -> `Array`
 Removes all provided values from `array` using `SameValueZero` for equality
 comparisons.
 
@@ -854,7 +854,7 @@ console.log(array);
 // => [1, 1]
 ```
 <a name="_.pullAt"></a>
-###_.pullAt(array, [...indexes]) -> `Array`
+###`_.pullAt(array, [...indexes])` -> `Array`
 Removes elements from `array` corresponding to the specified indexes and
 returns an array of the removed elements. Indexes may be specified as an
 array of indexes or as individual arguments.
@@ -880,7 +880,7 @@ console.log(evens);
 // => [10, 20]
 ```
 <a name="_.remove"></a>
-###_.remove(array, [predicate], [thisArg]) -> `Array`
+###`_.remove(array, [predicate], [thisArg])` -> `Array`
 Removes all elements from `array` that the predicate returns truthy for
 and returns an array of the removed elements. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
@@ -915,7 +915,7 @@ console.log(evens);
 // => [2, 4]
 ```
 <a name="_.tail"></a>
-###_.tail(array) -> `Array`
+###`_.tail(array)` -> `Array`
 Gets all but the first element of `array`.
 
 **Params**
@@ -929,7 +929,7 @@ _.rest([1, 2, 3]);
 // => [2, 3]
 ```
 <a name="_.slice"></a>
-###_.slice(array, [start], [end]) -> `Array`
+###`_.slice(array, [start], [end])` -> `Array`
 Slices `array` from the `start` index up to, but not including, the `end` index.
 
 **Note:** This function is used instead of `Array#slice` to support node lists
@@ -943,7 +943,7 @@ in IE < 9 and to ensure dense arrays are returned.
 
 **Returns**: `Array` - Returns the slice of `array`.  
 <a name="_.sortedIndex"></a>
-###_.sortedIndex(array, value, [iteratee], [thisArg]) -> `number`
+###`_.sortedIndex(array, value, [iteratee], [thisArg])` -> `number`
 Uses a binary search to determine the lowest index at which a value should
 be inserted into a given sorted array in order to maintain the sort order
 of the array. If an iteratee function is provided it is invoked for `value`
@@ -989,7 +989,7 @@ _.sortedIndex([{ 'x': 30 }, { 'x': 50 }], { 'x': 40 }, 'x');
 // => 1
 ```
 <a name="_.sortedLastIndex"></a>
-###_.sortedLastIndex(array, value, [iteratee], [thisArg]) -> `number`
+###`_.sortedLastIndex(array, value, [iteratee], [thisArg])` -> `number`
 This method is like `_.sortedIndex` except that it returns the highest
 index at which a value should be inserted into a given sorted array in
 order to maintain the sort order of the array.
@@ -1011,7 +1011,7 @@ _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
 // => 4
 ```
 <a name="_.take"></a>
-###_.take(array, [n]) -> `Array`
+###`_.take(array, [n])` -> `Array`
 Creates a slice of `array` with `n` elements taken from the beginning.
 
 **Params**
@@ -1036,7 +1036,7 @@ _.take([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRight"></a>
-###_.takeRight(array, [n]) -> `Array`
+###`_.takeRight(array, [n])` -> `Array`
 Creates a slice of `array` with `n` elements taken from the end.
 
 **Params**
@@ -1061,7 +1061,7 @@ _.takeRight([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRightWhile"></a>
-###_.takeRightWhile(array, [predicate], [thisArg]) -> `Array`
+###`_.takeRightWhile(array, [predicate], [thisArg])` -> `Array`
 Creates a slice of `array` with elements taken from the end. Elements are
 taken until the predicate returns falsey. The predicate is bound to `thisArg`
 and invoked with three arguments; (value, index, array).
@@ -1102,7 +1102,7 @@ _.pluck(_.takeRightWhile(users, { 'employer': 'na' }), 'user');
 // => ['pebbles']
 ```
 <a name="_.takeWhile"></a>
-###_.takeWhile(array, [predicate], [thisArg]) -> `Array`
+###`_.takeWhile(array, [predicate], [thisArg])` -> `Array`
 Creates a slice of `array` with elements taken from the beginning. Elements
 are taken until the predicate returns falsey. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
@@ -1143,7 +1143,7 @@ _.pluck(_.takeWhile(users, { 'employer': 'slate' }), 'user');
 // => ['barney', 'fred']
 ```
 <a name="_.union"></a>
-###_.union([...arrays]) -> `Array`
+###`_.union([...arrays])` -> `Array`
 Creates an array of unique values, in order, of the provided arrays using
 `SameValueZero` for equality comparisons.
 
@@ -1162,7 +1162,7 @@ _.union([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 // => [1, 2, 3, 5, 4]
 ```
 <a name="_.unique"></a>
-###_.unique(array, [isSorted], [iteratee], [thisArg]) -> `Array`
+###`_.unique(array, [isSorted], [iteratee], [thisArg])` -> `Array`
 Creates a duplicate-value-free version of an array using `SameValueZero`
 for equality comparisons. Providing `true` for `isSorted` performs a faster
 search algorithm for sorted arrays. If an iteratee function is provided it
@@ -1209,7 +1209,7 @@ _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }, { 'x': 2 }]
 ```
 <a name="_.unzip"></a>
-###_.unzip(array) -> `Array`
+###`_.unzip(array)` -> `Array`
 This method is like `_.zip` except that it accepts an array of grouped
 elements and creates an array regrouping the elements to their pre `_.zip`
 configuration.
@@ -1228,7 +1228,7 @@ _.unzip(zipped);
 // => [['fred', 'barney'], [30, 40], [true, false]]
 ```
 <a name="_.without"></a>
-###_.without(array, [...values]) -> `Array`
+###`_.without(array, [...values])` -> `Array`
 Creates an array excluding all provided values using `SameValueZero` for
 equality comparisons.
 
@@ -1248,7 +1248,7 @@ _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 // => [2, 3, 4]
 ```
 <a name="_.xor"></a>
-###_.xor([...arrays]) -> `Array`
+###`_.xor([...arrays])` -> `Array`
 Creates an array that is the symmetric difference of the provided arrays.
 See [Wikipedia](http://en.wikipedia.org/wiki/Symmetric_difference) for
 more details.
@@ -1267,7 +1267,7 @@ _.xor([1, 2, 5], [2, 3, 5], [3, 4, 5]);
 // => [1, 4, 5]
 ```
 <a name="_.zip"></a>
-###_.zip([...arrays]) -> `Array`
+###`_.zip([...arrays])` -> `Array`
 Creates an array of grouped elements, the first of which contains the first
 elements of the given arrays, the second of which contains the second elements
 of the given arrays, and so on.
@@ -1283,7 +1283,7 @@ _.zip(['fred', 'barney'], [30, 40], [true, false]);
 // => [['fred', 30, true], ['barney', 40, false]]
 ```
 <a name="_.object"></a>
-###_.object(props, [vals]) -> `Object`
+###`_.object(props, [vals])` -> `Object`
 Creates an object composed from arrays of property names and values. Provide
 either a single two dimensional array, e.g. `[[key1, value1], [key2, value2]]`
 or two arrays, one of property names and one of corresponding values.
@@ -1300,7 +1300,7 @@ _.zipObject(['fred', 'barney'], [30, 40]);
 // => { 'fred': 30, 'barney': 40 }
 ```
 <a name="_.chain"></a>
-###_.chain(value) -> `Object`
+###`_.chain(value)` -> `Object`
 Creates a `lodash` object that wraps `value` with explicit method
 chaining enabled.
 
@@ -1325,7 +1325,7 @@ var youngest = _.chain(users)
 // => 'pebbles is 1'
 ```
 <a name="_.tap"></a>
-###_.tap(value, interceptor, [thisArg]) -> `*`
+###`_.tap(value, interceptor, [thisArg])` -> `*`
 This method invokes `interceptor` and returns `value`. The interceptor is
 bound to `thisArg` and invoked with one argument; (value). The purpose of
 this method is to "tap into" a method chain in order to perform operations
@@ -1347,7 +1347,7 @@ _([1, 2, 3])
 // => [2, 1]
 ```
 <a name="_.thru"></a>
-###_.thru(value, interceptor, [thisArg]) -> `*`
+###`_.thru(value, interceptor, [thisArg])` -> `*`
 This method is like `_.tap` except that it returns the result of `interceptor`.
 
 **Params**
@@ -1366,7 +1366,7 @@ _([1, 2, 3])
 // => [3]
 ```
 <a name="_.runInContext"></a>
-###_.runInContext([context]) -> `function`
+###`_.runInContext([context])` -> `function`
 Create a new pristine `lodash` function using the given `context` object.
 
 **Params**
@@ -1393,94 +1393,94 @@ lodash.isFunction(lodash.add);
 lodash.isFunction(lodash.sub);
 // => true
 ```
-  * [_.runInContext([context]) -> `function`](#_.runInContext)
-    * [runInContext~reNative](#_.runInContext..reNative)
-    * [runInContext~Array](#_.runInContext..Array)
-    * [runInContext~document](#_.runInContext..document)
-    * [runInContext~fnToString](#_.runInContext..fnToString)
-    * [runInContext~hasOwnProperty](#_.runInContext..hasOwnProperty)
-    * [runInContext~oldDash](#_.runInContext..oldDash)
-    * [runInContext~toString](#_.runInContext..toString)
-    * [runInContext~arrayProto](#_.runInContext..arrayProto)
-    * [runInContext~ArrayBuffer](#_.runInContext..ArrayBuffer)
-    * [runInContext~Float64Array](#_.runInContext..Float64Array)
-    * [runInContext~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-    * [runInContext~metaMap](#_.runInContext..metaMap)
-    * [runInContext~ctorByClass](#_.runInContext..ctorByClass)
-    * [runInContext~nonEnumProps](#_.runInContext..nonEnumProps)
+  * [`_.runInContext([context])` -> `function`](#_.runInContext)
+    * [`runInContext~reNative`](#_.runInContext..reNative)
+    * [`runInContext~Array`](#_.runInContext..Array)
+    * [`runInContext~document`](#_.runInContext..document)
+    * [`runInContext~fnToString`](#_.runInContext..fnToString)
+    * [`runInContext~hasOwnProperty`](#_.runInContext..hasOwnProperty)
+    * [`runInContext~oldDash`](#_.runInContext..oldDash)
+    * [`runInContext~toString`](#_.runInContext..toString)
+    * [`runInContext~arrayProto`](#_.runInContext..arrayProto)
+    * [`runInContext~ArrayBuffer`](#_.runInContext..ArrayBuffer)
+    * [`runInContext~Float64Array`](#_.runInContext..Float64Array)
+    * [`runInContext~FLOAT64_BYTES_PER_ELEMENT`](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+    * [`runInContext~metaMap`](#_.runInContext..metaMap)
+    * [`runInContext~ctorByClass`](#_.runInContext..ctorByClass)
+    * [`runInContext~nonEnumProps`](#_.runInContext..nonEnumProps)
 
 <a name="_.runInContext..reNative"></a>
-####runInContext~reNative
+####`runInContext~reNative`
 Used to detect if a method is native
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..Array"></a>
-####runInContext~Array
+####`runInContext~Array`
 Native constructor references
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..document"></a>
-####runInContext~document
+####`runInContext~document`
 Used to detect DOM support
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..fnToString"></a>
-####runInContext~fnToString
+####`runInContext~fnToString`
 Used to resolve the decompiled source of functions
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..hasOwnProperty"></a>
-####runInContext~hasOwnProperty
+####`runInContext~hasOwnProperty`
 Used to check objects for own properties
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..oldDash"></a>
-####runInContext~oldDash
+####`runInContext~oldDash`
 Used to restore the original `_` reference in `_.noConflict`
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..toString"></a>
-####runInContext~toString
+####`runInContext~toString`
 Used to resolve the internal `[[Class]]` of values
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..arrayProto"></a>
-####runInContext~arrayProto
+####`runInContext~arrayProto`
 Used for native method references
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..ArrayBuffer"></a>
-####runInContext~ArrayBuffer
+####`runInContext~ArrayBuffer`
 Native method references
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..Float64Array"></a>
-####runInContext~Float64Array
+####`runInContext~Float64Array`
 Used to clone array buffers
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..FLOAT64_BYTES_PER_ELEMENT"></a>
-####runInContext~FLOAT64_BYTES_PER_ELEMENT
+####`runInContext~FLOAT64_BYTES_PER_ELEMENT`
 Used as the size, in bytes, of each Float64Array element
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..metaMap"></a>
-####runInContext~metaMap
+####`runInContext~metaMap`
 Used to store function metadata
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..ctorByClass"></a>
-####runInContext~ctorByClass
+####`runInContext~ctorByClass`
 Used to lookup a built-in constructor by [[Class]]
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.runInContext..nonEnumProps"></a>
-####runInContext~nonEnumProps
+####`runInContext~nonEnumProps`
 Used to avoid iterating over non-enumerable properties in IE < 9
 
 **Scope**: inner member of [runInContext](#_.runInContext)  
 <a name="_.chunk"></a>
-###_.chunk(array, [size]) -> `Array`
+###`_.chunk(array, [size])` -> `Array`
 Creates an array of elements split into groups the length of `size`.
 If `collection` can't be split evenly, the final chunk will be the remaining
 elements.
@@ -1500,7 +1500,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
 <a name="_.compact"></a>
-###_.compact(array) -> `Array`
+###`_.compact(array)` -> `Array`
 Creates an array with all falsey values removed. The values `false`, `null`,
 `0`, `""`, `undefined`, and `NaN` are all falsey.
 
@@ -1515,7 +1515,7 @@ _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
 ```
 <a name="_.at"></a>
-###_.at(collection, [...props]) -> `Array`
+###`_.at(collection, [...props])` -> `Array`
 Creates an array of elements corresponding to the specified keys, or indexes,
 of the collection. Keys may be specified as individual arguments or as arrays
 of keys.
@@ -1536,7 +1536,7 @@ _.at(['fred', 'barney', 'pebbles'], 0, 2);
 // => ['fred', 'pebbles']
 ```
 <a name="_.include"></a>
-###_.include(collection, target, [fromIndex]) -> `boolean`
+###`_.include(collection, target, [fromIndex])` -> `boolean`
 Checks if `value` is present in `collection` using  `SameValueZero` for
 equality comparisons. If `fromIndex` is negative, it is used as the offset
 from the end of the collection.
@@ -1567,7 +1567,7 @@ _.contains('pebbles', 'eb');
 // => true
 ```
 <a name="_.difference"></a>
-###_.difference(array, [...values]) -> `Array`
+###`_.difference(array, [...values])` -> `Array`
 Creates an array excluding all values of the provided arrays using
 `SameValueZero` for equality comparisons.
 
@@ -1587,7 +1587,7 @@ _.difference([1, 2, 3], [5, 2, 10]);
 // => [1, 3]
 ```
 <a name="_.all"></a>
-###_.all(collection, [predicate], [thisArg]) -> `boolean`
+###`_.all(collection, [predicate], [thisArg])` -> `boolean`
 Checks if the predicate returns truthy for **all** elements of `collection`.
 The predicate is bound to `thisArg` and invoked with three arguments;
 (value, index|key, collection).
@@ -1628,7 +1628,7 @@ _.every(users, { 'age': 36 });
 // => false
 ```
 <a name="_.select"></a>
-###_.select(collection, [predicate], [thisArg]) -> `Array`
+###`_.select(collection, [predicate], [thisArg])` -> `Array`
 Iterates over elements of `collection`, returning an array of all elements
 the predicate returns truthy for. The predicate is bound to `thisArg` and
 invoked with three arguments; (value, index|key, collection).
@@ -1668,7 +1668,7 @@ _.filter(users, { 'age': 36 });
 // => [{ 'user': 'barney', 'age': 36 }]
 ```
 <a name="_.detect"></a>
-###_.detect(collection, [predicate], [thisArg]) -> `*`
+###`_.detect(collection, [predicate], [thisArg])` -> `*`
 Iterates over elements of `collection`, returning the first element that
 the predicate returns truthy for. The predicate is bound to `thisArg` and
 invoked with three arguments; (value, index|key, collection).
@@ -1711,7 +1711,7 @@ _.find(users, 'blocked');
 // => { 'user': 'fred', 'age': 40, 'blocked': true }
 ```
 <a name="_.findLast"></a>
-###_.findLast(collection, [predicate], [thisArg]) -> `*`
+###`_.findLast(collection, [predicate], [thisArg])` -> `*`
 This method is like `_.find` except that it iterates over elements of
 `collection` from right to left.
 
@@ -1730,7 +1730,7 @@ _.findLast([1, 2, 3, 4], function(n) { return n % 2 == 1; });
 // => 3
 ```
 <a name="_.findWhere"></a>
-###_.findWhere(collection, source) -> `*`
+###`_.findWhere(collection, source)` -> `*`
 Performs a deep comparison between each element in `collection` and the
 source object, returning the first element that has equivalent property
 values.
@@ -1755,7 +1755,7 @@ _.findWhere(users, { 'age': 40 });
 // =>  { 'user': 'fred', 'age': 40, 'employer': 'slate' }
 ```
 <a name="_.each"></a>
-###_.each(collection, [iteratee], [thisArg]) -> `Array`,`Object`,`string`
+###`_.each(collection, [iteratee], [thisArg])` -> `Array | Object | string`
 Iterates over elements of `collection` invoking `iteratee` for each element.
 The `iteratee` is bound to `thisArg` and invoked with three arguments;
 (value, index|key, collection). Iterator functions may exit iteration early
@@ -1781,7 +1781,7 @@ _.forEach({ 'one': 1, 'two': 2, 'three': 3 }, function(n, key) { console.log(n, 
 // => logs each value-key pair and returns the object (iteration order is not guaranteed)
 ```
 <a name="_.eachRight"></a>
-###_.eachRight(collection, [iteratee], [thisArg]) -> `Array`,`Object`,`string`
+###`_.eachRight(collection, [iteratee], [thisArg])` -> `Array | Object | string`
 This method is like `_.forEach` except that it iterates over elements of
 `collection` from right to left.
 
@@ -1798,7 +1798,7 @@ _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
 <a name="_.drop"></a>
-###_.drop(array, [n]) -> `Array`
+###`_.drop(array, [n])` -> `Array`
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
 **Params**
@@ -1823,7 +1823,7 @@ _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
 <a name="_.dropRight"></a>
-###_.dropRight(array, [n]) -> `Array`
+###`_.dropRight(array, [n])` -> `Array`
 Creates a slice of `array` with `n` elements dropped from the end.
 
 **Params**
@@ -1848,7 +1848,7 @@ _.dropRight([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
 <a name="_.invoke"></a>
-###_.invoke(collection, methodName, [...args]) -> `Array`
+###`_.invoke(collection, methodName, [...args])` -> `Array`
 Invokes the method named by `methodName` on each element in the collection,
 returning an array of the results of each invoked method. Any additional
 arguments are provided to each invoked method. If `methodName` is a function
@@ -1871,7 +1871,7 @@ _.invoke([123, 456], String.prototype.split, '');
 // => [['1', '2', '3'], ['4', '5', '6']]
 ```
 <a name="_.collect"></a>
-###_.collect(collection, [iteratee], [thisArg]) -> `Array`
+###`_.collect(collection, [iteratee], [thisArg])` -> `Array`
 Creates an array of values by running each element in the collection through
 `iteratee`. The `iteratee` is bound to `thisArg` and invoked with three
 arguments; (value, index|key, collection).
@@ -1910,7 +1910,7 @@ _.map(users, 'user');
 // => ['barney', 'fred']
 ```
 <a name="_.max"></a>
-###_.max(collection, [iteratee], [thisArg]) -> `*`
+###`_.max(collection, [iteratee], [thisArg])` -> `*`
 Retrieves the maximum value of `collection`. If the collection is empty
 or falsey `-Infinity` is returned. If an iteratee function is provided it
 is invoked for each value in the collection to generate the criterion by
@@ -1954,7 +1954,7 @@ _.max(users, 'age');
 // => { 'user': 'fred', 'age': 40 };
 ```
 <a name="_.min"></a>
-###_.min(collection, [iteratee], [thisArg]) -> `*`
+###`_.min(collection, [iteratee], [thisArg])` -> `*`
 Retrieves the minimum value of `collection`. If the collection is empty
 or falsey `Infinity` is returned. If an iteratee function is provided it
 is invoked for each value in the collection to generate the criterion by
@@ -1998,7 +1998,7 @@ _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
 ```
 <a name="_.dropRightWhile"></a>
-###_.dropRightWhile(array, [predicate], [thisArg]) -> `Array`
+###`_.dropRightWhile(array, [predicate], [thisArg])` -> `Array`
 Creates a slice of `array` excluding elements dropped from the end.
 Elements are dropped until the predicate returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
@@ -2039,7 +2039,7 @@ _.pluck(_.dropRightWhile(users, { 'employer': 'na' }), 'user');
 // => ['barney', 'fred']
 ```
 <a name="_.pluck"></a>
-###_.pluck(collection, key) -> `Array`
+###`_.pluck(collection, key)` -> `Array`
 Retrieves the value of a specified property from all elements in the collection.
 
 **Params**
@@ -2063,7 +2063,7 @@ _.pluck(userIndex, 'age');
 // => [36, 40] (iteration order is not guaranteed)
 ```
 <a name="_.foldr"></a>
-###_.foldr(collection, [iteratee], [accumulator], [thisArg]) -> `*`
+###`_.foldr(collection, [iteratee], [accumulator], [thisArg])` -> `*`
 This method is like `_.reduce` except that it iterates over elements of
 `collection` from right to left.
 
@@ -2082,7 +2082,7 @@ _.reduceRight(array, function(flattened, other) { return flattened.concat(other)
 // => [4, 5, 2, 3, 0, 1]
 ```
 <a name="_.reject"></a>
-###_.reject(collection, [predicate], [thisArg]) -> `Array`
+###`_.reject(collection, [predicate], [thisArg])` -> `Array`
 The opposite of `_.filter`; this method returns the elements of `collection`
 the predicate does **not** return truthy for.
 
@@ -2121,7 +2121,7 @@ _.reject(users, { 'age': 36 });
 // => [{ 'user': 'fred', 'age': 40, 'blocked': true }]
 ```
 <a name="_.sample"></a>
-###_.sample(collection, [n]) -> `*`
+###`_.sample(collection, [n])` -> `*`
 Retrieves a random element or `n` random elements from a collection.
 
 **Params**
@@ -2139,7 +2139,7 @@ _.sample([1, 2, 3, 4], 2);
 // => [3, 1]
 ```
 <a name="_.shuffle"></a>
-###_.shuffle(collection) -> `Array`
+###`_.shuffle(collection)` -> `Array`
 Creates an array of shuffled values, using a version of the Fisher-Yates
 shuffle. See [Wikipedia](http://en.wikipedia.org/wiki/Fisher-Yates_shuffle)
 for more details.
@@ -2155,7 +2155,7 @@ _.shuffle([1, 2, 3, 4]);
 // => [4, 1, 3, 2]
 ```
 <a name="_.size"></a>
-###_.size(collection) -> `number`
+###`_.size(collection)` -> `number`
 Gets the size of the collection by returning `collection.length` for
 array-like values or the number of own enumerable properties for objects.
 
@@ -2176,7 +2176,7 @@ _.size('pebbles');
 // => 7
 ```
 <a name="_.any"></a>
-###_.any(collection, [predicate], [thisArg]) -> `boolean`
+###`_.any(collection, [predicate], [thisArg])` -> `boolean`
 Checks if the predicate returns truthy for **any** element of `collection`.
 The function returns as soon as it finds a passing value and does not iterate
 over the entire collection. The predicate is bound to `thisArg` and invoked
@@ -2218,7 +2218,7 @@ _.some(users, { 'age': 1 });
 // => false
 ```
 <a name="_.sortBy"></a>
-###_.sortBy(collection, [iteratee], [thisArg]) -> `Array`
+###`_.sortBy(collection, [iteratee], [thisArg])` -> `Array`
 Creates an array of elements, sorted in ascending order by the results of
 running each element in a collection through `iteratee`. This method performs
 a stable sort, that is, it preserves the original sort order of equal elements.
@@ -2268,7 +2268,7 @@ _.map(_.sortBy(users, ['user', 'age']), _.values);
 // = > [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]
 ```
 <a name="_.toArray"></a>
-###_.toArray(collection) -> `Array`
+###`_.toArray(collection)` -> `Array`
 Converts `collection` to an array.
 
 **Params**
@@ -2282,7 +2282,7 @@ Converts `collection` to an array.
 // => [2, 3, 4]
 ```
 <a name="_.where"></a>
-###_.where(collection, source) -> `Array`
+###`_.where(collection, source)` -> `Array`
 Performs a deep comparison between each element in `collection` and the
 source object, returning an array of all elements that have equivalent
 property values.
@@ -2310,7 +2310,7 @@ _.pluck(_.where(users, { 'employer': 'slate' }), 'user');
 // => ['barney', 'fred']
 ```
 <a name="_.after"></a>
-###_.after(n, func) -> `function`
+###`_.after(n, func)` -> `function`
 The opposite of `_.before`; this method creates a function that invokes
 `func` only after it is called `n` times.
 
@@ -2334,7 +2334,7 @@ _.forEach(saves, function(type) {
 // => logs 'done saving!' after the two async saves have completed
 ```
 <a name="_.before"></a>
-###_.before(n, func) -> `function`
+###`_.before(n, func)` -> `function`
 Creates a function that invokes `func`, with the `this` binding and arguments
 of the created function, while it is called less than `n` times. Subsequent
 calls to the created function return the result of the last `func` invocation.
@@ -2351,7 +2351,7 @@ jQuery('#add').on('click', _.before(5, addContactToList));
 // => allows adding up to 4 contacts to the list
 ```
 <a name="_.bind"></a>
-###_.bind(func, [thisArg], [...args]) -> `function`
+###`_.bind(func, [thisArg], [...args])` -> `function`
 Creates a function that invokes `func` with the `this` binding of `thisArg`
 and prepends any additional `bind` arguments to those provided to the bound
 function.
@@ -2377,7 +2377,7 @@ func();
 // => 'hi fred'
 ```
 <a name="_.bindAll"></a>
-###_.bindAll(object, [methodNames]) -> `Object`
+###`_.bindAll(object, [methodNames])` -> `Object`
 Binds methods of an object to the object itself, overwriting the existing
 method. Method names may be specified as individual arguments or as arrays
 of method names. If no method names are provided all enumerable function
@@ -2404,7 +2404,7 @@ jQuery('#docs').on('click', view.onClick);
 // => logs 'clicked docs' when the element is clicked
 ```
 <a name="_.bindKey"></a>
-###_.bindKey(object, key, [...args]) -> `function`
+###`_.bindKey(object, key, [...args])` -> `function`
 Creates a function that invokes the method at `object[key]` and prepends
 any additional `bindKey` arguments to those provided to the bound function.
 This method differs from `_.bind` by allowing bound functions to reference
@@ -2440,7 +2440,7 @@ func();
 // => 'hiya fred!'
 ```
 <a name="_.curry"></a>
-###_.curry(func, [arity]) -> `function`
+###`_.curry(func, [arity])` -> `function`
 Creates a function that accepts one or more arguments of `func` that when
 called either invokes `func` returning its result if all `func` arguments
 have been provided, or returns a function that accepts one or more of the
@@ -2471,7 +2471,7 @@ curried(1, 2, 3);
 // => [1, 2, 3]
 ```
 <a name="_.curryRight"></a>
-###_.curryRight(func, [arity]) -> `function`
+###`_.curryRight(func, [arity])` -> `function`
 This method is like `_.curry` except that arguments are applied to `func`
 in the manner of `_.partialRight` instead of `_.partial`.
 
@@ -2499,7 +2499,7 @@ curried(1, 2, 3);
 // => [1, 2, 3]
 ```
 <a name="_.debounce"></a>
-###_.debounce(func, wait, [options]) -> `function`
+###`_.debounce(func, wait, [options])` -> `function`
 Creates a function that delays invoking `func` until after `wait` milliseconds
 have elapsed since the last time it was invoked. The created function comes
 with a `cancel` method to cancel delayed invocations. Provide an options
@@ -2562,7 +2562,7 @@ models.todo.completed = true;
 delete models.todo;
 ```
 <a name="_.defer"></a>
-###_.defer(func, [...args]) -> `number`
+###`_.defer(func, [...args])` -> `number`
 Defers invoking the `func` until the current call stack has cleared. Any
 additional arguments are provided to `func` when it is invoked.
 
@@ -2578,7 +2578,7 @@ _.defer(function(text) { console.log(text); }, 'deferred');
 // logs 'deferred' after one or more milliseconds
 ```
 <a name="_.delay"></a>
-###_.delay(func, wait, [...args]) -> `number`
+###`_.delay(func, wait, [...args])` -> `number`
 Invokes `func` after `wait` milliseconds. Any additional arguments are
 provided to `func` when it is invoked.
 
@@ -2595,7 +2595,7 @@ _.delay(function(text) { console.log(text); }, 1000, 'later');
 // => logs 'later' after one second
 ```
 <a name="_.flow"></a>
-###_.flow([...funcs]) -> `function`
+###`_.flow([...funcs])` -> `function`
 Creates a function that invokes the provided functions with the `this`
 binding of the created function, where each successive invocation is
 supplied the return value of the previous.
@@ -2620,7 +2620,7 @@ addSquare(1, 2);
 // => 9
 ```
 <a name="_.memoize"></a>
-###_.memoize(func, [resolver]) -> `function`
+###`_.memoize(func, [resolver])` -> `function`
 Creates a function that memoizes the result of `func`. If `resolver` is
 provided it determines the cache key for storing the result based on the
 arguments provided to the memoized function. By default, the first argument
@@ -2656,7 +2656,7 @@ upperCase('fred');
 // => 'BARNEY'
 ```
 <a name="_.negate"></a>
-###_.negate(predicate) -> `function`
+###`_.negate(predicate)` -> `function`
 Creates a function that negates the result of the predicate `func`. The
 `func` predicate is invoked with the `this` binding and arguments of the
 created function.
@@ -2676,7 +2676,7 @@ _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
 // => [1, 3, 5]
 ```
 <a name="_.dropWhile"></a>
-###_.dropWhile(array, [predicate], [thisArg]) -> `Array`
+###`_.dropWhile(array, [predicate], [thisArg])` -> `Array`
 Creates a slice of `array` excluding elements dropped from the beginning.
 Elements are dropped until the predicate returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
@@ -2717,7 +2717,7 @@ _.pluck(_.dropWhile(users, { 'employer': 'slate' }), 'user');
 // => ['pebbles']
 ```
 <a name="_.partial"></a>
-###_.partial(func, [...args]) -> `function`
+###`_.partial(func, [...args])` -> `function`
 Creates a function that invokes `func` with `partial` arguments prepended
 to those provided to the new function. This method is similar to `_.bind`
 except it does **not** alter the `this` binding.
@@ -2739,7 +2739,7 @@ sayHelloTo('fred');
 // => 'hello fred'
 ```
 <a name="_.partialRight"></a>
-###_.partialRight(func, [...args]) -> `function`
+###`_.partialRight(func, [...args])` -> `function`
 This method is like `_.partial` except that partially applied arguments
 are appended to those provided to the new function.
 
@@ -2771,7 +2771,7 @@ defaultsDeep(object, source);
 // => { 'a': { 'b': { 'c': 1, 'd': 2 } } }
 ```
 <a name="_.throttle"></a>
-###_.throttle(func, wait, [options]) -> `function`
+###`_.throttle(func, wait, [options])` -> `function`
 Creates a function that only invokes `func` at most once per every `wait`
 milliseconds. The created function comes with a `cancel` method to cancel
 delayed invocations. Provide an options object to indicate that `func`
@@ -2810,7 +2810,7 @@ jQuery('.interactive').on('click', throttled);
 jQuery(window).on('popstate', throttled.cancel);
 ```
 <a name="_.wrap"></a>
-###_.wrap(value, wrapper) -> `function`
+###`_.wrap(value, wrapper)` -> `function`
 Creates a function that provides `value` to the wrapper function as its
 first argument. Any additional arguments provided to the function are
 appended to those provided to the wrapper function. The wrapper is invoked
@@ -2832,7 +2832,7 @@ p('fred, barney, & pebbles');
 // => '<p>fred, barney, &amp; pebbles</p>'
 ```
 <a name="_.clone"></a>
-###_.clone(value, [isDeep], [customizer], [thisArg]) -> `*`
+###`_.clone(value, [isDeep], [customizer], [thisArg])` -> `*`
 Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,
 otherwise they are assigned by reference. If `customizer` is provided it is
 invoked to produce the cloned values. If `customizer` returns `undefined`
@@ -2879,7 +2879,7 @@ clone.childNodes.length;
 // => 0
 ```
 <a name="_.cloneDeep"></a>
-###_.cloneDeep(value, [customizer], [thisArg]) -> `*`
+###`_.cloneDeep(value, [customizer], [thisArg])` -> `*`
 Creates a deep clone of `value`. If `customizer` is provided it is invoked
 to produce the cloned values. If `customizer` returns `undefined` cloning
 is handled by the method instead. The `customizer` is bound to `thisArg`
@@ -2922,7 +2922,7 @@ clone.node == view.node;
 // => false
 ```
 <a name="_.isArguments"></a>
-###_.isArguments(value) -> `boolean`
+###`_.isArguments(value)` -> `boolean`
 Checks if `value` is classified as an `arguments` object.
 
 **Params**
@@ -2939,7 +2939,7 @@ _.isArguments([1, 2, 3]);
 // => false
 ```
 <a name="_.findIndex"></a>
-###_.findIndex(array, [predicate], [thisArg]) -> `number`
+###`_.findIndex(array, [predicate], [thisArg])` -> `number`
 This method is like `_.find` except that it returns the index of the first
 element the predicate returns truthy for, instead of the element itself.
 
@@ -2981,7 +2981,7 @@ _.findIndex(users, 'blocked');
 // => 1
 ```
 <a name="_.isBoolean"></a>
-###_.isBoolean(value) -> `boolean`
+###`_.isBoolean(value)` -> `boolean`
 Checks if `value` is classified as a boolean primitive or object.
 
 **Params**
@@ -2998,7 +2998,7 @@ _.isBoolean(null);
 // => false
 ```
 <a name="_.isDate"></a>
-###_.isDate(value) -> `boolean`
+###`_.isDate(value)` -> `boolean`
 Checks if `value` is classified as a `Date` object.
 
 **Params**
@@ -3015,7 +3015,7 @@ _.isDate('Mon April 23 2012');
 // => false
 ```
 <a name="_.isElement"></a>
-###_.isElement(value) -> `boolean`
+###`_.isElement(value)` -> `boolean`
 Checks if `value` is a DOM element.
 
 **Params**
@@ -3032,7 +3032,7 @@ _.isElement('<body>');
 // => false
 ```
 <a name="_.isEmpty"></a>
-###_.isEmpty(value) -> `boolean`
+###`_.isEmpty(value)` -> `boolean`
 Checks if a collection is empty. A value is considered empty unless it is
 an array-like value with a length greater than `0` or an object with own
 enumerable properties.
@@ -3060,7 +3060,7 @@ _.isEmpty({ 'a': 1 });
 // => false
 ```
 <a name="_.isEqual"></a>
-###_.isEqual(value, other, [customizer], [thisArg]) -> `boolean`
+###`_.isEqual(value, other, [customizer], [thisArg])` -> `boolean`
 Performs a deep comparison between two values to determine if they are
 equivalent. If `customizer` is provided it is invoked to compare values.
 If `customizer` returns `undefined` comparisons are handled by the method
@@ -3100,7 +3100,7 @@ _.isEqual(words, otherWords, function() {
 // => true
 ```
 <a name="_.isError"></a>
-###_.isError(value) -> `boolean`
+###`_.isError(value)` -> `boolean`
 Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 `SyntaxError`, `TypeError`, or `URIError` object.
 
@@ -3118,7 +3118,7 @@ _.isError(Error);
 // => false
 ```
 <a name="_.findLastIndex"></a>
-###_.findLastIndex(array, [predicate], [thisArg]) -> `number`
+###`_.findLastIndex(array, [predicate], [thisArg])` -> `number`
 This method is like `_.findIndex` except that it iterates over elements
 of `collection` from right to left.
 
@@ -3160,7 +3160,7 @@ _.findLastIndex(users, 'blocked');
 // => 2
 ```
 <a name="_.isFunction"></a>
-###_.isFunction(value) -> `boolean`
+###`_.isFunction(value)` -> `boolean`
 Checks if `value` is classified as a `Function` object.
 
 **Params**
@@ -3177,7 +3177,7 @@ _.isFunction(/abc/);
 // => false
 ```
 <a name="_.isObject"></a>
-###_.isObject(value) -> `boolean`
+###`_.isObject(value)` -> `boolean`
 Checks if `value` is the language type of `Object`.
 (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
 
@@ -3200,7 +3200,7 @@ _.isObject(1);
 // => false
 ```
 <a name="_.isNaN"></a>
-###_.isNaN(value) -> `boolean`
+###`_.isNaN(value)` -> `boolean`
 Checks if `value` is `NaN`.
 
 **Note:** This method is not the same as native `isNaN` which returns `true`
@@ -3227,7 +3227,7 @@ _.isNaN(undefined);
 // => false
 ```
 <a name="_.isNative"></a>
-###_.isNative(value) -> `boolean`
+###`_.isNative(value)` -> `boolean`
 Checks if `value` is a native function.
 
 **Params**
@@ -3244,7 +3244,7 @@ _.isNative(_);
 // => false
 ```
 <a name="_.isNull"></a>
-###_.isNull(value) -> `boolean`
+###`_.isNull(value)` -> `boolean`
 Checks if `value` is `null`.
 
 **Params**
@@ -3261,7 +3261,7 @@ _.isNull(void 0);
 // => false
 ```
 <a name="_.isNumber"></a>
-###_.isNumber(value) -> `boolean`
+###`_.isNumber(value)` -> `boolean`
 Checks if `value` is classified as a `Number` primitive or object.
 
 **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are classified
@@ -3284,7 +3284,7 @@ _.isNumber('8.4');
 // => false
 ```
 <a name="_.head"></a>
-###_.head(array) -> `*`
+###`_.head(array)` -> `*`
 Gets the first element of `array`.
 
 **Params**
@@ -3301,7 +3301,7 @@ _.first([]);
 // => undefined
 ```
 <a name="_.isRegExp"></a>
-###_.isRegExp(value) -> `boolean`
+###`_.isRegExp(value)` -> `boolean`
 Checks if `value` is classified as a `RegExp` object.
 
 **Params**
@@ -3318,7 +3318,7 @@ _.isRegExp('/abc/');
 // => false
 ```
 <a name="_.isString"></a>
-###_.isString(value) -> `boolean`
+###`_.isString(value)` -> `boolean`
 Checks if `value` is classified as a `String` primitive or object.
 
 **Params**
@@ -3335,7 +3335,7 @@ _.isString(1);
 // => false
 ```
 <a name="_.isUndefined"></a>
-###_.isUndefined(value) -> `boolean`
+###`_.isUndefined(value)` -> `boolean`
 Checks if `value` is `undefined`.
 
 **Params**
@@ -3352,7 +3352,7 @@ _.isUndefined(null);
 // => false
 ```
 <a name="_.flatten"></a>
-###_.flatten(array, [isDeep]) -> `Array`
+###`_.flatten(array, [isDeep])` -> `Array`
 Flattens a nested array. If `isDeep` is `true` the array is recursively
 flattened, otherwise it is only flattened a single level.
 
@@ -3372,7 +3372,7 @@ _.flatten([1, [2], [3, [[4]]]], true);
 // => [1, 2, 3, 4];
 ```
 <a name="_.create"></a>
-###_.create(prototype, [properties]) -> `Object`
+###`_.create(prototype, [properties])` -> `Object`
 Creates an object that inherits from the given `prototype` object. If a
 `properties` object is provided its own enumerable properties are assigned
 to the created object.
@@ -3404,7 +3404,7 @@ circle instanceof Shape;
 // => true
 ```
 <a name="_.defaults"></a>
-###_.defaults(object, [...sources]) -> `Object`
+###`_.defaults(object, [...sources])` -> `Object`
 Assigns own enumerable properties of source object(s) to the destination
 object for all destination properties that resolve to `undefined`. Once a
 property is set, additional defaults of the same property are ignored.
@@ -3424,7 +3424,7 @@ _.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 's
 // => { 'user': 'barney', 'age': 36, 'employer': 'slate' }
 ```
 <a name="_.findKey"></a>
-###_.findKey(object, [predicate], [thisArg]) -> `string`,`undefined`
+###`_.findKey(object, [predicate], [thisArg])` -> `string | undefined`
 This method is like `_.findIndex` except that it returns the key of the
 first element the predicate returns truthy for, instead of the element itself.
 
@@ -3466,7 +3466,7 @@ _.findKey(users, 'blocked');
 // => 'fred'
 ```
 <a name="_.findLastKey"></a>
-###_.findLastKey(object, [predicate], [thisArg]) -> `string`,`undefined`
+###`_.findLastKey(object, [predicate], [thisArg])` -> `string | undefined`
 This method is like `_.findKey` except that it iterates over elements of
 a collection in the opposite order.
 
@@ -3508,7 +3508,7 @@ _.findLastKey(users, 'blocked');
 // => 'pebbles'
 ```
 <a name="_.forIn"></a>
-###_.forIn(object, [iteratee], [thisArg]) -> `Object`
+###`_.forIn(object, [iteratee], [thisArg])` -> `Object`
 Iterates over own and inherited enumerable properties of an object invoking
 `iteratee` for each property. The `iteratee` is bound to `thisArg` and invoked
 with three arguments; (value, key, object). Iterator functions may exit
@@ -3536,7 +3536,7 @@ _.forIn(new Shape, function(value, key) {
 // => logs 'x', 'y', and 'z' (iteration order is not guaranteed)
 ```
 <a name="_.forInRight"></a>
-###_.forInRight(object, [iteratee], [thisArg]) -> `Object`
+###`_.forInRight(object, [iteratee], [thisArg])` -> `Object`
 This method is like `_.forIn` except that it iterates over properties of
 `object` in the opposite order.
 
@@ -3562,7 +3562,7 @@ _.forInRight(new Shape, function(value, key) {
 // => logs 'z', 'y', and 'x' assuming `_.forIn ` logs 'x', 'y', and 'z'
 ```
 <a name="_.forOwn"></a>
-###_.forOwn(object, [iteratee], [thisArg]) -> `Object`
+###`_.forOwn(object, [iteratee], [thisArg])` -> `Object`
 Iterates over own enumerable properties of an object invoking `iteratee`
 for each property. The `iteratee` is bound to `thisArg` and invoked with
 three arguments; (value, key, object). Iterator functions may exit iteration
@@ -3583,7 +3583,7 @@ _.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 // => logs '0', '1', and 'length' (iteration order is not guaranteed)
 ```
 <a name="_.forOwnRight"></a>
-###_.forOwnRight(object, [iteratee], [thisArg]) -> `Object`
+###`_.forOwnRight(object, [iteratee], [thisArg])` -> `Object`
 This method is like `_.forOwn` except that it iterates over properties of
 `object` in the opposite order.
 
@@ -3602,7 +3602,7 @@ _.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 // => logs 'length', '1', and '0' assuming `_.forOwn` logs '0', '1', and 'length'
 ```
 <a name="_.methods"></a>
-###_.methods(object) -> `Array`
+###`_.methods(object)` -> `Array`
 Creates an array of function property names from all enumerable properties,
 own and inherited, of `object`.
 
@@ -3617,7 +3617,7 @@ _.functions(_);
 // => ['all', 'any', 'bind', ...]
 ```
 <a name="_.has"></a>
-###_.has(object, key) -> `boolean`
+###`_.has(object, key)` -> `boolean`
 Checks if the specified property name exists as a direct property of `object`,
 instead of an inherited property.
 
@@ -3633,7 +3633,7 @@ _.has({ 'a': 1, 'b': 2, 'c': 3 }, 'b');
 // => true
 ```
 <a name="_.invert"></a>
-###_.invert(object, [multiValue]) -> `Object`
+###`_.invert(object, [multiValue])` -> `Object`
 Creates an object composed of the inverted keys and values of the given
 object. If the given object contains duplicate values, subsequent values
 overwrite property assignments of previous values unless `multiValue`
@@ -3659,7 +3659,7 @@ _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);
 // => { 'fred': ['first', 'third'], 'barney': ['second'] }
 ```
 <a name="_.flattenDeep"></a>
-###_.flattenDeep(array) -> `Array`
+###`_.flattenDeep(array)` -> `Array`
 Recursively flattens a nested array.
 
 **Params**
@@ -3673,7 +3673,7 @@ _.flattenDeep([1, [2], [3, [[4]]]]);
 // => [1, 2, 3, 4];
 ```
 <a name="_.keysIn"></a>
-###_.keysIn(object) -> `Array`
+###`_.keysIn(object)` -> `Array`
 Creates an array of the own and inherited enumerable property names of `object`.
 
 **Params**
@@ -3694,7 +3694,7 @@ _.keysIn(new Shape);
 // => ['x', 'y', 'z'] (iteration order is not guaranteed)
 ```
 <a name="_.mapValues"></a>
-###_.mapValues(object, [iteratee], [thisArg]) -> `Object`
+###`_.mapValues(object, [iteratee], [thisArg])` -> `Object`
 Creates an object with the same keys as `object` and values generated by
 running each own enumerable property of `object` through `iteratee`. The
 iteratee function is bound to `thisArg` and invoked with three arguments;
@@ -3731,7 +3731,7 @@ _.mapValues(users, 'age');
 // => { 'fred': 40, 'pebbles': 1 }
 ```
 <a name="_.indexOf"></a>
-###_.indexOf(array, value, [fromIndex]) -> `number`
+###`_.indexOf(array, value, [fromIndex])` -> `number`
 Gets the index at which the first occurrence of `value` is found in `array`
 using `SameValueZero` for equality comparisons. If `fromIndex` is negative,
 it is used as the offset from the end of the collection. If `array` is
@@ -3763,7 +3763,7 @@ _.indexOf([4, 4, 5, 5, 6, 6], 5, true);
 // => 2
 ```
 <a name="_.omit"></a>
-###_.omit(object, [...predicate], [thisArg]) -> `Object`
+###`_.omit(object, [...predicate], [thisArg])` -> `Object`
 Creates a shallow clone of `object` excluding the specified properties.
 Property names may be specified as individual arguments or as arrays of
 property names. If a predicate is provided it is invoked for each property
@@ -3791,7 +3791,7 @@ _.omit({ 'user': 'fred', 'age': 40 }, function(value) {
 // => { 'user': 'fred' }
 ```
 <a name="_.pairs"></a>
-###_.pairs(object) -> `Array`
+###`_.pairs(object)` -> `Array`
 Creates a two dimensional array of a given object's key-value pairs,
 e.g. `[[key1, value1], [key2, value2]]`.
 
@@ -3806,7 +3806,7 @@ _.pairs({ 'barney': 36, 'fred': 40 });
 // => [['barney', 36], ['fred', 40]] (iteration order is not guaranteed)
 ```
 <a name="_.pick"></a>
-###_.pick(object, [...predicate], [thisArg]) -> `Object`
+###`_.pick(object, [...predicate], [thisArg])` -> `Object`
 Creates a shallow clone of `object` composed of the specified properties.
 Property names may be specified as individual arguments or as arrays of
 property names. If a predicate is provided it is invoked for each property
@@ -3834,7 +3834,7 @@ _.pick({ 'user': 'fred', '_userid': 'fred1' }, function(value, key) {
 // => { 'user': 'fred' }
 ```
 <a name="_.transform"></a>
-###_.transform(object, [iteratee], [accumulator], [thisArg]) -> `*`
+###`_.transform(object, [iteratee], [accumulator], [thisArg])` -> `*`
 An alternative to `_.reduce`; this method transforms `object` to a new
 `accumulator` object which is the result of running each of its own
 enumerable properties through `iteratee`, with each invocation potentially
@@ -3866,7 +3866,7 @@ var mapped = _.transform({ 'a': 1, 'b': 2, 'c': 3 }, function(result, n, key) {
 // => { 'a': 3, 'b': 6, 'c': 9 }
 ```
 <a name="_.values"></a>
-###_.values(object) -> `Array`
+###`_.values(object)` -> `Array`
 Creates an array of the own enumerable property values of `object`.
 
 **Params**
@@ -3887,7 +3887,7 @@ _.values(new Shape(2, 1));
 // => [2, 1] (iteration order is not guaranteed)
 ```
 <a name="_.valuesIn"></a>
-###_.valuesIn(object) -> `Array`
+###`_.valuesIn(object)` -> `Array`
 Creates an array of the own and inherited enumerable property values
 of `object`.
 
@@ -3909,7 +3909,7 @@ _.valuesIn(new Shape(2, 1));
 // => [2, 1, 0] (iteration order is not guaranteed)
 ```
 <a name="_.initial"></a>
-###_.initial(array) -> `Array`
+###`_.initial(array)` -> `Array`
 Gets all but the last element of `array`.
 
 **Params**
@@ -3923,7 +3923,7 @@ _.initial([1, 2, 3]);
 // => [1, 2]
 ```
 <a name="_.capitalize"></a>
-###_.capitalize([string]) -> `string`
+###`_.capitalize([string])` -> `string`
 Capitalizes the first character of `string`.
 
 **Params**
@@ -3937,7 +3937,7 @@ _.capitalize('fred');
 // => 'Fred'
 ```
 <a name="_.deburr"></a>
-###_.deburr([string]) -> `string`
+###`_.deburr([string])` -> `string`
 Deburrs `string` by converting latin-1 supplementary letters to basic latin letters.
 See [Wikipedia](http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)
 for more details.
@@ -3953,7 +3953,7 @@ _.deburr('déjà vu');
 // => 'deja vu'
 ```
 <a name="_.endsWith"></a>
-###_.endsWith([string], [target], [position]) -> `boolean`
+###`_.endsWith([string], [target], [position])` -> `boolean`
 Checks if `string` ends with a given target string.
 
 **Params**
@@ -3976,7 +3976,7 @@ _.endsWith('abc', 'b', 2);
 // => true
 ```
 <a name="_.escape"></a>
-###_.escape([string]) -> `string`
+###`_.escape([string])` -> `string`
 Converts the characters "&", "<", ">", '"', "'", and '`', in `string` to
 their corresponding HTML entities.
 
@@ -3998,7 +3998,7 @@ _.escape('fred, barney, & pebbles');
 // => 'fred, barney, &amp; pebbles'
 ```
 <a name="_.escapeRegExp"></a>
-###_.escapeRegExp([string]) -> `string`
+###`_.escapeRegExp([string])` -> `string`
 Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 "+", "(", ")", "[", "]", "{" and "}" in `string`.
 
@@ -4013,7 +4013,7 @@ _.escapeRegExp('[lodash](http://lodash.com/)');
 // => '\[lodash\]\(http://lodash\.com/\)'
 ```
 <a name="_.intersection"></a>
-###_.intersection([...arrays]) -> `Array`
+###`_.intersection([...arrays])` -> `Array`
 Creates an array of unique values present in all provided arrays using
 `SameValueZero` for equality comparisons.
 
@@ -4032,7 +4032,7 @@ _.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 // => [1, 2]
 ```
 <a name="_.pad"></a>
-###_.pad([string], [length], [chars]) -> `string`
+###`_.pad([string], [length], [chars])` -> `string`
 Pads `string` on the left and right sides if it is shorter then the given
 padding length. The `chars` string may be truncated if the number of padding
 characters can't be evenly divided by the padding length.
@@ -4056,7 +4056,7 @@ _.pad('abc', 3);
 // => 'abc'
 ```
 <a name="_.padLeft"></a>
-###_.padLeft([string], [length], [chars]) -> `string`
+###`_.padLeft([string], [length], [chars])` -> `string`
 Pads `string` on the left side if it is shorter then the given padding
 length. The `chars` string may be truncated if the number of padding
 characters exceeds the padding length.
@@ -4080,7 +4080,7 @@ _.padLeft('abc', 3);
 // => 'abc'
 ```
 <a name="_.padRight"></a>
-###_.padRight([string], [length], [chars]) -> `string`
+###`_.padRight([string], [length], [chars])` -> `string`
 Pads `string` on the right side if it is shorter then the given padding
 length. The `chars` string may be truncated if the number of padding
 characters exceeds the padding length.
@@ -4104,7 +4104,7 @@ _.padRight('abc', 3);
 // => 'abc'
 ```
 <a name="_.repeat"></a>
-###_.repeat([string], [n]) -> `string`
+###`_.repeat([string], [n])` -> `string`
 Repeats the given string `n` times.
 
 **Params**
@@ -4125,7 +4125,7 @@ _.repeat('abc', 0);
 // => ''
 ```
 <a name="_.last"></a>
-###_.last(array) -> `*`
+###`_.last(array)` -> `*`
 Gets the last element of `array`.
 
 **Params**
@@ -4139,7 +4139,7 @@ _.last([1, 2, 3]);
 // => 3
 ```
 <a name="_.startsWith"></a>
-###_.startsWith([string], [target], [position]) -> `boolean`
+###`_.startsWith([string], [target], [position])` -> `boolean`
 Checks if `string` starts with a given target string.
 
 **Params**
@@ -4162,7 +4162,7 @@ _.startsWith('abc', 'b', 1);
 // => true
 ```
 <a name="_.template"></a>
-###_.template([string], [options]) -> `function`
+###`_.template([string], [options])` -> `function`
 Creates a compiled template function that can interpolate data properties
 in "interpolate" delimiters, HTML-escape interpolated data properties in
 "escape" delimiters, and execute JavaScript in "evaluate" delimiters. Data
@@ -4258,7 +4258,7 @@ fs.writeFileSync(path.join(cwd, 'jst.js'), '\
 ');
 ```
 <a name="_.trim"></a>
-###_.trim([string], [chars]) -> `string`
+###`_.trim([string], [chars])` -> `string`
 Removes leading and trailing whitespace or specified characters from `string`.
 
 **Params**
@@ -4276,7 +4276,7 @@ _.trim('-_-fred-_-', '_-');
 // => 'fred'
 ```
 <a name="_.trimLeft"></a>
-###_.trimLeft([string], [chars]) -> `string`
+###`_.trimLeft([string], [chars])` -> `string`
 Removes leading whitespace or specified characters from `string`.
 
 **Params**
@@ -4294,7 +4294,7 @@ _.trimLeft('-_-fred-_-', '_-');
 // => 'fred-_-'
 ```
 <a name="_.trimRight"></a>
-###_.trimRight([string], [chars]) -> `string`
+###`_.trimRight([string], [chars])` -> `string`
 Removes trailing whitespace or specified characters from `string`.
 
 **Params**
@@ -4312,7 +4312,7 @@ _.trimRight('-_-fred-_-', '_-');
 // => '-_-fred'
 ```
 <a name="_.trunc"></a>
-###_.trunc([string], [options]) -> `string`
+###`_.trunc([string], [options])` -> `string`
 Truncates `string` if it is longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to "...".
@@ -4344,7 +4344,7 @@ _.trunc('hi-diddly-ho there, neighborino', { 'omission': ' [...]' });
 // => 'hi-diddly-ho there, neig [...]'
 ```
 <a name="_.unescape"></a>
-###_.unescape([string]) -> `string`
+###`_.unescape([string])` -> `string`
 The inverse of `_.escape`; this method converts the HTML entities
 `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#39;`, and `&#96;` in `string` to their
 corresponding characters.
@@ -4363,7 +4363,7 @@ _.unescape('fred, barney, &amp; pebbles');
 // => 'fred, barney, & pebbles'
 ```
 <a name="_.words"></a>
-###_.words([string], [pattern]) -> `Array`
+###`_.words([string], [pattern])` -> `Array`
 Splits `string` into an array of its words.
 
 **Params**
@@ -4381,7 +4381,7 @@ _.words('fred, barney, & pebbles', /[^, ]+/g);
 // => ['fred', 'barney', '&', 'pebbles']
 ```
 <a name="_.attempt"></a>
-###_.attempt(func) -> `*`
+###`_.attempt(func)` -> `*`
 Attempts to invoke `func`, returning either the result or the caught
 error object.
 
@@ -4402,7 +4402,7 @@ if (_.isError(elements)) {
 }
 ```
 <a name="_.iteratee"></a>
-###_.iteratee([func], [thisArg]) -> `function`
+###`_.iteratee([func], [thisArg])` -> `function`
 Creates a function bound to an optional `thisArg`. If `func` is a property
 name the created callback returns the property value for a given element.
 If `func` is an object the created callback returns `true` for elements
@@ -4436,7 +4436,7 @@ _.filter(users, 'age__gt38');
 // => [{ 'user': 'fred', 'age': 40 }]
 ```
 <a name="_.constant"></a>
-###_.constant(value) -> `function`
+###`_.constant(value)` -> `function`
 Creates a function that returns `value`.
 
 **Params**
@@ -4452,7 +4452,7 @@ getter() === object;
 // => true
 ```
 <a name="_.identity"></a>
-###_.identity(value) -> `*`
+###`_.identity(value)` -> `*`
 This method returns the first argument provided to it.
 
 **Params**
@@ -4467,7 +4467,7 @@ _.identity(object) === object;
 // => true
 ```
 <a name="_.matches"></a>
-###_.matches(source) -> `function`
+###`_.matches(source)` -> `function`
 Creates a "_.where" style predicate function which performs a deep comparison
 between a given object and the `source` object, returning `true` if the given
 object has equivalent property values, else `false`.
@@ -4493,7 +4493,7 @@ _.find(users, matchesAge);
 // => { 'user': 'barney', 'age': 36 }
 ```
 <a name="_.mixin"></a>
-###_.mixin([object], source, [options]) -> `function`,`Object`
+###`_.mixin([object], source, [options])` -> `function | Object`
 Adds all own enumerable function properties of a source object to the
 destination object. If `object` is a function then methods are added to
 its prototype as well.
@@ -4527,7 +4527,7 @@ _('fred').vowels();
 // => ['e']
 ```
 <a name="_.noConflict"></a>
-###_.noConflict() -> `function`
+###`_.noConflict()` -> `function`
 Reverts the `_` variable to its previous value and returns a reference to
 the `lodash` function.
 
@@ -4537,7 +4537,7 @@ the `lodash` function.
 var lodash = _.noConflict();
 ```
 <a name="_.noop"></a>
-###_.noop()
+###`_.noop()`
 A no-operation function.
 
 **Example**  
@@ -4547,7 +4547,7 @@ _.noop(object) === undefined;
 // => true
 ```
 <a name="_.lastIndexOf"></a>
-###_.lastIndexOf(array, value, [fromIndex]) -> `number`
+###`_.lastIndexOf(array, value, [fromIndex])` -> `number`
 This method is like `_.indexOf` except that it iterates over elements of
 `array` from right to left.
 
@@ -4573,7 +4573,7 @@ _.lastIndexOf([4, 4, 5, 5, 6, 6], 5, true);
 // => 3
 ```
 <a name="_.parseInt"></a>
-###_.parseInt(value, [radix]) -> `number`
+###`_.parseInt(value, [radix])` -> `number`
 Converts `value` to an integer of the specified radix. If `radix` is
 `undefined` or `0`, a `radix` of `10` is used unless `value` is a hexadecimal,
 in which case a `radix` of `16` is used.
@@ -4593,7 +4593,7 @@ _.parseInt('08');
 // => 8
 ```
 <a name="_.property"></a>
-###_.property(key) -> `function`
+###`_.property(key)` -> `function`
 Creates a "_.pluck" style function which returns the `key` value of a
 given object.
 
@@ -4618,7 +4618,7 @@ _.sortBy(users, getName);
 // => [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred',   'age': 40 }]
 ```
 <a name="_.random"></a>
-###_.random([min], [max], [floating]) -> `number`
+###`_.random([min], [max], [floating])` -> `number`
 Produces a random number between `min` and `max` (inclusive). If only one
 argument is provided a number between `0` and the given number is returned.
 If `floating` is `true`, or either `min` or `max` are floats, a floating-point
@@ -4646,7 +4646,7 @@ _.random(1.2, 5.2);
 // => a floating-point number between 1.2 and 5.2
 ```
 <a name="_.range"></a>
-###_.range([start], end, [step]) -> `Array`
+###`_.range([start], end, [step])` -> `Array`
 Creates an array of numbers (positive and/or negative) progressing from
 `start` up to but not including `end`. If `start` is less than `stop` a
 zero-length range is created unless a negative `step` is specified.
@@ -4679,7 +4679,7 @@ _.range(0);
 // => []
 ```
 <a name="_.result"></a>
-###_.result(object, key, [defaultValue]) -> `*`
+###`_.result(object, key, [defaultValue])` -> `*`
 Resolves the value of property `key` on `object`. If `key` is a function
 it is invoked with the `this` binding of `object` and its result returned,
 else the property value is returned. If `object` is `null` or `undefined`
@@ -4713,7 +4713,7 @@ _.result(object, 'employer', 'slate');
 // => 'slate'
 ```
 <a name="_.times"></a>
-###_.times(n, [iteratee], [thisArg]) -> `Array`
+###`_.times(n, [iteratee], [thisArg])` -> `Array`
 Invokes the iteratee function `n` times, returning an array of the results
 of each invocation. The `iteratee` is bound to `thisArg` and invoked with
 one argument; (index).
@@ -4737,7 +4737,7 @@ _.times(3, function(n) { this.cast(n); }, mage);
 // => also invokes `mage.castSpell(n)` three times
 ```
 <a name="_.uniqueId"></a>
-###_.uniqueId([prefix]) -> `string`
+###`_.uniqueId([prefix])` -> `string`
 Generates a unique ID. If `prefix` is provided the ID is appended to it.
 
 **Params**
