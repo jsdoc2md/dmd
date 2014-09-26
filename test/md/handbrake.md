@@ -8,7 +8,7 @@ var hbjs = require("handbrake-js");
 ```
 * [handbrake-js](#module_handbrake-js)
   * [hbjs.cliOptions](#module_handbrake-js.cliOptions)
-  * [hbjs.spawn(options) -> module:handbrake-js~Handbrake](#module_handbrake-js.spawn)
+  * [hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`](#module_handbrake-js.spawn)
   * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
     * [handbrake.output](#module_handbrake-js..Handbrake#output)
@@ -27,7 +27,7 @@ var hbjs = require("handbrake-js");
 
 **Type**: `array`  
 <a name="module_handbrake-js.spawn"></a>
-###hbjs.spawn(options) -> module:handbrake-js~Handbrake
+###hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
 **Params**

@@ -6,7 +6,7 @@
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two) -> number ⏏](#exp_module_cjs/function-alias^sum)
+  * [sum(one, two) ⇒ `number` ⏏](#exp_module_cjs/function-alias^sum)
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams ⏏](#exp_module_cjs/object-alias^teams)
 * [cjs/object](#module_cjs/object)
@@ -23,7 +23,7 @@
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
-* [globalFunction() -> string | object | function](#globalFunction)
+* [globalFunction() ⇒ `string | object | function`](#globalFunction)
 * [globalVar](#globalVar)
 
 <a name="module_cjs/class"></a>
@@ -63,7 +63,7 @@ inner module property
 exports a pointer to a function
 
 <a name="exp_module_cjs/function-alias^sum"></a>
-###sum(one, two) -> number ⏏
+###sum(one, two) ⇒ `number` ⏏
 the function
 
 **Params**
@@ -177,7 +177,7 @@ Fire an event, causing all handlers for that event name to run.
 - eventData `Object` - The data provided to each handler.  
 
 <a name="globalFunction"></a>
-##globalFunction() -> string | object | function
+##globalFunction() ⇒ `string | object | function`
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
