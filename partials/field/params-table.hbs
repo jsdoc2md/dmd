@@ -1,0 +1,8 @@
+{{#if params}}**Params**
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+{{#each params~}}
+| {{{name}}} | {{{join (linkTo type.names style="code") " | "}}} | {{{description}}} |
+{{/each~}}
+{{/if~}}

@@ -68,9 +68,10 @@ the function
 
 **Params**
 
-- one `number` - the first number  
-- two `number` - the second number  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | `number` | the first number |
+| two | `number` | the second number |
 **Returns**: `number` - the calculation result  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
@@ -115,9 +116,10 @@ the global class constructor
 
 **Params**
 
-- one `number` - first param  
-- two `string` - second param  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | `number` | first param |
+| two | `string` | second param |
 <a name="GlobalClass#propOne"></a>
 ###globalClass.propOne
 an instance property
@@ -142,9 +144,10 @@ a global function
 
 **Params**
 
-- one `number` - first param  
-- two `string` - second param  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | `number` | first param |
+| two | `string` | second param |
 <a name="phantom"></a>
 ##mixin: phantom
 phantom mixin
@@ -164,18 +167,20 @@ Register a handler function to be called whenever this event is fired.
 
 **Params**
 
-- eventName `string` - Name of the event.  
-- handler `function` - The handler to call.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | `string` | Name of the event. |
+| handler | `function` | The handler to call. |
 <a name="Eventful.fire"></a>
 ###Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
 **Params**
 
-- eventName `string` - Name of the event.  
-- eventData `Object` - The data provided to each handler.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | `string` | Name of the event. |
+| eventData | `Object` | The data provided to each handler. |
 <a name="globalFunction"></a>
 ##globalFunction() ⇒ `string | object | function`
 a global function returning multiple stuff

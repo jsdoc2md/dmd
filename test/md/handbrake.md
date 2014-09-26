@@ -32,8 +32,9 @@ Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake
 
 **Params**
 
-- options `Object` | `Array` - [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | `Object` | `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
 **Returns**: <code>[Handbrake](#module_handbrake-js..Handbrake)</code> - A `Handbrake` instance  
 **Example**  
 ```js
@@ -49,9 +50,10 @@ Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLI
 
 **Params**
 
-- options `Object` - [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI  
-- \[onComplete\] `function` - If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | `Object` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+| onComplete | `function` | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
 **Example**  
 ```js
 var hbjs = require("handbrake-js");

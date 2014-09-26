@@ -33,12 +33,13 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 ####`new MapView(options)`
 **Params**
 
-- options `Object` - Options.  
-  - type `MapType` - Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET).  
-  - mapOptions `Object` - Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'.  
-  - \[id\] `String` - Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface.  
-  - \[zoomTransition\] `Transition` - Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used).  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | `Object` | Options. |
+| options.type | `MapType` | Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET). |
+| options.mapOptions | `Object` | Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'. |
+| options.id | `String` | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
+| options.zoomTransition | `Transition` | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
 <a name="module_MapView^MapView.DEFAULT_OPTIONS"></a>
 ####`MapView.DEFAULT_OPTIONS`
 **Access**: protected  
@@ -54,10 +55,11 @@ Set the center of the map to the given geographical coordinates.
 
 **Params**
 
-- position `LatLng` - Position in geographical coordinates.  
-- \[transition\] `Transitionable` - Transitionable.  
-- \[callback\] `function` - callback to call after transition completes.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| position | `LatLng` | Position in geographical coordinates. |
+| transition | `Transitionable` | Transitionable. |
+| callback | `function` | callback to call after transition completes. |
 <a name="module_MapView^MapView#getPosition"></a>
 ####`mapView.getPosition()` ⇒ `LatLng`
 Get the current center position of the map, in geographical coordinates.
@@ -81,8 +83,9 @@ Get the position in pixels (relative to the left-top of the container) for the g
 
 **Params**
 
-- position `LatLng` - in geographical coordinates.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| position | `LatLng` | in geographical coordinates. |
 **Returns**: `Point` - Position in pixels, relative to the left-top of the mapView.  
 <a name="module_MapView^MapView#positionFromPoint"></a>
 ####`mapView.positionFromPoint(point)` ⇒ `LatLng`
@@ -90,8 +93,9 @@ Get the geographical coordinates for a given position in pixels (relative to the
 
 **Params**
 
-- point `Point` - Position in pixels, relative to the left-top of the mapView.  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| point | `Point` | Position in pixels, relative to the left-top of the mapView. |
 **Returns**: `LatLng` - Position in geographical coordinates.  
 <a name="module_MapView^MapView#getSize"></a>
 ####`mapView.getSize()` ⇒ `Array.Number`
