@@ -1,12 +1,12 @@
 ##Modules
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
-    * [new ExportedClass()](#new_module_cjs/class^ExportedClass◊)
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass())
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two) ⏏](#exp_module_cjs/function-alias^sum)
+  * [sum(one, two) -> `number` ⏏](#exp_module_cjs/function-alias^sum)
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams ⏏](#exp_module_cjs/object-alias^teams)
 * [cjs/object](#module_cjs/object)
@@ -15,7 +15,7 @@
 
 ##Global
 * [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass◊)
+  * [new GlobalClass(one, two)](#new_GlobalClass())
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 * [exampleVar](#exampleVar)
@@ -23,6 +23,7 @@
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
+* [globalFunction() -> `string`](#globalFunction)
 * [globalVar](#globalVar)
 
 <a name="module_cjs/class"></a>
@@ -31,7 +32,7 @@ exports a class
 
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
-    * [new ExportedClass()](#new_module_cjs/class^ExportedClass◊)
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass())
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
@@ -40,7 +41,7 @@ exports a class
 ###class: ExportedClass ⏏
 the exported class
 
-<a name="new_module_cjs/class^ExportedClass◊"></a>
+<a name="new_module_cjs/class^ExportedClass()"></a>
 ####new ExportedClass()
 the exported contructor
 
@@ -62,7 +63,7 @@ inner module property
 exports a pointer to a function
 
 <a name="exp_module_cjs/function-alias^sum"></a>
-###sum(one, two) ⏏
+###sum(one, two) -> `number` ⏏
 the function
 
 **Params**
@@ -104,11 +105,11 @@ a global class
 
 **Extends**: `String`  
 * [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass◊)
+  * [new GlobalClass(one, two)](#new_GlobalClass())
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
-<a name="new_GlobalClass◊"></a>
+<a name="new_GlobalClass()"></a>
 ###new GlobalClass(one, two)
 the global class constructor
 
@@ -175,6 +176,11 @@ Fire an event, causing all handlers for that event name to run.
 - eventName `string` - Name of the event.  
 - eventData `Object` - The data provided to each handler.  
 
+<a name="globalFunction"></a>
+##globalFunction() -> `string`
+a global function returning multiple stuff
+
+**Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
 <a name="globalVar"></a>
 ##globalVar
 a global var

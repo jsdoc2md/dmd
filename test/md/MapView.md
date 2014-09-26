@@ -14,22 +14,22 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 
 * [MapView](#module_MapView)
   * [class: MapView ⏏](#exp_module_MapView^MapView)
-    * [new MapView(options)](#new_module_MapView^MapView◊)
+    * [new MapView(options)](#new_module_MapView^MapView())
     * [MapView.DEFAULT_OPTIONS](#module_MapView^MapView.DEFAULT_OPTIONS)
-    * [mapView.getMap()](#module_MapView^MapView#getMap)
+    * [mapView.getMap() -> `Map`](#module_MapView^MapView#getMap)
     * [mapView.setPosition(position, [transition], [callback])](#module_MapView^MapView#setPosition)
-    * [mapView.getPosition()](#module_MapView^MapView#getPosition)
-    * [mapView.getFinalPosition()](#module_MapView^MapView#getFinalPosition)
-    * [mapView.getZoom()](#module_MapView^MapView#getZoom)
-    * [mapView.pointFromPosition(position)](#module_MapView^MapView#pointFromPosition)
-    * [mapView.positionFromPoint(point)](#module_MapView^MapView#positionFromPoint)
-    * [mapView.getSize()](#module_MapView^MapView#getSize)
+    * [mapView.getPosition() -> `LatLng`](#module_MapView^MapView#getPosition)
+    * [mapView.getFinalPosition() -> `LatLng`](#module_MapView^MapView#getFinalPosition)
+    * [mapView.getZoom() -> `Number`](#module_MapView^MapView#getZoom)
+    * [mapView.pointFromPosition(position) -> `Point`](#module_MapView^MapView#pointFromPosition)
+    * [mapView.positionFromPoint(point) -> `LatLng`](#module_MapView^MapView#positionFromPoint)
+    * [mapView.getSize() -> `Array.Number`](#module_MapView^MapView#getSize)
     * [mapView.halt()](#module_MapView^MapView#halt)
-    * [mapView.isActive()](#module_MapView^MapView#isActive)
+    * [mapView.isActive() -> `Bool`](#module_MapView^MapView#isActive)
 
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏
-<a name="new_module_MapView^MapView◊"></a>
+<a name="new_module_MapView^MapView()"></a>
 ####new MapView(options)
 **Params**
 
@@ -43,7 +43,7 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 ####MapView.DEFAULT_OPTIONS
 **Access**: protected  
 <a name="module_MapView^MapView#getMap"></a>
-####mapView.getMap()
+####mapView.getMap() -> `Map`
 Get the internal map-object. This object may not yet have been initialized, the map is only
 guarenteed to be valid after the 'load' event has been emited.
 
@@ -59,24 +59,24 @@ Set the center of the map to the given geographical coordinates.
 - \[callback\] `function` - callback to call after transition completes.  
 
 <a name="module_MapView^MapView#getPosition"></a>
-####mapView.getPosition()
+####mapView.getPosition() -> `LatLng`
 Get the current center position of the map, in geographical coordinates.
 
 **Returns**: `LatLng` - Position in geographical coordinates.  
 <a name="module_MapView^MapView#getFinalPosition"></a>
-####mapView.getFinalPosition()
+####mapView.getFinalPosition() -> `LatLng`
 Get the destination center position of the map, in geographical coordinates.
 
 **Returns**: `LatLng` - Position in geographical coordinates.  
 <a name="module_MapView^MapView#getZoom"></a>
-####mapView.getZoom()
+####mapView.getZoom() -> `Number`
 Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.
 E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
 at 5, over time. The used zoomTransition can be set as an option.
 
 **Returns**: `Number` - Zoom-level.  
 <a name="module_MapView^MapView#pointFromPosition"></a>
-####mapView.pointFromPosition(position)
+####mapView.pointFromPosition(position) -> `Point`
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
 
 **Params**
@@ -85,7 +85,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 
 **Returns**: `Point` - Position in pixels, relative to the left-top of the mapView.  
 <a name="module_MapView^MapView#positionFromPoint"></a>
-####mapView.positionFromPoint(point)
+####mapView.positionFromPoint(point) -> `LatLng`
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
 
 **Params**
@@ -94,7 +94,7 @@ Get the geographical coordinates for a given position in pixels (relative to the
 
 **Returns**: `LatLng` - Position in geographical coordinates.  
 <a name="module_MapView^MapView#getSize"></a>
-####mapView.getSize()
+####mapView.getSize() -> `Array.Number`
 Get the size of the map-view in pixels.
 
 **Returns**: `Array.Number` - Size of the mapView.  
@@ -103,7 +103,7 @@ Get the size of the map-view in pixels.
 Halts any pending transitions.
 
 <a name="module_MapView^MapView#isActive"></a>
-####mapView.isActive()
+####mapView.isActive() -> `Bool`
 Is there at least one action pending completion?
 
 **Returns**: `Bool` - True when there are active transitions running.  

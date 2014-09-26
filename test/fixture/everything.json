@@ -17,7 +17,7 @@
     "memberof": "module:cjs/class"
   },
   {
-    "id": "module:cjs/class^ExportedClass◊",
+    "id": "module:cjs/class^ExportedClass()",
     "name": "ExportedClass",
     "kind": "constructor",
     "description": "the exported contructor",
@@ -157,7 +157,7 @@
     "description": "a global class"
   },
   {
-    "id": "GlobalClass◊",
+    "id": "GlobalClass()",
     "name": "GlobalClass",
     "kind": "constructor",
     "description": "the global class constructor",
@@ -317,6 +317,33 @@
       }
     ],
     "codeName": "fire"
+  },
+  {
+    "id": "globalFunction",
+    "name": "globalFunction",
+    "scope": "global",
+    "kind": "function",
+    "description": "a global function returning multiple stuff",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "if something you get a string back"
+      },
+      {
+        "type": {
+          "names": [
+            "object",
+            "function"
+          ]
+        },
+        "description": "or an object, or function"
+      }
+    ],
+    "codeName": "globalFunction"
   },
   {
     "id": "globalVar",

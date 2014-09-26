@@ -13,16 +13,16 @@ try{
 test("returns correct data", function(t){
     t.plan(1);
     
-    fs.createReadStream("test/fixture/module.json").pipe(dmd()).on("readable", function(){
+    fs.createReadStream("test/fixture/everything.json").pipe(dmd()).on("readable", function(){
         var md = this.read();
-        if (md) t.ok(/this module exports a class constructor/.test(md.toString()));
+        if (md) t.ok(/exports a class/.test(md.toString()));
     });
 });
 
 test("cli check", function(t){
     t.plan(1);
     
-    var inputFile = fs.openSync("test/fixture/module.json", "r");
+    var inputFile = fs.openSync("test/fixture/everything.json", "r");
     var outputFile = fs.openSync("tmp/class.md", "w");
     
     var handle = spawn("node", [ path.join("bin", "cli.js") ], { 
@@ -30,18 +30,8 @@ test("cli check", function(t){
     });
     handle.on("close", function(){
         var md = fs.readFileSync("tmp/class.md", "utf8");
-        if (md) t.ok(/this module exports a class constructor/.test(md.toString()));
+        if (md) t.ok(/exports a class/.test(md.toString()));
     });
-});
-
-test("linkify", function (t) {
-    t.plan(1);
-
-    fs.createReadStream("test/fixture/module.json").pipe(dmd()).on("readable", function () {
-        var md = this.read();
-        if (md) t.ok(md.toString().indexOf('[instance](http://zombo.com)') >= 0);
-    });
-
 });
 
 test("partials");

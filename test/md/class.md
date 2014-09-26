@@ -6,11 +6,11 @@ a global class
 
 **Extends**: `String`  
 * [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass◊)
+  * [new GlobalClass(one, two)](#new_GlobalClass())
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
-<a name="new_GlobalClass◊"></a>
+<a name="new_GlobalClass()"></a>
 ###new GlobalClass(one, two)
 the global class constructor
 

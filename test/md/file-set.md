@@ -8,7 +8,7 @@ var fileSet = require("file-set");
 ```
 * [file-set](#module_file-set)
   * [class: FileSet ⏏](#exp_module_file-set^FileSet)
-    * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+    * [new FileSet(patternList)](#new_module_file-set^FileSet())
     * [fileSet.list](#module_file-set^FileSet#list)
     * [fileSet.files](#module_file-set^FileSet#files)
     * [fileSet.dirs](#module_file-set^FileSet#dirs)
@@ -20,7 +20,7 @@ var fileSet = require("file-set");
 ###class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
-<a name="new_module_file-set^FileSet◊"></a>
+<a name="new_module_file-set^FileSet()"></a>
 ####new FileSet(patternList)
 **Params**
 

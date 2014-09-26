@@ -36,7 +36,6 @@
     "t3": "cat test/fixture/everything.json | dmd --template test/template/class.hbs > test/md/class.md",
     "t4": "cat test/fixture/everything.json | dmd --template test/template/modules.hbs > test/md/modules.md",
     "p": "npm run p1; npm run p2; npm run p3; npm run p4; npm run p5; echo",
-    "h": "npm run h1; npm run h2; npm run h3; npm run h4; npm run h5; echo",
     "m": "npm run m1; npm run m2; npm run m3; npm run m4; npm run m5; echo",
     "t": "npm run t1; npm run t2; npm run t3; npm run t4; ",
     "all": "npm run p; npm run m; npm run t; "
@@ -47,9 +46,7 @@
     "command-line-args": "~0.5.1",
     "console-dope": "~0.3.6",
     "ddata": "0.0.0",
-    "marked": "~0.3.2",
-    "object-tools": "^1.1.1",
-    "string-tools": "~0.1.5"
+    "object-tools": "^1.1.1"
   },
   "devDependencies": {
     "tape": "^3"

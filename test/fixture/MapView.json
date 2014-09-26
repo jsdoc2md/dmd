@@ -15,7 +15,7 @@
     "memberof": "module:MapView"
   },
   {
-    "id": "module:MapView^MapView◊",
+    "id": "module:MapView^MapView()",
     "name": "MapView",
     "kind": "constructor",
     "memberof": "module:MapView^MapView",

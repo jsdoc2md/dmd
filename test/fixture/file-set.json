@@ -20,7 +20,7 @@
     "memberof": "module:file-set"
   },
   {
-    "id": "module:file-set^FileSet◊",
+    "id": "module:file-set^FileSet()",
     "name": "FileSet",
     "kind": "constructor",
     "memberof": "module:file-set^FileSet",

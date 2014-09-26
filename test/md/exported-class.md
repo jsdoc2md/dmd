@@ -5,7 +5,7 @@
 Expands file patterns, returning the matched and unmatched files and directories
 
 * [class: FileSet ⏏](#exp_module_file-set^FileSet)
-  * [new FileSet(patternList)](#new_module_file-set^FileSet◊)
+  * [new FileSet(patternList)](#new_module_file-set^FileSet())
   * [fileSet.list](#module_file-set^FileSet#list)
   * [fileSet.files](#module_file-set^FileSet#files)
   * [fileSet.dirs](#module_file-set^FileSet#dirs)
@@ -13,7 +13,7 @@ Expands file patterns, returning the matched and unmatched files and directories
   * [fileSet.add(files)](#module_file-set^FileSet#add)
   * [enum: FileSet.eFileType](#module_file-set^FileSet.eFileType)
 
-<a name="new_module_file-set^FileSet◊"></a>
+<a name="new_module_file-set^FileSet()"></a>
 ###new FileSet(patternList)
 **Params**
 
