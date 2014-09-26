@@ -31,8 +31,6 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 ###class: MapView ⏏
 <a name="new_module_MapView^MapView()"></a>
 ####`new MapView(options)`
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | options | `Object` | Options. |
@@ -52,8 +50,6 @@ guarenteed to be valid after the 'load' event has been emited.
 <a name="module_MapView^MapView#setPosition"></a>
 ####`mapView.setPosition(position, [transition], [callback])`
 Set the center of the map to the given geographical coordinates.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -81,8 +77,6 @@ at 5, over time. The used zoomTransition can be set as an option.
 ####`mapView.pointFromPosition(position)` ⇒ `Point`
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | position | `LatLng` | in geographical coordinates. |
@@ -90,8 +84,6 @@ Get the position in pixels (relative to the left-top of the container) for the g
 <a name="module_MapView^MapView#positionFromPoint"></a>
 ####`mapView.positionFromPoint(point)` ⇒ `LatLng`
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |

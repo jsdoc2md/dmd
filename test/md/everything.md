@@ -66,8 +66,6 @@ exports a pointer to a function
 ###sum(one, two) ⇒ `number` ⏏
 the function
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | one | `number` | the first number |
@@ -114,8 +112,6 @@ a global class
 ###new GlobalClass(one, two)
 the global class constructor
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | one | `number` | first param |
@@ -142,8 +138,6 @@ var thisVar = funtion(){
 ##globalFunction(one, two)
 a global function
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | one | `number` | first param |
@@ -165,8 +159,6 @@ be used directly.
 ###Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | eventName | `string` | Name of the event. |
@@ -174,8 +166,6 @@ Register a handler function to be called whenever this event is fired.
 <a name="Eventful.fire"></a>
 ###Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |

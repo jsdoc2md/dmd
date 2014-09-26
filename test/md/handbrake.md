@@ -30,8 +30,6 @@ var hbjs = require("handbrake-js");
 ###hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | options | `Object` | `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
@@ -47,8 +45,6 @@ hbjs.spawn(options)
 <a name="module_handbrake-js.exec"></a>
 ###hbjs.exec(options, [onComplete])
 Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |

@@ -14,11 +14,10 @@ a global class
 ###new GlobalClass(one, two)
 the global class constructor
 
-**Params**
-
-- one `number` - first param  
-- two `string` - second param  
-
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | `number` | first param |
+| two | `string` | second param |
 <a name="GlobalClass#propOne"></a>
 ###globalClass.propOne
 an instance property

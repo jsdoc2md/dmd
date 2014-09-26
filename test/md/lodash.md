@@ -243,8 +243,6 @@ provided, otherwise it will return an unwrapped value.
 
 Explicit chaining can be enabled by using the `_.chain` method.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to wrap in a `lodash` instance. |
@@ -268,8 +266,6 @@ _.isArray(squares.value());
 <a name="_.isArray"></a>
 ###_.isArray ⇒ `boolean`
 Checks if `value` is classified as an `Array` object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -341,8 +337,6 @@ If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -376,8 +370,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -413,8 +405,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -454,8 +444,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -491,8 +479,6 @@ _.map(_.partition(users, 'blocked'), function(array) { return _.pluck(array, 'us
 Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first call. The `func` is invoked
 with the `this` binding of the created function.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -613,8 +599,6 @@ Checks if `value` is a finite primitive number.
 [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -643,8 +627,6 @@ a `[[Prototype]]` of `null`.
 
 **Note:** This method assumes objects created by the `Object` constructor
 have no inherited enumerable properties.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -677,8 +659,6 @@ If `customizer` is provided it is invoked to produce the assigned values.
 The `customizer` is bound to `thisArg` and invoked with five arguments;
 (objectValue, sourceValue, key, object, source).
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The destination object. |
@@ -701,8 +681,6 @@ defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 'sla
 <a name="_.keys"></a>
 ###_.keys ⇒ `Array`
 Creates an array of the own enumerable property names of `object`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -729,8 +707,6 @@ provided it is invoked to produce the merged values of the destination and
 source properties. If `customizer` returns `undefined` merging is handled
 by the method instead. The `customizer` is bound to `thisArg` and invoked
 with five arguments; (objectValue, sourceValue, key, object, source).
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -772,8 +748,6 @@ _.merge(food, otherFood, function(a, b) {
 Converts `string` to camel case.
 See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to camel case. |
@@ -795,8 +769,6 @@ Converts `string` to kebab case (a.k.a. spinal case).
 See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
 more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to kebab case. |
@@ -816,8 +788,6 @@ _.kebabCase('__hello_world__');
 ###_.snakeCase ⇒ `string`
 Converts `string` to snake case.
 See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -855,8 +825,6 @@ comparisons.
    See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
    for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to modify. |
@@ -876,8 +844,6 @@ returns an array of the removed elements. Indexes may be specified as an
 array of indexes or as individual arguments.
 
 **Note:** Unlike `_.at`, this method mutates `array`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -911,8 +877,6 @@ else `false`.
 
 **Note:** Unlike `_.filter`, this method mutates `array`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to modify. |
@@ -936,8 +900,6 @@ console.log(evens);
 ###_.tail(array) ⇒ `Array`
 Gets all but the first element of `array`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -953,8 +915,6 @@ Slices `array` from the `start` index up to, but not including, the `end` index.
 
 **Note:** This function is used instead of `Array#slice` to support node lists
 in IE < 9 and to ensure dense arrays are returned.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -976,8 +936,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1015,8 +973,6 @@ This method is like `_.sortedIndex` except that it returns the highest
 index at which a value should be inserted into a given sorted array in
 order to maintain the sort order of the array.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
@@ -1035,8 +991,6 @@ _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
 <a name="_.take"></a>
 ###_.take(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements taken from the beginning.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1061,8 +1015,6 @@ _.take([1, 2, 3], 0);
 <a name="_.takeRight"></a>
 ###_.takeRight(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements taken from the end.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1096,8 +1048,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1139,8 +1089,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -1177,8 +1125,6 @@ Creates an array of unique values, in order, of the provided arrays using
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to inspect. |
@@ -1207,8 +1153,6 @@ else `false`.
 **Note:** `SameValueZero` is like strict equality, e.g. `===`, except that
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1242,8 +1186,6 @@ This method is like `_.zip` except that it accepts an array of grouped
 elements and creates an array regrouping the elements to their pre `_.zip`
 configuration.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array of grouped elements to process. |
@@ -1265,8 +1207,6 @@ equality comparisons.
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to filter. |
@@ -1282,8 +1222,6 @@ _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 Creates an array that is the symmetric difference of the provided arrays.
 See [Wikipedia](http://en.wikipedia.org/wiki/Symmetric_difference) for
 more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1303,8 +1241,6 @@ Creates an array of grouped elements, the first of which contains the first
 elements of the given arrays, the second of which contains the second elements
 of the given arrays, and so on.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to process. |
@@ -1320,8 +1256,6 @@ Creates an object composed from arrays of property names and values. Provide
 either a single two dimensional array, e.g. `[[key1, value1], [key2, value2]]`
 or two arrays, one of property names and one of corresponding values.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | props | `Array` | The property names. |
@@ -1336,8 +1270,6 @@ _.zipObject(['fred', 'barney'], [30, 40]);
 ###_.chain(value) ⇒ `Object`
 Creates a `lodash` object that wraps `value` with explicit method
 chaining enabled.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1365,8 +1297,6 @@ bound to `thisArg` and invoked with one argument; (value). The purpose of
 this method is to "tap into" a method chain in order to perform operations
 on intermediate results within the chain.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to provide to `interceptor`. |
@@ -1385,8 +1315,6 @@ _([1, 2, 3])
 ###_.thru(value, interceptor, [thisArg]) ⇒ `*`
 This method is like `_.tap` except that it returns the result of `interceptor`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to provide to `interceptor`. |
@@ -1404,8 +1332,6 @@ _([1, 2, 3])
 <a name="_.runInContext"></a>
 ###_.runInContext([context]) ⇒ `function`
 Create a new pristine `lodash` function using the given `context` object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1522,8 +1448,6 @@ Creates an array of elements split into groups the length of `size`.
 If `collection` can't be split evenly, the final chunk will be the remaining
 elements.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to process. |
@@ -1542,8 +1466,6 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 Creates an array with all falsey values removed. The values `false`, `null`,
 `0`, `""`, `undefined`, and `NaN` are all falsey.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to compact. |
@@ -1558,8 +1480,6 @@ _.compact([0, 1, false, 2, '', 3]);
 Creates an array of elements corresponding to the specified keys, or indexes,
 of the collection. Keys may be specified as individual arguments or as arrays
 of keys.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1584,8 +1504,6 @@ from the end of the collection.
 **Note:** `SameValueZero` is like strict equality, e.g. `===`, except that
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1616,8 +1534,6 @@ Creates an array excluding all values of the provided arrays using
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
@@ -1640,8 +1556,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1683,8 +1597,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -1724,8 +1636,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to search. |
@@ -1760,8 +1670,6 @@ _.find(users, 'blocked');
 This method is like `_.find` except that it iterates over elements of
 `collection` from right to left.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to search. |
@@ -1780,8 +1688,6 @@ _.findLast([1, 2, 3, 4], function(n) { return n % 2 == 1; });
 Performs a deep comparison between each element in `collection` and the
 source object, returning the first element that has equivalent property
 values.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1812,8 +1718,6 @@ by explicitly returning `false`.
 are iterated like arrays. To avoid this behavior `_.forIn` or `_.forOwn`
 may be used for object iteration.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -1833,8 +1737,6 @@ _.forEach({ 'one': 1, 'two': 2, 'three': 3 }, function(n, key) { console.log(n, 
 This method is like `_.forEach` except that it iterates over elements of
 `collection` from right to left.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -1849,8 +1751,6 @@ _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 <a name="_.drop"></a>
 ###_.drop(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements dropped from the beginning.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1875,8 +1775,6 @@ _.drop([1, 2, 3], 0);
 <a name="_.dropRight"></a>
 ###_.dropRight(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements dropped from the end.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1905,8 +1803,6 @@ returning an array of the results of each invoked method. Any additional
 arguments are provided to each invoked method. If `methodName` is a function
 it is invoked for, and `this` bound to, each element in the collection.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -1934,8 +1830,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -1976,8 +1870,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2022,8 +1914,6 @@ If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -2065,8 +1955,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -2098,8 +1986,6 @@ _.pluck(_.dropRightWhile(users, { 'employer': 'na' }), 'user');
 ###_.pluck(collection, key) ⇒ `Array`
 Retrieves the value of a specified property from all elements in the collection.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -2123,8 +2009,6 @@ _.pluck(userIndex, 'age');
 ###_.foldr(collection, [iteratee], [accumulator], [thisArg]) ⇒ `*`
 This method is like `_.reduce` except that it iterates over elements of
 `collection` from right to left.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2150,8 +2034,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2183,8 +2065,6 @@ _.reject(users, { 'age': 36 });
 ###_.sample(collection, [n]) ⇒ `*`
 Retrieves a random element or `n` random elements from a collection.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to sample. |
@@ -2204,8 +2084,6 @@ Creates an array of shuffled values, using a version of the Fisher-Yates
 shuffle. See [Wikipedia](http://en.wikipedia.org/wiki/Fisher-Yates_shuffle)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to shuffle. |
@@ -2219,8 +2097,6 @@ _.shuffle([1, 2, 3, 4]);
 ###_.size(collection) ⇒ `number`
 Gets the size of the collection by returning `collection.length` for
 array-like values or the number of own enumerable properties for objects.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2250,8 +2126,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2298,8 +2172,6 @@ If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to iterate over. |
@@ -2335,8 +2207,6 @@ _.map(_.sortBy(users, ['user', 'age']), _.values);
 ###_.toArray(collection) ⇒ `Array`
 Converts `collection` to an array.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` | `Object` | `string` | The collection to convert. |
@@ -2351,8 +2221,6 @@ Converts `collection` to an array.
 Performs a deep comparison between each element in `collection` and the
 source object, returning an array of all elements that have equivalent
 property values.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2380,8 +2248,6 @@ _.pluck(_.where(users, { 'employer': 'slate' }), 'user');
 The opposite of `_.before`; this method creates a function that invokes
 `func` only after it is called `n` times.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | n | `number` | The number of calls before `func` is invoked. |
@@ -2406,8 +2272,6 @@ Creates a function that invokes `func`, with the `this` binding and arguments
 of the created function, while it is called less than `n` times. Subsequent
 calls to the created function return the result of the last `func` invocation.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | n | `number` | The number of calls at which `func` is no longer invoked. |
@@ -2426,8 +2290,6 @@ function.
 
 **Note:** Unlike native `Function#bind` this method does not set the `length`
 property of bound functions.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2454,8 +2316,6 @@ properties, own and inherited, of `object` are bound.
 
 **Note:** This method does not set the `length` property of bound functions.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to bind and assign the bound methods to. |
@@ -2481,8 +2341,6 @@ This method differs from `_.bind` by allowing bound functions to reference
 methods that may be redefined or don't yet exist.
 See [Peter Michaux's article](http://michaux.ca/articles/lazy-function-definition-pattern)
 for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2520,8 +2378,6 @@ if `func.length` is not sufficient.
 
 **Note:** This method does not set the `length` property of curried functions.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to curry. |
@@ -2548,8 +2404,6 @@ This method is like `_.curry` except that arguments are applied to `func`
 in the manner of `_.partialRight` instead of `_.partial`.
 
 **Note:** This method does not set the `length` property of curried functions.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2586,8 +2440,6 @@ invoked more than once during the `wait` timeout.
 
 See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
 for details over the differences between `_.debounce` and `_.throttle`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2640,8 +2492,6 @@ delete models.todo;
 Defers invoking the `func` until the current call stack has cleared. Any
 additional arguments are provided to `func` when it is invoked.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to defer. |
@@ -2656,8 +2506,6 @@ _.defer(function(text) { console.log(text); }, 'deferred');
 ###_.delay(func, wait, [...args]) ⇒ `number`
 Invokes `func` after `wait` milliseconds. Any additional arguments are
 provided to `func` when it is invoked.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2675,8 +2523,6 @@ _.delay(function(text) { console.log(text); }, 1000, 'later');
 Creates a function that invokes the provided functions with the `this`
 binding of the created function, where each successive invocation is
 supplied the return value of the previous.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2704,8 +2550,6 @@ arguments provided to the memoized function. By default, the first argument
 provided to the memoized function is used as the cache key. The `func` is
 invoked with the `this` binding of the memoized function. The result cache
 is exposed as the `cache` property on the memoized function.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2739,8 +2583,6 @@ Creates a function that negates the result of the predicate `func`. The
 `func` predicate is invoked with the `this` binding and arguments of the
 created function.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | predicate | `function` | The predicate to negate. |
@@ -2766,8 +2608,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2805,8 +2645,6 @@ except it does **not** alter the `this` binding.
 **Note:** This method does not set the `length` property of partially
 applied functions.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to partially apply arguments to. |
@@ -2826,8 +2664,6 @@ are appended to those provided to the new function.
 
 **Note:** This method does not set the `length` property of partially applied
 functions.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2868,8 +2704,6 @@ invoked more than once during the `wait` timeout.
 See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
 for details over the differences between `_.throttle` and `_.debounce`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to throttle. |
@@ -2899,8 +2733,6 @@ first argument. Any additional arguments provided to the function are
 appended to those provided to the wrapper function. The wrapper is invoked
 with the `this` binding of the created function.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to wrap. |
@@ -2928,8 +2760,6 @@ and DOM nodes are **not** cloned. The enumerable properties of `arguments` objec
 objects created by constructors other than `Object` are cloned to plain `Object` objects.
 See the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)
 for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -2976,8 +2806,6 @@ objects created by constructors other than `Object` are cloned to plain `Object`
 See the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to deep clone. |
@@ -3011,8 +2839,6 @@ clone.node == view.node;
 ###_.isArguments(value) ⇒ `boolean`
 Checks if `value` is classified as an `arguments` object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3036,8 +2862,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3072,8 +2896,6 @@ _.findIndex(users, 'blocked');
 ###_.isBoolean(value) ⇒ `boolean`
 Checks if `value` is classified as a boolean primitive or object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3090,8 +2912,6 @@ _.isBoolean(null);
 ###_.isDate(value) ⇒ `boolean`
 Checks if `value` is classified as a `Date` object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3107,8 +2927,6 @@ _.isDate('Mon April 23 2012');
 <a name="_.isElement"></a>
 ###_.isElement(value) ⇒ `boolean`
 Checks if `value` is a DOM element.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3127,8 +2945,6 @@ _.isElement('<body>');
 Checks if a collection is empty. A value is considered empty unless it is
 an array-like value with a length greater than `0` or an object with own
 enumerable properties.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3164,8 +2980,6 @@ numbers, `Object` objects, regexes, and strings. Functions and DOM nodes
 are **not** supported. Provide a customizer function to extend support
 for comparing other values.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to compare to `other`. |
@@ -3197,8 +3011,6 @@ _.isEqual(words, otherWords, function() {
 Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 `SyntaxError`, `TypeError`, or `URIError` object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3222,8 +3034,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3258,8 +3068,6 @@ _.findLastIndex(users, 'blocked');
 ###_.isFunction(value) ⇒ `boolean`
 Checks if `value` is classified as a `Function` object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3278,8 +3086,6 @@ Checks if `value` is the language type of `Object`.
 (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
 
 **Note:** See the [ES5 spec](http://es5.github.io/#x8) for more details.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3304,8 +3110,6 @@ Checks if `value` is `NaN`.
 for `undefined` and other non-numeric values. See the [ES5 spec](http://es5.github.io/#x15.1.2.4)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3328,8 +3132,6 @@ _.isNaN(undefined);
 ###_.isNative(value) ⇒ `boolean`
 Checks if `value` is a native function.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3345,8 +3147,6 @@ _.isNative(_);
 <a name="_.isNull"></a>
 ###_.isNull(value) ⇒ `boolean`
 Checks if `value` is `null`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3367,8 +3167,6 @@ Checks if `value` is classified as a `Number` primitive or object.
 **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are classified
 as numbers, use the `_.isFinite` method.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3388,8 +3186,6 @@ _.isNumber('8.4');
 ###_.head(array) ⇒ `*`
 Gets the first element of `array`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -3405,8 +3201,6 @@ _.first([]);
 <a name="_.isRegExp"></a>
 ###_.isRegExp(value) ⇒ `boolean`
 Checks if `value` is classified as a `RegExp` object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3424,8 +3218,6 @@ _.isRegExp('/abc/');
 ###_.isString(value) ⇒ `boolean`
 Checks if `value` is classified as a `String` primitive or object.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
@@ -3441,8 +3233,6 @@ _.isString(1);
 <a name="_.isUndefined"></a>
 ###_.isUndefined(value) ⇒ `boolean`
 Checks if `value` is `undefined`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3460,8 +3250,6 @@ _.isUndefined(null);
 ###_.flatten(array, [isDeep]) ⇒ `Array`
 Flattens a nested array. If `isDeep` is `true` the array is recursively
 flattened, otherwise it is only flattened a single level.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3482,8 +3270,6 @@ _.flatten([1, [2], [3, [[4]]]], true);
 Creates an object that inherits from the given `prototype` object. If a
 `properties` object is provided its own enumerable properties are assigned
 to the created object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3519,8 +3305,6 @@ property is set, additional defaults of the same property are ignored.
 **Note:** See the [documentation example of `_.partialRight`](http://lodash.com/docs#partialRight)
 for a deep version of this method.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The destination object. |
@@ -3542,8 +3326,6 @@ callback returns the property value of the given element.
 If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3586,8 +3368,6 @@ If an object is provided for `predicate` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to search. |
@@ -3624,8 +3404,6 @@ Iterates over own and inherited enumerable properties of an object invoking
 with three arguments; (value, key, object). Iterator functions may exit
 iteration early by explicitly returning `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to iterate over. |
@@ -3650,8 +3428,6 @@ _.forIn(new Shape, function(value, key) {
 ###_.forInRight(object, [iteratee], [thisArg]) ⇒ `Object`
 This method is like `_.forIn` except that it iterates over properties of
 `object` in the opposite order.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3680,8 +3456,6 @@ for each property. The `iteratee` is bound to `thisArg` and invoked with
 three arguments; (value, key, object). Iterator functions may exit iteration
 early by explicitly returning `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to iterate over. |
@@ -3699,8 +3473,6 @@ _.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 ###_.forOwnRight(object, [iteratee], [thisArg]) ⇒ `Object`
 This method is like `_.forOwn` except that it iterates over properties of
 `object` in the opposite order.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3720,8 +3492,6 @@ _.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 Creates an array of function property names from all enumerable properties,
 own and inherited, of `object`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
@@ -3735,8 +3505,6 @@ _.functions(_);
 ###_.has(object, key) ⇒ `boolean`
 Checks if the specified property name exists as a direct property of `object`,
 instead of an inherited property.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3754,8 +3522,6 @@ Creates an object composed of the inverted keys and values of the given
 object. If the given object contains duplicate values, subsequent values
 overwrite property assignments of previous values unless `multiValue`
 is `true`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3779,8 +3545,6 @@ _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);
 ###_.flattenDeep(array) ⇒ `Array`
 Recursively flattens a nested array.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to recursively flatten. |
@@ -3793,8 +3557,6 @@ _.flattenDeep([1, [2], [3, [[4]]]]);
 <a name="_.keysIn"></a>
 ###_.keysIn(object) ⇒ `Array`
 Creates an array of the own and inherited enumerable property names of `object`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3825,8 +3587,6 @@ callback returns the property value of the given element.
 If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3861,8 +3621,6 @@ sorted providing `true` for `fromIndex` performs a faster binary search.
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
@@ -3892,8 +3650,6 @@ of `object` omitting the properties the predicate returns truthy for. The
 predicate is bound to `thisArg` and invoked with three arguments;
 (value, key, object).
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The source object. |
@@ -3917,8 +3673,6 @@ _.omit({ 'user': 'fred', 'age': 40 }, function(value) {
 Creates a two dimensional array of a given object's key-value pairs,
 e.g. `[[key1, value1], [key2, value2]]`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
@@ -3936,8 +3690,6 @@ property names. If a predicate is provided it is invoked for each property
 of `object` picking the properties the predicate returns truthy for. The
 predicate is bound to `thisArg` and invoked with three arguments;
 (value, key, object).
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -3966,8 +3718,6 @@ mutating the `accumulator` object. The `iteratee` is bound to `thisArg`
 and invoked with four arguments; (accumulator, value, key, object). Iterator
 functions may exit iteration early by explicitly returning `false`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Array` | `Object` | The object to iterate over. |
@@ -3994,8 +3744,6 @@ var mapped = _.transform({ 'a': 1, 'b': 2, 'c': 3 }, function(result, n, key) {
 ###_.values(object) ⇒ `Array`
 Creates an array of the own enumerable property values of `object`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
@@ -4017,8 +3765,6 @@ _.values(new Shape(2, 1));
 Creates an array of the own and inherited enumerable property values
 of `object`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
@@ -4039,8 +3785,6 @@ _.valuesIn(new Shape(2, 1));
 ###_.initial(array) ⇒ `Array`
 Gets all but the last element of `array`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -4053,8 +3797,6 @@ _.initial([1, 2, 3]);
 <a name="_.capitalize"></a>
 ###_.capitalize([string]) ⇒ `string`
 Capitalizes the first character of `string`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4071,8 +3813,6 @@ Deburrs `string` by converting latin-1 supplementary letters to basic latin lett
 See [Wikipedia](http://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to deburr. |
@@ -4085,8 +3825,6 @@ _.deburr('déjà vu');
 <a name="_.endsWith"></a>
 ###_.endsWith([string], [target], [position]) ⇒ `boolean`
 Checks if `string` ends with a given target string.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4118,8 +3856,6 @@ When working with HTML you should always quote attribute values to reduce
 XSS vectors. See [Ryan Grove's article](http://wonko.com/post/html-escaping)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to escape. |
@@ -4133,8 +3869,6 @@ _.escape('fred, barney, & pebbles');
 ###_.escapeRegExp([string]) ⇒ `string`
 Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 "+", "(", ")", "[", "]", "{" and "}" in `string`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4154,8 +3888,6 @@ Creates an array of unique values present in all provided arrays using
 `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to inspect. |
@@ -4170,8 +3902,6 @@ _.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 Pads `string` on the left and right sides if it is shorter then the given
 padding length. The `chars` string may be truncated if the number of padding
 characters can't be evenly divided by the padding length.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4196,8 +3926,6 @@ Pads `string` on the left side if it is shorter then the given padding
 length. The `chars` string may be truncated if the number of padding
 characters exceeds the padding length.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to pad. |
@@ -4221,8 +3949,6 @@ Pads `string` on the right side if it is shorter then the given padding
 length. The `chars` string may be truncated if the number of padding
 characters exceeds the padding length.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to pad. |
@@ -4244,8 +3970,6 @@ _.padRight('abc', 3);
 ###_.repeat([string], [n]) ⇒ `string`
 Repeats the given string `n` times.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to repeat. |
@@ -4266,8 +3990,6 @@ _.repeat('abc', 0);
 ###_.last(array) ⇒ `*`
 Gets the last element of `array`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
@@ -4280,8 +4002,6 @@ _.last([1, 2, 3]);
 <a name="_.startsWith"></a>
 ###_.startsWith([string], [target], [position]) ⇒ `boolean`
 Checks if `string` starts with a given target string.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4318,8 +4038,6 @@ For more information on precompiling templates see
 
 For more information on Chrome extension sandboxes see
 [Chrome's extensions documentation](http://developer.chrome.com/stable/extensions/sandboxingEval.html).
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4402,8 +4120,6 @@ fs.writeFileSync(path.join(cwd, 'jst.js'), '\
 ###_.trim([string], [chars]) ⇒ `string`
 Removes leading and trailing whitespace or specified characters from `string`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to trim. |
@@ -4421,8 +4137,6 @@ _.trim('-_-fred-_-', '_-');
 ###_.trimLeft([string], [chars]) ⇒ `string`
 Removes leading whitespace or specified characters from `string`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to trim. |
@@ -4439,8 +4153,6 @@ _.trimLeft('-_-fred-_-', '_-');
 <a name="_.trimRight"></a>
 ###_.trimRight([string], [chars]) ⇒ `string`
 Removes trailing whitespace or specified characters from `string`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4460,8 +4172,6 @@ _.trimRight('-_-fred-_-', '_-');
 Truncates `string` if it is longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to "...".
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4497,8 +4207,6 @@ corresponding characters.
 **Note:** No other HTML entities are unescaped. To unescape additional HTML
 entities use a third-party library like [_he_](http://mths.be/he).
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to unescape. |
@@ -4511,8 +4219,6 @@ _.unescape('fred, barney, &amp; pebbles');
 <a name="_.words"></a>
 ###_.words([string], [pattern]) ⇒ `Array`
 Splits `string` into an array of its words.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4531,8 +4237,6 @@ _.words('fred, barney, & pebbles', /[^, ]+/g);
 ###_.attempt(func) ⇒ `*`
 Attempts to invoke `func`, returning either the result or the caught
 error object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4555,8 +4259,6 @@ Creates a function bound to an optional `thisArg`. If `func` is a property
 name the created callback returns the property value for a given element.
 If `func` is an object the created callback returns `true` for elements
 that contain the equivalent object properties, otherwise it returns `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4588,8 +4290,6 @@ _.filter(users, 'age__gt38');
 ###_.constant(value) ⇒ `function`
 Creates a function that returns `value`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to return from the new function. |
@@ -4604,8 +4304,6 @@ getter() === object;
 <a name="_.identity"></a>
 ###_.identity(value) ⇒ `*`
 This method returns the first argument provided to it.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4622,8 +4320,6 @@ _.identity(object) === object;
 Creates a "_.where" style predicate function which performs a deep comparison
 between a given object and the `source` object, returning `true` if the given
 object has equivalent property values, else `false`.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4649,8 +4345,6 @@ _.find(users, matchesAge);
 Adds all own enumerable function properties of a source object to the
 destination object. If `object` is a function then methods are added to
 its prototype as well.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4704,8 +4398,6 @@ _.noop(object) === undefined;
 This method is like `_.indexOf` except that it iterates over elements of
 `array` from right to left.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
@@ -4735,8 +4427,6 @@ in which case a `radix` of `16` is used.
 **Note:** This method avoids differences in native ES3 and ES5 `parseInt`
 implementations. See the [ES5 spec](http://es5.github.io/#E) for more details.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `string` | The value to parse. |
@@ -4751,8 +4441,6 @@ _.parseInt('08');
 ###_.property(key) ⇒ `function`
 Creates a "_.pluck" style function which returns the `key` value of a
 given object.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4780,8 +4468,6 @@ argument is provided a number between `0` and the given number is returned.
 If `floating` is `true`, or either `min` or `max` are floats, a floating-point
 number is returned instead of an integer.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | min | `number` | The minimum possible value. |
@@ -4807,8 +4493,6 @@ _.random(1.2, 5.2);
 Creates an array of numbers (positive and/or negative) progressing from
 `start` up to but not including `end`. If `start` is less than `stop` a
 zero-length range is created unless a negative `step` is specified.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
@@ -4844,8 +4528,6 @@ else the property value is returned. If `object` is `null` or `undefined`
 then `undefined` is returned. If a default value is provided it is returned
 if the property value resolves to `undefined`.
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
@@ -4877,8 +4559,6 @@ Invokes the iteratee function `n` times, returning an array of the results
 of each invocation. The `iteratee` is bound to `thisArg` and invoked with
 one argument; (index).
 
-**Params**
-
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | n | `number` | The number of times to invoke `iteratee`. |
@@ -4899,8 +4579,6 @@ _.times(3, function(n) { this.cast(n); }, mage);
 <a name="_.uniqueId"></a>
 ###_.uniqueId([prefix]) ⇒ `string`
 Generates a unique ID. If `prefix` is provided the ID is appended to it.
-
-**Params**
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
