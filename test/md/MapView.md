@@ -1,5 +1,5 @@
 <a name="module_MapView"></a>
-##`MapView`
+##MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.
 
 Additionally it adds methods to set the position and zoom-factor of the map using transitions.
@@ -12,8 +12,8 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
 
-* [`MapView`](#module_MapView)
-  * [`class: MapView` ⏏](#exp_module_MapView^MapView)
+* [MapView](#module_MapView)
+  * [class: MapView ⏏](#exp_module_MapView^MapView)
     * [`new MapView(options)`](#new_module_MapView^MapView())
     * [`MapView.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
     * [`mapView.getMap()` -> `Map`](#module_MapView^MapView#getMap)
@@ -28,7 +28,7 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
     * [`mapView.isActive()` -> `Bool`](#module_MapView^MapView#isActive)
 
 <a name="exp_module_MapView^MapView"></a>
-###`class: MapView` ⏏
+###class: MapView ⏏
 <a name="new_module_MapView^MapView()"></a>
 ####`new MapView(options)`
 **Params**
