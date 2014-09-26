@@ -30,7 +30,7 @@
     "m2": "cat test/fixture/file-set.json | dmd > test/md/file-set.md;",
     "m3": "cat test/fixture/handbrake.json | dmd > test/md/handbrake.md;",
     "m4": "cat test/fixture/lodash.json | dmd --example-code-gfm js > test/md/lodash.md;",
-    "m5": "cat test/fixture/MapView.json | dmd --sort-by none > test/md/MapView.md;",
+    "m5": "cat test/fixture/MapView.json | dmd --sort-by none --code-names > test/md/MapView.md;",
     "t1": "cat test/fixture/everything.json | dmd --template test/template/module.hbs > test/md/module.md",
     "t2": "cat test/fixture/file-set.json | dmd --template test/template/exported-class.hbs > test/md/exported-class.md",
     "t3": "cat test/fixture/everything.json | dmd --template test/template/class.hbs > test/md/class.md",

@@ -1,69 +1,69 @@
 ##Modules
-* [`cjs/class`](#module_cjs/class)
-  * [`class: ExportedClass` ⏏](#exp_module_cjs/class^ExportedClass)
-    * [`new ExportedClass()`](#new_module_cjs/class^ExportedClass())
-    * [`exportedClass.prop`](#module_cjs/class^ExportedClass#prop)
-    * [`ExportedClass.staticProp`](#module_cjs/class^ExportedClass.staticProp)
-    * [`ExportedClass~innerProp`](#module_cjs/class^ExportedClass..innerProp)
-* [`cjs/function-alias`](#module_cjs/function-alias)
-  * [`sum(one, two)` -> `number` ⏏](#exp_module_cjs/function-alias^sum)
-* [`cjs/object-alias`](#module_cjs/object-alias)
-  * [`teams` ⏏](#exp_module_cjs/object-alias^teams)
-* [`cjs/object`](#module_cjs/object)
-  * [`obj.one`](#module_cjs/object.one)
-  * [`obj.two()`](#module_cjs/object.two)
+* [cjs/class](#module_cjs/class)
+  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass())
+    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
+    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
+    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+* [cjs/function-alias](#module_cjs/function-alias)
+  * [sum(one, two) -> number ⏏](#exp_module_cjs/function-alias^sum)
+* [cjs/object-alias](#module_cjs/object-alias)
+  * [teams ⏏](#exp_module_cjs/object-alias^teams)
+* [cjs/object](#module_cjs/object)
+  * [obj.one](#module_cjs/object.one)
+  * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [`class: GlobalClass`](#GlobalClass)
-  * [`new GlobalClass(one, two)`](#new_GlobalClass())
-  * [`globalClass.propOne`](#GlobalClass#propOne)
-  * [`GlobalClass.propTwo`](#GlobalClass.propTwo)
-* [`exampleVar`](#exampleVar)
-* [`globalFunction(one, two)`](#globalFunction)
-* [`mixin: Eventful`](#Eventful)
-  * [`Eventful.on(eventName, handler)`](#Eventful.on)
-  * [`Eventful.fire(eventName, eventData)`](#Eventful.fire)
-* [`globalFunction()` -> `string | object | function`](#globalFunction)
-* [`globalVar`](#globalVar)
+* [class: GlobalClass](#GlobalClass)
+  * [new GlobalClass(one, two)](#new_GlobalClass())
+  * [globalClass.propOne](#GlobalClass#propOne)
+  * [GlobalClass.propTwo](#GlobalClass.propTwo)
+* [exampleVar](#exampleVar)
+* [globalFunction(one, two)](#globalFunction)
+* [mixin: Eventful](#Eventful)
+  * [Eventful.on(eventName, handler)](#Eventful.on)
+  * [Eventful.fire(eventName, eventData)](#Eventful.fire)
+* [globalFunction() -> string | object | function](#globalFunction)
+* [globalVar](#globalVar)
 
 <a name="module_cjs/class"></a>
-##`cjs/class`
+##cjs/class
 exports a class
 
-* [`cjs/class`](#module_cjs/class)
-  * [`class: ExportedClass` ⏏](#exp_module_cjs/class^ExportedClass)
-    * [`new ExportedClass()`](#new_module_cjs/class^ExportedClass())
-    * [`exportedClass.prop`](#module_cjs/class^ExportedClass#prop)
-    * [`ExportedClass.staticProp`](#module_cjs/class^ExportedClass.staticProp)
-    * [`ExportedClass~innerProp`](#module_cjs/class^ExportedClass..innerProp)
+* [cjs/class](#module_cjs/class)
+  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass())
+    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
+    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
+    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class^ExportedClass"></a>
-###`class: ExportedClass` ⏏
+###class: ExportedClass ⏏
 the exported class
 
 <a name="new_module_cjs/class^ExportedClass()"></a>
-####`new ExportedClass()`
+####new ExportedClass()
 the exported contructor
 
 <a name="module_cjs/class^ExportedClass#prop"></a>
-####`exportedClass.prop`
+####exportedClass.prop
 instance property
 
 <a name="module_cjs/class^ExportedClass.staticProp"></a>
-####`ExportedClass.staticProp`
+####ExportedClass.staticProp
 a static property for the exported class
 
 <a name="module_cjs/class^ExportedClass..innerProp"></a>
-####`ExportedClass~innerProp`
+####ExportedClass~innerProp
 inner module property
 
 **Scope**: inner member of [ExportedClass](#exp_module_cjs/class^ExportedClass)  
 <a name="module_cjs/function-alias"></a>
-##`cjs/function-alias`
+##cjs/function-alias
 exports a pointer to a function
 
 <a name="exp_module_cjs/function-alias^sum"></a>
-###`sum(one, two)` -> `number` ⏏
+###sum(one, two) -> number ⏏
 the function
 
 **Params**
@@ -73,44 +73,44 @@ the function
 
 **Returns**: `number` - the calculation result  
 <a name="module_cjs/object-alias"></a>
-##`cjs/object-alias`
+##cjs/object-alias
 a module exporting an object
 
 <a name="exp_module_cjs/object-alias^teams"></a>
-###`teams` ⏏
+###teams ⏏
 the teams
 
 <a name="module_cjs/object"></a>
-##`cjs/object`
+##cjs/object
 a module exporting `exports` directly
 
-* [`cjs/object`](#module_cjs/object)
-  * [`obj.one`](#module_cjs/object.one)
-  * [`obj.two()`](#module_cjs/object.two)
+* [cjs/object](#module_cjs/object)
+  * [obj.one](#module_cjs/object.one)
+  * [obj.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###`obj.one`
+###obj.one
 the first property
 
 **Type**: `number`  
 <a name="module_cjs/object.two"></a>
-###`obj.two()`
+###obj.two()
 the second property, a function
 
 **Example**  
 this is the example
 <a name="GlobalClass"></a>
-##`class: GlobalClass`
+##class: GlobalClass
 a global class
 
 **Extends**: `String`  
-* [`class: GlobalClass`](#GlobalClass)
-  * [`new GlobalClass(one, two)`](#new_GlobalClass())
-  * [`globalClass.propOne`](#GlobalClass#propOne)
-  * [`GlobalClass.propTwo`](#GlobalClass.propTwo)
+* [class: GlobalClass](#GlobalClass)
+  * [new GlobalClass(one, two)](#new_GlobalClass())
+  * [globalClass.propOne](#GlobalClass#propOne)
+  * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass()"></a>
-###`new GlobalClass(one, two)`
+###new GlobalClass(one, two)
 the global class constructor
 
 **Params**
@@ -119,15 +119,15 @@ the global class constructor
 - two `string` - second param  
 
 <a name="GlobalClass#propOne"></a>
-###`globalClass.propOne`
+###globalClass.propOne
 an instance property
 
 <a name="GlobalClass.propTwo"></a>
-###`GlobalClass.propTwo`
+###GlobalClass.propTwo
 a static property
 
 <a name="exampleVar"></a>
-##`exampleVar`
+##exampleVar
 an example var
 
 **Type**: `string`  
@@ -137,7 +137,7 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="globalFunction"></a>
-##`globalFunction(one, two)`
+##globalFunction(one, two)
 a global function
 
 **Params**
@@ -146,20 +146,20 @@ a global function
 - two `string` - second param  
 
 <a name="phantom"></a>
-##`mixin: phantom`
+##mixin: phantom
 phantom mixin
 
 <a name="Eventful"></a>
-##`mixin: Eventful`
+##mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
 
-* [`mixin: Eventful`](#Eventful)
-  * [`Eventful.on(eventName, handler)`](#Eventful.on)
-  * [`Eventful.fire(eventName, eventData)`](#Eventful.fire)
+* [mixin: Eventful](#Eventful)
+  * [Eventful.on(eventName, handler)](#Eventful.on)
+  * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 
 <a name="Eventful.on"></a>
-###`Eventful.on(eventName, handler)`
+###Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
 **Params**
@@ -168,7 +168,7 @@ Register a handler function to be called whenever this event is fired.
 - handler `function` - The handler to call.  
 
 <a name="Eventful.fire"></a>
-###`Eventful.fire(eventName, eventData)`
+###Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
 **Params**
@@ -177,12 +177,12 @@ Fire an event, causing all handlers for that event name to run.
 - eventData `Object` - The data provided to each handler.  
 
 <a name="globalFunction"></a>
-##`globalFunction()` -> `string | object | function`
+##globalFunction() -> string | object | function
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
 <a name="globalVar"></a>
-##`globalVar`
+##globalVar
 a global var
 
 **Type**: `string`  
