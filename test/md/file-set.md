@@ -24,7 +24,7 @@ Expands file patterns, returning the matched and unmatched files and directories
 ####new FileSet(patternList)
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| patternList | `string` | `Array.<string>` | A pattern, or array of patterns to expand |
+| patternList | `string` \| `Array.<string>` | A pattern, or array of patterns to expand |
 <a name="module_file-set^FileSet#list"></a>
 ####fileSet.list
 The full list of unique paths found, and not found.
@@ -51,7 +51,7 @@ add file patterns to the set
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| files | `string` | `Array.<string>` | A pattern, or array of patterns to expand |
+| files | `string` \| `Array.<string>` | A pattern, or array of patterns to expand |
 <a name="module_file-set^FileSet.eFileType"></a>
 ####enum: FileSet.eFileType
 Enum for the `type` value of each record in `fileSet.list`

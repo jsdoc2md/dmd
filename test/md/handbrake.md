@@ -32,7 +32,7 @@ Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| options | `Object` | `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+| options | `Object` \| `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
 **Returns**: <code>[Handbrake](#module_handbrake-js..Handbrake)</code> - A `Handbrake` instance  
 **Example**  
 ```js
