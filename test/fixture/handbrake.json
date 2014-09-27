@@ -18,6 +18,11 @@
     "kind": "member",
     "description": "A `String` containing all handbrakeCLI output",
     "memberof": "module:handbrake-js~Handbrake",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
     "codeName": "this.output"
   },
   {
@@ -27,6 +32,11 @@
     "kind": "member",
     "description": "the options HandbrakeCLI was spawned with",
     "memberof": "module:handbrake-js~Handbrake",
+    "type": {
+      "names": [
+        "object"
+      ]
+    },
     "codeName": "this.options"
   },
   {
@@ -124,8 +134,7 @@
           "names": [
             "module:handbrake-js~Handbrake"
           ]
-        },
-        "description": "A `Handbrake` instance"
+        }
       }
     ],
     "codeName": "spawn"

@@ -25,6 +25,7 @@
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
 * [returnsSomething()](#returnsSomething) ⇒ `string`
+* [throwingFunction()](#throwingFunction)
 * [globalVar](#globalVar) → `string`
 
 <a name="module_cjs/class"></a>
@@ -188,6 +189,11 @@ a global function returning multiple stuff
 ##returnsSomething() ⇒ `string`
 returns has no desc
 
+<a name="throwingFunction"></a>
+##throwingFunction()
+**Throws**:
+
+- throw three
 <a name="globalVar"></a>
 ##globalVar → `string`
 a global var

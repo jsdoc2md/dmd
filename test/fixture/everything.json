@@ -363,6 +363,18 @@
     "codeName": "returnsSomething"
   },
   {
+    "id": "throwingFunction",
+    "name": "throwingFunction",
+    "scope": "global",
+    "kind": "function",
+    "exceptions": [
+      {
+        "description": "throw three"
+      }
+    ],
+    "codeName": "throwingFunction"
+  },
+  {
     "id": "globalVar",
     "name": "globalVar",
     "scope": "global",
