@@ -26,7 +26,6 @@ var hbjs = require("handbrake-js");
 ###hbjs.cliOptions → `array`
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
-**Type**: `array`  
 <a name="module_handbrake-js.spawn"></a>
 ###hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
@@ -51,7 +50,7 @@ Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLI
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | options | `Object` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-| onComplete | `function` | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
+| \[onComplete\] | `function` | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
 
 **Example**  
 ```js

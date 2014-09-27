@@ -37,8 +37,8 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 | options | `Object` | Options. |
 | options.type | `MapType` | Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET). |
 | options.mapOptions | `Object` | Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'. |
-| options.id | `String` | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
-| options.zoomTransition | `Transition` | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
+| \[options.id\] | `String` | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
+| \[options.zoomTransition\] | `Transition` | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
 
 <a name="module_MapView^MapView.DEFAULT_OPTIONS"></a>
 ####`MapView.DEFAULT_OPTIONS`
@@ -56,8 +56,8 @@ Set the center of the map to the given geographical coordinates.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | position | `LatLng` | Position in geographical coordinates. |
-| transition | `Transitionable` | Transitionable. |
-| callback | `function` | callback to call after transition completes. |
+| \[transition\] | `Transitionable` | Transitionable. |
+| \[callback\] | `function` | callback to call after transition completes. |
 
 <a name="module_MapView^MapView#getPosition"></a>
 ####`mapView.getPosition()` ⇒ `LatLng`

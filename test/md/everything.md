@@ -94,7 +94,6 @@ a module exporting `exports` directly
 ###obj.one → `number`
 the first property
 
-**Type**: `number`  
 <a name="module_cjs/object.two"></a>
 ###obj.two()
 the second property, a function
@@ -133,7 +132,6 @@ a static property
 ##exampleVar → `string`
 an example var
 
-**Type**: `string`  
 **Default**: `"something"`  
 **Example**  
 var thisVar = funtion(){
@@ -189,5 +187,4 @@ a global function returning multiple stuff
 ##globalVar → `string`
 a global var
 
-**Type**: `string`  
 **Default**: `"something"`  

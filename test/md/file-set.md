@@ -31,22 +31,18 @@ Expands file patterns, returning the matched and unmatched files and directories
 ####fileSet.list → `Array.<string>`
 The full list of unique paths found, and not found.
 
-**Type**: `Array.<string>`  
 <a name="module_file-set^FileSet#files"></a>
 ####fileSet.files → `Array.<string>`
 The existing files found
 
-**Type**: `Array.<string>`  
 <a name="module_file-set^FileSet#dirs"></a>
 ####fileSet.dirs → `Array.<string>`
 The existing directories found
 
-**Type**: `Array.<string>`  
 <a name="module_file-set^FileSet#notExisting"></a>
 ####fileSet.notExisting → `Array.<string>`
 Paths which were not found
 
-**Type**: `Array.<string>`  
 <a name="module_file-set^FileSet#add"></a>
 ####fileSet.add(files)
 add file patterns to the set
@@ -59,6 +55,5 @@ add file patterns to the set
 ####enum: FileSet.eFileType → `number`
 Enum for the `type` value of each record in `fileSet.list`
 
-**Type**: `number`  
 **Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
