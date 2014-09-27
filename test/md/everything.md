@@ -1,16 +1,16 @@
 ##Modules
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
+  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two) ⇒ `number` ⏏](#exp_module_cjs/function-alias^sum)
+  * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
-  * [teams ⏏](#exp_module_cjs/object-alias^teams)
+  * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
-  * [obj.one → `number`](#module_cjs/object.one)
+  * [obj.one](#module_cjs/object.one) → `number`
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
@@ -18,20 +18,21 @@
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
-* [exampleVar → `string`](#exampleVar)
+* [exampleVar](#exampleVar) → `string`
 * [globalFunction(one, two)](#globalFunction)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
-* [globalFunction() ⇒ `string | object | function`](#globalFunction)
-* [globalVar → `string`](#globalVar)
+* [globalFunction()](#globalFunction) ⇒ `string | object | function`
+* [globalVar](#globalVar) → `string`
 
 <a name="module_cjs/class"></a>
 ##cjs/class
 exports a class
 
+
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
+  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
@@ -84,8 +85,9 @@ the teams
 ##cjs/object
 a module exporting `exports` directly
 
+
 * [cjs/object](#module_cjs/object)
-  * [obj.one → `number`](#module_cjs/object.one)
+  * [obj.one](#module_cjs/object.one) → `number`
   * [obj.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
@@ -104,6 +106,7 @@ this is the example
 a global class
 
 **Extends**: `String`  
+
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -153,6 +156,7 @@ phantom mixin
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
+
 
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)

@@ -534,20 +534,11 @@
     "id": "_",
     "name": "_",
     "kind": "class",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Object"
-          ]
-        },
-        "description": "Returns a `lodash` instance."
-      }
-    ],
     "category": "Chain"
   },
   {
     "id": "_()",
+    "name": "_",
     "kind": "constructor",
     "description": "Creates a `lodash` object which wraps the given value to enable intuitive\nmethod chaining.\n\nIn addition to Lo-Dash methods, wrappers also have the following `Array` methods:\n`concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`, `splice`,\nand `unshift`\n\nChaining is supported in custom builds as long as the `value` method is\nimplicitly or explicitly included in the build.\n\nThe chainable wrapper functions are:\n`after`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`, `callback`,\n`chain`, `chunk`, `compact`, `concat`, `constant`, `countBy`, `create`,\n`curry`, `debounce`, `defaults`, `defer`, `delay`, `difference`, `drop`,\n`dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `flatten`, `flattenDeep`,\n`flow`, `flowRight`, `forEach`, `forEachRight`, `forIn`, `forInRight`,\n`forOwn`, `forOwnRight`, `functions`, `groupBy`, `indexBy`, `initial`,\n`intersection`, `invert`, `invoke`, `keys`, `keysIn`, `map`, `mapValues`,\n`matches`, `memoize`, `merge`, `mixin`, `negate`, `noop`, `omit`, `once`,\n`pairs`, `partial`, `partialRight`, `partition`, `pick`, `pluck`, `property`,\n`pull`, `pullAt`, `push`, `range`, `reject`, `remove`, `rest`, `reverse`,\n`shuffle`, `slice`, `sort`, `sortBy`, `splice`, `take`, `takeRight`,\n`takeRightWhile`, `takeWhile`, `tap`, `throttle`, `thru`, `times`,\n`toArray`, `transform`, `union`, `uniq`, `unshift`, `unzip`, `values`,\n`valuesIn`, `where`, `without`, `wrap`, `xor`, `zip`, and `zipObject`\n\nThe non-chainable wrapper functions are:\n`attempt`, `camelCase`, `capitalize`, `clone`, `cloneDeep`, `contains`,\n`deburr`, endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`,\n`findKey`, `findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`,\n`has`, `identity`, `indexOf`, `isArguments`, `isArray`, `isBoolean`, isDate`,\n`isElement`, `isEmpty`, `isEqual`, `isError`, `isFinite`, `isFunction`,\n`isNative`, `isNaN`, `isNull`, `isNumber`, `isObject`, `isPlainObject`,\n`isRegExp`, `isString`, `isUndefined`, `join`, `kebabCase`, `last`,\n`lastIndexOf`, `max`, `min`, `noConflict`, `now`, `pad`, `padLeft`,\n`padRight`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`, `repeat`,\n`result`, `runInContext`, `shift`, `size`, `snakeCase`, `some`, `sortedIndex`,\n`sortedLastIndex`, `startsWith`, `template`, `trim`, `trimLeft`, `trimRight`,\n`trunc`, `unescape`, `uniqueId`, `value`, and `words`\n\nThe wrapper function `sample` will return a wrapped value when `n` is\nprovided, otherwise it will return an unwrapped value.\n\nExplicit chaining can be enabled by using the `_.chain` method.",
     "memberof": "_",
@@ -564,6 +555,16 @@
     ],
     "examples": [
       "var wrapped = _([1, 2, 3]);\n\n// returns an unwrapped value\nwrapped.reduce(function(sum, n) { return sum + n; });\n// => 6\n\n// returns a wrapped value\nvar squares = wrapped.map(function(n) { return n * n; });\n\n_.isArray(squares);\n// => false\n\n_.isArray(squares.value());\n// => true"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "Returns a `lodash` instance."
+      }
     ]
   },
   {

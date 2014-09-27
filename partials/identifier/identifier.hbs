@@ -20,9 +20,10 @@
 
 {{#if (descendants min=2)~}}
 {{#if isExported~}}
-{{#if (equal (depth) 0)}}{{>index}}
+{{#if (equal (depth) 0)}}
+{{>index}}
 {{/if~}}
-{{else~}}
+{{else}}
 {{>index}}
 {{/if~}}
 {{/if~}}

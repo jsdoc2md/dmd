@@ -4,8 +4,9 @@
 ##cjs/class
 exports a class
 
+
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass ⏏](#exp_module_cjs/class^ExportedClass)
+  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)

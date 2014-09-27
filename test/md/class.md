@@ -5,6 +5,7 @@
 a global class
 
 **Extends**: `String`  
+
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)

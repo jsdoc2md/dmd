@@ -12,20 +12,21 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
 
+
 * [MapView](#module_MapView)
-  * [class: MapView ⏏](#exp_module_MapView^MapView)
+  * [class: MapView](#exp_module_MapView^MapView) ⏏
     * [`new MapView(options)`](#new_module_MapView^MapView_new)
     * [`MapView.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
-    * [`mapView.getMap()` ⇒ `Map`](#module_MapView^MapView#getMap)
+    * [`mapView.getMap()`](#module_MapView^MapView#getMap) ⇒ `Map`
     * [`mapView.setPosition(position, [transition], [callback])`](#module_MapView^MapView#setPosition)
-    * [`mapView.getPosition()` ⇒ `LatLng`](#module_MapView^MapView#getPosition)
-    * [`mapView.getFinalPosition()` ⇒ `LatLng`](#module_MapView^MapView#getFinalPosition)
-    * [`mapView.getZoom()` ⇒ `Number`](#module_MapView^MapView#getZoom)
-    * [`mapView.pointFromPosition(position)` ⇒ `Point`](#module_MapView^MapView#pointFromPosition)
-    * [`mapView.positionFromPoint(point)` ⇒ `LatLng`](#module_MapView^MapView#positionFromPoint)
-    * [`mapView.getSize()` ⇒ `Array.Number`](#module_MapView^MapView#getSize)
+    * [`mapView.getPosition()`](#module_MapView^MapView#getPosition) ⇒ `LatLng`
+    * [`mapView.getFinalPosition()`](#module_MapView^MapView#getFinalPosition) ⇒ `LatLng`
+    * [`mapView.getZoom()`](#module_MapView^MapView#getZoom) ⇒ `Number`
+    * [`mapView.pointFromPosition(position)`](#module_MapView^MapView#pointFromPosition) ⇒ `Point`
+    * [`mapView.positionFromPoint(point)`](#module_MapView^MapView#positionFromPoint) ⇒ `LatLng`
+    * [`mapView.getSize()`](#module_MapView^MapView#getSize) ⇒ `Array.Number`
     * [`mapView.halt()`](#module_MapView^MapView#halt)
-    * [`mapView.isActive()` ⇒ `Bool`](#module_MapView^MapView#isActive)
+    * [`mapView.isActive()`](#module_MapView^MapView#isActive) ⇒ `Bool`
 
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏

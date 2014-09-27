@@ -6,9 +6,10 @@ Handbrake for node.js.
 ```js
 var hbjs = require("handbrake-js");
 ```
+
 * [handbrake-js](#module_handbrake-js)
-  * [hbjs.cliOptions → `array`](#module_handbrake-js.cliOptions)
-  * [hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`](#module_handbrake-js.spawn)
+  * [hbjs.cliOptions](#module_handbrake-js.cliOptions) → `array`
+  * [hbjs.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
   * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
     * [handbrake.output](#module_handbrake-js..Handbrake#output)
@@ -67,6 +68,7 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 
 **Extends**: `EventEmitter`  
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
+
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
     * [handbrake.output](#module_handbrake-js..Handbrake#output)
     * [handbrake.options](#module_handbrake-js..Handbrake#options)

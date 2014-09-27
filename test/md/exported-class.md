@@ -4,14 +4,15 @@
 ##class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
-* [class: FileSet ⏏](#exp_module_file-set^FileSet)
+
+* [class: FileSet](#exp_module_file-set^FileSet) ⏏
   * [new FileSet(patternList)](#new_module_file-set^FileSet_new)
-  * [fileSet.list → `Array.<string>`](#module_file-set^FileSet#list)
-  * [fileSet.files → `Array.<string>`](#module_file-set^FileSet#files)
-  * [fileSet.dirs → `Array.<string>`](#module_file-set^FileSet#dirs)
-  * [fileSet.notExisting → `Array.<string>`](#module_file-set^FileSet#notExisting)
+  * [fileSet.list](#module_file-set^FileSet#list) → `Array.<string>`
+  * [fileSet.files](#module_file-set^FileSet#files) → `Array.<string>`
+  * [fileSet.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
+  * [fileSet.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
   * [fileSet.add(files)](#module_file-set^FileSet#add)
-  * [enum: FileSet.eFileType → `number`](#module_file-set^FileSet.eFileType)
+  * [enum: FileSet.eFileType](#module_file-set^FileSet.eFileType) → `number`
 
 <a name="new_module_file-set^FileSet_new"></a>
 ###new FileSet(patternList)
