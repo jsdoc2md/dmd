@@ -2,7 +2,7 @@
 ##class: _ ⇒ `Object`
 **Returns**: `Object` - Returns a `lodash` instance.  
 * [class: _ ⇒ `Object`](#_)
-  * [](#new__())
+  * [](#new___new)
   * [_.isArray ⇒ `boolean`](#_.isArray)
   * [_.chain ⇒ `*`](#_.chain)
   * [_.toString ⇒ `string`](#_.toString)
@@ -11,19 +11,19 @@
   * [_.groupBy ⇒ `Object`](#_.groupBy)
   * [_.indexBy ⇒ `Object`](#_.indexBy)
   * [_.partition ⇒ `Array`](#_.partition)
-  * [_.once ⇒ `function`](#_.once)
-  * [_.support](#_.support)
-    * [support.support.nodeClass](#_.support.support.nodeClass)
-    * [support.support.argsClass](#_.support.support.argsClass)
-    * [support.support.enumPrototypes](#_.support.support.enumPrototypes)
-    * [support.support.funcDecomp](#_.support.support.funcDecomp)
-    * [support.support.funcNames](#_.support.support.funcNames)
-    * [support.support.enumErrorProps](#_.support.support.enumErrorProps)
-    * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings)
-    * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows)
-    * [support.support.ownLast](#_.support.support.ownLast)
-    * [support.support.spliceObjects](#_.support.support.spliceObjects)
-    * [support.support.unindexedChars](#_.support.support.unindexedChars)
+  * [_.once ⇒ `function` → `function`](#_.once)
+  * [_.support → `Object`](#_.support)
+    * [support.support.nodeClass → `boolean`](#_.support.support.nodeClass)
+    * [support.support.argsClass → `boolean`](#_.support.support.argsClass)
+    * [support.support.enumPrototypes → `boolean`](#_.support.support.enumPrototypes)
+    * [support.support.funcDecomp → `boolean`](#_.support.support.funcDecomp)
+    * [support.support.funcNames → `boolean`](#_.support.support.funcNames)
+    * [support.support.enumErrorProps → `boolean`](#_.support.support.enumErrorProps)
+    * [support.support.nonEnumStrings → `boolean`](#_.support.support.nonEnumStrings)
+    * [support.support.nonEnumShadows → `boolean`](#_.support.support.nonEnumShadows)
+    * [support.support.ownLast → `boolean`](#_.support.support.ownLast)
+    * [support.support.spliceObjects → `boolean`](#_.support.support.spliceObjects)
+    * [support.support.unindexedChars → `boolean`](#_.support.support.unindexedChars)
   * [_.isFinite ⇒ `boolean`](#_.isFinite)
   * [_.isPlainObject ⇒ `boolean`](#_.isPlainObject)
   * [_.extend ⇒ `Object`](#_.extend)
@@ -40,10 +40,10 @@
   * [_.slice(array, [start], [end]) ⇒ `Array`](#_.slice)
   * [_.sortedIndex(array, value, [iteratee], [thisArg]) ⇒ `number`](#_.sortedIndex)
   * [_.sortedLastIndex(array, value, [iteratee], [thisArg]) ⇒ `number`](#_.sortedLastIndex)
-  * [_.take(array, [n]) ⇒ `Array`](#_.take)
-  * [_.takeRight(array, [n]) ⇒ `Array`](#_.takeRight)
-  * [_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array`](#_.takeRightWhile)
-  * [_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array`](#_.takeWhile)
+  * [_.take(array, [n]) ⇒ `Array` → `Array`](#_.take)
+  * [_.takeRight(array, [n]) ⇒ `Array` → `Array`](#_.takeRight)
+  * [_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`](#_.takeRightWhile)
+  * [_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`](#_.takeWhile)
   * [_.union([...arrays]) ⇒ `Array`](#_.union)
   * [_.unique(array, [isSorted], [iteratee], [thisArg]) ⇒ `Array`](#_.unique)
   * [_.unzip(array) ⇒ `Array`](#_.unzip)
@@ -81,13 +81,13 @@
   * [_.findWhere(collection, source) ⇒ `*`](#_.findWhere)
   * [_.each(collection, [iteratee], [thisArg]) ⇒ `Array | Object | string`](#_.each)
   * [_.eachRight(collection, [iteratee], [thisArg]) ⇒ `Array | Object | string`](#_.eachRight)
-  * [_.drop(array, [n]) ⇒ `Array`](#_.drop)
-  * [_.dropRight(array, [n]) ⇒ `Array`](#_.dropRight)
+  * [_.drop(array, [n]) ⇒ `Array` → `Array`](#_.drop)
+  * [_.dropRight(array, [n]) ⇒ `Array` → `Array`](#_.dropRight)
   * [_.invoke(collection, methodName, [...args]) ⇒ `Array`](#_.invoke)
   * [_.collect(collection, [iteratee], [thisArg]) ⇒ `Array`](#_.collect)
   * [_.max(collection, [iteratee], [thisArg]) ⇒ `*`](#_.max)
   * [_.min(collection, [iteratee], [thisArg]) ⇒ `*`](#_.min)
-  * [_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array`](#_.dropRightWhile)
+  * [_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`](#_.dropRightWhile)
   * [_.pluck(collection, key) ⇒ `Array`](#_.pluck)
   * [_.foldr(collection, [iteratee], [accumulator], [thisArg]) ⇒ `*`](#_.foldr)
   * [_.reject(collection, [predicate], [thisArg]) ⇒ `Array`](#_.reject)
@@ -111,7 +111,7 @@
   * [_.flow([...funcs]) ⇒ `function`](#_.flow)
   * [_.memoize(func, [resolver]) ⇒ `function`](#_.memoize)
   * [_.negate(predicate) ⇒ `function`](#_.negate)
-  * [_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array`](#_.dropWhile)
+  * [_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`](#_.dropWhile)
   * [_.partial(func, [...args]) ⇒ `function`](#_.partial)
   * [_.partialRight(func, [...args]) ⇒ `function`](#_.partialRight)
   * [_.throttle(func, wait, [options]) ⇒ `function`](#_.throttle)
@@ -196,7 +196,7 @@
   * [_.times(n, [iteratee], [thisArg]) ⇒ `Array`](#_.times)
   * [_.uniqueId([prefix]) ⇒ `string`](#_.uniqueId)
 
-<a name="new__()"></a>
+<a name="new___new"></a>
 ###
 Creates a `lodash` object which wraps the given value to enable intuitive
 method chaining.
@@ -246,6 +246,7 @@ Explicit chaining can be enabled by using the `_.chain` method.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to wrap in a `lodash` instance. |
+
 **Example**  
 ```js
 var wrapped = _([1, 2, 3]);
@@ -270,6 +271,7 @@ Checks if `value` is classified as an `Array` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -340,10 +342,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns the composed aggregate object.  
 **Example**  
 ```js
@@ -374,10 +375,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns the composed aggregate object.  
 **Example**  
 ```js
@@ -409,10 +409,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns the composed aggregate object.  
 **Example**  
 ```js
@@ -447,10 +446,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Array` - Returns the array of grouped elements.  
 **Example**  
 ```js
@@ -475,7 +473,7 @@ _.map(_.partition(users, 'blocked'), function(array) { return _.pluck(array, 'us
 // => [['fred'], ['barney', 'pebbles']]
 ```
 <a name="_.once"></a>
-###_.once ⇒ `function`
+###_.once ⇒ `function` → `function`
 Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first call. The `func` is invoked
 with the `this` binding of the created function.
@@ -483,6 +481,7 @@ with the `this` binding of the created function.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to restrict. |
+
 **Type**: `function`  
 **Returns**: `function` - Returns the new restricted function.  
 **Example**  
@@ -493,36 +492,36 @@ initialize();
 // `initialize` invokes `createApplication` once
 ```
 <a name="_.support"></a>
-###_.support
+###_.support → `Object`
 An object environment feature flags.
 
 **Type**: `Object`  
-  * [_.support](#_.support)
-    * [support.support.nodeClass](#_.support.support.nodeClass)
-    * [support.support.argsClass](#_.support.support.argsClass)
-    * [support.support.enumPrototypes](#_.support.support.enumPrototypes)
-    * [support.support.funcDecomp](#_.support.support.funcDecomp)
-    * [support.support.funcNames](#_.support.support.funcNames)
-    * [support.support.enumErrorProps](#_.support.support.enumErrorProps)
-    * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings)
-    * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows)
-    * [support.support.ownLast](#_.support.support.ownLast)
-    * [support.support.spliceObjects](#_.support.support.spliceObjects)
-    * [support.support.unindexedChars](#_.support.support.unindexedChars)
+  * [_.support → `Object`](#_.support)
+    * [support.support.nodeClass → `boolean`](#_.support.support.nodeClass)
+    * [support.support.argsClass → `boolean`](#_.support.support.argsClass)
+    * [support.support.enumPrototypes → `boolean`](#_.support.support.enumPrototypes)
+    * [support.support.funcDecomp → `boolean`](#_.support.support.funcDecomp)
+    * [support.support.funcNames → `boolean`](#_.support.support.funcNames)
+    * [support.support.enumErrorProps → `boolean`](#_.support.support.enumErrorProps)
+    * [support.support.nonEnumStrings → `boolean`](#_.support.support.nonEnumStrings)
+    * [support.support.nonEnumShadows → `boolean`](#_.support.support.nonEnumShadows)
+    * [support.support.ownLast → `boolean`](#_.support.support.ownLast)
+    * [support.support.spliceObjects → `boolean`](#_.support.support.spliceObjects)
+    * [support.support.unindexedChars → `boolean`](#_.support.support.unindexedChars)
 
 <a name="_.support.support.nodeClass"></a>
-####support.support.nodeClass
+####support.support.nodeClass → `boolean`
 Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.argsClass"></a>
-####support.support.argsClass
+####support.support.argsClass → `boolean`
 Detect if the `[[Class]]` of `arguments` objects is resolvable
 (all but Firefox < 4, IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.enumPrototypes"></a>
-####support.support.enumPrototypes
+####support.support.enumPrototypes → `boolean`
 Detect if `prototype` properties are enumerable by default.
 
 Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
@@ -532,31 +531,31 @@ property to `true`.
 
 **Type**: `boolean`  
 <a name="_.support.support.funcDecomp"></a>
-####support.support.funcDecomp
+####support.support.funcDecomp → `boolean`
 Detect if functions can be decompiled by `Function#toString`
 (all but Firefox OS certified apps, older Opera mobile browsers, and
 the PlayStation 3; forced `false` for Windows 8 apps).
 
 **Type**: `boolean`  
 <a name="_.support.support.funcNames"></a>
-####support.support.funcNames
+####support.support.funcNames → `boolean`
 Detect if `Function#name` is supported (all but IE).
 
 **Type**: `boolean`  
 <a name="_.support.support.enumErrorProps"></a>
-####support.support.enumErrorProps
+####support.support.enumErrorProps → `boolean`
 Detect if `name` or `message` properties of `Error.prototype` are
 enumerable by default (IE < 9, Safari < 5.1).
 
 **Type**: `boolean`  
 <a name="_.support.support.nonEnumStrings"></a>
-####support.support.nonEnumStrings
+####support.support.nonEnumStrings → `boolean`
 Detect if string indexes are non-enumerable
 (IE < 9, RingoJS, Rhino, Narwhal).
 
 **Type**: `boolean`  
 <a name="_.support.support.nonEnumShadows"></a>
-####support.support.nonEnumShadows
+####support.support.nonEnumShadows → `boolean`
 Detect if properties shadowing those on `Object.prototype` are
 non-enumerable.
 
@@ -565,13 +564,13 @@ are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
 
 **Type**: `boolean`  
 <a name="_.support.support.ownLast"></a>
-####support.support.ownLast
+####support.support.ownLast → `boolean`
 Detect if own properties are iterated after inherited properties
 (IE < 9).
 
 **Type**: `boolean`  
 <a name="_.support.support.spliceObjects"></a>
-####support.support.spliceObjects
+####support.support.spliceObjects → `boolean`
 Detect if `Array#shift` and `Array#splice` augment array-like objects
 correctly.
 
@@ -584,7 +583,7 @@ in IE 9.
 
 **Type**: `boolean`  
 <a name="_.support.support.unindexedChars"></a>
-####support.support.unindexedChars
+####support.support.unindexedChars → `boolean`
 Detect lack of support for accessing string characters by index.
 
 IE < 8 can't access characters by index. IE 8 can only access characters
@@ -602,6 +601,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is a finite number, else `false`.  
 **Example**  
 ```js
@@ -631,6 +631,7 @@ have no inherited enumerable properties.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is a plain object, else `false`.  
 **Example**  
 ```js
@@ -665,6 +666,7 @@ The `customizer` is bound to `thisArg` and invoked with five arguments;
 | sources | `Object` | The source objects. |
 | customizer | `function` | The function to customize assigning values. |
 | thisArg | `*` | The `this` binding of `customizer`. |
+
 **Returns**: `Object` - Returns the destination object.  
 **Example**  
 ```js
@@ -685,6 +687,7 @@ Creates an array of the own enumerable property names of `object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the array of property names.  
 **Example**  
 ```js
@@ -714,6 +717,7 @@ with five arguments; (objectValue, sourceValue, key, object, source).
 | sources | `Object` | The source objects. |
 | customizer | `function` | The function to customize merging properties. |
 | thisArg | `*` | The `this` binding of `customizer`. |
+
 **Returns**: `Object` - Returns the destination object.  
 **Example**  
 ```js
@@ -751,6 +755,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to camel case. |
+
 **Returns**: `string` - Returns the camel cased string.  
 **Example**  
 ```js
@@ -772,6 +777,7 @@ more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to kebab case. |
+
 **Returns**: `string` - Returns the kebab cased string.  
 **Example**  
 ```js
@@ -792,6 +798,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to snake case. |
+
 **Returns**: `string` - Returns the snake cased string.  
 **Example**  
 ```js
@@ -829,6 +836,7 @@ comparisons.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to modify. |
 | values | `*` | The values to remove. |
+
 **Returns**: `Array` - Returns `array`.  
 **Example**  
 ```js
@@ -848,8 +856,8 @@ array of indexes or as individual arguments.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to modify. |
-| indexes | `number` \| `Array.<number>` | The indexes of elements to remove,
- specified as individual indexes or arrays of indexes. |
+| indexes | `number` \| `Array.<number>` | The indexes of elements to remove,  specified as individual indexes or arrays of indexes. |
+
 **Returns**: `Array` - Returns the new array of removed elements.  
 **Example**  
 ```js
@@ -880,10 +888,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to modify. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Array` - Returns the new array of removed elements.  
 **Example**  
 ```js
@@ -903,6 +910,7 @@ Gets all but the first element of `array`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
+
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
 ```js
@@ -921,6 +929,7 @@ in IE < 9 and to ensure dense arrays are returned.
 | array | `Array` | The array to slice. |
 | start | `number` | The start index. |
 | end | `number` | The end index. |
+
 **Returns**: `Array` - Returns the slice of `array`.  
 <a name="_.sortedIndex"></a>
 ###_.sortedIndex(array, value, [iteratee], [thisArg]) ⇒ `number`
@@ -941,10 +950,9 @@ else `false`.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
 | value | `*` | The value to evaluate. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `number` - Returns the index at which `value` should be inserted
  into `array`.  
 **Example**  
@@ -977,10 +985,9 @@ order to maintain the sort order of the array.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
 | value | `*` | The value to evaluate. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `number` - Returns the index at which `value` should be inserted
  into `array`.  
 **Example**  
@@ -989,13 +996,14 @@ _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
 // => 4
 ```
 <a name="_.take"></a>
-###_.take(array, [n]) ⇒ `Array`
+###_.take(array, [n]) ⇒ `Array` → `Array`
 Creates a slice of `array` with `n` elements taken from the beginning.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
 | n | `number` | The number of elements to take. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1013,13 +1021,14 @@ _.take([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRight"></a>
-###_.takeRight(array, [n]) ⇒ `Array`
+###_.takeRight(array, [n]) ⇒ `Array` → `Array`
 Creates a slice of `array` with `n` elements taken from the end.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
 | n | `number` | The number of elements to take. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1037,7 +1046,7 @@ _.takeRight([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRightWhile"></a>
-###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array`
+###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` with elements taken from the end. Elements are
 taken until the predicate returns falsey. The predicate is bound to `thisArg`
 and invoked with three arguments; (value, index, array).
@@ -1052,9 +1061,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per element. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per element. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1077,7 +1086,7 @@ _.pluck(_.takeRightWhile(users, { 'employer': 'na' }), 'user');
 // => ['pebbles']
 ```
 <a name="_.takeWhile"></a>
-###_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array`
+###_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` with elements taken from the beginning. Elements
 are taken until the predicate returns falsey. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
@@ -1092,9 +1101,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per element. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per element. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1128,6 +1137,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to inspect. |
+
 **Returns**: `Array` - Returns the new array of combined values.  
 **Example**  
 ```js
@@ -1158,10 +1168,9 @@ for more details.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
 | isSorted | `boolean` | Specify the array is sorted. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.
- If a property name or object is provided it is used to create a "_.pluck"
- or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.  If a property name or object is provided it is used to create a "_.pluck"  or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` - Returns the new duplicate-value-free array.  
 **Example**  
 ```js
@@ -1189,6 +1198,7 @@ configuration.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array of grouped elements to process. |
+
 **Returns**: `Array` - Returns the new array of regrouped elements.  
 **Example**  
 ```js
@@ -1211,6 +1221,7 @@ for more details.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to filter. |
 | values | `*` | The values to exclude. |
+
 **Returns**: `Array` - Returns the new array of filtered values.  
 **Example**  
 ```js
@@ -1226,6 +1237,7 @@ more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to inspect. |
+
 **Returns**: `Array` - Returns the new array of values.  
 **Example**  
 ```js
@@ -1244,6 +1256,7 @@ of the given arrays, and so on.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to process. |
+
 **Returns**: `Array` - Returns the new array of grouped elements.  
 **Example**  
 ```js
@@ -1260,6 +1273,7 @@ or two arrays, one of property names and one of corresponding values.
 | ----- | ---- | ----------- |
 | props | `Array` | The property names. |
 | vals | `Array` | The property values. |
+
 **Returns**: `Object` - Returns the new object.  
 **Example**  
 ```js
@@ -1274,6 +1288,7 @@ chaining enabled.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to wrap. |
+
 **Returns**: `Object` - Returns the new wrapper object.  
 **Example**  
 ```js
@@ -1302,6 +1317,7 @@ on intermediate results within the chain.
 | value | `*` | The value to provide to `interceptor`. |
 | interceptor | `function` | The function to invoke. |
 | thisArg | `*` | The `this` binding of `interceptor`. |
+
 **Returns**: `*` - Returns `value`.  
 **Example**  
 ```js
@@ -1320,6 +1336,7 @@ This method is like `_.tap` except that it returns the result of `interceptor`.
 | value | `*` | The value to provide to `interceptor`. |
 | interceptor | `function` | The function to invoke. |
 | thisArg | `*` | The `this` binding of `interceptor`. |
+
 **Returns**: `*` - Returns the result of `interceptor`.  
 **Example**  
 ```js
@@ -1336,6 +1353,7 @@ Create a new pristine `lodash` function using the given `context` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | context | `Object` | The context object. |
+
 **Returns**: `function` - Returns a new `lodash` function.  
 **Example**  
 ```js
@@ -1452,6 +1470,7 @@ elements.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to process. |
 | size | `numer` | The length of each chunk. |
+
 **Returns**: `Array` - Returns the new array containing chunks.  
 **Example**  
 ```js
@@ -1469,6 +1488,7 @@ Creates an array with all falsey values removed. The values `false`, `null`,
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to compact. |
+
 **Returns**: `Array` - Returns the new array of filtered values.  
 **Example**  
 ```js
@@ -1484,8 +1504,8 @@ of keys.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| props | `number` \| `Array.<number>` \| `string` \| `Array.<string>` | The property names
- or indexes of elements to pick, specified individually or in arrays. |
+| props | `number` \| `Array.<number>` \| `string` \| `Array.<string>` | The property names  or indexes of elements to pick, specified individually or in arrays. |
+
 **Returns**: `Array` - Returns the new array of picked elements.  
 **Example**  
 ```js
@@ -1510,6 +1530,7 @@ for more details.
 | collection | `Array` \| `Object` \| `string` | The collection to search. |
 | target | `*` | The value to check for. |
 | fromIndex | `number` | The index to search from. |
+
 **Returns**: `boolean` - Returns `true` if a matching element is found, else `false`.  
 **Example**  
 ```js
@@ -1538,6 +1559,7 @@ for more details.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to inspect. |
 | values | `Array` | The arrays of values to exclude. |
+
 **Returns**: `Array` - Returns the new array of filtered values.  
 **Example**  
 ```js
@@ -1560,10 +1582,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `boolean` - Returns `true` if all elements passed the predicate check,
  else `false`.  
 **Example**  
@@ -1600,10 +1621,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Array` - Returns the new filtered array.  
 **Example**  
 ```js
@@ -1639,10 +1659,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `*` - Returns the matched element, else `undefined`.  
 **Example**  
 ```js
@@ -1673,10 +1692,9 @@ This method is like `_.find` except that it iterates over elements of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `*` - Returns the matched element, else `undefined`.  
 **Example**  
 ```js
@@ -1693,6 +1711,7 @@ values.
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to search. |
 | source | `Object` | The object of property values to match. |
+
 **Returns**: `*` - Returns the matched element, else `undefined`.  
 **Example**  
 ```js
@@ -1723,6 +1742,7 @@ may be used for object iteration.
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` | `Object` | `string` - Returns `collection`.  
 **Example**  
 ```js
@@ -1742,6 +1762,7 @@ This method is like `_.forEach` except that it iterates over elements of
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` | `Object` | `string` - Returns `collection`.  
 **Example**  
 ```js
@@ -1749,13 +1770,14 @@ _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
 <a name="_.drop"></a>
-###_.drop(array, [n]) ⇒ `Array`
+###_.drop(array, [n]) ⇒ `Array` → `Array`
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
 | n | `number` | The number of elements to drop. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1773,13 +1795,14 @@ _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
 <a name="_.dropRight"></a>
-###_.dropRight(array, [n]) ⇒ `Array`
+###_.dropRight(array, [n]) ⇒ `Array` → `Array`
 Creates a slice of `array` with `n` elements dropped from the end.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
 | n | `number` | The number of elements to drop. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1806,9 +1829,9 @@ it is invoked for, and `this` bound to, each element in the collection.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| methodName | `function` \| `string` | The name of the method to invoke or
- the function invoked per iteration. |
+| methodName | `function` \| `string` | The name of the method to invoke or  the function invoked per iteration. |
 | args | `*` | The arguments to invoke the method with. |
+
 **Returns**: `Array` - Returns the array of results.  
 **Example**  
 ```js
@@ -1834,10 +1857,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` - Returns the new mapped array.  
 **Example**  
 ```js
@@ -1874,10 +1896,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.
- If a property name or object is provided it is used to create a "_.pluck"
- or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.  If a property name or object is provided it is used to create a "_.pluck"  or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `*` - Returns the maximum value.  
 **Example**  
 ```js
@@ -1917,10 +1938,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.
- If a property name or object is provided it is used to create a "_.pluck"
- or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked per iteration.  If a property name or object is provided it is used to create a "_.pluck"  or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `*` - Returns the minimum value.  
 **Example**  
 ```js
@@ -1943,7 +1963,7 @@ _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
 ```
 <a name="_.dropRightWhile"></a>
-###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array`
+###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` excluding elements dropped from the end.
 Elements are dropped until the predicate returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
@@ -1958,9 +1978,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per element. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per element. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -1990,6 +2010,7 @@ Retrieves the value of a specified property from all elements in the collection.
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
 | key | `string` | The name of the property to pluck. |
+
 **Returns**: `Array` - Returns the property values.  
 **Example**  
 ```js
@@ -2016,6 +2037,7 @@ This method is like `_.reduce` except that it iterates over elements of
 | iteratee | `function` | The function invoked per iteration. |
 | accumulator | `*` | The initial value. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `*` - Returns the accumulated value.  
 **Example**  
 ```js
@@ -2038,10 +2060,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Array` - Returns the new filtered array.  
 **Example**  
 ```js
@@ -2069,6 +2090,7 @@ Retrieves a random element or `n` random elements from a collection.
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to sample. |
 | n | `number` | The number of elements to sample. |
+
 **Returns**: `*` - Returns the random sample(s).  
 **Example**  
 ```js
@@ -2087,6 +2109,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to shuffle. |
+
 **Returns**: `Array` - Returns the new shuffled array.  
 **Example**  
 ```js
@@ -2101,6 +2124,7 @@ array-like values or the number of own enumerable properties for objects.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to inspect. |
+
 **Returns**: `number` - Returns `collection.length` or number of own enumerable properties.  
 **Example**  
 ```js
@@ -2130,10 +2154,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `boolean` - Returns `true` if any element passed the predicate check,
  else `false`.  
 **Example**  
@@ -2175,10 +2198,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to iterate over. |
-| iteratee | `Array` \| `function` \| `Object` \| `string` | The function
- invoked per iteration. If property name(s) or an object is provided it
- is used to create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `Array` \| `function` \| `Object` \| `string` | The function  invoked per iteration. If property name(s) or an object is provided it  is used to create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` - Returns the new sorted array.  
 **Example**  
 ```js
@@ -2210,6 +2232,7 @@ Converts `collection` to an array.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to convert. |
+
 **Returns**: `Array` - Returns the new converted array.  
 **Example**  
 ```js
@@ -2226,6 +2249,7 @@ property values.
 | ----- | ---- | ----------- |
 | collection | `Array` \| `Object` \| `string` | The collection to search. |
 | source | `Object` | The object of property values to match. |
+
 **Returns**: `Array` - Returns the new filtered array.  
 **Example**  
 ```js
@@ -2252,6 +2276,7 @@ The opposite of `_.before`; this method creates a function that invokes
 | ----- | ---- | ----------- |
 | n | `number` | The number of calls before `func` is invoked. |
 | func | `function` | The function to restrict. |
+
 **Returns**: `function` - Returns the new restricted function.  
 **Example**  
 ```js
@@ -2276,6 +2301,7 @@ calls to the created function return the result of the last `func` invocation.
 | ----- | ---- | ----------- |
 | n | `number` | The number of calls at which `func` is no longer invoked. |
 | func | `function` | The function to restrict. |
+
 **Returns**: `function` - Returns the new restricted function.  
 **Example**  
 ```js
@@ -2296,6 +2322,7 @@ property of bound functions.
 | func | `function` | The function to bind. |
 | thisArg | `*` | The `this` binding of `func`. |
 | args | `*` | The arguments to be partially applied. |
+
 **Returns**: `function` - Returns the new bound function.  
 **Example**  
 ```js
@@ -2319,8 +2346,8 @@ properties, own and inherited, of `object` are bound.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to bind and assign the bound methods to. |
-| methodNames | `CLIVE` | The object method names to bind,
- specified as individual method names or arrays of method names. |
+| methodNames | `CLIVE` | The object method names to bind,  specified as individual method names or arrays of method names. |
+
 **Returns**: `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -2347,6 +2374,7 @@ for more details.
 | object | `Object` | The object the method belongs to. |
 | key | `string` | The key of the method. |
 | args | `*` | The arguments to be partially applied. |
+
 **Returns**: `function` - Returns the new bound function.  
 **Example**  
 ```js
@@ -2382,6 +2410,7 @@ if `func.length` is not sufficient.
 | ----- | ---- | ----------- |
 | func | `function` | The function to curry. |
 | arity | `number` | The arity of `func`. |
+
 **Returns**: `function` - Returns the new curried function.  
 **Example**  
 ```js
@@ -2409,6 +2438,7 @@ in the manner of `_.partialRight` instead of `_.partial`.
 | ----- | ---- | ----------- |
 | func | `function` | The function to curry. |
 | arity | `number` | The arity of `func`. |
+
 **Returns**: `function` - Returns the new curried function.  
 **Example**  
 ```js
@@ -2446,12 +2476,10 @@ for details over the differences between `_.debounce` and `_.throttle`.
 | func | `function` | The function to debounce. |
 | wait | `number` | The number of milliseconds to delay. |
 | options | `Object` | The options object. |
-| options.leading | `boolean` | Specify invoking on the leading
- edge of the timeout. |
-| options.maxWait | `number` | The maximum time `func` is allowed to be
- delayed before it is invoked. |
-| options.trailing | `boolean` | Specify invoking on the trailing
- edge of the timeout. |
+| options.leading | `boolean` | Specify invoking on the leading  edge of the timeout. |
+| options.maxWait | `number` | The maximum time `func` is allowed to be  delayed before it is invoked. |
+| options.trailing | `boolean` | Specify invoking on the trailing  edge of the timeout. |
+
 **Returns**: `function` - Returns the new debounced function.  
 **Example**  
 ```js
@@ -2496,6 +2524,7 @@ additional arguments are provided to `func` when it is invoked.
 | ----- | ---- | ----------- |
 | func | `function` | The function to defer. |
 | args | `*` | The arguments to invoke the function with. |
+
 **Returns**: `number` - Returns the timer id.  
 **Example**  
 ```js
@@ -2512,6 +2541,7 @@ provided to `func` when it is invoked.
 | func | `function` | The function to delay. |
 | wait | `number` | The number of milliseconds to delay invocation. |
 | args | `*` | The arguments to invoke the function with. |
+
 **Returns**: `number` - Returns the timer id.  
 **Example**  
 ```js
@@ -2527,6 +2557,7 @@ supplied the return value of the previous.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | funcs | `function` | Functions to invoke. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -2555,6 +2586,7 @@ is exposed as the `cache` property on the memoized function.
 | ----- | ---- | ----------- |
 | func | `function` | The function to have its output memoized. |
 | resolver | `function` | The function to resolve the cache key. |
+
 **Returns**: `function` - Returns the new memoizing function.  
 **Example**  
 ```js
@@ -2586,6 +2618,7 @@ created function.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | predicate | `function` | The predicate to negate. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -2597,7 +2630,7 @@ _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
 // => [1, 3, 5]
 ```
 <a name="_.dropWhile"></a>
-###_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array`
+###_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` excluding elements dropped from the beginning.
 Elements are dropped until the predicate returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
@@ -2612,9 +2645,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per element. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per element. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Type**: `function`  
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
@@ -2649,6 +2682,7 @@ applied functions.
 | ----- | ---- | ----------- |
 | func | `function` | The function to partially apply arguments to. |
 | args | `*` | The arguments to be partially applied. |
+
 **Returns**: `function` - Returns the new partially applied function.  
 **Example**  
 ```js
@@ -2669,6 +2703,7 @@ functions.
 | ----- | ---- | ----------- |
 | func | `function` | The function to partially apply arguments to. |
 | args | `*` | The arguments to be partially applied. |
+
 **Returns**: `function` - Returns the new partially applied function.  
 **Example**  
 ```js
@@ -2709,10 +2744,9 @@ for details over the differences between `_.throttle` and `_.debounce`.
 | func | `function` | The function to throttle. |
 | wait | `number` | The number of milliseconds to throttle invocations to. |
 | options | `Object` | The options object. |
-| options.leading | `boolean` | Specify invoking on the leading
- edge of the timeout. |
-| options.trailing | `boolean` | Specify invoking on the trailing
- edge of the timeout. |
+| options.leading | `boolean` | Specify invoking on the leading  edge of the timeout. |
+| options.trailing | `boolean` | Specify invoking on the trailing  edge of the timeout. |
+
 **Returns**: `function` - Returns the new throttled function.  
 **Example**  
 ```js
@@ -2737,6 +2771,7 @@ with the `this` binding of the created function.
 | ----- | ---- | ----------- |
 | value | `*` | The value to wrap. |
 | wrapper | `function` | The wrapper function. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -2767,6 +2802,7 @@ for more details.
 | isDeep | `boolean` | Specify a deep clone. |
 | customizer | `function` | The function to customize cloning values. |
 | thisArg | `*` | The `this` binding of `customizer`. |
+
 **Returns**: `*` - Returns the cloned value.  
 **Example**  
 ```js
@@ -2811,6 +2847,7 @@ for more details.
 | value | `*` | The value to deep clone. |
 | customizer | `function` | The function to customize cloning values. |
 | thisArg | `*` | The `this` binding of `customizer`. |
+
 **Returns**: `*` - Returns the deep cloned value.  
 **Example**  
 ```js
@@ -2842,6 +2879,7 @@ Checks if `value` is classified as an `arguments` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is an `arguments` object, else `false`.  
 **Example**  
 ```js
@@ -2866,10 +2904,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `number` - Returns the index of the found element, else `-1`.  
 **Example**  
 ```js
@@ -2899,6 +2936,7 @@ Checks if `value` is classified as a boolean primitive or object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -2915,6 +2953,7 @@ Checks if `value` is classified as a `Date` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -2931,6 +2970,7 @@ Checks if `value` is a DOM element.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is a DOM element, else `false`.  
 **Example**  
 ```js
@@ -2949,6 +2989,7 @@ enumerable properties.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `Array` \| `Object` \| `string` | The value to inspect. |
+
 **Returns**: `boolean` - Returns `true` if `value` is empty, else `false`.  
 **Example**  
 ```js
@@ -2986,6 +3027,7 @@ for comparing other values.
 | other | `*` | The value to compare to `value`. |
 | customizer | `function` | The function to customize comparing values. |
 | thisArg | `*` | The `this` binding of `customizer`. |
+
 **Returns**: `boolean` - Returns `true` if the values are equivalent, else `false`.  
 **Example**  
 ```js
@@ -3014,6 +3056,7 @@ Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is an error object, else `false`.  
 **Example**  
 ```js
@@ -3038,10 +3081,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `number` - Returns the index of the found element, else `-1`.  
 **Example**  
 ```js
@@ -3071,6 +3113,7 @@ Checks if `value` is classified as a `Function` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -3090,6 +3133,7 @@ Checks if `value` is the language type of `Object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is an object, else `false`.  
 **Example**  
 ```js
@@ -3113,6 +3157,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is `NaN`, else `false`.  
 **Example**  
 ```js
@@ -3135,6 +3180,7 @@ Checks if `value` is a native function.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is a native function, else `false`.  
 **Example**  
 ```js
@@ -3151,6 +3197,7 @@ Checks if `value` is `null`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is `null`, else `false`.  
 **Example**  
 ```js
@@ -3170,6 +3217,7 @@ as numbers, use the `_.isFinite` method.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -3189,6 +3237,7 @@ Gets the first element of `array`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
+
 **Returns**: `*` - Returns the first element of `array`.  
 **Example**  
 ```js
@@ -3205,6 +3254,7 @@ Checks if `value` is classified as a `RegExp` object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -3221,6 +3271,7 @@ Checks if `value` is classified as a `String` primitive or object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
 **Example**  
 ```js
@@ -3237,6 +3288,7 @@ Checks if `value` is `undefined`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to check. |
+
 **Returns**: `boolean` - Returns `true` if `value` is `undefined`, else `false`.  
 **Example**  
 ```js
@@ -3255,6 +3307,7 @@ flattened, otherwise it is only flattened a single level.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to flatten. |
 | isDeep | `boolean` | Specify a deep flatten. |
+
 **Returns**: `Array` - Returns the new flattened array.  
 **Example**  
 ```js
@@ -3275,6 +3328,7 @@ to the created object.
 | ----- | ---- | ----------- |
 | prototype | `Object` | The object to inherit from. |
 | properties | `Object` | The properties to assign to the object. |
+
 **Returns**: `Object` - Returns the new object.  
 **Example**  
 ```js
@@ -3309,6 +3363,7 @@ for a deep version of this method.
 | ----- | ---- | ----------- |
 | object | `Object` | The destination object. |
 | sources | `Object` | The source objects. |
+
 **Returns**: `Object` - Returns the destination object.  
 **Example**  
 ```js
@@ -3330,10 +3385,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `string` | `undefined` - Returns the key of the matched element, else `undefined`.  
 **Example**  
 ```js
@@ -3371,10 +3425,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to search. |
-| predicate | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| predicate | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `string` | `undefined` - Returns the key of the matched element, else `undefined`.  
 **Example**  
 ```js
@@ -3409,6 +3462,7 @@ iteration early by explicitly returning `false`.
 | object | `Object` | The object to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -3434,6 +3488,7 @@ This method is like `_.forIn` except that it iterates over properties of
 | object | `Object` | The object to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -3461,6 +3516,7 @@ early by explicitly returning `false`.
 | object | `Object` | The object to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -3479,6 +3535,7 @@ This method is like `_.forOwn` except that it iterates over properties of
 | object | `Object` | The object to iterate over. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -3495,6 +3552,7 @@ own and inherited, of `object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the new array of property names.  
 **Example**  
 ```js
@@ -3510,6 +3568,7 @@ instead of an inherited property.
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
 | key | `string` | The name of the property to check. |
+
 **Returns**: `boolean` - Returns `true` if key is a direct property, else `false`.  
 **Example**  
 ```js
@@ -3527,6 +3586,7 @@ is `true`.
 | ----- | ---- | ----------- |
 | object | `Object` | The object to invert. |
 | multiValue | `boolean` | Allow multiple values per key. |
+
 **Returns**: `Object` - Returns the new inverted object.  
 **Example**  
 ```js
@@ -3548,6 +3608,7 @@ Recursively flattens a nested array.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to recursively flatten. |
+
 **Returns**: `Array` - Returns the new flattened array.  
 **Example**  
 ```js
@@ -3561,6 +3622,7 @@ Creates an array of the own and inherited enumerable property names of `object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the array of property names.  
 **Example**  
 ```js
@@ -3591,10 +3653,9 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to iterate over. |
-| iteratee | `function` \| `Object` \| `string` | The function invoked
- per iteration. If a property name or object is provided it is used to
- create a "_.pluck" or "_.where" style callback respectively. |
+| iteratee | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Object` - Returns the new mapped object.  
 **Example**  
 ```js
@@ -3625,8 +3686,8 @@ for more details.
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
 | value | `*` | The value to search for. |
-| fromIndex | `boolean` \| `number` | The index to search from or `true`
- to perform a binary search on a sorted array. |
+| fromIndex | `boolean` \| `number` | The index to search from or `true`  to perform a binary search on a sorted array. |
+
 **Returns**: `number` - Returns the index of the matched value, else `-1`.  
 **Example**  
 ```js
@@ -3653,10 +3714,9 @@ predicate is bound to `thisArg` and invoked with three arguments;
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The source object. |
-| predicate | `string` | The function invoked per
- iteration or property names to omit, specified as individual property
- names or arrays of property names. |
+| predicate | `string` | The function invoked per  iteration or property names to omit, specified as individual property  names or arrays of property names. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Object` - Returns the new object.  
 **Example**  
 ```js
@@ -3676,6 +3736,7 @@ e.g. `[[key1, value1], [key2, value2]]`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the new array of key-value pairs.  
 **Example**  
 ```js
@@ -3694,10 +3755,9 @@ predicate is bound to `thisArg` and invoked with three arguments;
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The source object. |
-| predicate | `string` | The function invoked per
- iteration or property names to pick, specified as individual property
- names or arrays of property names. |
+| predicate | `string` | The function invoked per  iteration or property names to pick, specified as individual property  names or arrays of property names. |
 | thisArg | `*` | The `this` binding of `predicate`. |
+
 **Returns**: `Object` - Returns the new object.  
 **Example**  
 ```js
@@ -3724,6 +3784,7 @@ functions may exit iteration early by explicitly returning `false`.
 | iteratee | `function` | The function invoked per iteration. |
 | accumulator | `*` | The custom accumulator value. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `*` - Returns the accumulated value.  
 **Example**  
 ```js
@@ -3747,6 +3808,7 @@ Creates an array of the own enumerable property values of `object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the array of property values.  
 **Example**  
 ```js
@@ -3768,6 +3830,7 @@ of `object`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
+
 **Returns**: `Array` - Returns the array of property values.  
 **Example**  
 ```js
@@ -3788,6 +3851,7 @@ Gets all but the last element of `array`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
+
 **Returns**: `Array` - Returns the slice of `array`.  
 **Example**  
 ```js
@@ -3801,6 +3865,7 @@ Capitalizes the first character of `string`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to capitalize. |
+
 **Returns**: `string` - Returns the capitalized string.  
 **Example**  
 ```js
@@ -3816,6 +3881,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to deburr. |
+
 **Returns**: `string` - Returns the beburred string.  
 **Example**  
 ```js
@@ -3831,6 +3897,7 @@ Checks if `string` ends with a given target string.
 | string | `string` | The string to search. |
 | target | `string` | The string to search for. |
 | position | `number` | The position to search from. |
+
 **Returns**: `boolean` - Returns `true` if the given string ends with the
  target string, else `false`.  
 **Example**  
@@ -3859,6 +3926,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to escape. |
+
 **Returns**: `string` - Returns the escaped string.  
 **Example**  
 ```js
@@ -3873,6 +3941,7 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to escape. |
+
 **Returns**: `string` - Returns the escaped string.  
 **Example**  
 ```js
@@ -3891,6 +3960,7 @@ for more details.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | arrays | `Array` | The arrays to inspect. |
+
 **Returns**: `Array` - Returns the new array of shared values.  
 **Example**  
 ```js
@@ -3908,6 +3978,7 @@ characters can't be evenly divided by the padding length.
 | string | `string` | The string to pad. |
 | length | `number` | The padding length. |
 | chars | `string` | The string used as padding. |
+
 **Returns**: `string` - Returns the padded string.  
 **Example**  
 ```js
@@ -3931,6 +4002,7 @@ characters exceeds the padding length.
 | string | `string` | The string to pad. |
 | length | `number` | The padding length. |
 | chars | `string` | The string used as padding. |
+
 **Returns**: `string` - Returns the padded string.  
 **Example**  
 ```js
@@ -3954,6 +4026,7 @@ characters exceeds the padding length.
 | string | `string` | The string to pad. |
 | length | `number` | The padding length. |
 | chars | `string` | The string used as padding. |
+
 **Returns**: `string` - Returns the padded string.  
 **Example**  
 ```js
@@ -3974,6 +4047,7 @@ Repeats the given string `n` times.
 | ----- | ---- | ----------- |
 | string | `string` | The string to repeat. |
 | n | `number` | The number of times to repeat the string. |
+
 **Returns**: `string` - Returns the repeated string.  
 **Example**  
 ```js
@@ -3993,6 +4067,7 @@ Gets the last element of `array`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | `Array` | The array to query. |
+
 **Returns**: `*` - Returns the last element of `array`.  
 **Example**  
 ```js
@@ -4008,6 +4083,7 @@ Checks if `string` starts with a given target string.
 | string | `string` | The string to search. |
 | target | `string` | The string to search for. |
 | position | `number` | The position to search from. |
+
 **Returns**: `boolean` - Returns `true` if the given string starts with the
  target string, else `false`.  
 **Example**  
@@ -4049,6 +4125,7 @@ For more information on Chrome extension sandboxes see
 | options.interpolate | `RegExp` | The "interpolate" delimiter. |
 | options.sourceURL | `string` | The sourceURL of the template's compiled source. |
 | options.variable | `string` | The data object variable name. |
+
 **Returns**: `function` - Returns the compiled template function.  
 **Example**  
 ```js
@@ -4124,6 +4201,7 @@ Removes leading and trailing whitespace or specified characters from `string`.
 | ----- | ---- | ----------- |
 | string | `string` | The string to trim. |
 | chars | `string` | The characters to trim. |
+
 **Returns**: `string` - Returns the trimmed string.  
 **Example**  
 ```js
@@ -4141,6 +4219,7 @@ Removes leading whitespace or specified characters from `string`.
 | ----- | ---- | ----------- |
 | string | `string` | The string to trim. |
 | chars | `string` | The characters to trim. |
+
 **Returns**: `string` - Returns the trimmed string.  
 **Example**  
 ```js
@@ -4158,6 +4237,7 @@ Removes trailing whitespace or specified characters from `string`.
 | ----- | ---- | ----------- |
 | string | `string` | The string to trim. |
 | chars | `string` | The characters to trim. |
+
 **Returns**: `string` - Returns the trimmed string.  
 **Example**  
 ```js
@@ -4180,6 +4260,7 @@ string which defaults to "...".
 | options.length | `number` | The maximum string length. |
 | options.omission | `string` | The string to indicate text is omitted. |
 | options.separator | `RegExp` \| `string` | The separator pattern to truncate to. |
+
 **Returns**: `string` - Returns the truncated string.  
 **Example**  
 ```js
@@ -4210,6 +4291,7 @@ entities use a third-party library like [_he_](http://mths.be/he).
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | string | `string` | The string to unescape. |
+
 **Returns**: `string` - Returns the unescaped string.  
 **Example**  
 ```js
@@ -4224,6 +4306,7 @@ Splits `string` into an array of its words.
 | ----- | ---- | ----------- |
 | string | `string` | The string to inspect. |
 | pattern | `RegExp` \| `string` | The pattern to match words. |
+
 **Returns**: `Array` - Returns the words of `string`.  
 **Example**  
 ```js
@@ -4241,6 +4324,7 @@ error object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `*` | The function to attempt. |
+
 **Returns**: `*` - Returns the `func` result or error object.  
 **Example**  
 ```js
@@ -4264,6 +4348,7 @@ that contain the equivalent object properties, otherwise it returns `false`.
 | ----- | ---- | ----------- |
 | func | `*` | The value to convert to a callback. |
 | thisArg | `*` | The `this` binding of the created callback. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -4293,6 +4378,7 @@ Creates a function that returns `value`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | The value to return from the new function. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -4308,6 +4394,7 @@ This method returns the first argument provided to it.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | value | `*` | Any value. |
+
 **Returns**: `*` - Returns `value`.  
 **Example**  
 ```js
@@ -4324,6 +4411,7 @@ object has equivalent property values, else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | source | `Object` | The object of property values to match. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -4351,8 +4439,8 @@ its prototype as well.
 | object | `function` \| `Object` | object The destination object. |
 | source | `Object` | The object of functions to add. |
 | options | `Object` | The options object. |
-| options.chain | `boolean` | Specify whether the functions added
- are chainable. |
+| options.chain | `boolean` | Specify whether the functions added  are chainable. |
+
 **Returns**: `function` | `Object` - Returns `object`.  
 **Example**  
 ```js
@@ -4402,8 +4490,8 @@ This method is like `_.indexOf` except that it iterates over elements of
 | ----- | ---- | ----------- |
 | array | `Array` | The array to search. |
 | value | `*` | The value to search for. |
-| fromIndex | `boolean` \| `number` | The index to search from
- or `true` to perform a binary search on a sorted array. |
+| fromIndex | `boolean` \| `number` | The index to search from  or `true` to perform a binary search on a sorted array. |
+
 **Returns**: `number` - Returns the index of the matched value, else `-1`.  
 **Example**  
 ```js
@@ -4431,6 +4519,7 @@ implementations. See the [ES5 spec](http://es5.github.io/#E) for more details.
 | ----- | ---- | ----------- |
 | value | `string` | The value to parse. |
 | radix | `number` | The radix to interpret `value` by. |
+
 **Returns**: `number` - Returns the converted integer.  
 **Example**  
 ```js
@@ -4445,6 +4534,7 @@ given object.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | key | `string` | The name of the property to retrieve. |
+
 **Returns**: `function` - Returns the new function.  
 **Example**  
 ```js
@@ -4473,6 +4563,7 @@ number is returned instead of an integer.
 | min | `number` | The minimum possible value. |
 | max | `number` | The maximum possible value. |
 | floating | `boolean` | Specify returning a floating-point number. |
+
 **Returns**: `number` - Returns the random number.  
 **Example**  
 ```js
@@ -4499,6 +4590,7 @@ zero-length range is created unless a negative `step` is specified.
 | start | `number` | The start of the range. |
 | end | `number` | The end of the range. |
 | step | `number` | The value to increment or decrement by. |
+
 **Returns**: `Array` - Returns the new array of numbers.  
 **Example**  
 ```js
@@ -4532,8 +4624,8 @@ if the property value resolves to `undefined`.
 | ----- | ---- | ----------- |
 | object | `Object` | The object to inspect. |
 | key | `string` | The name of the property to resolve. |
-| defaultValue | `*` | The value returned if the property value
- resolves to `undefined`. |
+| defaultValue | `*` | The value returned if the property value  resolves to `undefined`. |
+
 **Returns**: `*` - Returns the resolved value.  
 **Example**  
 ```js
@@ -4564,6 +4656,7 @@ one argument; (index).
 | n | `number` | The number of times to invoke `iteratee`. |
 | iteratee | `function` | The function invoked per iteration. |
 | thisArg | `*` | The `this` binding of `iteratee`. |
+
 **Returns**: `Array` - Returns the array of results.  
 **Example**  
 ```js
@@ -4583,6 +4676,7 @@ Generates a unique ID. If `prefix` is provided the ID is appended to it.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | prefix | `string` | The value to prefix the ID with. |
+
 **Returns**: `string` - Returns the unique ID.  
 **Example**  
 ```js

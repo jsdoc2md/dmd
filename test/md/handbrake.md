@@ -7,7 +7,7 @@ Handbrake for node.js.
 var hbjs = require("handbrake-js");
 ```
 * [handbrake-js](#module_handbrake-js)
-  * [hbjs.cliOptions](#module_handbrake-js.cliOptions)
+  * [hbjs.cliOptions → `array`](#module_handbrake-js.cliOptions)
   * [hbjs.spawn(options) ⇒ `module:handbrake-js~Handbrake`](#module_handbrake-js.spawn)
   * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
@@ -22,7 +22,7 @@ var hbjs = require("handbrake-js");
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js.cliOptions"></a>
-###hbjs.cliOptions
+###hbjs.cliOptions → `array`
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
 **Type**: `array`  
@@ -33,6 +33,7 @@ Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | options | `Object` \| `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+
 **Returns**: <code>[Handbrake](#module_handbrake-js..Handbrake)</code> - A `Handbrake` instance  
 **Example**  
 ```js
@@ -50,6 +51,7 @@ Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLI
 | ----- | ---- | ----------- |
 | options | `Object` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
 | onComplete | `function` | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
+
 **Example**  
 ```js
 var hbjs = require("handbrake-js");

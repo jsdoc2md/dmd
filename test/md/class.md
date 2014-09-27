@@ -6,11 +6,11 @@ a global class
 
 **Extends**: `String`  
 * [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass())
+  * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
-<a name="new_GlobalClass()"></a>
+<a name="new_GlobalClass_new"></a>
 ###new GlobalClass(one, two)
 the global class constructor
 
@@ -18,6 +18,7 @@ the global class constructor
 | ----- | ---- | ----------- |
 | one | `number` | first param |
 | two | `string` | second param |
+
 <a name="GlobalClass#propOne"></a>
 ###globalClass.propOne
 an instance property
