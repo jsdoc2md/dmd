@@ -11,7 +11,7 @@
   * [_.groupBy](#_.groupBy) ⇒ `Object`
   * [_.indexBy](#_.indexBy) ⇒ `Object`
   * [_.partition](#_.partition) ⇒ `Array`
-  * [_.once](#_.once) ⇒ `function` → `function`
+  * [_.once](#_.once) ⇒ `function`
   * [_.support](#_.support) → `Object`
     * [support.support.nodeClass](#_.support.support.nodeClass) → `boolean`
     * [support.support.argsClass](#_.support.support.argsClass) → `boolean`
@@ -40,10 +40,10 @@
   * [_.slice(array, [start], [end])](#_.slice) ⇒ `Array`
   * [_.sortedIndex(array, value, [iteratee], [thisArg])](#_.sortedIndex) ⇒ `number`
   * [_.sortedLastIndex(array, value, [iteratee], [thisArg])](#_.sortedLastIndex) ⇒ `number`
-  * [_.take(array, [n])](#_.take) ⇒ `Array` → `Array`
-  * [_.takeRight(array, [n])](#_.takeRight) ⇒ `Array` → `Array`
-  * [_.takeRightWhile(array, [predicate], [thisArg])](#_.takeRightWhile) ⇒ `Array` → `Array`
-  * [_.takeWhile(array, [predicate], [thisArg])](#_.takeWhile) ⇒ `Array` → `Array`
+  * [_.take(array, [n])](#_.take) ⇒ `Array`
+  * [_.takeRight(array, [n])](#_.takeRight) ⇒ `Array`
+  * [_.takeRightWhile(array, [predicate], [thisArg])](#_.takeRightWhile) ⇒ `Array`
+  * [_.takeWhile(array, [predicate], [thisArg])](#_.takeWhile) ⇒ `Array`
   * [_.union([...arrays])](#_.union) ⇒ `Array`
   * [_.unique(array, [isSorted], [iteratee], [thisArg])](#_.unique) ⇒ `Array`
   * [_.unzip(array)](#_.unzip) ⇒ `Array`
@@ -81,13 +81,13 @@
   * [_.findWhere(collection, source)](#_.findWhere) ⇒ `*`
   * [_.each(collection, [iteratee], [thisArg])](#_.each) ⇒ `Array | Object | string`
   * [_.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ `Array | Object | string`
-  * [_.drop(array, [n])](#_.drop) ⇒ `Array` → `Array`
-  * [_.dropRight(array, [n])](#_.dropRight) ⇒ `Array` → `Array`
+  * [_.drop(array, [n])](#_.drop) ⇒ `Array`
+  * [_.dropRight(array, [n])](#_.dropRight) ⇒ `Array`
   * [_.invoke(collection, methodName, [...args])](#_.invoke) ⇒ `Array`
   * [_.collect(collection, [iteratee], [thisArg])](#_.collect) ⇒ `Array`
   * [_.max(collection, [iteratee], [thisArg])](#_.max) ⇒ `*`
   * [_.min(collection, [iteratee], [thisArg])](#_.min) ⇒ `*`
-  * [_.dropRightWhile(array, [predicate], [thisArg])](#_.dropRightWhile) ⇒ `Array` → `Array`
+  * [_.dropRightWhile(array, [predicate], [thisArg])](#_.dropRightWhile) ⇒ `Array`
   * [_.pluck(collection, key)](#_.pluck) ⇒ `Array`
   * [_.foldr(collection, [iteratee], [accumulator], [thisArg])](#_.foldr) ⇒ `*`
   * [_.reject(collection, [predicate], [thisArg])](#_.reject) ⇒ `Array`
@@ -111,7 +111,7 @@
   * [_.flow([...funcs])](#_.flow) ⇒ `function`
   * [_.memoize(func, [resolver])](#_.memoize) ⇒ `function`
   * [_.negate(predicate)](#_.negate) ⇒ `function`
-  * [_.dropWhile(array, [predicate], [thisArg])](#_.dropWhile) ⇒ `Array` → `Array`
+  * [_.dropWhile(array, [predicate], [thisArg])](#_.dropWhile) ⇒ `Array`
   * [_.partial(func, [...args])](#_.partial) ⇒ `function`
   * [_.partialRight(func, [...args])](#_.partialRight) ⇒ `function`
   * [_.throttle(func, wait, [options])](#_.throttle) ⇒ `function`
@@ -474,7 +474,7 @@ _.map(_.partition(users, 'blocked'), function(array) { return _.pluck(array, 'us
 // => [['fred'], ['barney', 'pebbles']]
 ```
 <a name="_.once"></a>
-###_.once ⇒ `function` → `function`
+###_.once ⇒ `function`
 Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first call. The `func` is invoked
 with the `this` binding of the created function.
@@ -985,7 +985,7 @@ _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
 // => 4
 ```
 <a name="_.take"></a>
-###_.take(array, [n]) ⇒ `Array` → `Array`
+###_.take(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements taken from the beginning.
 
 | Param | Type | Description |
@@ -1009,7 +1009,7 @@ _.take([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRight"></a>
-###_.takeRight(array, [n]) ⇒ `Array` → `Array`
+###_.takeRight(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements taken from the end.
 
 | Param | Type | Description |
@@ -1033,7 +1033,7 @@ _.takeRight([1, 2, 3], 0);
 // => []
 ```
 <a name="_.takeRightWhile"></a>
-###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
+###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array`
 Creates a slice of `array` with elements taken from the end. Elements are
 taken until `predicate` returns falsey. The predicate is bound to `thisArg`
 and invoked with three arguments; (value, index, array).
@@ -1072,7 +1072,7 @@ _.pluck(_.takeRightWhile(users, { 'employer': 'na' }), 'user');
 // => ['pebbles']
 ```
 <a name="_.takeWhile"></a>
-###_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
+###_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array`
 Creates a slice of `array` with elements taken from the beginning. Elements
 are taken until `predicate` returns falsey. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
@@ -1756,7 +1756,7 @@ _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
 <a name="_.drop"></a>
-###_.drop(array, [n]) ⇒ `Array` → `Array`
+###_.drop(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
 | Param | Type | Description |
@@ -1780,7 +1780,7 @@ _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
 <a name="_.dropRight"></a>
-###_.dropRight(array, [n]) ⇒ `Array` → `Array`
+###_.dropRight(array, [n]) ⇒ `Array`
 Creates a slice of `array` with `n` elements dropped from the end.
 
 | Param | Type | Description |
@@ -1947,7 +1947,7 @@ _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
 ```
 <a name="_.dropRightWhile"></a>
-###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
+###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array`
 Creates a slice of `array` excluding elements dropped from the end.
 Elements are dropped until `predicate` returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
@@ -2645,7 +2645,7 @@ _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
 // => [1, 3, 5]
 ```
 <a name="_.dropWhile"></a>
-###_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
+###_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array`
 Creates a slice of `array` excluding elements dropped from the beginning.
 Elements are dropped until `predicate` returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).

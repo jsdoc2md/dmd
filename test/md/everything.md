@@ -24,6 +24,7 @@
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
+* [returnsSomething()](#returnsSomething) ⇒ `string`
 * [globalVar](#globalVar) → `string`
 
 <a name="module_cjs/class"></a>
@@ -183,6 +184,10 @@ Fire an event, causing all handlers for that event name to run.
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
+<a name="returnsSomething"></a>
+##returnsSomething() ⇒ `string`
+returns has no desc
+
 <a name="globalVar"></a>
 ##globalVar → `string`
 a global var

@@ -1,5 +1,7 @@
-{{!-- constructors always return Object, return sig pointless --}}
+{{!-- constructors always return Object, so return-sig pointless --}}
 {{~#unless (isConstructor)~}}
-{{#if returns}} ⇒ `{{{returnSig}}}`{{/if~}}
+{{#if returns}} ⇒ `{{{returnSig}}}`
+{{~else~}}
 {{#if type}} → `{{{returnSig}}}`{{/if~}}
+{{/if~}}
 {{/unless}}

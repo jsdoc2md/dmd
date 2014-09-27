@@ -346,6 +346,23 @@
     "codeName": "globalFunction"
   },
   {
+    "id": "returnsSomething",
+    "name": "returnsSomething",
+    "scope": "global",
+    "kind": "function",
+    "description": "returns has no desc",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        }
+      }
+    ],
+    "codeName": "returnsSomething"
+  },
+  {
     "id": "globalVar",
     "name": "globalVar",
     "scope": "global",
