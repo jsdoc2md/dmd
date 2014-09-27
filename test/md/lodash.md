@@ -101,7 +101,7 @@
   * [_.after(n, func)](#_.after) ⇒ `function`
   * [_.before(n, func)](#_.before) ⇒ `function`
   * [_.bind(func, [thisArg], [...args])](#_.bind) ⇒ `function`
-  * [_.bindAll(object, [methodNames])](#_.bindAll) ⇒ `Object`
+  * [_.bindAll(object, [...methodNames])](#_.bindAll) ⇒ `Object`
   * [_.bindKey(object, key, [...args])](#_.bindKey) ⇒ `function`
   * [_.curry(func, [arity])](#_.curry) ⇒ `function`
   * [_.curryRight(func, [arity])](#_.curryRight) ⇒ `function`
@@ -153,9 +153,9 @@
   * [_.keysIn(object)](#_.keysIn) ⇒ `Array`
   * [_.mapValues(object, [iteratee], [thisArg])](#_.mapValues) ⇒ `Object`
   * [_.indexOf(array, value, [fromIndex])](#_.indexOf) ⇒ `number`
-  * [_.omit(object, [...predicate], [thisArg])](#_.omit) ⇒ `Object`
+  * [_.omit(object, [predicate], [thisArg])](#_.omit) ⇒ `Object`
   * [_.pairs(object)](#_.pairs) ⇒ `Array`
-  * [_.pick(object, [...predicate], [thisArg])](#_.pick) ⇒ `Object`
+  * [_.pick(object, [predicate], [thisArg])](#_.pick) ⇒ `Object`
   * [_.transform(object, [iteratee], [accumulator], [thisArg])](#_.transform) ⇒ `*`
   * [_.values(object)](#_.values) ⇒ `Array`
   * [_.valuesIn(object)](#_.valuesIn) ⇒ `Array`
@@ -433,8 +433,8 @@ _.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, 
 <a name="_.partition"></a>
 ###_.partition ⇒ `Array`
 Creates an array of elements split into two groups, the first of which
-contains elements the predicate returns truthy for, while the second of which
-contains elements the predicate returns falsey for. The predicate is bound
+contains elements `predicate` returns truthy for, while the second of which
+contains elements `predicate` returns falsey for. The predicate is bound
 to `thisArg` and invoked with three arguments; (value, index|key, collection).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -861,7 +861,7 @@ console.log(evens);
 ```
 <a name="_.remove"></a>
 ###_.remove(array, [predicate], [thisArg]) ⇒ `Array`
-Removes all elements from `array` that the predicate returns truthy for
+Removes all elements from `array` that `predicate` returns truthy for
 and returns an array of the removed elements. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
 
@@ -926,7 +926,7 @@ Uses a binary search to determine the lowest index at which a value should
 be inserted into a given sorted array in order to maintain the sort order
 of the array. If an iteratee function is provided it is invoked for `value`
 and each element of `array` to compute their sort ranking. The iteratee
-function is bound to `thisArg` and invoked with one argument; (value).
+is bound to `thisArg` and invoked with one argument; (value).
 
 If a property name is provided for `iteratee` the created "_.pluck" style
 callback returns the property value of the given element.
@@ -1035,7 +1035,7 @@ _.takeRight([1, 2, 3], 0);
 <a name="_.takeRightWhile"></a>
 ###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` with elements taken from the end. Elements are
-taken until the predicate returns falsey. The predicate is bound to `thisArg`
+taken until `predicate` returns falsey. The predicate is bound to `thisArg`
 and invoked with three arguments; (value, index, array).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -1074,7 +1074,7 @@ _.pluck(_.takeRightWhile(users, { 'employer': 'na' }), 'user');
 <a name="_.takeWhile"></a>
 ###_.takeWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` with elements taken from the beginning. Elements
-are taken until the predicate returns falsey. The predicate is bound to
+are taken until `predicate` returns falsey. The predicate is bound to
 `thisArg` and invoked with three arguments; (value, index, array).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -1554,7 +1554,7 @@ _.difference([1, 2, 3], [5, 2, 10]);
 ```
 <a name="_.all"></a>
 ###_.all(collection, [predicate], [thisArg]) ⇒ `boolean`
-Checks if the predicate returns truthy for **all** elements of `collection`.
+Checks if `predicate` returns truthy for **all** elements of `collection`.
 The predicate is bound to `thisArg` and invoked with three arguments;
 (value, index|key, collection).
 
@@ -1571,7 +1571,7 @@ else `false`.
 | \[predicate=identity\] | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
-**Returns**: `boolean` - Returns `true` if all elements passed the predicate check,
+**Returns**: `boolean` - Returns `true` if all elements pass the predicate check,
  else `false`.  
 **Example**  
 ```js
@@ -1594,7 +1594,7 @@ _.every(users, { 'age': 36 });
 <a name="_.select"></a>
 ###_.select(collection, [predicate], [thisArg]) ⇒ `Array`
 Iterates over elements of `collection`, returning an array of all elements
-the predicate returns truthy for. The predicate is bound to `thisArg` and
+`predicate` returns truthy for. The predicate is bound to `thisArg` and
 invoked with three arguments; (value, index|key, collection).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -1631,8 +1631,8 @@ _.filter(users, { 'age': 36 });
 ```
 <a name="_.detect"></a>
 ###_.detect(collection, [predicate], [thisArg]) ⇒ `*`
-Iterates over elements of `collection`, returning the first element that
-the predicate returns truthy for. The predicate is bound to `thisArg` and
+Iterates over elements of `collection`, returning the first element
+`predicate` returns truthy for. The predicate is bound to `thisArg` and
 invoked with three arguments; (value, index|key, collection).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -1949,7 +1949,7 @@ _.min(users, 'age');
 <a name="_.dropRightWhile"></a>
 ###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` excluding elements dropped from the end.
-Elements are dropped until the predicate returns falsey. The predicate is
+Elements are dropped until `predicate` returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -2031,7 +2031,7 @@ _.reduceRight(array, function(flattened, other) { return flattened.concat(other)
 <a name="_.reject"></a>
 ###_.reject(collection, [predicate], [thisArg]) ⇒ `Array`
 The opposite of `_.filter`; this method returns the elements of `collection`
-the predicate does **not** return truthy for.
+that `predicate` does **not** return truthy for.
 
 If a property name is provided for `predicate` the created "_.pluck" style
 callback returns the property value of the given element.
@@ -2122,7 +2122,7 @@ _.size('pebbles');
 ```
 <a name="_.any"></a>
 ###_.any(collection, [predicate], [thisArg]) ⇒ `boolean`
-Checks if the predicate returns truthy for **any** element of `collection`.
+Checks if `predicate` returns truthy for **any** element of `collection`.
 The function returns as soon as it finds a passing value and does not iterate
 over the entire collection. The predicate is bound to `thisArg` and invoked
 with three arguments; (value, index|key, collection).
@@ -2140,7 +2140,7 @@ else `false`.
 | \[predicate=identity\] | `function` \| `Object` \| `string` | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
-**Returns**: `boolean` - Returns `true` if any element passed the predicate check,
+**Returns**: `boolean` - Returns `true` if any element passes the predicate check,
  else `false`.  
 **Example**  
 ```js
@@ -2318,7 +2318,7 @@ func();
 // => 'hi fred'
 ```
 <a name="_.bindAll"></a>
-###_.bindAll(object, [methodNames]) ⇒ `Object`
+###_.bindAll(object, [...methodNames]) ⇒ `Object`
 Binds methods of an object to the object itself, overwriting the existing
 method. Method names may be specified as individual arguments or as arrays
 of method names. If no method names are provided all enumerable function
@@ -2329,7 +2329,7 @@ properties, own and inherited, of `object` are bound.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The object to bind and assign the bound methods to. |
-| \[methodNames\] | `CLIVE` | The object method names to bind,  specified as individual method names or arrays of method names. |
+| \[...methodNames\] | `string` \| `Array.<string>` | The object method names to bind,  specified as individual method names or arrays of method names. |
 
 **Returns**: `Object` - Returns `object`.  
 **Example**  
@@ -2565,6 +2565,11 @@ provided to the memoized function is used as the cache key. The `func` is
 invoked with the `this` binding of the memoized function. The result cache
 is exposed as the `cache` property on the memoized function.
 
+The mechanism by which memoize caches results can be customized by setting
+a value for the `_.memoize.Cache` property. The objects created by this
+constructor must (partially) implement the `Map` interface with `get`,
+`set` and `has` functions.
+
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | `function` | The function to have its output memoized. |
@@ -2591,6 +2596,33 @@ upperCase('fred');
 upperCase.cache.fred = 'BARNEY'
 upperCase('fred');
 // => 'BARNEY'
+
+// Using a custom memoize cache
+_.memoize.Cache = Map;
+
+// Using a hand-cranked memoize cache wrapper.
+function MyCache() {
+  this.__wrapper__ = [];
+}
+
+_.extend(MyCache.prototype, {
+  get: function(key) {
+    return _.find(this.__wrapper__, function(cached) {
+      return _.identity(key) === cached.key;
+    }).value;
+  },
+  set: function(key, value) {
+    this.__wrapper__.push({ key: key, value: value });
+    return this;
+  },
+  has: function(key) {
+    return _.some(this.__wrapper__, function(cached) {
+      return _.identity(key) === cached;
+    });
+  }
+});
+
+_.memoize.Cache = MyCache;
 ```
 <a name="_.negate"></a>
 ###_.negate(predicate) ⇒ `function`
@@ -2615,7 +2647,7 @@ _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
 <a name="_.dropWhile"></a>
 ###_.dropWhile(array, [predicate], [thisArg]) ⇒ `Array` → `Array`
 Creates a slice of `array` excluding elements dropped from the beginning.
-Elements are dropped until the predicate returns falsey. The predicate is
+Elements are dropped until `predicate` returns falsey. The predicate is
 bound to `thisArg` and invoked with three arguments; (value, index, array).
 
 If a property name is provided for `predicate` the created "_.pluck" style
@@ -2874,7 +2906,7 @@ _.isArguments([1, 2, 3]);
 <a name="_.findIndex"></a>
 ###_.findIndex(array, [predicate], [thisArg]) ⇒ `number`
 This method is like `_.find` except that it returns the index of the first
-element the predicate returns truthy for, instead of the element itself.
+element `predicate` returns truthy for, instead of the element itself.
 
 If a property name is provided for `predicate` the created "_.pluck" style
 callback returns the property value of the given element.
@@ -3355,7 +3387,7 @@ _.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 's
 <a name="_.findKey"></a>
 ###_.findKey(object, [predicate], [thisArg]) ⇒ `string | undefined`
 This method is like `_.findIndex` except that it returns the key of the
-first element the predicate returns truthy for, instead of the element itself.
+first element `predicate` returns truthy for, instead of the element itself.
 
 If a property name is provided for `predicate` the created "_.pluck" style
 callback returns the property value of the given element.
@@ -3685,18 +3717,18 @@ _.indexOf([4, 4, 5, 5, 6, 6], 5, true);
 // => 2
 ```
 <a name="_.omit"></a>
-###_.omit(object, [...predicate], [thisArg]) ⇒ `Object`
+###_.omit(object, [predicate], [thisArg]) ⇒ `Object`
 Creates a shallow clone of `object` excluding the specified properties.
 Property names may be specified as individual arguments or as arrays of
-property names. If a predicate is provided it is invoked for each property
-of `object` omitting the properties the predicate returns truthy for. The
+property names. If `predicate` is provided it is invoked for each property
+of `object` omitting the properties `predicate` returns truthy for. The
 predicate is bound to `thisArg` and invoked with three arguments;
 (value, key, object).
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The source object. |
-| \[...predicate\] | `string` | The function invoked per  iteration or property names to omit, specified as individual property  names or arrays of property names. |
+| \[predicate\] | `string` | The function invoked per  iteration or property names to omit, specified as individual property  names or arrays of property names. |
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Object` - Returns the new object.  
@@ -3726,18 +3758,18 @@ _.pairs({ 'barney': 36, 'fred': 40 });
 // => [['barney', 36], ['fred', 40]] (iteration order is not guaranteed)
 ```
 <a name="_.pick"></a>
-###_.pick(object, [...predicate], [thisArg]) ⇒ `Object`
+###_.pick(object, [predicate], [thisArg]) ⇒ `Object`
 Creates a shallow clone of `object` composed of the specified properties.
 Property names may be specified as individual arguments or as arrays of
-property names. If a predicate is provided it is invoked for each property
-of `object` picking the properties the predicate returns truthy for. The
+property names. If `predicate` is provided it is invoked for each property
+of `object` picking the properties `predicate` returns truthy for. The
 predicate is bound to `thisArg` and invoked with three arguments;
 (value, key, object).
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | `Object` | The source object. |
-| \[...predicate\] | `string` | The function invoked per  iteration or property names to pick, specified as individual property  names or arrays of property names. |
+| \[predicate\] | `string` | The function invoked per  iteration or property names to pick, specified as individual property  names or arrays of property names. |
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Object` - Returns the new object.  
@@ -4112,9 +4144,9 @@ For more information on Chrome extension sandboxes see
 **Example**  
 ```js
 // using the "interpolate" delimiter to create a compiled template
-var compiled = _.template('hello <%= name %>');
+var compiled = _.template('hello <%= user %>!');
 compiled({ 'user': 'fred' });
-// => 'hello fred'
+// => 'hello fred!'
 
 // using the HTML "escape" delimiter to escape data property values
 var compiled = _.template('<b><%- value %></b>');
@@ -4122,23 +4154,23 @@ compiled({ 'value': '<script>' });
 // => '<b>&lt;script&gt;</b>'
 
 // using the "evaluate" delimiter to execute JavaScript and generate HTML
-var compiled = _.template('<% _.forEach(people, function(name) { %><li><%- name %></li><% }); %>');
-compiled({ 'people': ['fred', 'barney'] });
+var compiled = _.template('<% _.forEach(users, function(user) { %><li><%- user %></li><% }); %>');
+compiled({ 'users': ['fred', 'barney'] });
 // => '<li>fred</li><li>barney</li>'
 
 // using the internal `print` function in "evaluate" delimiters
-var compiled = _.template('<% print("hello " + name); %>!');
+var compiled = _.template('<% print("hello " + user); %>!');
 compiled({ 'user': 'barney' });
 // => 'hello barney!'
 
 // using the ES6 delimiter as an alternative to the default "interpolate" delimiter
-var compiled = _.template('hello ${ name }');
+var compiled = _.template('hello ${ user }!');
 compiled({ 'user': 'pebbles' });
-// => 'hello pebbles'
+// => 'hello pebbles!'
 
 // using custom template delimiters
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-var compiled = _.template('hello {{ name }}!');
+var compiled = _.template('hello {{ user }}!');
 compiled({ 'user': 'mustache' });
 // => 'hello mustache!'
 
@@ -4148,13 +4180,13 @@ compiled({ 'value': 'ignored' });
 // => '<%- value %>'
 
 // using the `imports` option to import `jQuery` as `jq`
-var text = '<% jq.each(people, function(name) { %><li><%- name %></li><% }); %>';
+var text = '<% jq.each(users, function(user) { %><li><%- user %></li><% }); %>';
 var compiled = _.template(text, { 'imports': { 'jq': jQuery } });
-compiled({ 'people': ['fred', 'barney'] });
+compiled({ 'users': ['fred', 'barney'] });
 // => '<li>fred</li><li>barney</li>'
 
 // using the `sourceURL` option to specify a custom sourceURL for the template
-var compiled = _.template('hello <%= name %>', { 'sourceURL': '/basic/greeting.jst' });
+var compiled = _.template('hello <%= user %>!', { 'sourceURL': '/basic/greeting.jst' });
 compiled(data);
 // => find the source of "greeting.jst" under the Sources tab or Resources panel of the web inspector
 
@@ -4162,7 +4194,7 @@ compiled(data);
 var compiled = _.template('hi <%= data.user %>!', { 'variable': 'data' });
 compiled.source;
 // => function(data) {
-  var __t, __p = '', __e = _.escape;
+  var __t, __p = '';
   __p += 'hi ' + ((__t = ( data.user )) == null ? '' : __t) + '!';
   return __p;
 }
