@@ -445,6 +445,40 @@
     "codeName": "returnsSomething"
   },
   {
+    "id": "seeableVar",
+    "name": "seeableVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "a global var with a @see",
+    "see": [
+      "something or other"
+    ],
+    "codeName": "seeableVar"
+  },
+  {
+    "id": "seefoo",
+    "name": "seefoo",
+    "scope": "global",
+    "kind": "function",
+    "description": "Both of these will link to the bar function.",
+    "see": [
+      "{@link seebar}",
+      "bar"
+    ],
+    "codeName": "seefoo"
+  },
+  {
+    "id": "seebar",
+    "name": "seebar",
+    "scope": "global",
+    "kind": "function",
+    "see": [
+      "{@link seefoo} for further information.",
+      "{@link http://github.com|GitHub}"
+    ],
+    "codeName": "seebar"
+  },
+  {
     "id": "throwingFunction",
     "name": "throwingFunction",
     "scope": "global",

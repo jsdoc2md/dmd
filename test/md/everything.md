@@ -14,8 +14,7 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [class: LendsClass2](#LendsClass2)
-  * [lendsClass2.say()](#LendsClass2#say)
+* [EventfulClass()](#EventfulClass)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -26,13 +25,17 @@
 * [globalFunction(one, two)](#globalFunction)
 * [class: LendsClass](#LendsClass)
   * [LendsClass.say()](#LendsClass.say)
+* [class: LendsClass2](#LendsClass2)
+  * [lendsClass2.say()](#LendsClass2#say)
 * [exampleVar](#exampleVar) → `string`
-* [EventfulClass()](#EventfulClass)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
 * [returnsSomething()](#returnsSomething) ⇒ `string`
+* [seeableVar](#seeableVar)
+* [seefoo()](#seefoo)
+* [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
 * [globalVar](#globalVar) → `string`
 
@@ -228,6 +231,30 @@ a global function returning multiple stuff
 <a name="returnsSomething"></a>
 ##returnsSomething() ⇒ `string`
 returns has no desc
+
+<a name="seeableVar"></a>
+##seeableVar
+a global var with a @see
+
+**See**
+
+- something or other
+
+<a name="seefoo"></a>
+##seefoo()
+Both of these will link to the bar function.
+
+**See**
+
+- {@link seebar}
+- bar
+
+<a name="seebar"></a>
+##seebar()
+**See**
+
+- {@link seefoo} for further information.
+- {@link http://github.com|GitHub}
 
 <a name="throwingFunction"></a>
 ##throwingFunction()
