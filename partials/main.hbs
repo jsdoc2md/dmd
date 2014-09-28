@@ -9,6 +9,11 @@
 {{/if~}}
 {{>index~}}
 {{/globals}}
+{{#misc~}}
+{{#if @first~}}{{>heading-indent}}Misc
+{{/if~}}
+{{>index~}}
+{{/misc}}
 {{/if~}}
 
 {{#orphans sortBy="kind"~}}

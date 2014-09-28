@@ -14,7 +14,7 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [globalFunction(one, two)](#globalFunction)
+* [EventfulClass()](#EventfulClass)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -22,6 +22,7 @@
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
+* [globalFunction(one, two)](#globalFunction)
 * [exampleVar](#exampleVar) → `string`
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
@@ -30,6 +31,10 @@
 * [returnsSomething()](#returnsSomething) ⇒ `string`
 * [throwingFunction()](#throwingFunction)
 * [globalVar](#globalVar) → `string`
+
+##Misc
+* [event: "docletEvent"](#event_docletEvent)
+* [mixin: phantom](#phantom)
 
 <a name="module_cjs/class"></a>
 ##cjs/class
@@ -148,13 +153,13 @@ var thisVar = funtion(){
 };
 <a name="firesError"></a>
 ##firesError()
-**Fires**: event:error
+**Emits**: event:error
 <a name="firesMany"></a>
 ##firesMany()
-**Fires**: event:error, event:begin, event:end
+**Emits**: event:error, event:begin, event:end
 <a name="firesDefinedEvent"></a>
 ##firesDefinedEvent()
-**Fires**: event:docletEvent
+**Emits**: event:docletEvent
 <a name="globalFunction"></a>
 ##globalFunction(one, two)
 a global function
@@ -164,6 +169,9 @@ a global function
 | one | `number` | first param |
 | two | `string` | second param |
 
+<a name="EventfulClass"></a>
+##EventfulClass()
+**Mixes**: Eventful
 <a name="phantom"></a>
 ##mixin: phantom
 phantom mixin
@@ -210,6 +218,7 @@ returns has no desc
 **Throws**:
 
 - throw three
+
 <a name="globalVar"></a>
 ##globalVar → `string`
 a global var

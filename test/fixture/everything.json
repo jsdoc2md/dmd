@@ -285,6 +285,17 @@
     "codeName": "globalFunction"
   },
   {
+    "id": "EventfulClass",
+    "name": "EventfulClass",
+    "scope": "global",
+    "kind": "function",
+    "classdesc": "a class which mixes in Eventful behaviour",
+    "mixes": [
+      "Eventful"
+    ],
+    "codeName": "EventfulClass"
+  },
+  {
     "id": "phantom",
     "name": "phantom",
     "kind": "mixin",
