@@ -285,6 +285,39 @@
     "codeName": "globalFunction"
   },
   {
+    "id": "LendsClass",
+    "name": "LendsClass",
+    "scope": "global",
+    "kind": "class",
+    "codeName": "LendsClass"
+  },
+  {
+    "id": "LendsClass.say",
+    "name": "say",
+    "scope": "static",
+    "kind": "function",
+    "description": "say something",
+    "memberof": "LendsClass",
+    "codeName": "say"
+  },
+  {
+    "id": "LendsClass2",
+    "name": "LendsClass2",
+    "scope": "global",
+    "kind": "class",
+    "alias": "LendsClass2",
+    "codeName": "initialize"
+  },
+  {
+    "id": "LendsClass2#say",
+    "name": "say",
+    "scope": "instance",
+    "kind": "function",
+    "description": "say something",
+    "memberof": "LendsClass2",
+    "codeName": "say"
+  },
+  {
     "id": "EventfulClass",
     "name": "EventfulClass",
     "scope": "global",

@@ -14,7 +14,8 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [EventfulClass()](#EventfulClass)
+* [class: LendsClass2](#LendsClass2)
+  * [lendsClass2.say()](#LendsClass2#say)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -23,7 +24,10 @@
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
 * [globalFunction(one, two)](#globalFunction)
+* [class: LendsClass](#LendsClass)
+  * [LendsClass.say()](#LendsClass.say)
 * [exampleVar](#exampleVar) → `string`
+* [EventfulClass()](#EventfulClass)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
@@ -168,6 +172,18 @@ a global function
 | ----- | ---- | ----------- |
 | one | `number` | first param |
 | two | `string` | second param |
+
+<a name="LendsClass"></a>
+##class: LendsClass
+<a name="LendsClass.say"></a>
+###LendsClass.say()
+say something
+
+<a name="LendsClass2"></a>
+##class: LendsClass2
+<a name="LendsClass2#say"></a>
+###lendsClass2.say()
+say something
 
 <a name="EventfulClass"></a>
 ##EventfulClass()
