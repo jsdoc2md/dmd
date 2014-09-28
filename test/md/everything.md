@@ -14,12 +14,15 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
+* [globalFunction(one, two)](#globalFunction)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
+* [firesError()](#firesError)
+* [firesMany()](#firesMany)
+* [firesDefinedEvent()](#firesDefinedEvent)
 * [exampleVar](#exampleVar) → `string`
-* [globalFunction(one, two)](#globalFunction)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
@@ -130,6 +133,10 @@ an instance property
 ###GlobalClass.propTwo
 a static property
 
+<a name="event_docletEvent"></a>
+##event: "docletEvent"
+an event defined in a doclet
+
 <a name="exampleVar"></a>
 ##exampleVar → `string`
 an example var
@@ -139,6 +146,15 @@ an example var
 var thisVar = funtion(){
     return "a value";
 };
+<a name="firesError"></a>
+##firesError()
+**Fires**: event:error
+<a name="firesMany"></a>
+##firesMany()
+**Fires**: event:error, event:begin, event:end
+<a name="firesDefinedEvent"></a>
+##firesDefinedEvent()
+**Fires**: event:docletEvent
 <a name="globalFunction"></a>
 ##globalFunction(one, two)
 a global function

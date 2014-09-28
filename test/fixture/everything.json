@@ -202,6 +202,12 @@
     "codeName": "GlobalClass.propTwo"
   },
   {
+    "id": "event:docletEvent",
+    "name": "docletEvent",
+    "kind": "event",
+    "description": "an event defined in a doclet"
+  },
+  {
     "id": "exampleVar",
     "name": "exampleVar",
     "scope": "global",
@@ -217,6 +223,38 @@
     },
     "defaultvalue": "\"something\"",
     "codeName": "exampleVar"
+  },
+  {
+    "id": "firesError",
+    "name": "firesError",
+    "scope": "global",
+    "kind": "function",
+    "fires": [
+      "event:error"
+    ],
+    "codeName": "firesError"
+  },
+  {
+    "id": "firesMany",
+    "name": "firesMany",
+    "scope": "global",
+    "kind": "function",
+    "fires": [
+      "event:error",
+      "event:begin",
+      "event:end"
+    ],
+    "codeName": "firesMany"
+  },
+  {
+    "id": "firesDefinedEvent",
+    "name": "firesDefinedEvent",
+    "scope": "global",
+    "kind": "function",
+    "fires": [
+      "event:docletEvent"
+    ],
+    "codeName": "firesDefinedEvent"
   },
   {
     "id": "globalFunction",
