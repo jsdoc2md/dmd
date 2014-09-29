@@ -153,10 +153,14 @@ a static property
 ##customTagged
 a global var with custom tags
 
+**sitcom**: The Office  
+**character**: Oggmeister  
 <a name="customClass"></a>
 ##class: customClass
 a class that has custom tags
 
+**sitcom**: Only Fools  
+**character**: Rodney Trotter  
 <a name="new_customClass_new"></a>
 ###new customClass()
 the constructor
@@ -165,6 +169,8 @@ the constructor
 ##customFunction()
 a global function with custom tags
 
+**sitcom**: Brass Eye  
+**character**: Noel Edmonds  
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"
 an event defined in a doclet

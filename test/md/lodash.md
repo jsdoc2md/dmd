@@ -994,6 +994,7 @@ Creates a slice of `array` with `n` elements taken from the beginning.
 | \[n=1\] | `number` | The number of elements to take. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.take([1, 2, 3], 1);
@@ -1018,6 +1019,7 @@ Creates a slice of `array` with `n` elements taken from the end.
 | \[n=1\] | `number` | The number of elements to take. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.takeRight([1, 2, 3], 1);
@@ -1458,6 +1460,7 @@ elements.
 | \[size=1\] | `numer` | The length of each chunk. |
 
 **Returns**: `Array` - Returns the new array containing chunks.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.chunk(['a', 'b', 'c', 'd'], 2);
@@ -1765,6 +1768,7 @@ Creates a slice of `array` with `n` elements dropped from the beginning.
 | \[n=1\] | `number` | The number of elements to drop. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.drop([1, 2, 3], 1);
@@ -1789,6 +1793,7 @@ Creates a slice of `array` with `n` elements dropped from the end.
 | \[n=1\] | `number` | The number of elements to drop. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.dropRight([1, 2, 3], 1);
@@ -2075,6 +2080,7 @@ Retrieves a random element or `n` random elements from a collection.
 | \[n\] | `number` | The number of elements to sample. |
 
 **Returns**: `*` - Returns the random sample(s).  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.sample([1, 2, 3, 4]);
@@ -2395,6 +2401,7 @@ if `func.length` is not sufficient.
 | \[arity=func.length\] | `number` | The arity of `func`. |
 
 **Returns**: `function` - Returns the new curried function.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 var curried = _.curry(function(a, b, c) {
@@ -2423,6 +2430,7 @@ in the manner of `_.partialRight` instead of `_.partial`.
 | \[arity=func.length\] | `number` | The arity of `func`. |
 
 **Returns**: `function` - Returns the new curried function.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 var curried = _.curryRight(function(a, b, c) {
@@ -3323,6 +3331,7 @@ flattened, otherwise it is only flattened a single level.
 | \[isDeep=false\] | `boolean` | Specify a deep flatten. |
 
 **Returns**: `Array` - Returns the new flattened array.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.flatten([1, [2], [3, [[4]]]]);
@@ -3344,6 +3353,7 @@ to the created object.
 | \[properties\] | `Object` | The properties to assign to the object. |
 
 **Returns**: `Object` - Returns the new object.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 function Shape() {
@@ -3602,6 +3612,7 @@ is `true`.
 | \[multiValue=false\] | `boolean` | Allow multiple values per key. |
 
 **Returns**: `Object` - Returns the new inverted object.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.invert({ 'first': 'fred', 'second': 'barney' });
@@ -4141,6 +4152,7 @@ For more information on Chrome extension sandboxes see
 | \[options.variable\] | `string` | The data object variable name. |
 
 **Returns**: `function` - Returns the compiled template function.  
+**param-**: {Object} [otherOptions] Enables the legacy &#x60;options&#x60; param signature.  
 **Example**  
 ```js
 // using the "interpolate" delimiter to create a compiled template
@@ -4217,6 +4229,7 @@ Removes leading and trailing whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.trim('  fred  ');
@@ -4235,6 +4248,7 @@ Removes leading whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.trimLeft('  fred  ');
@@ -4253,6 +4267,7 @@ Removes trailing whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.trimRight('  fred  ');
@@ -4276,6 +4291,7 @@ string which defaults to "...".
 | \[options.separator\] | `RegExp` \| `string` | The separator pattern to truncate to. |
 
 **Returns**: `string` - Returns the truncated string.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.trunc('hi-diddly-ho there, neighborino');
@@ -4322,6 +4338,7 @@ Splits `string` into an array of its words.
 | \[pattern\] | `RegExp` \| `string` | The pattern to match words. |
 
 **Returns**: `Array` - Returns the words of `string`.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.words('fred, barney, & pebbles');
@@ -4364,6 +4381,7 @@ that contain the equivalent object properties, otherwise it returns `false`.
 | \[thisArg\] | `*` | The `this` binding of the created callback. |
 
 **Returns**: `function` - Returns the new function.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 var users = [
@@ -4535,6 +4553,7 @@ implementations. See the [ES5 spec](http://es5.github.io/#E) for more details.
 | \[radix\] | `number` | The radix to interpret `value` by. |
 
 **Returns**: `number` - Returns the converted integer.  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
 _.parseInt('08');

@@ -886,7 +886,12 @@
     ],
     "category": "Array",
     "codeName": "chunk",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.compact",
@@ -1016,7 +1021,12 @@
     },
     "category": "Array",
     "codeName": "drop",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.dropRight",
@@ -1067,7 +1077,12 @@
     },
     "category": "Array",
     "codeName": "dropRight",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.dropRightWhile",
@@ -1386,7 +1401,12 @@
     ],
     "category": "Array",
     "codeName": "flatten",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.flattenDeep",
@@ -2053,7 +2073,12 @@
     },
     "category": "Array",
     "codeName": "take",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.takeRight",
@@ -2104,7 +2129,12 @@
     },
     "category": "Array",
     "codeName": "takeRight",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.takeRightWhile",
@@ -4002,7 +4032,12 @@
     ],
     "category": "Collection",
     "codeName": "sample",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.shuffle",
@@ -4562,7 +4597,12 @@
     ],
     "category": "Function",
     "codeName": "curry",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.curryRight",
@@ -4608,7 +4648,12 @@
     ],
     "category": "Function",
     "codeName": "curryRight",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.debounce",
@@ -6096,7 +6141,12 @@
     ],
     "category": "Object",
     "codeName": "create",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.defaults",
@@ -6601,7 +6651,12 @@
     ],
     "category": "Object",
     "codeName": "invert",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.keys",
@@ -7761,7 +7816,12 @@
     ],
     "category": "String",
     "codeName": "template",
-    "param-": "{Object} [otherOptions] Enables the legacy `options` param signature."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [otherOptions] Enables the legacy `options` param signature."
+      }
+    ]
   },
   {
     "id": "_.trim",
@@ -7809,7 +7869,12 @@
     ],
     "category": "String",
     "codeName": "trim",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.trimLeft",
@@ -7857,7 +7922,12 @@
     ],
     "category": "String",
     "codeName": "trimLeft",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.trimRight",
@@ -7905,7 +7975,12 @@
     ],
     "category": "String",
     "codeName": "trimRight",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.trunc",
@@ -7986,7 +8061,12 @@
     ],
     "category": "String",
     "codeName": "trunc",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.unescape",
@@ -8070,7 +8150,12 @@
     ],
     "category": "String",
     "codeName": "words",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.attempt",
@@ -8152,7 +8237,12 @@
     ],
     "category": "Utility",
     "codeName": "callback",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.constant",
@@ -8416,7 +8506,12 @@
     ],
     "category": "Utility",
     "codeName": "parseInt",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.property",

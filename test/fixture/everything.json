@@ -208,12 +208,28 @@
     "kind": "member",
     "description": "a global var with custom tags",
     "codeName": "customTagged",
-    "sitcom": "The Office",
-    "character": "Oggmeister"
+    "customTags": [
+      {
+        "tag": "sitcom",
+        "value": "The Office"
+      },
+      {
+        "tag": "character",
+        "value": "Oggmeister"
+      }
+    ]
   },
   {
-    "sitcom": "Only Fools",
-    "character": "Rodney Trotter",
+    "customTags": [
+      {
+        "tag": "sitcom",
+        "value": "Only Fools"
+      },
+      {
+        "tag": "character",
+        "value": "Rodney Trotter"
+      }
+    ],
     "id": "customClass",
     "name": "customClass",
     "scope": "global",
@@ -235,8 +251,16 @@
     "kind": "function",
     "description": "a global function with custom tags",
     "codeName": "customFunction",
-    "sitcom": "Brass Eye",
-    "character": "Noel Edmonds"
+    "customTags": [
+      {
+        "tag": "sitcom",
+        "value": "Brass Eye"
+      },
+      {
+        "tag": "character",
+        "value": "Noel Edmonds"
+      }
+    ]
   },
   {
     "id": "event:docletEvent",
