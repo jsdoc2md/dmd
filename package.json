@@ -1,7 +1,7 @@
 {
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "dmd",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
