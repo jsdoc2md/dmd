@@ -18,12 +18,12 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "array-tools": "^1.3",
-    "boil-js": "^0.2",
+    "array-tools": "~1.3",
+    "boil-js": "~0.2",
     "object-tools": "^1.1.1",
-    "string-tools": "^0.1.5"
+    "string-tools": "~0.1.5"
   },
   "devDependencies": {
-    "tape": "^2.13.3"
+    "tape": "^3"
   }
 }
