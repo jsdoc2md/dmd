@@ -14,20 +14,24 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [EventfulClass()](#EventfulClass)
+* [class: LendsClass2](#LendsClass2)
+  * [lendsClass2.say()](#LendsClass2#say)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
+* [class: customClass](#customClass)
+  * [new customClass()](#new_customClass_new)
+* [customFunction()](#customFunction)
+* [exampleVar](#exampleVar) → `string`
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
 * [globalFunction(one, two)](#globalFunction)
 * [class: LendsClass](#LendsClass)
   * [LendsClass.say()](#LendsClass.say)
-* [class: LendsClass2](#LendsClass2)
-  * [lendsClass2.say()](#LendsClass2#say)
-* [exampleVar](#exampleVar) → `string`
+* [customTagged](#customTagged)
+* [EventfulClass()](#EventfulClass)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
@@ -144,6 +148,22 @@ an instance property
 <a name="GlobalClass.propTwo"></a>
 ###GlobalClass.propTwo
 a static property
+
+<a name="customTagged"></a>
+##customTagged
+a global var with custom tags
+
+<a name="customClass"></a>
+##class: customClass
+a class that has custom tags
+
+<a name="new_customClass_new"></a>
+###new customClass()
+the constructor
+
+<a name="customFunction"></a>
+##customFunction()
+a global function with custom tags
 
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"

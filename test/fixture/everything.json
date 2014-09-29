@@ -11,9 +11,9 @@
     "name": "ExportedClass",
     "kind": "class",
     "isExported": true,
+    "description": "the exported class",
     "alias": "module:cjs/class",
     "codeName": "ExportedClass",
-    "description": "the exported class",
     "memberof": "module:cjs/class"
   },
   {
@@ -60,6 +60,7 @@
     "id": "module:cjs/function-alias^sum",
     "name": "sum",
     "kind": "function",
+    "isExported": true,
     "description": "the function",
     "alias": "module:cjs/function-alias",
     "params": [
@@ -93,7 +94,6 @@
       }
     ],
     "codeName": "sum",
-    "isExported": true,
     "memberof": "module:cjs/function-alias"
   },
   {
@@ -106,10 +106,10 @@
     "id": "module:cjs/object-alias^teams",
     "name": "teams",
     "kind": "member",
+    "isExported": true,
     "description": "the teams",
     "alias": "module:cjs/object-alias",
     "codeName": "teams",
-    "isExported": true,
     "memberof": "module:cjs/object-alias"
   },
   {
@@ -153,8 +153,8 @@
     "augments": [
       "String"
     ],
-    "codeName": "GlobalClass",
-    "description": "a global class"
+    "description": "a global class",
+    "codeName": "GlobalClass"
   },
   {
     "id": "GlobalClass()",
@@ -200,6 +200,43 @@
     "description": "a static property",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.propTwo"
+  },
+  {
+    "id": "customTagged",
+    "name": "customTagged",
+    "scope": "global",
+    "kind": "member",
+    "description": "a global var with custom tags",
+    "codeName": "customTagged",
+    "sitcom": "The Office",
+    "character": "Oggmeister"
+  },
+  {
+    "sitcom": "Only Fools",
+    "character": "Rodney Trotter",
+    "id": "customClass",
+    "name": "customClass",
+    "scope": "global",
+    "kind": "class",
+    "description": "a class that has custom tags",
+    "codeName": "customClass"
+  },
+  {
+    "id": "customClass()",
+    "name": "customClass",
+    "kind": "constructor",
+    "description": "the constructor",
+    "memberof": "customClass"
+  },
+  {
+    "id": "customFunction",
+    "name": "customFunction",
+    "scope": "global",
+    "kind": "function",
+    "description": "a global function with custom tags",
+    "codeName": "customFunction",
+    "sitcom": "Brass Eye",
+    "character": "Noel Edmonds"
   },
   {
     "id": "event:docletEvent",

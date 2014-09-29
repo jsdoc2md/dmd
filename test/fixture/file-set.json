@@ -14,9 +14,9 @@
     "name": "FileSet",
     "kind": "class",
     "isExported": true,
+    "description": "Expands file patterns, returning the matched and unmatched files and directories",
     "alias": "module:file-set",
     "codeName": "FileSet",
-    "description": "Expands file patterns, returning the matched and unmatched files and directories",
     "memberof": "module:file-set"
   },
   {
@@ -140,23 +140,7 @@
         "defaultvalue": "0",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.NOEXIST",
-        "meta": {
-          "range": [
-            2941,
-            2951
-          ],
-          "filename": "file-set.js",
-          "lineno": 107,
-          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
-          "code": {
-            "id": "astnode100000344",
-            "name": "NOEXIST",
-            "type": "Literal",
-            "value": "0"
-          }
-        },
-        "name": "NOEXIST",
-        "comment": ""
+        "name": "NOEXIST"
       },
       {
         "kind": "member",
@@ -169,23 +153,7 @@
         "defaultvalue": "1",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.FILE",
-        "meta": {
-          "range": [
-            2957,
-            2964
-          ],
-          "filename": "file-set.js",
-          "lineno": 108,
-          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
-          "code": {
-            "id": "astnode100000346",
-            "name": "FILE",
-            "type": "Literal",
-            "value": "1"
-          }
-        },
-        "name": "FILE",
-        "comment": ""
+        "name": "FILE"
       },
       {
         "kind": "member",
@@ -198,23 +166,7 @@
         "defaultvalue": "2",
         "memberof": "module:file-set.eFileType",
         "longname": "module:file-set.eFileType.DIR",
-        "meta": {
-          "range": [
-            2970,
-            2976
-          ],
-          "filename": "file-set.js",
-          "lineno": 109,
-          "path": "/Users/Lloyd/Documents/75lb/file-set/lib",
-          "code": {
-            "id": "astnode100000348",
-            "name": "DIR",
-            "type": "Literal",
-            "value": "2"
-          }
-        },
-        "name": "DIR",
-        "comment": ""
+        "name": "DIR"
       }
     ],
     "codeName": "FileSet.eFileType"

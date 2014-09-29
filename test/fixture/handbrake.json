@@ -7,6 +7,7 @@
     "augments": [
       "EventEmitter"
     ],
+    "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.",
     "memberof": "module:handbrake-js",
     "fires": [
       "event:start",
@@ -15,8 +16,7 @@
       "module:handbrake-js~Handbrake#event:end",
       "event:complete"
     ],
-    "codeName": "Handbrake",
-    "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`."
+    "codeName": "Handbrake"
   },
   {
     "id": "module:handbrake-js~Handbrake#output",

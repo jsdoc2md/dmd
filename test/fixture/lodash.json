@@ -885,8 +885,8 @@
       }
     ],
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "chunk"
+    "codeName": "chunk",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.compact",
@@ -1015,8 +1015,8 @@
       ]
     },
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "drop"
+    "codeName": "drop",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.dropRight",
@@ -1066,8 +1066,8 @@
       ]
     },
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "dropRight"
+    "codeName": "dropRight",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.dropRightWhile",
@@ -1385,8 +1385,8 @@
       }
     ],
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "flatten"
+    "codeName": "flatten",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.flattenDeep",
@@ -2052,8 +2052,8 @@
       ]
     },
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "take"
+    "codeName": "take",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.takeRight",
@@ -2103,8 +2103,8 @@
       ]
     },
     "category": "Array",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "takeRight"
+    "codeName": "takeRight",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.takeRightWhile",
@@ -4001,8 +4001,8 @@
       }
     ],
     "category": "Collection",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "sample"
+    "codeName": "sample",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.shuffle",
@@ -4561,8 +4561,8 @@
       }
     ],
     "category": "Function",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "curry"
+    "codeName": "curry",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.curryRight",
@@ -4607,8 +4607,8 @@
       }
     ],
     "category": "Function",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "curryRight"
+    "codeName": "curryRight",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.debounce",
@@ -6095,8 +6095,8 @@
       }
     ],
     "category": "Object",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "create"
+    "codeName": "create",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.defaults",
@@ -6600,8 +6600,8 @@
       }
     ],
     "category": "Object",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "invert"
+    "codeName": "invert",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.keys",
@@ -7760,8 +7760,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [otherOptions] Enables the legacy `options` param signature.",
-    "codeName": "template"
+    "codeName": "template",
+    "param-": "{Object} [otherOptions] Enables the legacy `options` param signature."
   },
   {
     "id": "_.trim",
@@ -7808,8 +7808,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "trim"
+    "codeName": "trim",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.trimLeft",
@@ -7856,8 +7856,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "trimLeft"
+    "codeName": "trimLeft",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.trimRight",
@@ -7904,8 +7904,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "trimRight"
+    "codeName": "trimRight",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.trunc",
@@ -7985,8 +7985,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "trunc"
+    "codeName": "trunc",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.unescape",
@@ -8069,8 +8069,8 @@
       }
     ],
     "category": "String",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "words"
+    "codeName": "words",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.attempt",
@@ -8151,8 +8151,8 @@
       }
     ],
     "category": "Utility",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "callback"
+    "codeName": "callback",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.constant",
@@ -8415,8 +8415,8 @@
       }
     ],
     "category": "Utility",
-    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`.",
-    "codeName": "parseInt"
+    "codeName": "parseInt",
+    "param-": "{Object} [guard] Enables use as a callback for functions like `_.map`."
   },
   {
     "id": "_.property",
