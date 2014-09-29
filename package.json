@@ -1,7 +1,7 @@
 {
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "dmd",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "array-tools": "^1.3.0",
-    "boil-js": "^0.2.9",
+    "boil-js": "~0.2.9",
     "command-line-args": "~0.5.1",
     "console-dope": "~0.3.6",
     "ddata": "0.0.0",
