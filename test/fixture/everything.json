@@ -312,6 +312,71 @@
     "codeName": "exampleVar"
   },
   {
+    "id": "external:String",
+    "name": "String",
+    "scope": "global",
+    "kind": "external",
+    "description": "The built in string object.",
+    "see": [
+      "{@link https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String String}"
+    ]
+  },
+  {
+    "id": "external:String#rot13",
+    "name": "rot13",
+    "scope": "instance",
+    "kind": "function",
+    "description": "Adds a new method to the built-in string.",
+    "memberof": "external:String",
+    "examples": [
+      "var greeting = new String('hello world');\nconsole.log( greeting.rot13() ); // uryyb jbeyq"
+    ]
+  },
+  {
+    "id": "external:\"jQuery.fn\"",
+    "name": "\"jQuery.fn\"",
+    "scope": "global",
+    "kind": "external",
+    "description": "The jQuery plugin namespace.",
+    "see": [
+      "{@link http://docs.jquery.com/Plugins/Authoring The jQuery Plugin Guide}"
+    ]
+  },
+  {
+    "id": "external:\"jQuery.fn\".starfairy",
+    "name": "starfairy",
+    "scope": "static",
+    "kind": "function",
+    "description": "A jQuery plugin to make stars fly around your home page.",
+    "memberof": "external:\"jQuery.fn\""
+  },
+  {
+    "id": "external:XMLHttpRequest",
+    "name": "XMLHttpRequest",
+    "scope": "global",
+    "kind": "external",
+    "description": "Namespace provided by the browser.",
+    "see": [
+      "https://developer.mozilla.org/en/xmlhttprequest"
+    ]
+  },
+  {
+    "id": "EncryptedRequest",
+    "name": "EncryptedRequest",
+    "scope": "global",
+    "kind": "class",
+    "augments": [
+      "external:XMLHttpRequest"
+    ]
+  },
+  {
+    "id": "EncryptedRequest()",
+    "name": "EncryptedRequest",
+    "kind": "constructor",
+    "description": "Extends the built in XMLHttpRequest to send data encoded with a secret key.",
+    "memberof": "EncryptedRequest"
+  },
+  {
     "id": "firesError",
     "name": "firesError",
     "scope": "global",

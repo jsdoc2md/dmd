@@ -17,7 +17,8 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [headObj](#headObj)
+* [class: SOmething](#SOmething)
+  * [sOmething.yeah()](#SOmething#yeah)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -27,6 +28,13 @@
 * [customFunction()](#customFunction)
 * [event: "docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → `string`
+* [String](#external_String)
+  * [string.rot13()](#external_String#rot13)
+* ["jQuery.fn"](#external_"jQuery.fn")
+  * [&quot;jQuery.fn&quot;.starfairy()](#external_"jQuery.fn".starfairy)
+* [XMLHttpRequest](#external_XMLHttpRequest)
+* [class: EncryptedRequest](#EncryptedRequest)
+  * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
@@ -34,10 +42,9 @@
   * [functionObj.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
 * [htmlGlobal](#htmlGlobal)
-* [class: SOmething](#SOmething)
-  * [sOmething.yeah()](#SOmething#yeah)
-* [headVar](#headVar) → `number`
 * [customTagged](#customTagged)
+* [headVar](#headVar) → `number`
+* [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
   * [LendsClass.say()](#LendsClass.say)
@@ -212,6 +219,48 @@ an example var
 var thisVar = funtion(){
     return "a value";
 };
+<a name="external_String"></a>
+##String
+The built in string object.
+
+**See**
+
+- {@link https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String String}
+
+<a name="external_String#rot13"></a>
+###string.rot13()
+Adds a new method to the built-in string.
+
+**Example**  
+var greeting = new String('hello world');
+console.log( greeting.rot13() ); // uryyb jbeyq
+<a name="external_"jQuery.fn""></a>
+##"jQuery.fn"
+The jQuery plugin namespace.
+
+**See**
+
+- {@link http://docs.jquery.com/Plugins/Authoring The jQuery Plugin Guide}
+
+<a name="external_"jQuery.fn".starfairy"></a>
+###&quot;jQuery.fn&quot;.starfairy()
+A jQuery plugin to make stars fly around your home page.
+
+<a name="external_XMLHttpRequest"></a>
+##XMLHttpRequest
+Namespace provided by the browser.
+
+**See**
+
+- https://developer.mozilla.org/en/xmlhttprequest
+
+<a name="EncryptedRequest"></a>
+##class: EncryptedRequest
+**Extends**: `external:XMLHttpRequest`  
+<a name="new_EncryptedRequest_new"></a>
+###new EncryptedRequest()
+Extends the built in XMLHttpRequest to send data encoded with a secret key.
+
 <a name="firesError"></a>
 ##firesError()
 **Emits**: event:error
