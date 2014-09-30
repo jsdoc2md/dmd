@@ -28,11 +28,11 @@
 * [customFunction()](#customFunction)
 * [event: "docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → `string`
-* [String](#external_String)
+* [external: String](#external_String)
   * [string.rot13()](#external_String#rot13)
-* [jQuery.fn](#external_jQuery.fn)
+* [external: jQuery.fn](#external_jQuery.fn)
   * [jQuery.fn.starfairy()](#external_jQuery.fn.starfairy)
-* [XMLHttpRequest](#external_XMLHttpRequest)
+* [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [firesError()](#firesError)
@@ -220,7 +220,7 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="external_String"></a>
-##String
+##external: String
 The built in string object.
 
 **See**
@@ -235,7 +235,7 @@ Adds a new method to the built-in string.
 var greeting = new String('hello world');
 console.log( greeting.rot13() ); // uryyb jbeyq
 <a name="external_jQuery.fn"></a>
-##jQuery.fn
+##external: jQuery.fn
 The jQuery plugin namespace.
 
 **See**
@@ -247,7 +247,7 @@ The jQuery plugin namespace.
 A jQuery plugin to make stars fly around your home page.
 
 <a name="external_XMLHttpRequest"></a>
-##XMLHttpRequest
+##external: XMLHttpRequest
 Namespace provided by the browser.
 
 **See**
