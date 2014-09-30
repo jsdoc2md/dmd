@@ -5,17 +5,20 @@
     * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
     * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+* [cjs/falias-obj](#module_cjs/falias-obj)
+  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
+  * [cjs/falias-obj.extra()](#module_cjs/falias-obj.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
-  * [obj.one](#module_cjs/object.one) → `number`
+  * [obj.one](#module_cjs/object.one) :`number`
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [class: LendsClass2](#LendsClass2)
-  * [lendsClass2.say()](#LendsClass2#say)
+* [class: LendsClass](#LendsClass)
+  * [LendsClass.say()](#LendsClass.say)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -23,14 +26,16 @@
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
-* [exampleVar](#exampleVar) → `string`
+* [exampleVar](#exampleVar) :`string`
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
+* [functionObj()](#functionObj)
+  * [functionObj.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
-* [class: LendsClass](#LendsClass)
-  * [LendsClass.say()](#LendsClass.say)
 * [customTagged](#customTagged)
+* [class: LendsClass2](#LendsClass2)
+  * [lendsClass2.say()](#LendsClass2#say)
 * [EventfulClass()](#EventfulClass)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
@@ -41,7 +46,7 @@
 * [seefoo()](#seefoo)
 * [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
-* [globalVar](#globalVar) → `string`
+* [globalVar](#globalVar) :`string`
 
 ##Misc
 * [event: "docletEvent"](#event_docletEvent)
@@ -80,6 +85,23 @@ a static property for the exported class
 inner module property
 
 **Scope**: inner member of [ExportedClass](#exp_module_cjs/class^ExportedClass)  
+<a name="module_cjs/falias-obj"></a>
+##cjs/falias-obj
+exports a pointer to a function
+
+
+* [cjs/falias-obj](#module_cjs/falias-obj)
+  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
+  * [cjs/falias-obj.extra()](#module_cjs/falias-obj.extra)
+
+<a name="exp_module_cjs/falias-obj^sum"></a>
+###sum() ⏏
+the function
+
+<a name="module_cjs/falias-obj.extra"></a>
+###cjs/falias-obj.extra()
+a static method on the exported function
+
 <a name="module_cjs/function-alias"></a>
 ##cjs/function-alias
 exports a pointer to a function
@@ -108,11 +130,11 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * [obj.one](#module_cjs/object.one) → `number`
+  * [obj.one](#module_cjs/object.one) :`number`
   * [obj.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###obj.one → `number`
+###obj.one :`number`
 the first property
 
 <a name="module_cjs/object.two"></a>
@@ -176,7 +198,7 @@ a global function with custom tags
 an event defined in a doclet
 
 <a name="exampleVar"></a>
-##exampleVar → `string`
+##exampleVar :`string`
 an example var
 
 **Default**: `"something"`  
@@ -193,6 +215,14 @@ var thisVar = funtion(){
 <a name="firesDefinedEvent"></a>
 ##firesDefinedEvent()
 **Emits**: event:docletEvent
+<a name="functionObj"></a>
+##functionObj()
+the function
+
+<a name="functionObj.extra"></a>
+###functionObj.extra()
+a static method on the function
+
 <a name="globalFunction"></a>
 ##globalFunction(one, two)
 a global function
@@ -289,7 +319,7 @@ Both of these will link to the bar function.
 - throw three
 
 <a name="globalVar"></a>
-##globalVar → `string`
+##globalVar :`string`
 a global var
 
 **Default**: `"something"`  

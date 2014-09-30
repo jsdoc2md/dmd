@@ -8,12 +8,12 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [hbjs.cliOptions](#module_handbrake-js.cliOptions) → `array`
+  * [hbjs.cliOptions](#module_handbrake-js.cliOptions) :`array`
   * [hbjs.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
   * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
-    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
+    * [handbrake.output](#module_handbrake-js..Handbrake#output) :`string`
+    * [handbrake.options](#module_handbrake-js..Handbrake#options) :`object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
@@ -23,7 +23,7 @@ var hbjs = require("handbrake-js");
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js.cliOptions"></a>
-###hbjs.cliOptions → `array`
+###hbjs.cliOptions :`array`
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
 <a name="module_handbrake-js.spawn"></a>
@@ -69,8 +69,8 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
 
   * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
-    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
+    * [handbrake.output](#module_handbrake-js..Handbrake#output) :`string`
+    * [handbrake.options](#module_handbrake-js..Handbrake#options) :`object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
@@ -80,11 +80,11 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js..Handbrake#output"></a>
-####handbrake.output → `string`
+####handbrake.output :`string`
 A `String` containing all handbrakeCLI output
 
 <a name="module_handbrake-js..Handbrake#options"></a>
-####handbrake.options → `object`
+####handbrake.options :`object`
 the options HandbrakeCLI was spawned with
 
 <a name="module_handbrake-js..Handbrake#event_start"></a>

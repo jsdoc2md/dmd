@@ -51,6 +51,31 @@
     "codeName": "innerProp"
   },
   {
+    "id": "module:cjs/falias-obj",
+    "name": "cjs/falias-obj",
+    "kind": "module",
+    "description": "exports a pointer to a function"
+  },
+  {
+    "id": "module:cjs/falias-obj^sum",
+    "name": "sum",
+    "kind": "function",
+    "isExported": true,
+    "description": "the function",
+    "alias": "module:cjs/falias-obj",
+    "codeName": "sum",
+    "memberof": "module:cjs/falias-obj"
+  },
+  {
+    "id": "module:cjs/falias-obj.extra",
+    "name": "extra",
+    "scope": "static",
+    "kind": "function",
+    "description": "a static method on the exported function",
+    "memberof": "module:cjs/falias-obj",
+    "codeName": "sum.extra"
+  },
+  {
     "id": "module:cjs/function-alias",
     "name": "cjs/function-alias",
     "kind": "module",
@@ -316,6 +341,23 @@
       "event:docletEvent"
     ],
     "codeName": "firesDefinedEvent"
+  },
+  {
+    "id": "functionObj",
+    "name": "functionObj",
+    "scope": "global",
+    "kind": "function",
+    "description": "the function",
+    "codeName": "functionObj"
+  },
+  {
+    "id": "functionObj.extra",
+    "name": "extra",
+    "scope": "static",
+    "kind": "function",
+    "description": "a static method on the function",
+    "memberof": "functionObj",
+    "codeName": "functionObj.extra"
   },
   {
     "id": "globalFunction",
