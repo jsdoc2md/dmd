@@ -13,7 +13,7 @@
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
-  * [obj.one](#module_cjs/object.one) :`number`
+  * [obj.one](#module_cjs/object.one) → `number`
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
@@ -26,7 +26,7 @@
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
-* [exampleVar](#exampleVar) :`string`
+* [exampleVar](#exampleVar) → `string`
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
@@ -46,7 +46,7 @@
 * [seefoo()](#seefoo)
 * [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
-* [globalVar](#globalVar) :`string`
+* [globalVar](#globalVar) → `string`
 
 ##Misc
 * [event: "docletEvent"](#event_docletEvent)
@@ -130,11 +130,11 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * [obj.one](#module_cjs/object.one) :`number`
+  * [obj.one](#module_cjs/object.one) → `number`
   * [obj.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###obj.one :`number`
+###obj.one → `number`
 the first property
 
 <a name="module_cjs/object.two"></a>
@@ -198,7 +198,7 @@ a global function with custom tags
 an event defined in a doclet
 
 <a name="exampleVar"></a>
-##exampleVar :`string`
+##exampleVar → `string`
 an example var
 
 **Default**: `"something"`  
@@ -319,7 +319,7 @@ Both of these will link to the bar function.
 - throw three
 
 <a name="globalVar"></a>
-##globalVar :`string`
+##globalVar → `string`
 a global var
 
 **Default**: `"something"`  
