@@ -578,6 +578,60 @@
     "codeName": "fire"
   },
   {
+    "id": "config",
+    "name": "config",
+    "scope": "global",
+    "kind": "namespace",
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "The default values for parties.",
+        "name": "defaults"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "The default number of players.",
+        "name": "defaults.players"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The default level for the party.",
+        "name": "defaults.level"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "The default treasure.",
+        "name": "defaults.treasure"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "How much gold the party starts with.",
+        "name": "defaults.treasure.gold"
+      }
+    ],
+    "codeName": "config"
+  },
+  {
     "id": "globalFunction",
     "name": "globalFunction",
     "scope": "global",

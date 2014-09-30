@@ -48,6 +48,7 @@
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
+* [config](#config)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
 * [returnsSomething()](#returnsSomething) ⇒ `string`
 * [seeableVar](#seeableVar)
@@ -308,6 +309,8 @@ Fire an event, causing all handlers for that event name to run.
 | eventName | `string` | Name of the event. |
 | eventData | `Object` | The data provided to each handler. |
 
+<a name="config"></a>
+##config
 <a name="globalFunction"></a>
 ##globalFunction() ⇒ `string | object | function`
 a global function returning multiple stuff
