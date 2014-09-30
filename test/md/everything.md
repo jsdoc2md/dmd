@@ -17,8 +17,7 @@
   * [obj.two()](#module_cjs/object.two)
 
 ##Global
-* [class: LendsClass](#LendsClass)
-  * [LendsClass.say()](#LendsClass.say)
+* [headObj](#headObj)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * [globalClass.propOne](#GlobalClass#propOne)
@@ -26,6 +25,7 @@
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
+* [event: "docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → `string`
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
@@ -33,10 +33,18 @@
 * [functionObj()](#functionObj)
   * [functionObj.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
+* [htmlGlobal](#htmlGlobal)
+* [class: SOmething](#SOmething)
+  * [sOmething.yeah()](#SOmething#yeah)
+* [headVar](#headVar) → `number`
 * [customTagged](#customTagged)
+* [bodyGlobal](#bodyGlobal)
+* [class: LendsClass](#LendsClass)
+  * [LendsClass.say()](#LendsClass.say)
 * [class: LendsClass2](#LendsClass2)
   * [lendsClass2.say()](#LendsClass2#say)
 * [EventfulClass()](#EventfulClass)
+* [mixin: phantom](#phantom)
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)
   * [Eventful.fire(eventName, eventData)](#Eventful.fire)
@@ -48,9 +56,6 @@
 * [throwingFunction()](#throwingFunction)
 * [globalVar](#globalVar) → `string`
 
-##Misc
-* [event: "docletEvent"](#event_docletEvent)
-* [mixin: phantom](#phantom)
 
 <a name="module_cjs/class"></a>
 ##cjs/class
@@ -231,6 +236,30 @@ a global function
 | ----- | ---- | ----------- |
 | one | `number` | first param |
 | two | `string` | second param |
+
+<a name="htmlGlobal"></a>
+##htmlGlobal
+inline global
+
+<a name="SOmething"></a>
+##class: SOmething
+a class
+
+<a name="SOmething#yeah"></a>
+###sOmething.yeah()
+a method yo
+
+<a name="headVar"></a>
+##headVar → `number`
+something in the head
+
+<a name="headObj"></a>
+##headObj
+a head obj
+
+<a name="bodyGlobal"></a>
+##bodyGlobal
+body global
 
 <a name="LendsClass"></a>
 ##class: LendsClass

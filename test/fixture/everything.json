@@ -290,6 +290,7 @@
   {
     "id": "event:docletEvent",
     "name": "docletEvent",
+    "scope": "global",
     "kind": "event",
     "description": "an event defined in a doclet"
   },
@@ -388,6 +389,78 @@
     "codeName": "globalFunction"
   },
   {
+    "id": "htmlGlobal",
+    "name": "htmlGlobal",
+    "scope": "global",
+    "kind": "member",
+    "description": "inline global",
+    "codeName": "htmlGlobal"
+  },
+  {
+    "id": "SOmething",
+    "name": "SOmething",
+    "scope": "global",
+    "kind": "class",
+    "description": "a class",
+    "codeName": "SOmething"
+  },
+  {
+    "id": "SOmething#yeah",
+    "name": "yeah",
+    "scope": "instance",
+    "kind": "function",
+    "description": "a method yo",
+    "memberof": "SOmething",
+    "codeName": "this.yeah"
+  },
+  {
+    "id": "headVar",
+    "name": "headVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "something in the head",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "codeName": "headVar"
+  },
+  {
+    "id": "headObj",
+    "name": "headObj",
+    "scope": "global",
+    "kind": "namespace",
+    "description": "a head obj",
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "name": "age"
+      }
+    ],
+    "codeName": "headObj"
+  },
+  {
+    "id": "bodyGlobal",
+    "name": "bodyGlobal",
+    "scope": "global",
+    "kind": "member",
+    "description": "body global",
+    "codeName": "bodyGlobal"
+  },
+  {
     "id": "LendsClass",
     "name": "LendsClass",
     "scope": "global",
@@ -434,6 +507,7 @@
   {
     "id": "phantom",
     "name": "phantom",
+    "scope": "global",
     "kind": "mixin",
     "description": "phantom mixin"
   },

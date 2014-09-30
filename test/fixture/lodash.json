@@ -542,6 +542,7 @@
   {
     "id": "_",
     "name": "_",
+    "scope": "global",
     "kind": "class",
     "category": "Chain"
   },
