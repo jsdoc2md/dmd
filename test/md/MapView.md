@@ -42,6 +42,10 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 
 <a name="module_MapView^MapView.DEFAULT_OPTIONS"></a>
 ####`MapView.DEFAULT_OPTIONS`
+**Properties**
+
+- DEFAULT_OPTIONS   
+
 **Access**: protected  
 <a name="module_MapView^MapView#getMap"></a>
 ####`mapView.getMap()` ⇒ `Map`

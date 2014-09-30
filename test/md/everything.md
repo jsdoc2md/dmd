@@ -258,6 +258,11 @@ something in the head
 ##headObj
 a head obj
 
+**Properties**
+
+- name `string`  
+- age `number`  
+
 <a name="bodyGlobal"></a>
 ##bodyGlobal
 body global
@@ -311,6 +316,14 @@ Fire an event, causing all handlers for that event name to run.
 
 <a name="config"></a>
 ##config
+**Properties**
+
+- defaults `object` - The default values for parties.  
+  - defaults.players `number` - The default number of players.  
+  - defaults.level `string` - The default level for the party.  
+  - defaults.treasure `object` - The default treasure.  
+  - defaults.treasure.gold `number` - How much gold the party starts with.  
+
 <a name="globalFunction"></a>
 ##globalFunction() ⇒ `string | object | function`
 a global function returning multiple stuff
