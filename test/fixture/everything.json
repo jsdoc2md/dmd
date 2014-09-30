@@ -377,6 +377,14 @@
     "memberof": "EncryptedRequest"
   },
   {
+    "id": "fileVar",
+    "name": "fileVar",
+    "scope": "global",
+    "kind": "member",
+    "description": "a variable in the file",
+    "codeName": "fileVar"
+  },
+  {
     "id": "firesError",
     "name": "firesError",
     "scope": "global",
@@ -785,6 +793,17 @@
       }
     ],
     "codeName": "throwingFunction"
+  },
+  {
+    "id": "todoFunction",
+    "name": "todoFunction",
+    "scope": "global",
+    "kind": "function",
+    "codeName": "todoFunction",
+    "todo": [
+      "Write the documentation.",
+      "Implement this function."
+    ]
   },
   {
     "id": "globalVar",

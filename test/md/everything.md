@@ -35,6 +35,7 @@
 * [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
+* [fileVar](#fileVar)
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
@@ -62,6 +63,7 @@
 * [seefoo()](#seefoo)
 * [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
+* [todoFunction()](#todoFunction)
 * [globalVar](#globalVar) → `string`
 
 
@@ -261,6 +263,10 @@ Namespace provided by the browser.
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
+<a name="fileVar"></a>
+##fileVar
+a variable in the file
+
 <a name="firesError"></a>
 ##firesError()
 **Emits**: event:error
@@ -411,6 +417,13 @@ Both of these will link to the bar function.
 **Throws**:
 
 - throw three
+
+<a name="todoFunction"></a>
+##todoFunction()
+**Todo**
+
+- Write the documentation.
+- Implement this function.
 
 <a name="globalVar"></a>
 ##globalVar → `string`
