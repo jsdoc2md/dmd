@@ -30,8 +30,8 @@
 * [exampleVar](#exampleVar) → `string`
 * [String](#external_String)
   * [string.rot13()](#external_String#rot13)
-* ["jQuery.fn"](#external_"jQuery.fn")
-  * [&quot;jQuery.fn&quot;.starfairy()](#external_"jQuery.fn".starfairy)
+* [jQuery.fn](#external_jQuery.fn)
+  * [jQuery.fn.starfairy()](#external_jQuery.fn.starfairy)
 * [XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
@@ -234,16 +234,16 @@ Adds a new method to the built-in string.
 **Example**  
 var greeting = new String('hello world');
 console.log( greeting.rot13() ); // uryyb jbeyq
-<a name="external_"jQuery.fn""></a>
-##"jQuery.fn"
+<a name="external_jQuery.fn"></a>
+##jQuery.fn
 The jQuery plugin namespace.
 
 **See**
 
 - {@link http://docs.jquery.com/Plugins/Authoring The jQuery Plugin Guide}
 
-<a name="external_"jQuery.fn".starfairy"></a>
-###&quot;jQuery.fn&quot;.starfairy()
+<a name="external_jQuery.fn.starfairy"></a>
+###jQuery.fn.starfairy()
 A jQuery plugin to make stars fly around your home page.
 
 <a name="external_XMLHttpRequest"></a>

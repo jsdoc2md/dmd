@@ -333,8 +333,8 @@
     ]
   },
   {
-    "id": "external:\"jQuery.fn\"",
-    "name": "\"jQuery.fn\"",
+    "id": "external:jQuery.fn",
+    "name": "jQuery.fn",
     "scope": "global",
     "kind": "external",
     "description": "The jQuery plugin namespace.",
@@ -343,12 +343,12 @@
     ]
   },
   {
-    "id": "external:\"jQuery.fn\".starfairy",
+    "id": "external:jQuery.fn.starfairy",
     "name": "starfairy",
     "scope": "static",
     "kind": "function",
     "description": "A jQuery plugin to make stars fly around your home page.",
-    "memberof": "external:\"jQuery.fn\""
+    "memberof": "external:jQuery.fn"
   },
   {
     "id": "external:XMLHttpRequest",
