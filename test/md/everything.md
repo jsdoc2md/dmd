@@ -7,7 +7,7 @@
     * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-  * [cjs/falias-obj.extra()](#module_cjs/falias-obj.extra)
+    * [sum.extra()](#module_cjs/falias-obj^sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
@@ -98,14 +98,14 @@ exports a pointer to a function
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-  * [cjs/falias-obj.extra()](#module_cjs/falias-obj.extra)
+    * [sum.extra()](#module_cjs/falias-obj^sum.extra)
 
 <a name="exp_module_cjs/falias-obj^sum"></a>
 ###sum() ⏏
 the function
 
-<a name="module_cjs/falias-obj.extra"></a>
-###cjs/falias-obj.extra()
+<a name="module_cjs/falias-obj^sum.extra"></a>
+####sum.extra()
 a static method on the exported function
 
 <a name="module_cjs/function-alias"></a>

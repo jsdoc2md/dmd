@@ -67,12 +67,12 @@
     "memberof": "module:cjs/falias-obj"
   },
   {
-    "id": "module:cjs/falias-obj.extra",
+    "id": "module:cjs/falias-obj^sum.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
     "description": "a static method on the exported function",
-    "memberof": "module:cjs/falias-obj",
+    "memberof": "module:cjs/falias-obj^sum",
     "codeName": "sum.extra"
   },
   {
