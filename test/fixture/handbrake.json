@@ -67,7 +67,7 @@
     "name": "progress",
     "scope": "instance",
     "kind": "event",
-    "description": "Fired at regular intervals passing a `progress` object containing:\n\n- taskNumber `Number` current task index\n- taskCount `Number` total tasks in the queue\n- percentComplete `Number`\n- fps `Number` Frames per second\n- avgFps `Number` Average frames per second\n- eta `String` Estimated time until completion\n- task `String` Task description, either \"Encoding\" or \"Muxing\"",
+    "description": "Fired at regular intervals passing a `progress` object.",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
       "names": [
@@ -157,11 +157,11 @@
     "name": "error",
     "scope": "instance",
     "kind": "event",
-    "description": "All operational exceptions are delivered via this event. Passes an `Error` instance, the `name` value of which will be one of:\n\n- HandbrakeCLINotFound\n- HandbrakeCLIError\n- NoTitleFound\n- HandbrakeCLICrash\n- ValidationError",
+    "description": "All operational exceptions are delivered via this event. Passes an `Error` instance.",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
       "names": [
-        "object"
+        "Error"
       ]
     },
     "properties": [
@@ -171,6 +171,7 @@
             "string"
           ]
         },
+        "description": "One of `HandbrakeCLINotFound`, `HandbrakeCLIError`, `NoTitleFound`, `HandbrakeCLICrash` or `ValidationError`",
         "name": "name"
       },
       {

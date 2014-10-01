@@ -18,7 +18,7 @@ var hbjs = require("handbrake-js");
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress) → `object`
     * [event: "output"](#module_handbrake-js..Handbrake#event_output) → `string`
-    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `object`
+    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `Error`
     * [event: "end"](#module_handbrake-js..Handbrake#event_end)
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -75,7 +75,7 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress) → `object`
     * [event: "output"](#module_handbrake-js..Handbrake#event_output) → `string`
-    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `object`
+    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `Error`
     * [event: "end"](#module_handbrake-js..Handbrake#event_end)
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -97,15 +97,7 @@ Fired when encoding begins. If you're expecting an encode and this never fired, 
 
 <a name="module_handbrake-js..Handbrake#event_progress"></a>
 ####event: "progress" → `object`
-Fired at regular intervals passing a `progress` object containing:
-
-- taskNumber `Number` current task index
-- taskCount `Number` total tasks in the queue
-- percentComplete `Number`
-- fps `Number` Frames per second
-- avgFps `Number` Average frames per second
-- eta `String` Estimated time until completion
-- task `String` Task description, either "Encoding" or "Muxing"
+Fired at regular intervals passing a `progress` object.
 
 **Properties**
 
@@ -122,18 +114,12 @@ Fired at regular intervals passing a `progress` object containing:
 An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
-####event: "error" → `object`
-All operational exceptions are delivered via this event. Passes an `Error` instance, the `name` value of which will be one of:
-
-- HandbrakeCLINotFound
-- HandbrakeCLIError
-- NoTitleFound
-- HandbrakeCLICrash
-- ValidationError
+####event: "error" → `Error`
+All operational exceptions are delivered via this event. Passes an `Error` instance.
 
 **Properties**
 
-- name `string`  
+- name `string` - One of `HandbrakeCLINotFound`, `HandbrakeCLIError`, `NoTitleFound`, `HandbrakeCLICrash` or `ValidationError`  
 - message `string`  
 - errno `string`  
 
