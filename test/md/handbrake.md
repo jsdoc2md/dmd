@@ -8,17 +8,17 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [.cliOptions](#module_handbrake-js.cliOptions) → `array`
-  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
-  * [.exec(options, [onComplete])](#module_handbrake-js.exec)
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
-    * [.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [.options](#module_handbrake-js..Handbrake#options) → `object`
+  * [hbjs.cliOptions](#module_handbrake-js.cliOptions) → `array`
+  * [hbjs.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
+  * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
+  * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
+    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
+    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
-    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
-    * [event: "output"](#module_handbrake-js..Handbrake#event_output)
-    * [event: "error"](#module_handbrake-js..Handbrake#event_error)
+    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress) → `object`
+    * [event: "output"](#module_handbrake-js..Handbrake#event_output) → `string`
+    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `object`
     * [event: "end"](#module_handbrake-js..Handbrake#event_end)
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -68,14 +68,14 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
 **Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
 
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
-    * [.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [.options](#module_handbrake-js..Handbrake#options) → `object`
+  * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
+    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
+    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
-    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
-    * [event: "output"](#module_handbrake-js..Handbrake#event_output)
-    * [event: "error"](#module_handbrake-js..Handbrake#event_error)
+    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress) → `object`
+    * [event: "output"](#module_handbrake-js..Handbrake#event_output) → `string`
+    * [event: "error"](#module_handbrake-js..Handbrake#event_error) → `object`
     * [event: "end"](#module_handbrake-js..Handbrake#event_end)
     * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -96,7 +96,7 @@ Fired as HandbrakeCLI is launched. Nothing has happened yet.
 Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.
 
 <a name="module_handbrake-js..Handbrake#event_progress"></a>
-####event: "progress"
+####event: "progress" → `object`
 Fired at regular intervals passing a `progress` object containing:
 
 - taskNumber `Number` current task index
@@ -107,12 +107,22 @@ Fired at regular intervals passing a `progress` object containing:
 - eta `String` Estimated time until completion
 - task `String` Task description, either "Encoding" or "Muxing"
 
+**Properties**
+
+- taskNumber `number` - current task index  
+- taskCount `number` - total tasks in the queue  
+- percentComplete `number`  
+- fps `number` - Frames per second  
+- avgFps `number` - Average frames per second  
+- eta `string` - Estimated time until completion  
+- task `string` - Task description, either "Encoding" or "Muxing"  
+
 <a name="module_handbrake-js..Handbrake#event_output"></a>
-####event: "output"
+####event: "output" → `string`
 An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
-####event: "error"
+####event: "error" → `object`
 All operational exceptions are delivered via this event. Passes an `Error` instance, the `name` value of which will be one of:
 
 - HandbrakeCLINotFound
@@ -120,6 +130,12 @@ All operational exceptions are delivered via this event. Passes an `Error` insta
 - NoTitleFound
 - HandbrakeCLICrash
 - ValidationError
+
+**Properties**
+
+- name `string`  
+- message `string`  
+- errno `string`  
 
 <a name="module_handbrake-js..Handbrake#event_end"></a>
 ####event: "end"

@@ -17,13 +17,13 @@ var hbjs = require("handbrake-js");
       * [.output](#module_handbrake-js..Handbrake#output) → `string`
       * [.options](#module_handbrake-js..Handbrake#options) → `object`
     * _events_
-      * [event: "start"](#module_handbrake-js..Handbrake#event_start)
-      * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
-      * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
-      * [event: "output"](#module_handbrake-js..Handbrake#event_output)
-      * [event: "error"](#module_handbrake-js..Handbrake#event_error)
-      * [event: "end"](#module_handbrake-js..Handbrake#event_end)
-      * [event: "complete"](#module_handbrake-js..Handbrake#event_complete)
+      * ["start"](#module_handbrake-js..Handbrake#event_start)
+      * ["begin"](#module_handbrake-js..Handbrake#event_begin)
+      * ["progress"](#module_handbrake-js..Handbrake#event_progress) `(progress)`
+      * ["output"](#module_handbrake-js..Handbrake#event_output)
+      * ["error"](#module_handbrake-js..Handbrake#event_error)  `(err)`
+      * ["end"](#module_handbrake-js..Handbrake#event_end)
+      * ["complete"](#module_handbrake-js..Handbrake#event_complete)
     * _static_
       * .ERROR_TYPE → `number`
 

@@ -68,7 +68,76 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired at regular intervals passing a `progress` object containing:\n\n- taskNumber `Number` current task index\n- taskCount `Number` total tasks in the queue\n- percentComplete `Number`\n- fps `Number` Frames per second\n- avgFps `Number` Average frames per second\n- eta `String` Estimated time until completion\n- task `String` Task description, either \"Encoding\" or \"Muxing\"",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "type": {
+      "names": [
+        "object"
+      ]
+    },
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "current task index",
+        "name": "taskNumber"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "total tasks in the queue",
+        "name": "taskCount"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "name": "percentComplete"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "Frames per second",
+        "name": "fps"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "Average frames per second",
+        "name": "avgFps"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Estimated time until completion",
+        "name": "eta"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Task description, either \"Encoding\" or \"Muxing\"",
+        "name": "task"
+      }
+    ]
   },
   {
     "id": "module:handbrake-js~Handbrake#event:output",
@@ -76,7 +145,12 @@
     "scope": "instance",
     "kind": "event",
     "description": "An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "type": {
+      "names": [
+        "string"
+      ]
+    }
   },
   {
     "id": "module:handbrake-js~Handbrake#event:error",
@@ -84,7 +158,38 @@
     "scope": "instance",
     "kind": "event",
     "description": "All operational exceptions are delivered via this event. Passes an `Error` instance, the `name` value of which will be one of:\n\n- HandbrakeCLINotFound\n- HandbrakeCLIError\n- NoTitleFound\n- HandbrakeCLICrash\n- ValidationError",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "type": {
+      "names": [
+        "object"
+      ]
+    },
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "message"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "errno"
+      }
+    ]
   },
   {
     "id": "module:handbrake-js~Handbrake#event:end",
