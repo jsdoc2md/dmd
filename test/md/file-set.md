@@ -10,12 +10,12 @@ var fileSet = require("file-set");
 * [file-set](#module_file-set)
   * [class: FileSet](#exp_module_file-set^FileSet) ⏏
     * [new FileSet(patternList)](#new_module_file-set^FileSet_new)
-    * [fileSet.list](#module_file-set^FileSet#list) → `Array.<string>`
-    * [fileSet.files](#module_file-set^FileSet#files) → `Array.<string>`
-    * [fileSet.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
-    * [fileSet.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
-    * [fileSet.add(files)](#module_file-set^FileSet#add)
-    * [enum: FileSet.eFileType](#module_file-set^FileSet.eFileType) → `number`
+    * [.list](#module_file-set^FileSet#list) → `Array.<string>`
+    * [.files](#module_file-set^FileSet#files) → `Array.<string>`
+    * [.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
+    * [.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
+    * [.add(files)](#module_file-set^FileSet#add)
+    * [enum: .eFileType](#module_file-set^FileSet.eFileType) → `number`
 
 <a name="exp_module_file-set^FileSet"></a>
 ###class: FileSet ⏏

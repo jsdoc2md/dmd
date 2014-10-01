@@ -8,12 +8,12 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [hbjs.cliOptions](#module_handbrake-js.cliOptions) → `array`
-  * [hbjs.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
-  * [hbjs.exec(options, [onComplete])](#module_handbrake-js.exec)
-  * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
-    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
+  * [.cliOptions](#module_handbrake-js.cliOptions) → `array`
+  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
+  * [.exec(options, [onComplete])](#module_handbrake-js.exec)
+  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
+    * [.output](#module_handbrake-js..Handbrake#output) → `string`
+    * [.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
@@ -68,9 +68,9 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Scope**: inner class of [handbrake-js](#module_handbrake-js)  
 **Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
 
-  * [class: hbjs~Handbrake](#module_handbrake-js..Handbrake)
-    * [handbrake.output](#module_handbrake-js..Handbrake#output) → `string`
-    * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
+  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
+    * [.output](#module_handbrake-js..Handbrake#output) → `string`
+    * [.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
     * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
