@@ -26,7 +26,7 @@
     "p4": "jsdoc-parse ~/Documents/vendor/lodash/lodash.js > test/fixture/lodash.json",
     "p5": "jsdoc-parse ~/Documents/vendor/famous-map/MapView.js > test/fixture/MapView.json",
     "p6": "jsdoc-parse ~/Documents/vendor/angular-debaser/debaser.js > test/fixture/debaser.json",
-    "m1": "cat test/fixture/everything.json | dmd > test/md/everything.md;",
+    "m1": "cat test/fixture/everything.json | dmd --github > test/md/everything.md;",
     "m2": "cat test/fixture/file-set.json | dmd > test/md/file-set.md;",
     "m3": "cat test/fixture/handbrake.json | dmd > test/md/handbrake.md;",
     "m4": "cat test/fixture/lodash.json | dmd --example-code-gfm js > test/md/lodash.md;",

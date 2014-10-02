@@ -424,6 +424,8 @@ Both of these will link to the bar function.
 
 - [ ] Write the documentation.
 - [ ] Implement this function.
+- [x] this one is done
+- [x] finished
 
 <a name="globalVar"></a>
 ##globalVar → `string`

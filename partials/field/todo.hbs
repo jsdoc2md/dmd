@@ -1,5 +1,19 @@
-{{#if todo}}**Todo**
+{{#if todoList~}}
+**Todo**
 
-{{#each todo}}- [ ] {{{this}}}
-{{/each}}
+{{#if (option "github")~}}
+
+{{#each todoList~}}
+{{#if done}}- [x] {{{task}}}
+{{else}}- [ ] {{{task}}}
+{{/if~}}
+{{/each~}}
+{{else~}}
+
+{{#each todoList~}}
+{{#if done}}- {{{task}}} ✓
+{{else}}- {{{task}}}
+{{/if~}}
+{{/each~}}
+{{/if}}
 {{/if~}}
