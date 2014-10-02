@@ -1,7 +1,7 @@
 {{!-- constructors always return Object, so return-sig pointless --}}
 {{~#unless (isConstructor)~}}
 {{#if returns}} ⇒ `{{{returnSig}}}`
-{{~else~}}
+{{~else}}{{#unless (isEvent)~}}
 {{#if type}} → `{{{returnSig}}}`{{/if~}}
-{{/if~}}
+{{/unless}}{{/if~}}
 {{/unless}}

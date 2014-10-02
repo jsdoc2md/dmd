@@ -5,4 +5,4 @@
 {{/if~}}
 {{#if (isFunction)}}({{methodSig}}){{/if~}}
 {{#if (isConstructor)}}({{methodSig}}){{/if~}}
-{{#if (isEvent)}}({{methodSig}}){{/if~}}
+{{#if (isEvent)}}{{#if (methodSig)}} ({{methodSig}}){{/if~}}{{/if~}}

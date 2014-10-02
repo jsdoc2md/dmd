@@ -19,9 +19,9 @@ var hbjs = require("handbrake-js");
     * _events_
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)
-      * ["progress"](#module_handbrake-js..Handbrake#event_progress) `(progress)`
+      * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress) 
       * ["output"](#module_handbrake-js..Handbrake#event_output)
-      * ["error"](#module_handbrake-js..Handbrake#event_error)  `(err)`
+      * ["error" (err)](#module_handbrake-js..Handbrake#event_error)
       * ["end"](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
     * _static_
