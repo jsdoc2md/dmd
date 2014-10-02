@@ -69,12 +69,16 @@
     "kind": "event",
     "description": "Fired at regular intervals passing a `progress` object.",
     "memberof": "module:handbrake-js~Handbrake",
-    "type": {
-      "names": [
-        "object"
-      ]
-    },
-    "properties": [
+    "params": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "details of encode progress",
+        "name": "progress"
+      },
       {
         "type": {
           "names": [
@@ -82,7 +86,7 @@
           ]
         },
         "description": "current task index",
-        "name": "taskNumber"
+        "name": "progress.taskNumber"
       },
       {
         "type": {
@@ -91,7 +95,7 @@
           ]
         },
         "description": "total tasks in the queue",
-        "name": "taskCount"
+        "name": "progress.taskCount"
       },
       {
         "type": {
@@ -99,7 +103,7 @@
             "number"
           ]
         },
-        "name": "percentComplete"
+        "name": "progress.percentComplete"
       },
       {
         "type": {
@@ -108,7 +112,7 @@
           ]
         },
         "description": "Frames per second",
-        "name": "fps"
+        "name": "progress.fps"
       },
       {
         "type": {
@@ -117,7 +121,7 @@
           ]
         },
         "description": "Average frames per second",
-        "name": "avgFps"
+        "name": "progress.avgFps"
       },
       {
         "type": {
@@ -126,7 +130,7 @@
           ]
         },
         "description": "Estimated time until completion",
-        "name": "eta"
+        "name": "progress.eta"
       },
       {
         "type": {
@@ -135,7 +139,7 @@
           ]
         },
         "description": "Task description, either \"Encoding\" or \"Muxing\"",
-        "name": "task"
+        "name": "progress.task"
       }
     ]
   },

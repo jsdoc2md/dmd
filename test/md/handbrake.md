@@ -16,7 +16,7 @@ var hbjs = require("handbrake-js");
     * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
-    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
+    * [event: "progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
     * [event: "output"](#module_handbrake-js..Handbrake#event_output)
     * [event: "error"](#module_handbrake-js..Handbrake#event_error)
     * [event: "end" (one, two)](#module_handbrake-js..Handbrake#event_end)
@@ -73,7 +73,7 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * [handbrake.options](#module_handbrake-js..Handbrake#options) → `object`
     * [event: "start"](#module_handbrake-js..Handbrake#event_start)
     * [event: "begin"](#module_handbrake-js..Handbrake#event_begin)
-    * [event: "progress"](#module_handbrake-js..Handbrake#event_progress)
+    * [event: "progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
     * [event: "output"](#module_handbrake-js..Handbrake#event_output)
     * [event: "error"](#module_handbrake-js..Handbrake#event_error)
     * [event: "end" (one, two)](#module_handbrake-js..Handbrake#event_end)
@@ -96,18 +96,19 @@ Fired as HandbrakeCLI is launched. Nothing has happened yet.
 Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.
 
 <a name="module_handbrake-js..Handbrake#event_progress"></a>
-####event: "progress"
+####event: "progress" (progress)
 Fired at regular intervals passing a `progress` object.
 
-**Properties**
-
-- taskNumber `number` - current task index  
-- taskCount `number` - total tasks in the queue  
-- percentComplete `number`  
-- fps `number` - Frames per second  
-- avgFps `number` - Average frames per second  
-- eta `string` - Estimated time until completion  
-- task `string` - Task description, either "Encoding" or "Muxing"  
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| progress | `object` | details of encode progress |
+| progress.taskNumber | `number` | current task index |
+| progress.taskCount | `number` | total tasks in the queue |
+| progress.percentComplete | `number` |  |
+| progress.fps | `number` | Frames per second |
+| progress.avgFps | `number` | Average frames per second |
+| progress.eta | `string` | Estimated time until completion |
+| progress.task | `string` | Task description, either "Encoding" or "Muxing" |
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 ####event: "output"
