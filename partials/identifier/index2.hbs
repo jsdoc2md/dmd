@@ -1,0 +1,40 @@
+{{>index-indent}}* [{{>index-name}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
+{{#children scope=undefined~}}
+{{>index2~}}
+{{/children~}}
+
+{{#children scope="instance"~}}
+{{~depthIncrement~}}
+{{#if @first}}{{>index-indent}}* _instance_
+{{depthIncrement}}{{/if~}}
+{{>index2~}}
+{{~depthDecrement~}}
+{{#if @last}}{{depthDecrement}}{{/if~}}
+{{/children~}}
+
+{{#children scope="static"~}}
+{{~depthIncrement~}}
+{{#if @first}}{{>index-indent}}* _static_
+{{depthIncrement}}{{/if~}}
+{{>index2~}}
+{{~depthDecrement~}}
+{{#if @last}}{{depthDecrement}}{{/if~}}
+{{/children~}}
+
+{{#children scope="inner"~}}
+{{~depthIncrement~}}
+{{#if @first}}{{>index-indent}}* _inner_
+{{depthIncrement}}{{/if~}}
+{{>index2~}}
+{{~depthDecrement~}}
+{{#if @last}}{{depthDecrement}}{{/if~}}
+{{/children~}}
+
+{{#children kind="event"~}}
+{{~depthIncrement~}}
+{{#if @first}}{{>index-indent}}* _events_
+{{depthIncrement}}{{/if~}}
+{{>index2~}}
+{{~depthDecrement~}}
+{{#if @last}}{{depthDecrement}}{{/if~}}
+{{/children~}}

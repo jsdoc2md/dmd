@@ -14,9 +14,9 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 
 
 * [MapView](#module_MapView)
-  * [class: MapView](#exp_module_MapView^MapView) ⏏
-    * [`new MapView(options)`](#new_module_MapView^MapView_new)
-    * [`MapView.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
+* [class: MapView](#exp_module_MapView^MapView) ⏏
+* [`new MapView(options)`](#new_module_MapView^MapView_new)
+  * _instance_
     * [`mapView.getMap()`](#module_MapView^MapView#getMap) ⇒ `Map`
     * [`mapView.setPosition(position, [transition], [callback])`](#module_MapView^MapView#setPosition)
     * [`mapView.getPosition()`](#module_MapView^MapView#getPosition) ⇒ `LatLng`
@@ -27,6 +27,8 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
     * [`mapView.getSize()`](#module_MapView^MapView#getSize) ⇒ `Array.Number`
     * [`mapView.halt()`](#module_MapView^MapView#halt)
     * [`mapView.isActive()`](#module_MapView^MapView#isActive) ⇒ `Bool`
+  * _static_
+    * [`MapView.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
 
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏
