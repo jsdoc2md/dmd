@@ -1,5 +1,6 @@
 <a name="_"></a>
 ##class: _
+**Category**: Chain  
 
 * [class: _](#_)
   * [new _(value)](#new___new)
@@ -274,6 +275,7 @@ Checks if `value` is classified as an `Array` object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isArray([1, 2, 3]);
@@ -287,6 +289,7 @@ _.isArray([1, 2, 3]);
 Enables explicit method chaining on the wrapper object.
 
 **Returns**: `*` - Returns the wrapper object.  
+**Category**: Chain  
 **Example**  
 ```js
 var users = [
@@ -310,6 +313,7 @@ _(users).chain()
 Produces the result of coercing the unwrapped value to a string.
 
 **Returns**: `string` - Returns the coerced string value.  
+**Category**: Chain  
 **Example**  
 ```js
 _([1, 2, 3]).toString();
@@ -320,6 +324,7 @@ _([1, 2, 3]).toString();
 Extracts the unwrapped value from its wrapper.
 
 **Returns**: `*` - Returns the unwrapped value.  
+**Category**: Chain  
 **Example**  
 ```js
 _([1, 2, 3]).valueOf();
@@ -347,6 +352,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns the composed aggregate object.  
+**Category**: Collection  
 **Example**  
 ```js
 _.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });
@@ -380,6 +386,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns the composed aggregate object.  
+**Category**: Collection  
 **Example**  
 ```js
 _.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });
@@ -414,6 +421,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns the composed aggregate object.  
+**Category**: Collection  
 **Example**  
 ```js
 var keyData = [
@@ -451,6 +459,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the array of grouped elements.  
+**Category**: Collection  
 **Example**  
 ```js
 _.partition([1, 2, 3], function(n) { return n % 2; });
@@ -484,6 +493,7 @@ with the `this` binding of the created function.
 | func | `function` | The function to restrict. |
 
 **Returns**: `function` - Returns the new restricted function.  
+**Category**: Function  
 **Example**  
 ```js
 var initialize = _.once(createApplication);
@@ -592,6 +602,7 @@ for more details.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is a finite number, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isFinite(10);
@@ -622,6 +633,7 @@ have no inherited enumerable properties.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is a plain object, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 function Shape() {
@@ -657,6 +669,7 @@ The `customizer` is bound to `thisArg` and invoked with five arguments;
 | \[thisArg\] | `*` | The `this` binding of `customizer`. |
 
 **Returns**: `Object` - Returns the destination object.  
+**Category**: Object  
 **Example**  
 ```js
 _.assign({ 'user': 'fred' }, { 'age': 40 }, { 'employer': 'slate' });
@@ -678,6 +691,7 @@ Creates an array of the own enumerable property names of `object`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the array of property names.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape() {
@@ -708,6 +722,7 @@ with five arguments; (objectValue, sourceValue, key, object, source).
 | \[thisArg\] | `*` | The `this` binding of `customizer`. |
 
 **Returns**: `Object` - Returns the destination object.  
+**Category**: Object  
 **Example**  
 ```js
 var users = {
@@ -746,6 +761,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 | \[string=''\] | `string` | The string to camel case. |
 
 **Returns**: `string` - Returns the camel cased string.  
+**Category**: String  
 **Example**  
 ```js
 _.camelCase('Hello world');
@@ -768,6 +784,7 @@ more details.
 | \[string=''\] | `string` | The string to kebab case. |
 
 **Returns**: `string` - Returns the kebab cased string.  
+**Category**: String  
 **Example**  
 ```js
 _.kebabCase('Hello world');
@@ -789,6 +806,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
 | \[string=''\] | `string` | The string to snake case. |
 
 **Returns**: `string` - Returns the snake cased string.  
+**Category**: String  
 **Example**  
 ```js
 _.snakeCase('Hello world');
@@ -805,6 +823,7 @@ _.snakeCase('helloWorld');
 Gets the number of milliseconds that have elapsed since the Unix epoch
 (1 January 1970 00:00:00 UTC).
 
+**Category**: Utility  
 **Example**  
 ```js
 _.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
@@ -827,6 +846,7 @@ comparisons.
 | \[...values\] | `*` | The values to remove. |
 
 **Returns**: `Array` - Returns `array`.  
+**Category**: Array  
 **Example**  
 ```js
 var array = [1, 2, 3, 1, 2, 3];
@@ -848,6 +868,7 @@ array of indexes or as individual arguments.
 | \[...indexes\] | `number` \| `Array.<number>` | The indexes of elements to remove,  specified as individual indexes or arrays of indexes. |
 
 **Returns**: `Array` - Returns the new array of removed elements.  
+**Category**: Array  
 **Example**  
 ```js
 var array = [5, 10, 15, 20];
@@ -881,6 +902,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the new array of removed elements.  
+**Category**: Array  
 **Example**  
 ```js
 var array = [1, 2, 3, 4];
@@ -901,6 +923,7 @@ Gets all but the first element of `array`.
 | array | `Array` | The array to query. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.rest([1, 2, 3]);
@@ -920,6 +943,7 @@ in IE < 9 and to ensure dense arrays are returned.
 | \[end=array.length\] | `number` | The end index. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 <a name="_.sortedIndex"></a>
 ###_.sortedIndex(array, value, [iteratee], [thisArg]) ⇒ `number`
 Uses a binary search to determine the lowest index at which a value should
@@ -944,6 +968,7 @@ else `false`.
 
 **Returns**: `number` - Returns the index at which `value` should be inserted
  into `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.sortedIndex([30, 50], 40);
@@ -979,6 +1004,7 @@ order to maintain the sort order of the array.
 
 **Returns**: `number` - Returns the index at which `value` should be inserted
  into `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
@@ -994,6 +1020,7 @@ Creates a slice of `array` with `n` elements taken from the beginning.
 | \[n=1\] | `number` | The number of elements to take. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -1019,6 +1046,7 @@ Creates a slice of `array` with `n` elements taken from the end.
 | \[n=1\] | `number` | The number of elements to take. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -1054,6 +1082,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.takeRightWhile([1, 2, 3], function(n) { return n > 1; });
@@ -1093,6 +1122,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.takeWhile([1, 2, 3], function(n) { return n < 3; });
@@ -1126,6 +1156,7 @@ for more details.
 | \[...arrays\] | `Array` | The arrays to inspect. |
 
 **Returns**: `Array` - Returns the new array of combined values.  
+**Category**: Array  
 **Example**  
 ```js
 _.union([1, 2, 3], [5, 2, 1, 4], [2, 1]);
@@ -1159,6 +1190,7 @@ for more details.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` - Returns the new duplicate-value-free array.  
+**Category**: Array  
 **Example**  
 ```js
 _.uniq([1, 2, 1]);
@@ -1187,6 +1219,7 @@ configuration.
 | array | `Array` | The array of grouped elements to process. |
 
 **Returns**: `Array` - Returns the new array of regrouped elements.  
+**Category**: Array  
 **Example**  
 ```js
 var zipped = _.zip(['fred', 'barney'], [30, 40], [true, false]);
@@ -1210,6 +1243,7 @@ for more details.
 | \[...values\] | `*` | The values to exclude. |
 
 **Returns**: `Array` - Returns the new array of filtered values.  
+**Category**: Array  
 **Example**  
 ```js
 _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
@@ -1226,6 +1260,7 @@ more details.
 | \[...arrays\] | `Array` | The arrays to inspect. |
 
 **Returns**: `Array` - Returns the new array of values.  
+**Category**: Array  
 **Example**  
 ```js
 _.xor([1, 2, 3], [5, 2, 1, 4]);
@@ -1245,6 +1280,7 @@ of the given arrays, and so on.
 | \[...arrays\] | `Array` | The arrays to process. |
 
 **Returns**: `Array` - Returns the new array of grouped elements.  
+**Category**: Array  
 **Example**  
 ```js
 _.zip(['fred', 'barney'], [30, 40], [true, false]);
@@ -1262,6 +1298,7 @@ or two arrays, one of property names and one of corresponding values.
 | \[vals=[]\] | `Array` | The property values. |
 
 **Returns**: `Object` - Returns the new object.  
+**Category**: Array  
 **Example**  
 ```js
 _.zipObject(['fred', 'barney'], [30, 40]);
@@ -1277,6 +1314,7 @@ chaining enabled.
 | value | `*` | The value to wrap. |
 
 **Returns**: `Object` - Returns the new wrapper object.  
+**Category**: Chain  
 **Example**  
 ```js
 var users = [
@@ -1306,6 +1344,7 @@ on intermediate results within the chain.
 | \[thisArg\] | `*` | The `this` binding of `interceptor`. |
 
 **Returns**: `*` - Returns `value`.  
+**Category**: Chain  
 **Example**  
 ```js
 _([1, 2, 3])
@@ -1325,6 +1364,7 @@ This method is like `_.tap` except that it returns the result of `interceptor`.
 | \[thisArg\] | `*` | The `this` binding of `interceptor`. |
 
 **Returns**: `*` - Returns the result of `interceptor`.  
+**Category**: Chain  
 **Example**  
 ```js
 _([1, 2, 3])
@@ -1342,6 +1382,7 @@ Create a new pristine `lodash` function using the given `context` object.
 | \[context=root\] | `Object` | The context object. |
 
 **Returns**: `function` - Returns a new `lodash` function.  
+**Category**: Utility  
 **Example**  
 ```js
 _.mixin({ 'add': function(a, b) { return a + b; } }, false);
@@ -1460,6 +1501,7 @@ elements.
 | \[size=1\] | `numer` | The length of each chunk. |
 
 **Returns**: `Array` - Returns the new array containing chunks.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -1479,6 +1521,7 @@ Creates an array with all falsey values removed. The values `false`, `null`,
 | array | `Array` | The array to compact. |
 
 **Returns**: `Array` - Returns the new array of filtered values.  
+**Category**: Array  
 **Example**  
 ```js
 _.compact([0, 1, false, 2, '', 3]);
@@ -1496,6 +1539,7 @@ of keys.
 | \[...props\] | `number` \| `Array.<number>` \| `string` \| `Array.<string>` | The property names  or indexes of elements to pick, specified individually or in arrays. |
 
 **Returns**: `Array` - Returns the new array of picked elements.  
+**Category**: Collection  
 **Example**  
 ```js
 _.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);
@@ -1521,6 +1565,7 @@ for more details.
 | \[fromIndex=0\] | `number` | The index to search from. |
 
 **Returns**: `boolean` - Returns `true` if a matching element is found, else `false`.  
+**Category**: Collection  
 **Example**  
 ```js
 _.contains([1, 2, 3], 1);
@@ -1550,6 +1595,7 @@ for more details.
 | \[...values\] | `Array` | The arrays of values to exclude. |
 
 **Returns**: `Array` - Returns the new array of filtered values.  
+**Category**: Array  
 **Example**  
 ```js
 _.difference([1, 2, 3], [5, 2, 10]);
@@ -1576,6 +1622,7 @@ else `false`.
 
 **Returns**: `boolean` - Returns `true` if all elements pass the predicate check,
  else `false`.  
+**Category**: Collection  
 **Example**  
 ```js
 _.every([true, 1, null, 'yes']);
@@ -1614,6 +1661,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the new filtered array.  
+**Category**: Collection  
 **Example**  
 ```js
 var evens = _.filter([1, 2, 3, 4], function(n) { return n % 2 == 0; });
@@ -1652,6 +1700,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `*` - Returns the matched element, else `undefined`.  
+**Category**: Collection  
 **Example**  
 ```js
 var users = [
@@ -1685,6 +1734,7 @@ This method is like `_.find` except that it iterates over elements of
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `*` - Returns the matched element, else `undefined`.  
+**Category**: Collection  
 **Example**  
 ```js
 _.findLast([1, 2, 3, 4], function(n) { return n % 2 == 1; });
@@ -1702,6 +1752,7 @@ values.
 | source | `Object` | The object of property values to match. |
 
 **Returns**: `*` - Returns the matched element, else `undefined`.  
+**Category**: Collection  
 **Example**  
 ```js
 var users = [
@@ -1733,6 +1784,7 @@ may be used for object iteration.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` | `Object` | `string` - Returns `collection`.  
+**Category**: Collection  
 **Example**  
 ```js
 _([1, 2, 3]).forEach(function(n) { console.log(n); });
@@ -1753,6 +1805,7 @@ This method is like `_.forEach` except that it iterates over elements of
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` | `Object` | `string` - Returns `collection`.  
+**Category**: Collection  
 **Example**  
 ```js
 _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
@@ -1768,6 +1821,7 @@ Creates a slice of `array` with `n` elements dropped from the beginning.
 | \[n=1\] | `number` | The number of elements to drop. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -1793,6 +1847,7 @@ Creates a slice of `array` with `n` elements dropped from the end.
 | \[n=1\] | `number` | The number of elements to drop. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -1822,6 +1877,7 @@ it is invoked for, and `this` bound to, each element in the collection.
 | \[...args\] | `*` | The arguments to invoke the method with. |
 
 **Returns**: `Array` - Returns the array of results.  
+**Category**: Collection  
 **Example**  
 ```js
 _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
@@ -1850,6 +1906,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` - Returns the new mapped array.  
+**Category**: Collection  
 **Example**  
 ```js
 _.map([1, 2, 3], function(n) { return n * 3; });
@@ -1889,6 +1946,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `*` - Returns the maximum value.  
+**Category**: Collection  
 **Example**  
 ```js
 _.max([4, 2, 8, 6]);
@@ -1931,6 +1989,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `*` - Returns the minimum value.  
+**Category**: Collection  
 **Example**  
 ```js
 _.min([4, 2, 8, 6]);
@@ -1971,6 +2030,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.dropRightWhile([1, 2, 3], function(n) { return n > 1; });
@@ -2000,6 +2060,7 @@ Retrieves the value of a specified property from all elements in the collection.
 | key | `string` | The name of the property to pluck. |
 
 **Returns**: `Array` - Returns the property values.  
+**Category**: Collection  
 **Example**  
 ```js
 var users = [
@@ -2027,6 +2088,7 @@ This method is like `_.reduce` except that it iterates over elements of
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `*` - Returns the accumulated value.  
+**Category**: Collection  
 **Example**  
 ```js
 var array = [[0, 1], [2, 3], [4, 5]];
@@ -2052,6 +2114,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the new filtered array.  
+**Category**: Collection  
 **Example**  
 ```js
 var odds = _.reject([1, 2, 3, 4], function(n) { return n % 2 == 0; });
@@ -2080,6 +2143,7 @@ Retrieves a random element or `n` random elements from a collection.
 | \[n\] | `number` | The number of elements to sample. |
 
 **Returns**: `*` - Returns the random sample(s).  
+**Category**: Collection  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -2100,6 +2164,7 @@ for more details.
 | collection | `Array` \| `Object` \| `string` | The collection to shuffle. |
 
 **Returns**: `Array` - Returns the new shuffled array.  
+**Category**: Collection  
 **Example**  
 ```js
 _.shuffle([1, 2, 3, 4]);
@@ -2115,6 +2180,7 @@ array-like values or the number of own enumerable properties for objects.
 | collection | `Array` \| `Object` \| `string` | The collection to inspect. |
 
 **Returns**: `number` - Returns `collection.length` or number of own enumerable properties.  
+**Category**: Collection  
 **Example**  
 ```js
 _.size([1, 2]);
@@ -2148,6 +2214,7 @@ else `false`.
 
 **Returns**: `boolean` - Returns `true` if any element passes the predicate check,
  else `false`.  
+**Category**: Collection  
 **Example**  
 ```js
 _.some([null, 0, 'yes', false], Boolean);
@@ -2191,6 +2258,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` - Returns the new sorted array.  
+**Category**: Collection  
 **Example**  
 ```js
 _.sortBy([1, 2, 3], function(n) { return Math.sin(n); });
@@ -2223,6 +2291,7 @@ Converts `collection` to an array.
 | collection | `Array` \| `Object` \| `string` | The collection to convert. |
 
 **Returns**: `Array` - Returns the new converted array.  
+**Category**: Collection  
 **Example**  
 ```js
 (function() { return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
@@ -2240,6 +2309,7 @@ property values.
 | source | `Object` | The object of property values to match. |
 
 **Returns**: `Array` - Returns the new filtered array.  
+**Category**: Collection  
 **Example**  
 ```js
 var users = [
@@ -2267,6 +2337,7 @@ The opposite of `_.before`; this method creates a function that invokes
 | func | `function` | The function to restrict. |
 
 **Returns**: `function` - Returns the new restricted function.  
+**Category**: Function  
 **Example**  
 ```js
 var saves = ['profile', 'settings'];
@@ -2292,6 +2363,7 @@ calls to the created function return the result of the last `func` invocation.
 | func | `function` | The function to restrict. |
 
 **Returns**: `function` - Returns the new restricted function.  
+**Category**: Function  
 **Example**  
 ```js
 jQuery('#add').on('click', _.before(5, addContactToList));
@@ -2313,6 +2385,7 @@ property of bound functions.
 | \[...args\] | `*` | The arguments to be partially applied. |
 
 **Returns**: `function` - Returns the new bound function.  
+**Category**: Function  
 **Example**  
 ```js
 var func = function(greeting) {
@@ -2338,6 +2411,7 @@ properties, own and inherited, of `object` are bound.
 | \[...methodNames\] | `string` \| `Array.<string>` | The object method names to bind,  specified as individual method names or arrays of method names. |
 
 **Returns**: `Object` - Returns `object`.  
+**Category**: Function  
 **Example**  
 ```js
 var view = {
@@ -2365,6 +2439,7 @@ for more details.
 | \[...args\] | `*` | The arguments to be partially applied. |
 
 **Returns**: `function` - Returns the new bound function.  
+**Category**: Function  
 **Example**  
 ```js
 var object = {
@@ -2401,6 +2476,7 @@ if `func.length` is not sufficient.
 | \[arity=func.length\] | `number` | The arity of `func`. |
 
 **Returns**: `function` - Returns the new curried function.  
+**Category**: Function  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -2430,6 +2506,7 @@ in the manner of `_.partialRight` instead of `_.partial`.
 | \[arity=func.length\] | `number` | The arity of `func`. |
 
 **Returns**: `function` - Returns the new curried function.  
+**Category**: Function  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -2472,6 +2549,7 @@ for details over the differences between `_.debounce` and `_.throttle`.
 | \[options.trailing=true\] | `boolean` | Specify invoking on the trailing  edge of the timeout. |
 
 **Returns**: `function` - Returns the new debounced function.  
+**Category**: Function  
 **Example**  
 ```js
 // avoid costly calculations while the window size is in flux
@@ -2517,6 +2595,7 @@ additional arguments are provided to `func` when it is invoked.
 | \[...args\] | `*` | The arguments to invoke the function with. |
 
 **Returns**: `number` - Returns the timer id.  
+**Category**: Function  
 **Example**  
 ```js
 _.defer(function(text) { console.log(text); }, 'deferred');
@@ -2534,6 +2613,7 @@ provided to `func` when it is invoked.
 | \[...args\] | `*` | The arguments to invoke the function with. |
 
 **Returns**: `number` - Returns the timer id.  
+**Category**: Function  
 **Example**  
 ```js
 _.delay(function(text) { console.log(text); }, 1000, 'later');
@@ -2550,6 +2630,7 @@ supplied the return value of the previous.
 | \[...funcs\] | `function` | Functions to invoke. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Function  
 **Example**  
 ```js
 function add(x, y) {
@@ -2584,6 +2665,7 @@ constructor must (partially) implement the `Map` interface with `get`,
 | \[resolver\] | `function` | The function to resolve the cache key. |
 
 **Returns**: `function` - Returns the new memoizing function.  
+**Category**: Function  
 **Example**  
 ```js
 var fibonacci = _.memoize(function(n) {
@@ -2643,6 +2725,7 @@ created function.
 | predicate | `function` | The predicate to negate. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Function  
 **Example**  
 ```js
 function isEven(n) {
@@ -2672,6 +2755,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.dropWhile([1, 2, 3], function(n) { return n < 3; });
@@ -2706,6 +2790,7 @@ applied functions.
 | \[...args\] | `*` | The arguments to be partially applied. |
 
 **Returns**: `function` - Returns the new partially applied function.  
+**Category**: Function  
 **Example**  
 ```js
 var greet = function(greeting, name) { return greeting + ' ' + name; };
@@ -2727,6 +2812,7 @@ functions.
 | \[...args\] | `*` | The arguments to be partially applied. |
 
 **Returns**: `function` - Returns the new partially applied function.  
+**Category**: Function  
 **Example**  
 ```js
 var greet = function(greeting, name) { return greeting + ' ' + name; };
@@ -2770,6 +2856,7 @@ for details over the differences between `_.throttle` and `_.debounce`.
 | \[options.trailing=true\] | `boolean` | Specify invoking on the trailing  edge of the timeout. |
 
 **Returns**: `function` - Returns the new throttled function.  
+**Category**: Function  
 **Example**  
 ```js
 // avoid excessively updating the position while scrolling
@@ -2795,6 +2882,7 @@ with the `this` binding of the created function.
 | wrapper | `function` | The wrapper function. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Function  
 **Example**  
 ```js
 var p = _.wrap(_.escape, function(func, text) {
@@ -2826,6 +2914,7 @@ for more details.
 | \[thisArg\] | `*` | The `this` binding of `customizer`. |
 
 **Returns**: `*` - Returns the cloned value.  
+**Category**: Lang  
 **Example**  
 ```js
 var users = [
@@ -2871,6 +2960,7 @@ for more details.
 | \[thisArg\] | `*` | The `this` binding of `customizer`. |
 
 **Returns**: `*` - Returns the deep cloned value.  
+**Category**: Lang  
 **Example**  
 ```js
 var users = [
@@ -2903,6 +2993,7 @@ Checks if `value` is classified as an `arguments` object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is an `arguments` object, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 (function() { return _.isArguments(arguments); })();
@@ -2930,6 +3021,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `number` - Returns the index of the found element, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
 var users = [
@@ -2960,6 +3052,7 @@ Checks if `value` is classified as a boolean primitive or object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isBoolean(false);
@@ -2977,6 +3070,7 @@ Checks if `value` is classified as a `Date` object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isDate(new Date);
@@ -2994,6 +3088,7 @@ Checks if `value` is a DOM element.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is a DOM element, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isElement(document.body);
@@ -3013,6 +3108,7 @@ enumerable properties.
 | value | `Array` \| `Object` \| `string` | The value to inspect. |
 
 **Returns**: `boolean` - Returns `true` if `value` is empty, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isEmpty(null);
@@ -3051,6 +3147,7 @@ for comparing other values.
 | \[thisArg\] | `*` | The `this` binding of `customizer`. |
 
 **Returns**: `boolean` - Returns `true` if the values are equivalent, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 var object = { 'user': 'fred' };
@@ -3080,6 +3177,7 @@ Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is an error object, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isError(new Error);
@@ -3107,6 +3205,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `number` - Returns the index of the found element, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
 var users = [
@@ -3137,6 +3236,7 @@ Checks if `value` is classified as a `Function` object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isFunction(_);
@@ -3157,6 +3257,7 @@ Checks if `value` is the language type of `Object`.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is an object, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isObject({});
@@ -3181,6 +3282,7 @@ for more details.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is `NaN`, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isNaN(NaN);
@@ -3204,6 +3306,7 @@ Checks if `value` is a native function.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is a native function, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isNative(Array.prototype.push);
@@ -3221,6 +3324,7 @@ Checks if `value` is `null`.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is `null`, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isNull(null);
@@ -3241,6 +3345,7 @@ as numbers, use the `_.isFinite` method.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isNumber(8.4);
@@ -3261,6 +3366,7 @@ Gets the first element of `array`.
 | array | `Array` | The array to query. |
 
 **Returns**: `*` - Returns the first element of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.first([1, 2, 3]);
@@ -3278,6 +3384,7 @@ Checks if `value` is classified as a `RegExp` object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isRegExp(/abc/);
@@ -3295,6 +3402,7 @@ Checks if `value` is classified as a `String` primitive or object.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isString('abc');
@@ -3312,6 +3420,7 @@ Checks if `value` is `undefined`.
 | value | `*` | The value to check. |
 
 **Returns**: `boolean` - Returns `true` if `value` is `undefined`, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
 _.isUndefined(void 0);
@@ -3331,6 +3440,7 @@ flattened, otherwise it is only flattened a single level.
 | \[isDeep=false\] | `boolean` | Specify a deep flatten. |
 
 **Returns**: `Array` - Returns the new flattened array.  
+**Category**: Array  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -3353,6 +3463,7 @@ to the created object.
 | \[properties\] | `Object` | The properties to assign to the object. |
 
 **Returns**: `Object` - Returns the new object.  
+**Category**: Object  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -3389,6 +3500,7 @@ for a deep version of this method.
 | \[...sources\] | `Object` | The source objects. |
 
 **Returns**: `Object` - Returns the destination object.  
+**Category**: Object  
 **Example**  
 ```js
 _.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 'slate' });
@@ -3413,6 +3525,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `string` | `undefined` - Returns the key of the matched element, else `undefined`.  
+**Category**: Object  
 **Example**  
 ```js
 var users = {
@@ -3453,6 +3566,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `string` | `undefined` - Returns the key of the matched element, else `undefined`.  
+**Category**: Object  
 **Example**  
 ```js
 var users = {
@@ -3488,6 +3602,7 @@ iteration early by explicitly returning `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns `object`.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape() {
@@ -3514,6 +3629,7 @@ This method is like `_.forIn` except that it iterates over properties of
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns `object`.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape() {
@@ -3542,6 +3658,7 @@ early by explicitly returning `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns `object`.  
+**Category**: Object  
 **Example**  
 ```js
 _.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
@@ -3561,6 +3678,7 @@ This method is like `_.forOwn` except that it iterates over properties of
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns `object`.  
+**Category**: Object  
 **Example**  
 ```js
 _.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
@@ -3578,6 +3696,7 @@ own and inherited, of `object`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the new array of property names.  
+**Category**: Object  
 **Example**  
 ```js
 _.functions(_);
@@ -3594,6 +3713,7 @@ instead of an inherited property.
 | key | `string` | The name of the property to check. |
 
 **Returns**: `boolean` - Returns `true` if key is a direct property, else `false`.  
+**Category**: Object  
 **Example**  
 ```js
 _.has({ 'a': 1, 'b': 2, 'c': 3 }, 'b');
@@ -3612,6 +3732,7 @@ is `true`.
 | \[multiValue=false\] | `boolean` | Allow multiple values per key. |
 
 **Returns**: `Object` - Returns the new inverted object.  
+**Category**: Object  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -3635,6 +3756,7 @@ Recursively flattens a nested array.
 | array | `Array` | The array to recursively flatten. |
 
 **Returns**: `Array` - Returns the new flattened array.  
+**Category**: Array  
 **Example**  
 ```js
 _.flattenDeep([1, [2], [3, [[4]]]]);
@@ -3649,6 +3771,7 @@ Creates an array of the own and inherited enumerable property names of `object`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the array of property names.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape() {
@@ -3682,6 +3805,7 @@ else `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Object` - Returns the new mapped object.  
+**Category**: Object  
 **Example**  
 ```js
 _.mapValues({ 'a': 1, 'b': 2, 'c': 3} , function(n) { return n * 3; });
@@ -3714,6 +3838,7 @@ for more details.
 | \[fromIndex=0\] | `boolean` \| `number` | The index to search from or `true`  to perform a binary search on a sorted array. |
 
 **Returns**: `number` - Returns the index of the matched value, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
 _.indexOf([1, 2, 3, 1, 2, 3], 2);
@@ -3743,6 +3868,7 @@ predicate is bound to `thisArg` and invoked with three arguments;
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Object` - Returns the new object.  
+**Category**: Object  
 **Example**  
 ```js
 _.omit({ 'user': 'fred', 'age': 40 }, 'age');
@@ -3763,6 +3889,7 @@ e.g. `[[key1, value1], [key2, value2]]`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the new array of key-value pairs.  
+**Category**: Object  
 **Example**  
 ```js
 _.pairs({ 'barney': 36, 'fred': 40 });
@@ -3784,6 +3911,7 @@ predicate is bound to `thisArg` and invoked with three arguments;
 | \[thisArg\] | `*` | The `this` binding of `predicate`. |
 
 **Returns**: `Object` - Returns the new object.  
+**Category**: Object  
 **Example**  
 ```js
 _.pick({ 'user': 'fred', '_userid': 'fred1' }, 'user');
@@ -3811,6 +3939,7 @@ functions may exit iteration early by explicitly returning `false`.
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `*` - Returns the accumulated value.  
+**Category**: Object  
 **Example**  
 ```js
 var squares = _.transform([1, 2, 3, 4, 5, 6], function(result, n) {
@@ -3835,6 +3964,7 @@ Creates an array of the own enumerable property values of `object`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the array of property values.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape(x, y) {
@@ -3857,6 +3987,7 @@ of `object`.
 | object | `Object` | The object to inspect. |
 
 **Returns**: `Array` - Returns the array of property values.  
+**Category**: Object  
 **Example**  
 ```js
 function Shape(x, y) {
@@ -3878,6 +4009,7 @@ Gets all but the last element of `array`.
 | array | `Array` | The array to query. |
 
 **Returns**: `Array` - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.initial([1, 2, 3]);
@@ -3892,6 +4024,7 @@ Capitalizes the first character of `string`.
 | \[string=''\] | `string` | The string to capitalize. |
 
 **Returns**: `string` - Returns the capitalized string.  
+**Category**: String  
 **Example**  
 ```js
 _.capitalize('fred');
@@ -3908,6 +4041,7 @@ for more details.
 | \[string=''\] | `string` | The string to deburr. |
 
 **Returns**: `string` - Returns the beburred string.  
+**Category**: String  
 **Example**  
 ```js
 _.deburr('déjà vu');
@@ -3925,6 +4059,7 @@ Checks if `string` ends with a given target string.
 
 **Returns**: `boolean` - Returns `true` if the given string ends with the
  target string, else `false`.  
+**Category**: String  
 **Example**  
 ```js
 _.endsWith('abc', 'c');
@@ -3953,6 +4088,7 @@ for more details.
 | \[string=''\] | `string` | The string to escape. |
 
 **Returns**: `string` - Returns the escaped string.  
+**Category**: String  
 **Example**  
 ```js
 _.escape('fred, barney, & pebbles');
@@ -3968,6 +4104,7 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 | \[string=''\] | `string` | The string to escape. |
 
 **Returns**: `string` - Returns the escaped string.  
+**Category**: String  
 **Example**  
 ```js
 _.escapeRegExp('[lodash](http://lodash.com/)');
@@ -3987,6 +4124,7 @@ for more details.
 | \[...arrays\] | `Array` | The arrays to inspect. |
 
 **Returns**: `Array` - Returns the new array of shared values.  
+**Category**: Array  
 **Example**  
 ```js
 _.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
@@ -4005,6 +4143,7 @@ characters can't be evenly divided by the padding length.
 | \[chars=' '\] | `string` | The string used as padding. |
 
 **Returns**: `string` - Returns the padded string.  
+**Category**: String  
 **Example**  
 ```js
 _.pad('abc', 8);
@@ -4029,6 +4168,7 @@ characters exceeds the padding length.
 | \[chars=' '\] | `string` | The string used as padding. |
 
 **Returns**: `string` - Returns the padded string.  
+**Category**: String  
 **Example**  
 ```js
 _.padLeft('abc', 6);
@@ -4053,6 +4193,7 @@ characters exceeds the padding length.
 | \[chars=' '\] | `string` | The string used as padding. |
 
 **Returns**: `string` - Returns the padded string.  
+**Category**: String  
 **Example**  
 ```js
 _.padRight('abc', 6);
@@ -4074,6 +4215,7 @@ Repeats the given string `n` times.
 | \[n=0\] | `number` | The number of times to repeat the string. |
 
 **Returns**: `string` - Returns the repeated string.  
+**Category**: String  
 **Example**  
 ```js
 _.repeat('*', 3);
@@ -4094,6 +4236,7 @@ Gets the last element of `array`.
 | array | `Array` | The array to query. |
 
 **Returns**: `*` - Returns the last element of `array`.  
+**Category**: Array  
 **Example**  
 ```js
 _.last([1, 2, 3]);
@@ -4111,6 +4254,7 @@ Checks if `string` starts with a given target string.
 
 **Returns**: `boolean` - Returns `true` if the given string starts with the
  target string, else `false`.  
+**Category**: String  
 **Example**  
 ```js
 _.startsWith('abc', 'a');
@@ -4152,6 +4296,7 @@ For more information on Chrome extension sandboxes see
 | \[options.variable\] | `string` | The data object variable name. |
 
 **Returns**: `function` - Returns the compiled template function.  
+**Category**: String  
 **param-**: {Object} [otherOptions] Enables the legacy &#x60;options&#x60; param signature.  
 **Example**  
 ```js
@@ -4229,6 +4374,7 @@ Removes leading and trailing whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**Category**: String  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4248,6 +4394,7 @@ Removes leading whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**Category**: String  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4267,6 +4414,7 @@ Removes trailing whitespace or specified characters from `string`.
 | \[chars=whitespace\] | `string` | The characters to trim. |
 
 **Returns**: `string` - Returns the trimmed string.  
+**Category**: String  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4291,6 +4439,7 @@ string which defaults to "...".
 | \[options.separator\] | `RegExp` \| `string` | The separator pattern to truncate to. |
 
 **Returns**: `string` - Returns the truncated string.  
+**Category**: String  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4323,6 +4472,7 @@ entities use a third-party library like [_he_](http://mths.be/he).
 | \[string=''\] | `string` | The string to unescape. |
 
 **Returns**: `string` - Returns the unescaped string.  
+**Category**: String  
 **Example**  
 ```js
 _.unescape('fred, barney, &amp; pebbles');
@@ -4338,6 +4488,7 @@ Splits `string` into an array of its words.
 | \[pattern\] | `RegExp` \| `string` | The pattern to match words. |
 
 **Returns**: `Array` - Returns the words of `string`.  
+**Category**: String  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4357,6 +4508,7 @@ error object.
 | func | `*` | The function to attempt. |
 
 **Returns**: `*` - Returns the `func` result or error object.  
+**Category**: Utility  
 **Example**  
 ```js
 // avoid throwing errors for invalid selectors
@@ -4381,6 +4533,7 @@ that contain the equivalent object properties, otherwise it returns `false`.
 | \[thisArg\] | `*` | The `this` binding of the created callback. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Utility  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4412,6 +4565,7 @@ Creates a function that returns `value`.
 | value | `*` | The value to return from the new function. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Utility  
 **Example**  
 ```js
 var object = { 'user': 'fred' };
@@ -4428,6 +4582,7 @@ This method returns the first argument provided to it.
 | value | `*` | Any value. |
 
 **Returns**: `*` - Returns `value`.  
+**Category**: Utility  
 **Example**  
 ```js
 var object = { 'user': 'fred' };
@@ -4445,6 +4600,7 @@ object has equivalent property values, else `false`.
 | source | `Object` | The object of property values to match. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Utility  
 **Example**  
 ```js
 var users = [
@@ -4474,6 +4630,7 @@ its prototype as well.
 | \[options.chain=true\] | `boolean` | Specify whether the functions added  are chainable. |
 
 **Returns**: `function` | `Object` - Returns `object`.  
+**Category**: Utility  
 **Example**  
 ```js
 function vowels(string) {
@@ -4499,6 +4656,7 @@ Reverts the `_` variable to its previous value and returns a reference to
 the `lodash` function.
 
 **Returns**: `function` - Returns the `lodash` function.  
+**Category**: Utility  
 **Example**  
 ```js
 var lodash = _.noConflict();
@@ -4507,6 +4665,7 @@ var lodash = _.noConflict();
 ###_.noop()
 A no-operation function.
 
+**Category**: Utility  
 **Example**  
 ```js
 var object = { 'user': 'fred' };
@@ -4525,6 +4684,7 @@ This method is like `_.indexOf` except that it iterates over elements of
 | \[fromIndex=array.length-1\] | `boolean` \| `number` | The index to search from  or `true` to perform a binary search on a sorted array. |
 
 **Returns**: `number` - Returns the index of the matched value, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
 _.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
@@ -4553,6 +4713,7 @@ implementations. See the [ES5 spec](http://es5.github.io/#E) for more details.
 | \[radix\] | `number` | The radix to interpret `value` by. |
 
 **Returns**: `number` - Returns the converted integer.  
+**Category**: Utility  
 **param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
@@ -4569,6 +4730,7 @@ given object.
 | key | `string` | The name of the property to retrieve. |
 
 **Returns**: `function` - Returns the new function.  
+**Category**: Utility  
 **Example**  
 ```js
 var users = [
@@ -4598,6 +4760,7 @@ number is returned instead of an integer.
 | \[floating=false\] | `boolean` | Specify returning a floating-point number. |
 
 **Returns**: `number` - Returns the random number.  
+**Category**: Utility  
 **Example**  
 ```js
 _.random(0, 5);
@@ -4625,6 +4788,7 @@ zero-length range is created unless a negative `step` is specified.
 | \[step=1\] | `number` | The value to increment or decrement by. |
 
 **Returns**: `Array` - Returns the new array of numbers.  
+**Category**: Utility  
 **Example**  
 ```js
 _.range(4);
@@ -4660,6 +4824,7 @@ if the property value resolves to `undefined`.
 | \[defaultValue\] | `*` | The value returned if the property value  resolves to `undefined`. |
 
 **Returns**: `*` - Returns the resolved value.  
+**Category**: Utility  
 **Example**  
 ```js
 var object = {
@@ -4691,6 +4856,7 @@ one argument; (index).
 | \[thisArg\] | `*` | The `this` binding of `iteratee`. |
 
 **Returns**: `Array` - Returns the array of results.  
+**Category**: Utility  
 **Example**  
 ```js
 var diceRolls = _.times(3, _.partial(_.random, 1, 6, false));
@@ -4711,6 +4877,7 @@ Generates a unique ID. If `prefix` is provided the ID is appended to it.
 | \[prefix\] | `string` | The value to prefix the ID with. |
 
 **Returns**: `string` - Returns the unique ID.  
+**Category**: Utility  
 **Example**  
 ```js
 _.uniqueId('contact_');
