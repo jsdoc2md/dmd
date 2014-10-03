@@ -10,16 +10,14 @@
       * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-    * _static_
-      * [.extra()](#module_cjs/falias-obj^sum.extra)
+    * [.extra()](#module_cjs/falias-obj^sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
-  * _static_
-    * [.one](#module_cjs/object.one) → `number`
-    * [.two()](#module_cjs/object.two)
+  * [.one](#module_cjs/object.one) → `number`
+  * [.two()](#module_cjs/object.two)
 
 ##Global
 * [class: SOmething](#SOmething)
@@ -37,11 +35,9 @@
 * ["docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → `string`
 * [external: String](#external_String)
-  * _instance_
-    * [.rot13()](#external_String#rot13)
+  * [.rot13()](#external_String#rot13)
 * [external: jQuery.fn](#external_jQuery.fn)
-  * _static_
-    * [.starfairy()](#external_jQuery.fn.starfairy)
+  * [.starfairy()](#external_jQuery.fn.starfairy)
 * [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
@@ -50,8 +46,7 @@
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
 * [functionObj()](#functionObj)
-  * _static_
-    * [.extra()](#functionObj.extra)
+  * [.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
 * [htmlGlobal](#htmlGlobal)
 * [customTagged](#customTagged)
@@ -67,9 +62,8 @@
 * [EventfulClass()](#EventfulClass)
 * [mixin: phantom](#phantom)
 * [mixin: Eventful](#Eventful)
-  * _static_
-    * [.on(eventName, handler)](#Eventful.on)
-    * [.fire(eventName, eventData)](#Eventful.fire)
+  * [.on(eventName, handler)](#Eventful.on)
+  * [.fire(eventName, eventData)](#Eventful.fire)
 * [config](#config)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
 * [returnsSomething()](#returnsSomething) ⇒ `string`
@@ -124,8 +118,7 @@ exports a pointer to a function
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-    * _static_
-      * [.extra()](#module_cjs/falias-obj^sum.extra)
+    * [.extra()](#module_cjs/falias-obj^sum.extra)
 
 <a name="exp_module_cjs/falias-obj^sum"></a>
 ###sum() ⏏
@@ -163,9 +156,8 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * _static_
-    * [.one](#module_cjs/object.one) → `number`
-    * [.two()](#module_cjs/object.two)
+  * [.one](#module_cjs/object.one) → `number`
+  * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
 ###obj.one → `number`
@@ -369,9 +361,8 @@ be used directly.
 
 
 * [mixin: Eventful](#Eventful)
-  * _static_
-    * [.on(eventName, handler)](#Eventful.on)
-    * [.fire(eventName, eventData)](#Eventful.fire)
+  * [.on(eventName, handler)](#Eventful.on)
+  * [.fire(eventName, eventData)](#Eventful.fire)
 
 <a name="Eventful.on"></a>
 ###Eventful.on(eventName, handler)

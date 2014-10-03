@@ -8,8 +8,10 @@ a global class
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * [globalClass.propOne](#GlobalClass#propOne)
-  * [GlobalClass.propTwo](#GlobalClass.propTwo)
+  * _instance_
+    * [.propOne](#GlobalClass#propOne)
+  * _static_
+    * [.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass_new"></a>
 ###new GlobalClass(one, two)

@@ -8,30 +8,21 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * _static_
-    * [.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
-    * [.exec(options, [onComplete])](#module_handbrake-js.exec)
-    * [.cliOptions](#module_handbrake-js.cliOptions) → `array`
-  * _inner_
-    * [class: ~Handbrake](#module_handbrake-js..Handbrake)
-      * _instance_
-        * [.output](#module_handbrake-js..Handbrake#output) → `string`
-        * [.options](#module_handbrake-js..Handbrake#options) → `object`
-        * ["start"](#module_handbrake-js..Handbrake#event_start)
-        * ["begin"](#module_handbrake-js..Handbrake#event_begin)
-        * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-        * ["output"](#module_handbrake-js..Handbrake#event_output)
-        * ["error"](#module_handbrake-js..Handbrake#event_error)
-        * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
-        * ["complete"](#module_handbrake-js..Handbrake#event_complete)
-      * _events_
-        * ["start"](#module_handbrake-js..Handbrake#event_start)
-        * ["begin"](#module_handbrake-js..Handbrake#event_begin)
-        * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-        * ["output"](#module_handbrake-js..Handbrake#event_output)
-        * ["error"](#module_handbrake-js..Handbrake#event_error)
-        * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
-        * ["complete"](#module_handbrake-js..Handbrake#event_complete)
+  * [.cliOptions](#module_handbrake-js.cliOptions) → `array`
+  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ `module:handbrake-js~Handbrake`
+  * [.exec(options, [onComplete])](#module_handbrake-js.exec)
+  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
+    * _instance_
+      * [.output](#module_handbrake-js..Handbrake#output) → `string`
+      * [.options](#module_handbrake-js..Handbrake#options) → `object`
+    * _events_
+      * ["start"](#module_handbrake-js..Handbrake#event_start)
+      * ["begin"](#module_handbrake-js..Handbrake#event_begin)
+      * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
+      * ["output"](#module_handbrake-js..Handbrake#event_output)
+      * ["error"](#module_handbrake-js..Handbrake#event_error)
+      * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
+      * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js.cliOptions"></a>
 ###hbjs.cliOptions → `array`
@@ -83,13 +74,6 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * _instance_
       * [.output](#module_handbrake-js..Handbrake#output) → `string`
       * [.options](#module_handbrake-js..Handbrake#options) → `object`
-      * ["start"](#module_handbrake-js..Handbrake#event_start)
-      * ["begin"](#module_handbrake-js..Handbrake#event_begin)
-      * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-      * ["output"](#module_handbrake-js..Handbrake#event_output)
-      * ["error"](#module_handbrake-js..Handbrake#event_error)
-      * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
-      * ["complete"](#module_handbrake-js..Handbrake#event_complete)
     * _events_
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)

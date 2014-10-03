@@ -8,9 +8,12 @@ exports a class
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
-    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
-    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
-    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+    * _instance_
+      * [.prop](#module_cjs/class^ExportedClass#prop)
+    * _static_
+      * [.staticProp](#module_cjs/class^ExportedClass.staticProp)
+    * _inner_
+      * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class^ExportedClass"></a>
 ###class: ExportedClass ⏏

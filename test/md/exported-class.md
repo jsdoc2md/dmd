@@ -7,12 +7,14 @@ Expands file patterns, returning the matched and unmatched files and directories
 
 * [class: FileSet](#exp_module_file-set^FileSet) ⏏
   * [new FileSet(patternList)](#new_module_file-set^FileSet_new)
-  * [fileSet.list](#module_file-set^FileSet#list) → `Array.<string>`
-  * [fileSet.files](#module_file-set^FileSet#files) → `Array.<string>`
-  * [fileSet.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
-  * [fileSet.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
-  * [fileSet.add(files)](#module_file-set^FileSet#add)
-  * [enum: FileSet.eFileType](#module_file-set^FileSet.eFileType) → `number`
+  * _instance_
+    * [.list](#module_file-set^FileSet#list) → `Array.<string>`
+    * [.files](#module_file-set^FileSet#files) → `Array.<string>`
+    * [.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
+    * [.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
+    * [.add(files)](#module_file-set^FileSet#add)
+  * _static_
+    * [enum: .eFileType](#module_file-set^FileSet.eFileType) → `number`
 
 <a name="new_module_file-set^FileSet_new"></a>
 ###new FileSet(patternList)

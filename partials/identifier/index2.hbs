@@ -1,11 +1,13 @@
 {{>index-indent}}* [{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
+{{#if (isClass)~}}
+
 {{#children scope=undefined~}}
 {{~depthIncrement~}}
 {{>index2~}}
 {{~depthDecrement~}}
 {{/children~}}
 
-{{#children scope="instance"~}}
+{{#children scope="instance" -kind="event" ~}}
 {{~depthIncrement~}}
 {{#if @first}}{{>index-indent}}* _instance_
 {{depthIncrement}}{{/if~}}
@@ -40,3 +42,13 @@
 {{~depthDecrement~}}
 {{#if @last}}{{depthDecrement}}{{/if~}}
 {{/children~}}
+
+{{else~}}
+
+{{#children sortBy=(option "sort-by")~}}
+{{~depthIncrement~}}
+{{>index2~}}
+{{~depthDecrement~}}
+{{/children~}}
+
+{{/if}}

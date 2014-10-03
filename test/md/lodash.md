@@ -7,21 +7,20 @@
   * _static_
     * [.once](#_.once) ⇒ `function`
     * [.runInContext([context])](#_.runInContext) ⇒ `function`
-      * _inner_
-        * [~reNative](#_.runInContext..reNative)
-        * [~Array](#_.runInContext..Array)
-        * [~document](#_.runInContext..document)
-        * [~fnToString](#_.runInContext..fnToString)
-        * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
-        * [~oldDash](#_.runInContext..oldDash)
-        * [~toString](#_.runInContext..toString)
-        * [~arrayProto](#_.runInContext..arrayProto)
-        * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
-        * [~Float64Array](#_.runInContext..Float64Array)
-        * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-        * [~metaMap](#_.runInContext..metaMap)
-        * [~ctorByClass](#_.runInContext..ctorByClass)
-        * [~nonEnumProps](#_.runInContext..nonEnumProps)
+      * [~reNative](#_.runInContext..reNative)
+      * [~Array](#_.runInContext..Array)
+      * [~document](#_.runInContext..document)
+      * [~fnToString](#_.runInContext..fnToString)
+      * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+      * [~oldDash](#_.runInContext..oldDash)
+      * [~toString](#_.runInContext..toString)
+      * [~arrayProto](#_.runInContext..arrayProto)
+      * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+      * [~Float64Array](#_.runInContext..Float64Array)
+      * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+      * [~metaMap](#_.runInContext..metaMap)
+      * [~ctorByClass](#_.runInContext..ctorByClass)
+      * [~nonEnumProps](#_.runInContext..nonEnumProps)
     * [.chunk(array, [size])](#_.chunk) ⇒ `Array`
     * [.compact(array)](#_.compact) ⇒ `Array`
     * [.difference(array, [...values])](#_.difference) ⇒ `Array`
@@ -104,18 +103,17 @@
     * [.memoize(func, [resolver])](#_.memoize) ⇒ `function`
     * [.negate(predicate)](#_.negate) ⇒ `function`
     * [.support](#_.support) → `Object`
-      * _static_
-        * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
-        * [.support.argsClass](#_.support.support.argsClass) → `boolean`
-        * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
-        * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
-        * [.support.funcNames](#_.support.support.funcNames) → `boolean`
-        * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
-        * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
-        * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
-        * [.support.ownLast](#_.support.support.ownLast) → `boolean`
-        * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
-        * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
+      * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
+      * [.support.argsClass](#_.support.support.argsClass) → `boolean`
+      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
+      * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
+      * [.support.funcNames](#_.support.support.funcNames) → `boolean`
+      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
+      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
+      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
+      * [.support.ownLast](#_.support.support.ownLast) → `boolean`
+      * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
+      * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
     * [.partial(func, [...args])](#_.partial) ⇒ `function`
     * [.partialRight(func, [...args])](#_.partialRight) ⇒ `function`
     * [.throttle(func, wait, [options])](#_.throttle) ⇒ `function`
@@ -510,18 +508,17 @@ An object environment feature flags.
 
 
   * [.support](#_.support) → `Object`
-    * _static_
-      * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
-      * [.support.argsClass](#_.support.support.argsClass) → `boolean`
-      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
-      * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
-      * [.support.funcNames](#_.support.support.funcNames) → `boolean`
-      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
-      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
-      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
-      * [.support.ownLast](#_.support.support.ownLast) → `boolean`
-      * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
-      * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
+    * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
+    * [.support.argsClass](#_.support.support.argsClass) → `boolean`
+    * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
+    * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
+    * [.support.funcNames](#_.support.support.funcNames) → `boolean`
+    * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
+    * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
+    * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
+    * [.support.ownLast](#_.support.support.ownLast) → `boolean`
+    * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
+    * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
 
 <a name="_.support.support.nodeClass"></a>
 ####support.support.nodeClass → `boolean`
@@ -1408,21 +1405,20 @@ lodash.isFunction(lodash.sub);
 ```
 
   * [.runInContext([context])](#_.runInContext) ⇒ `function`
-    * _inner_
-      * [~reNative](#_.runInContext..reNative)
-      * [~Array](#_.runInContext..Array)
-      * [~document](#_.runInContext..document)
-      * [~fnToString](#_.runInContext..fnToString)
-      * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
-      * [~oldDash](#_.runInContext..oldDash)
-      * [~toString](#_.runInContext..toString)
-      * [~arrayProto](#_.runInContext..arrayProto)
-      * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
-      * [~Float64Array](#_.runInContext..Float64Array)
-      * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-      * [~metaMap](#_.runInContext..metaMap)
-      * [~ctorByClass](#_.runInContext..ctorByClass)
-      * [~nonEnumProps](#_.runInContext..nonEnumProps)
+    * [~reNative](#_.runInContext..reNative)
+    * [~Array](#_.runInContext..Array)
+    * [~document](#_.runInContext..document)
+    * [~fnToString](#_.runInContext..fnToString)
+    * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+    * [~oldDash](#_.runInContext..oldDash)
+    * [~toString](#_.runInContext..toString)
+    * [~arrayProto](#_.runInContext..arrayProto)
+    * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+    * [~Float64Array](#_.runInContext..Float64Array)
+    * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+    * [~metaMap](#_.runInContext..metaMap)
+    * [~ctorByClass](#_.runInContext..ctorByClass)
+    * [~nonEnumProps](#_.runInContext..nonEnumProps)
 
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative
