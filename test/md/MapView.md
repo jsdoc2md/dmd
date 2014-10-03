@@ -14,21 +14,21 @@ Use `MapModifier` and `MapStateModifier` to place famo.us renderables on the map
 
 
 * [MapView](#module_MapView)
-* [class: MapView](#exp_module_MapView^MapView) ⏏
-* [`new MapView(options)`](#new_module_MapView^MapView_new)
-  * _instance_
-    * [`mapView.getMap()`](#module_MapView^MapView#getMap) ⇒ `Map`
-    * [`mapView.setPosition(position, [transition], [callback])`](#module_MapView^MapView#setPosition)
-    * [`mapView.getPosition()`](#module_MapView^MapView#getPosition) ⇒ `LatLng`
-    * [`mapView.getFinalPosition()`](#module_MapView^MapView#getFinalPosition) ⇒ `LatLng`
-    * [`mapView.getZoom()`](#module_MapView^MapView#getZoom) ⇒ `Number`
-    * [`mapView.pointFromPosition(position)`](#module_MapView^MapView#pointFromPosition) ⇒ `Point`
-    * [`mapView.positionFromPoint(point)`](#module_MapView^MapView#positionFromPoint) ⇒ `LatLng`
-    * [`mapView.getSize()`](#module_MapView^MapView#getSize) ⇒ `Array.Number`
-    * [`mapView.halt()`](#module_MapView^MapView#halt)
-    * [`mapView.isActive()`](#module_MapView^MapView#isActive) ⇒ `Bool`
-  * _static_
-    * [`MapView.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
+  * [class: MapView](#exp_module_MapView^MapView) ⏏
+    * [`new MapView(options)`](#new_module_MapView^MapView_new)
+    * _instance_
+      * [`.getMap()`](#module_MapView^MapView#getMap) ⇒ `Map`
+      * [`.setPosition(position, [transition], [callback])`](#module_MapView^MapView#setPosition)
+      * [`.getPosition()`](#module_MapView^MapView#getPosition) ⇒ `LatLng`
+      * [`.getFinalPosition()`](#module_MapView^MapView#getFinalPosition) ⇒ `LatLng`
+      * [`.getZoom()`](#module_MapView^MapView#getZoom) ⇒ `Number`
+      * [`.pointFromPosition(position)`](#module_MapView^MapView#pointFromPosition) ⇒ `Point`
+      * [`.positionFromPoint(point)`](#module_MapView^MapView#positionFromPoint) ⇒ `LatLng`
+      * [`.getSize()`](#module_MapView^MapView#getSize) ⇒ `Array.Number`
+      * [`.halt()`](#module_MapView^MapView#halt)
+      * [`.isActive()`](#module_MapView^MapView#isActive) ⇒ `Bool`
+    * _static_
+      * [`.DEFAULT_OPTIONS`](#module_MapView^MapView.DEFAULT_OPTIONS)
 
 <a name="exp_module_MapView^MapView"></a>
 ###class: MapView ⏏

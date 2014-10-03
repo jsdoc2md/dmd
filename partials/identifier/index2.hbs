@@ -1,6 +1,8 @@
-{{>index-indent}}* [{{>index-name}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
+{{>index-indent}}* [{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
 {{#children scope=undefined~}}
+{{~depthIncrement~}}
 {{>index2~}}
+{{~depthDecrement~}}
 {{/children~}}
 
 {{#children scope="instance"~}}

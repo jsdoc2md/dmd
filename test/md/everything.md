@@ -1,57 +1,57 @@
 ##Modules
 * [cjs/class](#module_cjs/class)
-* [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
-* [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
-  * _instance_
-    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
-  * _static_
-    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
-  * _inner_
-    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
+    * _instance_
+      * [.prop](#module_cjs/class^ExportedClass#prop)
+    * _static_
+      * [.staticProp](#module_cjs/class^ExportedClass.staticProp)
+    * _inner_
+      * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
 * [cjs/falias-obj](#module_cjs/falias-obj)
-* [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-  * _static_
-    * [sum.extra()](#module_cjs/falias-obj^sum.extra)
+  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
+    * _static_
+      * [.extra()](#module_cjs/falias-obj^sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
-* [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
+  * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
-* [teams](#exp_module_cjs/object-alias^teams) ⏏
+  * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
   * _static_
-    * [obj.one](#module_cjs/object.one) → `number`
-    * [obj.two()](#module_cjs/object.two)
+    * [.one](#module_cjs/object.one) → `number`
+    * [.two()](#module_cjs/object.two)
 
 ##Global
 * [class: SOmething](#SOmething)
   * _instance_
-    * [sOmething.yeah()](#SOmething#yeah)
+    * [.yeah()](#SOmething#yeah)
 * [class: GlobalClass](#GlobalClass)
-* [new GlobalClass(one, two)](#new_GlobalClass_new)
+  * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
-    * [globalClass.propOne](#GlobalClass#propOne)
+    * [.propOne](#GlobalClass#propOne)
   * _static_
-    * [GlobalClass.propTwo](#GlobalClass.propTwo)
+    * [.propTwo](#GlobalClass.propTwo)
 * [class: customClass](#customClass)
-* [new customClass()](#new_customClass_new)
+  * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
-* [event: "docletEvent"](#event_docletEvent)
+* ["docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → `string`
 * [external: String](#external_String)
   * _instance_
-    * [string.rot13()](#external_String#rot13)
+    * [.rot13()](#external_String#rot13)
 * [external: jQuery.fn](#external_jQuery.fn)
   * _static_
-    * [jQuery.fn.starfairy()](#external_jQuery.fn.starfairy)
+    * [.starfairy()](#external_jQuery.fn.starfairy)
 * [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
-* [new EncryptedRequest()](#new_EncryptedRequest_new)
+  * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [fileVar](#fileVar)
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
 * [firesDefinedEvent()](#firesDefinedEvent)
 * [functionObj()](#functionObj)
   * _static_
-    * [functionObj.extra()](#functionObj.extra)
+    * [.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
 * [htmlGlobal](#htmlGlobal)
 * [customTagged](#customTagged)
@@ -60,16 +60,16 @@
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
   * _static_
-    * [LendsClass.say()](#LendsClass.say)
+    * [.say()](#LendsClass.say)
 * [class: LendsClass2](#LendsClass2)
   * _instance_
-    * [lendsClass2.say()](#LendsClass2#say)
+    * [.say()](#LendsClass2#say)
 * [EventfulClass()](#EventfulClass)
 * [mixin: phantom](#phantom)
 * [mixin: Eventful](#Eventful)
   * _static_
-    * [Eventful.on(eventName, handler)](#Eventful.on)
-    * [Eventful.fire(eventName, eventData)](#Eventful.fire)
+    * [.on(eventName, handler)](#Eventful.on)
+    * [.fire(eventName, eventData)](#Eventful.fire)
 * [config](#config)
 * [globalFunction()](#globalFunction) ⇒ `string | object | function`
 * [returnsSomething()](#returnsSomething) ⇒ `string`
@@ -87,14 +87,14 @@ exports a class
 
 
 * [cjs/class](#module_cjs/class)
-* [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
-* [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
-  * _instance_
-    * [exportedClass.prop](#module_cjs/class^ExportedClass#prop)
-  * _static_
-    * [ExportedClass.staticProp](#module_cjs/class^ExportedClass.staticProp)
-  * _inner_
-    * [ExportedClass~innerProp](#module_cjs/class^ExportedClass..innerProp)
+  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
+    * _instance_
+      * [.prop](#module_cjs/class^ExportedClass#prop)
+    * _static_
+      * [.staticProp](#module_cjs/class^ExportedClass.staticProp)
+    * _inner_
+      * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class^ExportedClass"></a>
 ###class: ExportedClass ⏏
@@ -123,9 +123,9 @@ exports a pointer to a function
 
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
-* [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-  * _static_
-    * [sum.extra()](#module_cjs/falias-obj^sum.extra)
+  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
+    * _static_
+      * [.extra()](#module_cjs/falias-obj^sum.extra)
 
 <a name="exp_module_cjs/falias-obj^sum"></a>
 ###sum() ⏏
@@ -164,8 +164,8 @@ a module exporting `exports` directly
 
 * [cjs/object](#module_cjs/object)
   * _static_
-    * [obj.one](#module_cjs/object.one) → `number`
-    * [obj.two()](#module_cjs/object.two)
+    * [.one](#module_cjs/object.one) → `number`
+    * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
 ###obj.one → `number`
@@ -184,11 +184,11 @@ a global class
 **Extends**: `String`  
 
 * [class: GlobalClass](#GlobalClass)
-* [new GlobalClass(one, two)](#new_GlobalClass_new)
+  * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
-    * [globalClass.propOne](#GlobalClass#propOne)
+    * [.propOne](#GlobalClass#propOne)
   * _static_
-    * [GlobalClass.propTwo](#GlobalClass.propTwo)
+    * [.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass_new"></a>
 ###new GlobalClass(one, two)
@@ -370,8 +370,8 @@ be used directly.
 
 * [mixin: Eventful](#Eventful)
   * _static_
-    * [Eventful.on(eventName, handler)](#Eventful.on)
-    * [Eventful.fire(eventName, eventData)](#Eventful.fire)
+    * [.on(eventName, handler)](#Eventful.on)
+    * [.fire(eventName, eventData)](#Eventful.fire)
 
 <a name="Eventful.on"></a>
 ###Eventful.on(eventName, handler)

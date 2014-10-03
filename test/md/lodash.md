@@ -3,202 +3,202 @@
 **Category**: Chain  
 
 * [class: _](#_)
-* [new _(value)](#new___new)
+  * [new _(value)](#new___new)
   * _static_
-    * [_.once](#_.once) ⇒ `function`
-    * [_.runInContext([context])](#_.runInContext) ⇒ `function`
+    * [.once](#_.once) ⇒ `function`
+    * [.runInContext([context])](#_.runInContext) ⇒ `function`
       * _inner_
-        * [runInContext~reNative](#_.runInContext..reNative)
-        * [runInContext~Array](#_.runInContext..Array)
-        * [runInContext~document](#_.runInContext..document)
-        * [runInContext~fnToString](#_.runInContext..fnToString)
-        * [runInContext~hasOwnProperty](#_.runInContext..hasOwnProperty)
-        * [runInContext~oldDash](#_.runInContext..oldDash)
-        * [runInContext~toString](#_.runInContext..toString)
-        * [runInContext~arrayProto](#_.runInContext..arrayProto)
-        * [runInContext~ArrayBuffer](#_.runInContext..ArrayBuffer)
-        * [runInContext~Float64Array](#_.runInContext..Float64Array)
-        * [runInContext~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-        * [runInContext~metaMap](#_.runInContext..metaMap)
-        * [runInContext~ctorByClass](#_.runInContext..ctorByClass)
-        * [runInContext~nonEnumProps](#_.runInContext..nonEnumProps)
-    * [_.chunk(array, [size])](#_.chunk) ⇒ `Array`
-    * [_.compact(array)](#_.compact) ⇒ `Array`
-    * [_.difference(array, [...values])](#_.difference) ⇒ `Array`
-    * [_.drop(array, [n])](#_.drop) ⇒ `Array`
-    * [_.dropRight(array, [n])](#_.dropRight) ⇒ `Array`
-    * [_.dropRightWhile(array, [predicate], [thisArg])](#_.dropRightWhile) ⇒ `Array`
-    * [_.dropWhile(array, [predicate], [thisArg])](#_.dropWhile) ⇒ `Array`
-    * [_.findIndex(array, [predicate], [thisArg])](#_.findIndex) ⇒ `number`
-    * [_.findLastIndex(array, [predicate], [thisArg])](#_.findLastIndex) ⇒ `number`
-    * [_.head(array)](#_.head) ⇒ `*`
-    * [_.flatten(array, [isDeep])](#_.flatten) ⇒ `Array`
-    * [_.flattenDeep(array)](#_.flattenDeep) ⇒ `Array`
-    * [_.indexOf(array, value, [fromIndex])](#_.indexOf) ⇒ `number`
-    * [_.initial(array)](#_.initial) ⇒ `Array`
-    * [_.intersection([...arrays])](#_.intersection) ⇒ `Array`
-    * [_.last(array)](#_.last) ⇒ `*`
-    * [_.lastIndexOf(array, value, [fromIndex])](#_.lastIndexOf) ⇒ `number`
-    * [_.pull(array, [...values])](#_.pull) ⇒ `Array`
-    * [_.pullAt(array, [...indexes])](#_.pullAt) ⇒ `Array`
-    * [_.remove(array, [predicate], [thisArg])](#_.remove) ⇒ `Array`
-    * [_.tail(array)](#_.tail) ⇒ `Array`
-    * [_.slice(array, [start], [end])](#_.slice) ⇒ `Array`
-    * [_.sortedIndex(array, value, [iteratee], [thisArg])](#_.sortedIndex) ⇒ `number`
-    * [_.sortedLastIndex(array, value, [iteratee], [thisArg])](#_.sortedLastIndex) ⇒ `number`
-    * [_.take(array, [n])](#_.take) ⇒ `Array`
-    * [_.takeRight(array, [n])](#_.takeRight) ⇒ `Array`
-    * [_.takeRightWhile(array, [predicate], [thisArg])](#_.takeRightWhile) ⇒ `Array`
-    * [_.takeWhile(array, [predicate], [thisArg])](#_.takeWhile) ⇒ `Array`
-    * [_.union([...arrays])](#_.union) ⇒ `Array`
-    * [_.unique(array, [isSorted], [iteratee], [thisArg])](#_.unique) ⇒ `Array`
-    * [_.unzip(array)](#_.unzip) ⇒ `Array`
-    * [_.without(array, [...values])](#_.without) ⇒ `Array`
-    * [_.xor([...arrays])](#_.xor) ⇒ `Array`
-    * [_.zip([...arrays])](#_.zip) ⇒ `Array`
-    * [_.object(props, [vals])](#_.object) ⇒ `Object`
-    * [_.chain(value)](#_.chain) ⇒ `Object`
-    * [_.tap(value, interceptor, [thisArg])](#_.tap) ⇒ `*`
-    * [_.thru(value, interceptor, [thisArg])](#_.thru) ⇒ `*`
-    * [_.chain](#_.chain) ⇒ `*`
-    * [_.toString](#_.toString) ⇒ `string`
-    * [_.valueOf](#_.valueOf) ⇒ `*`
-    * [_.at(collection, [...props])](#_.at) ⇒ `Array`
-    * [_.include(collection, target, [fromIndex])](#_.include) ⇒ `boolean`
-    * [_.countBy](#_.countBy) ⇒ `Object`
-    * [_.all(collection, [predicate], [thisArg])](#_.all) ⇒ `boolean`
-    * [_.select(collection, [predicate], [thisArg])](#_.select) ⇒ `Array`
-    * [_.detect(collection, [predicate], [thisArg])](#_.detect) ⇒ `*`
-    * [_.findLast(collection, [predicate], [thisArg])](#_.findLast) ⇒ `*`
-    * [_.findWhere(collection, source)](#_.findWhere) ⇒ `*`
-    * [_.each(collection, [iteratee], [thisArg])](#_.each) ⇒ `Array | Object | string`
-    * [_.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ `Array | Object | string`
-    * [_.groupBy](#_.groupBy) ⇒ `Object`
-    * [_.indexBy](#_.indexBy) ⇒ `Object`
-    * [_.invoke(collection, methodName, [...args])](#_.invoke) ⇒ `Array`
-    * [_.collect(collection, [iteratee], [thisArg])](#_.collect) ⇒ `Array`
-    * [_.max(collection, [iteratee], [thisArg])](#_.max) ⇒ `*`
-    * [_.min(collection, [iteratee], [thisArg])](#_.min) ⇒ `*`
-    * [_.partition](#_.partition) ⇒ `Array`
-    * [_.pluck(collection, key)](#_.pluck) ⇒ `Array`
-    * [_.foldr(collection, [iteratee], [accumulator], [thisArg])](#_.foldr) ⇒ `*`
-    * [_.reject(collection, [predicate], [thisArg])](#_.reject) ⇒ `Array`
-    * [_.sample(collection, [n])](#_.sample) ⇒ `*`
-    * [_.shuffle(collection)](#_.shuffle) ⇒ `Array`
-    * [_.size(collection)](#_.size) ⇒ `number`
-    * [_.any(collection, [predicate], [thisArg])](#_.any) ⇒ `boolean`
-    * [_.sortBy(collection, [iteratee], [thisArg])](#_.sortBy) ⇒ `Array`
-    * [_.toArray(collection)](#_.toArray) ⇒ `Array`
-    * [_.where(collection, source)](#_.where) ⇒ `Array`
-    * [_.after(n, func)](#_.after) ⇒ `function`
-    * [_.before(n, func)](#_.before) ⇒ `function`
-    * [_.bind(func, [thisArg], [...args])](#_.bind) ⇒ `function`
-    * [_.bindAll(object, [...methodNames])](#_.bindAll) ⇒ `Object`
-    * [_.bindKey(object, key, [...args])](#_.bindKey) ⇒ `function`
-    * [_.curry(func, [arity])](#_.curry) ⇒ `function`
-    * [_.curryRight(func, [arity])](#_.curryRight) ⇒ `function`
-    * [_.debounce(func, wait, [options])](#_.debounce) ⇒ `function`
-    * [_.defer(func, [...args])](#_.defer) ⇒ `number`
-    * [_.delay(func, wait, [...args])](#_.delay) ⇒ `number`
-    * [_.flow([...funcs])](#_.flow) ⇒ `function`
-    * [_.memoize(func, [resolver])](#_.memoize) ⇒ `function`
-    * [_.negate(predicate)](#_.negate) ⇒ `function`
-    * [_.support](#_.support) → `Object`
+        * [~reNative](#_.runInContext..reNative)
+        * [~Array](#_.runInContext..Array)
+        * [~document](#_.runInContext..document)
+        * [~fnToString](#_.runInContext..fnToString)
+        * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+        * [~oldDash](#_.runInContext..oldDash)
+        * [~toString](#_.runInContext..toString)
+        * [~arrayProto](#_.runInContext..arrayProto)
+        * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+        * [~Float64Array](#_.runInContext..Float64Array)
+        * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+        * [~metaMap](#_.runInContext..metaMap)
+        * [~ctorByClass](#_.runInContext..ctorByClass)
+        * [~nonEnumProps](#_.runInContext..nonEnumProps)
+    * [.chunk(array, [size])](#_.chunk) ⇒ `Array`
+    * [.compact(array)](#_.compact) ⇒ `Array`
+    * [.difference(array, [...values])](#_.difference) ⇒ `Array`
+    * [.drop(array, [n])](#_.drop) ⇒ `Array`
+    * [.dropRight(array, [n])](#_.dropRight) ⇒ `Array`
+    * [.dropRightWhile(array, [predicate], [thisArg])](#_.dropRightWhile) ⇒ `Array`
+    * [.dropWhile(array, [predicate], [thisArg])](#_.dropWhile) ⇒ `Array`
+    * [.findIndex(array, [predicate], [thisArg])](#_.findIndex) ⇒ `number`
+    * [.findLastIndex(array, [predicate], [thisArg])](#_.findLastIndex) ⇒ `number`
+    * [.head(array)](#_.head) ⇒ `*`
+    * [.flatten(array, [isDeep])](#_.flatten) ⇒ `Array`
+    * [.flattenDeep(array)](#_.flattenDeep) ⇒ `Array`
+    * [.indexOf(array, value, [fromIndex])](#_.indexOf) ⇒ `number`
+    * [.initial(array)](#_.initial) ⇒ `Array`
+    * [.intersection([...arrays])](#_.intersection) ⇒ `Array`
+    * [.last(array)](#_.last) ⇒ `*`
+    * [.lastIndexOf(array, value, [fromIndex])](#_.lastIndexOf) ⇒ `number`
+    * [.pull(array, [...values])](#_.pull) ⇒ `Array`
+    * [.pullAt(array, [...indexes])](#_.pullAt) ⇒ `Array`
+    * [.remove(array, [predicate], [thisArg])](#_.remove) ⇒ `Array`
+    * [.tail(array)](#_.tail) ⇒ `Array`
+    * [.slice(array, [start], [end])](#_.slice) ⇒ `Array`
+    * [.sortedIndex(array, value, [iteratee], [thisArg])](#_.sortedIndex) ⇒ `number`
+    * [.sortedLastIndex(array, value, [iteratee], [thisArg])](#_.sortedLastIndex) ⇒ `number`
+    * [.take(array, [n])](#_.take) ⇒ `Array`
+    * [.takeRight(array, [n])](#_.takeRight) ⇒ `Array`
+    * [.takeRightWhile(array, [predicate], [thisArg])](#_.takeRightWhile) ⇒ `Array`
+    * [.takeWhile(array, [predicate], [thisArg])](#_.takeWhile) ⇒ `Array`
+    * [.union([...arrays])](#_.union) ⇒ `Array`
+    * [.unique(array, [isSorted], [iteratee], [thisArg])](#_.unique) ⇒ `Array`
+    * [.unzip(array)](#_.unzip) ⇒ `Array`
+    * [.without(array, [...values])](#_.without) ⇒ `Array`
+    * [.xor([...arrays])](#_.xor) ⇒ `Array`
+    * [.zip([...arrays])](#_.zip) ⇒ `Array`
+    * [.object(props, [vals])](#_.object) ⇒ `Object`
+    * [.chain(value)](#_.chain) ⇒ `Object`
+    * [.tap(value, interceptor, [thisArg])](#_.tap) ⇒ `*`
+    * [.thru(value, interceptor, [thisArg])](#_.thru) ⇒ `*`
+    * [.chain](#_.chain) ⇒ `*`
+    * [.toString](#_.toString) ⇒ `string`
+    * [.valueOf](#_.valueOf) ⇒ `*`
+    * [.at(collection, [...props])](#_.at) ⇒ `Array`
+    * [.include(collection, target, [fromIndex])](#_.include) ⇒ `boolean`
+    * [.countBy](#_.countBy) ⇒ `Object`
+    * [.all(collection, [predicate], [thisArg])](#_.all) ⇒ `boolean`
+    * [.select(collection, [predicate], [thisArg])](#_.select) ⇒ `Array`
+    * [.detect(collection, [predicate], [thisArg])](#_.detect) ⇒ `*`
+    * [.findLast(collection, [predicate], [thisArg])](#_.findLast) ⇒ `*`
+    * [.findWhere(collection, source)](#_.findWhere) ⇒ `*`
+    * [.each(collection, [iteratee], [thisArg])](#_.each) ⇒ `Array | Object | string`
+    * [.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ `Array | Object | string`
+    * [.groupBy](#_.groupBy) ⇒ `Object`
+    * [.indexBy](#_.indexBy) ⇒ `Object`
+    * [.invoke(collection, methodName, [...args])](#_.invoke) ⇒ `Array`
+    * [.collect(collection, [iteratee], [thisArg])](#_.collect) ⇒ `Array`
+    * [.max(collection, [iteratee], [thisArg])](#_.max) ⇒ `*`
+    * [.min(collection, [iteratee], [thisArg])](#_.min) ⇒ `*`
+    * [.partition](#_.partition) ⇒ `Array`
+    * [.pluck(collection, key)](#_.pluck) ⇒ `Array`
+    * [.foldr(collection, [iteratee], [accumulator], [thisArg])](#_.foldr) ⇒ `*`
+    * [.reject(collection, [predicate], [thisArg])](#_.reject) ⇒ `Array`
+    * [.sample(collection, [n])](#_.sample) ⇒ `*`
+    * [.shuffle(collection)](#_.shuffle) ⇒ `Array`
+    * [.size(collection)](#_.size) ⇒ `number`
+    * [.any(collection, [predicate], [thisArg])](#_.any) ⇒ `boolean`
+    * [.sortBy(collection, [iteratee], [thisArg])](#_.sortBy) ⇒ `Array`
+    * [.toArray(collection)](#_.toArray) ⇒ `Array`
+    * [.where(collection, source)](#_.where) ⇒ `Array`
+    * [.after(n, func)](#_.after) ⇒ `function`
+    * [.before(n, func)](#_.before) ⇒ `function`
+    * [.bind(func, [thisArg], [...args])](#_.bind) ⇒ `function`
+    * [.bindAll(object, [...methodNames])](#_.bindAll) ⇒ `Object`
+    * [.bindKey(object, key, [...args])](#_.bindKey) ⇒ `function`
+    * [.curry(func, [arity])](#_.curry) ⇒ `function`
+    * [.curryRight(func, [arity])](#_.curryRight) ⇒ `function`
+    * [.debounce(func, wait, [options])](#_.debounce) ⇒ `function`
+    * [.defer(func, [...args])](#_.defer) ⇒ `number`
+    * [.delay(func, wait, [...args])](#_.delay) ⇒ `number`
+    * [.flow([...funcs])](#_.flow) ⇒ `function`
+    * [.memoize(func, [resolver])](#_.memoize) ⇒ `function`
+    * [.negate(predicate)](#_.negate) ⇒ `function`
+    * [.support](#_.support) → `Object`
       * _static_
-        * [support.support.nodeClass](#_.support.support.nodeClass) → `boolean`
-        * [support.support.argsClass](#_.support.support.argsClass) → `boolean`
-        * [support.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
-        * [support.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
-        * [support.support.funcNames](#_.support.support.funcNames) → `boolean`
-        * [support.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
-        * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
-        * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
-        * [support.support.ownLast](#_.support.support.ownLast) → `boolean`
-        * [support.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
-        * [support.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
-    * [_.partial(func, [...args])](#_.partial) ⇒ `function`
-    * [_.partialRight(func, [...args])](#_.partialRight) ⇒ `function`
-    * [_.throttle(func, wait, [options])](#_.throttle) ⇒ `function`
-    * [_.wrap(value, wrapper)](#_.wrap) ⇒ `function`
-    * [_.clone(value, [isDeep], [customizer], [thisArg])](#_.clone) ⇒ `*`
-    * [_.cloneDeep(value, [customizer], [thisArg])](#_.cloneDeep) ⇒ `*`
-    * [_.isArguments(value)](#_.isArguments) ⇒ `boolean`
-    * [_.isArray](#_.isArray) ⇒ `boolean`
-    * [_.isBoolean(value)](#_.isBoolean) ⇒ `boolean`
-    * [_.isDate(value)](#_.isDate) ⇒ `boolean`
-    * [_.isElement(value)](#_.isElement) ⇒ `boolean`
-    * [_.isEmpty(value)](#_.isEmpty) ⇒ `boolean`
-    * [_.isEqual(value, other, [customizer], [thisArg])](#_.isEqual) ⇒ `boolean`
-    * [_.isError(value)](#_.isError) ⇒ `boolean`
-    * [_.isFinite](#_.isFinite) ⇒ `boolean`
-    * [_.isFunction(value)](#_.isFunction) ⇒ `boolean`
-    * [_.isObject(value)](#_.isObject) ⇒ `boolean`
-    * [_.isNaN(value)](#_.isNaN) ⇒ `boolean`
-    * [_.isNative(value)](#_.isNative) ⇒ `boolean`
-    * [_.isNull(value)](#_.isNull) ⇒ `boolean`
-    * [_.isNumber(value)](#_.isNumber) ⇒ `boolean`
-    * [_.isPlainObject](#_.isPlainObject) ⇒ `boolean`
-    * [_.isRegExp(value)](#_.isRegExp) ⇒ `boolean`
-    * [_.isString(value)](#_.isString) ⇒ `boolean`
-    * [_.isUndefined(value)](#_.isUndefined) ⇒ `boolean`
-    * [_.extend](#_.extend) ⇒ `Object`
-    * [_.create(prototype, [properties])](#_.create) ⇒ `Object`
-    * [_.defaults(object, [...sources])](#_.defaults) ⇒ `Object`
-    * [_.findKey(object, [predicate], [thisArg])](#_.findKey) ⇒ `string | undefined`
-    * [_.findLastKey(object, [predicate], [thisArg])](#_.findLastKey) ⇒ `string | undefined`
-    * [_.forIn(object, [iteratee], [thisArg])](#_.forIn) ⇒ `Object`
-    * [_.forInRight(object, [iteratee], [thisArg])](#_.forInRight) ⇒ `Object`
-    * [_.forOwn(object, [iteratee], [thisArg])](#_.forOwn) ⇒ `Object`
-    * [_.forOwnRight(object, [iteratee], [thisArg])](#_.forOwnRight) ⇒ `Object`
-    * [_.methods(object)](#_.methods) ⇒ `Array`
-    * [_.has(object, key)](#_.has) ⇒ `boolean`
-    * [_.invert(object, [multiValue])](#_.invert) ⇒ `Object`
-    * [_.keys](#_.keys) ⇒ `Array`
-    * [_.keysIn(object)](#_.keysIn) ⇒ `Array`
-    * [_.mapValues(object, [iteratee], [thisArg])](#_.mapValues) ⇒ `Object`
-    * [_.merge](#_.merge) ⇒ `Object`
-    * [_.omit(object, [predicate], [thisArg])](#_.omit) ⇒ `Object`
-    * [_.pairs(object)](#_.pairs) ⇒ `Array`
-    * [_.pick(object, [predicate], [thisArg])](#_.pick) ⇒ `Object`
-    * [_.transform(object, [iteratee], [accumulator], [thisArg])](#_.transform) ⇒ `*`
-    * [_.values(object)](#_.values) ⇒ `Array`
-    * [_.valuesIn(object)](#_.valuesIn) ⇒ `Array`
-    * [_.camelCase](#_.camelCase) ⇒ `string`
-    * [_.capitalize([string])](#_.capitalize) ⇒ `string`
-    * [_.deburr([string])](#_.deburr) ⇒ `string`
-    * [_.endsWith([string], [target], [position])](#_.endsWith) ⇒ `boolean`
-    * [_.escape([string])](#_.escape) ⇒ `string`
-    * [_.escapeRegExp([string])](#_.escapeRegExp) ⇒ `string`
-    * [_.kebabCase](#_.kebabCase) ⇒ `string`
-    * [_.pad([string], [length], [chars])](#_.pad) ⇒ `string`
-    * [_.padLeft([string], [length], [chars])](#_.padLeft) ⇒ `string`
-    * [_.padRight([string], [length], [chars])](#_.padRight) ⇒ `string`
-    * [_.repeat([string], [n])](#_.repeat) ⇒ `string`
-    * [_.snakeCase](#_.snakeCase) ⇒ `string`
-    * [_.startsWith([string], [target], [position])](#_.startsWith) ⇒ `boolean`
-    * [_.template([string], [options])](#_.template) ⇒ `function`
-    * [_.trim([string], [chars])](#_.trim) ⇒ `string`
-    * [_.trimLeft([string], [chars])](#_.trimLeft) ⇒ `string`
-    * [_.trimRight([string], [chars])](#_.trimRight) ⇒ `string`
-    * [_.trunc([string], [options])](#_.trunc) ⇒ `string`
-    * [_.unescape([string])](#_.unescape) ⇒ `string`
-    * [_.words([string], [pattern])](#_.words) ⇒ `Array`
-    * [_.attempt(func)](#_.attempt) ⇒ `*`
-    * [_.iteratee([func], [thisArg])](#_.iteratee) ⇒ `function`
-    * [_.constant(value)](#_.constant) ⇒ `function`
-    * [_.identity(value)](#_.identity) ⇒ `*`
-    * [_.matches(source)](#_.matches) ⇒ `function`
-    * [_.mixin([object], source, [options])](#_.mixin) ⇒ `function | Object`
-    * [_.noConflict()](#_.noConflict) ⇒ `function`
-    * [_.noop()](#_.noop)
-    * [_.now](#_.now)
-    * [_.parseInt(value, [radix])](#_.parseInt) ⇒ `number`
-    * [_.property(key)](#_.property) ⇒ `function`
-    * [_.random([min], [max], [floating])](#_.random) ⇒ `number`
-    * [_.range([start], end, [step])](#_.range) ⇒ `Array`
-    * [_.result(object, key, [defaultValue])](#_.result) ⇒ `*`
-    * [_.times(n, [iteratee], [thisArg])](#_.times) ⇒ `Array`
-    * [_.uniqueId([prefix])](#_.uniqueId) ⇒ `string`
+        * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
+        * [.support.argsClass](#_.support.support.argsClass) → `boolean`
+        * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
+        * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
+        * [.support.funcNames](#_.support.support.funcNames) → `boolean`
+        * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
+        * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
+        * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
+        * [.support.ownLast](#_.support.support.ownLast) → `boolean`
+        * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
+        * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
+    * [.partial(func, [...args])](#_.partial) ⇒ `function`
+    * [.partialRight(func, [...args])](#_.partialRight) ⇒ `function`
+    * [.throttle(func, wait, [options])](#_.throttle) ⇒ `function`
+    * [.wrap(value, wrapper)](#_.wrap) ⇒ `function`
+    * [.clone(value, [isDeep], [customizer], [thisArg])](#_.clone) ⇒ `*`
+    * [.cloneDeep(value, [customizer], [thisArg])](#_.cloneDeep) ⇒ `*`
+    * [.isArguments(value)](#_.isArguments) ⇒ `boolean`
+    * [.isArray](#_.isArray) ⇒ `boolean`
+    * [.isBoolean(value)](#_.isBoolean) ⇒ `boolean`
+    * [.isDate(value)](#_.isDate) ⇒ `boolean`
+    * [.isElement(value)](#_.isElement) ⇒ `boolean`
+    * [.isEmpty(value)](#_.isEmpty) ⇒ `boolean`
+    * [.isEqual(value, other, [customizer], [thisArg])](#_.isEqual) ⇒ `boolean`
+    * [.isError(value)](#_.isError) ⇒ `boolean`
+    * [.isFinite](#_.isFinite) ⇒ `boolean`
+    * [.isFunction(value)](#_.isFunction) ⇒ `boolean`
+    * [.isObject(value)](#_.isObject) ⇒ `boolean`
+    * [.isNaN(value)](#_.isNaN) ⇒ `boolean`
+    * [.isNative(value)](#_.isNative) ⇒ `boolean`
+    * [.isNull(value)](#_.isNull) ⇒ `boolean`
+    * [.isNumber(value)](#_.isNumber) ⇒ `boolean`
+    * [.isPlainObject](#_.isPlainObject) ⇒ `boolean`
+    * [.isRegExp(value)](#_.isRegExp) ⇒ `boolean`
+    * [.isString(value)](#_.isString) ⇒ `boolean`
+    * [.isUndefined(value)](#_.isUndefined) ⇒ `boolean`
+    * [.extend](#_.extend) ⇒ `Object`
+    * [.create(prototype, [properties])](#_.create) ⇒ `Object`
+    * [.defaults(object, [...sources])](#_.defaults) ⇒ `Object`
+    * [.findKey(object, [predicate], [thisArg])](#_.findKey) ⇒ `string | undefined`
+    * [.findLastKey(object, [predicate], [thisArg])](#_.findLastKey) ⇒ `string | undefined`
+    * [.forIn(object, [iteratee], [thisArg])](#_.forIn) ⇒ `Object`
+    * [.forInRight(object, [iteratee], [thisArg])](#_.forInRight) ⇒ `Object`
+    * [.forOwn(object, [iteratee], [thisArg])](#_.forOwn) ⇒ `Object`
+    * [.forOwnRight(object, [iteratee], [thisArg])](#_.forOwnRight) ⇒ `Object`
+    * [.methods(object)](#_.methods) ⇒ `Array`
+    * [.has(object, key)](#_.has) ⇒ `boolean`
+    * [.invert(object, [multiValue])](#_.invert) ⇒ `Object`
+    * [.keys](#_.keys) ⇒ `Array`
+    * [.keysIn(object)](#_.keysIn) ⇒ `Array`
+    * [.mapValues(object, [iteratee], [thisArg])](#_.mapValues) ⇒ `Object`
+    * [.merge](#_.merge) ⇒ `Object`
+    * [.omit(object, [predicate], [thisArg])](#_.omit) ⇒ `Object`
+    * [.pairs(object)](#_.pairs) ⇒ `Array`
+    * [.pick(object, [predicate], [thisArg])](#_.pick) ⇒ `Object`
+    * [.transform(object, [iteratee], [accumulator], [thisArg])](#_.transform) ⇒ `*`
+    * [.values(object)](#_.values) ⇒ `Array`
+    * [.valuesIn(object)](#_.valuesIn) ⇒ `Array`
+    * [.camelCase](#_.camelCase) ⇒ `string`
+    * [.capitalize([string])](#_.capitalize) ⇒ `string`
+    * [.deburr([string])](#_.deburr) ⇒ `string`
+    * [.endsWith([string], [target], [position])](#_.endsWith) ⇒ `boolean`
+    * [.escape([string])](#_.escape) ⇒ `string`
+    * [.escapeRegExp([string])](#_.escapeRegExp) ⇒ `string`
+    * [.kebabCase](#_.kebabCase) ⇒ `string`
+    * [.pad([string], [length], [chars])](#_.pad) ⇒ `string`
+    * [.padLeft([string], [length], [chars])](#_.padLeft) ⇒ `string`
+    * [.padRight([string], [length], [chars])](#_.padRight) ⇒ `string`
+    * [.repeat([string], [n])](#_.repeat) ⇒ `string`
+    * [.snakeCase](#_.snakeCase) ⇒ `string`
+    * [.startsWith([string], [target], [position])](#_.startsWith) ⇒ `boolean`
+    * [.template([string], [options])](#_.template) ⇒ `function`
+    * [.trim([string], [chars])](#_.trim) ⇒ `string`
+    * [.trimLeft([string], [chars])](#_.trimLeft) ⇒ `string`
+    * [.trimRight([string], [chars])](#_.trimRight) ⇒ `string`
+    * [.trunc([string], [options])](#_.trunc) ⇒ `string`
+    * [.unescape([string])](#_.unescape) ⇒ `string`
+    * [.words([string], [pattern])](#_.words) ⇒ `Array`
+    * [.attempt(func)](#_.attempt) ⇒ `*`
+    * [.iteratee([func], [thisArg])](#_.iteratee) ⇒ `function`
+    * [.constant(value)](#_.constant) ⇒ `function`
+    * [.identity(value)](#_.identity) ⇒ `*`
+    * [.matches(source)](#_.matches) ⇒ `function`
+    * [.mixin([object], source, [options])](#_.mixin) ⇒ `function | Object`
+    * [.noConflict()](#_.noConflict) ⇒ `function`
+    * [.noop()](#_.noop)
+    * [.now](#_.now)
+    * [.parseInt(value, [radix])](#_.parseInt) ⇒ `number`
+    * [.property(key)](#_.property) ⇒ `function`
+    * [.random([min], [max], [floating])](#_.random) ⇒ `number`
+    * [.range([start], end, [step])](#_.range) ⇒ `Array`
+    * [.result(object, key, [defaultValue])](#_.result) ⇒ `*`
+    * [.times(n, [iteratee], [thisArg])](#_.times) ⇒ `Array`
+    * [.uniqueId([prefix])](#_.uniqueId) ⇒ `string`
 
 <a name="new___new"></a>
 ###new _(value)
@@ -509,19 +509,19 @@ initialize();
 An object environment feature flags.
 
 
-  * [_.support](#_.support) → `Object`
+  * [.support](#_.support) → `Object`
     * _static_
-      * [support.support.nodeClass](#_.support.support.nodeClass) → `boolean`
-      * [support.support.argsClass](#_.support.support.argsClass) → `boolean`
-      * [support.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
-      * [support.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
-      * [support.support.funcNames](#_.support.support.funcNames) → `boolean`
-      * [support.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
-      * [support.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
-      * [support.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
-      * [support.support.ownLast](#_.support.support.ownLast) → `boolean`
-      * [support.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
-      * [support.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
+      * [.support.nodeClass](#_.support.support.nodeClass) → `boolean`
+      * [.support.argsClass](#_.support.support.argsClass) → `boolean`
+      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → `boolean`
+      * [.support.funcDecomp](#_.support.support.funcDecomp) → `boolean`
+      * [.support.funcNames](#_.support.support.funcNames) → `boolean`
+      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → `boolean`
+      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → `boolean`
+      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → `boolean`
+      * [.support.ownLast](#_.support.support.ownLast) → `boolean`
+      * [.support.spliceObjects](#_.support.support.spliceObjects) → `boolean`
+      * [.support.unindexedChars](#_.support.support.unindexedChars) → `boolean`
 
 <a name="_.support.support.nodeClass"></a>
 ####support.support.nodeClass → `boolean`
@@ -1407,22 +1407,22 @@ lodash.isFunction(lodash.sub);
 // => true
 ```
 
-  * [_.runInContext([context])](#_.runInContext) ⇒ `function`
+  * [.runInContext([context])](#_.runInContext) ⇒ `function`
     * _inner_
-      * [runInContext~reNative](#_.runInContext..reNative)
-      * [runInContext~Array](#_.runInContext..Array)
-      * [runInContext~document](#_.runInContext..document)
-      * [runInContext~fnToString](#_.runInContext..fnToString)
-      * [runInContext~hasOwnProperty](#_.runInContext..hasOwnProperty)
-      * [runInContext~oldDash](#_.runInContext..oldDash)
-      * [runInContext~toString](#_.runInContext..toString)
-      * [runInContext~arrayProto](#_.runInContext..arrayProto)
-      * [runInContext~ArrayBuffer](#_.runInContext..ArrayBuffer)
-      * [runInContext~Float64Array](#_.runInContext..Float64Array)
-      * [runInContext~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-      * [runInContext~metaMap](#_.runInContext..metaMap)
-      * [runInContext~ctorByClass](#_.runInContext..ctorByClass)
-      * [runInContext~nonEnumProps](#_.runInContext..nonEnumProps)
+      * [~reNative](#_.runInContext..reNative)
+      * [~Array](#_.runInContext..Array)
+      * [~document](#_.runInContext..document)
+      * [~fnToString](#_.runInContext..fnToString)
+      * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+      * [~oldDash](#_.runInContext..oldDash)
+      * [~toString](#_.runInContext..toString)
+      * [~arrayProto](#_.runInContext..arrayProto)
+      * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+      * [~Float64Array](#_.runInContext..Float64Array)
+      * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+      * [~metaMap](#_.runInContext..metaMap)
+      * [~ctorByClass](#_.runInContext..ctorByClass)
+      * [~nonEnumProps](#_.runInContext..nonEnumProps)
 
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative
