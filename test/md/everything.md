@@ -1,20 +1,20 @@
 ##Modules
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
-    * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
+  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
     * _instance_
-      * [.prop](#module_cjs/class^ExportedClass#prop)
+      * [.prop](#module_cjs/class--ExportedClass#prop)
     * _static_
-      * [.staticProp](#module_cjs/class^ExportedClass.staticProp)
+      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
     * _inner_
-      * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
+      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
 * [cjs/falias-obj](#module_cjs/falias-obj)
-  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-    * [.extra()](#module_cjs/falias-obj^sum.extra)
+  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
+    * [.extra()](#module_cjs/falias-obj--sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ <code>number</code> ⏏
+  * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
-  * [teams](#exp_module_cjs/object-alias^teams) ⏏
+  * [teams](#exp_module_cjs/object-alias--teams) ⏏
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
@@ -81,50 +81,50 @@ exports a class
 
 
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass](#exp_module_cjs/class^ExportedClass) ⏏
-    * [new ExportedClass()](#new_module_cjs/class^ExportedClass_new)
+  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
     * _instance_
-      * [.prop](#module_cjs/class^ExportedClass#prop)
+      * [.prop](#module_cjs/class--ExportedClass#prop)
     * _static_
-      * [.staticProp](#module_cjs/class^ExportedClass.staticProp)
+      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
     * _inner_
-      * [~innerProp](#module_cjs/class^ExportedClass..innerProp)
+      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
-<a name="exp_module_cjs/class^ExportedClass"></a>
+<a name="exp_module_cjs/class--ExportedClass"></a>
 ###class: ExportedClass ⏏
 the exported class
 
-<a name="new_module_cjs/class^ExportedClass_new"></a>
+<a name="new_module_cjs/class--ExportedClass_new"></a>
 ####new ExportedClass()
 the exported contructor
 
-<a name="module_cjs/class^ExportedClass#prop"></a>
+<a name="module_cjs/class--ExportedClass#prop"></a>
 ####exportedClass.prop
 instance property
 
-<a name="module_cjs/class^ExportedClass.staticProp"></a>
+<a name="module_cjs/class--ExportedClass.staticProp"></a>
 ####ExportedClass.staticProp
 a static property for the exported class
 
-<a name="module_cjs/class^ExportedClass..innerProp"></a>
+<a name="module_cjs/class--ExportedClass..innerProp"></a>
 ####ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of [ExportedClass](#exp_module_cjs/class^ExportedClass)  
+**Scope**: inner member of [ExportedClass](#exp_module_cjs/class--ExportedClass)  
 <a name="module_cjs/falias-obj"></a>
 ##cjs/falias-obj
 exports a pointer to a function
 
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
-  * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
-    * [.extra()](#module_cjs/falias-obj^sum.extra)
+  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
+    * [.extra()](#module_cjs/falias-obj--sum.extra)
 
-<a name="exp_module_cjs/falias-obj^sum"></a>
+<a name="exp_module_cjs/falias-obj--sum"></a>
 ###sum() ⏏
 the function
 
-<a name="module_cjs/falias-obj^sum.extra"></a>
+<a name="module_cjs/falias-obj--sum.extra"></a>
 ####sum.extra()
 a static method on the exported function
 
@@ -132,7 +132,7 @@ a static method on the exported function
 ##cjs/function-alias
 exports a pointer to a function
 
-<a name="exp_module_cjs/function-alias^sum"></a>
+<a name="exp_module_cjs/function-alias--sum"></a>
 ###sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
@@ -146,7 +146,7 @@ the function
 ##cjs/object-alias
 a module exporting an object
 
-<a name="exp_module_cjs/object-alias^teams"></a>
+<a name="exp_module_cjs/object-alias--teams"></a>
 ###teams ⏏
 the teams
 

@@ -7,7 +7,7 @@
     "typicalname": "exp"
   },
   {
-    "id": "module:cjs/class^ExportedClass",
+    "id": "module:cjs/class--ExportedClass",
     "name": "ExportedClass",
     "kind": "class",
     "isExported": true,
@@ -17,37 +17,37 @@
     "memberof": "module:cjs/class"
   },
   {
-    "id": "module:cjs/class^ExportedClass()",
+    "id": "module:cjs/class--ExportedClass()",
     "name": "ExportedClass",
     "kind": "constructor",
     "description": "the exported contructor",
-    "memberof": "module:cjs/class^ExportedClass"
+    "memberof": "module:cjs/class--ExportedClass"
   },
   {
-    "id": "module:cjs/class^ExportedClass#prop",
+    "id": "module:cjs/class--ExportedClass#prop",
     "name": "prop",
     "scope": "instance",
     "kind": "member",
     "description": "instance property",
-    "memberof": "module:cjs/class^ExportedClass",
+    "memberof": "module:cjs/class--ExportedClass",
     "codeName": "this.prop"
   },
   {
-    "id": "module:cjs/class^ExportedClass.staticProp",
+    "id": "module:cjs/class--ExportedClass.staticProp",
     "name": "staticProp",
     "scope": "static",
     "kind": "member",
     "description": "a static property for the exported class",
-    "memberof": "module:cjs/class^ExportedClass",
+    "memberof": "module:cjs/class--ExportedClass",
     "codeName": "ExportedClass.staticProp"
   },
   {
-    "id": "module:cjs/class^ExportedClass~innerProp",
+    "id": "module:cjs/class--ExportedClass~innerProp",
     "name": "innerProp",
     "scope": "inner",
     "kind": "member",
     "description": "inner module property",
-    "memberof": "module:cjs/class^ExportedClass",
+    "memberof": "module:cjs/class--ExportedClass",
     "codeName": "innerProp"
   },
   {
@@ -57,7 +57,7 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/falias-obj^sum",
+    "id": "module:cjs/falias-obj--sum",
     "name": "sum",
     "kind": "function",
     "isExported": true,
@@ -67,12 +67,12 @@
     "memberof": "module:cjs/falias-obj"
   },
   {
-    "id": "module:cjs/falias-obj^sum.extra",
+    "id": "module:cjs/falias-obj--sum.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
     "description": "a static method on the exported function",
-    "memberof": "module:cjs/falias-obj^sum",
+    "memberof": "module:cjs/falias-obj--sum",
     "codeName": "sum.extra"
   },
   {
@@ -82,7 +82,7 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/function-alias^sum",
+    "id": "module:cjs/function-alias--sum",
     "name": "sum",
     "kind": "function",
     "isExported": true,
@@ -128,7 +128,7 @@
     "description": "a module exporting an object"
   },
   {
-    "id": "module:cjs/object-alias^teams",
+    "id": "module:cjs/object-alias--teams",
     "name": "teams",
     "kind": "member",
     "isExported": true,
