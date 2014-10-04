@@ -12,11 +12,11 @@
   * [sum()](#exp_module_cjs/falias-obj^sum) ⏏
     * [.extra()](#module_cjs/falias-obj^sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ `number` ⏏
+  * [sum(one, two)](#exp_module_cjs/function-alias^sum) ⇒ <code>number</code> ⏏
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias^teams) ⏏
 * [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) → `number`
+  * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
 
 ##Global
@@ -33,7 +33,7 @@
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
 * ["docletEvent"](#event_docletEvent)
-* [exampleVar](#exampleVar) → `string`
+* [exampleVar](#exampleVar) → <code>string</code>
 * [external: String](#external_String)
   * [.rot13()](#external_String#rot13)
 * [external: jQuery.fn](#external_jQuery.fn)
@@ -50,7 +50,7 @@
 * [globalFunction(one, two)](#globalFunction)
 * [htmlGlobal](#htmlGlobal)
 * [customTagged](#customTagged)
-* [headVar](#headVar) → `number`
+* [headVar](#headVar) → <code>number</code>
 * [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
@@ -65,14 +65,14 @@
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
 * [config](#config)
-* [globalFunction()](#globalFunction) ⇒ `string | object | function`
-* [returnsSomething()](#returnsSomething) ⇒ `string`
+* [globalFunction()](#globalFunction) ⇒ <code>string | object | function</code>
+* [returnsSomething()](#returnsSomething) ⇒ <code>string</code>
 * [seeableVar](#seeableVar)
 * [seefoo()](#seefoo)
 * [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
 * [todoFunction()](#todoFunction)
-* [globalVar](#globalVar) → `string`
+* [globalVar](#globalVar) → <code>string</code>
 
 
 <a name="module_cjs/class"></a>
@@ -133,7 +133,7 @@ a static method on the exported function
 exports a pointer to a function
 
 <a name="exp_module_cjs/function-alias^sum"></a>
-###sum(one, two) ⇒ `number` ⏏
+###sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
 | Param | Type | Description |
@@ -156,11 +156,11 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) → `number`
+  * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###obj.one → `number`
+###obj.one → <code>number</code>
 the first property
 
 <a name="module_cjs/object.two"></a>
@@ -226,7 +226,7 @@ a global function with custom tags
 an event defined in a doclet
 
 <a name="exampleVar"></a>
-##exampleVar → `string`
+##exampleVar → <code>string</code>
 an example var
 
 **Default**: `"something"`  
@@ -319,7 +319,7 @@ a class
 a method yo
 
 <a name="headVar"></a>
-##headVar → `number`
+##headVar → <code>number</code>
 something in the head
 
 <a name="headObj"></a>
@@ -393,12 +393,12 @@ Fire an event, causing all handlers for that event name to run.
   - defaults.treasure.gold `number` - How much gold the party starts with.  
 
 <a name="globalFunction"></a>
-##globalFunction() ⇒ `string | object | function`
+##globalFunction() ⇒ <code>string | object | function</code>
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
 <a name="returnsSomething"></a>
-##returnsSomething() ⇒ `string`
+##returnsSomething() ⇒ <code>string</code>
 returns has no desc
 
 <a name="seeableVar"></a>
@@ -441,7 +441,7 @@ Both of these will link to the bar function.
 - [x] finished
 
 <a name="globalVar"></a>
-##globalVar → `string`
+##globalVar → <code>string</code>
 a global var
 
 **Default**: `"something"`  

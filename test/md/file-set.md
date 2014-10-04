@@ -11,13 +11,13 @@ var fileSet = require("file-set");
   * [class: FileSet](#exp_module_file-set^FileSet) ⏏
     * [new FileSet(patternList)](#new_module_file-set^FileSet_new)
     * _instance_
-      * [.list](#module_file-set^FileSet#list) → `Array.<string>`
-      * [.files](#module_file-set^FileSet#files) → `Array.<string>`
-      * [.dirs](#module_file-set^FileSet#dirs) → `Array.<string>`
-      * [.notExisting](#module_file-set^FileSet#notExisting) → `Array.<string>`
+      * [.list](#module_file-set^FileSet#list) → <code>Array.<string></code>
+      * [.files](#module_file-set^FileSet#files) → <code>Array.<string></code>
+      * [.dirs](#module_file-set^FileSet#dirs) → <code>Array.<string></code>
+      * [.notExisting](#module_file-set^FileSet#notExisting) → <code>Array.<string></code>
       * [.add(files)](#module_file-set^FileSet#add)
     * _static_
-      * [enum: .eFileType](#module_file-set^FileSet.eFileType) → `number`
+      * [enum: .eFileType](#module_file-set^FileSet.eFileType) → <code>number</code>
 
 <a name="exp_module_file-set^FileSet"></a>
 ###class: FileSet ⏏
@@ -30,19 +30,19 @@ Expands file patterns, returning the matched and unmatched files and directories
 | patternList | `string` \| `Array.<string>` | A pattern, or array of patterns to expand |
 
 <a name="module_file-set^FileSet#list"></a>
-####fileSet.list → `Array.<string>`
+####fileSet.list → <code>Array.<string></code>
 The full list of unique paths found, and not found.
 
 <a name="module_file-set^FileSet#files"></a>
-####fileSet.files → `Array.<string>`
+####fileSet.files → <code>Array.<string></code>
 The existing files found
 
 <a name="module_file-set^FileSet#dirs"></a>
-####fileSet.dirs → `Array.<string>`
+####fileSet.dirs → <code>Array.<string></code>
 The existing directories found
 
 <a name="module_file-set^FileSet#notExisting"></a>
-####fileSet.notExisting → `Array.<string>`
+####fileSet.notExisting → <code>Array.<string></code>
 Paths which were not found
 
 <a name="module_file-set^FileSet#add"></a>
@@ -54,7 +54,7 @@ add file patterns to the set
 | files | `string` \| `Array.<string>` | A pattern, or array of patterns to expand |
 
 <a name="module_file-set^FileSet.eFileType"></a>
-####enum: FileSet.eFileType → `number`
+####enum: FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**: `NOEXIST`, `FILE`, `DIR`  

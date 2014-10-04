@@ -1,10 +1,10 @@
-{{#returnSig2}} {{symbol}} `{{#each types~}}
+{{#returnSig2}} {{symbol}} <code>{{#each types~}}
 {{#link this~}}
 {{#if url~}}
 [{{{name}}}]({{{url}}})
-{{else~}}
+{{~else~}}
 {{{name}~}}
 {{/if~}}
 {{~/link~}}
 {{#unless @last}} | {{/unless~}}
-{{/each}}`{{/returnSig2}}
+{{/each}}</code>{{/returnSig2}}
