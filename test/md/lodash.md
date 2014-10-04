@@ -70,8 +70,8 @@
     * [.detect(collection, [predicate], [thisArg])](#_.detect) ⇒ <code>*</code>
     * [.findLast(collection, [predicate], [thisArg])](#_.findLast) ⇒ <code>*</code>
     * [.findWhere(collection, source)](#_.findWhere) ⇒ <code>*</code>
-    * [.each(collection, [iteratee], [thisArg])](#_.each) ⇒ <code>Array</code> | <code>Object</code> | <code>string</code>
-    * [.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ <code>Array</code> | <code>Object</code> | <code>string</code>
+    * [.each(collection, [iteratee], [thisArg])](#_.each) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
+    * [.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
     * [.groupBy](#_.groupBy) ⇒ <code>Object</code>
     * [.indexBy](#_.indexBy) ⇒ <code>Object</code>
     * [.invoke(collection, methodName, [...args])](#_.invoke) ⇒ <code>Array</code>
@@ -142,8 +142,8 @@
     * [.extend](#_.extend) ⇒ <code>Object</code>
     * [.create(prototype, [properties])](#_.create) ⇒ <code>Object</code>
     * [.defaults(object, [...sources])](#_.defaults) ⇒ <code>Object</code>
-    * [.findKey(object, [predicate], [thisArg])](#_.findKey) ⇒ <code>string</code> | <code>undefined</code>
-    * [.findLastKey(object, [predicate], [thisArg])](#_.findLastKey) ⇒ <code>string</code> | <code>undefined</code>
+    * [.findKey(object, [predicate], [thisArg])](#_.findKey) ⇒ <code>string</code> \| <code>undefined</code>
+    * [.findLastKey(object, [predicate], [thisArg])](#_.findLastKey) ⇒ <code>string</code> \| <code>undefined</code>
     * [.forIn(object, [iteratee], [thisArg])](#_.forIn) ⇒ <code>Object</code>
     * [.forInRight(object, [iteratee], [thisArg])](#_.forInRight) ⇒ <code>Object</code>
     * [.forOwn(object, [iteratee], [thisArg])](#_.forOwn) ⇒ <code>Object</code>
@@ -186,7 +186,7 @@
     * [.constant(value)](#_.constant) ⇒ <code>function</code>
     * [.identity(value)](#_.identity) ⇒ <code>*</code>
     * [.matches(source)](#_.matches) ⇒ <code>function</code>
-    * [.mixin([object], source, [options])](#_.mixin) ⇒ <code>function</code> | <code>Object</code>
+    * [.mixin([object], source, [options])](#_.mixin) ⇒ <code>function</code> \| <code>Object</code>
     * [.noConflict()](#_.noConflict) ⇒ <code>function</code>
     * [.noop()](#_.noop)
     * [.now](#_.now)
@@ -1768,7 +1768,7 @@ _.findWhere(users, { 'age': 40 });
 // =>  { 'user': 'fred', 'age': 40, 'employer': 'slate' }
 ```
 <a name="_.each"></a>
-###_.each(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> | <code>Object</code> | <code>string</code>
+###_.each(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
 Iterates over elements of `collection` invoking `iteratee` for each element.
 The `iteratee` is bound to `thisArg` and invoked with three arguments;
 (value, index|key, collection). Iterator functions may exit iteration early
@@ -1795,7 +1795,7 @@ _.forEach({ 'one': 1, 'two': 2, 'three': 3 }, function(n, key) { console.log(n, 
 // => logs each value-key pair and returns the object (iteration order is not guaranteed)
 ```
 <a name="_.eachRight"></a>
-###_.eachRight(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> | <code>Object</code> | <code>string</code>
+###_.eachRight(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
 This method is like `_.forEach` except that it iterates over elements of
 `collection` from right to left.
 
@@ -3508,7 +3508,7 @@ _.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 's
 // => { 'user': 'barney', 'age': 36, 'employer': 'slate' }
 ```
 <a name="_.findKey"></a>
-###_.findKey(object, [predicate], [thisArg]) ⇒ <code>string</code> | <code>undefined</code>
+###_.findKey(object, [predicate], [thisArg]) ⇒ <code>string</code> \| <code>undefined</code>
 This method is like `_.findIndex` except that it returns the key of the
 first element `predicate` returns truthy for, instead of the element itself.
 
@@ -3549,7 +3549,7 @@ _.findKey(users, 'blocked');
 // => 'fred'
 ```
 <a name="_.findLastKey"></a>
-###_.findLastKey(object, [predicate], [thisArg]) ⇒ <code>string</code> | <code>undefined</code>
+###_.findLastKey(object, [predicate], [thisArg]) ⇒ <code>string</code> \| <code>undefined</code>
 This method is like `_.findKey` except that it iterates over elements of
 a collection in the opposite order.
 
@@ -4618,7 +4618,7 @@ _.find(users, matchesAge);
 // => { 'user': 'barney', 'age': 36 }
 ```
 <a name="_.mixin"></a>
-###_.mixin([object], source, [options]) ⇒ <code>function</code> | <code>Object</code>
+###_.mixin([object], source, [options]) ⇒ <code>function</code> \| <code>Object</code>
 Adds all own enumerable function properties of a source object to the
 destination object. If `object` is a function then methods are added to
 its prototype as well.

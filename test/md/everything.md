@@ -65,7 +65,7 @@
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
 * [config](#config)
-* [globalFunction()](#globalFunction) ⇒ <code>string</code> | <code>object</code> | <code>function</code>
+* [globalFunction()](#globalFunction) ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 * [returnsSomething()](#returnsSomething) ⇒ <code>string</code>
 * [seeableVar](#seeableVar)
 * [seefoo()](#seefoo)
@@ -393,7 +393,7 @@ Fire an event, causing all handlers for that event name to run.
   - defaults.treasure.gold `number` - How much gold the party starts with.  
 
 <a name="globalFunction"></a>
-##globalFunction() ⇒ <code>string</code> | <code>object</code> | <code>function</code>
+##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
