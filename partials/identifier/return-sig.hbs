@@ -1,7 +1,10 @@
-{{!-- constructors always return Object, so return-sig pointless --}}
-{{~#unless (isConstructor)~}}
-{{#if returns}} ⇒ `{{{returnSig}}}`
-{{~else}}{{#unless (isEvent)~}}
-{{#if type}} → `{{{returnSig}}}`{{/if~}}
-{{/unless}}{{/if~}}
-{{/unless}}
+{{#returnSig2}} {{symbol}} `{{#each types~}}
+{{#link this~}}
+{{#if url~}}
+[{{{name}}}]({{{url}}})
+{{else~}}
+{{{name}~}}
+{{/if~}}
+{{~/link~}}
+{{#unless @last}} | {{/unless~}}
+{{/each}}`{{/returnSig2}}
