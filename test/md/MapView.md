@@ -71,11 +71,11 @@ Map-type
 ####`new MapView(options)`
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| options | `Object` | Options. |
+| options | <code>Object</code> | Options. |
 | options.type | <code>[MapType](#module_MapView--MapView.MapType)</code> | Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET). |
-| options.mapOptions | `Object` | Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'. |
-| \[options.id\] | `String` | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
-| \[options.zoomTransition\] | `Transition` | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
+| options.mapOptions | <code>Object</code> | Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'. |
+| \[options.id\] | <code>String</code> | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
+| \[options.zoomTransition\] | <code>Transition</code> | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
 
 <a name="module_MapView--MapView.DEFAULT_OPTIONS"></a>
 ####`MapView.DEFAULT_OPTIONS`
@@ -96,9 +96,9 @@ Set the center of the map to the given geographical coordinates.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| position | `LatLng` | Position in geographical coordinates. |
-| \[transition\] | `Transitionable` | Transitionable. |
-| \[callback\] | `function` | callback to call after transition completes. |
+| position | <code>LatLng</code> | Position in geographical coordinates. |
+| \[transition\] | <code>Transitionable</code> | Transitionable. |
+| \[callback\] | <code>function</code> | callback to call after transition completes. |
 
 <a name="module_MapView--MapView#getPosition"></a>
 ####`mapView.getPosition()` ⇒ <code>LatLng</code>
@@ -123,7 +123,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| position | `LatLng` | in geographical coordinates. |
+| position | <code>LatLng</code> | in geographical coordinates. |
 
 **Returns**: `Point` - Position in pixels, relative to the left-top of the mapView.  
 <a name="module_MapView--MapView#positionFromPoint"></a>
@@ -132,7 +132,7 @@ Get the geographical coordinates for a given position in pixels (relative to the
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| point | `Point` | Position in pixels, relative to the left-top of the mapView. |
+| point | <code>Point</code> | Position in pixels, relative to the left-top of the mapView. |
 
 **Returns**: `LatLng` - Position in geographical coordinates.  
 <a name="module_MapView--MapView#getSize"></a>

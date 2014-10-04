@@ -34,7 +34,7 @@ Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| options | `Object` \| `Array` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+| options | <code>Object</code> \| <code>Array</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
 
 **Example**  
 ```js
@@ -50,8 +50,8 @@ Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLI
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| options | `Object` | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-| \[onComplete\] | `function` | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
+| options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+| \[onComplete\] | <code>function</code> | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
 
 **Example**  
 ```js
@@ -105,14 +105,14 @@ Fired at regular intervals passing a `progress` object.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| progress | `object` | details of encode progress |
-| progress.taskNumber | `number` | current task index |
-| progress.taskCount | `number` | total tasks in the queue |
-| progress.percentComplete | `number` |  |
-| progress.fps | `number` | Frames per second |
-| progress.avgFps | `number` | Average frames per second |
-| progress.eta | `string` | Estimated time until completion |
-| progress.task | `string` | Task description, either "Encoding" or "Muxing" |
+| progress | <code>object</code> | details of encode progress |
+| progress.taskNumber | <code>number</code> | current task index |
+| progress.taskCount | <code>number</code> | total tasks in the queue |
+| progress.percentComplete | <code>number</code> |  |
+| progress.fps | <code>number</code> | Frames per second |
+| progress.avgFps | <code>number</code> | Average frames per second |
+| progress.eta | <code>string</code> | Estimated time until completion |
+| progress.task | <code>string</code> | Task description, either "Encoding" or "Muxing" |
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 ####event: "output"
@@ -134,8 +134,8 @@ Fired on successful completion of an encoding task. Always follows a `begin` eve
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | `string` | first param |
-| two | `string` | second param |
+| one | <code>string</code> | first param |
+| two | <code>string</code> | second param |
 
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 ####event: "complete"

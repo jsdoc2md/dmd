@@ -65,7 +65,7 @@
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
 * [config](#config)
-* [globalFunction()](#globalFunction) ⇒ <code>string | object | function</code>
+* [globalFunction()](#globalFunction) ⇒ <code>string</code> | <code>object</code> | <code>function</code>
 * [returnsSomething()](#returnsSomething) ⇒ <code>string</code>
 * [seeableVar](#seeableVar)
 * [seefoo()](#seefoo)
@@ -138,8 +138,8 @@ the function
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | `number` | the first number |
-| two | `number` | the second number |
+| one | <code>number</code> | the first number |
+| two | <code>number</code> | the second number |
 
 **Returns**: `number` - the calculation result  
 <a name="module_cjs/object-alias"></a>
@@ -188,8 +188,8 @@ the global class constructor
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | `number` | first param |
-| two | `string` | second param |
+| one | <code>number</code> | first param |
+| two | <code>string</code> | second param |
 
 <a name="GlobalClass#propOne"></a>
 ###globalClass.propOne
@@ -303,8 +303,8 @@ a global function
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | `number` | first param |
-| two | `string` | second param |
+| one | <code>number</code> | first param |
+| two | <code>string</code> | second param |
 
 <a name="htmlGlobal"></a>
 ##htmlGlobal
@@ -370,8 +370,8 @@ Register a handler function to be called whenever this event is fired.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| eventName | `string` | Name of the event. |
-| handler | `function` | The handler to call. |
+| eventName | <code>string</code> | Name of the event. |
+| handler | <code>function</code> | The handler to call. |
 
 <a name="Eventful.fire"></a>
 ###Eventful.fire(eventName, eventData)
@@ -379,8 +379,8 @@ Fire an event, causing all handlers for that event name to run.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| eventName | `string` | Name of the event. |
-| eventData | `Object` | The data provided to each handler. |
+| eventName | <code>string</code> | Name of the event. |
+| eventData | <code>Object</code> | The data provided to each handler. |
 
 <a name="config"></a>
 ##config
@@ -393,7 +393,7 @@ Fire an event, causing all handlers for that event name to run.
   - defaults.treasure.gold `number` - How much gold the party starts with.  
 
 <a name="globalFunction"></a>
-##globalFunction() ⇒ <code>string | object | function</code>
+##globalFunction() ⇒ <code>string</code> | <code>object</code> | <code>function</code>
 a global function returning multiple stuff
 
 **Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
