@@ -68,16 +68,49 @@ var a = require("array-tools");
 <td>a.without(input, toRemove)</td>
 <td><code>Array</code></td>
 <td>Returns the input minus the specified values.</td>
+<td></td>
 </tr>
 <tr>
 <td>fileSet.dirs</td>
 <td><code>Array.&lt;string&gt;</code></td>
 <td>The existing directories found</td>
+<td></td>
 </tr>
 <tr>
 <td>fileSet.notExisting</td>
 <td><code>Array.&lt;string&gt;</code></td>
 <td>Paths which were not found</td>
+<td>
+  <table>
+  <thead><tr>
+  <th>Param</th>
+  <th>Type</th>
+  <th>Description</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+  <td>array</td>
+  <td><code>Array</code></td>
+  <td>the input array</td>
+  </tr>
+  <tr>
+  <td>index</td>
+  <td><code>number</code></td>
+  <td>the position to begin splicing from</td>
+  </tr>
+  <tr>
+  <td>test</td>
+  <td><code>RegExp</code></td>
+  <td>the test to continue splicing while true</td>
+  </tr>
+  <tr>
+  <td>...elementN</td>
+  <td><code>*</code></td>
+  <td>the elements to add to the array</td>
+  </tr>
+  </tbody>
+  </table>
+</td>
 </tr>
 </tbody>
 </table>
