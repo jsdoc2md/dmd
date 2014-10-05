@@ -129,7 +129,6 @@ var a = require("array-tools");
 <td>Returns the input minus the specified values.</td>
 </tr>
 <tr>
-  <td></td>
   <td colspan="2">
   <table>
   <thead><tr>
@@ -174,7 +173,6 @@ var a = require("array-tools");
 <td>Paths which were not found</td>
 </tr>
 <tr>
-  <td></td>
   <td colspan="2">
   <table>
   <thead><tr>
