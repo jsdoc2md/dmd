@@ -115,6 +115,102 @@ var a = require("array-tools");
 </tbody>
 </table>
 
+
+<table>
+<thead><tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td rowspan="2">a.without(input, toRemove)</td>
+<td><code>Array</code></td>
+<td>Returns the input minus the specified values.</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="2">
+  <table>
+  <thead><tr>
+  <th>Param</th>
+  <th>Type</th>
+  <th>Description</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+  <td>array1</td>
+  <td><code>Array</code></td>
+  <td>First array</td>
+  </tr>
+  <tr>
+  <td>array2</td>
+  <td><code>Array</code></td>
+  <td>Second array</td>
+  </tr>
+  <tr>
+  <td>idKey</td>
+  <td><code>string</code></td>
+  <td>the unique ID property name</td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+</tr>
+<tr>
+<td>a.without(input, toRemove)</td>
+<td><code>Array</code></td>
+<td>Returns the input minus the specified values.</td>
+</tr>
+<tr>
+<td>fileSet.dirs</td>
+<td><code>Array.&lt;string&gt;</code></td>
+<td>The existing directories found</td>
+</tr>
+<tr>
+<td rowspan="2">fileSet.notExisting</td>
+<td><code>Array.&lt;string&gt;</code></td>
+<td>Paths which were not found</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="2">
+  <table>
+  <thead><tr>
+  <th>Param</th>
+  <th>Type</th>
+  <th>Description</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+  <td>array</td>
+  <td><code>Array</code></td>
+  <td>the input array</td>
+  </tr>
+  <tr>
+  <td>index</td>
+  <td><code>number</code></td>
+  <td>the position to begin splicing from</td>
+  </tr>
+  <tr>
+  <td>test</td>
+  <td><code>RegExp</code></td>
+  <td>the test to continue splicing while true</td>
+  </tr>
+  <tr>
+  <td>...elementN</td>
+  <td><code>*</code></td>
+  <td>the elements to add to the array</td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+</tr>
+</tbody>
+</table>
+
+
+
 <a name="module_array-tools.without"></a>
 ###a.without(input, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
