@@ -155,7 +155,6 @@ var a = require("array-tools");
   </tbody>
   </table>
   </td>
-  <td></td>
 </tr>
 <tr>
 <td>a.without(input, toRemove)</td>
@@ -204,7 +203,6 @@ var a = require("array-tools");
   </tbody>
   </table>
   </td>
-  <td></td>
 </tr>
 </tbody>
 </table>
