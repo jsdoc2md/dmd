@@ -288,6 +288,32 @@
     ]
   },
   {
+    "id": "defaultedOne",
+    "name": "defaultedOne",
+    "scope": "global",
+    "kind": "member",
+    "type": {
+      "names": [
+        "object"
+      ]
+    },
+    "defaultvalue": "{ one: 1, two: \"yeah?\" }",
+    "codeName": "defaultedOne"
+  },
+  {
+    "id": "defaultedTwo",
+    "name": "defaultedTwo",
+    "scope": "global",
+    "kind": "member",
+    "type": {
+      "names": [
+        "function"
+      ]
+    },
+    "defaultvalue": "function f(n){ return something(n); }",
+    "codeName": "defaultedTwo"
+  },
+  {
     "id": "event:docletEvent",
     "name": "docletEvent",
     "scope": "global",

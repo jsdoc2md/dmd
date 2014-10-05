@@ -19,8 +19,8 @@ the global class constructor
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | `number` | first param |
-| two | `string` | second param |
+| one | <code>number</code> | first param |
+| two | <code>string</code> | second param |
 
 <a name="GlobalClass#propOne"></a>
 ###globalClass.propOne

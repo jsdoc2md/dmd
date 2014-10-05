@@ -20,9 +20,7 @@
   * [.two()](#module_cjs/object.two)
 
 ##Global
-* [class: SOmething](#SOmething)
-  * _instance_
-    * [.yeah()](#SOmething#yeah)
+* [htmlGlobal](#htmlGlobal)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
@@ -32,6 +30,8 @@
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
+* [defaultedOne](#defaultedOne) → <code>object</code>
+* [defaultedTwo](#defaultedTwo) → <code>function</code>
 * ["docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → <code>string</code>
 * [external: String](#external_String)
@@ -48,8 +48,10 @@
 * [functionObj()](#functionObj)
   * [.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
-* [htmlGlobal](#htmlGlobal)
 * [customTagged](#customTagged)
+* [class: SOmething](#SOmething)
+  * _instance_
+    * [.yeah()](#SOmething#yeah)
 * [headVar](#headVar) → <code>number</code>
 * [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
@@ -221,6 +223,12 @@ a global function with custom tags
 
 **sitcom**: Brass Eye  
 **character**: Noel Edmonds  
+<a name="defaultedOne"></a>
+##defaultedOne → <code>object</code>
+**Default**: `{ one: 1, two: "yeah?" }`  
+<a name="defaultedTwo"></a>
+##defaultedTwo → <code>function</code>
+**Default**: `function f(n){ return something(n); }`  
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"
 an event defined in a doclet
