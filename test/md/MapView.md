@@ -1,32 +1,3 @@
-##Modules
-* [MapView](#module_MapView)
-  * [class: MapView](#exp_module_MapView--MapView) ⏏
-    * [`new MapView(options)`](#new_module_MapView--MapView_new)
-    * _instance_
-      * [`.getMap()`](#module_MapView--MapView#getMap) ⇒ <code>Map</code>
-      * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
-      * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
-      * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
-      * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getSize()`](#module_MapView--MapView#getSize) ⇒ <code>Array.Number</code>
-      * [`.halt()`](#module_MapView--MapView#halt)
-      * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
-    * _static_
-      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-      * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
-
-##Global
-* [`external: LatLng`](#external_LatLng)
-
-
-<a name="external_LatLng"></a>
-##`external: LatLng`
-**See**
-
-- https://developers.google.com/maps/documentation/javascript/reference#LatLng
-
 <a name="module_MapView"></a>
 ##MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.
