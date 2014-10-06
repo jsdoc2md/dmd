@@ -112,7 +112,7 @@ a static property for the exported class
 ####ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of [ExportedClass](#exp_module_cjs/class--ExportedClass)  
+**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/falias-obj"></a>
 ##cjs/falias-obj
 exports a pointer to a function
@@ -143,7 +143,7 @@ the function
 | one | <code>number</code> | the first number |
 | two | <code>number</code> | the second number |
 
-**Returns**: `number` - the calculation result  
+**Returns**: <code>number</code> - the calculation result  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
@@ -242,41 +242,6 @@ an example var
 var thisVar = funtion(){
     return "a value";
 };
-<a name="external_String"></a>
-##external: String
-The built in string object.
-
-**See**
-
-- {@link https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String String}
-
-<a name="external_String#rot13"></a>
-###string.rot13()
-Adds a new method to the built-in string.
-
-**Example**  
-var greeting = new String('hello world');
-console.log( greeting.rot13() ); // uryyb jbeyq
-<a name="external_jQuery.fn"></a>
-##external: jQuery.fn
-The jQuery plugin namespace.
-
-**See**
-
-- {@link http://docs.jquery.com/Plugins/Authoring The jQuery Plugin Guide}
-
-<a name="external_jQuery.fn.starfairy"></a>
-###jQuery.fn.starfairy()
-A jQuery plugin to make stars fly around your home page.
-
-<a name="external_XMLHttpRequest"></a>
-##external: XMLHttpRequest
-Namespace provided by the browser.
-
-**See**
-
-- https://developer.mozilla.org/en/xmlhttprequest
-
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest
 **Extends**: `external:XMLHttpRequest`  
@@ -404,7 +369,7 @@ Fire an event, causing all handlers for that event name to run.
 ##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
-**Returns**: `string` - if something you get a string back`object` | `function` - or an object, or function  
+**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
 <a name="returnsSomething"></a>
 ##returnsSomething() ⇒ <code>string</code>
 returns has no desc

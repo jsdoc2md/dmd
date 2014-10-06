@@ -256,9 +256,9 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 | array | <code>Array</code> | the input array, modified directly |
 | query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
 
-**Returns**: `Array` - the extracted items.  
+**Returns**: <code>Array</code> - the extracted items.  
 <a name="module_array-tools..flatten"></a>
 ###a~flatten()
 flatten
 
-**Scope**: inner function of [array-tools](#module_array-tools)  
+**Scope**: inner function of <code>[array-tools](#module_array-tools)</code>  

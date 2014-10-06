@@ -67,7 +67,7 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
 **Extends**: `EventEmitter`  
-**Scope**: inner class of [handbrake-js](#module_handbrake-js)  
+**Scope**: inner class of <code>[handbrake-js](#module_handbrake-js)</code>  
 **Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
 
   * [class: ~Handbrake](#module_handbrake-js..Handbrake)

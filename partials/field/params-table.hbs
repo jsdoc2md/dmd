@@ -2,6 +2,6 @@
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 {{#each params~}}
-| {{>param-table-name}} | {{#each type.names}}{{>linked-type}}{{/each}} | {{{stripNewlines description}}} |
+| {{>param-table-name}} | {{>linked-type-list types=type.names}} | {{{stripNewlines description}}} |
 {{/each}}
 {{/if}}

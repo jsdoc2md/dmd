@@ -60,7 +60,7 @@ Map-type
 Get the internal map-object. This object may not yet have been initialized, the map is only
 guarenteed to be valid after the 'load' event has been emited.
 
-**Returns**: `Map` - Map object.  
+**Returns**: <code>Map</code> - Map object.  
 <a name="module_MapView--MapView#setPosition"></a>
 ####`mapView.setPosition(position, [transition], [callback])`
 Set the center of the map to the given geographical coordinates.
@@ -75,19 +75,19 @@ Set the center of the map to the given geographical coordinates.
 ####`mapView.getPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the current center position of the map, in geographical coordinates.
 
-**Returns**: <code>[LatLng](#external_LatLng)</code> - Position in geographical coordinates.  
+**Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView#getFinalPosition"></a>
 ####`mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the destination center position of the map, in geographical coordinates.
 
-**Returns**: <code>[LatLng](#external_LatLng)</code> - Position in geographical coordinates.  
+**Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView#getZoom"></a>
 ####`mapView.getZoom()` ⇒ <code>Number</code>
 Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.
 E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
 at 5, over time. The used zoomTransition can be set as an option.
 
-**Returns**: `Number` - Zoom-level.  
+**Returns**: <code>Number</code> - Zoom-level.  
 <a name="module_MapView--MapView#pointFromPosition"></a>
 ####`mapView.pointFromPosition(position)` ⇒ <code>Point</code>
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
@@ -96,7 +96,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 | ----- | ---- | ----------- |
 | position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | in geographical coordinates. |
 
-**Returns**: `Point` - Position in pixels, relative to the left-top of the mapView.  
+**Returns**: <code>Point</code> - Position in pixels, relative to the left-top of the mapView.  
 <a name="module_MapView--MapView#positionFromPoint"></a>
 ####`mapView.positionFromPoint(point)` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
@@ -105,12 +105,12 @@ Get the geographical coordinates for a given position in pixels (relative to the
 | ----- | ---- | ----------- |
 | point | <code>Point</code> | Position in pixels, relative to the left-top of the mapView. |
 
-**Returns**: <code>[LatLng](#external_LatLng)</code> - Position in geographical coordinates.  
+**Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView#getSize"></a>
 ####`mapView.getSize()` ⇒ <code>Array.Number</code>
 Get the size of the map-view in pixels.
 
-**Returns**: `Array.Number` - Size of the mapView.  
+**Returns**: <code>Array.Number</code> - Size of the mapView.  
 <a name="module_MapView--MapView#halt"></a>
 ####`mapView.halt()`
 Halts any pending transitions.
@@ -119,4 +119,4 @@ Halts any pending transitions.
 ####`mapView.isActive()` ⇒ <code>Bool</code>
 Is there at least one action pending completion?
 
-**Returns**: `Bool` - True when there are active transitions running.  
+**Returns**: <code>Bool</code> - True when there are active transitions running.  

@@ -1,6 +1,6 @@
 {{#if returns}}{{#if returns.[0].description~}}
 **Returns**: {{#each returns~}}
-  {{#if type.names}}{{{join (linkTo type.names style="code") " | "}}}{{/if}}
+  {{#if type.names}}{{>linked-type-list types=type.names}}{{/if}}
   {{~#if description}} - {{{linkify description}}}{{/if}}
 {{~/each}}  
 {{/if}}{{/if}}
