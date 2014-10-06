@@ -194,7 +194,7 @@
       {
         "type": {
           "names": [
-            "LatLng"
+            "external:LatLng"
           ]
         },
         "description": "Position in geographical coordinates.",
@@ -234,7 +234,7 @@
       {
         "type": {
           "names": [
-            "LatLng"
+            "external:LatLng"
           ]
         },
         "description": "Position in geographical coordinates."
@@ -253,7 +253,7 @@
       {
         "type": {
           "names": [
-            "LatLng"
+            "external:LatLng"
           ]
         },
         "description": "Position in geographical coordinates."
@@ -291,7 +291,7 @@
       {
         "type": {
           "names": [
-            "LatLng"
+            "external:LatLng"
           ]
         },
         "description": "in geographical coordinates.",
@@ -332,7 +332,7 @@
       {
         "type": {
           "names": [
-            "LatLng"
+            "external:LatLng"
           ]
         },
         "description": "Position in geographical coordinates."
