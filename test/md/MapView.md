@@ -5,11 +5,11 @@
     * _instance_
       * [`.getMap()`](#module_MapView--MapView#getMap) ⇒ <code>Map</code>
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
-      * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
       * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
       * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
-      * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
       * [`.getSize()`](#module_MapView--MapView#getSize) ⇒ <code>Array.Number</code>
       * [`.halt()`](#module_MapView--MapView#halt)
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
@@ -48,11 +48,11 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
     * _instance_
       * [`.getMap()`](#module_MapView--MapView#getMap) ⇒ <code>Map</code>
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
-      * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
       * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
       * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
-      * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+      * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
       * [`.getSize()`](#module_MapView--MapView#getSize) ⇒ <code>Array.Number</code>
       * [`.halt()`](#module_MapView--MapView#halt)
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
@@ -96,17 +96,17 @@ Set the center of the map to the given geographical coordinates.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| position | <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | Position in geographical coordinates. |
+| position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | Position in geographical coordinates. |
 | \[transition\] | <code>Transitionable</code> | Transitionable. |
 | \[callback\] | <code>function</code> | callback to call after transition completes. |
 
 <a name="module_MapView--MapView#getPosition"></a>
-####`mapView.getPosition()` ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+####`mapView.getPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the current center position of the map, in geographical coordinates.
 
 **Returns**: <code>[LatLng](#external_LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView#getFinalPosition"></a>
-####`mapView.getFinalPosition()` ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+####`mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the destination center position of the map, in geographical coordinates.
 
 **Returns**: <code>[LatLng](#external_LatLng)</code> - Position in geographical coordinates.  
@@ -123,11 +123,11 @@ Get the position in pixels (relative to the left-top of the container) for the g
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| position | <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | in geographical coordinates. |
+| position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | in geographical coordinates. |
 
 **Returns**: `Point` - Position in pixels, relative to the left-top of the mapView.  
 <a name="module_MapView--MapView#positionFromPoint"></a>
-####`mapView.positionFromPoint(point)` ⇒ <code>[LatLng](#https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+####`mapView.positionFromPoint(point)` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
 
 | Param | Type | Description |
