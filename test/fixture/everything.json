@@ -815,7 +815,22 @@
     "kind": "function",
     "exceptions": [
       {
-        "description": "throw three"
+        "description": "Will throw an error if the argument is null"
+      },
+      {
+        "type": {
+          "names": [
+            "InvalidArgumentException"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "DivideByZero"
+          ]
+        },
+        "description": "Argument x must be non-zero"
       }
     ],
     "codeName": "throwingFunction"

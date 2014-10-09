@@ -402,7 +402,9 @@ Both of these will link to the bar function.
 ##throwingFunction()
 **Throws**:
 
-- throw three
+- Will throw an error if the argument is null
+- <code>InvalidArgumentException</code> 
+- <code>DivideByZero</code> Argument x must be non-zero
 
 <a name="todoFunction"></a>
 ##todoFunction()
