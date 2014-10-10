@@ -1,14 +1,4 @@
 ##Modules
-* [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
-  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
@@ -27,9 +17,14 @@
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>module:human~Organ</code>
+      * [.liver](#module_cjs/human--Human#liver) ⇒ <code>Organ</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
+        * new ~Organ()
+        * _instance_
+          * .redCell → <code>Cell</code>
+        * _inner_
+          * class: ~Cell
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias--teams) ⏏
 * [cjs/object](#module_cjs/object)
@@ -97,53 +92,6 @@
 * [todoFunction3()](#todoFunction3)
 * [globalVar](#globalVar) → <code>string</code>
 
-
-<a name="module_cjs/animals"></a>
-##cjs/animals
-exports animals
-
-
-* [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
-  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-
-<a name="module_cjs/animals.cat"></a>
-###cjs/animals.cat → <code>Animal</code>
-the exported cat
-
-<a name="module_cjs/animals.dog"></a>
-###cjs/animals.dog → <code>Animal</code>
-the exported dog
-
-<a name="module_cjs/animals..Animal"></a>
-###class: cjs/animals~Animal
-**Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
-
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-
-<a name="module_cjs/animals..Animal#type"></a>
-####animal.type → <code>Quadroped</code>
-animal type
-
-<a name="module_cjs/animals..Animal..Quadroped"></a>
-####class: Animal~Quadroped
-**Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
-<a name="module_cjs/animals..Animal..Quadroped#legs"></a>
-#####quadroped.legs
-leg count
 
 <a name="module_cjs/class"></a>
 ##cjs/class
@@ -221,7 +169,7 @@ exports a class
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>module:human~Organ</code>
+      * [.liver](#module_cjs/human--Human#liver)
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
 
@@ -234,7 +182,7 @@ the exported class
 the exported contructor
 
 <a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code>module:human~Organ</code>
+####human.liver
 an instance of Organ
 
 <a name="module_cjs/human--Human..Organ"></a>

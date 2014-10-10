@@ -1,5 +1,78 @@
 [
   {
+    "id": "module:cjs/animals",
+    "name": "cjs/animals",
+    "kind": "module",
+    "description": "exports animals"
+  },
+  {
+    "id": "module:cjs/animals.cat",
+    "name": "cat",
+    "scope": "static",
+    "kind": "member",
+    "description": "the exported cat",
+    "memberof": "module:cjs/animals",
+    "type": {
+      "names": [
+        "Animal"
+      ]
+    },
+    "codeName": "exports.cat"
+  },
+  {
+    "id": "module:cjs/animals.dog",
+    "name": "dog",
+    "scope": "static",
+    "kind": "member",
+    "description": "the exported dog",
+    "memberof": "module:cjs/animals",
+    "type": {
+      "names": [
+        "Animal"
+      ]
+    },
+    "codeName": "exports.dog"
+  },
+  {
+    "id": "module:cjs/animals~Animal",
+    "name": "Animal",
+    "scope": "inner",
+    "kind": "class",
+    "memberof": "module:cjs/animals",
+    "codeName": "Animal"
+  },
+  {
+    "id": "module:cjs/animals~Animal~Quadroped",
+    "name": "Quadroped",
+    "scope": "inner",
+    "kind": "class",
+    "memberof": "module:cjs/animals~Animal",
+    "codeName": "Quadroped"
+  },
+  {
+    "id": "module:cjs/animals~Animal~Quadroped#legs",
+    "name": "legs",
+    "scope": "instance",
+    "kind": "member",
+    "description": "leg count",
+    "memberof": "module:cjs/animals~Animal~Quadroped",
+    "codeName": "this.legs"
+  },
+  {
+    "id": "module:cjs/animals~Animal#type",
+    "name": "type",
+    "scope": "instance",
+    "kind": "member",
+    "description": "animal type",
+    "memberof": "module:cjs/animals~Animal",
+    "type": {
+      "names": [
+        "Quadroped"
+      ]
+    },
+    "codeName": "this.type"
+  },
+  {
     "id": "module:cjs/class",
     "name": "cjs/class",
     "kind": "module",
@@ -170,6 +243,11 @@
     "kind": "member",
     "description": "an instance of Cell",
     "memberof": "INVALID memberof: module:cjs/human~Organ",
+    "type": {
+      "names": [
+        "module:human~Organ~Cell"
+      ]
+    },
     "codeName": "this.redCell"
   },
   {
@@ -179,6 +257,11 @@
     "kind": "member",
     "description": "an instance of Organ",
     "memberof": "module:cjs/human--Human",
+    "type": {
+      "names": [
+        "module:human~Organ"
+      ]
+    },
     "codeName": "this.liver"
   },
   {
