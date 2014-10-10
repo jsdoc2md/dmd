@@ -1,0 +1,340 @@
+[
+  {
+    "id": "module:get_val",
+    "name": "get_val",
+    "kind": "module",
+    "description": "Provides class for getting value by key",
+    "author": [
+      "Viacheslav Lotsmanov"
+    ],
+    "version": "r10",
+    "see": [
+      "{@link https://github.com/unclechu/js-useful-umd-modules/|GitHub}",
+      "{@link https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE|License}"
+    ],
+    "license": "AGPLv3"
+  },
+  {
+    "id": "GetVal~valuesArg",
+    "name": "valuesArg",
+    "scope": "inner",
+    "kind": "typedef",
+    "memberof": "module:get_val~GetVal",
+    "type": {
+      "names": [
+        "Object.<(Object|Array)>"
+      ]
+    },
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "Object.<*>"
+          ]
+        },
+        "nullable": false,
+        "description": "Values key-val object",
+        "name": "values"
+      },
+      {
+        "type": {
+          "names": [
+            "Array.<string>"
+          ]
+        },
+        "optional": true,
+        "nullable": true,
+        "description": "Array of required keys",
+        "name": "required"
+      }
+    ],
+    "nullable": false
+  },
+  {
+    "id": "GetVal~exceptions",
+    "name": "exceptions",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Exceptions",
+    "memberof": "module:get_val~GetVal",
+    "type": {
+      "names": [
+        "Object.<Error>"
+      ]
+    },
+    "readonly": true,
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectArgument"
+          ]
+        },
+        "description": "Incorrect argument type for constructor"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredArgumentKey"
+          ]
+        },
+        "description": "Required argument key is not set or has incorrect type (for constructor)"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectKey"
+          ]
+        },
+        "description": "Incorrect key type for get/set methods"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~KeyIsNotExists"
+          ]
+        },
+        "description": "Value not found by key"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredIsNotSet"
+          ]
+        },
+        "description": "Attempt to get value before all required values sets"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~NoKeyInRequiredList"
+          ]
+        },
+        "description": "Attempt to set required value by key that not in required list"
+      }
+    ]
+  },
+  {
+    "id": "module:get_val~GetVal",
+    "name": "GetVal",
+    "scope": "inner",
+    "kind": "class",
+    "memberof": "module:get_val",
+    "exceptions": [
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectArgument"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredArgumentKey"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module:get_val~GetVal()",
+    "name": "GetVal",
+    "kind": "constructor",
+    "memberof": "module:get_val~GetVal",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "GetVal~valuesArg"
+          ]
+        },
+        "description": "Key-value object of values",
+        "name": "values"
+      },
+      {
+        "type": {
+          "names": [
+            "Object.<*>"
+          ]
+        },
+        "optional": true,
+        "nullable": true,
+        "description": "Key-value object to set required values at instance creating",
+        "name": "required"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "\"get\" method wrapper (you can get value from example of class directly as by function)"
+      }
+    ]
+  },
+  {
+    "id": "GetVal~_values",
+    "name": "_values",
+    "scope": "inner",
+    "kind": "member",
+    "memberof": "module:get_val~GetVal",
+    "type": {
+      "names": [
+        "Object.<*>"
+      ]
+    },
+    "nullable": false,
+    "access": "private"
+  },
+  {
+    "id": "GetVal~_required",
+    "name": "_required",
+    "scope": "inner",
+    "kind": "member",
+    "memberof": "module:get_val~GetVal",
+    "type": {
+      "names": [
+        "Array.<string>"
+      ]
+    },
+    "access": "private"
+  },
+  {
+    "id": "GetVal~super",
+    "name": "super",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Link to class example for \"get\" method wrapper",
+    "memberof": "module:get_val~GetVal",
+    "type": {
+      "names": [
+        "GetVal"
+      ]
+    }
+  },
+  {
+    "id": "GetVal~_check-required",
+    "name": "_check-required",
+    "scope": "inner",
+    "kind": "function",
+    "memberof": "module:get_val~GetVal",
+    "access": "private",
+    "exceptions": [
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredIsNotSet"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "GetVal~set",
+    "name": "set",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Set value by key\n(only for \"required\" keys)",
+    "memberof": "module:get_val~GetVal",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Key that in \"required\" list",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "Value that can be got in the future by \"key\"",
+        "name": "val"
+      }
+    ],
+    "exceptions": [
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectKey"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~NoKeyInRequiredList"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "GetVal~get",
+    "name": "get",
+    "scope": "inner",
+    "kind": "function",
+    "description": "Get value by key",
+    "memberof": "module:get_val~GetVal",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Get value by this key",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "description": "Get value even if all required values is not setted yet",
+        "name": "ignoreRequired"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "Value by key"
+      }
+    ],
+    "exceptions": [
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredIsNotSet"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectKey"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~KeyIsNotExists"
+          ]
+        }
+      }
+    ]
+  }
+]
