@@ -4,7 +4,7 @@
 ##class: GlobalClass
 a global class
 
-**Extends**: `String`  
+**Extends:** `String`  
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)

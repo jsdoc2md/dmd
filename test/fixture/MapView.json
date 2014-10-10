@@ -63,7 +63,7 @@
     "name": "GOOGLEMAPS",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:MapView.MapType",
+    "memberof": "INVALID memberof: module:MapView.MapType",
     "type": {
       "names": [
         "Number"
@@ -77,7 +77,7 @@
     "name": "LEAFLET",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:MapView.MapType",
+    "memberof": "INVALID memberof: module:MapView.MapType",
     "type": {
       "names": [
         "Number"

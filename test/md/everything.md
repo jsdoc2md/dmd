@@ -13,6 +13,13 @@
     * [.extra()](#module_cjs/falias-obj--sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
+* [cjs/human](#module_cjs/human)
+  * [class: Human](#exp_module_cjs/human--Human) ⏏
+    * [new Human()](#new_module_cjs/human--Human_new)
+    * _instance_
+      * [.liver](#module_cjs/human--Human#liver)
+    * _inner_
+      * [class: ~Organ](#module_cjs/human--Human..Organ)
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias--teams) ⏏
 * [cjs/object](#module_cjs/object)
@@ -20,7 +27,7 @@
   * [.two()](#module_cjs/object.two)
 
 ##Global
-* [htmlGlobal](#htmlGlobal)
+* [headVar](#headVar) → <code>number</code>
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
@@ -48,11 +55,11 @@
 * [functionObj()](#functionObj)
   * [.extra()](#functionObj.extra)
 * [globalFunction(one, two)](#globalFunction)
-* [customTagged](#customTagged)
+* [htmlGlobal](#htmlGlobal)
 * [class: SOmething](#SOmething)
   * _instance_
     * [.yeah()](#SOmething#yeah)
-* [headVar](#headVar) → <code>number</code>
+* [customTagged](#customTagged)
 * [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
@@ -66,6 +73,8 @@
 * [mixin: Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
+* [Documents](#Documents)
+  * [.Newspaper](#Documents.Newspaper)
 * [config](#config)
 * [globalFunction()](#globalFunction) ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 * [returnsSomething()](#returnsSomething) ⇒ <code>string</code>
@@ -73,7 +82,9 @@
 * [seefoo()](#seefoo)
 * [seebar()](#seebar)
 * [throwingFunction()](#throwingFunction)
-* [todoFunction()](#todoFunction)
+* [todoFunction1()](#todoFunction1)
+* [todoFunction2()](#todoFunction2)
+* [todoFunction3()](#todoFunction3)
 * [globalVar](#globalVar) → <code>string</code>
 
 
@@ -144,6 +155,36 @@ the function
 | two | <code>number</code> | the second number |
 
 **Returns**: <code>number</code> - the calculation result  
+<a name="module_cjs/human"></a>
+##cjs/human
+exports a class
+
+
+* [cjs/human](#module_cjs/human)
+  * [class: Human](#exp_module_cjs/human--Human) ⏏
+    * [new Human()](#new_module_cjs/human--Human_new)
+    * _instance_
+      * [.liver](#module_cjs/human--Human#liver)
+    * _inner_
+      * [class: ~Organ](#module_cjs/human--Human..Organ)
+
+<a name="exp_module_cjs/human--Human"></a>
+###class: Human ⏏
+the exported class
+
+<a name="new_module_cjs/human--Human_new"></a>
+####new Human()
+the exported contructor
+
+<a name="module_cjs/human--Human#liver"></a>
+####human.liver
+an instance of Organ
+
+<a name="module_cjs/human--Human..Organ"></a>
+####class: Human~Organ
+a class inside a class
+
+**Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
@@ -175,7 +216,7 @@ this is the example
 ##class: GlobalClass
 a global class
 
-**Extends**: `String`  
+**Extends:** `String`  
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
@@ -244,7 +285,7 @@ var thisVar = funtion(){
 };
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest
-**Extends**: `external:XMLHttpRequest`  
+**Extends:** `external:XMLHttpRequest`  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
@@ -355,6 +396,12 @@ Fire an event, causing all handlers for that event name to run.
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
 
+<a name="Documents"></a>
+##Documents
+<a name="Documents.Newspaper"></a>
+###Documents.Newspaper
+An ordinary newspaper.
+
 <a name="config"></a>
 ##config
 **Properties**
@@ -406,12 +453,26 @@ Both of these will link to the bar function.
 - <code>InvalidArgumentException</code> 
 - <code>DivideByZero</code> Argument x must be non-zero
 
-<a name="todoFunction"></a>
-##todoFunction()
+<a name="todoFunction1"></a>
+##todoFunction1()
 **Todo**
 
 - [ ] Write the documentation.
 - [ ] Implement this function.
+
+<a name="todoFunction2"></a>
+##todoFunction2()
+**Todo**
+
+- [ ] Write the documentation.
+- [ ] Implement this function.
+- [x] this one is done
+- [x] finished
+
+<a name="todoFunction3"></a>
+##todoFunction3()
+**Todo**
+
 - [x] this one is done
 - [x] finished
 

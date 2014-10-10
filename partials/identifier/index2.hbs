@@ -1,4 +1,4 @@
-{{>index-indent}}* [{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
+{{>index-indent}}* {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}
 {{#if (isClass)~}}
 
 {{#children scope=undefined~}}

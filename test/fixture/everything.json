@@ -122,6 +122,66 @@
     "memberof": "module:cjs/function-alias"
   },
   {
+    "id": "module:cjs/human",
+    "name": "cjs/human",
+    "kind": "module",
+    "description": "exports a class",
+    "typicalname": "d"
+  },
+  {
+    "id": "module:cjs/human--Human",
+    "name": "Human",
+    "kind": "class",
+    "isExported": true,
+    "description": "the exported class",
+    "alias": "module:cjs/human",
+    "codeName": "Human",
+    "memberof": "module:cjs/human"
+  },
+  {
+    "id": "module:cjs/human--Human()",
+    "name": "Human",
+    "kind": "constructor",
+    "description": "the exported contructor",
+    "memberof": "module:cjs/human--Human"
+  },
+  {
+    "id": "module:cjs/human--Human~Organ",
+    "name": "Organ",
+    "scope": "inner",
+    "kind": "class",
+    "description": "a class inside a class",
+    "memberof": "module:cjs/human--Human",
+    "codeName": "Organ"
+  },
+  {
+    "id": "module:cjs/human~Organ~Cell",
+    "name": "Cell",
+    "scope": "inner",
+    "kind": "class",
+    "description": "a class inside a class inside a class",
+    "memberof": "INVALID memberof: module:cjs/human~Organ",
+    "codeName": "Cell"
+  },
+  {
+    "id": "module:cjs/human~Organ#redCell",
+    "name": "redCell",
+    "scope": "instance",
+    "kind": "member",
+    "description": "an instance of Cell",
+    "memberof": "INVALID memberof: module:cjs/human~Organ",
+    "codeName": "this.redCell"
+  },
+  {
+    "id": "module:cjs/human--Human#liver",
+    "name": "liver",
+    "scope": "instance",
+    "kind": "member",
+    "description": "an instance of Organ",
+    "memberof": "module:cjs/human--Human",
+    "codeName": "this.liver"
+  },
+  {
     "id": "module:cjs/object-alias",
     "name": "cjs/object-alias",
     "kind": "module",
@@ -677,6 +737,22 @@
     "codeName": "fire"
   },
   {
+    "id": "Documents",
+    "name": "Documents",
+    "scope": "global",
+    "kind": "namespace",
+    "codeName": "Documents"
+  },
+  {
+    "id": "Documents.Newspaper",
+    "name": "Newspaper",
+    "scope": "static",
+    "kind": "member",
+    "description": "An ordinary newspaper.",
+    "memberof": "Documents",
+    "codeName": "Newspaper"
+  },
+  {
     "id": "config",
     "name": "config",
     "scope": "global",
@@ -836,11 +912,28 @@
     "codeName": "throwingFunction"
   },
   {
-    "id": "todoFunction",
-    "name": "todoFunction",
+    "id": "todoFunction1",
+    "name": "todoFunction1",
     "scope": "global",
     "kind": "function",
-    "codeName": "todoFunction",
+    "codeName": "todoFunction1",
+    "todoList": [
+      {
+        "done": false,
+        "task": "Write the documentation."
+      },
+      {
+        "done": false,
+        "task": "Implement this function."
+      }
+    ]
+  },
+  {
+    "id": "todoFunction2",
+    "name": "todoFunction2",
+    "scope": "global",
+    "kind": "function",
+    "codeName": "todoFunction2",
     "todoList": [
       {
         "done": false,
@@ -850,6 +943,23 @@
         "done": false,
         "task": "Implement this function."
       },
+      {
+        "done": true,
+        "task": "this one is done"
+      },
+      {
+        "done": true,
+        "task": "finished"
+      }
+    ]
+  },
+  {
+    "id": "todoFunction3",
+    "name": "todoFunction3",
+    "scope": "global",
+    "kind": "function",
+    "codeName": "todoFunction3",
+    "todoList": [
       {
         "done": true,
         "task": "this one is done"

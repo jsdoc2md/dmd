@@ -176,7 +176,7 @@
     "name": "NOEXIST",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:file-set.eFileType",
+    "memberof": "INVALID memberof: module:file-set.eFileType",
     "type": {
       "names": [
         "number"
@@ -190,7 +190,7 @@
     "name": "FILE",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:file-set.eFileType",
+    "memberof": "INVALID memberof: module:file-set.eFileType",
     "type": {
       "names": [
         "number"
@@ -204,7 +204,7 @@
     "name": "DIR",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:file-set.eFileType",
+    "memberof": "INVALID memberof: module:file-set.eFileType",
     "type": {
       "names": [
         "number"

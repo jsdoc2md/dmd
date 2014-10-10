@@ -54,7 +54,7 @@ Map-type
 
 - DEFAULT_OPTIONS   
 
-**Access**: protected  
+**Access:** protected  
 <a name="module_MapView--MapView#getMap"></a>
 ####`mapView.getMap()` ⇒ <code>Map</code>
 Get the internal map-object. This object may not yet have been initialized, the map is only
