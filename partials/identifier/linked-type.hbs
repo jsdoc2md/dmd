@@ -1,8 +1,8 @@
 <code>{{#link this~}}
 {{#if url~}}
-[{{name}}]({{{url}}})
+[{{escape name}}]({{{url}}})
 {{~else~}}
-{{name~}}
+{{escape name~}}
 {{/if~}}
 {{~/link~}}
 </code>
