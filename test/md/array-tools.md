@@ -264,5 +264,5 @@ flatten
 **Since**: 1.4.0  
 **Todo**
 
-- document
+- [ ] document
 
