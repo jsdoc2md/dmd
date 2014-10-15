@@ -30,7 +30,10 @@
     "isEnum": true,
     "properties": [
       {
+        "name": "GOOGLEMAPS",
+        "longname": "module:MapView.MapType.GOOGLEMAPS",
         "kind": "member",
+        "memberof": "module:MapView.MapType",
         "scope": "static",
         "type": {
           "names": [
@@ -38,12 +41,13 @@
           ]
         },
         "defaultvalue": "1",
-        "memberof": "module:MapView.MapType",
-        "longname": "module:MapView.MapType.GOOGLEMAPS",
-        "name": "GOOGLEMAPS"
+        "id": "module:MapView.MapType.GOOGLEMAPS"
       },
       {
+        "name": "LEAFLET",
+        "longname": "module:MapView.MapType.LEAFLET",
         "kind": "member",
+        "memberof": "module:MapView.MapType",
         "scope": "static",
         "type": {
           "names": [
@@ -51,9 +55,7 @@
           ]
         },
         "defaultvalue": "2",
-        "memberof": "module:MapView.MapType",
-        "longname": "module:MapView.MapType.LEAFLET",
-        "name": "LEAFLET"
+        "id": "module:MapView.MapType.LEAFLET"
       }
     ],
     "codeName": "MapType"

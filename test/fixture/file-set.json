@@ -129,7 +129,10 @@
     "isEnum": true,
     "properties": [
       {
+        "name": "NOEXIST",
+        "longname": "module:file-set.eFileType.NOEXIST",
         "kind": "member",
+        "memberof": "module:file-set.eFileType",
         "scope": "static",
         "type": {
           "names": [
@@ -137,12 +140,13 @@
           ]
         },
         "defaultvalue": "0",
-        "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.NOEXIST",
-        "name": "NOEXIST"
+        "id": "module:file-set.eFileType.NOEXIST"
       },
       {
+        "name": "FILE",
+        "longname": "module:file-set.eFileType.FILE",
         "kind": "member",
+        "memberof": "module:file-set.eFileType",
         "scope": "static",
         "type": {
           "names": [
@@ -150,12 +154,13 @@
           ]
         },
         "defaultvalue": "1",
-        "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.FILE",
-        "name": "FILE"
+        "id": "module:file-set.eFileType.FILE"
       },
       {
+        "name": "DIR",
+        "longname": "module:file-set.eFileType.DIR",
         "kind": "member",
+        "memberof": "module:file-set.eFileType",
         "scope": "static",
         "type": {
           "names": [
@@ -163,9 +168,7 @@
           ]
         },
         "defaultvalue": "2",
-        "memberof": "module:file-set.eFileType",
-        "longname": "module:file-set.eFileType.DIR",
-        "name": "DIR"
+        "id": "module:file-set.eFileType.DIR"
       }
     ],
     "codeName": "FileSet.eFileType"
