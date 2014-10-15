@@ -19,7 +19,7 @@
     "name": "valuesArg",
     "scope": "inner",
     "kind": "typedef",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "type": {
       "names": [
         "Object.<(Object|Array)>"
@@ -56,7 +56,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Exceptions",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "type": {
       "names": [
         "Object.<Error>"
@@ -180,7 +180,7 @@
     "name": "_values",
     "scope": "inner",
     "kind": "member",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "type": {
       "names": [
         "Object.<*>"
@@ -194,7 +194,7 @@
     "name": "_required",
     "scope": "inner",
     "kind": "member",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "type": {
       "names": [
         "Array.<string>"
@@ -208,7 +208,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Link to class example for \"get\" method wrapper",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "type": {
       "names": [
         "GetVal"
@@ -220,7 +220,7 @@
     "name": "_check-required",
     "scope": "inner",
     "kind": "function",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "access": "private",
     "exceptions": [
       {
@@ -238,7 +238,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Set value by key\n(only for \"required\" keys)",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "params": [
       {
         "type": {
@@ -282,7 +282,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Get value by key",
-    "memberof": "module:get_val~GetVal",
+    "memberof": "GetVal",
     "params": [
       {
         "type": {

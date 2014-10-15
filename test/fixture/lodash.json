@@ -5,7 +5,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as a safe reference for `undefined` in pre ES5 environments",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "undefined"
   },
   {
@@ -14,7 +14,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as the semantic version number",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "VERSION"
   },
   {
@@ -23,7 +23,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to compose bitmasks for wrapper metadata",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "BIND_FLAG"
   },
   {
@@ -32,7 +32,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as default options for `_.trunc`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "DEFAULT_TRUNC_LENGTH"
   },
   {
@@ -41,7 +41,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect when a function becomes hot",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "HOT_COUNT"
   },
   {
@@ -50,7 +50,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as the TypeError message for \"Functions\" methods",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "FUNC_ERROR_TEXT"
   },
   {
@@ -59,7 +59,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as references for the max length and index of an array",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "MAX_ARRAY_LENGTH"
   },
   {
@@ -68,7 +68,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as the maximum length of an array-like value.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)\nfor more details.",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "MAX_SAFE_INTEGER"
   },
   {
@@ -77,7 +77,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as the internal argument placeholder",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "PLACEHOLDER"
   },
   {
@@ -86,7 +86,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to generate unique IDs",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "idCounter"
   },
   {
@@ -95,7 +95,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match empty string literals in compiled template source",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reEmptyStringLeading"
   },
   {
@@ -104,7 +104,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match HTML entities and HTML characters",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reEscapedHtml"
   },
   {
@@ -113,7 +113,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match template delimiters",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reEscape"
   },
   {
@@ -122,7 +122,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match ES6 template delimiters.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literal-lexical-components)\nfor more details.",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reEsTemplate"
   },
   {
@@ -131,7 +131,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match `RegExp` flags from their coerced string values",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reFlags"
   },
   {
@@ -140,7 +140,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect named functions",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reFuncName"
   },
   {
@@ -149,7 +149,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect hexadecimal string values",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reHexPrefix"
   },
   {
@@ -158,7 +158,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect host constructors (Safari > 5)",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reHostCtor"
   },
   {
@@ -167,7 +167,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match latin-1 supplement letters (excluding mathematical operators)",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reLatin1"
   },
   {
@@ -176,7 +176,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to ensure capturing order of template delimiters",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reNoMatch"
   },
   {
@@ -185,7 +185,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match `RegExp` special characters.\nSee this [article on `RegExp` characters](http://www.regular-expressions.info/characters.html#special)\nfor more details.",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reRegExpChars"
   },
   {
@@ -194,7 +194,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect functions containing a `this` reference",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reThis"
   },
   {
@@ -203,7 +203,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match unescaped characters in compiled string literals",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reUnescapedString"
   },
   {
@@ -212,7 +212,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to match words to create compound words",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "reWords"
   },
   {
@@ -221,7 +221,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to detect and test whitespace",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "whitespace"
   },
   {
@@ -230,7 +230,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to assign default `context` object properties",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "contextProps"
   },
   {
@@ -239,7 +239,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to fix the JScript `[[DontEnum]]` bug",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "shadowedProps"
   },
   {
@@ -248,7 +248,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to make template sourceURLs easier to identify",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "templateCounter"
   },
   {
@@ -257,7 +257,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "`Object#toString` result references",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "argsClass"
   },
   {
@@ -266,7 +266,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to identify object classifications that are treated like arrays",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "arrayLikeClasses"
   },
   {
@@ -275,7 +275,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to identify object classifications that `_.clone` supports",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "cloneableClasses"
   },
   {
@@ -284,7 +284,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as an internal `_.debounce` options object by `_.throttle`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "debounceOptions"
   },
   {
@@ -293,7 +293,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to map characters to HTML entities.\n\n**Note:** Though the \">\" character is escaped for symmetry, characters like\n\">\" and \"/\" don't require escaping in HTML and have no special meaning\nunless they're part of a tag or unquoted attribute value.\nSee [Mathias Bynens's article](http://mathiasbynens.be/notes/ambiguous-ampersands)\n(under \"semi-related fun fact\") for more details.\n\nBackticks are escaped because in Internet Explorer < 9, they can break out\nof attribute values or HTML comments. See [#102](http://html5sec.org/#102),\n[#108](http://html5sec.org/#108), and [#133](http://html5sec.org/#133) of\nthe [HTML5 Security Cheatsheet](http://html5sec.org/) for more details.",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "htmlEscapes"
   },
   {
@@ -302,7 +302,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to map HTML entities to characters",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "htmlUnescapes"
   },
   {
@@ -311,7 +311,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to map latin-1 supplementary letters to basic latin letters",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "deburredLetters"
   },
   {
@@ -320,7 +320,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to determine if values are of the language type `Object`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "objectTypes"
   },
   {
@@ -329,7 +329,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used to escape characters for inclusion in compiled string literals",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "stringEscapes"
   },
   {
@@ -338,7 +338,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Used as a reference to the global object",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "root"
   },
   {
@@ -347,7 +347,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Detect free variable `exports`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "freeExports"
   },
   {
@@ -356,7 +356,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Detect free variable `module`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "freeModule"
   },
   {
@@ -365,7 +365,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Detect free variable `global` from Node.js or Browserified code and use it as `root`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "freeGlobal"
   },
   {
@@ -374,7 +374,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Detect the popular CommonJS extension `module.exports`",
-    "memberof": "INVALID memberof: <anonymous>",
+    "memberof": "<anonymous>",
     "codeName": "moduleExports"
   },
   {
@@ -751,7 +751,7 @@
     "scope": "static",
     "kind": "member",
     "description": "By default, the template delimiters used by Lo-Dash are similar to those\nin embedded Ruby (ERB). Change the following template settings to use\nalternative delimiters.",
-    "memberof": "INVALID memberof: _.lodash",
+    "memberof": "_.lodash",
     "type": {
       "names": [
         "Object"
@@ -765,7 +765,7 @@
     "scope": "static",
     "kind": "member",
     "description": "Used to detect `data` property values to be HTML-escaped.",
-    "memberof": "INVALID memberof: _.templateSettings",
+    "memberof": "_.templateSettings",
     "type": {
       "names": [
         "RegExp"
@@ -779,7 +779,7 @@
     "scope": "static",
     "kind": "member",
     "description": "Used to detect code to be evaluated.",
-    "memberof": "INVALID memberof: _.templateSettings",
+    "memberof": "_.templateSettings",
     "type": {
       "names": [
         "RegExp"
@@ -793,7 +793,7 @@
     "scope": "static",
     "kind": "member",
     "description": "Used to detect `data` property values to inject.",
-    "memberof": "INVALID memberof: _.templateSettings",
+    "memberof": "_.templateSettings",
     "type": {
       "names": [
         "RegExp"
@@ -807,7 +807,7 @@
     "scope": "static",
     "kind": "member",
     "description": "Used to reference the data object in the template text.",
-    "memberof": "INVALID memberof: _.templateSettings",
+    "memberof": "_.templateSettings",
     "type": {
       "names": [
         "string"
@@ -821,7 +821,7 @@
     "scope": "static",
     "kind": "member",
     "description": "Used to import variables into the compiled template.",
-    "memberof": "INVALID memberof: _.templateSettings",
+    "memberof": "_.templateSettings",
     "type": {
       "names": [
         "Object"
@@ -3799,7 +3799,7 @@
     "name": " inject",
     "kind": "function",
     "description": "Reduces a collection to a value which is the accumulated result of running\neach element in the collection through `iteratee`, where each successive\ninvocation is supplied the return value of the previous. If `accumulator`\nis not provided the first element of the collection is used as the initial\nvalue. The `iteratee` is bound to `thisArg`and invoked with four arguments;\n(accumulator, value, index|key, collection).",
-    "memberof": "INVALID memberof: _.foldl",
+    "memberof": "_.foldl",
     "alias": "foldl, inject",
     "params": [
       {
@@ -4881,7 +4881,7 @@
     "name": " compose",
     "kind": "function",
     "description": "This method is like `_.flow` except that it creates a function that\ninvokes the provided functions from right to left.",
-    "memberof": "INVALID memberof: _.backflow",
+    "memberof": "_.backflow",
     "alias": "backflow, compose",
     "params": [
       {
@@ -8811,7 +8811,7 @@
     "scope": "static",
     "kind": "member",
     "description": "The semantic version number.",
-    "memberof": "INVALID memberof: _.lodash",
+    "memberof": "_.lodash",
     "type": {
       "names": [
         "string"

@@ -16,8 +16,7 @@
     "isExported": true,
     "description": "Expands file patterns, returning the matched and unmatched files and directories",
     "alias": "module:file-set",
-    "codeName": "FileSet",
-    "memberof": "module:file-set"
+    "codeName": "FileSet"
   },
   {
     "id": "module:file-set--FileSet()",
@@ -172,11 +171,11 @@
     "codeName": "FileSet.eFileType"
   },
   {
-    "id": "module:file-set.eFileType.NOEXIST",
+    "id": "module:file-set--FileSet.eFileType.NOEXIST",
     "name": "NOEXIST",
     "scope": "static",
     "kind": "member",
-    "memberof": "INVALID memberof: module:file-set.eFileType",
+    "memberof": "module:file-set--FileSet.eFileType",
     "type": {
       "names": [
         "number"
@@ -186,11 +185,11 @@
     "codeName": "NOEXIST"
   },
   {
-    "id": "module:file-set.eFileType.FILE",
+    "id": "module:file-set--FileSet.eFileType.FILE",
     "name": "FILE",
     "scope": "static",
     "kind": "member",
-    "memberof": "INVALID memberof: module:file-set.eFileType",
+    "memberof": "module:file-set--FileSet.eFileType",
     "type": {
       "names": [
         "number"
@@ -200,11 +199,11 @@
     "codeName": "FILE"
   },
   {
-    "id": "module:file-set.eFileType.DIR",
+    "id": "module:file-set--FileSet.eFileType.DIR",
     "name": "DIR",
     "scope": "static",
     "kind": "member",
-    "memberof": "INVALID memberof: module:file-set.eFileType",
+    "memberof": "module:file-set--FileSet.eFileType",
     "type": {
       "names": [
         "number"

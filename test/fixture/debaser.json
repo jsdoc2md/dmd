@@ -4,7 +4,7 @@
     "name": "debaserRunConfig",
     "scope": "static",
     "kind": "member",
-    "memberof": "module:decipher.debaser"
+    "memberof": "INVALID memberof: module:decipher.debaser"
   },
   {
     "id": "sinon.stub",
@@ -12,7 +12,7 @@
     "scope": "static",
     "kind": "mixin",
     "description": "A stub function.  (Almost) all functions available to Sinon.JS stubs.",
-    "memberof": "sinon",
+    "memberof": "INVALID memberof: sinon",
     "see": [
       "http://sinonjs.org/docs/#stubs"
     ]
@@ -23,11 +23,12 @@
     "scope": "static",
     "kind": "mixin",
     "description": "A Stub object.  Returned when using an `*onCall*` method, instead of a {@link sinon.stub stub}.  In this context, use {@link sinon.Stub.end end()} to return to a {@link Debaser} instance. \n> The `create()`, `resetBehavior()` and `isPresent()` functions of the Sinon.JS \"stub\" API are not used.  If someone needs these, please {@link https://github.com/decipherinc/angular-debaser/issues/ create an issue} and provide a use case.",
-    "memberof": "sinon"
+    "memberof": "INVALID memberof: sinon"
   },
   {
     "id": "base",
     "name": "base",
+    "scope": "global",
     "kind": "mixin"
   },
   {
@@ -35,6 +36,9 @@
     "name": "module",
     "scope": "static",
     "kind": "mixin",
+    "mixes": [
+      "base.object"
+    ],
     "memberof": "base"
   },
   {
@@ -42,6 +46,9 @@
     "name": "func",
     "scope": "static",
     "kind": "mixin",
+    "mixes": [
+      "sinon.stub"
+    ],
     "memberof": "base"
   },
   {
@@ -56,6 +63,9 @@
     "name": "withObject",
     "scope": "static",
     "kind": "mixin",
+    "mixes": [
+      "base.object"
+    ],
     "memberof": "base.module"
   },
   {
@@ -63,6 +73,9 @@
     "name": "withFunc",
     "scope": "static",
     "kind": "mixin",
+    "mixes": [
+      "base.func"
+    ],
     "memberof": "base.module"
   },
   {
@@ -75,7 +88,54 @@
       "names": [
         "Object"
       ]
-    }
+    },
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "false",
+        "description": "Enable debug log messages?",
+        "name": "debugEnabled"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "true",
+        "description": "Enable auto-scope functionality when using {@link ng.$controller}?",
+        "name": "autoScope"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "true",
+        "description": "Enable stubbing of `config()` blocks?",
+        "name": "skipConfigs"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "__default__",
+        "description": "Default name of default Debaser instance; useless",
+        "name": "defaultName"
+      }
+    ],
+    "summary": "Options, and their defaults, which you can pass into {@link debaser window.debaser()}."
   },
   {
     "id": "<anonymous>~install",
@@ -83,7 +143,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Attaches {@link debaser} and {@link debase} to the `window` object.\nRegisters `setup()`/`teardown()` or `beforeEach()`/`afterEach()` functions to retrieve the current spec.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "codeName": "install"
   },
   {
@@ -92,7 +152,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Whether or not we are currently running in a spec.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "returns": [
       {
         "type": {
@@ -148,7 +208,11 @@
         }
       }
     ],
-    "codeName": "debaser"
+    "codeName": "debaser",
+    "tutorials": [
+      "donny-developer"
+    ],
+    "summary": "Provides a {@link Debaser} object with which you can stub dependencies easily."
   },
   {
     "id": "<anonymous>~configure",
@@ -156,7 +220,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Provides an anonymous AngularJS module to set up some initial values before {@link module:decipher.debaser} is bootstrapped.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "params": [
       {
         "type": {
@@ -198,6 +262,16 @@
         "name": "$provide"
       }
     ],
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "Annotation"
+          ]
+        },
+        "name": "$inject"
+      }
+    ],
     "codeName": "debaserSetup"
   },
   {
@@ -206,7 +280,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Retrieve an existing Debaser instance by name.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "params": [
       {
         "type": {
@@ -235,7 +309,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Whether or not an instance with name exists.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "params": [
       {
         "type": {
@@ -290,7 +364,8 @@
         }
       }
     ],
-    "codeName": "debase"
+    "codeName": "debase",
+    "summary": "Shortcut to the {@link Debaser#debase debase} method of the default {@link Debaser} instance."
   },
   {
     "id": "globalHelpers.callDebase",
@@ -298,7 +373,7 @@
     "scope": "static",
     "kind": "function",
     "description": "Calls {@link Debaser#debase} with proper persistance options.  Unlike {@link Debaser#debase}, will return a {@link Debaser} instance.",
-    "memberof": "globalHelpers",
+    "memberof": "INVALID memberof: globalHelpers",
     "returns": [
       {
         "type": {
@@ -307,10 +382,18 @@
           ]
         }
       }
+    ],
+    "exceptions": [
+      {
+        "description": "Invalid {@link Debaser} name"
+      },
+      {
+        "description": "If {@link debaser} was never called"
+      }
     ]
   },
   {
-    "id": "loadAction.Action◊",
+    "id": "loadAction.Action()",
     "name": "Action",
     "kind": "constructor",
     "description": "Creates a new Action object.",
@@ -384,7 +467,7 @@
     "name": "proxy",
     "scope": "inner",
     "kind": "function",
-    "memberof": "<anonymous>~Aspect#createProxy",
+    "memberof": "INVALID memberof: <anonymous>~Aspect#createProxy",
     "returns": [
       {
         "type": {
@@ -395,18 +478,25 @@
         }
       }
     ],
-    "codeName": "proxy"
+    "codeName": "proxy",
+    "this": "Debaser",
+    "todoList": [
+      {
+        "done": false,
+        "task": "trim fat"
+      }
+    ]
   },
   {
     "id": "<anonymous>~Config",
     "name": "Config",
     "scope": "inner",
     "kind": "class",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "codeName": "Config"
   },
   {
-    "id": "<anonymous>~Config◊",
+    "id": "<anonymous>~Config()",
     "name": "Config",
     "kind": "constructor",
     "memberof": "<anonymous>~Config",
@@ -438,10 +528,13 @@
     "name": "Debaser",
     "scope": "global",
     "kind": "class",
+    "mixes": [
+      "base"
+    ],
     "codeName": "Debaser"
   },
   {
-    "id": "Debaser◊",
+    "id": "Debaser()",
     "name": "Debaser",
     "kind": "constructor",
     "description": "Provides an object with which you can stub AngularJS dependencies.  Do not attempt to instantiate this class directly; use the {@link debaser} function instead.",
@@ -466,7 +559,7 @@
     "scope": "instance",
     "kind": "function",
     "description": "All previously queued stubs will be installed upon execution of this method.",
-    "memberof": "<anonymous>~Debaser",
+    "memberof": "INVALID memberof: <anonymous>~Debaser",
     "params": [
       {
         "type": {
@@ -500,6 +593,7 @@
   {
     "id": "Action",
     "name": "Action",
+    "scope": "global",
     "kind": "typedef",
     "description": "These functions will always return {@link Debaser} instances, however, the mixins used will change.  The \"root\" mixin is the {@link base} mixin.  All other mixins \"inherit\" from this one, meaning the {@link base} methods *will always be available*.",
     "examples": [
@@ -510,7 +604,7 @@
         "function"
       ]
     },
-    "scope": "global"
+    "summary": "A method (on a {@link Debaser} instance) which tells angular-debaser to provide some object, method, function, etc."
   },
   {
     "id": "base#module",
@@ -733,7 +827,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Provides a *constant* injectable object on the module.",
-    "memberof": "<anonymous>",
+    "memberof": "INVALID memberof: <anonymous>",
     "params": [
       {
         "type": {

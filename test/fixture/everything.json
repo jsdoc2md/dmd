@@ -80,24 +80,23 @@
     "typicalname": "exp"
   },
   {
-    "id": "module:cjs/class--ExportedClass",
+    "id": "module:cjs/class",
     "name": "ExportedClass",
     "kind": "class",
     "isExported": true,
     "description": "the exported class",
     "alias": "module:cjs/class",
-    "codeName": "ExportedClass",
-    "memberof": "module:cjs/class"
+    "codeName": "ExportedClass"
   },
   {
-    "id": "module:cjs/class--ExportedClass()",
+    "id": "module:cjs/class()",
     "name": "ExportedClass",
     "kind": "constructor",
     "description": "the exported contructor",
-    "memberof": "module:cjs/class--ExportedClass"
+    "memberof": "module:cjs/class"
   },
   {
-    "id": "module:cjs/class--ExportedClass#prop",
+    "id": "module:cjs/class#prop",
     "name": "prop",
     "scope": "instance",
     "kind": "member",
@@ -106,7 +105,7 @@
     "codeName": "this.prop"
   },
   {
-    "id": "module:cjs/class--ExportedClass.staticProp",
+    "id": "module:cjs/class.staticProp",
     "name": "staticProp",
     "scope": "static",
     "kind": "member",
@@ -115,7 +114,7 @@
     "codeName": "ExportedClass.staticProp"
   },
   {
-    "id": "module:cjs/class--ExportedClass~innerProp",
+    "id": "module:cjs/class~innerProp",
     "name": "innerProp",
     "scope": "inner",
     "kind": "member",
@@ -130,17 +129,16 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/falias-obj--sum",
+    "id": "module:cjs/falias-obj",
     "name": "sum",
     "kind": "function",
     "isExported": true,
     "description": "the function",
     "alias": "module:cjs/falias-obj",
-    "codeName": "sum",
-    "memberof": "module:cjs/falias-obj"
+    "codeName": "sum"
   },
   {
-    "id": "module:cjs/falias-obj--sum.extra",
+    "id": "module:cjs/falias-obj.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
@@ -155,7 +153,7 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/function-alias--sum",
+    "id": "module:cjs/function-alias",
     "name": "sum",
     "kind": "function",
     "isExported": true,
@@ -191,8 +189,7 @@
         "description": "the calculation result"
       }
     ],
-    "codeName": "sum",
-    "memberof": "module:cjs/function-alias"
+    "codeName": "sum"
   },
   {
     "id": "module:cjs/human",
@@ -202,24 +199,23 @@
     "typicalname": "d"
   },
   {
-    "id": "module:cjs/human--Human",
+    "id": "module:cjs/human",
     "name": "Human",
     "kind": "class",
     "isExported": true,
     "description": "the exported class",
     "alias": "module:cjs/human",
-    "codeName": "Human",
-    "memberof": "module:cjs/human"
+    "codeName": "Human"
   },
   {
-    "id": "module:cjs/human--Human()",
+    "id": "module:cjs/human()",
     "name": "Human",
     "kind": "constructor",
     "description": "the exported contructor",
-    "memberof": "module:cjs/human--Human"
+    "memberof": "module:cjs/human"
   },
   {
-    "id": "module:cjs/human--Human~Organ",
+    "id": "module:cjs/human~Organ",
     "name": "Organ",
     "scope": "inner",
     "kind": "class",
@@ -233,7 +229,7 @@
     "scope": "inner",
     "kind": "class",
     "description": "a class inside a class inside a class",
-    "memberof": "INVALID memberof: module:cjs/human~Organ",
+    "memberof": "module:cjs/human--Human~Organ",
     "codeName": "Cell"
   },
   {
@@ -242,7 +238,7 @@
     "scope": "instance",
     "kind": "member",
     "description": "an instance of Cell",
-    "memberof": "INVALID memberof: module:cjs/human~Organ",
+    "memberof": "module:cjs/human--Human~Organ",
     "type": {
       "names": [
         "module:human~Organ~Cell"
@@ -251,7 +247,7 @@
     "codeName": "this.redCell"
   },
   {
-    "id": "module:cjs/human--Human#liver",
+    "id": "module:cjs/human#liver",
     "name": "liver",
     "scope": "instance",
     "kind": "member",
@@ -277,8 +273,7 @@
     "isExported": true,
     "description": "the teams",
     "alias": "module:cjs/object-alias",
-    "codeName": "teams",
-    "memberof": "module:cjs/object-alias"
+    "codeName": "teams"
   },
   {
     "id": "module:cjs/object",
@@ -502,7 +497,7 @@
     ]
   },
   {
-    "id": "external:jQuery.fn",
+    "id": "external:\"jQuery.fn\"",
     "name": "jQuery.fn",
     "scope": "global",
     "kind": "external",
@@ -512,7 +507,7 @@
     ]
   },
   {
-    "id": "external:jQuery.fn.starfairy",
+    "id": "external:\"jQuery.fn\".starfairy",
     "name": "starfairy",
     "scope": "static",
     "kind": "function",

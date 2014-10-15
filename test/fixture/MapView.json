@@ -59,11 +59,11 @@
     "codeName": "MapType"
   },
   {
-    "id": "module:MapView.MapType.GOOGLEMAPS",
+    "id": "module:MapView--MapView.MapType.GOOGLEMAPS",
     "name": "GOOGLEMAPS",
     "scope": "static",
     "kind": "member",
-    "memberof": "INVALID memberof: module:MapView.MapType",
+    "memberof": "module:MapView--MapView.MapType",
     "type": {
       "names": [
         "Number"
@@ -73,11 +73,11 @@
     "codeName": "GOOGLEMAPS"
   },
   {
-    "id": "module:MapView.MapType.LEAFLET",
+    "id": "module:MapView--MapView.MapType.LEAFLET",
     "name": "LEAFLET",
     "scope": "static",
     "kind": "member",
-    "memberof": "INVALID memberof: module:MapView.MapType",
+    "memberof": "module:MapView--MapView.MapType",
     "type": {
       "names": [
         "Number"
@@ -92,8 +92,7 @@
     "kind": "class",
     "isExported": true,
     "alias": "module:MapView",
-    "codeName": "MapView",
-    "memberof": "module:MapView"
+    "codeName": "MapView"
   },
   {
     "id": "module:MapView--MapView()",

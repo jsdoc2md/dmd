@@ -15,6 +15,9 @@ Expands file patterns, returning the matched and unmatched files and directories
     * [.add(files)](#module_file-set--FileSet#add)
   * _static_
     * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
+      * [.NOEXIST](#module_file-set--FileSet.eFileType.NOEXIST) → <code>number</code>
+      * [.FILE](#module_file-set--FileSet.eFileType.FILE) → <code>number</code>
+      * [.DIR](#module_file-set--FileSet.eFileType.DIR) → <code>number</code>
 
 <a name="new_module_file-set--FileSet_new"></a>
 ###new FileSet(patternList)
@@ -52,3 +55,18 @@ Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
+
+  * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
+    * [.NOEXIST](#module_file-set--FileSet.eFileType.NOEXIST) → <code>number</code>
+    * [.FILE](#module_file-set--FileSet.eFileType.FILE) → <code>number</code>
+    * [.DIR](#module_file-set--FileSet.eFileType.DIR) → <code>number</code>
+
+<a name="module_file-set--FileSet.eFileType.NOEXIST"></a>
+####eFileType.NOEXIST → <code>number</code>
+**Default**: `0`  
+<a name="module_file-set--FileSet.eFileType.FILE"></a>
+####eFileType.FILE → <code>number</code>
+**Default**: `1`  
+<a name="module_file-set--FileSet.eFileType.DIR"></a>
+####eFileType.DIR → <code>number</code>
+**Default**: `2`  
