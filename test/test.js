@@ -12,7 +12,7 @@ try{
 
 test("returns correct data", function(t){
     t.plan(1);
-    
+
     fs.createReadStream("test/fixture/class.json").pipe(dmd()).on("readable", function(){
         var md = this.read();
         if (md) t.ok(/this module exports a class constructor/.test(md.toString()));
@@ -21,11 +21,11 @@ test("returns correct data", function(t){
 
 test("cli check", function(t){
     t.plan(1);
-    
+
     var inputFile = fs.openSync("test/fixture/class.json", "r");
     var outputFile = fs.openSync("tmp/class.md", "w");
-    
-    var handle = spawn("node", [ path.join("bin", "cli.js") ], { 
+
+    var handle = spawn("node", [ path.join("bin", "cli.js") ], {
         stdio: [ inputFile, outputFile, process.stderr ]
     });
     handle.on("close", function(){
@@ -39,7 +39,7 @@ test("linkify", function (t) {
 
     fs.createReadStream("test/fixture/class.json").pipe(dmd()).on("readable", function () {
         var md = this.read();
-        if (md) t.ok(md.toString().indexOf('[instance](http://zombo.com)') >= 0);
+        if (md) t.ok(md.toString().split('[instance](http://zombo.com)').length >= 3);
     });
 
 });

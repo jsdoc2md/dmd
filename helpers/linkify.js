@@ -21,7 +21,7 @@ module.exports = function (handlebars) {
         });
         for (var link in links) {
             if (links.hasOwnProperty(link)) {
-                text = text.replace(link, links[link]);
+                text = text.split(link).join(links[link]);
             }
         }
         return text;

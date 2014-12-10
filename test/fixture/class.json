@@ -31,7 +31,7 @@
     "codeName": "FileSet"
   },
   {
-    "description": "the prototype {@link http://zombo.com|instance} property",
+    "description": "the prototype {@link http://zombo.com|instance} property is an {@link http://zombo.com|instance}",
     "name": "files",
     "longname": "module:file-set#files",
     "kind": "member",
