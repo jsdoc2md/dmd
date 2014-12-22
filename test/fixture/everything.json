@@ -80,23 +80,24 @@
     "typicalname": "exp"
   },
   {
-    "id": "module:cjs/class",
+    "id": "module:cjs/class--ExportedClass",
     "name": "ExportedClass",
     "kind": "class",
     "isExported": true,
     "description": "the exported class",
+    "memberof": "module:cjs/class",
     "alias": "module:cjs/class",
     "codeName": "ExportedClass"
   },
   {
-    "id": "module:cjs/class()",
+    "id": "module:cjs/class--ExportedClass()",
     "name": "ExportedClass",
     "kind": "constructor",
     "description": "the exported contructor",
-    "memberof": "module:cjs/class"
+    "memberof": "module:cjs/class--ExportedClass"
   },
   {
-    "id": "module:cjs/class#prop",
+    "id": "module:cjs/class--ExportedClass#prop",
     "name": "prop",
     "scope": "instance",
     "kind": "member",
@@ -105,7 +106,7 @@
     "codeName": "this.prop"
   },
   {
-    "id": "module:cjs/class.staticProp",
+    "id": "module:cjs/class--ExportedClass.staticProp",
     "name": "staticProp",
     "scope": "static",
     "kind": "member",
@@ -114,7 +115,7 @@
     "codeName": "ExportedClass.staticProp"
   },
   {
-    "id": "module:cjs/class~innerProp",
+    "id": "module:cjs/class--ExportedClass~innerProp",
     "name": "innerProp",
     "scope": "inner",
     "kind": "member",
@@ -129,16 +130,17 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/falias-obj",
+    "id": "module:cjs/falias-obj--sum",
     "name": "sum",
     "kind": "function",
     "isExported": true,
     "description": "the function",
+    "memberof": "module:cjs/falias-obj",
     "alias": "module:cjs/falias-obj",
     "codeName": "sum"
   },
   {
-    "id": "module:cjs/falias-obj.extra",
+    "id": "module:cjs/falias-obj--sum.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
@@ -153,11 +155,12 @@
     "description": "exports a pointer to a function"
   },
   {
-    "id": "module:cjs/function-alias",
+    "id": "module:cjs/function-alias--sum",
     "name": "sum",
     "kind": "function",
     "isExported": true,
     "description": "the function",
+    "memberof": "module:cjs/function-alias",
     "alias": "module:cjs/function-alias",
     "params": [
       {
@@ -199,23 +202,24 @@
     "typicalname": "d"
   },
   {
-    "id": "module:cjs/human",
+    "id": "module:cjs/human--Human",
     "name": "Human",
     "kind": "class",
     "isExported": true,
     "description": "the exported class",
+    "memberof": "module:cjs/human",
     "alias": "module:cjs/human",
     "codeName": "Human"
   },
   {
-    "id": "module:cjs/human()",
+    "id": "module:cjs/human--Human()",
     "name": "Human",
     "kind": "constructor",
     "description": "the exported contructor",
-    "memberof": "module:cjs/human"
+    "memberof": "module:cjs/human--Human"
   },
   {
-    "id": "module:cjs/human~Organ",
+    "id": "module:cjs/human--Human~Organ",
     "name": "Organ",
     "scope": "inner",
     "kind": "class",
@@ -224,7 +228,7 @@
     "codeName": "Organ"
   },
   {
-    "id": "module:cjs/human~Organ~Cell",
+    "id": "module:cjs/human--Human~Organ~Cell",
     "name": "Cell",
     "scope": "inner",
     "kind": "class",
@@ -233,7 +237,7 @@
     "codeName": "Cell"
   },
   {
-    "id": "module:cjs/human~Organ#redCell",
+    "id": "module:cjs/human--Human~Organ#redCell",
     "name": "redCell",
     "scope": "instance",
     "kind": "member",
@@ -241,13 +245,13 @@
     "memberof": "module:cjs/human--Human~Organ",
     "type": {
       "names": [
-        "module:human~Organ~Cell"
+        "module:cjs/human--Human~Organ~Cell"
       ]
     },
     "codeName": "this.redCell"
   },
   {
-    "id": "module:cjs/human#liver",
+    "id": "module:cjs/human--Human#liver",
     "name": "liver",
     "scope": "instance",
     "kind": "member",
@@ -255,7 +259,7 @@
     "memberof": "module:cjs/human--Human",
     "type": {
       "names": [
-        "module:human~Organ"
+        "module:cjs/human--Human~Organ"
       ]
     },
     "codeName": "this.liver"
@@ -272,6 +276,7 @@
     "kind": "member",
     "isExported": true,
     "description": "the teams",
+    "memberof": "module:cjs/object-alias",
     "alias": "module:cjs/object-alias",
     "codeName": "teams"
   },
@@ -383,6 +388,12 @@
     ]
   },
   {
+    "id": "customClass",
+    "name": "customClass",
+    "scope": "global",
+    "kind": "class",
+    "description": "a class that has custom tags",
+    "codeName": "customClass",
     "customTags": [
       {
         "tag": "sitcom",
@@ -392,13 +403,7 @@
         "tag": "character",
         "value": "Rodney Trotter"
       }
-    ],
-    "id": "customClass",
-    "name": "customClass",
-    "scope": "global",
-    "kind": "class",
-    "description": "a class that has custom tags",
-    "codeName": "customClass"
+    ]
   },
   {
     "id": "customClass()",
@@ -497,7 +502,7 @@
     ]
   },
   {
-    "id": "external:\"jQuery.fn\"",
+    "id": "external:jQuery.fn",
     "name": "jQuery.fn",
     "scope": "global",
     "kind": "external",
@@ -507,7 +512,7 @@
     ]
   },
   {
-    "id": "external:\"jQuery.fn\".starfairy",
+    "id": "external:jQuery.fn.starfairy",
     "name": "starfairy",
     "scope": "static",
     "kind": "function",
@@ -1029,6 +1034,16 @@
         "done": true,
         "task": "finished"
       }
+    ],
+    "customTags": [
+      {
+        "tag": "done",
+        "value": "this one is done"
+      },
+      {
+        "tag": "done",
+        "value": "finished"
+      }
     ]
   },
   {
@@ -1045,6 +1060,16 @@
       {
         "done": true,
         "task": "finished"
+      }
+    ],
+    "customTags": [
+      {
+        "tag": "done",
+        "value": "this one is done"
+      },
+      {
+        "tag": "done",
+        "value": "finished"
       }
     ]
   },

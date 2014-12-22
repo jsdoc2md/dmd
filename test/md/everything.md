@@ -10,12 +10,32 @@
         * _instance_
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 * [cjs/class](#module_cjs/class)
-  * [new ExportedClass()](#new_module_cjs/class_new)
+  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
+    * _instance_
+      * [.prop](#module_cjs/class--ExportedClass#prop)
+    * _static_
+      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
+    * _inner_
+      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
 * [cjs/falias-obj](#module_cjs/falias-obj)
+  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
+    * [.extra()](#module_cjs/falias-obj--sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
+  * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
 * [cjs/human](#module_cjs/human)
-  * [new Human()](#new_module_cjs/human_new)
+  * [class: Human](#exp_module_cjs/human--Human) ⏏
+    * [new Human()](#new_module_cjs/human--Human_new)
+    * _instance_
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+    * _inner_
+      * [class: ~Organ](#module_cjs/human--Human..Organ)
+        * _instance_
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+        * _inner_
+          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 * [cjs/object-alias](#module_cjs/object-alias)
+  * [teams](#exp_module_cjs/object-alias--teams) ⏏
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
@@ -37,7 +57,8 @@
 * [exampleVar](#exampleVar) → <code>string</code>
 * [external: String](#external_String)
   * [.rot13()](#external_String#rot13)
-* [external: jQuery.fn](#external_"jQuery.fn")
+* [external: jQuery.fn](#external_jQuery.fn)
+  * [.starfairy()](#external_jQuery.fn.starfairy)
 * [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
@@ -132,32 +153,61 @@ leg count
 ##cjs/class
 exports a class
 
-<a name="new_module_cjs/class_new"></a>
-###new ExportedClass()
-the exported contructor
 
-<a name="exp_module_cjs/class"></a>
-##class: ExportedClass ⏏
+* [cjs/class](#module_cjs/class)
+  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
+    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
+    * _instance_
+      * [.prop](#module_cjs/class--ExportedClass#prop)
+    * _static_
+      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
+    * _inner_
+      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
+
+<a name="exp_module_cjs/class--ExportedClass"></a>
+###class: ExportedClass ⏏
 the exported class
 
-<a name="new_module_cjs/class_new"></a>
-###new ExportedClass()
+<a name="new_module_cjs/class--ExportedClass_new"></a>
+####new ExportedClass()
 the exported contructor
 
+<a name="module_cjs/class--ExportedClass#prop"></a>
+####exportedClass.prop
+instance property
+
+<a name="module_cjs/class--ExportedClass.staticProp"></a>
+####ExportedClass.staticProp
+a static property for the exported class
+
+<a name="module_cjs/class--ExportedClass..innerProp"></a>
+####ExportedClass~innerProp
+inner module property
+
+**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/falias-obj"></a>
 ##cjs/falias-obj
 exports a pointer to a function
 
-<a name="exp_module_cjs/falias-obj"></a>
-##sum() ⏏
+
+* [cjs/falias-obj](#module_cjs/falias-obj)
+  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
+    * [.extra()](#module_cjs/falias-obj--sum.extra)
+
+<a name="exp_module_cjs/falias-obj--sum"></a>
+###sum() ⏏
 the function
+
+<a name="module_cjs/falias-obj--sum.extra"></a>
+####sum.extra()
+a static method on the exported function
 
 <a name="module_cjs/function-alias"></a>
 ##cjs/function-alias
 exports a pointer to a function
 
-<a name="exp_module_cjs/function-alias"></a>
-##sum(one, two) ⇒ <code>number</code> ⏏
+<a name="exp_module_cjs/function-alias--sum"></a>
+###sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
 | Param | Type | Description |
@@ -170,24 +220,58 @@ the function
 ##cjs/human
 exports a class
 
-<a name="new_module_cjs/human_new"></a>
-###new Human()
-the exported contructor
 
-<a name="exp_module_cjs/human"></a>
-##class: Human ⏏
+* [cjs/human](#module_cjs/human)
+  * [class: Human](#exp_module_cjs/human--Human) ⏏
+    * [new Human()](#new_module_cjs/human--Human_new)
+    * _instance_
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+    * _inner_
+      * [class: ~Organ](#module_cjs/human--Human..Organ)
+        * _instance_
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+        * _inner_
+          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+
+<a name="exp_module_cjs/human--Human"></a>
+###class: Human ⏏
 the exported class
 
-<a name="new_module_cjs/human_new"></a>
-###new Human()
+<a name="new_module_cjs/human--Human_new"></a>
+####new Human()
 the exported contructor
 
+<a name="module_cjs/human--Human#liver"></a>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+an instance of Organ
+
+<a name="module_cjs/human--Human..Organ"></a>
+####class: Human~Organ
+a class inside a class
+
+**Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
+
+    * [class: ~Organ](#module_cjs/human--Human..Organ)
+      * _instance_
+        * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+      * _inner_
+        * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+
+<a name="module_cjs/human--Human..Organ#redCell"></a>
+#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+an instance of Cell
+
+<a name="module_cjs/human--Human..Organ..Cell"></a>
+#####class: Organ~Cell
+a class inside a class inside a class
+
+**Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
 
 <a name="exp_module_cjs/object-alias--teams"></a>
-##teams ⏏
+###teams ⏏
 the teams
 
 <a name="module_cjs/object"></a>
@@ -459,6 +543,8 @@ Both of these will link to the bar function.
 
 <a name="todoFunction2"></a>
 ##todoFunction2()
+**done**: this one is done  
+**done**: finished  
 **Todo**
 
 - [ ] Write the documentation.
@@ -468,6 +554,8 @@ Both of these will link to the bar function.
 
 <a name="todoFunction3"></a>
 ##todoFunction3()
+**done**: this one is done  
+**done**: finished  
 **Todo**
 
 - [x] this one is done
