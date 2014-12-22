@@ -2,53 +2,53 @@
 {{#if (isClass)~}}
 
 {{#children scope=undefined~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{>index2~}}
-{{~depthDecrement~}}
+{{~indexDepthDecrement~}}
 {{/children~}}
 
 {{#children scope="instance" -kind="event" ~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _instance_
-{{depthIncrement}}{{/if~}}
+{{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
-{{~depthDecrement~}}
-{{#if @last}}{{depthDecrement}}{{/if~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
 {{#children scope="static"~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _static_
-{{depthIncrement}}{{/if~}}
+{{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
-{{~depthDecrement~}}
-{{#if @last}}{{depthDecrement}}{{/if~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
 {{#children scope="inner"~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _inner_
-{{depthIncrement}}{{/if~}}
+{{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
-{{~depthDecrement~}}
-{{#if @last}}{{depthDecrement}}{{/if~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
 {{#children kind="event"~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _events_
-{{depthIncrement}}{{/if~}}
+{{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
-{{~depthDecrement~}}
-{{#if @last}}{{depthDecrement}}{{/if~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
 {{else~}}
 
 {{#children sortBy=(option "sort-by")~}}
-{{~depthIncrement~}}
+{{~indexDepthIncrement~}}
 {{>index2~}}
-{{~depthDecrement~}}
+{{~indexDepthDecrement~}}
 {{/children~}}
 
 {{/if}}

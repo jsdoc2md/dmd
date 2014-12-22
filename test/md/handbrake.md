@@ -70,18 +70,18 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Scope**: inner class of <code>[handbrake-js](#module_handbrake-js)</code>  
 **Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
 
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake)
-    * _instance_
-      * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
-      * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
-    * _events_
-      * ["start"](#module_handbrake-js..Handbrake#event_start)
-      * ["begin"](#module_handbrake-js..Handbrake#event_begin)
-      * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-      * ["output"](#module_handbrake-js..Handbrake#event_output)
-      * ["error"](#module_handbrake-js..Handbrake#event_error)
-      * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
-      * ["complete"](#module_handbrake-js..Handbrake#event_complete)
+* [class: ~Handbrake](#module_handbrake-js..Handbrake)
+  * _instance_
+    * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
+    * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
+  * _events_
+    * ["start"](#module_handbrake-js..Handbrake#event_start)
+    * ["begin"](#module_handbrake-js..Handbrake#event_begin)
+    * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
+    * ["output"](#module_handbrake-js..Handbrake#event_output)
+    * ["error"](#module_handbrake-js..Handbrake#event_error)
+    * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
+    * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js..Handbrake#output"></a>
 ####handbrake.output → <code>string</code>

@@ -41,7 +41,7 @@
           ]
         },
         "defaultvalue": "1",
-        "id": "module:MapView.MapType.GOOGLEMAPS"
+        "codeName": "GOOGLEMAPS"
       },
       {
         "name": "LEAFLET",
@@ -55,7 +55,7 @@
           ]
         },
         "defaultvalue": "2",
-        "id": "module:MapView.MapType.LEAFLET"
+        "codeName": "LEAFLET"
       }
     ],
     "codeName": "MapType"
@@ -93,6 +93,7 @@
     "name": "MapView",
     "kind": "class",
     "isExported": true,
+    "memberof": "module:MapView",
     "alias": "module:MapView",
     "codeName": "MapView"
   },

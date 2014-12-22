@@ -507,18 +507,18 @@ initialize();
 An object environment feature flags.
 
 
-  * [.support](#_.support) → <code>Object</code>
-    * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
-    * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
-    * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
-    * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
-    * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
-    * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
-    * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
-    * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
-    * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
-    * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
-    * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
+* [.support](#_.support) → <code>Object</code>
+  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+  * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+  * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+  * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+  * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+  * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+  * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+  * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+  * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+  * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
 
 <a name="_.support.support.nodeClass"></a>
 ####support.support.nodeClass → <code>boolean</code>
@@ -1404,21 +1404,21 @@ lodash.isFunction(lodash.sub);
 // => true
 ```
 
-  * [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
-    * [~reNative](#_.runInContext..reNative)
-    * [~Array](#_.runInContext..Array)
-    * [~document](#_.runInContext..document)
-    * [~fnToString](#_.runInContext..fnToString)
-    * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
-    * [~oldDash](#_.runInContext..oldDash)
-    * [~toString](#_.runInContext..toString)
-    * [~arrayProto](#_.runInContext..arrayProto)
-    * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
-    * [~Float64Array](#_.runInContext..Float64Array)
-    * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-    * [~metaMap](#_.runInContext..metaMap)
-    * [~ctorByClass](#_.runInContext..ctorByClass)
-    * [~nonEnumProps](#_.runInContext..nonEnumProps)
+* [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
+  * [~reNative](#_.runInContext..reNative)
+  * [~Array](#_.runInContext..Array)
+  * [~document](#_.runInContext..document)
+  * [~fnToString](#_.runInContext..fnToString)
+  * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+  * [~oldDash](#_.runInContext..oldDash)
+  * [~toString](#_.runInContext..toString)
+  * [~arrayProto](#_.runInContext..arrayProto)
+  * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+  * [~Float64Array](#_.runInContext..Float64Array)
+  * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+  * [~metaMap](#_.runInContext..metaMap)
+  * [~ctorByClass](#_.runInContext..ctorByClass)
+  * [~nonEnumProps](#_.runInContext..nonEnumProps)
 
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative

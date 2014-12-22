@@ -8,11 +8,11 @@
       "Viacheslav Lotsmanov"
     ],
     "version": "r10",
+    "license": "AGPLv3",
     "see": [
       "{@link https://github.com/unclechu/js-useful-umd-modules/|GitHub}",
       "{@link https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE|License}"
-    ],
-    "license": "AGPLv3"
+    ]
   },
   {
     "id": "GetVal~valuesArg",

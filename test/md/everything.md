@@ -130,13 +130,13 @@ the exported dog
 ###class: cjs/animals~Animal
 **Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
 
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+* [class: ~Animal](#module_cjs/animals..Animal)
+  * _instance_
+    * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+  * _inner_
+    * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
+      * _instance_
+        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
 ####animal.type → <code>Quadroped</code>
@@ -251,11 +251,11 @@ a class inside a class
 
 **Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 
-    * [class: ~Organ](#module_cjs/human--Human..Organ)
-      * _instance_
-        * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-      * _inner_
-        * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+* [class: ~Organ](#module_cjs/human--Human..Organ)
+  * _instance_
+    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+  * _inner_
+    * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 #####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
