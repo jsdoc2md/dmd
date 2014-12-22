@@ -148,27 +148,35 @@
     "name": "output",
     "scope": "instance",
     "kind": "event",
-    "description": "An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.",
     "memberof": "module:handbrake-js~Handbrake",
-    "type": {
-      "names": [
-        "string"
-      ]
-    }
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.",
+        "name": "output"
+      }
+    ]
   },
   {
     "id": "module:handbrake-js~Handbrake#event:error",
     "name": "error",
     "scope": "instance",
     "kind": "event",
-    "description": "All operational exceptions are delivered via this event. Passes an `Error` instance.",
     "memberof": "module:handbrake-js~Handbrake",
-    "type": {
-      "names": [
-        "Error"
-      ]
-    },
-    "properties": [
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Error"
+          ]
+        },
+        "description": "All operational exceptions are delivered via this event.",
+        "name": "error"
+      },
       {
         "type": {
           "names": [
@@ -176,7 +184,7 @@
           ]
         },
         "description": "One of `HandbrakeCLINotFound`, `HandbrakeCLIError`, `NoTitleFound`, `HandbrakeCLICrash` or `ValidationError`",
-        "name": "name"
+        "name": "error.name"
       },
       {
         "type": {
@@ -184,7 +192,7 @@
             "string"
           ]
         },
-        "name": "message"
+        "name": "error.message"
       },
       {
         "type": {
@@ -192,7 +200,7 @@
             "string"
           ]
         },
-        "name": "errno"
+        "name": "error.errno"
       }
     ]
   },

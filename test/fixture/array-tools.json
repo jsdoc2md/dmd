@@ -530,6 +530,15 @@
     "kind": "function",
     "description": "flatten",
     "memberof": "module:array-tools",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
     "since": "1.4.0",
     "codeName": "flatten",
     "todoList": [

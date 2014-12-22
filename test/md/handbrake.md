@@ -1,4 +1,4 @@
-<a name="module_handbrake-js"></a>
+## # <a name="module_handbrake-js"></a>
 ##handbrake-js
 Handbrake for node.js.
 
@@ -19,8 +19,8 @@ var hbjs = require("handbrake-js");
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)
       * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-      * ["output"](#module_handbrake-js..Handbrake#event_output)
-      * ["error"](#module_handbrake-js..Handbrake#event_error)
+      * ["output" (output)](#module_handbrake-js..Handbrake#event_output)
+      * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
       * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -78,8 +78,8 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * ["start"](#module_handbrake-js..Handbrake#event_start)
     * ["begin"](#module_handbrake-js..Handbrake#event_begin)
     * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
-    * ["output"](#module_handbrake-js..Handbrake#event_output)
-    * ["error"](#module_handbrake-js..Handbrake#event_error)
+    * ["output" (output)](#module_handbrake-js..Handbrake#event_output)
+    * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
     * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
     * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
@@ -115,18 +115,19 @@ Fired at regular intervals passing a `progress` object.
 | progress.task | <code>string</code> | Task description, either "Encoding" or "Muxing" |
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
-####event: "output"
-An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.
+####event: "output" (output)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| output | <code>string</code> | An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process. |
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
-####event: "error"
-All operational exceptions are delivered via this event. Passes an `Error` instance.
-
-**Properties**
-
-- name `string` - One of `HandbrakeCLINotFound`, `HandbrakeCLIError`, `NoTitleFound`, `HandbrakeCLICrash` or `ValidationError`  
-- message `string`  
-- errno `string`  
+####event: "error" (error)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| error | <code>Error</code> | All operational exceptions are delivered via this event. |
+| error.name | <code>string</code> | One of `HandbrakeCLINotFound`, `HandbrakeCLIError`, `NoTitleFound`, `HandbrakeCLICrash` or `ValidationError` |
+| error.message | <code>string</code> |  |
+| error.errno | <code>string</code> |  |
 
 <a name="module_handbrake-js..Handbrake#event_end"></a>
 ####event: "end" (one, two)

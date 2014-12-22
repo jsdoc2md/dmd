@@ -41,7 +41,7 @@
   * [.two()](#module_cjs/object.two)
 
 ##Global
-* [headVar](#headVar) → <code>number</code>
+* [headObj](#headObj)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
@@ -55,11 +55,6 @@
 * [defaultedTwo](#defaultedTwo) → <code>function</code>
 * ["docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → <code>string</code>
-* [external: String](#external_String)
-  * [.rot13()](#external_String#rot13)
-* [external: jQuery.fn](#external_jQuery.fn)
-  * [.starfairy()](#external_jQuery.fn.starfairy)
-* [external: XMLHttpRequest](#external_XMLHttpRequest)
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [fileVar](#fileVar)
@@ -73,8 +68,8 @@
 * [class: SOmething](#SOmething)
   * _instance_
     * [.yeah()](#SOmething#yeah)
+* [headVar](#headVar) → <code>number</code>
 * [customTagged](#customTagged)
-* [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
   * _static_

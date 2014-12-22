@@ -20,7 +20,7 @@ var a = require("array-tools");
   * [.unique(array)](#module_array-tools.unique) ⇒ <code>Array</code>
   * [.spliceWhile(array, index, test, ...elementN)](#module_array-tools.spliceWhile) ⇒ <code>Array</code>
   * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
-  * [.flatten()](#module_array-tools.flatten)
+  * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
 
 <a name="module_array-tools.without"></a>
 ###a.without(input, toRemove) ⇒ <code>Array</code>
@@ -258,7 +258,7 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 
 **Returns**: <code>Array</code> - the extracted items.  
 <a name="module_array-tools.flatten"></a>
-###a.flatten()
+###a.flatten() ⇒ <code>Array</code>
 flatten
 
 **Since**: 1.4.0  
