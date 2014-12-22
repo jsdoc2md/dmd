@@ -1,4 +1,4 @@
-## # <a name="module_handbrake-js"></a>
+<a name="module_handbrake-js"></a>
 ##handbrake-js
 Handbrake for node.js.
 
@@ -21,7 +21,7 @@ var hbjs = require("handbrake-js");
       * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
       * ["output" (output)](#module_handbrake-js..Handbrake#event_output)
       * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
-      * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
+      * ["end"](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js.cliOptions"></a>
@@ -80,7 +80,7 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
     * ["output" (output)](#module_handbrake-js..Handbrake#event_output)
     * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
-    * ["end" (one, two)](#module_handbrake-js..Handbrake#event_end)
+    * ["end"](#module_handbrake-js..Handbrake#event_end)
     * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js..Handbrake#output"></a>
@@ -130,13 +130,8 @@ Fired at regular intervals passing a `progress` object.
 | error.errno | <code>string</code> |  |
 
 <a name="module_handbrake-js..Handbrake#event_end"></a>
-####event: "end" (one, two)
+####event: "end"
 Fired on successful completion of an encoding task. Always follows a `begin` event, with some `progress` in between.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| one | <code>string</code> | first param |
-| two | <code>string</code> | second param |
 
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 ####event: "complete"

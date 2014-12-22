@@ -210,27 +210,7 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired on successful completion of an encoding task. Always follows a `begin` event, with some `progress` in between.",
-    "memberof": "module:handbrake-js~Handbrake",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "first param",
-        "name": "one"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "second param",
-        "name": "two"
-      }
-    ]
+    "memberof": "module:handbrake-js~Handbrake"
   },
   {
     "id": "module:handbrake-js~Handbrake#event:complete",
