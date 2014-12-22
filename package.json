@@ -1,7 +1,7 @@
 {
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "dmd",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
@@ -15,7 +15,12 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "files": [ "bin", "helpers", "lib", "partials" ],
+  "files": [
+    "bin",
+    "helpers",
+    "lib",
+    "partials"
+  ],
   "scripts": {
     "test": "tape test/*.js",
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
