@@ -4,7 +4,7 @@
     "name": "undefined",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as a safe reference for `undefined` in pre ES5 environments",
+    "description": "Used as a safe reference for `undefined` in pre ES5 environments.",
     "memberof": "<anonymous>",
     "codeName": "undefined"
   },
@@ -13,7 +13,7 @@
     "name": "VERSION",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as the semantic version number",
+    "description": "Used as the semantic version number.",
     "memberof": "<anonymous>",
     "codeName": "VERSION"
   },
@@ -22,7 +22,7 @@
     "name": "BIND_FLAG",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to compose bitmasks for wrapper metadata",
+    "description": "Used to compose bitmasks for wrapper metadata.",
     "memberof": "<anonymous>",
     "codeName": "BIND_FLAG"
   },
@@ -31,7 +31,7 @@
     "name": "DEFAULT_TRUNC_LENGTH",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as default options for `_.trunc`",
+    "description": "Used as default options for `_.trunc`.",
     "memberof": "<anonymous>",
     "codeName": "DEFAULT_TRUNC_LENGTH"
   },
@@ -40,61 +40,43 @@
     "name": "HOT_COUNT",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect when a function becomes hot",
+    "description": "Used to detect when a function becomes hot.",
     "memberof": "<anonymous>",
     "codeName": "HOT_COUNT"
+  },
+  {
+    "id": "<anonymous>~LAZY_FILTER_FLAG",
+    "name": "LAZY_FILTER_FLAG",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used to indicate the type of lazy iteratees.",
+    "memberof": "<anonymous>",
+    "codeName": "LAZY_FILTER_FLAG"
   },
   {
     "id": "<anonymous>~FUNC_ERROR_TEXT",
     "name": "FUNC_ERROR_TEXT",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as the TypeError message for \"Functions\" methods",
+    "description": "Used as the `TypeError` message for \"Functions\" methods.",
     "memberof": "<anonymous>",
     "codeName": "FUNC_ERROR_TEXT"
-  },
-  {
-    "id": "<anonymous>~MAX_ARRAY_LENGTH",
-    "name": "MAX_ARRAY_LENGTH",
-    "scope": "inner",
-    "kind": "member",
-    "description": "Used as references for the max length and index of an array",
-    "memberof": "<anonymous>",
-    "codeName": "MAX_ARRAY_LENGTH"
-  },
-  {
-    "id": "<anonymous>~MAX_SAFE_INTEGER",
-    "name": "MAX_SAFE_INTEGER",
-    "scope": "inner",
-    "kind": "member",
-    "description": "Used as the maximum length of an array-like value.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)\nfor more details.",
-    "memberof": "<anonymous>",
-    "codeName": "MAX_SAFE_INTEGER"
   },
   {
     "id": "<anonymous>~PLACEHOLDER",
     "name": "PLACEHOLDER",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as the internal argument placeholder",
+    "description": "Used as the internal argument placeholder.",
     "memberof": "<anonymous>",
     "codeName": "PLACEHOLDER"
-  },
-  {
-    "id": "<anonymous>~idCounter",
-    "name": "idCounter",
-    "scope": "inner",
-    "kind": "member",
-    "description": "Used to generate unique IDs",
-    "memberof": "<anonymous>",
-    "codeName": "idCounter"
   },
   {
     "id": "<anonymous>~reEmptyStringLeading",
     "name": "reEmptyStringLeading",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match empty string literals in compiled template source",
+    "description": "Used to match empty string literals in compiled template source.",
     "memberof": "<anonymous>",
     "codeName": "reEmptyStringLeading"
   },
@@ -103,7 +85,7 @@
     "name": "reEscapedHtml",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match HTML entities and HTML characters",
+    "description": "Used to match HTML entities and HTML characters.",
     "memberof": "<anonymous>",
     "codeName": "reEscapedHtml"
   },
@@ -112,7 +94,7 @@
     "name": "reEscape",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match template delimiters",
+    "description": "Used to match template delimiters.",
     "memberof": "<anonymous>",
     "codeName": "reEscape"
   },
@@ -130,7 +112,7 @@
     "name": "reFlags",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match `RegExp` flags from their coerced string values",
+    "description": "Used to match `RegExp` flags from their coerced string values.",
     "memberof": "<anonymous>",
     "codeName": "reFlags"
   },
@@ -139,7 +121,7 @@
     "name": "reFuncName",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect named functions",
+    "description": "Used to detect named functions.",
     "memberof": "<anonymous>",
     "codeName": "reFuncName"
   },
@@ -148,7 +130,7 @@
     "name": "reHexPrefix",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect hexadecimal string values",
+    "description": "Used to detect hexadecimal string values.",
     "memberof": "<anonymous>",
     "codeName": "reHexPrefix"
   },
@@ -157,7 +139,7 @@
     "name": "reHostCtor",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect host constructors (Safari > 5)",
+    "description": "Used to detect host constructors (Safari > 5).",
     "memberof": "<anonymous>",
     "codeName": "reHostCtor"
   },
@@ -166,7 +148,7 @@
     "name": "reLatin1",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match latin-1 supplement letters (excluding mathematical operators)",
+    "description": "Used to match latin-1 supplementary letters (excluding mathematical operators).",
     "memberof": "<anonymous>",
     "codeName": "reLatin1"
   },
@@ -175,7 +157,7 @@
     "name": "reNoMatch",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to ensure capturing order of template delimiters",
+    "description": "Used to ensure capturing order of template delimiters.",
     "memberof": "<anonymous>",
     "codeName": "reNoMatch"
   },
@@ -193,7 +175,7 @@
     "name": "reThis",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect functions containing a `this` reference",
+    "description": "Used to detect functions containing a `this` reference.",
     "memberof": "<anonymous>",
     "codeName": "reThis"
   },
@@ -202,7 +184,7 @@
     "name": "reUnescapedString",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match unescaped characters in compiled string literals",
+    "description": "Used to match unescaped characters in compiled string literals.",
     "memberof": "<anonymous>",
     "codeName": "reUnescapedString"
   },
@@ -211,7 +193,7 @@
     "name": "reWords",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to match words to create compound words",
+    "description": "Used to match words to create compound words.",
     "memberof": "<anonymous>",
     "codeName": "reWords"
   },
@@ -220,7 +202,7 @@
     "name": "whitespace",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect and test whitespace",
+    "description": "Used to detect and test for whitespace.",
     "memberof": "<anonymous>",
     "codeName": "whitespace"
   },
@@ -229,25 +211,25 @@
     "name": "contextProps",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to assign default `context` object properties",
+    "description": "Used to assign default `context` object properties.",
     "memberof": "<anonymous>",
     "codeName": "contextProps"
   },
   {
-    "id": "<anonymous>~shadowedProps",
-    "name": "shadowedProps",
+    "id": "<anonymous>~shadowProps",
+    "name": "shadowProps",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to fix the JScript `[[DontEnum]]` bug",
+    "description": "Used to fix the JScript `[[DontEnum]]` bug.",
     "memberof": "<anonymous>",
-    "codeName": "shadowedProps"
+    "codeName": "shadowProps"
   },
   {
     "id": "<anonymous>~templateCounter",
     "name": "templateCounter",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to make template sourceURLs easier to identify",
+    "description": "Used to make template sourceURLs easier to identify.",
     "memberof": "<anonymous>",
     "codeName": "templateCounter"
   },
@@ -256,7 +238,7 @@
     "name": "argsClass",
     "scope": "inner",
     "kind": "member",
-    "description": "`Object#toString` result references",
+    "description": "`Object#toString` result references.",
     "memberof": "<anonymous>",
     "codeName": "argsClass"
   },
@@ -265,7 +247,7 @@
     "name": "arrayLikeClasses",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to identify object classifications that are treated like arrays",
+    "description": "Used to identify object classifications that are treated like arrays.",
     "memberof": "<anonymous>",
     "codeName": "arrayLikeClasses"
   },
@@ -274,7 +256,7 @@
     "name": "cloneableClasses",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to identify object classifications that `_.clone` supports",
+    "description": "Used to identify object classifications that `_.clone` supports.",
     "memberof": "<anonymous>",
     "codeName": "cloneableClasses"
   },
@@ -283,16 +265,25 @@
     "name": "debounceOptions",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as an internal `_.debounce` options object by `_.throttle`",
+    "description": "Used as an internal `_.debounce` options object by `_.throttle`.",
     "memberof": "<anonymous>",
     "codeName": "debounceOptions"
+  },
+  {
+    "id": "<anonymous>~deburredLetters",
+    "name": "deburredLetters",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used to map latin-1 supplementary letters to basic latin letters.",
+    "memberof": "<anonymous>",
+    "codeName": "deburredLetters"
   },
   {
     "id": "<anonymous>~htmlEscapes",
     "name": "htmlEscapes",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to map characters to HTML entities.\n\n**Note:** Though the \">\" character is escaped for symmetry, characters like\n\">\" and \"/\" don't require escaping in HTML and have no special meaning\nunless they're part of a tag or unquoted attribute value.\nSee [Mathias Bynens's article](http://mathiasbynens.be/notes/ambiguous-ampersands)\n(under \"semi-related fun fact\") for more details.\n\nBackticks are escaped because in Internet Explorer < 9, they can break out\nof attribute values or HTML comments. See [#102](http://html5sec.org/#102),\n[#108](http://html5sec.org/#108), and [#133](http://html5sec.org/#133) of\nthe [HTML5 Security Cheatsheet](http://html5sec.org/) for more details.",
+    "description": "Used to map characters to HTML entities.",
     "memberof": "<anonymous>",
     "codeName": "htmlEscapes"
   },
@@ -301,25 +292,16 @@
     "name": "htmlUnescapes",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to map HTML entities to characters",
+    "description": "Used to map HTML entities to characters.",
     "memberof": "<anonymous>",
     "codeName": "htmlUnescapes"
-  },
-  {
-    "id": "<anonymous>~deburredLetters",
-    "name": "deburredLetters",
-    "scope": "inner",
-    "kind": "member",
-    "description": "Used to map latin-1 supplementary letters to basic latin letters",
-    "memberof": "<anonymous>",
-    "codeName": "deburredLetters"
   },
   {
     "id": "<anonymous>~objectTypes",
     "name": "objectTypes",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to determine if values are of the language type `Object`",
+    "description": "Used to determine if values are of the language type `Object`.",
     "memberof": "<anonymous>",
     "codeName": "objectTypes"
   },
@@ -328,7 +310,7 @@
     "name": "stringEscapes",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to escape characters for inclusion in compiled string literals",
+    "description": "Used to escape characters for inclusion in compiled string literals.",
     "memberof": "<anonymous>",
     "codeName": "stringEscapes"
   },
@@ -337,7 +319,7 @@
     "name": "root",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as a reference to the global object",
+    "description": "Used as a reference to the global object.\n\nThe `this` value is used if it is the global object to avoid Greasemonkey's\nrestricted `window` object, otherwise the `window` object is used.",
     "memberof": "<anonymous>",
     "codeName": "root"
   },
@@ -346,7 +328,7 @@
     "name": "freeExports",
     "scope": "inner",
     "kind": "member",
-    "description": "Detect free variable `exports`",
+    "description": "Detect free variable `exports`.",
     "memberof": "<anonymous>",
     "codeName": "freeExports"
   },
@@ -355,7 +337,7 @@
     "name": "freeModule",
     "scope": "inner",
     "kind": "member",
-    "description": "Detect free variable `module`",
+    "description": "Detect free variable `module`.",
     "memberof": "<anonymous>",
     "codeName": "freeModule"
   },
@@ -364,7 +346,7 @@
     "name": "freeGlobal",
     "scope": "inner",
     "kind": "member",
-    "description": "Detect free variable `global` from Node.js or Browserified code and use it as `root`",
+    "description": "Detect free variable `global` from Node.js or Browserified code and use it as `root`.",
     "memberof": "<anonymous>",
     "codeName": "freeGlobal"
   },
@@ -373,7 +355,7 @@
     "name": "moduleExports",
     "scope": "inner",
     "kind": "member",
-    "description": "Detect the popular CommonJS extension `module.exports`",
+    "description": "Detect the popular CommonJS extension `module.exports`.",
     "memberof": "<anonymous>",
     "codeName": "moduleExports"
   },
@@ -418,7 +400,7 @@
     "name": "Array",
     "scope": "inner",
     "kind": "member",
-    "description": "Native constructor references",
+    "description": "Native constructor references.",
     "memberof": "_.runInContext",
     "codeName": "Array"
   },
@@ -427,7 +409,7 @@
     "name": "arrayProto",
     "scope": "inner",
     "kind": "member",
-    "description": "Used for native method references",
+    "description": "Used for native method references.",
     "memberof": "_.runInContext",
     "codeName": "arrayProto"
   },
@@ -436,7 +418,7 @@
     "name": "document",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect DOM support",
+    "description": "Used to detect DOM support.",
     "memberof": "_.runInContext",
     "codeName": "document"
   },
@@ -445,7 +427,7 @@
     "name": "fnToString",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to resolve the decompiled source of functions",
+    "description": "Used to resolve the decompiled source of functions.",
     "memberof": "_.runInContext",
     "codeName": "fnToString"
   },
@@ -454,16 +436,25 @@
     "name": "hasOwnProperty",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to check objects for own properties",
+    "description": "Used to check objects for own properties.",
     "memberof": "_.runInContext",
     "codeName": "hasOwnProperty"
+  },
+  {
+    "id": "_.runInContext~idCounter",
+    "name": "idCounter",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used to generate unique IDs.",
+    "memberof": "_.runInContext",
+    "codeName": "idCounter"
   },
   {
     "id": "_.runInContext~oldDash",
     "name": "oldDash",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to restore the original `_` reference in `_.noConflict`",
+    "description": "Used to restore the original `_` reference in `_.noConflict`.",
     "memberof": "_.runInContext",
     "codeName": "oldDash"
   },
@@ -472,7 +463,7 @@
     "name": "toString",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to resolve the internal `[[Class]]` of values",
+    "description": "Used to resolve the internal `[[Class]]` of values.",
     "memberof": "_.runInContext",
     "codeName": "toString"
   },
@@ -481,7 +472,7 @@
     "name": "reNative",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to detect if a method is native",
+    "description": "Used to detect if a method is native.",
     "memberof": "_.runInContext",
     "codeName": "reNative"
   },
@@ -490,7 +481,7 @@
     "name": "ArrayBuffer",
     "scope": "inner",
     "kind": "member",
-    "description": "Native method references",
+    "description": "Native method references.",
     "memberof": "_.runInContext",
     "codeName": "ArrayBuffer"
   },
@@ -499,25 +490,52 @@
     "name": "Float64Array",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to clone array buffers",
+    "description": "Used to clone array buffers.",
     "memberof": "_.runInContext",
     "codeName": "Float64Array"
+  },
+  {
+    "id": "_.runInContext~NEGATIVE_INFINITY",
+    "name": "NEGATIVE_INFINITY",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used as references for `-Infinity` and `Infinity`.",
+    "memberof": "_.runInContext",
+    "codeName": "NEGATIVE_INFINITY"
+  },
+  {
+    "id": "_.runInContext~MAX_ARRAY_LENGTH",
+    "name": "MAX_ARRAY_LENGTH",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used as references for the maximum length and index of an array.",
+    "memberof": "_.runInContext",
+    "codeName": "MAX_ARRAY_LENGTH"
   },
   {
     "id": "_.runInContext~FLOAT64_BYTES_PER_ELEMENT",
     "name": "FLOAT64_BYTES_PER_ELEMENT",
     "scope": "inner",
     "kind": "member",
-    "description": "Used as the size, in bytes, of each Float64Array element",
+    "description": "Used as the size, in bytes, of each `Float64Array` element.",
     "memberof": "_.runInContext",
     "codeName": "FLOAT64_BYTES_PER_ELEMENT"
+  },
+  {
+    "id": "_.runInContext~MAX_SAFE_INTEGER",
+    "name": "MAX_SAFE_INTEGER",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Used as the maximum length of an array-like value.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)\nfor more details.",
+    "memberof": "_.runInContext",
+    "codeName": "MAX_SAFE_INTEGER"
   },
   {
     "id": "_.runInContext~metaMap",
     "name": "metaMap",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to store function metadata",
+    "description": "Used to store function metadata.",
     "memberof": "_.runInContext",
     "codeName": "metaMap"
   },
@@ -526,7 +544,7 @@
     "name": "ctorByClass",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to lookup a built-in constructor by [[Class]]",
+    "description": "Used to lookup a built-in constructor by `[[Class]]`.",
     "memberof": "_.runInContext",
     "codeName": "ctorByClass"
   },
@@ -535,7 +553,7 @@
     "name": "nonEnumProps",
     "scope": "inner",
     "kind": "member",
-    "description": "Used to avoid iterating over non-enumerable properties in IE < 9",
+    "description": "Used to avoid iterating over non-enumerable properties in IE < 9.",
     "memberof": "_.runInContext",
     "codeName": "nonEnumProps"
   },
@@ -550,7 +568,7 @@
     "id": "_()",
     "name": "_",
     "kind": "constructor",
-    "description": "Creates a `lodash` object which wraps the given value to enable intuitive\nmethod chaining.\n\nIn addition to Lo-Dash methods, wrappers also have the following `Array` methods:\n`concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`, `splice`,\nand `unshift`\n\nChaining is supported in custom builds as long as the `value` method is\nimplicitly or explicitly included in the build.\n\nThe chainable wrapper functions are:\n`after`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`, `callback`,\n`chain`, `chunk`, `compact`, `concat`, `constant`, `countBy`, `create`,\n`curry`, `debounce`, `defaults`, `defer`, `delay`, `difference`, `drop`,\n`dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `flatten`, `flattenDeep`,\n`flow`, `flowRight`, `forEach`, `forEachRight`, `forIn`, `forInRight`,\n`forOwn`, `forOwnRight`, `functions`, `groupBy`, `indexBy`, `initial`,\n`intersection`, `invert`, `invoke`, `keys`, `keysIn`, `map`, `mapValues`,\n`matches`, `memoize`, `merge`, `mixin`, `negate`, `noop`, `omit`, `once`,\n`pairs`, `partial`, `partialRight`, `partition`, `pick`, `pluck`, `property`,\n`pull`, `pullAt`, `push`, `range`, `reject`, `remove`, `rest`, `reverse`,\n`shuffle`, `slice`, `sort`, `sortBy`, `splice`, `take`, `takeRight`,\n`takeRightWhile`, `takeWhile`, `tap`, `throttle`, `thru`, `times`,\n`toArray`, `transform`, `union`, `uniq`, `unshift`, `unzip`, `values`,\n`valuesIn`, `where`, `without`, `wrap`, `xor`, `zip`, and `zipObject`\n\nThe non-chainable wrapper functions are:\n`attempt`, `camelCase`, `capitalize`, `clone`, `cloneDeep`, `contains`,\n`deburr`, endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`,\n`findKey`, `findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`,\n`has`, `identity`, `indexOf`, `isArguments`, `isArray`, `isBoolean`, isDate`,\n`isElement`, `isEmpty`, `isEqual`, `isError`, `isFinite`, `isFunction`,\n`isNative`, `isNaN`, `isNull`, `isNumber`, `isObject`, `isPlainObject`,\n`isRegExp`, `isString`, `isUndefined`, `join`, `kebabCase`, `last`,\n`lastIndexOf`, `max`, `min`, `noConflict`, `now`, `pad`, `padLeft`,\n`padRight`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`, `repeat`,\n`result`, `runInContext`, `shift`, `size`, `snakeCase`, `some`, `sortedIndex`,\n`sortedLastIndex`, `startsWith`, `template`, `trim`, `trimLeft`, `trimRight`,\n`trunc`, `unescape`, `uniqueId`, `value`, and `words`\n\nThe wrapper function `sample` will return a wrapped value when `n` is\nprovided, otherwise it will return an unwrapped value.\n\nExplicit chaining can be enabled by using the `_.chain` method.",
+    "description": "Creates a `lodash` object which wraps `value` to enable intuitive chaining.\nMethods that operate on and return arrays, collections, and functions can\nbe chained together. Methods that return a boolean or single value will\nautomatically end the chain returning the unwrapped value. Explicit chaining\nmay be enabled using `_.chain`. The execution of chained methods is lazy,\nthat is, execution is deferred until `_#value` is implicitly or explicitly\ncalled.\n\nLazy evaluation allows several methods to support shortcut fusion. Shortcut\nfusion is an optimization that merges iteratees to avoid creating intermediate\narrays and reduce the number of iteratee executions.\n\nChaining is supported in custom builds as long as the `_#value` method is\ndirectly or indirectly included in the build.\n\nIn addition to Lo-Dash methods, wrappers also have the following `Array` methods:\n`concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`, `splice`,\nand `unshift`\n\nThe wrapper functons that support shortcut fusion are:\n`drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `first`,\n`initial`, `last`, `map`, `pluck`, `reject`, `rest`, `reverse`, `slice`,\n`take`, `takeRight`, `takeRightWhile`, `takeWhile`, and `where`\n\nThe chainable wrapper functions are:\n`after`, `ary`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`,\n`callback`, `chain`, `chunk`, `compact`, `concat`, `constant`, `countBy`,\n`create`, `curry`, `debounce`, `defaults`, `defer`, `delay`, `difference`,\n`drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `flatten`,\n`flattenDeep`, `flow`, `flowRight`, `forEach`, `forEachRight`, `forIn`,\n`forInRight`, `forOwn`, `forOwnRight`, `functions`, `groupBy`, `indexBy`,\n`initial`, `intersection`, `invert`, `invoke`, `keys`, `keysIn`, `map`,\n`mapValues`, `matches`, `memoize`, `merge`, `mixin`, `negate`, `noop`,\n`omit`, `once`, `pairs`, `partial`, `partialRight`, `partition`, `pick`,\n`pluck`, `property`, `propertyOf`, `pull`, `pullAt`, `push`, `range`,\n`rearg`, `reject`, `remove`, `rest`, `reverse`, `shuffle`, `slice`, `sort`,\n`sortBy`, `sortByAll`, `splice`, `take`, `takeRight`, `takeRightWhile`,\n`takeWhile`, `tap`, `throttle`, `thru`, `times`, `toArray`, `transform`,\n`union`, `uniq`, `unshift`, `unzip`, `values`, `valuesIn`, `where`,\n`without`, `wrap`, `xor`, `zip`, and `zipObject`\n\nThe wrapper functions that are **not** chainable by default are:\n`attempt`, `camelCase`, `capitalize`, `clone`, `cloneDeep`, `deburr`,\n`endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`,\n`findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`, `has`,\n`identity`, `includes`, `indexOf`, `isArguments`, `isArray`, `isBoolean`,\n`isDate`, `isElement`, `isEmpty`, `isEqual`, `isError`, `isFinite`,\n`isFunction`, `isMatch` , `isNative`, `isNaN`, `isNull`, `isNumber`,\n`isObject`, `isPlainObject`, `isRegExp`, `isString`, `isUndefined`, `join`,\n`kebabCase`, `last`, `lastIndexOf`, `max`, `min`, `noConflict`, `now`, `pad`,\n`padLeft`, `padRight`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,\n`repeat`, `result`, `runInContext`, `shift`, `size`, `snakeCase`, `some`,\n`sortedIndex`, `sortedLastIndex`, `startsWith`, `template`, `trim`, `trimLeft`,\n`trimRight`, `trunc`, `unescape`, `uniqueId`, `value`, and `words`\n\nThe wrapper function `sample` will return a wrapped value when `n` is provided,\notherwise an unwrapped value is returned.",
     "memberof": "_",
     "params": [
       {
@@ -624,7 +642,7 @@
     "name": "support.enumPrototypes",
     "scope": "static",
     "kind": "member",
-    "description": "Detect if `prototype` properties are enumerable by default.\n\nFirefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1\n(if the prototype or a property on the prototype has been set)\nincorrectly sets the `[[Enumerable]]` value of a function's `prototype`\nproperty to `true`.",
+    "description": "Detect if `prototype` properties are enumerable by default.\n\nFirefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1\n(if the prototype or a property on the prototype has been set)\nincorrectly set the `[[Enumerable]]` value of a function's `prototype`\nproperty to `true`.",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -708,7 +726,7 @@
     "name": "support.ownLast",
     "scope": "static",
     "kind": "member",
-    "description": "Detect if own properties are iterated after inherited properties\n(IE < 9).",
+    "description": "Detect if own properties are iterated after inherited properties (IE < 9).",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -722,7 +740,7 @@
     "name": "support.spliceObjects",
     "scope": "static",
     "kind": "member",
-    "description": "Detect if `Array#shift` and `Array#splice` augment array-like objects\ncorrectly.\n\nFirefox < 10, IE compatibility mode, and IE < 9 have buggy Array `shift()`\nand `splice()` functions that fail to remove the last element, `value[0]`,\nof array-like objects even though the `length` property is set to `0`.\nThe `shift()` method is buggy in IE 8 compatibility mode, while `splice()`\nis buggy regardless of mode in IE < 9 and buggy in compatibility mode\nin IE 9.",
+    "description": "Detect if `Array#shift` and `Array#splice` augment array-like objects\ncorrectly.\n\nFirefox < 10, compatibility modes of IE 8, and IE < 9 have buggy Array `shift()`\nand `splice()` functions that fail to remove the last element, `value[0]`,\nof array-like objects even though the `length` property is set to `0`.\nThe `shift()` method is buggy in compatibility modes of IE 8, while `splice()`\nis buggy regardless of mode in IE < 9.",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -750,7 +768,7 @@
     "name": "templateSettings",
     "scope": "static",
     "kind": "member",
-    "description": "By default, the template delimiters used by Lo-Dash are similar to those\nin embedded Ruby (ERB). Change the following template settings to use\nalternative delimiters.",
+    "description": "By default, the template delimiters used by Lo-Dash are like those in\nembedded Ruby (ERB). Change the following template settings to use\nalternative delimiters.",
     "memberof": "_.lodash",
     "type": {
       "names": [
@@ -933,7 +951,7 @@
     "name": "difference",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array excluding all values of the provided arrays using\n`SameValueZero` for equality comparisons.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Creates an array excluding all values of the provided arrays using\n`SameValueZero` for equality comparisons.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -1111,7 +1129,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per element.",
         "name": "predicate"
       },
@@ -1127,7 +1145,7 @@
       }
     ],
     "examples": [
-      "_.dropRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [1]\n\nvar users = [\n  { 'user': 'barney',  'employer': 'slate' },\n  { 'user': 'fred',    'employer': 'slate', 'blocked': true },\n  { 'user': 'pebbles', 'employer': 'na',    'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropRightWhile(users, 'blocked'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropRightWhile(users, { 'employer': 'na' }), 'user');\n// => ['barney', 'fred']"
+      "_.dropRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [1]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': false },\n  { 'user': 'fred',    'status': 'busy', 'active': true },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropRightWhile(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropRightWhile(users, { 'status': 'away' }), 'user');\n// => ['barney', 'fred']"
     ],
     "returns": [
       {
@@ -1173,7 +1191,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per element.",
         "name": "predicate"
       },
@@ -1189,7 +1207,7 @@
       }
     ],
     "examples": [
-      "_.dropWhile([1, 2, 3], function(n) { return n < 3; });\n// => [3]\n\nvar users = [\n  { 'user': 'barney',  'employer': 'slate', 'blocked': true },\n  { 'user': 'fred',    'employer': 'slate' },\n  { 'user': 'pebbles', 'employer': 'na',    'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropWhile(users, 'blocked'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropWhile(users, { 'employer': 'slate' }), 'user');\n// => ['pebbles']"
+      "_.dropWhile([1, 2, 3], function(n) { return n < 3; });\n// => [3]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': true },\n  { 'user': 'fred',    'status': 'busy', 'active': false },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropWhile(users, 'active'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropWhile(users, { 'status': 'busy' }), 'user');\n// => ['pebbles']"
     ],
     "returns": [
       {
@@ -1235,7 +1253,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -1251,7 +1269,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40, 'blocked': true },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\n_.findIndex(users, function(chr) {\n  return chr.age < 20;\n});\n// => 2\n\n// using \"_.where\" callback shorthand\n_.findIndex(users, { 'age': 36 });\n// => 0\n\n// using \"_.pluck\" callback shorthand\n_.findIndex(users, 'blocked');\n// => 1"
+      "var users = [\n  { 'user': 'barney',  'age': 36, 'active': false },\n  { 'user': 'fred',    'age': 40, 'active': true },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n_.findIndex(users, function(chr) { return chr.age < 40; });\n// => 0\n\n// using \"_.where\" callback shorthand\n_.findIndex(users, { 'age': 1 });\n// => 2\n\n// using \"_.pluck\" callback shorthand\n_.findIndex(users, 'active');\n// => 1"
     ],
     "returns": [
       {
@@ -1292,7 +1310,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -1308,7 +1326,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney',  'age': 36, 'blocked': true },\n  { 'user': 'fred',    'age': 40 },\n  { 'user': 'pebbles', 'age': 1,  'blocked': true }\n];\n\n_.findLastIndex(users, function(chr) {\n  return chr.age > 30;\n});\n// => 1\n\n// using \"_.where\" callback shorthand\n_.findLastIndex(users, { 'age': 36 });\n// => 0\n\n// using \"_.pluck\" callback shorthand\n_.findLastIndex(users, 'blocked');\n// => 2"
+      "var users = [\n  { 'user': 'barney',  'age': 36, 'active': true },\n  { 'user': 'fred',    'age': 40, 'active': false },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n_.findLastIndex(users, function(chr) { return chr.age < 40; });\n// => 2\n\n// using \"_.where\" callback shorthand\n_.findLastIndex(users, { 'age': 40 });\n// => 1\n\n// using \"_.pluck\" callback shorthand\n_.findLastIndex(users, 'active');\n// => 0"
     ],
     "returns": [
       {
@@ -1382,7 +1400,6 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "false",
         "description": "Specify a deep flatten.",
         "name": "isDeep"
       }
@@ -1448,7 +1465,7 @@
     "name": "indexOf",
     "scope": "static",
     "kind": "function",
-    "description": "Gets the index at which the first occurrence of `value` is found in `array`\nusing `SameValueZero` for equality comparisons. If `fromIndex` is negative,\nit is used as the offset from the end of the collection. If `array` is\nsorted providing `true` for `fromIndex` performs a faster binary search.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Gets the index at which the first occurrence of `value` is found in `array`\nusing `SameValueZero` for equality comparisons. If `fromIndex` is negative,\nit is used as the offset from the end of `array`. If `array` is sorted\nproviding `true` for `fromIndex` performs a faster binary search.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -1537,7 +1554,7 @@
     "name": "intersection",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of unique values present in all provided arrays using\n`SameValueZero` for equality comparisons.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Creates an array of unique values in all provided arrays using `SameValueZero`\nfor equality comparisons.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -1662,7 +1679,7 @@
     "name": "pull",
     "scope": "static",
     "kind": "function",
-    "description": "Removes all provided values from `array` using `SameValueZero` for equality\ncomparisons.\n\n**Notes:**\n - Unlike `_.without`, this method mutates `array`.\n - `SameValueZero` is like strict equality, e.g. `===`, except that `NaN` matches `NaN`.\n   See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\n   for more details.",
+    "description": "Removes all provided values from `array` using `SameValueZero` for equality\ncomparisons.\n\n**Notes:**\n - Unlike `_.without`, this method mutates `array`.\n - `SameValueZero` comparisons are like strict equality comparisons, e.g. `===`,\n   except that `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\n   for more details.",
     "memberof": "_",
     "params": [
       {
@@ -1774,7 +1791,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -1845,7 +1862,7 @@
     "name": "slice",
     "scope": "static",
     "kind": "function",
-    "description": "Slices `array` from the `start` index up to, but not including, the `end` index.\n\n**Note:** This function is used instead of `Array#slice` to support node lists\nin IE < 9 and to ensure dense arrays are returned.",
+    "description": "Creates a slice of `array` from `start` up to, but not including, `end`.\n\n**Note:** This function is used instead of `Array#slice` to support node\nlists in IE < 9 and to ensure dense arrays are returned.",
     "memberof": "_",
     "params": [
       {
@@ -1865,7 +1882,7 @@
         },
         "optional": true,
         "defaultvalue": "0",
-        "description": "The start index.",
+        "description": "The start position.",
         "name": "start"
       },
       {
@@ -1876,7 +1893,7 @@
         },
         "optional": true,
         "defaultvalue": "array.length",
-        "description": "The end index.",
+        "description": "The end position.",
         "name": "end"
       }
     ],
@@ -1898,7 +1915,7 @@
     "name": "sortedIndex",
     "scope": "static",
     "kind": "function",
-    "description": "Uses a binary search to determine the lowest index at which a value should\nbe inserted into a given sorted array in order to maintain the sort order\nof the array. If an iteratee function is provided it is invoked for `value`\nand each element of `array` to compute their sort ranking. The iteratee\nis bound to `thisArg` and invoked with one argument; (value).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Uses a binary search to determine the lowest index at which `value` should\nbe inserted into `array` in order to maintain its sort order. If an iteratee\nfunction is provided it is invoked for `value` and each element of `array`\nto compute their sort ranking. The iteratee is bound to `thisArg` and\ninvoked with one argument; (value).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -1907,7 +1924,7 @@
             "Array"
           ]
         },
-        "description": "The array to inspect.",
+        "description": "The sorted array to inspect.",
         "name": "array"
       },
       {
@@ -1928,7 +1945,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -1964,7 +1981,7 @@
     "name": "sortedLastIndex",
     "scope": "static",
     "kind": "function",
-    "description": "This method is like `_.sortedIndex` except that it returns the highest\nindex at which a value should be inserted into a given sorted array in\norder to maintain the sort order of the array.",
+    "description": "This method is like `_.sortedIndex` except that it returns the highest\nindex at which `value` should be inserted into `array` in order to\nmaintain its sort order.",
     "memberof": "_",
     "params": [
       {
@@ -1973,7 +1990,7 @@
             "Array"
           ]
         },
-        "description": "The array to inspect.",
+        "description": "The sorted array to inspect.",
         "name": "array"
       },
       {
@@ -1994,7 +2011,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -2163,7 +2180,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per element.",
         "name": "predicate"
       },
@@ -2179,7 +2196,7 @@
       }
     ],
     "examples": [
-      "_.takeRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [2, 3]\n\nvar users = [\n  { 'user': 'barney',  'employer': 'slate' },\n  { 'user': 'fred',    'employer': 'slate', 'blocked': true },\n  { 'user': 'pebbles', 'employer': 'na',    'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeRightWhile(users, 'blocked'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeRightWhile(users, { 'employer': 'na' }), 'user');\n// => ['pebbles']"
+      "_.takeRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [2, 3]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': false },\n  { 'user': 'fred',    'status': 'busy', 'active': true },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeRightWhile(users, 'active'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeRightWhile(users, { 'status': 'away' }), 'user');\n// => ['pebbles']"
     ],
     "returns": [
       {
@@ -2225,7 +2242,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per element.",
         "name": "predicate"
       },
@@ -2241,7 +2258,7 @@
       }
     ],
     "examples": [
-      "_.takeWhile([1, 2, 3], function(n) { return n < 3; });\n// => [1, 2]\n\nvar users = [\n  { 'user': 'barney',  'employer': 'slate', 'blocked': true },\n  { 'user': 'fred',    'employer': 'slate' },\n  { 'user': 'pebbles', 'employer': 'na',    'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeWhile(users, 'blocked'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeWhile(users, { 'employer': 'slate' }), 'user');\n// => ['barney', 'fred']"
+      "_.takeWhile([1, 2, 3], function(n) { return n < 3; });\n// => [1, 2]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': true },\n  { 'user': 'fred',    'status': 'busy', 'active': false },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeWhile(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeWhile(users, { 'status': 'busy' }), 'user');\n// => ['barney', 'fred']"
     ],
     "returns": [
       {
@@ -2266,7 +2283,7 @@
     "name": "union",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of unique values, in order, of the provided arrays using\n`SameValueZero` for equality comparisons.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Creates an array of unique values, in order, of the provided arrays using\n`SameValueZero` for equality comparisons.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -2302,7 +2319,7 @@
     "name": "unique",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a duplicate-value-free version of an array using `SameValueZero`\nfor equality comparisons. Providing `true` for `isSorted` performs a faster\nsearch algorithm for sorted arrays. If an iteratee function is provided it\nis invoked for each value in the array to generate the criterion by which\nuniqueness is computed. The `iteratee` is bound to `thisArg` and invoked\nwith three arguments; (value, index, array).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Creates a duplicate-value-free version of an array using `SameValueZero`\nfor equality comparisons. Providing `true` for `isSorted` performs a faster\nsearch algorithm for sorted arrays. If an iteratee function is provided it\nis invoked for each value in the array to generate the criterion by which\nuniqueness is computed. The `iteratee` is bound to `thisArg` and invoked\nwith three arguments; (value, index, array).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "alias": "unique",
     "params": [
@@ -2322,7 +2339,6 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "false",
         "description": "Specify the array is sorted.",
         "name": "isSorted"
       },
@@ -2404,7 +2420,7 @@
     "name": "without",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array excluding all provided values using `SameValueZero` for\nequality comparisons.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "description": "Creates an array excluding all provided values using `SameValueZero` for\nequality comparisons.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -2543,7 +2559,7 @@
         "optional": true,
         "defaultvalue": "[]",
         "description": "The property values.",
-        "name": "vals"
+        "name": "values"
       }
     ],
     "examples": [
@@ -2581,7 +2597,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40 },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\nvar youngest = _.chain(users)\n    .sortBy('age')\n    .map(function(chr) { return chr.user + ' is ' + chr.age; })\n    .first()\n    .value();\n// => 'pebbles is 1'"
+      "var users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40 },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\nvar youngest = _.chain(users)\n  .sortBy('age')\n  .map(function(chr) { return chr.user + ' is ' + chr.age; })\n  .first()\n  .value();\n// => 'pebbles is 1'"
     ],
     "returns": [
       {
@@ -2590,7 +2606,7 @@
             "Object"
           ]
         },
-        "description": "Returns the new wrapper object."
+        "description": "Returns the new `lodash` object."
       }
     ],
     "category": "Chain",
@@ -2710,7 +2726,7 @@
     "description": "Enables explicit method chaining on the wrapper object.",
     "memberof": "_",
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// without explicit chaining\n_(users).first();\n// => { 'user': 'barney', 'age': 36 }\n\n// with explicit chaining\n_(users).chain()\n  .first()\n  .pick('age')\n  .value();\n// => { 'age': 36 }"
+      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// without explicit chaining\n_(users).first();\n// => { 'user': 'barney', 'age': 36 }\n\n// with explicit chaining\n_(users).chain()\n  .first()\n  .pick('user')\n  .value();\n// => { 'user': 'barney' }"
     ],
     "returns": [
       {
@@ -2719,7 +2735,29 @@
             "*"
           ]
         },
-        "description": "Returns the wrapper object."
+        "description": "Returns the `lodash` object."
+      }
+    ],
+    "category": "Chain"
+  },
+  {
+    "id": "_.reverse",
+    "name": "reverse",
+    "scope": "static",
+    "kind": "member",
+    "description": "Reverses the wrapped array so the first element becomes the last, the\nsecond element becomes the second to last, and so on.\n\n**Note:** This method mutates the wrapped array.",
+    "memberof": "_",
+    "examples": [
+      "var array = [1, 2, 3];\n\n_(array).reverse().value()\n// => [3, 2, 1]\n\nconsole.log(array);\n// => [3, 2, 1]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "Returns the new reversed `lodash` object."
       }
     ],
     "category": "Chain"
@@ -2747,15 +2785,15 @@
     "category": "Chain"
   },
   {
-    "id": "_.valueOf",
-    "name": "valueOf",
+    "id": "_.value",
+    "name": "value",
     "scope": "static",
     "kind": "member",
-    "description": "Extracts the unwrapped value from its wrapper.",
+    "description": "Executes the chained sequence to extract the unwrapped value.",
     "memberof": "_",
-    "alias": "toJSON, value",
+    "alias": "toJSON, valueOf",
     "examples": [
-      "_([1, 2, 3]).valueOf();\n// => [1, 2, 3]"
+      "_([1, 2, 3]).value();\n// => [1, 2, 3]"
     ],
     "returns": [
       {
@@ -2764,7 +2802,7 @@
             "*"
           ]
         },
-        "description": "Returns the unwrapped value."
+        "description": "Returns the resolved unwrapped value."
       }
     ],
     "category": "Chain"
@@ -2774,7 +2812,7 @@
     "name": "at",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of elements corresponding to the specified keys, or indexes,\nof the collection. Keys may be specified as individual arguments or as arrays\nof keys.",
+    "description": "Creates an array of elements corresponding to the specified keys, or indexes,\nof `collection`. Keys may be specified as individual arguments or as arrays\nof keys.",
     "memberof": "_",
     "params": [
       {
@@ -2820,13 +2858,12 @@
     "codeName": "at"
   },
   {
-    "id": "_.include",
-    "name": "include",
-    "scope": "static",
+    "id": "_.contains, include",
+    "name": " include",
     "kind": "function",
-    "description": "Checks if `value` is present in `collection` using  `SameValueZero` for\nequality comparisons. If `fromIndex` is negative, it is used as the offset\nfrom the end of the collection.\n\n**Note:** `SameValueZero` is like strict equality, e.g. `===`, except that\n`NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
-    "memberof": "_",
-    "alias": "include",
+    "description": "Checks if `value` is in `collection` using `SameValueZero` for equality\ncomparisons. If `fromIndex` is negative, it is used as the offset from\nthe end of `collection`.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
+    "memberof": "_.contains",
+    "alias": "contains, include",
     "params": [
       {
         "type": {
@@ -2845,7 +2882,7 @@
             "*"
           ]
         },
-        "description": "The value to check for.",
+        "description": "The value to search for.",
         "name": "target"
       },
       {
@@ -2861,7 +2898,7 @@
       }
     ],
     "examples": [
-      "_.contains([1, 2, 3], 1);\n// => true\n\n_.contains([1, 2, 3], 1, 2);\n// => false\n\n_.contains({ 'user': 'fred', 'age': 40 }, 'fred');\n// => true\n\n_.contains('pebbles', 'eb');\n// => true"
+      "_.includes([1, 2, 3], 1);\n// => true\n\n_.includes([1, 2, 3], 1, 2);\n// => false\n\n_.includes({ 'user': 'fred', 'age': 40 }, 'fred');\n// => true\n\n_.includes('pebbles', 'eb');\n// => true"
     ],
     "returns": [
       {
@@ -2874,7 +2911,7 @@
       }
     ],
     "category": "Collection",
-    "codeName": "contains"
+    "codeName": "includes"
   },
   {
     "id": "_.countBy",
@@ -2904,7 +2941,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -2964,7 +3001,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3024,7 +3061,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3040,7 +3077,7 @@
       }
     ],
     "examples": [
-      "var evens = _.filter([1, 2, 3, 4], function(n) { return n % 2 == 0; });\n// => [2, 4]\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40, 'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.filter(users, 'blocked');\n// => [{ 'user': 'fred', 'age': 40, 'blocked': true }]\n\n// using \"_.where\" callback shorthand\n_.filter(users, { 'age': 36 });\n// => [{ 'user': 'barney', 'age': 36 }]"
+      "var evens = _.filter([1, 2, 3, 4], function(n) { return n % 2 == 0; });\n// => [2, 4]\n\nvar users = [\n  { 'user': 'barney', 'age': 36, 'active': false },\n  { 'user': 'fred',   'age': 40, 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.filter(users, 'active'), 'user');\n// => ['fred']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.filter(users, { 'age': 36 }), 'user');\n// => ['barney']"
     ],
     "returns": [
       {
@@ -3084,7 +3121,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3100,7 +3137,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40, 'blocked': true },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\n_.find(users, function(chr) {\n  return chr.age < 40;\n});\n// => { 'user': 'barney', 'age': 36 }\n\n// using \"_.where\" callback shorthand\n_.find(users, { 'age': 1 });\n// =>  { 'user': 'pebbles', 'age': 1 }\n\n// using \"_.pluck\" callback shorthand\n_.find(users, 'blocked');\n// => { 'user': 'fred', 'age': 40, 'blocked': true }"
+      "var users = [\n  { 'user': 'barney',  'age': 36, 'active': false },\n  { 'user': 'fred',    'age': 40, 'active': true },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n_.result(_.find(users, function(chr) { return chr.age < 40; }), 'user');\n// => 'barney'\n\n// using \"_.where\" callback shorthand\n_.result(_.find(users, { 'age': 1 }), 'user');\n// => 'pebbles'\n\n// using \"_.pluck\" callback shorthand\n_.result(_.find(users, 'active'), 'user');\n// => 'fred'"
     ],
     "returns": [
       {
@@ -3143,7 +3180,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3204,7 +3241,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36, 'employer': 'slate' },\n  { 'user': 'fred',   'age': 40, 'employer': 'slate' }\n];\n\n_.findWhere(users, { 'employer': 'slate' });\n// => { 'user': 'barney', 'age': 36, 'employer': 'slate' }\n\n_.findWhere(users, { 'age': 40 });\n// =>  { 'user': 'fred', 'age': 40, 'employer': 'slate' }"
+      "var users = [\n  { 'user': 'barney', 'age': 36, 'status': 'busy' },\n  { 'user': 'fred',   'age': 40, 'status': 'busy' }\n];\n\n_.result(_.findWhere(users, { 'status': 'busy' }), 'user');\n// => 'barney'\n\n_.result(_.findWhere(users, { 'age': 40 }), 'user');\n// => 'fred'"
     ],
     "returns": [
       {
@@ -3246,7 +3283,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -3306,7 +3343,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -3344,7 +3381,7 @@
     "name": "groupBy",
     "scope": "static",
     "kind": "member",
-    "description": "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding\nvalue of each key is an array of the elements responsible for generating\nthe key. The `iteratee` is bound to `thisArg` and invoked with three\narguments; (value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding value\nof each key is an array of the elements responsible for generating the key.\nThe `iteratee` is bound to `thisArg` and invoked with three arguments;\n(value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -3367,7 +3404,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -3403,7 +3440,7 @@
     "name": "indexBy",
     "scope": "static",
     "kind": "member",
-    "description": "Creates an object composed of keys generated from the results of running\neach element of the collection through `iteratee`. The corresponding value\nof each key is the last element responsible for generating the key. The\niteratee function is bound to `thisArg` and invoked with three arguments;\n(value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding value\nof each key is the last element responsible for generating the key. The\niteratee function is bound to `thisArg` and invoked with three arguments;\n(value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -3426,7 +3463,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -3462,7 +3499,7 @@
     "name": "invoke",
     "scope": "static",
     "kind": "function",
-    "description": "Invokes the method named by `methodName` on each element in the collection,\nreturning an array of the results of each invoked method. Any additional\narguments are provided to each invoked method. If `methodName` is a function\nit is invoked for, and `this` bound to, each element in the collection.",
+    "description": "Invokes the method named by `methodName` on each element in `collection`,\nreturning an array of the results of each invoked method. Any additional\narguments are provided to each invoked method. If `methodName` is a function\nit is invoked for, and `this` bound to, each element in `collection`.",
     "memberof": "_",
     "params": [
       {
@@ -3519,7 +3556,7 @@
     "name": "collect",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of values by running each element in the collection through\n`iteratee`. The `iteratee` is bound to `thisArg` and invoked with three\narguments; (value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Creates an array of values by running each element in `collection` through\n`iteratee`. The `iteratee` is bound to `thisArg` and invoked with three\narguments; (value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "alias": "collect",
     "params": [
@@ -3543,7 +3580,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -3559,7 +3596,7 @@
       }
     ],
     "examples": [
-      "_.map([1, 2, 3], function(n) { return n * 3; });\n// => [3, 6, 9]\n\n_.map({ 'one': 1, 'two': 2, 'three': 3 }, function(n) { return n * 3; });\n// => [3, 6, 9] (iteration order is not guaranteed)\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// using \"_.pluck\" callback shorthand\n_.map(users, 'user');\n// => ['barney', 'fred']"
+      "_.map([1, 2, 3], function(n) { return n * 3; });\n// => [3, 6, 9]\n\n_.map({ 'one': 1, 'two': 2, 'three': 3 }, function(n) { return n * 3; });\n// => [3, 6, 9] (iteration order is not guaranteed)\n\nvar users = [\n  { 'user': 'barney' },\n  { 'user': 'fred' }\n];\n\n// using \"_.pluck\" callback shorthand\n_.map(users, 'user');\n// => ['barney', 'fred']"
     ],
     "returns": [
       {
@@ -3579,7 +3616,7 @@
     "name": "max",
     "scope": "static",
     "kind": "function",
-    "description": "Retrieves the maximum value of `collection`. If the collection is empty\nor falsey `-Infinity` is returned. If an iteratee function is provided it\nis invoked for each value in the collection to generate the criterion by\nwhich the value is ranked. The `iteratee` is bound to `thisArg` and invoked\nwith three arguments; (value, index, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Retrieves the maximum value of `collection`. If `collection` is empty or\nfalsey `-Infinity` is returned. If an iteratee function is provided it is\ninvoked for each value in `collection` to generate the criterion by which\nthe value is ranked. The `iteratee` is bound to `thisArg` and invoked with\nthree arguments; (value, index, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -3637,7 +3674,7 @@
     "name": "min",
     "scope": "static",
     "kind": "function",
-    "description": "Retrieves the minimum value of `collection`. If the collection is empty\nor falsey `Infinity` is returned. If an iteratee function is provided it\nis invoked for each value in the collection to generate the criterion by\nwhich the value is ranked. The `iteratee` is bound to `thisArg` and invoked\nwith three arguments; (value, index, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Retrieves the minimum value of `collection`. If `collection` is empty or\nfalsey `Infinity` is returned. If an iteratee function is provided it is\ninvoked for each value in `collection` to generate the criterion by which\nthe value is ranked. The `iteratee` is bound to `thisArg` and invoked with\nthree arguments; (value, index, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -3718,7 +3755,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3734,7 +3771,7 @@
       }
     ],
     "examples": [
-      "_.partition([1, 2, 3], function(n) { return n % 2; });\n// => [[1, 3], [2]]\n\n_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);\n// => [[1, 3], [2]]\n\nvar users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40, 'blocked': true },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\n// using \"_.where\" callback shorthand\n_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });\n// => [['pebbles'], ['barney', 'fred']]\n\n// using \"_.pluck\" callback shorthand\n_.map(_.partition(users, 'blocked'), function(array) { return _.pluck(array, 'user'); });\n// => [['fred'], ['barney', 'pebbles']]"
+      "_.partition([1, 2, 3], function(n) { return n % 2; });\n// => [[1, 3], [2]]\n\n_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);\n// => [[1, 3], [2]]\n\nvar users = [\n  { 'user': 'barney',  'age': 36, 'active': false },\n  { 'user': 'fred',    'age': 40, 'active': true },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n// using \"_.where\" callback shorthand\n_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });\n// => [['pebbles'], ['barney', 'fred']]\n\n// using \"_.pluck\" callback shorthand\n_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });\n// => [['fred'], ['barney', 'pebbles']]"
     ],
     "returns": [
       {
@@ -3754,7 +3791,7 @@
     "name": "pluck",
     "scope": "static",
     "kind": "function",
-    "description": "Retrieves the value of a specified property from all elements in the collection.",
+    "description": "Retrieves the value of a specified property from all elements in `collection`.",
     "memberof": "_",
     "params": [
       {
@@ -3798,7 +3835,7 @@
     "id": "_.foldl, inject",
     "name": " inject",
     "kind": "function",
-    "description": "Reduces a collection to a value which is the accumulated result of running\neach element in the collection through `iteratee`, where each successive\ninvocation is supplied the return value of the previous. If `accumulator`\nis not provided the first element of the collection is used as the initial\nvalue. The `iteratee` is bound to `thisArg`and invoked with four arguments;\n(accumulator, value, index|key, collection).",
+    "description": "Reduces `collection` to a value which is the accumulated result of running\neach element in `collection` through `iteratee`, where each successive\ninvocation is supplied the return value of the previous. If `accumulator`\nis not provided the first element of `collection` is used as the initial\nvalue. The `iteratee` is bound to `thisArg`and invoked with four arguments;\n(accumulator, value, index|key, collection).",
     "memberof": "_.foldl",
     "alias": "foldl, inject",
     "params": [
@@ -3820,7 +3857,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -3888,7 +3925,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -3957,7 +3994,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -3973,7 +4010,7 @@
       }
     ],
     "examples": [
-      "var odds = _.reject([1, 2, 3, 4], function(n) { return n % 2 == 0; });\n// => [1, 3]\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40, 'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.reject(users, 'blocked');\n// => [{ 'user': 'barney', 'age': 36 }]\n\n// using \"_.where\" callback shorthand\n_.reject(users, { 'age': 36 });\n// => [{ 'user': 'fred', 'age': 40, 'blocked': true }]"
+      "var odds = _.reject([1, 2, 3, 4], function(n) { return n % 2 == 0; });\n// => [1, 3]\n\nvar users = [\n  { 'user': 'barney', 'age': 36, 'active': false },\n  { 'user': 'fred',   'age': 40, 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.reject(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.reject(users, { 'age': 36 }), 'user');\n// => ['fred']"
     ],
     "returns": [
       {
@@ -4081,7 +4118,7 @@
     "name": "size",
     "scope": "static",
     "kind": "function",
-    "description": "Gets the size of the collection by returning `collection.length` for\narray-like values or the number of own enumerable properties for objects.",
+    "description": "Gets the size of `collection` by returning `collection.length` for\narray-like values or the number of own enumerable properties for objects.",
     "memberof": "_",
     "params": [
       {
@@ -4141,7 +4178,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -4157,7 +4194,7 @@
       }
     ],
     "examples": [
-      "_.some([null, 0, 'yes', false], Boolean);\n// => true\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40, 'blocked': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.some(users, 'blocked');\n// => true\n\n// using \"_.where\" callback shorthand\n_.some(users, { 'age': 1 });\n// => false"
+      "_.some([null, 0, 'yes', false], Boolean);\n// => true\n\nvar users = [\n  { 'user': 'barney', 'age': 36, 'active': false },\n  { 'user': 'fred',   'age': 40, 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.some(users, 'active');\n// => true\n\n// using \"_.where\" callback shorthand\n_.some(users, { 'age': 1 });\n// => false"
     ],
     "returns": [
       {
@@ -4177,7 +4214,7 @@
     "name": "sortBy",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of elements, sorted in ascending order by the results of\nrunning each element in a collection through `iteratee`. This method performs\na stable sort, that is, it preserves the original sort order of equal elements.\nThe `iteratee` is bound to `thisArg` and invoked with three arguments;\n(value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an array of property names is provided for `iteratee` the collection\nis sorted by each property value.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
+    "description": "Creates an array of elements, sorted in ascending order by the results of\nrunning each element in a collection through `iteratee`. This method performs\na stable sort, that is, it preserves the original sort order of equal elements.\nThe `iteratee` is bound to `thisArg` and invoked with three arguments;\n(value, index|key, collection).\n\nIf a property name is provided for `iteratee` the created \"_.pluck\" style\ncallback returns the property value of the given element.\n\nIf an object is provided for `iteratee` the created \"_.where\" style callback\nreturns `true` for elements that have the properties of the given object,\nelse `false`.",
     "memberof": "_",
     "params": [
       {
@@ -4201,8 +4238,8 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
-        "description": "The function\n invoked per iteration. If property name(s) or an object is provided it\n is used to create a \"_.pluck\" or \"_.where\" style callback respectively.",
+        "defaultvalue": "_.identity",
+        "description": "The function\n invoked per iteration. If a property name or an object is provided it is\n used to create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
       {
@@ -4217,7 +4254,7 @@
       }
     ],
     "examples": [
-      "_.sortBy([1, 2, 3], function(n) { return Math.sin(n); });\n// => [3, 1, 2]\n\n_.sortBy([1, 2, 3], function(n) { return this.sin(n); }, Math);\n// => [3, 1, 2]\n\nvar users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40 },\n  { 'user': 'barney',  'age': 26 },\n  { 'user': 'fred',    'age': 30 }\n];\n\n// using \"_.pluck\" callback shorthand\n_.map(_.sortBy(users, 'age'), _.values);\n// => [['barney', 26], ['fred', 30], ['barney', 36], ['fred', 40]]\n\n// sorting by multiple properties\n_.map(_.sortBy(users, ['user', 'age']), _.values);\n// = > [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]"
+      "_.sortBy([1, 2, 3], function(n) { return Math.sin(n); });\n// => [3, 1, 2]\n\n_.sortBy([1, 2, 3], function(n) { return this.sin(n); }, Math);\n// => [3, 1, 2]\n\nvar users = [\n  { 'user': 'fred' },\n  { 'user': 'pebbles' },\n  { 'user': 'barney' }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.sortBy(users, 'user'), 'user');\n// => ['barney', 'fred', 'pebbles']"
     ],
     "returns": [
       {
@@ -4231,6 +4268,53 @@
     ],
     "category": "Collection",
     "codeName": "sortBy"
+  },
+  {
+    "id": "_.sortByAll",
+    "name": "sortByAll",
+    "scope": "static",
+    "kind": "function",
+    "description": "This method is like `_.sortBy` except that it sorts by property names\ninstead of an iteratee function.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array",
+            "Object",
+            "string"
+          ]
+        },
+        "description": "The collection to iterate over.",
+        "name": "collection"
+      },
+      {
+        "type": {
+          "names": [
+            "string",
+            "Array.<string>"
+          ]
+        },
+        "variable": true,
+        "description": "The property names to sort by,\n specified as individual property names or arrays of property names.",
+        "name": "props"
+      }
+    ],
+    "examples": [
+      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 },\n  { 'user': 'barney', 'age': 26 },\n  { 'user': 'fred',   'age': 30 }\n];\n\n_.map(_.sortByAll(users, ['user', 'age']), _.values);\n// => [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        },
+        "description": "Returns the new sorted array."
+      }
+    ],
+    "category": "Collection",
+    "codeName": "sortByAll"
   },
   {
     "id": "_.toArray",
@@ -4298,7 +4382,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36, 'employer': 'slate', 'pets': ['hoppy'] },\n  { 'user': 'fred',   'age': 40, 'employer': 'slate', 'pets': ['baby puss', 'dino'] }\n];\n\n_.pluck(_.where(users, { 'age': 36 }), 'user');\n// => ['barney']\n\n_.pluck(_.where(users, { 'pets': ['dino'] }), 'user');\n// => ['fred']\n\n_.pluck(_.where(users, { 'employer': 'slate' }), 'user');\n// => ['barney', 'fred']"
+      "var users = [\n  { 'user': 'barney', 'age': 36, 'status': 'busy', 'pets': ['hoppy'] },\n  { 'user': 'fred',   'age': 40, 'status': 'busy', 'pets': ['baby puss', 'dino'] }\n];\n\n_.pluck(_.where(users, { 'age': 36 }), 'user');\n// => ['barney']\n\n_.pluck(_.where(users, { 'pets': ['dino'] }), 'user');\n// => ['fred']\n\n_.pluck(_.where(users, { 'status': 'busy' }), 'user');\n// => ['barney', 'fred']"
     ],
     "returns": [
       {
@@ -4314,11 +4398,24 @@
     "codeName": "where"
   },
   {
+    "id": "_.now",
+    "name": "now",
+    "scope": "static",
+    "kind": "member",
+    "description": "Gets the number of milliseconds that have elapsed since the Unix epoch\n(1 January 1970 00:00:00 UTC).",
+    "memberof": "_",
+    "examples": [
+      "_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());\n// => logs the number of milliseconds it took for the deferred function to be invoked"
+    ],
+    "category": "Date",
+    "codeName": "now"
+  },
+  {
     "id": "_.after",
     "name": "after",
     "scope": "static",
     "kind": "function",
-    "description": "The opposite of `_.before`; this method creates a function that invokes\n`func` only after it is called `n` times.",
+    "description": "The opposite of `_.before`; this method creates a function that invokes\n`func` once it is called `n` or more times.",
     "memberof": "_",
     "params": [
       {
@@ -4355,6 +4452,57 @@
     ],
     "category": "Function",
     "codeName": "after"
+  },
+  {
+    "id": "_.ary",
+    "name": "ary",
+    "scope": "static",
+    "kind": "function",
+    "description": "Creates a function that accepts up to `n` arguments ignoring any\nadditional arguments.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "The function to cap arguments for.",
+        "name": "func"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "func.length",
+        "description": "The arity cap.",
+        "name": "n"
+      }
+    ],
+    "examples": [
+      "_.map(['6', '8', '10'], _.ary(parseInt, 1));\n// => [6, 8, 10]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "Returns the new function."
+      }
+    ],
+    "category": "Function",
+    "codeName": "ary",
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
   },
   {
     "id": "_.before",
@@ -4404,7 +4552,7 @@
     "name": "bind",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that invokes `func` with the `this` binding of `thisArg`\nand prepends any additional `bind` arguments to those provided to the bound\nfunction.\n\n**Note:** Unlike native `Function#bind` this method does not set the `length`\nproperty of bound functions.",
+    "description": "Creates a function that invokes `func` with the `this` binding of `thisArg`\nand prepends any additional `_.bind` arguments to those provided to the\nbound function.\n\nThe `_.bind.placeholder` value, which defaults to `_` in monolithic builds,\nmay be used as a placeholder for partially applied arguments.\n\n**Note:** Unlike native `Function#bind` this method does not set the `length`\nproperty of bound functions.",
     "memberof": "_",
     "params": [
       {
@@ -4439,7 +4587,7 @@
       }
     ],
     "examples": [
-      "var func = function(greeting) {\n  return greeting + ' ' + this.user;\n};\n\nfunc = _.bind(func, { 'user': 'fred' }, 'hi');\nfunc();\n// => 'hi fred'"
+      "var greet = function(greeting, punctuation) {\n  return greeting + ' ' + this.user + punctuation;\n};\n\nvar object = { 'user': 'fred' };\n\nvar bound = _.bind(greet, object, 'hi');\nbound('!');\n// => 'hi fred!'\n\n// using placeholders\nvar bound = _.bind(greet, object, _, '!');\nbound('hi');\n// => 'hi fred!'"
     ],
     "returns": [
       {
@@ -4505,7 +4653,7 @@
     "name": "bindKey",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that invokes the method at `object[key]` and prepends\nany additional `bindKey` arguments to those provided to the bound function.\nThis method differs from `_.bind` by allowing bound functions to reference\nmethods that may be redefined or don't yet exist.\nSee [Peter Michaux's article](http://michaux.ca/articles/lazy-function-definition-pattern)\nfor more details.",
+    "description": "Creates a function that invokes the method at `object[key]` and prepends\nany additional `_.bindKey` arguments to those provided to the bound function.\n\nThis method differs from `_.bind` by allowing bound functions to reference\nmethods that may be redefined or don't yet exist.\nSee [Peter Michaux's article](http://michaux.ca/articles/lazy-function-definition-pattern)\nfor more details.\n\nThe `_.bindKey.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.",
     "memberof": "_",
     "params": [
       {
@@ -4539,7 +4687,7 @@
       }
     ],
     "examples": [
-      "var object = {\n  'user': 'fred',\n  'greet': function(greeting) {\n    return greeting + ' ' + this.user;\n  }\n};\n\nvar func = _.bindKey(object, 'greet', 'hi');\nfunc();\n// => 'hi fred'\n\nobject.greet = function(greeting) {\n  return greeting + 'ya ' + this.user + '!';\n};\n\nfunc();\n// => 'hiya fred!'"
+      "var object = {\n  'user': 'fred',\n  'greet': function(greeting, punctuation) {\n    return greeting + ' ' + this.user + punctuation;\n  }\n};\n\nvar bound = _.bindKey(object, 'greet', 'hi');\nbound('!');\n// => 'hi fred!'\n\nobject.greet = function(greeting, punctuation) {\n  return greeting + 'ya ' + this.user + punctuation;\n};\n\nbound('!');\n// => 'hiya fred!'\n\n// using placeholders\nvar bound = _.bindKey(object, 'greet', _, '!');\nbound('hi');\n// => 'hiya fred!'"
     ],
     "returns": [
       {
@@ -4559,7 +4707,7 @@
     "name": "curry",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that accepts one or more arguments of `func` that when\ncalled either invokes `func` returning its result if all `func` arguments\nhave been provided, or returns a function that accepts one or more of the\nremaining `func` arguments, and so on. The arity of `func` can be specified\nif `func.length` is not sufficient.\n\n**Note:** This method does not set the `length` property of curried functions.",
+    "description": "Creates a function that accepts one or more arguments of `func` that when\ncalled either invokes `func` returning its result, if all `func` arguments\nhave been provided, or returns a function that accepts one or more of the\nremaining `func` arguments, and so on. The arity of `func` can be specified\nif `func.length` is not sufficient.\n\nThe `_.curry.placeholder` value, which defaults to `_` in monolithic builds,\nmay be used as a placeholder for provided arguments.\n\n**Note:** This method does not set the `length` property of curried functions.",
     "memberof": "_",
     "params": [
       {
@@ -4584,7 +4732,7 @@
       }
     ],
     "examples": [
-      "var curried = _.curry(function(a, b, c) {\n  console.log([a, b, c]);\n});\n\ncurried(1)(2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]"
+      "var abc = function(a, b, c) {\n  return [a, b, c];\n};\n\nvar curried = _.curry(abc);\n\ncurried(1)(2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]\n\n// using placeholders\ncurried(1)(_, 3)(2);\n// => [1, 2, 3]"
     ],
     "returns": [
       {
@@ -4610,7 +4758,7 @@
     "name": "curryRight",
     "scope": "static",
     "kind": "function",
-    "description": "This method is like `_.curry` except that arguments are applied to `func`\nin the manner of `_.partialRight` instead of `_.partial`.\n\n**Note:** This method does not set the `length` property of curried functions.",
+    "description": "This method is like `_.curry` except that arguments are applied to `func`\nin the manner of `_.partialRight` instead of `_.partial`.\n\nThe `_.curryRight.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for provided arguments.\n\n**Note:** This method does not set the `length` property of curried functions.",
     "memberof": "_",
     "params": [
       {
@@ -4635,7 +4783,7 @@
       }
     ],
     "examples": [
-      "var curried = _.curryRight(function(a, b, c) {\n  console.log([a, b, c]);\n});\n\ncurried(3)(2)(1);\n// => [1, 2, 3]\n\ncurried(2, 3)(1);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]"
+      "var abc = function(a, b, c) {\n  return [a, b, c];\n};\n\nvar curried = _.curryRight(abc);\n\ncurried(3)(2)(1);\n// => [1, 2, 3]\n\ncurried(2, 3)(1);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]\n\n// using placeholders\ncurried(3)(1, _)(2);\n// => [1, 2, 3]"
     ],
     "returns": [
       {
@@ -4845,7 +4993,7 @@
     "name": "flow",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that invokes the provided functions with the `this`\nbinding of the created function, where each successive invocation is\nsupplied the return value of the previous.",
+    "description": "Creates a function that returns the result of invoking the provided\nfunctions with the `this` binding of the created function, where each\nsuccessive invocation is supplied the return value of the previous.",
     "memberof": "_",
     "params": [
       {
@@ -4917,7 +5065,7 @@
     "name": "memoize",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that memoizes the result of `func`. If `resolver` is\nprovided it determines the cache key for storing the result based on the\narguments provided to the memoized function. By default, the first argument\nprovided to the memoized function is used as the cache key. The `func` is\ninvoked with the `this` binding of the memoized function. The result cache\nis exposed as the `cache` property on the memoized function.\n\nThe mechanism by which memoize caches results can be customized by setting\na value for the `_.memoize.Cache` property. The objects created by this\nconstructor must (partially) implement the `Map` interface with `get`,\n`set` and `has` functions.",
+    "description": "Creates a function that memoizes the result of `func`. If `resolver` is\nprovided it determines the cache key for storing the result based on the\narguments provided to the memoized function. By default, the first argument\nprovided to the memoized function is coerced to a string and used as the\ncache key. The `func` is invoked with the `this` binding of the memoized\nfunction.\n\n**Note:** The cache is exposed as the `cache` property on the memoized\nfunction. Its creation may be customized by replacing the `_.memoize.Cache`\nconstructor with one whose instances implement the ES6 `Map` method interface\nof `get`, `has`, and `set`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-the-map-prototype-object)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -4941,7 +5089,7 @@
       }
     ],
     "examples": [
-      "var fibonacci = _.memoize(function(n) {\n  return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);\n});\n\nfibonacci(9)\n// => 34\n\n// modifying the result cache\nvar upperCase = _.memoize(function(string) {\n  return string.toUpperCase();\n});\n\nupperCase('fred');\n// => 'FRED'\n\nupperCase.cache.fred = 'BARNEY'\nupperCase('fred');\n// => 'BARNEY'\n\n// Using a custom memoize cache\n_.memoize.Cache = Map;\n\n// Using a hand-cranked memoize cache wrapper.\nfunction MyCache() {\n  this.__wrapper__ = [];\n}\n\n_.extend(MyCache.prototype, {\n  get: function(key) {\n    return _.find(this.__wrapper__, function(cached) {\n      return _.identity(key) === cached.key;\n    }).value;\n  },\n  set: function(key, value) {\n    this.__wrapper__.push({ key: key, value: value });\n    return this;\n  },\n  has: function(key) {\n    return _.some(this.__wrapper__, function(cached) {\n      return _.identity(key) === cached;\n    });\n  }\n});\n\n_.memoize.Cache = MyCache;"
+      "var fibonacci = _.memoize(function(n) {\n  return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);\n});\n\nfibonacci(9)\n// => 34\n\n// modifying the result cache\nvar upperCase = _.memoize(function(string) {\n  return string.toUpperCase();\n});\n\nupperCase('fred');\n// => 'FRED'\n\nupperCase.cache.set('fred, 'BARNEY');\nupperCase('fred');\n// => 'BARNEY'"
     ],
     "returns": [
       {
@@ -4994,7 +5142,7 @@
     "id": "_.once",
     "name": "once",
     "scope": "static",
-    "kind": "member",
+    "kind": "function",
     "description": "Creates a function that is restricted to invoking `func` once. Repeat calls\nto the function return the value of the first call. The `func` is invoked\nwith the `this` binding of the created function.",
     "memberof": "_",
     "params": [
@@ -5034,7 +5182,7 @@
     "name": "partial",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a function that invokes `func` with `partial` arguments prepended\nto those provided to the new function. This method is similar to `_.bind`\nexcept it does **not** alter the `this` binding.\n\n**Note:** This method does not set the `length` property of partially\napplied functions.",
+    "description": "Creates a function that invokes `func` with `partial` arguments prepended\nto those provided to the new function. This method is like `_.bind` except\nit does **not** alter the `this` binding.\n\nThe `_.partial.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.\n\n**Note:** This method does not set the `length` property of partially\napplied functions.",
     "memberof": "_",
     "params": [
       {
@@ -5059,7 +5207,7 @@
       }
     ],
     "examples": [
-      "var greet = function(greeting, name) { return greeting + ' ' + name; };\nvar sayHelloTo = _.partial(greet, 'hello');\nsayHelloTo('fred');\n// => 'hello fred'"
+      "var greet = function(greeting, name) {\n  return greeting + ' ' + name;\n};\n\nvar sayHelloTo = _.partial(greet, 'hello');\nsayHelloTo('fred');\n// => 'hello fred'\n\n// using placeholders\nvar greetFred = _.partial(greet, _, 'fred');\ngreetFred('hi');\n// => 'hi fred'"
     ],
     "returns": [
       {
@@ -5079,7 +5227,7 @@
     "name": "partialRight",
     "scope": "static",
     "kind": "function",
-    "description": "This method is like `_.partial` except that partially applied arguments\nare appended to those provided to the new function.\n\n**Note:** This method does not set the `length` property of partially applied\nfunctions.",
+    "description": "This method is like `_.partial` except that partially applied arguments\nare appended to those provided to the new function.\n\nThe `_.partialRight.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.\n\n**Note:** This method does not set the `length` property of partially\napplied functions.",
     "memberof": "_",
     "params": [
       {
@@ -5104,7 +5252,7 @@
       }
     ],
     "examples": [
-      "var greet = function(greeting, name) { return greeting + ' ' + name; };\nvar greetFred = _.partialRight(greet, 'fred');\ngreetFred('hello');\n// => 'hello fred'\n\n// create a deep `_.defaults`\nvar defaultsDeep = _.partialRight(_.merge, function deep(value, other) {\n  return _.merge(value, other, deep);\n});\n\nvar object = { 'a': { 'b': { 'c': 1 } } },\n    source = { 'a': { 'b': { 'c': 2, 'd': 2 } } };\n\ndefaultsDeep(object, source);\n// => { 'a': { 'b': { 'c': 1, 'd': 2 } } }"
+      "var greet = function(greeting, name) {\n  return greeting + ' ' + name;\n};\n\nvar greetFred = _.partialRight(greet, 'fred');\ngreetFred('hi');\n// => 'hi fred'\n\n// using placeholders\nvar sayHelloTo = _.partialRight(greet, 'hello', _);\nsayHelloTo('fred');\n// => 'hello fred'"
     ],
     "returns": [
       {
@@ -5118,6 +5266,51 @@
     ],
     "category": "Function",
     "codeName": "partialRight"
+  },
+  {
+    "id": "_.rearg",
+    "name": "rearg",
+    "scope": "static",
+    "kind": "function",
+    "description": "Creates a function that invokes `func` with arguments arranged according\nto the specified indexes where the argument value at the first index is\nprovided as the first argument, the argument value at the second index is\nprovided as the second argument, and so on.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "The function to rearrange arguments for.",
+        "name": "func"
+      },
+      {
+        "type": {
+          "names": [
+            "number",
+            "Array.<number>"
+          ]
+        },
+        "variable": true,
+        "description": "The arranged argument indexes,\n specified as individual indexes or arrays of indexes.",
+        "name": "indexes"
+      }
+    ],
+    "examples": [
+      "var rearged = _.rearg(function(a, b, c) {\n  return [a, b, c];\n}, 2, 0, 1);\n\nrearged('b', 'c', 'a')\n// => ['a', 'b', 'c']\n\nvar map = _.rearg(_.map, [1, 0]);\nmap(function(n) { return n * 3; }, [1, 2, 3]);\n// => [3, 6, 9]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "Returns the new function."
+      }
+    ],
+    "category": "Function",
+    "codeName": "rearg"
   },
   {
     "id": "_.throttle",
@@ -5242,7 +5435,7 @@
     "name": "clone",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,\notherwise they are assigned by reference. If `customizer` is provided it is\ninvoked to produce the cloned values. If `customizer` returns `undefined`\ncloning is handled by the method instead. The `customizer` is bound to\n`thisArg` and invoked with two argument; (value, index|key).\n\n**Note:** This method is loosely based on the structured clone algorithm. Functions\nand DOM nodes are **not** cloned. The enumerable properties of `arguments` objects and\nobjects created by constructors other than `Object` are cloned to plain `Object` objects.\nSee the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)\nfor more details.",
+    "description": "Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,\notherwise they are assigned by reference. If `customizer` is provided it is\ninvoked to produce the cloned values. If `customizer` returns `undefined`\ncloning is handled by the method instead. The `customizer` is bound to\n`thisArg` and invoked with two argument; (value, index|key).\n\n**Note:** This method is loosely based on the structured clone algorithm.\nThe enumerable properties of `arguments` objects and objects created by\nconstructors other than `Object` are cloned to plain `Object` objects. An\nempty object is returned for uncloneable values such as functions, DOM nodes,\nMaps, Sets, and WeakMaps. See the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -5261,7 +5454,6 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "false",
         "description": "Specify a deep clone.",
         "name": "isDeep"
       },
@@ -5287,7 +5479,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\nvar shallow = _.clone(users);\nshallow[0] === users[0];\n// => true\n\nvar deep = _.clone(users, true);\ndeep[0] === users[0];\n// => false\n\n_.mixin({\n  'clone': _.partialRight(_.clone, function(value) {\n    return _.isElement(value) ? value.cloneNode(false) : undefined;\n  })\n});\n\nvar clone = _.clone(document.body);\nclone.childNodes.length;\n// => 0"
+      "var users = [\n  { 'user': 'barney' },\n  { 'user': 'fred' }\n];\n\nvar shallow = _.clone(users);\nshallow[0] === users[0];\n// => true\n\nvar deep = _.clone(users, true);\ndeep[0] === users[0];\n// => false\n\n_.mixin({\n  'clone': _.partialRight(_.clone, function(value) {\n    return _.isElement(value) ? value.cloneNode(false) : undefined;\n  })\n});\n\nvar clone = _.clone(document.body);\nclone.childNodes.length;\n// => 0"
     ],
     "returns": [
       {
@@ -5307,7 +5499,7 @@
     "name": "cloneDeep",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a deep clone of `value`. If `customizer` is provided it is invoked\nto produce the cloned values. If `customizer` returns `undefined` cloning\nis handled by the method instead. The `customizer` is bound to `thisArg`\nand invoked with two argument; (value, index|key).\n\n**Note:** This method is loosely based on the structured clone algorithm. Functions\nand DOM nodes are **not** cloned. The enumerable properties of `arguments` objects and\nobjects created by constructors other than `Object` are cloned to plain `Object` objects.\nSee the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)\nfor more details.",
+    "description": "Creates a deep clone of `value`. If `customizer` is provided it is invoked\nto produce the cloned values. If `customizer` returns `undefined` cloning\nis handled by the method instead. The `customizer` is bound to `thisArg`\nand invoked with two argument; (value, index|key).\n\n**Note:** This method is loosely based on the structured clone algorithm.\nThe enumerable properties of `arguments` objects and objects created by\nconstructors other than `Object` are cloned to plain `Object` objects. An\nempty object is returned for uncloneable values such as functions, DOM nodes,\nMaps, Sets, and WeakMaps. See the [HTML5 specification](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -5341,7 +5533,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\nvar deep = _.cloneDeep(users);\ndeep[0] === users[0];\n// => false\n\nvar view = {\n  'label': 'docs',\n  'node': element\n};\n\nvar clone = _.cloneDeep(view, function(value) {\n  return _.isElement(value) ? value.cloneNode(true) : undefined;\n});\n\nclone.node == view.node;\n// => false"
+      "var users = [\n  { 'user': 'barney' },\n  { 'user': 'fred' }\n];\n\nvar deep = _.cloneDeep(users);\ndeep[0] === users[0];\n// => false\n\nvar view = {\n  'label': 'docs',\n  'node': element\n};\n\nvar clone = _.cloneDeep(view, function(value) {\n  return _.isElement(value) ? value.cloneNode(true) : undefined;\n});\n\nclone.node == view.node;\n// => false"
     ],
     "returns": [
       {
@@ -5384,7 +5576,7 @@
             "boolean"
           ]
         },
-        "description": "Returns `true` if `value` is an `arguments` object, else `false`."
+        "description": "Returns `true` if `value` is correctly classified, else `false`."
       }
     ],
     "category": "Lang",
@@ -5610,7 +5802,7 @@
       }
     ],
     "examples": [
-      "var object = { 'user': 'fred' };\nvar other = { 'user': 'fred' };\n\nobject == other;\n// => false\n\n_.isEqual(object, other);\n// => true\n\nvar words = ['hello', 'goodbye'];\nvar otherWords = ['hi', 'goodbye'];\n\n_.isEqual(words, otherWords, function() {\n  return _.every(arguments, _.bind(RegExp.prototype.test, /^h(?:i|ello)$/)) || undefined;\n});\n// => true"
+      "var object = { 'user': 'fred' };\nvar other = { 'user': 'fred' };\n\nobject == other;\n// => false\n\n_.isEqual(object, other);\n// => true\n\nvar words = ['hello', 'goodbye'];\nvar otherWords = ['hi', 'goodbye'];\n\n_.isEqual(words, otherWords, function(value, other) {\n  return _.every([value, other], RegExp.prototype.test, /^h(?:i|ello)$/) || undefined;\n});\n// => true"
     ],
     "returns": [
       {
@@ -5760,6 +5952,69 @@
     ],
     "category": "Lang",
     "codeName": "isObject"
+  },
+  {
+    "id": "_.isMatch",
+    "name": "isMatch",
+    "scope": "static",
+    "kind": "function",
+    "description": "Performs a deep comparison between `object` and `source` to determine if\n`object` contains equivalent property values. If `customizer` is provided\nit is invoked to compare values. If `customizer` returns `undefined`\ncomparisons are handled by the method instead. The `customizer` is bound\nto `thisArg` and invoked with three arguments; (value, other, key).\n\n**Note:** This method supports comparing properties of arrays, booleans,\n`Date` objects, numbers, `Object` objects, regexes, and strings. Functions\nand DOM nodes are **not** supported. Provide a customizer function to extend\nsupport for comparing other values.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The object to inspect.",
+        "name": "source"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The object of property values to match.",
+        "name": "source"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "optional": true,
+        "description": "The function to customize comparing values.",
+        "name": "customizer"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "optional": true,
+        "description": "The `this` binding of `customizer`.",
+        "name": "thisArg"
+      }
+    ],
+    "examples": [
+      "var object = { 'user': 'fred', 'age': 40 };\n\n_.isMatch(object, { 'age': 40 });\n// => true\n\n_.isMatch(object, { 'age': 36 });\n// => false\n\nvar object = { 'greeting': 'hello' };\nvar source = { 'greeting': 'hi' };\n\n_.isMatch(object, source, function(value, other) {\n  return _.every([value, other], RegExp.prototype.test, /^h(?:i|ello)$/) || undefined;\n});\n// => true"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "description": "Returns `true` if `object` is a match, else `false`."
+      }
+    ],
+    "category": "Lang",
+    "codeName": "isMatch"
   },
   {
     "id": "_.isNaN",
@@ -6084,7 +6339,7 @@
       }
     ],
     "examples": [
-      "_.assign({ 'user': 'fred' }, { 'age': 40 }, { 'employer': 'slate' });\n// => { 'user': 'fred', 'age': 40, 'employer': 'slate' }\n\nvar defaults = _.partialRight(_.assign, function(value, other) {\n  return typeof value == 'undefined' ? other : value;\n});\n\ndefaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 'slate' });\n// => { 'user': 'barney', 'age': 36, 'employer': 'slate' }"
+      "_.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred', 'status': 'busy' });\n// => { 'user': 'fred', 'age': 40, 'status': 'busy' }\n\nvar defaults = _.partialRight(_.assign, function(value, other) {\n  return typeof value == 'undefined' ? other : value;\n});\n\ndefaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });\n// => { 'user': 'barney', 'age': 36, 'status': 'busy' }"
     ],
     "returns": [
       {
@@ -6154,7 +6409,7 @@
     "name": "defaults",
     "scope": "static",
     "kind": "function",
-    "description": "Assigns own enumerable properties of source object(s) to the destination\nobject for all destination properties that resolve to `undefined`. Once a\nproperty is set, additional defaults of the same property are ignored.\n\n**Note:** See the [documentation example of `_.partialRight`](http://lodash.com/docs#partialRight)\nfor a deep version of this method.",
+    "description": "Assigns own enumerable properties of source object(s) to the destination\nobject for all destination properties that resolve to `undefined`. Once a\nproperty is set, additional defaults of the same property are ignored.",
     "memberof": "_",
     "params": [
       {
@@ -6179,7 +6434,7 @@
       }
     ],
     "examples": [
-      "_.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'employer': 'slate' });\n// => { 'user': 'barney', 'age': 36, 'employer': 'slate' }"
+      "_.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });\n// => { 'user': 'barney', 'age': 36, 'status': 'busy' }"
     ],
     "returns": [
       {
@@ -6220,7 +6475,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -6236,7 +6491,7 @@
       }
     ],
     "examples": [
-      "var users = {\n  'barney': { 'age': 36 },\n  'fred': { 'age': 40, 'blocked': true },\n  'pebbles': { 'age': 1 }\n};\n\n_.findKey(users, function(chr) {\n  return chr.age < 40;\n});\n// => 'barney' (iteration order is not guaranteed)\n\n// using \"_.where\" callback shorthand\n_.findKey(users, { 'age': 1 });\n// => 'pebbles'\n\n// using \"_.pluck\" callback shorthand\n_.findKey(users, 'blocked');\n// => 'fred'"
+      "var users = {\n  'barney':  { 'age': 36, 'active': true },\n  'fred':    { 'age': 40, 'active': false },\n  'pebbles': { 'age': 1,  'active': true }\n};\n\n_.findKey(users, function(chr) { return chr.age < 40; });\n// => 'barney' (iteration order is not guaranteed)\n\n// using \"_.where\" callback shorthand\n_.findKey(users, { 'age': 1 });\n// => 'pebbles'\n\n// using \"_.pluck\" callback shorthand\n_.findKey(users, 'active');\n// => 'barney'"
     ],
     "returns": [
       {
@@ -6278,7 +6533,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "predicate"
       },
@@ -6294,7 +6549,7 @@
       }
     ],
     "examples": [
-      "var users = {\n  'barney': { 'age': 36, 'blocked': true },\n  'fred': { 'age': 40 },\n  'pebbles': { 'age': 1, 'blocked': true }\n};\n\n_.findLastKey(users, function(chr) {\n  return chr.age < 40;\n});\n// => returns `pebbles`, assuming `_.findKey` returns `barney`\n\n// using \"_.where\" callback shorthand\n_.findLastKey(users, { 'age': 40 });\n// => 'fred'\n\n// using \"_.pluck\" callback shorthand\n_.findLastKey(users, 'blocked');\n// => 'pebbles'"
+      "var users = {\n  'barney':  { 'age': 36, 'active': true },\n  'fred':    { 'age': 40, 'active': false },\n  'pebbles': { 'age': 1,  'active': true }\n};\n\n_.findLastKey(users, function(chr) { return chr.age < 40; });\n// => returns `pebbles` assuming `_.findKey` returns `barney`\n\n// using \"_.where\" callback shorthand\n_.findLastKey(users, { 'age': 40 });\n// => 'fred'\n\n// using \"_.pluck\" callback shorthand\n_.findLastKey(users, 'active');\n// => 'pebbles'"
     ],
     "returns": [
       {
@@ -6334,7 +6589,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -6389,7 +6644,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -6444,7 +6699,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -6499,7 +6754,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -6602,7 +6857,7 @@
             "boolean"
           ]
         },
-        "description": "Returns `true` if key is a direct property, else `false`."
+        "description": "Returns `true` if `key` is a direct property, else `false`."
       }
     ],
     "category": "Object",
@@ -6613,7 +6868,7 @@
     "name": "invert",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an object composed of the inverted keys and values of the given\nobject. If the given object contains duplicate values, subsequent values\noverwrite property assignments of previous values unless `multiValue`\nis `true`.",
+    "description": "Creates an object composed of the inverted keys and values of `object`.\nIf `object` contains duplicate values, subsequent values overwrite property\nassignments of previous values unless `multiValue` is `true`.",
     "memberof": "_",
     "params": [
       {
@@ -6632,7 +6887,6 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "false",
         "description": "Allow multiple values per key.",
         "name": "multiValue"
       }
@@ -6753,7 +7007,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked\n per iteration. If a property name or object is provided it is used to\n create a \"_.pluck\" or \"_.where\" style callback respectively.",
         "name": "iteratee"
       },
@@ -6769,7 +7023,7 @@
       }
     ],
     "examples": [
-      "_.mapValues({ 'a': 1, 'b': 2, 'c': 3} , function(n) { return n * 3; });\n// => { 'a': 3, 'b': 6, 'c': 9 }\n\nvar users = {\n  'fred': { 'user': 'fred', 'age': 40 },\n  'pebbles': { 'user': 'pebbles', 'age': 1 }\n};\n\n// using \"_.pluck\" callback shorthand\n_.mapValues(users, 'age');\n// => { 'fred': 40, 'pebbles': 1 }"
+      "_.mapValues({ 'a': 1, 'b': 2, 'c': 3} , function(n) { return n * 3; });\n// => { 'a': 3, 'b': 6, 'c': 9 }\n\nvar users = {\n  'fred':    { 'user': 'fred',    'age': 40 },\n  'pebbles': { 'user': 'pebbles', 'age': 1 }\n};\n\n// using \"_.pluck\" callback shorthand\n_.mapValues(users, 'age');\n// => { 'fred': 40, 'pebbles': 1 }"
     ],
     "returns": [
       {
@@ -6834,7 +7088,7 @@
       }
     ],
     "examples": [
-      "var users = {\n  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]\n};\n\nvar ages = {\n  'data': [{ 'age': 36 }, { 'age': 40 }]\n};\n\n_.merge(users, ages);\n// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }\n\nvar food = {\n  'fruits': ['apple'],\n  'vegetables': ['beet']\n};\n\nvar otherFood = {\n  'fruits': ['banana'],\n  'vegetables': ['carrot']\n};\n\n_.merge(food, otherFood, function(a, b) {\n  return _.isArray(a) ? a.concat(b) : undefined;\n});\n// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot] }"
+      "var users = {\n  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]\n};\n\nvar ages = {\n  'data': [{ 'age': 36 }, { 'age': 40 }]\n};\n\n_.merge(users, ages);\n// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }\n\nvar food = {\n  'fruits': ['apple'],\n  'vegetables': ['beet']\n};\n\nvar otherFood = {\n  'fruits': ['banana'],\n  'vegetables': ['carrot']\n};\n\n_.merge(food, otherFood, function(a, b) {\n  return _.isArray(a) ? a.concat(b) : undefined;\n});\n// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }"
     ],
     "returns": [
       {
@@ -6854,7 +7108,7 @@
     "name": "omit",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a shallow clone of `object` excluding the specified properties.\nProperty names may be specified as individual arguments or as arrays of\nproperty names. If `predicate` is provided it is invoked for each property\nof `object` omitting the properties `predicate` returns truthy for. The\npredicate is bound to `thisArg` and invoked with three arguments;\n(value, key, object).",
+    "description": "The opposite of `_.pick`; this method creates an object composed of the\nown and inherited enumerable properties of `object` that are not omitted.\nProperty names may be specified as individual arguments or as arrays of\nproperty names. If `predicate` is provided it is invoked for each property\nof `object` omitting the properties `predicate` returns truthy for. The\npredicate is bound to `thisArg` and invoked with three arguments;\n(value, key, object).",
     "memberof": "_",
     "params": [
       {
@@ -6888,7 +7142,7 @@
       }
     ],
     "examples": [
-      "_.omit({ 'user': 'fred', 'age': 40 }, 'age');\n// => { 'user': 'fred' }\n\n_.omit({ 'user': 'fred', 'age': 40 }, function(value) {\n  return typeof value == 'number';\n});\n// => { 'user': 'fred' }"
+      "var object = { 'user': 'fred', 'age': 40 };\n\n_.omit(object, 'age');\n// => { 'user': 'fred' }\n\n_.omit(object, _.isNumber);\n// => { 'user': 'fred' }"
     ],
     "returns": [
       {
@@ -6908,7 +7162,7 @@
     "name": "pairs",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a two dimensional array of a given object's key-value pairs,\ne.g. `[[key1, value1], [key2, value2]]`.",
+    "description": "Creates a two dimensional array of the key-value pairs for `object`,\ne.g. `[[key1, value1], [key2, value2]]`.",
     "memberof": "_",
     "params": [
       {
@@ -6942,7 +7196,7 @@
     "name": "pick",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a shallow clone of `object` composed of the specified properties.\nProperty names may be specified as individual arguments or as arrays of\nproperty names. If `predicate` is provided it is invoked for each property\nof `object` picking the properties `predicate` returns truthy for. The\npredicate is bound to `thisArg` and invoked with three arguments;\n(value, key, object).",
+    "description": "Creates an object composed of the picked `object` properties. Property\nnames may be specified as individual arguments or as arrays of property\nnames. If `predicate` is provided it is invoked for each property of `object`\npicking the properties `predicate` returns truthy for. The predicate is\nbound to `thisArg` and invoked with three arguments; (value, key, object).",
     "memberof": "_",
     "params": [
       {
@@ -6976,7 +7230,7 @@
       }
     ],
     "examples": [
-      "_.pick({ 'user': 'fred', '_userid': 'fred1' }, 'user');\n// => { 'user': 'fred' }\n\n_.pick({ 'user': 'fred', '_userid': 'fred1' }, function(value, key) {\n  return key.charAt(0) != '_';\n});\n// => { 'user': 'fred' }"
+      "var object = { 'user': 'fred', 'age': 40 };\n\n_.pick(object, 'user');\n// => { 'user': 'fred' }\n\n_.pick(object, _.isString);\n// => { 'user': 'fred' }"
     ],
     "returns": [
       {
@@ -6992,11 +7246,64 @@
     "codeName": "pick"
   },
   {
+    "id": "_.result",
+    "name": "result",
+    "scope": "static",
+    "kind": "function",
+    "description": "Resolves the value of property `key` on `object`. If the value of `key` is\na function it is invoked with the `this` binding of `object` and its result\nis returned, else the property value is returned. If the property value is\n`undefined` the `defaultValue` is used in its place.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The object to query.",
+        "name": "object"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The name of the property to resolve.",
+        "name": "key"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "optional": true,
+        "description": "The value returned if the property value\n resolves to `undefined`.",
+        "name": "defaultValue"
+      }
+    ],
+    "examples": [
+      "var object = { 'user': 'fred', 'age': _.constant(40) };\n\n_.result(object, 'user');\n// => 'fred'\n\n_.result(object, 'age');\n// => 40\n\n_.result(object, 'status', 'busy');\n// => 'busy'\n\n_.result(object, 'status', _.constant('busy'));\n// => 'busy'"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "Returns the resolved value."
+      }
+    ],
+    "category": "Object",
+    "codeName": "result"
+  },
+  {
     "id": "_.transform",
     "name": "transform",
     "scope": "static",
     "kind": "function",
-    "description": "An alternative to `_.reduce`; this method transforms `object` to a new\n`accumulator` object which is the result of running each of its own\nenumerable properties through `iteratee`, with each invocation potentially\nmutating the `accumulator` object. The `iteratee` is bound to `thisArg`\nand invoked with four arguments; (accumulator, value, key, object). Iterator\nfunctions may exit iteration early by explicitly returning `false`.",
+    "description": "An alternative to `_.reduce`; this method transforms `object` to a new\n`accumulator` object which is the result of running each of its own enumerable\nproperties through `iteratee`, with each invocation potentially mutating\nthe `accumulator` object. The `iteratee` is bound to `thisArg` and invoked\nwith four arguments; (accumulator, value, key, object). Iterator functions\nmay exit iteration early by explicitly returning `false`.",
     "memberof": "_",
     "params": [
       {
@@ -7016,7 +7323,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -7071,7 +7378,7 @@
             "Object"
           ]
         },
-        "description": "The object to inspect.",
+        "description": "The object to query.",
         "name": "object"
       }
     ],
@@ -7105,7 +7412,7 @@
             "Object"
           ]
         },
-        "description": "The object to inspect.",
+        "description": "The object to query.",
         "name": "object"
       }
     ],
@@ -7124,6 +7431,63 @@
     ],
     "category": "Object",
     "codeName": "valuesIn"
+  },
+  {
+    "id": "_.random",
+    "name": "random",
+    "scope": "static",
+    "kind": "function",
+    "description": "Produces a random number between `min` and `max` (inclusive). If only one\nargument is provided a number between `0` and the given number is returned.\nIf `floating` is `true`, or either `min` or `max` are floats, a floating-point\nnumber is returned instead of an integer.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "0",
+        "description": "The minimum possible value.",
+        "name": "min"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "1",
+        "description": "The maximum possible value.",
+        "name": "max"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "description": "Specify returning a floating-point number.",
+        "name": "floating"
+      }
+    ],
+    "examples": [
+      "_.random(0, 5);\n// => an integer between 0 and 5\n\n_.random(5);\n// => also an integer between 0 and 5\n\n_.random(5, true);\n// => a floating-point number between 0 and 5\n\n_.random(1.2, 5.2);\n// => a floating-point number between 1.2 and 5.2"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "Returns the random number."
+      }
+    ],
+    "category": "Number",
+    "codeName": "random"
   },
   {
     "id": "_.camelCase",
@@ -7227,7 +7591,7 @@
             "string"
           ]
         },
-        "description": "Returns the beburred string."
+        "description": "Returns the deburred string."
       }
     ],
     "category": "String",
@@ -7238,7 +7602,7 @@
     "name": "endsWith",
     "scope": "static",
     "kind": "function",
-    "description": "Checks if `string` ends with a given target string.",
+    "description": "Checks if `string` ends with the given target string.",
     "memberof": "_",
     "params": [
       {
@@ -7284,7 +7648,7 @@
             "boolean"
           ]
         },
-        "description": "Returns `true` if the given string ends with the\n target string, else `false`."
+        "description": "Returns `true` if `string` ends with `target`, else `false`."
       }
     ],
     "category": "String",
@@ -7295,7 +7659,7 @@
     "name": "escape",
     "scope": "static",
     "kind": "function",
-    "description": "Converts the characters \"&\", \"<\", \">\", '\"', \"'\", and '`', in `string` to\ntheir corresponding HTML entities.\n\n**Note:** No other characters are escaped. To escape additional characters\nuse a third-party library like [_he_](http://mths.be/he).\n\nWhen working with HTML you should always quote attribute values to reduce\nXSS vectors. See [Ryan Grove's article](http://wonko.com/post/html-escaping)\nfor more details.",
+    "description": "Converts the characters \"&\", \"<\", \">\", '\"', \"'\", and '`', in `string` to\ntheir corresponding HTML entities.\n\n**Note:** No other characters are escaped. To escape additional characters\nuse a third-party library like [_he_](http://mths.be/he).\n\nThough the \">\" character is escaped for symmetry, characters like\n\">\" and \"/\" don't require escaping in HTML and have no special meaning\nunless they're part of a tag or unquoted attribute value.\nSee [Mathias Bynens's article](http://mathiasbynens.be/notes/ambiguous-ampersands)\n(under \"semi-related fun fact\") for more details.\n\nBackticks are escaped because in Internet Explorer < 9, they can break out\nof attribute values or HTML comments. See [#102](http://html5sec.org/#102),\n[#108](http://html5sec.org/#108), and [#133](http://html5sec.org/#133) of\nthe [HTML5 Security Cheatsheet](http://html5sec.org/) for more details.\n\nWhen working with HTML you should always quote attribute values to reduce\nXSS vectors. See [Ryan Grove's article](http://wonko.com/post/html-escaping)\nfor more details.",
     "memberof": "_",
     "params": [
       {
@@ -7347,7 +7711,7 @@
       }
     ],
     "examples": [
-      "_.escapeRegExp('[lodash](http://lodash.com/)');\n// => '\\[lodash\\]\\(http://lodash\\.com/\\)'"
+      "_.escapeRegExp('[lodash](https://lodash.com/)');\n// => '\\[lodash\\]\\(https://lodash\\.com/\\)'"
     ],
     "returns": [
       {
@@ -7573,6 +7937,56 @@
     "codeName": "padRight"
   },
   {
+    "id": "_.parseInt",
+    "name": "parseInt",
+    "scope": "static",
+    "kind": "function",
+    "description": "Converts `string` to an integer of the specified radix. If `radix` is\n`undefined` or `0`, a `radix` of `10` is used unless `value` is a hexadecimal,\nin which case a `radix` of `16` is used.\n\n**Note:** This method aligns with the ES5 implementation of `parseInt`.\nSee the [ES5 spec](http://es5.github.io/#E) for more details.",
+    "memberof": "_",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "The string to parse.",
+        "name": "string"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "description": "The radix to interpret `value` by.",
+        "name": "radix"
+      }
+    ],
+    "examples": [
+      "_.parseInt('08');\n// => 8"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "description": "Returns the converted integer."
+      }
+    ],
+    "category": "String",
+    "codeName": "parseInt",
+    "customTags": [
+      {
+        "tag": "param-",
+        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
+      }
+    ]
+  },
+  {
     "id": "_.repeat",
     "name": "repeat",
     "scope": "static",
@@ -7660,7 +8074,7 @@
     "name": "startsWith",
     "scope": "static",
     "kind": "function",
-    "description": "Checks if `string` starts with a given target string.",
+    "description": "Checks if `string` starts with the given target string.",
     "memberof": "_",
     "params": [
       {
@@ -7706,7 +8120,7 @@
             "boolean"
           ]
         },
-        "description": "Returns `true` if the given string starts with the\n target string, else `false`."
+        "description": "Returns `true` if `string` starts with `target`, else `false`."
       }
     ],
     "category": "String",
@@ -7717,7 +8131,7 @@
     "name": "template",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a compiled template function that can interpolate data properties\nin \"interpolate\" delimiters, HTML-escape interpolated data properties in\n\"escape\" delimiters, and execute JavaScript in \"evaluate\" delimiters. Data\nproperties may be accessed as free variables in the template. If a setting\nobject is provided it overrides `_.templateSettings` for the template.\n\n**Note:** In the development build `_.template` utilizes sourceURLs for easier debugging.\nSee the [HTML5 Rocks article on sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)\nfor more details.\n\nFor more information on precompiling templates see\n[Lo-Dash's custom builds documentation](http://lodash.com/custom-builds).\n\nFor more information on Chrome extension sandboxes see\n[Chrome's extensions documentation](http://developer.chrome.com/stable/extensions/sandboxingEval.html).",
+    "description": "Creates a compiled template function that can interpolate data properties\nin \"interpolate\" delimiters, HTML-escape interpolated data properties in\n\"escape\" delimiters, and execute JavaScript in \"evaluate\" delimiters. Data\nproperties may be accessed as free variables in the template. If a setting\nobject is provided it takes precedence over `_.templateSettings` values.\n\n**Note:** In the development build `_.template` utilizes sourceURLs for easier debugging.\nSee the [HTML5 Rocks article on sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)\nfor more details.\n\nFor more information on precompiling templates see\n[Lo-Dash's custom builds documentation](https://lodash.com/custom-builds).\n\nFor more information on Chrome extension sandboxes see\n[Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).",
     "memberof": "_",
     "params": [
       {
@@ -8208,7 +8622,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The value to convert to a callback.",
         "name": "func"
       },
@@ -8224,7 +8638,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// wrap to create custom callback shorthands\n_.callback = _.wrap(_.callback, function(callback, func, thisArg) {\n  var match = /^(.+?)__([gl]t)(.+)$/.exec(func);\n  if (!match) {\n    return callback(func, thisArg);\n  }\n  return function(object) {\n    return match[2] == 'gt' ? object[match[1]] > match[3] : object[match[1]] < match[3];\n  };\n});\n\n_.filter(users, 'age__gt38');\n// => [{ 'user': 'fred', 'age': 40 }]"
+      "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// wrap to create custom callback shorthands\n_.callback = _.wrap(_.callback, function(callback, func, thisArg) {\n  var match = /^(.+?)__([gl]t)(.+)$/.exec(func);\n  if (!match) {\n    return callback(func, thisArg);\n  }\n  return function(object) {\n    return match[2] == 'gt' ? object[match[1]] > match[3] : object[match[1]] < match[3];\n  };\n});\n\n_.filter(users, 'age__gt36');\n// => [{ 'user': 'fred', 'age': 40 }]"
     ],
     "returns": [
       {
@@ -8318,7 +8732,7 @@
     "name": "matches",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a \"_.where\" style predicate function which performs a deep comparison\nbetween a given object and the `source` object, returning `true` if the given\nobject has equivalent property values, else `false`.",
+    "description": "Creates a \"_.where\" style predicate function which performs a deep comparison\nbetween a given object and `source`, returning `true` if the given object\nhas equivalent property values, else `false`.",
     "memberof": "_",
     "params": [
       {
@@ -8452,74 +8866,11 @@
     "codeName": "noop"
   },
   {
-    "id": "_.now",
-    "name": "now",
-    "scope": "static",
-    "kind": "member",
-    "description": "Gets the number of milliseconds that have elapsed since the Unix epoch\n(1 January 1970 00:00:00 UTC).",
-    "memberof": "_",
-    "examples": [
-      "_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());\n// => logs the number of milliseconds it took for the deferred function to be invoked"
-    ],
-    "category": "Utility",
-    "codeName": "now"
-  },
-  {
-    "id": "_.parseInt",
-    "name": "parseInt",
-    "scope": "static",
-    "kind": "function",
-    "description": "Converts `value` to an integer of the specified radix. If `radix` is\n`undefined` or `0`, a `radix` of `10` is used unless `value` is a hexadecimal,\nin which case a `radix` of `16` is used.\n\n**Note:** This method avoids differences in native ES3 and ES5 `parseInt`\nimplementations. See the [ES5 spec](http://es5.github.io/#E) for more details.",
-    "memberof": "_",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "The value to parse.",
-        "name": "value"
-      },
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "optional": true,
-        "description": "The radix to interpret `value` by.",
-        "name": "radix"
-      }
-    ],
-    "examples": [
-      "_.parseInt('08');\n// => 8"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "description": "Returns the converted integer."
-      }
-    ],
-    "category": "Utility",
-    "codeName": "parseInt",
-    "customTags": [
-      {
-        "tag": "param-",
-        "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
-      }
-    ]
-  },
-  {
     "id": "_.property",
     "name": "property",
     "scope": "static",
     "kind": "function",
-    "description": "Creates a \"_.pluck\" style function which returns the `key` value of a\ngiven object.",
+    "description": "Creates a \"_.pluck\" style function which returns the property value\nof `key` on a given object.",
     "memberof": "_",
     "params": [
       {
@@ -8533,7 +8884,7 @@
       }
     ],
     "examples": [
-      "var users = [\n  { 'user': 'fred',   'age': 40 },\n  { 'user': 'barney', 'age': 36 }\n];\n\nvar getName = _.property('user');\n\n_.map(users, getName);\n// => ['barney', 'fred']\n\n_.sortBy(users, getName);\n// => [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred',   'age': 40 }]"
+      "var users = [\n  { 'user': 'fred' },\n  { 'user': 'barney' }\n];\n\nvar getName = _.property('user');\n\n_.map(users, getName);\n// => ['fred', barney']\n\n_.pluck(_.sortBy(users, getName), 'user');\n// => ['barney', 'fred']"
     ],
     "returns": [
       {
@@ -8549,69 +8900,45 @@
     "codeName": "property"
   },
   {
-    "id": "_.random",
-    "name": "random",
+    "id": "_.propertyOf",
+    "name": "propertyOf",
     "scope": "static",
     "kind": "function",
-    "description": "Produces a random number between `min` and `max` (inclusive). If only one\nargument is provided a number between `0` and the given number is returned.\nIf `floating` is `true`, or either `min` or `max` are floats, a floating-point\nnumber is returned instead of an integer.",
+    "description": "The inverse of `_.property`; this method creates a function which returns\nthe property value of a given key on `object`.",
     "memberof": "_",
     "params": [
       {
         "type": {
           "names": [
-            "number"
+            "Object"
           ]
         },
-        "optional": true,
-        "defaultvalue": "0",
-        "description": "The minimum possible value.",
-        "name": "min"
-      },
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "optional": true,
-        "defaultvalue": "1",
-        "description": "The maximum possible value.",
-        "name": "max"
-      },
-      {
-        "type": {
-          "names": [
-            "boolean"
-          ]
-        },
-        "optional": true,
-        "defaultvalue": "false",
-        "description": "Specify returning a floating-point number.",
-        "name": "floating"
+        "description": "The object to inspect.",
+        "name": "object"
       }
     ],
     "examples": [
-      "_.random(0, 5);\n// => an integer between 0 and 5\n\n_.random(5);\n// => also an integer between 0 and 5\n\n_.random(5, true);\n// => a floating-point number between 0 and 5\n\n_.random(1.2, 5.2);\n// => a floating-point number between 1.2 and 5.2"
+      "var object = { 'user': 'fred', 'age': 40, 'active': true };\n_.map(['active', 'user'], _.propertyOf(object));\n// => [true, 'fred']\n\nvar object = { 'a': 3, 'b': 1, 'c': 2 };\n_.sortBy(['a', 'b', 'c'], _.propertyOf(object));\n// => ['b', 'c', 'a']"
     ],
     "returns": [
       {
         "type": {
           "names": [
-            "number"
+            "function"
           ]
         },
-        "description": "Returns the random number."
+        "description": "Returns the new function."
       }
     ],
     "category": "Utility",
-    "codeName": "random"
+    "codeName": "propertyOf"
   },
   {
     "id": "_.range",
     "name": "range",
     "scope": "static",
     "kind": "function",
-    "description": "Creates an array of numbers (positive and/or negative) progressing from\n`start` up to but not including `end`. If `start` is less than `stop` a\nzero-length range is created unless a negative `step` is specified.",
+    "description": "Creates an array of numbers (positive and/or negative) progressing from\n`start` up to, but not including, `end`. If `start` is less than `end` a\nzero-length range is created unless a negative `step` is specified.",
     "memberof": "_",
     "params": [
       {
@@ -8663,59 +8990,6 @@
     "codeName": "range"
   },
   {
-    "id": "_.result",
-    "name": "result",
-    "scope": "static",
-    "kind": "function",
-    "description": "Resolves the value of property `key` on `object`. If `key` is a function\nit is invoked with the `this` binding of `object` and its result returned,\nelse the property value is returned. If `object` is `null` or `undefined`\nthen `undefined` is returned. If a default value is provided it is returned\nif the property value resolves to `undefined`.",
-    "memberof": "_",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Object"
-          ]
-        },
-        "description": "The object to inspect.",
-        "name": "object"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "description": "The name of the property to resolve.",
-        "name": "key"
-      },
-      {
-        "type": {
-          "names": [
-            "*"
-          ]
-        },
-        "optional": true,
-        "description": "The value returned if the property value\n resolves to `undefined`.",
-        "name": "defaultValue"
-      }
-    ],
-    "examples": [
-      "var object = {\n  'user': 'fred',\n  'age': function() {\n    return 40;\n  }\n};\n\n_.result(object, 'user');\n// => 'fred'\n\n_.result(object, 'age');\n// => 40\n\n_.result(object, 'employer', 'slate');\n// => 'slate'"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "*"
-          ]
-        },
-        "description": "Returns the resolved value."
-      }
-    ],
-    "category": "Utility",
-    "codeName": "result"
-  },
-  {
     "id": "_.times",
     "name": "times",
     "scope": "static",
@@ -8739,7 +9013,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "identity",
+        "defaultvalue": "_.identity",
         "description": "The function invoked per iteration.",
         "name": "iteratee"
       },
@@ -8755,7 +9029,7 @@
       }
     ],
     "examples": [
-      "var diceRolls = _.times(3, _.partial(_.random, 1, 6, false));\n// => [3, 6, 4]\n\n_.times(3, function(n) { mage.castSpell(n); });\n// => invokes `mage.castSpell(n)` three times, passing `n` of `0`, `1`, and `2` respectively\n\n_.times(3, function(n) { this.cast(n); }, mage);\n// => also invokes `mage.castSpell(n)` three times"
+      "var diceRolls = _.times(3, _.partial(_.random, 1, 6, false));\n// => [3, 6, 4]\n\n_.times(3, function(n) { mage.castSpell(n); });\n// => invokes `mage.castSpell(n)` three times with `n` of `0`, `1`, and `2` respectively\n\n_.times(3, function(n) { this.cast(n); }, mage);\n// => also invokes `mage.castSpell(n)` three times"
     ],
     "returns": [
       {
