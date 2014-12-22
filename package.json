@@ -15,6 +15,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "files": [ "bin", "helpers", "lib", "partials" ],
   "scripts": {
     "test": "tape test/*.js",
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
