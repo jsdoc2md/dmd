@@ -751,11 +751,11 @@
     "description": "A module. Refer to it using {@link module:foo/bar}."
   },
   {
-    "id": "external:String",
-    "name": "String",
+    "id": "external:Math",
+    "name": "Math",
     "scope": "inner",
     "kind": "external",
-    "description": "The built in string object. Refer to it with {@link external:String}.",
+    "description": "The built in Math object. Refer to it with {@link external:Math}.",
     "memberof": "module:linkMod"
   },
   {

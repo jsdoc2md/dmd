@@ -41,8 +41,7 @@
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
 * [linkMod](#module_linkMod)
-  * [external: ~String](#external_String)
-    * [.rot13()](#external_String#rot13)
+  * [external: ~Math](#external_Math)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
 
 ##Global
@@ -459,22 +458,14 @@ A module. Refer to it using [module:foo/bar](module:foo/bar).
 
 
 * [linkMod](#module_linkMod)
-  * [external: ~String](#external_String)
-    * [.rot13()](#external_String#rot13)
+  * [external: ~Math](#external_Math)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
 
-<a name="external_String"></a>
-###external: linkMod~String
-The built in string object. Refer to it with [String](#external_String).
+<a name="external_Math"></a>
+###external: linkMod~Math
+The built in Math object. Refer to it with [Math](#external_Math).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
-<a name="external_String#rot13"></a>
-####string.rot13()
-Adds a new method to the built-in string.
-
-**Example**  
-var greeting = new String('hello world');
-console.log( greeting.rot13() ); // uryyb jbeyq
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
 An event. Refer to with [event:MyEvent](#module_linkMod.event_MyEvent).
