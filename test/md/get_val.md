@@ -18,11 +18,6 @@ Provides class for getting value by key
 <a name="module_get_val..GetVal"></a>
 ###class: get_val~GetVal
 **Scope**: inner class of <code>[get_val](#module_get_val)</code>  
-**Throws**:
-
-- <code>GetVal~IncorrectArgument</code> 
-- <code>GetVal~RequiredArgumentKey</code> 
-
 <a name="new_module_get_val..GetVal_new"></a>
 ####new GetVal(values, [required])
 | Param | Type | Description |
@@ -31,3 +26,8 @@ Provides class for getting value by key
 | \[required\] | <code>Object.&lt;\*&gt;</code> | Key-value object to set required values at instance creating |
 
 **Returns**: <code>function</code> - "get" method wrapper (you can get value from example of class directly as by function)  
+**Throws**:
+
+- <code>GetVal~IncorrectArgument</code> 
+- <code>GetVal~RequiredArgumentKey</code> 
+

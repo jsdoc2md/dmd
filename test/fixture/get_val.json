@@ -119,23 +119,7 @@
     "name": "GetVal",
     "scope": "inner",
     "kind": "class",
-    "memberof": "module:get_val",
-    "exceptions": [
-      {
-        "type": {
-          "names": [
-            "GetVal~IncorrectArgument"
-          ]
-        }
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~RequiredArgumentKey"
-          ]
-        }
-      }
-    ]
+    "memberof": "module:get_val"
   },
   {
     "id": "module:get_val~GetVal()",
@@ -172,6 +156,22 @@
           ]
         },
         "description": "\"get\" method wrapper (you can get value from example of class directly as by function)"
+      }
+    ],
+    "exceptions": [
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectArgument"
+          ]
+        }
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredArgumentKey"
+          ]
+        }
       }
     ]
   },

@@ -10,11 +10,13 @@
     "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.",
     "memberof": "module:handbrake-js",
     "fires": [
-      "event:start",
-      "module:handbrake-js~Handbrake#event:progress",
+      "module:handbrake-js~Handbrake#event:start",
       "module:handbrake-js~Handbrake#event:begin",
+      "module:handbrake-js~Handbrake#event:progress",
+      "module:handbrake-js~Handbrake#event:output",
+      "module:handbrake-js~Handbrake#event:error",
       "module:handbrake-js~Handbrake#event:end",
-      "event:complete"
+      "module:handbrake-js~Handbrake#event:complete"
     ],
     "codeName": "Handbrake"
   },
@@ -242,8 +244,7 @@
       {
         "type": {
           "names": [
-            "Object",
-            "Array"
+            "Object"
           ]
         },
         "description": "[Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI",

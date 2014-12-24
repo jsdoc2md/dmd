@@ -528,8 +528,11 @@
     "name": "flatten",
     "scope": "static",
     "kind": "function",
-    "description": "flatten",
+    "description": "flatten an array of arrays into a single array",
     "memberof": "module:array-tools",
+    "examples": [
+      "> numbers = [ 1, 2, [ 3, 4 ], 5 ]\n[ 1,\n  2,\n  [ 3, 4 ],\n  5 ]\n> a.flatten(numbers)\n[ 1, 2, 3, 4, 5 ]"
+    ],
     "returns": [
       {
         "type": {

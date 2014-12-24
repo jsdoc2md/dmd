@@ -372,13 +372,13 @@ a variable in the file
 
 <a name="firesError"></a>
 ##firesError()
-**Emits**: event:error
+**Emits**: <code>event:error</code>
 <a name="firesMany"></a>
 ##firesMany()
-**Emits**: event:error, event:begin, event:end
+**Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>
 <a name="firesDefinedEvent"></a>
 ##firesDefinedEvent()
-**Emits**: event:docletEvent
+**Emits**: <code>[docletEvent](#event_docletEvent)</code>
 <a name="functionObj"></a>
 ##functionObj()
 the function

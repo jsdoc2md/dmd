@@ -5,10 +5,9 @@
 * [class: _](#_)
   * [new _(value)](#new___new)
   * _static_
-    * [.once(func)](#_.once) ⇒ <code>function</code>
     * [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
-      * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
       * [~Array](#_.runInContext..Array)
+      * [~arrayProto](#_.runInContext..arrayProto)
       * [~document](#_.runInContext..document)
       * [~fnToString](#_.runInContext..fnToString)
       * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
@@ -16,7 +15,7 @@
       * [~oldDash](#_.runInContext..oldDash)
       * [~toString](#_.runInContext..toString)
       * [~reNative](#_.runInContext..reNative)
-      * [~arrayProto](#_.runInContext..arrayProto)
+      * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
       * [~Float64Array](#_.runInContext..Float64Array)
       * [~NEGATIVE_INFINITY](#_.runInContext..NEGATIVE_INFINITY)
       * [~MAX_ARRAY_LENGTH](#_.runInContext..MAX_ARRAY_LENGTH)
@@ -25,6 +24,18 @@
       * [~metaMap](#_.runInContext..metaMap)
       * [~ctorByClass](#_.runInContext..ctorByClass)
       * [~nonEnumProps](#_.runInContext..nonEnumProps)
+    * [.support](#_.support) → <code>Object</code>
+      * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+      * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+      * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+      * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+      * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+      * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+      * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
     * [.chunk(array, [size])](#_.chunk) ⇒ <code>Array</code>
     * [.compact(array)](#_.compact) ⇒ <code>Array</code>
     * [.difference(array, [...values])](#_.difference) ⇒ <code>Array</code>
@@ -109,18 +120,7 @@
     * [.flow([...funcs])](#_.flow) ⇒ <code>function</code>
     * [.memoize(func, [resolver])](#_.memoize) ⇒ <code>function</code>
     * [.negate(predicate)](#_.negate) ⇒ <code>function</code>
-    * [.support](#_.support) → <code>Object</code>
-      * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
-      * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
-      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
-      * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
-      * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
-      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
-      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
-      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
-      * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
-      * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
-      * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
+    * [.once(func)](#_.once) ⇒ <code>function</code>
     * [.partial(func, [...args])](#_.partial) ⇒ <code>function</code>
     * [.partialRight(func, [...args])](#_.partialRight) ⇒ <code>function</code>
     * [.rearg(func, ...indexes)](#_.rearg) ⇒ <code>function</code>
@@ -207,6 +207,148 @@
     * [.times(n, [iteratee], [thisArg])](#_.times) ⇒ <code>Array</code>
     * [.uniqueId([prefix])](#_.uniqueId) ⇒ <code>string</code>
 
+<a name="_.runInContext"></a>
+###_.runInContext([context]) ⇒ <code>function</code>
+Create a new pristine `lodash` function using the given `context` object.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| \[context=root\] | <code>Object</code> | The context object. |
+
+**Returns**: <code>function</code> - Returns a new `lodash` function.  
+**Category**: Utility  
+**Example**  
+```js
+_.mixin({ 'add': function(a, b) { return a + b; } }, false);
+
+var lodash = _.runInContext();
+lodash.mixin({ 'sub': function(a, b) { return a - b; } }, false);
+
+_.isFunction(_.add);
+// => true
+
+_.isFunction(_.sub);
+// => false
+
+lodash.isFunction(lodash.add);
+// => false
+
+lodash.isFunction(lodash.sub);
+// => true
+```
+
+* [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
+  * [~Array](#_.runInContext..Array)
+  * [~arrayProto](#_.runInContext..arrayProto)
+  * [~document](#_.runInContext..document)
+  * [~fnToString](#_.runInContext..fnToString)
+  * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
+  * [~idCounter](#_.runInContext..idCounter)
+  * [~oldDash](#_.runInContext..oldDash)
+  * [~toString](#_.runInContext..toString)
+  * [~reNative](#_.runInContext..reNative)
+  * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
+  * [~Float64Array](#_.runInContext..Float64Array)
+  * [~NEGATIVE_INFINITY](#_.runInContext..NEGATIVE_INFINITY)
+  * [~MAX_ARRAY_LENGTH](#_.runInContext..MAX_ARRAY_LENGTH)
+  * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
+  * [~MAX_SAFE_INTEGER](#_.runInContext..MAX_SAFE_INTEGER)
+  * [~metaMap](#_.runInContext..metaMap)
+  * [~ctorByClass](#_.runInContext..ctorByClass)
+  * [~nonEnumProps](#_.runInContext..nonEnumProps)
+
+<a name="_.runInContext..Array"></a>
+####runInContext~Array
+Native constructor references.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..arrayProto"></a>
+####runInContext~arrayProto
+Used for native method references.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..document"></a>
+####runInContext~document
+Used to detect DOM support.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..fnToString"></a>
+####runInContext~fnToString
+Used to resolve the decompiled source of functions.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..hasOwnProperty"></a>
+####runInContext~hasOwnProperty
+Used to check objects for own properties.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..idCounter"></a>
+####runInContext~idCounter
+Used to generate unique IDs.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..oldDash"></a>
+####runInContext~oldDash
+Used to restore the original `_` reference in `_.noConflict`.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..toString"></a>
+####runInContext~toString
+Used to resolve the internal `[[Class]]` of values.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..reNative"></a>
+####runInContext~reNative
+Used to detect if a method is native.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..ArrayBuffer"></a>
+####runInContext~ArrayBuffer
+Native method references.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..Float64Array"></a>
+####runInContext~Float64Array
+Used to clone array buffers.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..NEGATIVE_INFINITY"></a>
+####runInContext~NEGATIVE_INFINITY
+Used as references for `-Infinity` and `Infinity`.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..MAX_ARRAY_LENGTH"></a>
+####runInContext~MAX_ARRAY_LENGTH
+Used as references for the maximum length and index of an array.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..FLOAT64_BYTES_PER_ELEMENT"></a>
+####runInContext~FLOAT64_BYTES_PER_ELEMENT
+Used as the size, in bytes, of each `Float64Array` element.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..MAX_SAFE_INTEGER"></a>
+####runInContext~MAX_SAFE_INTEGER
+Used as the maximum length of an array-like value.
+See the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)
+for more details.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..metaMap"></a>
+####runInContext~metaMap
+Used to store function metadata.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..ctorByClass"></a>
+####runInContext~ctorByClass
+Used to lookup a built-in constructor by `[[Class]]`.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
+<a name="_.runInContext..nonEnumProps"></a>
+####runInContext~nonEnumProps
+Used to avoid iterating over non-enumerable properties in IE < 9.
+
+**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="new___new"></a>
 ###new _(value)
 Creates a `lodash` object which wraps `value` to enable intuitive chaining.
@@ -289,260 +431,33 @@ _.isArray(squares);
 _.isArray(squares.value());
 // => true
 ```
-<a name="_.now"></a>
-###_.now
-Gets the number of milliseconds that have elapsed since the Unix epoch
-(1 January 1970 00:00:00 UTC).
-
-**Category**: Date  
-**Example**  
-```js
-_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
-// => logs the number of milliseconds it took for the deferred function to be invoked
-```
-<a name="_.chain"></a>
-###_.chain ⇒ <code>\*</code>
-Enables explicit method chaining on the wrapper object.
-
-**Returns**: <code>\*</code> - Returns the `lodash` object.  
-**Category**: Chain  
-**Example**  
-```js
-var users = [
-  { 'user': 'barney', 'age': 36 },
-  { 'user': 'fred',   'age': 40 }
-];
-
-// without explicit chaining
-_(users).first();
-// => { 'user': 'barney', 'age': 36 }
-
-// with explicit chaining
-_(users).chain()
-  .first()
-  .pick('user')
-  .value();
-// => { 'user': 'barney' }
-```
-<a name="_.reverse"></a>
-###_.reverse ⇒ <code>Object</code>
-Reverses the wrapped array so the first element becomes the last, the
-second element becomes the second to last, and so on.
-
-**Note:** This method mutates the wrapped array.
-
-**Returns**: <code>Object</code> - Returns the new reversed `lodash` object.  
-**Category**: Chain  
-**Example**  
-```js
-var array = [1, 2, 3];
-
-_(array).reverse().value()
-// => [3, 2, 1]
-
-console.log(array);
-// => [3, 2, 1]
-```
-<a name="_.toString"></a>
-###_.toString ⇒ <code>string</code>
-Produces the result of coercing the unwrapped value to a string.
-
-**Returns**: <code>string</code> - Returns the coerced string value.  
-**Category**: Chain  
-**Example**  
-```js
-_([1, 2, 3]).toString();
-// => '1,2,3'
-```
-<a name="_.value"></a>
-###_.value ⇒ <code>\*</code>
-Executes the chained sequence to extract the unwrapped value.
-
-**Returns**: <code>\*</code> - Returns the resolved unwrapped value.  
-**Category**: Chain  
-**Example**  
-```js
-_([1, 2, 3]).value();
-// => [1, 2, 3]
-```
-<a name="_.countBy"></a>
-###_.countBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is the number of times the key was returned by `iteratee`.
-The `iteratee` is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-_.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });
-// => { '4': 1, '6': 2 }
-
-_.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
-// => { '4': 1, '6': 2 }
-
-_.countBy(['one', 'two', 'three'], 'length');
-// => { '3': 2, '5': 1 }
-```
-<a name="_.groupBy"></a>
-###_.groupBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is an array of the elements responsible for generating the key.
-The `iteratee` is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-_.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });
-// => { '4': [4.2], '6': [6.1, 6.4] }
-
-_.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
-// => { '4': [4.2], '6': [6.1, 6.4] }
-
-// using "_.pluck" callback shorthand
-_.groupBy(['one', 'two', 'three'], 'length');
-// => { '3': ['one', 'two'], '5': ['three'] }
-```
-<a name="_.indexBy"></a>
-###_.indexBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is the last element responsible for generating the key. The
-iteratee function is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-var keyData = [
-  { 'dir': 'left', 'code': 97 },
-  { 'dir': 'right', 'code': 100 }
-];
-
-_.indexBy(keyData, 'dir');
-// => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
-
-_.indexBy(keyData, function(object) { return String.fromCharCode(object.code); });
-// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
-
-_.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);
-// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
-```
-<a name="_.partition"></a>
-###_.partition ⇒ <code>Array</code>
-Creates an array of elements split into two groups, the first of which
-contains elements `predicate` returns truthy for, while the second of which
-contains elements `predicate` returns falsey for. The predicate is bound
-to `thisArg` and invoked with three arguments; (value, index|key, collection).
-
-If a property name is provided for `predicate` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `predicate` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
-
-**Returns**: <code>Array</code> - Returns the array of grouped elements.  
-**Category**: Collection  
-**Example**  
-```js
-_.partition([1, 2, 3], function(n) { return n % 2; });
-// => [[1, 3], [2]]
-
-_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);
-// => [[1, 3], [2]]
-
-var users = [
-  { 'user': 'barney',  'age': 36, 'active': false },
-  { 'user': 'fred',    'age': 40, 'active': true },
-  { 'user': 'pebbles', 'age': 1,  'active': false }
-];
-
-// using "_.where" callback shorthand
-_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });
-// => [['pebbles'], ['barney', 'fred']]
-
-// using "_.pluck" callback shorthand
-_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });
-// => [['fred'], ['barney', 'pebbles']]
-```
 <a name="_.support"></a>
 ###_.support → <code>Object</code>
 An object environment feature flags.
 
 
 * [.support](#_.support) → <code>Object</code>
-  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
   * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
   * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
   * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
   * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
-  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
   * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
   * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
   * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
   * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
   * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
 
-<a name="_.support.support.nodeClass"></a>
-####support.support.nodeClass → <code>boolean</code>
-Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
-
 <a name="_.support.support.argsClass"></a>
 ####support.support.argsClass → <code>boolean</code>
 Detect if the `[[Class]]` of `arguments` objects is resolvable
 (all but Firefox < 4, IE < 9).
+
+<a name="_.support.support.enumErrorProps"></a>
+####support.support.enumErrorProps → <code>boolean</code>
+Detect if `name` or `message` properties of `Error.prototype` are
+enumerable by default (IE < 9, Safari < 5.1).
 
 <a name="_.support.support.enumPrototypes"></a>
 ####support.support.enumPrototypes → <code>boolean</code>
@@ -563,10 +478,9 @@ the PlayStation 3; forced `false` for Windows 8 apps).
 ####support.support.funcNames → <code>boolean</code>
 Detect if `Function#name` is supported (all but IE).
 
-<a name="_.support.support.enumErrorProps"></a>
-####support.support.enumErrorProps → <code>boolean</code>
-Detect if `name` or `message` properties of `Error.prototype` are
-enumerable by default (IE < 9, Safari < 5.1).
+<a name="_.support.support.nodeClass"></a>
+####support.support.nodeClass → <code>boolean</code>
+Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
 
 <a name="_.support.support.nonEnumStrings"></a>
 ####support.support.nonEnumStrings → <code>boolean</code>
@@ -603,273 +517,465 @@ Detect lack of support for accessing string characters by index.
 IE < 8 can't access characters by index. IE 8 can only access characters
 by index on string literals, not string objects.
 
-<a name="_.snakeCase"></a>
-###_.snakeCase ⇒ <code>string</code>
-Converts `string` to snake case.
-See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
+<a name="_.chunk"></a>
+###_.chunk(array, [size]) ⇒ <code>Array</code>
+Creates an array of elements split into groups the length of `size`.
+If `collection` can't be split evenly, the final chunk will be the remaining
+elements.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to snake case. |
+| array | <code>Array</code> | The array to process. |
+| \[size=1\] | <code>numer</code> | The length of each chunk. |
 
-**Returns**: <code>string</code> - Returns the snake cased string.  
-**Category**: String  
+**Returns**: <code>Array</code> - Returns the new array containing chunks.  
+**Category**: Array  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
-_.snakeCase('Hello world');
-// => 'hello_world'
+_.chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
 
-_.snakeCase('--hello-world');
-// => 'hello_world'
-
-_.snakeCase('helloWorld');
-// => 'hello_world'
+_.chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
 ```
-<a name="_.isArray"></a>
-###_.isArray ⇒ <code>boolean</code>
-Checks if `value` is classified as an `Array` object.
+<a name="_.compact"></a>
+###_.compact(array) ⇒ <code>Array</code>
+Creates an array with all falsey values removed. The values `false`, `null`,
+`0`, `""`, `undefined`, and `NaN` are all falsey.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
+| array | <code>Array</code> | The array to compact. |
 
-**Returns**: <code>boolean</code> - Returns `true` if `value` is correctly classified, else `false`.  
-**Category**: Lang  
+**Returns**: <code>Array</code> - Returns the new array of filtered values.  
+**Category**: Array  
 **Example**  
 ```js
-_.isArray([1, 2, 3]);
-// => true
-
-(function() { return _.isArray(arguments); })();
-// => false
+_.compact([0, 1, false, 2, '', 3]);
+// => [1, 2, 3]
 ```
-<a name="_.isFinite"></a>
-###_.isFinite ⇒ <code>boolean</code>
-Checks if `value` is a finite primitive number.
+<a name="_.difference"></a>
+###_.difference(array, [...values]) ⇒ <code>Array</code>
+Creates an array excluding all values of the provided arrays using
+`SameValueZero` for equality comparisons.
 
-**Note:** This method is based on ES6 `Number.isFinite`. See the
-[ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite)
+**Note:** `SameValueZero` comparisons are like strict equality comparisons,
+e.g. `===`, except that `NaN` matches `NaN`. See the
+[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
 for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
+| array | <code>Array</code> | The array to inspect. |
+| \[...values\] | <code>Array</code> | The arrays of values to exclude. |
 
-**Returns**: <code>boolean</code> - Returns `true` if `value` is a finite number, else `false`.  
-**Category**: Lang  
+**Returns**: <code>Array</code> - Returns the new array of filtered values.  
+**Category**: Array  
 **Example**  
 ```js
-_.isFinite(10);
-// => true
-
-_.isFinite('10');
-// => false
-
-_.isFinite(true);
-// => false
-
-_.isFinite(Object(10));
-// => false
-
-_.isFinite(Infinity);
-// => false
+_.difference([1, 2, 3], [5, 2, 10]);
+// => [1, 3]
 ```
-<a name="_.isPlainObject"></a>
-###_.isPlainObject ⇒ <code>boolean</code>
-Checks if `value` is an object created by the `Object` constructor or has
-a `[[Prototype]]` of `null`.
-
-**Note:** This method assumes objects created by the `Object` constructor
-have no inherited enumerable properties.
+<a name="_.drop"></a>
+###_.drop(array, [n]) ⇒ <code>Array</code>
+Creates a slice of `array` with `n` elements dropped from the beginning.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
+| array | <code>Array</code> | The array to query. |
+| \[n=1\] | <code>number</code> | The number of elements to drop. |
 
-**Returns**: <code>boolean</code> - Returns `true` if `value` is a plain object, else `false`.  
-**Category**: Lang  
+**Returns**: <code>Array</code> - Returns the slice of `array`.  
+**Category**: Array  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
-function Shape() {
-  this.x = 0;
-  this.y = 0;
-}
+_.drop([1, 2, 3], 1);
+// => [2, 3]
 
-_.isPlainObject(new Shape);
-// => false
+_.drop([1, 2, 3], 2);
+// => [3]
 
-_.isPlainObject([1, 2, 3]);
-// => false
+_.drop([1, 2, 3], 5);
+// => []
 
-_.isPlainObject({ 'x': 0, 'y': 0 });
-// => true
-
-_.isPlainObject(Object.create(null));
-// => true
+_.drop([1, 2, 3], 0);
+// => [1, 2, 3]
 ```
-<a name="_.extend"></a>
-###_.extend ⇒ <code>Object</code>
-Assigns own enumerable properties of source object(s) to the destination
-object. Subsequent sources overwrite property assignments of previous sources.
-If `customizer` is provided it is invoked to produce the assigned values.
-The `customizer` is bound to `thisArg` and invoked with five arguments;
-(objectValue, sourceValue, key, object, source).
+<a name="_.dropRight"></a>
+###_.dropRight(array, [n]) ⇒ <code>Array</code>
+Creates a slice of `array` with `n` elements dropped from the end.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| object | <code>Object</code> | The destination object. |
-| \[...sources\] | <code>Object</code> | The source objects. |
-| \[customizer\] | <code>function</code> | The function to customize assigning values. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
+| array | <code>Array</code> | The array to query. |
+| \[n=1\] | <code>number</code> | The number of elements to drop. |
 
-**Returns**: <code>Object</code> - Returns the destination object.  
-**Category**: Object  
+**Returns**: <code>Array</code> - Returns the slice of `array`.  
+**Category**: Array  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
 **Example**  
 ```js
-_.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred', 'status': 'busy' });
-// => { 'user': 'fred', 'age': 40, 'status': 'busy' }
+_.dropRight([1, 2, 3], 1);
+// => [1, 2]
 
-var defaults = _.partialRight(_.assign, function(value, other) {
-  return typeof value == 'undefined' ? other : value;
-});
+_.dropRight([1, 2, 3], 2);
+// => [1]
 
-defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
-// => { 'user': 'barney', 'age': 36, 'status': 'busy' }
+_.dropRight([1, 2, 3], 5);
+// => []
+
+_.dropRight([1, 2, 3], 0);
+// => [1, 2, 3]
 ```
-<a name="_.keys"></a>
-###_.keys ⇒ <code>Array</code>
-Creates an array of the own enumerable property names of `object`.
+<a name="_.dropRightWhile"></a>
+###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
+Creates a slice of `array` excluding elements dropped from the end.
+Elements are dropped until `predicate` returns falsey. The predicate is
+bound to `thisArg` and invoked with three arguments; (value, index, array).
+
+If a property name is provided for `predicate` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `predicate` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| object | <code>Object</code> | The object to inspect. |
+| array | <code>Array</code> | The array to query. |
+| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
-**Returns**: <code>Array</code> - Returns the array of property names.  
-**Category**: Object  
+**Returns**: <code>Array</code> - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
-function Shape() {
-  this.x = 0;
-  this.y = 0;
-}
+_.dropRightWhile([1, 2, 3], function(n) { return n > 1; });
+// => [1]
 
-Shape.prototype.z = 0;
+var users = [
+  { 'user': 'barney',  'status': 'busy', 'active': false },
+  { 'user': 'fred',    'status': 'busy', 'active': true },
+  { 'user': 'pebbles', 'status': 'away', 'active': true }
+];
 
-_.keys(new Shape);
-// => ['x', 'y'] (iteration order is not guaranteed)
+// using "_.pluck" callback shorthand
+_.pluck(_.dropRightWhile(users, 'active'), 'user');
+// => ['barney']
+
+// using "_.where" callback shorthand
+_.pluck(_.dropRightWhile(users, { 'status': 'away' }), 'user');
+// => ['barney', 'fred']
 ```
-<a name="_.merge"></a>
-###_.merge ⇒ <code>Object</code>
-Recursively merges own enumerable properties of the source object(s), that
-don't resolve to `undefined` into the destination object. Subsequent sources
-overwrite property assignments of previous sources. If `customizer` is
-provided it is invoked to produce the merged values of the destination and
-source properties. If `customizer` returns `undefined` merging is handled
-by the method instead. The `customizer` is bound to `thisArg` and invoked
-with five arguments; (objectValue, sourceValue, key, object, source).
+<a name="_.dropWhile"></a>
+###_.dropWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
+Creates a slice of `array` excluding elements dropped from the beginning.
+Elements are dropped until `predicate` returns falsey. The predicate is
+bound to `thisArg` and invoked with three arguments; (value, index, array).
+
+If a property name is provided for `predicate` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `predicate` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| object | <code>Object</code> | The destination object. |
-| \[...sources\] | <code>Object</code> | The source objects. |
-| \[customizer\] | <code>function</code> | The function to customize merging properties. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
+| array | <code>Array</code> | The array to query. |
+| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
-**Returns**: <code>Object</code> - Returns the destination object.  
-**Category**: Object  
+**Returns**: <code>Array</code> - Returns the slice of `array`.  
+**Category**: Array  
 **Example**  
 ```js
-var users = {
-  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
-};
+_.dropWhile([1, 2, 3], function(n) { return n < 3; });
+// => [3]
 
-var ages = {
-  'data': [{ 'age': 36 }, { 'age': 40 }]
-};
+var users = [
+  { 'user': 'barney',  'status': 'busy', 'active': true },
+  { 'user': 'fred',    'status': 'busy', 'active': false },
+  { 'user': 'pebbles', 'status': 'away', 'active': true }
+];
 
-_.merge(users, ages);
-// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
+// using "_.pluck" callback shorthand
+_.pluck(_.dropWhile(users, 'active'), 'user');
+// => ['fred', 'pebbles']
 
-var food = {
-  'fruits': ['apple'],
-  'vegetables': ['beet']
-};
-
-var otherFood = {
-  'fruits': ['banana'],
-  'vegetables': ['carrot']
-};
-
-_.merge(food, otherFood, function(a, b) {
-  return _.isArray(a) ? a.concat(b) : undefined;
-});
-// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
+// using "_.where" callback shorthand
+_.pluck(_.dropWhile(users, { 'status': 'busy' }), 'user');
+// => ['pebbles']
 ```
-<a name="_.camelCase"></a>
-###_.camelCase ⇒ <code>string</code>
-Converts `string` to camel case.
-See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
+<a name="_.findIndex"></a>
+###_.findIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
+This method is like `_.find` except that it returns the index of the first
+element `predicate` returns truthy for, instead of the element itself.
+
+If a property name is provided for `predicate` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `predicate` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to camel case. |
+| array | <code>Array</code> | The array to search. |
+| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
-**Returns**: <code>string</code> - Returns the camel cased string.  
-**Category**: String  
+**Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
-_.camelCase('Hello world');
-// => 'helloWorld'
+var users = [
+  { 'user': 'barney',  'age': 36, 'active': false },
+  { 'user': 'fred',    'age': 40, 'active': true },
+  { 'user': 'pebbles', 'age': 1,  'active': false }
+];
 
-_.camelCase('--hello-world');
-// => 'helloWorld'
+_.findIndex(users, function(chr) { return chr.age < 40; });
+// => 0
 
-_.camelCase('__hello_world__');
-// => 'helloWorld'
+// using "_.where" callback shorthand
+_.findIndex(users, { 'age': 1 });
+// => 2
+
+// using "_.pluck" callback shorthand
+_.findIndex(users, 'active');
+// => 1
 ```
-<a name="_.kebabCase"></a>
-###_.kebabCase ⇒ <code>string</code>
-Converts `string` to kebab case (a.k.a. spinal case).
-See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
-more details.
+<a name="_.findLastIndex"></a>
+###_.findLastIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
+This method is like `_.findIndex` except that it iterates over elements
+of `collection` from right to left.
+
+If a property name is provided for `predicate` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `predicate` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to kebab case. |
+| array | <code>Array</code> | The array to search. |
+| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
-**Returns**: <code>string</code> - Returns the kebab cased string.  
-**Category**: String  
+**Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
+**Category**: Array  
 **Example**  
 ```js
-_.kebabCase('Hello world');
-// => 'hello-world'
+var users = [
+  { 'user': 'barney',  'age': 36, 'active': true },
+  { 'user': 'fred',    'age': 40, 'active': false },
+  { 'user': 'pebbles', 'age': 1,  'active': false }
+];
 
-_.kebabCase('helloWorld');
-// => 'hello-world'
+_.findLastIndex(users, function(chr) { return chr.age < 40; });
+// => 2
 
-_.kebabCase('__hello_world__');
-// => 'hello-world'
+// using "_.where" callback shorthand
+_.findLastIndex(users, { 'age': 40 });
+// => 1
+
+// using "_.pluck" callback shorthand
+_.findLastIndex(users, 'active');
+// => 0
 ```
-<a name="_.negate"></a>
-###_.negate(predicate) ⇒ <code>function</code>
-Creates a function that negates the result of the predicate `func`. The
-`func` predicate is invoked with the `this` binding and arguments of the
-created function.
+<a name="_.head"></a>
+###_.head(array) ⇒ <code>\*</code>
+Gets the first element of `array`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| predicate | <code>function</code> | The predicate to negate. |
+| array | <code>Array</code> | The array to query. |
 
-**Returns**: <code>function</code> - Returns the new function.  
-**Category**: Function  
+**Returns**: <code>\*</code> - Returns the first element of `array`.  
+**Category**: Array  
 **Example**  
 ```js
-function isEven(n) {
-  return n % 2 == 0;
-}
+_.first([1, 2, 3]);
+// => 1
 
-_.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
-// => [1, 3, 5]
+_.first([]);
+// => undefined
+```
+<a name="_.flatten"></a>
+###_.flatten(array, [isDeep]) ⇒ <code>Array</code>
+Flattens a nested array. If `isDeep` is `true` the array is recursively
+flattened, otherwise it is only flattened a single level.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to flatten. |
+| \[isDeep\] | <code>boolean</code> | Specify a deep flatten. |
+
+**Returns**: <code>Array</code> - Returns the new flattened array.  
+**Category**: Array  
+**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
+**Example**  
+```js
+_.flatten([1, [2], [3, [[4]]]]);
+// => [1, 2, 3, [[4]]];
+
+// using `isDeep`
+_.flatten([1, [2], [3, [[4]]]], true);
+// => [1, 2, 3, 4];
+```
+<a name="_.flattenDeep"></a>
+###_.flattenDeep(array) ⇒ <code>Array</code>
+Recursively flattens a nested array.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to recursively flatten. |
+
+**Returns**: <code>Array</code> - Returns the new flattened array.  
+**Category**: Array  
+**Example**  
+```js
+_.flattenDeep([1, [2], [3, [[4]]]]);
+// => [1, 2, 3, 4];
+```
+<a name="_.indexOf"></a>
+###_.indexOf(array, value, [fromIndex]) ⇒ <code>number</code>
+Gets the index at which the first occurrence of `value` is found in `array`
+using `SameValueZero` for equality comparisons. If `fromIndex` is negative,
+it is used as the offset from the end of `array`. If `array` is sorted
+providing `true` for `fromIndex` performs a faster binary search.
+
+**Note:** `SameValueZero` comparisons are like strict equality comparisons,
+e.g. `===`, except that `NaN` matches `NaN`. See the
+[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to search. |
+| value | <code>\*</code> | The value to search for. |
+| \[fromIndex=0\] | <code>boolean</code> \| <code>number</code> | The index to search from or `true`  to perform a binary search on a sorted array. |
+
+**Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
+**Category**: Array  
+**Example**  
+```js
+_.indexOf([1, 2, 3, 1, 2, 3], 2);
+// => 1
+
+// using `fromIndex`
+_.indexOf([1, 2, 3, 1, 2, 3], 2, 3);
+// => 4
+
+// performing a binary search
+_.indexOf([4, 4, 5, 5, 6, 6], 5, true);
+// => 2
+```
+<a name="_.initial"></a>
+###_.initial(array) ⇒ <code>Array</code>
+Gets all but the last element of `array`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to query. |
+
+**Returns**: <code>Array</code> - Returns the slice of `array`.  
+**Category**: Array  
+**Example**  
+```js
+_.initial([1, 2, 3]);
+// => [1, 2]
+```
+<a name="_.intersection"></a>
+###_.intersection([...arrays]) ⇒ <code>Array</code>
+Creates an array of unique values in all provided arrays using `SameValueZero`
+for equality comparisons.
+
+**Note:** `SameValueZero` comparisons are like strict equality comparisons,
+e.g. `===`, except that `NaN` matches `NaN`. See the
+[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| \[...arrays\] | <code>Array</code> | The arrays to inspect. |
+
+**Returns**: <code>Array</code> - Returns the new array of shared values.  
+**Category**: Array  
+**Example**  
+```js
+_.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+// => [1, 2]
+```
+<a name="_.last"></a>
+###_.last(array) ⇒ <code>\*</code>
+Gets the last element of `array`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to query. |
+
+**Returns**: <code>\*</code> - Returns the last element of `array`.  
+**Category**: Array  
+**Example**  
+```js
+_.last([1, 2, 3]);
+// => 3
+```
+<a name="_.lastIndexOf"></a>
+###_.lastIndexOf(array, value, [fromIndex]) ⇒ <code>number</code>
+This method is like `_.indexOf` except that it iterates over elements of
+`array` from right to left.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to search. |
+| value | <code>\*</code> | The value to search for. |
+| \[fromIndex=array.length-1\] | <code>boolean</code> \| <code>number</code> | The index to search from  or `true` to perform a binary search on a sorted array. |
+
+**Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
+**Category**: Array  
+**Example**  
+```js
+_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+// => 4
+
+// using `fromIndex`
+_.lastIndexOf([1, 2, 3, 1, 2, 3], 2, 3);
+// => 1
+
+// performing a binary search
+_.lastIndexOf([4, 4, 5, 5, 6, 6], 5, true);
+// => 3
+```
+<a name="_.pull"></a>
+###_.pull(array, [...values]) ⇒ <code>Array</code>
+Removes all provided values from `array` using `SameValueZero` for equality
+comparisons.
+
+**Notes:**
+ - Unlike `_.without`, this method mutates `array`.
+ - `SameValueZero` comparisons are like strict equality comparisons, e.g. `===`,
+   except that `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+   for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| array | <code>Array</code> | The array to modify. |
+| \[...values\] | <code>\*</code> | The values to remove. |
+
+**Returns**: <code>Array</code> - Returns `array`.  
+**Category**: Array  
+**Example**  
+```js
+var array = [1, 2, 3, 1, 2, 3];
+_.pull(array, 2, 3);
+console.log(array);
+// => [1, 1]
 ```
 <a name="_.pullAt"></a>
 ###_.pullAt(array, [...indexes]) ⇒ <code>Array</code>
@@ -1393,207 +1499,70 @@ _([1, 2, 3])
  .value();
 // => [3]
 ```
-<a name="_.runInContext"></a>
-###_.runInContext([context]) ⇒ <code>function</code>
-Create a new pristine `lodash` function using the given `context` object.
+<a name="_.chain"></a>
+###_.chain ⇒ <code>\*</code>
+Enables explicit method chaining on the wrapper object.
 
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| \[context=root\] | <code>Object</code> | The context object. |
-
-**Returns**: <code>function</code> - Returns a new `lodash` function.  
-**Category**: Utility  
+**Returns**: <code>\*</code> - Returns the `lodash` object.  
+**Category**: Chain  
 **Example**  
 ```js
-_.mixin({ 'add': function(a, b) { return a + b; } }, false);
+var users = [
+  { 'user': 'barney', 'age': 36 },
+  { 'user': 'fred',   'age': 40 }
+];
 
-var lodash = _.runInContext();
-lodash.mixin({ 'sub': function(a, b) { return a - b; } }, false);
+// without explicit chaining
+_(users).first();
+// => { 'user': 'barney', 'age': 36 }
 
-_.isFunction(_.add);
-// => true
-
-_.isFunction(_.sub);
-// => false
-
-lodash.isFunction(lodash.add);
-// => false
-
-lodash.isFunction(lodash.sub);
-// => true
+// with explicit chaining
+_(users).chain()
+  .first()
+  .pick('user')
+  .value();
+// => { 'user': 'barney' }
 ```
+<a name="_.reverse"></a>
+###_.reverse ⇒ <code>Object</code>
+Reverses the wrapped array so the first element becomes the last, the
+second element becomes the second to last, and so on.
 
-* [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
-  * [~ArrayBuffer](#_.runInContext..ArrayBuffer)
-  * [~Array](#_.runInContext..Array)
-  * [~document](#_.runInContext..document)
-  * [~fnToString](#_.runInContext..fnToString)
-  * [~hasOwnProperty](#_.runInContext..hasOwnProperty)
-  * [~idCounter](#_.runInContext..idCounter)
-  * [~oldDash](#_.runInContext..oldDash)
-  * [~toString](#_.runInContext..toString)
-  * [~reNative](#_.runInContext..reNative)
-  * [~arrayProto](#_.runInContext..arrayProto)
-  * [~Float64Array](#_.runInContext..Float64Array)
-  * [~NEGATIVE_INFINITY](#_.runInContext..NEGATIVE_INFINITY)
-  * [~MAX_ARRAY_LENGTH](#_.runInContext..MAX_ARRAY_LENGTH)
-  * [~FLOAT64_BYTES_PER_ELEMENT](#_.runInContext..FLOAT64_BYTES_PER_ELEMENT)
-  * [~MAX_SAFE_INTEGER](#_.runInContext..MAX_SAFE_INTEGER)
-  * [~metaMap](#_.runInContext..metaMap)
-  * [~ctorByClass](#_.runInContext..ctorByClass)
-  * [~nonEnumProps](#_.runInContext..nonEnumProps)
+**Note:** This method mutates the wrapped array.
 
-<a name="_.runInContext..ArrayBuffer"></a>
-####runInContext~ArrayBuffer
-Native method references.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..Array"></a>
-####runInContext~Array
-Native constructor references.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..document"></a>
-####runInContext~document
-Used to detect DOM support.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..fnToString"></a>
-####runInContext~fnToString
-Used to resolve the decompiled source of functions.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..hasOwnProperty"></a>
-####runInContext~hasOwnProperty
-Used to check objects for own properties.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..idCounter"></a>
-####runInContext~idCounter
-Used to generate unique IDs.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..oldDash"></a>
-####runInContext~oldDash
-Used to restore the original `_` reference in `_.noConflict`.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..toString"></a>
-####runInContext~toString
-Used to resolve the internal `[[Class]]` of values.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..reNative"></a>
-####runInContext~reNative
-Used to detect if a method is native.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..arrayProto"></a>
-####runInContext~arrayProto
-Used for native method references.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..Float64Array"></a>
-####runInContext~Float64Array
-Used to clone array buffers.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..NEGATIVE_INFINITY"></a>
-####runInContext~NEGATIVE_INFINITY
-Used as references for `-Infinity` and `Infinity`.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..MAX_ARRAY_LENGTH"></a>
-####runInContext~MAX_ARRAY_LENGTH
-Used as references for the maximum length and index of an array.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..FLOAT64_BYTES_PER_ELEMENT"></a>
-####runInContext~FLOAT64_BYTES_PER_ELEMENT
-Used as the size, in bytes, of each `Float64Array` element.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..MAX_SAFE_INTEGER"></a>
-####runInContext~MAX_SAFE_INTEGER
-Used as the maximum length of an array-like value.
-See the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)
-for more details.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..metaMap"></a>
-####runInContext~metaMap
-Used to store function metadata.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..ctorByClass"></a>
-####runInContext~ctorByClass
-Used to lookup a built-in constructor by `[[Class]]`.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.runInContext..nonEnumProps"></a>
-####runInContext~nonEnumProps
-Used to avoid iterating over non-enumerable properties in IE < 9.
-
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-<a name="_.chunk"></a>
-###_.chunk(array, [size]) ⇒ <code>Array</code>
-Creates an array of elements split into groups the length of `size`.
-If `collection` can't be split evenly, the final chunk will be the remaining
-elements.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to process. |
-| \[size=1\] | <code>numer</code> | The length of each chunk. |
-
-**Returns**: <code>Array</code> - Returns the new array containing chunks.  
-**Category**: Array  
-**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
+**Returns**: <code>Object</code> - Returns the new reversed `lodash` object.  
+**Category**: Chain  
 **Example**  
 ```js
-_.chunk(['a', 'b', 'c', 'd'], 2);
-// => [['a', 'b'], ['c', 'd']]
+var array = [1, 2, 3];
 
-_.chunk(['a', 'b', 'c', 'd'], 3);
-// => [['a', 'b', 'c'], ['d']]
+_(array).reverse().value()
+// => [3, 2, 1]
+
+console.log(array);
+// => [3, 2, 1]
 ```
-<a name="_.compact"></a>
-###_.compact(array) ⇒ <code>Array</code>
-Creates an array with all falsey values removed. The values `false`, `null`,
-`0`, `""`, `undefined`, and `NaN` are all falsey.
+<a name="_.toString"></a>
+###_.toString ⇒ <code>string</code>
+Produces the result of coercing the unwrapped value to a string.
 
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to compact. |
-
-**Returns**: <code>Array</code> - Returns the new array of filtered values.  
-**Category**: Array  
+**Returns**: <code>string</code> - Returns the coerced string value.  
+**Category**: Chain  
 **Example**  
 ```js
-_.compact([0, 1, false, 2, '', 3]);
+_([1, 2, 3]).toString();
+// => '1,2,3'
+```
+<a name="_.value"></a>
+###_.value ⇒ <code>\*</code>
+Executes the chained sequence to extract the unwrapped value.
+
+**Returns**: <code>\*</code> - Returns the resolved unwrapped value.  
+**Category**: Chain  
+**Example**  
+```js
+_([1, 2, 3]).value();
 // => [1, 2, 3]
-```
-<a name="_.difference"></a>
-###_.difference(array, [...values]) ⇒ <code>Array</code>
-Creates an array excluding all values of the provided arrays using
-`SameValueZero` for equality comparisons.
-
-**Note:** `SameValueZero` comparisons are like strict equality comparisons,
-e.g. `===`, except that `NaN` matches `NaN`. See the
-[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
-for more details.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to inspect. |
-| \[...values\] | <code>Array</code> | The arrays of values to exclude. |
-
-**Returns**: <code>Array</code> - Returns the new array of filtered values.  
-**Category**: Array  
-**Example**  
-```js
-_.difference([1, 2, 3], [5, 2, 10]);
-// => [1, 3]
 ```
 <a name="_.at"></a>
 ###_.at(collection, [...props]) ⇒ <code>Array</code>
@@ -1616,31 +1585,39 @@ _.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);
 _.at(['fred', 'barney', 'pebbles'], 0, 2);
 // => ['fred', 'pebbles']
 ```
-<a name="_.drop"></a>
-###_.drop(array, [n]) ⇒ <code>Array</code>
-Creates a slice of `array` with `n` elements dropped from the beginning.
+<a name="_.countBy"></a>
+###_.countBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is the number of times the key was returned by `iteratee`.
+The `iteratee` is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
+
+If a property name is provided for `iteratee` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `iteratee` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to drop. |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
-**Returns**: <code>Array</code> - Returns the slice of `array`.  
-**Category**: Array  
-**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
 **Example**  
 ```js
-_.drop([1, 2, 3], 1);
-// => [2, 3]
+_.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });
+// => { '4': 1, '6': 2 }
 
-_.drop([1, 2, 3], 2);
-// => [3]
+_.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
+// => { '4': 1, '6': 2 }
 
-_.drop([1, 2, 3], 5);
-// => []
-
-_.drop([1, 2, 3], 0);
-// => [1, 2, 3]
+_.countBy(['one', 'two', 'three'], 'length');
+// => { '3': 2, '5': 1 }
 ```
 <a name="_.all"></a>
 ###_.all(collection, [predicate], [thisArg]) ⇒ <code>boolean</code>
@@ -1850,71 +1827,79 @@ This method is like `_.forEach` except that it iterates over elements of
 _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
-<a name="_.dropRight"></a>
-###_.dropRight(array, [n]) ⇒ <code>Array</code>
-Creates a slice of `array` with `n` elements dropped from the end.
+<a name="_.groupBy"></a>
+###_.groupBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is an array of the elements responsible for generating the key.
+The `iteratee` is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
 
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to drop. |
-
-**Returns**: <code>Array</code> - Returns the slice of `array`.  
-**Category**: Array  
-**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
-**Example**  
-```js
-_.dropRight([1, 2, 3], 1);
-// => [1, 2]
-
-_.dropRight([1, 2, 3], 2);
-// => [1]
-
-_.dropRight([1, 2, 3], 5);
-// => []
-
-_.dropRight([1, 2, 3], 0);
-// => [1, 2, 3]
-```
-<a name="_.dropRightWhile"></a>
-###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
-Creates a slice of `array` excluding elements dropped from the end.
-Elements are dropped until `predicate` returns falsey. The predicate is
-bound to `thisArg` and invoked with three arguments; (value, index, array).
-
-If a property name is provided for `predicate` the created "_.pluck" style
+If a property name is provided for `iteratee` the created "_.pluck" style
 callback returns the property value of the given element.
 
-If an object is provided for `predicate` the created "_.where" style callback
+If an object is provided for `iteratee` the created "_.where" style callback
 returns `true` for elements that have the properties of the given object,
 else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
-**Returns**: <code>Array</code> - Returns the slice of `array`.  
-**Category**: Array  
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
 **Example**  
 ```js
-_.dropRightWhile([1, 2, 3], function(n) { return n > 1; });
-// => [1]
+_.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });
+// => { '4': [4.2], '6': [6.1, 6.4] }
 
-var users = [
-  { 'user': 'barney',  'status': 'busy', 'active': false },
-  { 'user': 'fred',    'status': 'busy', 'active': true },
-  { 'user': 'pebbles', 'status': 'away', 'active': true }
-];
+_.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
+// => { '4': [4.2], '6': [6.1, 6.4] }
 
 // using "_.pluck" callback shorthand
-_.pluck(_.dropRightWhile(users, 'active'), 'user');
-// => ['barney']
+_.groupBy(['one', 'two', 'three'], 'length');
+// => { '3': ['one', 'two'], '5': ['three'] }
+```
+<a name="_.indexBy"></a>
+###_.indexBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is the last element responsible for generating the key. The
+iteratee function is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
 
-// using "_.where" callback shorthand
-_.pluck(_.dropRightWhile(users, { 'status': 'away' }), 'user');
-// => ['barney', 'fred']
+If a property name is provided for `iteratee` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `iteratee` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
+
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
+**Example**  
+```js
+var keyData = [
+  { 'dir': 'left', 'code': 97 },
+  { 'dir': 'right', 'code': 100 }
+];
+
+_.indexBy(keyData, 'dir');
+// => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
+
+_.indexBy(keyData, function(object) { return String.fromCharCode(object.code); });
+// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
+
+_.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);
+// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
 ```
 <a name="_.invoke"></a>
 ###_.invoke(collection, methodName, [...args]) ⇒ <code>Array</code>
@@ -2063,11 +2048,12 @@ _.min(users, function(chr) { return chr.age; });
 _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
 ```
-<a name="_.dropWhile"></a>
-###_.dropWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
-Creates a slice of `array` excluding elements dropped from the beginning.
-Elements are dropped until `predicate` returns falsey. The predicate is
-bound to `thisArg` and invoked with three arguments; (value, index, array).
+<a name="_.partition"></a>
+###_.partition ⇒ <code>Array</code>
+Creates an array of elements split into two groups, the first of which
+contains elements `predicate` returns truthy for, while the second of which
+contains elements `predicate` returns falsey for. The predicate is bound
+to `thisArg` and invoked with three arguments; (value, index|key, collection).
 
 If a property name is provided for `predicate` the created "_.pluck" style
 callback returns the property value of the given element.
@@ -2078,30 +2064,33 @@ else `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
-**Returns**: <code>Array</code> - Returns the slice of `array`.  
-**Category**: Array  
+**Returns**: <code>Array</code> - Returns the array of grouped elements.  
+**Category**: Collection  
 **Example**  
 ```js
-_.dropWhile([1, 2, 3], function(n) { return n < 3; });
-// => [3]
+_.partition([1, 2, 3], function(n) { return n % 2; });
+// => [[1, 3], [2]]
+
+_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);
+// => [[1, 3], [2]]
 
 var users = [
-  { 'user': 'barney',  'status': 'busy', 'active': true },
-  { 'user': 'fred',    'status': 'busy', 'active': false },
-  { 'user': 'pebbles', 'status': 'away', 'active': true }
+  { 'user': 'barney',  'age': 36, 'active': false },
+  { 'user': 'fred',    'age': 40, 'active': true },
+  { 'user': 'pebbles', 'age': 1,  'active': false }
 ];
 
-// using "_.pluck" callback shorthand
-_.pluck(_.dropWhile(users, 'active'), 'user');
-// => ['fred', 'pebbles']
-
 // using "_.where" callback shorthand
-_.pluck(_.dropWhile(users, { 'status': 'busy' }), 'user');
-// => ['pebbles']
+_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });
+// => [['pebbles'], ['barney', 'fred']]
+
+// using "_.pluck" callback shorthand
+_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });
+// => [['fred'], ['barney', 'pebbles']]
 ```
 <a name="_.pluck"></a>
 ###_.pluck(collection, key) ⇒ <code>Array</code>
@@ -2395,44 +2384,16 @@ _.pluck(_.where(users, { 'pets': ['dino'] }), 'user');
 _.pluck(_.where(users, { 'status': 'busy' }), 'user');
 // => ['barney', 'fred']
 ```
-<a name="_.findIndex"></a>
-###_.findIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
-This method is like `_.find` except that it returns the index of the first
-element `predicate` returns truthy for, instead of the element itself.
+<a name="_.now"></a>
+###_.now
+Gets the number of milliseconds that have elapsed since the Unix epoch
+(1 January 1970 00:00:00 UTC).
 
-If a property name is provided for `predicate` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `predicate` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
-
-**Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
-**Category**: Array  
+**Category**: Date  
 **Example**  
 ```js
-var users = [
-  { 'user': 'barney',  'age': 36, 'active': false },
-  { 'user': 'fred',    'age': 40, 'active': true },
-  { 'user': 'pebbles', 'age': 1,  'active': false }
-];
-
-_.findIndex(users, function(chr) { return chr.age < 40; });
-// => 0
-
-// using "_.where" callback shorthand
-_.findIndex(users, { 'age': 1 });
-// => 2
-
-// using "_.pluck" callback shorthand
-_.findIndex(users, 'active');
-// => 1
+_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
+// => logs the number of milliseconds it took for the deferred function to be invoked
 ```
 <a name="_.after"></a>
 ###_.after(n, func) ⇒ <code>function</code>
@@ -2852,44 +2813,26 @@ upperCase.cache.set('fred, 'BARNEY');
 upperCase('fred');
 // => 'BARNEY'
 ```
-<a name="_.findLastIndex"></a>
-###_.findLastIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
-This method is like `_.findIndex` except that it iterates over elements
-of `collection` from right to left.
-
-If a property name is provided for `predicate` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `predicate` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
+<a name="_.negate"></a>
+###_.negate(predicate) ⇒ <code>function</code>
+Creates a function that negates the result of the predicate `func`. The
+`func` predicate is invoked with the `this` binding and arguments of the
+created function.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
+| predicate | <code>function</code> | The predicate to negate. |
 
-**Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
-**Category**: Array  
+**Returns**: <code>function</code> - Returns the new function.  
+**Category**: Function  
 **Example**  
 ```js
-var users = [
-  { 'user': 'barney',  'age': 36, 'active': true },
-  { 'user': 'fred',    'age': 40, 'active': false },
-  { 'user': 'pebbles', 'age': 1,  'active': false }
-];
+function isEven(n) {
+  return n % 2 == 0;
+}
 
-_.findLastIndex(users, function(chr) { return chr.age < 40; });
-// => 2
-
-// using "_.where" callback shorthand
-_.findLastIndex(users, { 'age': 40 });
-// => 1
-
-// using "_.pluck" callback shorthand
-_.findLastIndex(users, 'active');
-// => 0
+_.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
+// => [1, 3, 5]
 ```
 <a name="_.once"></a>
 ###_.once(func) ⇒ <code>function</code>
@@ -3177,23 +3120,23 @@ Checks if `value` is classified as an `arguments` object.
 _.isArguments([1, 2, 3]);
 // => false
 ```
-<a name="_.head"></a>
-###_.head(array) ⇒ <code>\*</code>
-Gets the first element of `array`.
+<a name="_.isArray"></a>
+###_.isArray ⇒ <code>boolean</code>
+Checks if `value` is classified as an `Array` object.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
+| value | <code>\*</code> | The value to check. |
 
-**Returns**: <code>\*</code> - Returns the first element of `array`.  
-**Category**: Array  
+**Returns**: <code>boolean</code> - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
-_.first([1, 2, 3]);
-// => 1
+_.isArray([1, 2, 3]);
+// => true
 
-_.first([]);
-// => undefined
+(function() { return _.isArray(arguments); })();
+// => false
 ```
 <a name="_.isBoolean"></a>
 ###_.isBoolean(value) ⇒ <code>boolean</code>
@@ -3338,27 +3281,36 @@ _.isError(new Error);
 _.isError(Error);
 // => false
 ```
-<a name="_.flatten"></a>
-###_.flatten(array, [isDeep]) ⇒ <code>Array</code>
-Flattens a nested array. If `isDeep` is `true` the array is recursively
-flattened, otherwise it is only flattened a single level.
+<a name="_.isFinite"></a>
+###_.isFinite ⇒ <code>boolean</code>
+Checks if `value` is a finite primitive number.
+
+**Note:** This method is based on ES6 `Number.isFinite`. See the
+[ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite)
+for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to flatten. |
-| \[isDeep\] | <code>boolean</code> | Specify a deep flatten. |
+| value | <code>\*</code> | The value to check. |
 
-**Returns**: <code>Array</code> - Returns the new flattened array.  
-**Category**: Array  
-**param-**: {Object} [guard] Enables use as a callback for functions like &#x60;_.map&#x60;.  
+**Returns**: <code>boolean</code> - Returns `true` if `value` is a finite number, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
-_.flatten([1, [2], [3, [[4]]]]);
-// => [1, 2, 3, [[4]]];
+_.isFinite(10);
+// => true
 
-// using `isDeep`
-_.flatten([1, [2], [3, [[4]]]], true);
-// => [1, 2, 3, 4];
+_.isFinite('10');
+// => false
+
+_.isFinite(true);
+// => false
+
+_.isFinite(Object(10));
+// => false
+
+_.isFinite(Infinity);
+// => false
 ```
 <a name="_.isFunction"></a>
 ###_.isFunction(value) ⇒ <code>boolean</code>
@@ -3530,20 +3482,38 @@ _.isNumber(NaN);
 _.isNumber('8.4');
 // => false
 ```
-<a name="_.flattenDeep"></a>
-###_.flattenDeep(array) ⇒ <code>Array</code>
-Recursively flattens a nested array.
+<a name="_.isPlainObject"></a>
+###_.isPlainObject ⇒ <code>boolean</code>
+Checks if `value` is an object created by the `Object` constructor or has
+a `[[Prototype]]` of `null`.
+
+**Note:** This method assumes objects created by the `Object` constructor
+have no inherited enumerable properties.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to recursively flatten. |
+| value | <code>\*</code> | The value to check. |
 
-**Returns**: <code>Array</code> - Returns the new flattened array.  
-**Category**: Array  
+**Returns**: <code>boolean</code> - Returns `true` if `value` is a plain object, else `false`.  
+**Category**: Lang  
 **Example**  
 ```js
-_.flattenDeep([1, [2], [3, [[4]]]]);
-// => [1, 2, 3, 4];
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+_.isPlainObject(new Shape);
+// => false
+
+_.isPlainObject([1, 2, 3]);
+// => false
+
+_.isPlainObject({ 'x': 0, 'y': 0 });
+// => true
+
+_.isPlainObject(Object.create(null));
+// => true
 ```
 <a name="_.isRegExp"></a>
 ###_.isRegExp(value) ⇒ <code>boolean</code>
@@ -3599,38 +3569,34 @@ _.isUndefined(void 0);
 _.isUndefined(null);
 // => false
 ```
-<a name="_.indexOf"></a>
-###_.indexOf(array, value, [fromIndex]) ⇒ <code>number</code>
-Gets the index at which the first occurrence of `value` is found in `array`
-using `SameValueZero` for equality comparisons. If `fromIndex` is negative,
-it is used as the offset from the end of `array`. If `array` is sorted
-providing `true` for `fromIndex` performs a faster binary search.
-
-**Note:** `SameValueZero` comparisons are like strict equality comparisons,
-e.g. `===`, except that `NaN` matches `NaN`. See the
-[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
-for more details.
+<a name="_.extend"></a>
+###_.extend ⇒ <code>Object</code>
+Assigns own enumerable properties of source object(s) to the destination
+object. Subsequent sources overwrite property assignments of previous sources.
+If `customizer` is provided it is invoked to produce the assigned values.
+The `customizer` is bound to `thisArg` and invoked with five arguments;
+(objectValue, sourceValue, key, object, source).
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to search. |
-| value | <code>\*</code> | The value to search for. |
-| \[fromIndex=0\] | <code>boolean</code> \| <code>number</code> | The index to search from or `true`  to perform a binary search on a sorted array. |
+| object | <code>Object</code> | The destination object. |
+| \[...sources\] | <code>Object</code> | The source objects. |
+| \[customizer\] | <code>function</code> | The function to customize assigning values. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
 
-**Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
-**Category**: Array  
+**Returns**: <code>Object</code> - Returns the destination object.  
+**Category**: Object  
 **Example**  
 ```js
-_.indexOf([1, 2, 3, 1, 2, 3], 2);
-// => 1
+_.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred', 'status': 'busy' });
+// => { 'user': 'fred', 'age': 40, 'status': 'busy' }
 
-// using `fromIndex`
-_.indexOf([1, 2, 3, 1, 2, 3], 2, 3);
-// => 4
+var defaults = _.partialRight(_.assign, function(value, other) {
+  return typeof value == 'undefined' ? other : value;
+});
 
-// performing a binary search
-_.indexOf([4, 4, 5, 5, 6, 6], 5, true);
-// => 2
+defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
+// => { 'user': 'barney', 'age': 36, 'status': 'busy' }
 ```
 <a name="_.create"></a>
 ###_.create(prototype, [properties]) ⇒ <code>Object</code>
@@ -3920,20 +3886,27 @@ _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' });
 _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);
 // => { 'fred': ['first', 'third'], 'barney': ['second'] }
 ```
-<a name="_.initial"></a>
-###_.initial(array) ⇒ <code>Array</code>
-Gets all but the last element of `array`.
+<a name="_.keys"></a>
+###_.keys ⇒ <code>Array</code>
+Creates an array of the own enumerable property names of `object`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
+| object | <code>Object</code> | The object to inspect. |
 
-**Returns**: <code>Array</code> - Returns the slice of `array`.  
-**Category**: Array  
+**Returns**: <code>Array</code> - Returns the array of property names.  
+**Category**: Object  
 **Example**  
 ```js
-_.initial([1, 2, 3]);
-// => [1, 2]
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+Shape.prototype.z = 0;
+
+_.keys(new Shape);
+// => ['x', 'y'] (iteration order is not guaranteed)
 ```
 <a name="_.keysIn"></a>
 ###_.keysIn(object) ⇒ <code>Array</code>
@@ -3993,26 +3966,52 @@ var users = {
 _.mapValues(users, 'age');
 // => { 'fred': 40, 'pebbles': 1 }
 ```
-<a name="_.intersection"></a>
-###_.intersection([...arrays]) ⇒ <code>Array</code>
-Creates an array of unique values in all provided arrays using `SameValueZero`
-for equality comparisons.
-
-**Note:** `SameValueZero` comparisons are like strict equality comparisons,
-e.g. `===`, except that `NaN` matches `NaN`. See the
-[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
-for more details.
+<a name="_.merge"></a>
+###_.merge ⇒ <code>Object</code>
+Recursively merges own enumerable properties of the source object(s), that
+don't resolve to `undefined` into the destination object. Subsequent sources
+overwrite property assignments of previous sources. If `customizer` is
+provided it is invoked to produce the merged values of the destination and
+source properties. If `customizer` returns `undefined` merging is handled
+by the method instead. The `customizer` is bound to `thisArg` and invoked
+with five arguments; (objectValue, sourceValue, key, object, source).
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[...arrays\] | <code>Array</code> | The arrays to inspect. |
+| object | <code>Object</code> | The destination object. |
+| \[...sources\] | <code>Object</code> | The source objects. |
+| \[customizer\] | <code>function</code> | The function to customize merging properties. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
 
-**Returns**: <code>Array</code> - Returns the new array of shared values.  
-**Category**: Array  
+**Returns**: <code>Object</code> - Returns the destination object.  
+**Category**: Object  
 **Example**  
 ```js
-_.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
-// => [1, 2]
+var users = {
+  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
+};
+
+var ages = {
+  'data': [{ 'age': 36 }, { 'age': 40 }]
+};
+
+_.merge(users, ages);
+// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
+
+var food = {
+  'fruits': ['apple'],
+  'vegetables': ['beet']
+};
+
+var otherFood = {
+  'fruits': ['banana'],
+  'vegetables': ['carrot']
+};
+
+_.merge(food, otherFood, function(a, b) {
+  return _.isArray(a) ? a.concat(b) : undefined;
+});
+// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
 ```
 <a name="_.omit"></a>
 ###_.omit(object, [predicate], [thisArg]) ⇒ <code>Object</code>
@@ -4222,20 +4221,27 @@ _.random(5, true);
 _.random(1.2, 5.2);
 // => a floating-point number between 1.2 and 5.2
 ```
-<a name="_.last"></a>
-###_.last(array) ⇒ <code>\*</code>
-Gets the last element of `array`.
+<a name="_.camelCase"></a>
+###_.camelCase ⇒ <code>string</code>
+Converts `string` to camel case.
+See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to query. |
+| \[string=''\] | <code>string</code> | The string to camel case. |
 
-**Returns**: <code>\*</code> - Returns the last element of `array`.  
-**Category**: Array  
+**Returns**: <code>string</code> - Returns the camel cased string.  
+**Category**: String  
 **Example**  
 ```js
-_.last([1, 2, 3]);
-// => 3
+_.camelCase('Hello world');
+// => 'helloWorld'
+
+_.camelCase('--hello-world');
+// => 'helloWorld'
+
+_.camelCase('__hello_world__');
+// => 'helloWorld'
 ```
 <a name="_.capitalize"></a>
 ###_.capitalize([string]) ⇒ <code>string</code>
@@ -4342,31 +4348,28 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 _.escapeRegExp('[lodash](https://lodash.com/)');
 // => '\[lodash\]\(https://lodash\.com/\)'
 ```
-<a name="_.lastIndexOf"></a>
-###_.lastIndexOf(array, value, [fromIndex]) ⇒ <code>number</code>
-This method is like `_.indexOf` except that it iterates over elements of
-`array` from right to left.
+<a name="_.kebabCase"></a>
+###_.kebabCase ⇒ <code>string</code>
+Converts `string` to kebab case (a.k.a. spinal case).
+See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
+more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to search. |
-| value | <code>\*</code> | The value to search for. |
-| \[fromIndex=array.length-1\] | <code>boolean</code> \| <code>number</code> | The index to search from  or `true` to perform a binary search on a sorted array. |
+| \[string=''\] | <code>string</code> | The string to kebab case. |
 
-**Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
-**Category**: Array  
+**Returns**: <code>string</code> - Returns the kebab cased string.  
+**Category**: String  
 **Example**  
 ```js
-_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
-// => 4
+_.kebabCase('Hello world');
+// => 'hello-world'
 
-// using `fromIndex`
-_.lastIndexOf([1, 2, 3, 1, 2, 3], 2, 3);
-// => 1
+_.kebabCase('helloWorld');
+// => 'hello-world'
 
-// performing a binary search
-_.lastIndexOf([4, 4, 5, 5, 6, 6], 5, true);
-// => 3
+_.kebabCase('__hello_world__');
+// => 'hello-world'
 ```
 <a name="_.pad"></a>
 ###_.pad([string], [length], [chars]) ⇒ <code>string</code>
@@ -4487,30 +4490,27 @@ _.repeat('abc', 2);
 _.repeat('abc', 0);
 // => ''
 ```
-<a name="_.pull"></a>
-###_.pull(array, [...values]) ⇒ <code>Array</code>
-Removes all provided values from `array` using `SameValueZero` for equality
-comparisons.
-
-**Notes:**
- - Unlike `_.without`, this method mutates `array`.
- - `SameValueZero` comparisons are like strict equality comparisons, e.g. `===`,
-   except that `NaN` matches `NaN`. See the [ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
-   for more details.
+<a name="_.snakeCase"></a>
+###_.snakeCase ⇒ <code>string</code>
+Converts `string` to snake case.
+See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| array | <code>Array</code> | The array to modify. |
-| \[...values\] | <code>\*</code> | The values to remove. |
+| \[string=''\] | <code>string</code> | The string to snake case. |
 
-**Returns**: <code>Array</code> - Returns `array`.  
-**Category**: Array  
+**Returns**: <code>string</code> - Returns the snake cased string.  
+**Category**: String  
 **Example**  
 ```js
-var array = [1, 2, 3, 1, 2, 3];
-_.pull(array, 2, 3);
-console.log(array);
-// => [1, 1]
+_.snakeCase('Hello world');
+// => 'hello_world'
+
+_.snakeCase('--hello-world');
+// => 'hello_world'
+
+_.snakeCase('helloWorld');
+// => 'hello_world'
 ```
 <a name="_.startsWith"></a>
 ###_.startsWith([string], [target], [position]) ⇒ <code>boolean</code>

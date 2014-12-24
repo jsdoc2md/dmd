@@ -8,13 +8,13 @@ var a = require("array-tools");
 ```
 
 * [array-tools](#module_array-tools)
-  * [.without(input, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
   * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
+  * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
   * [.arrayify(input)](#module_array-tools.arrayify) ⇒ <code>Array</code>
   * [.exists(array, value)](#module_array-tools.exists) ⇒ <code>boolean</code>
   * [.where(arrayOfObjects, query)](#module_array-tools.where) ⇒ <code>Array</code>
   * [.findWhere(arrayOfObjects, query)](#module_array-tools.findWhere) ⇒ <code>object</code>
-  * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
+  * [.without(input, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
   * [.union(array1, array2, idKey)](#module_array-tools.union) ⇒ <code>Array</code>
   * [.commonSequence(a, b)](#module_array-tools.commonSequence) ⇒ <code>Array</code>
   * [.unique(array)](#module_array-tools.unique) ⇒ <code>Array</code>
@@ -22,22 +22,6 @@ var a = require("array-tools");
   * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
   * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
 
-<a name="module_array-tools.without"></a>
-###a.without(input, toRemove) ⇒ <code>Array</code>
-Returns the input minus the specified values.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| input | <code>Array</code> | the input array |
-| toRemove | <code>\*</code> | a single, or array of values to omit |
-
-**Example**  
-```js
-> a.without([ 1, 2, 3 ], 2)
-[ 1, 3 ]
-> a.without([ 1, 2, 3 ], [ 2, 3 ])
-[ 1 ]
-```
 <a name="module_array-tools.pluck"></a>
 ###a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
@@ -61,6 +45,28 @@ undefined
 [ 2, 'two', 'zwei' ]
 > a.pluck(data, "one", "two");
 [ 1, 'two', 'one' ]
+```
+<a name="module_array-tools.pick"></a>
+###a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
+return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
+| ...property | <code>string</code> | the properties to include in the result |
+
+**Example**  
+```js
+> data = [
+    { one: "un", two: "deux", three: "trois" },
+    { two: "two", one: "one" },
+    { four: "quattro" },
+    { two: "zwei" }
+]
+> a.pick(data, "two")
+[ { two: 'deux' },
+  { two: 'two' },
+  { two: 'zwei' } ]
 ```
 <a name="module_array-tools.arrayify"></a>
 ###a.arrayify(input) ⇒ <code>Array</code>
@@ -146,27 +152,21 @@ from `query` are matched identically
 > a.findWhere(dudes, { age: 8})
 { name: 'Jim', age: 8 }
 ```
-<a name="module_array-tools.pick"></a>
-###a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
-return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
+<a name="module_array-tools.without"></a>
+###a.without(input, toRemove) ⇒ <code>Array</code>
+Returns the input minus the specified values.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
-| ...property | <code>string</code> | the properties to include in the result |
+| input | <code>Array</code> | the input array |
+| toRemove | <code>\*</code> | a single, or array of values to omit |
 
 **Example**  
 ```js
-> data = [
-    { one: "un", two: "deux", three: "trois" },
-    { two: "two", one: "one" },
-    { four: "quattro" },
-    { two: "zwei" }
-]
-> a.pick(data, "two")
-[ { two: 'deux' },
-  { two: 'two' },
-  { two: 'zwei' } ]
+> a.without([ 1, 2, 3 ], 2)
+[ 1, 3 ]
+> a.without([ 1, 2, 3 ], [ 2, 3 ])
+[ 1 ]
 ```
 <a name="module_array-tools.union"></a>
 ###a.union(array1, array2, idKey) ⇒ <code>Array</code>
@@ -259,10 +259,20 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 **Returns**: <code>Array</code> - the extracted items.  
 <a name="module_array-tools.flatten"></a>
 ###a.flatten() ⇒ <code>Array</code>
-flatten
+flatten an array of arrays into a single array
 
 **Since**: 1.4.0  
 **Todo**
 
 - [ ] document
 
+**Example**  
+```js
+> numbers = [ 1, 2, [ 3, 4 ], 5 ]
+[ 1,
+  2,
+  [ 3, 4 ],
+  5 ]
+> a.flatten(numbers)
+[ 1, 2, 3, 4, 5 ]
+```

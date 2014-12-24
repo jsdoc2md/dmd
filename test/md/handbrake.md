@@ -8,9 +8,6 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [.cliOptions](#module_handbrake-js.cliOptions) → <code>array</code>
-  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
-  * [.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [class: ~Handbrake](#module_handbrake-js..Handbrake)
     * _instance_
       * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
@@ -23,52 +20,17 @@ var hbjs = require("handbrake-js");
       * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
       * ["end"](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
+  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
+  * [.exec(options, [onComplete])](#module_handbrake-js.exec)
+  * [.cliOptions](#module_handbrake-js.cliOptions) → <code>array</code>
 
-<a name="module_handbrake-js.cliOptions"></a>
-###hbjs.cliOptions → <code>array</code>
-[Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
-
-<a name="module_handbrake-js.spawn"></a>
-###hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
-Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| options | <code>Object</code> \| <code>Array</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-
-**Example**  
-```js
-var hbjs = require("handbrake-js");
-
-hbjs.spawn(options)
-    .on("error", console.error)
-    .on("output", console.log);
-```
-<a name="module_handbrake-js.exec"></a>
-###hbjs.exec(options, [onComplete])
-Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-| \[onComplete\] | <code>function</code> | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
-
-**Example**  
-```js
-var hbjs = require("handbrake-js");
-
-hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
-    if (err) throw err;
-    console.log(stdout);
-});
-```
 <a name="module_handbrake-js..Handbrake"></a>
 ###class: hbjs~Handbrake
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
 **Extends:** `EventEmitter`  
 **Scope**: inner class of <code>[handbrake-js](#module_handbrake-js)</code>  
-**Emits**: event:start, module:handbrake-js~Handbrake#event:progress, module:handbrake-js~Handbrake#event:begin, module:handbrake-js~Handbrake#event:end, event:complete
+**Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>
 
 * [class: ~Handbrake](#module_handbrake-js..Handbrake)
   * _instance_
@@ -136,4 +98,42 @@ Fired on successful completion of an encoding task. Always follows a `begin` eve
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 ####event: "complete"
 Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..
+
+<a name="module_handbrake-js.spawn"></a>
+###hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
+Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+
+**Example**  
+```js
+var hbjs = require("handbrake-js");
+
+hbjs.spawn(options)
+    .on("error", console.error)
+    .on("output", console.log);
+```
+<a name="module_handbrake-js.exec"></a>
+###hbjs.exec(options, [onComplete])
+Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
+| \[onComplete\] | <code>function</code> | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
+
+**Example**  
+```js
+var hbjs = require("handbrake-js");
+
+hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
+    if (err) throw err;
+    console.log(stdout);
+});
+```
+<a name="module_handbrake-js.cliOptions"></a>
+###hbjs.cliOptions → <code>array</code>
+[Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
