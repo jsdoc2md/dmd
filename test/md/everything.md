@@ -41,13 +41,13 @@
   * [.two()](#module_cjs/object.two)
 
 ##Global
-* [headObj](#headObj)
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
     * [.propOne](#GlobalClass#propOne)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
+* [customTagged](#customTagged)
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
@@ -69,7 +69,7 @@
   * _instance_
     * [.yeah()](#SOmething#yeah)
 * [headVar](#headVar) → <code>number</code>
-* [customTagged](#customTagged)
+* [headObj](#headObj)
 * [bodyGlobal](#bodyGlobal)
 * [class: LendsClass](#LendsClass)
   * _static_
@@ -133,16 +133,16 @@ the exported dog
       * _instance_
         * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
-<a name="module_cjs/animals..Animal#type"></a>
-####animal.type → <code>Quadroped</code>
-animal type
-
 <a name="module_cjs/animals..Animal..Quadroped"></a>
 ####class: Animal~Quadroped
 **Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
 #####quadroped.legs
 leg count
+
+<a name="module_cjs/animals..Animal#type"></a>
+####animal.type → <code>Quadroped</code>
+animal type
 
 <a name="module_cjs/class"></a>
 ##cjs/class
@@ -236,10 +236,6 @@ the exported class
 ####new Human()
 the exported contructor
 
-<a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
-an instance of Organ
-
 <a name="module_cjs/human--Human..Organ"></a>
 ####class: Human~Organ
 a class inside a class
@@ -252,15 +248,19 @@ a class inside a class
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
-<a name="module_cjs/human--Human..Organ#redCell"></a>
-#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-an instance of Cell
-
 <a name="module_cjs/human--Human..Organ..Cell"></a>
 #####class: Organ~Cell
 a class inside a class inside a class
 
 **Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
+<a name="module_cjs/human--Human..Organ#redCell"></a>
+#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+an instance of Cell
+
+<a name="module_cjs/human--Human#liver"></a>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+an instance of Organ
+
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
