@@ -745,6 +745,28 @@
     "codeName": "say"
   },
   {
+    "id": "module:linkMod",
+    "name": "linkMod",
+    "kind": "module",
+    "description": "A module. Refer to it using {@link module:foo/bar}."
+  },
+  {
+    "id": "external:String",
+    "name": "String",
+    "scope": "inner",
+    "kind": "external",
+    "description": "The built in string object. Refer to it with {@link external:String}.",
+    "memberof": "module:linkMod"
+  },
+  {
+    "id": "module:linkMod.event:MyEvent",
+    "name": "event:MyEvent",
+    "scope": "static",
+    "kind": "event",
+    "description": "An event. Refer to with {@link module:linkMod.event:MyEvent}.",
+    "memberof": "module:linkMod"
+  },
+  {
     "id": "EventfulClass",
     "name": "EventfulClass",
     "scope": "global",

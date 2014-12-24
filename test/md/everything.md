@@ -40,6 +40,10 @@
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
+* [linkMod](#module_linkMod)
+  * [external: ~String](#external_String)
+    * [.rot13()](#external_String#rot13)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
 
 ##Global
 * [class: GlobalClass](#GlobalClass)
@@ -448,6 +452,32 @@ say something
 <a name="LendsClass2#say"></a>
 ###lendsClass2.say()
 say something
+
+<a name="module_linkMod"></a>
+##linkMod
+A module. Refer to it using [module:foo/bar](module:foo/bar).
+
+
+* [linkMod](#module_linkMod)
+  * [external: ~String](#external_String)
+    * [.rot13()](#external_String#rot13)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
+
+<a name="external_String"></a>
+###external: linkMod~String
+The built in string object. Refer to it with [String](#external_String).
+
+**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
+<a name="external_String#rot13"></a>
+####string.rot13()
+Adds a new method to the built-in string.
+
+**Example**  
+var greeting = new String('hello world');
+console.log( greeting.rot13() ); // uryyb jbeyq
+<a name="module_linkMod.event_MyEvent"></a>
+###event: "event:MyEvent"
+An event. Refer to with [event:MyEvent](#module_linkMod.event_MyEvent).
 
 <a name="EventfulClass"></a>
 ##EventfulClass()
