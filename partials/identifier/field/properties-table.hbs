@@ -1,0 +1,8 @@
+{{#if properties~}}**Properties**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+{{#each properties~}}
+| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{{stripNewlines description}}} |
+{{/each}}
+{{/if}}

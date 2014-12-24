@@ -39,6 +39,13 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
 ####`enum: MapView.MapType` → <code>Number</code>
 Map-type
 
+**Properties**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| GOOGLEMAPS | <code>Number</code> |  |
+| LEAFLET | <code>Number</code> |  |
+
 **Properties**: `GOOGLEMAPS`, `LEAFLET`  
 
 * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
@@ -65,7 +72,9 @@ Map-type
 ####`MapView.DEFAULT_OPTIONS`
 **Properties**
 
-- DEFAULT_OPTIONS   
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| DEFAULT_OPTIONS |  |  |
 
 **Access:** protected  
 <a name="module_MapView--MapView#getMap"></a>

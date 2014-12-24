@@ -23,6 +23,7 @@
     * [.extra()](#module_cjs/falias-obj--sum.extra)
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
+    * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
 * [cjs/human](#module_cjs/human)
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
@@ -201,6 +202,11 @@ a static method on the exported function
 ##cjs/function-alias
 exports a pointer to a function
 
+
+* [cjs/function-alias](#module_cjs/function-alias)
+  * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
+    * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
+
 <a name="exp_module_cjs/function-alias--sum"></a>
 ###sum(one, two) ⇒ <code>number</code> ⏏
 the function
@@ -211,6 +217,10 @@ the function
 | two | <code>number</code> | the second number |
 
 **Returns**: <code>number</code> - the calculation result  
+<a name="module_cjs/function-alias--sum.sumthingStatic"></a>
+####sum.sumthingStatic
+an additional static property
+
 <a name="module_cjs/human"></a>
 ##cjs/human
 exports a class
@@ -418,8 +428,10 @@ a head obj
 
 **Properties**
 
-- name `string`  
-- age `number`  
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| name | <code>string</code> |  |
+| age | <code>number</code> |  |
 
 <a name="bodyGlobal"></a>
 ##bodyGlobal
@@ -482,11 +494,13 @@ An ordinary newspaper.
 ##config
 **Properties**
 
-- defaults `object` - The default values for parties.  
-  - defaults.players `number` - The default number of players.  
-  - defaults.level `string` - The default level for the party.  
-  - defaults.treasure `object` - The default treasure.  
-  - defaults.treasure.gold `number` - How much gold the party starts with.  
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| defaults | <code>object</code> | The default values for parties. |
+| defaults.players | <code>number</code> | The default number of players. |
+| defaults.level | <code>string</code> | The default level for the party. |
+| defaults.treasure | <code>object</code> | The default treasure. |
+| defaults.treasure.gold | <code>number</code> | How much gold the party starts with. |
 
 <a name="globalFunction"></a>
 ##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>

@@ -195,6 +195,15 @@
     "codeName": "sum"
   },
   {
+    "id": "module:cjs/function-alias--sum.sumthingStatic",
+    "name": "sumthingStatic",
+    "scope": "static",
+    "kind": "member",
+    "description": "an additional static property",
+    "memberof": "module:cjs/function-alias--sum",
+    "codeName": "sum.sumthingStatic"
+  },
+  {
     "id": "module:cjs/human",
     "name": "cjs/human",
     "kind": "module",

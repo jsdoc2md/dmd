@@ -53,6 +53,14 @@ add file patterns to the set
 ###enum: FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
 
+**Properties**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| NOEXIST | <code>number</code> | when a file doesn't exist |
+| FILE | <code>number</code> | It's a file |
+| DIR | <code>number</code> |  |
+
 **Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
 
