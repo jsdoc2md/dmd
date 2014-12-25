@@ -573,8 +573,6 @@ Both of these will link to the bar function.
 
 <a name="todoFunction2"></a>
 ##todoFunction2()
-**done**: this one is done  
-**done**: finished  
 **Todo**
 
 - [ ] Write the documentation.
@@ -584,8 +582,6 @@ Both of these will link to the bar function.
 
 <a name="todoFunction3"></a>
 ##todoFunction3()
-**done**: this one is done  
-**done**: finished  
 **Todo**
 
 - [x] this one is done

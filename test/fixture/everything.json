@@ -1065,16 +1065,6 @@
         "done": true,
         "task": "finished"
       }
-    ],
-    "customTags": [
-      {
-        "tag": "done",
-        "value": "this one is done"
-      },
-      {
-        "tag": "done",
-        "value": "finished"
-      }
     ]
   },
   {
@@ -1091,16 +1081,6 @@
       {
         "done": true,
         "task": "finished"
-      }
-    ],
-    "customTags": [
-      {
-        "tag": "done",
-        "value": "this one is done"
-      },
-      {
-        "tag": "done",
-        "value": "finished"
       }
     ]
   },
