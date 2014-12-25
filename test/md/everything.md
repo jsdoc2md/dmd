@@ -463,12 +463,12 @@ A module. Refer to it using [module:foo/bar](module:foo/bar).
 
 <a name="external_Math"></a>
 ###external: linkMod~Math
-The built in Math object. Refer to it with [Math](#external_Math).
+The built in Math object. Refer to it with [external:Math](external:Math).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
-An event. Refer to with [event:MyEvent](#module_linkMod.event_MyEvent).
+An event. Refer to with [module:linkMod.event:MyEvent](module:linkMod.event:MyEvent).
 
 <a name="EventfulClass"></a>
 ##EventfulClass()
@@ -546,15 +546,15 @@ Both of these will link to the bar function.
 
 **See**
 
-- {@link seebar}
+- [seebar](seebar)
 - bar
 
 <a name="seebar"></a>
 ##seebar()
 **See**
 
-- {@link seefoo} for further information.
-- {@link http://github.com|GitHub}
+- [seefoo](seefoo) for further information.
+- [GitHub](http://github.com)
 
 <a name="throwingFunction"></a>
 ##throwingFunction()

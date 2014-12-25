@@ -3,6 +3,6 @@
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 {{#each properties~}}
-| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{{stripNewlines description}}} |
+| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{{stripNewlines (linkify description)}}} |
 {{/each}}
 {{/if}}

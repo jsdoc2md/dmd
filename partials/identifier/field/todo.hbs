@@ -4,15 +4,15 @@
 {{#if (option "github")~}}
 
 {{#each todoList~}}
-{{#if done}}- [x] {{{task}}}
-{{else}}- [ ] {{{task}}}
+{{#if done}}- [x] {{{linkify task}}}
+{{else}}- [ ] {{{linkify task}}}
 {{/if~}}
 {{/each~}}
 {{else~}}
 
 {{#each todoList~}}
-{{#if done}}- {{{task}}} ✓
-{{else}}- {{{task}}}
+{{#if done}}- {{{linkify task}}} ✓
+{{else}}- {{{linkify task}}}
 {{/if~}}
 {{/each~}}
 {{/if}}

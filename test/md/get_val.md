@@ -4,8 +4,8 @@ Provides class for getting value by key
 
 **See**
 
-- {@link https://github.com/unclechu/js-useful-umd-modules/|GitHub}
-- {@link https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE|License}
+- [GitHub](https://github.com/unclechu/js-useful-umd-modules/)
+- [License](https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE)
 
 **Version**: r10  
 **Author:** Viacheslav Lotsmanov  
