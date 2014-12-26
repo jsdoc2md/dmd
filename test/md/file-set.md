@@ -1,4 +1,3 @@
-* * *
 <a name="module_file-set"></a>
 ##file-set
 Exports a contructor taking a list of file patterns as input, returning a `file-set` instance containing the expanded patterns split into separate lists of `files`, `dirs` and `notExisting`.
@@ -7,6 +6,7 @@ Exports a contructor taking a list of file patterns as input, returning a `file-
 ```js
 var fileSet = require("file-set");
 ```
+* * *
 
 * [file-set](#module_file-set)
   * [class: FileSet](#exp_module_file-set--FileSet) ⏏
@@ -28,6 +28,7 @@ var fileSet = require("file-set");
 ###class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
+* * *
 * * *
 <a name="new_module_file-set--FileSet_new"></a>
 ####new FileSet(patternList)
@@ -79,6 +80,7 @@ Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
+* * *
 
 * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
   * [.NOEXIST](#module_file-set--FileSet.eFileType.NOEXIST) → <code>number</code>
@@ -101,3 +103,4 @@ It's a file
 <a name="module_file-set--FileSet.eFileType.DIR"></a>
 #####eFileType.DIR → <code>number</code>
 **Default**: `2`  
+* * *

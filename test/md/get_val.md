@@ -1,4 +1,3 @@
-* * *
 <a name="module_get_val"></a>
 ##get_val
 Provides class for getting value by key
@@ -11,6 +10,7 @@ Provides class for getting value by key
 **Version**: r10  
 **Author:** Viacheslav Lotsmanov  
 **License**: AGPLv3  
+* * *
 
 * [get_val](#module_get_val)
   * [class: ~GetVal](#module_get_val..GetVal)
@@ -34,3 +34,4 @@ Provides class for getting value by key
 - <code>GetVal~IncorrectArgument</code> 
 - <code>GetVal~RequiredArgumentKey</code> 
 
+* * *

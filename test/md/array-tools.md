@@ -1,4 +1,3 @@
-* * *
 <a name="module_array-tools"></a>
 ##array-tools
 Useful functions for working with arrays
@@ -7,6 +6,7 @@ Useful functions for working with arrays
 ```js
 var a = require("array-tools");
 ```
+* * *
 
 * [array-tools](#module_array-tools)
   * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
@@ -290,3 +290,4 @@ flatten an array of arrays into a single array
 > a.flatten(numbers)
 [ 1, 2, 3, 4, 5 ]
 ```
+* * *

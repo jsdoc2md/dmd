@@ -1,4 +1,3 @@
-* * *
 <a name="module_MapView"></a>
 ##MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.
@@ -13,6 +12,7 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
 
+* * *
 
 * [MapView](#module_MapView)
   * [class: MapView](#exp_module_MapView--MapView) ⏏
@@ -38,6 +38,7 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
 <a name="exp_module_MapView--MapView"></a>
 ###class: MapView ⏏
 * * *
+* * *
 <a name="module_MapView--MapView.MapType"></a>
 ####`enum: MapView.MapType` → <code>Number</code>
 Map-type
@@ -50,6 +51,7 @@ Map-type
 | LEAFLET | <code>Number</code> |  |
 
 **Properties**: `GOOGLEMAPS`, `LEAFLET`  
+* * *
 
 * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
   * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) → <code>Number</code>
@@ -159,3 +161,4 @@ Halts any pending transitions.
 Is there at least one action pending completion?
 
 **Returns**: <code>Bool</code> - True when there are active transitions running.  
+* * *

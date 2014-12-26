@@ -101,11 +101,11 @@
 * [globalVar](#globalVar) → <code>string</code>
 
 
-* * *
 <a name="module_cjs/animals"></a>
 ##cjs/animals
 exports animals
 
+* * *
 
 * [cjs/animals](#module_cjs/animals)
   * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
@@ -132,6 +132,7 @@ the exported dog
 <a name="module_cjs/animals..Animal"></a>
 ###class: cjs/animals~Animal
 **Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
+* * *
 
 * [class: ~Animal](#module_cjs/animals..Animal)
   * _instance_
@@ -160,6 +161,7 @@ animal type
 ##cjs/class
 exports a class
 
+* * *
 
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
@@ -176,6 +178,7 @@ exports a class
 ###class: ExportedClass ⏏
 the exported class
 
+* * *
 * * *
 <a name="new_module_cjs/class--ExportedClass_new"></a>
 ####new ExportedClass()
@@ -202,6 +205,7 @@ inner module property
 ##cjs/falias-obj
 exports a pointer to a function
 
+* * *
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
@@ -222,6 +226,7 @@ a static method on the exported function
 ##cjs/function-alias
 exports a pointer to a function
 
+* * *
 
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
@@ -248,6 +253,7 @@ an additional static property
 ##cjs/human
 exports a class
 
+* * *
 
 * [cjs/human](#module_cjs/human)
   * [class: Human](#exp_module_cjs/human--Human) ⏏
@@ -267,6 +273,7 @@ exports a class
 the exported class
 
 * * *
+* * *
 <a name="new_module_cjs/human--Human_new"></a>
 ####new Human()
 the exported contructor
@@ -277,6 +284,7 @@ the exported contructor
 a class inside a class
 
 **Scope**: inner class of <code>module:cjs/human--Human</code>  
+* * *
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
@@ -315,6 +323,7 @@ the teams
 ##cjs/object
 a module exporting `exports` directly
 
+* * *
 
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
@@ -338,6 +347,7 @@ this is the example
 a global class
 
 **Extends:** `String`  
+* * *
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
@@ -519,6 +529,7 @@ say something
 ##linkMod
 A module. Refer to it using [module:foo/bar](module:foo/bar).
 
+* * *
 
 * [linkMod](#module_linkMod)
   * [external: ~Math](#external_Math)
@@ -550,6 +561,7 @@ phantom mixin
 This provides methods used for event handling. It's not meant to
 be used directly.
 
+* * *
 
 * [mixin: Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
@@ -675,3 +687,4 @@ Both of these will link to the bar function.
 a global var
 
 **Default**: `"something"`  
+* * *

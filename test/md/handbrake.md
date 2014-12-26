@@ -1,4 +1,3 @@
-* * *
 <a name="module_handbrake-js"></a>
 ##handbrake-js
 Handbrake for node.js.
@@ -7,6 +6,7 @@ Handbrake for node.js.
 ```js
 var hbjs = require("handbrake-js");
 ```
+* * *
 
 * [handbrake-js](#module_handbrake-js)
   * [class: ~Handbrake](#module_handbrake-js..Handbrake)
@@ -33,6 +33,7 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Extends:** `EventEmitter`  
 **Scope**: inner class of <code>module:handbrake-js</code>  
 **Emits**: <code>module:handbrake-js~Handbrake#event:start</code>, <code>module:handbrake-js~Handbrake#event:begin</code>, <code>module:handbrake-js~Handbrake#event:progress</code>, <code>module:handbrake-js~Handbrake#event:output</code>, <code>module:handbrake-js~Handbrake#event:error</code>, <code>module:handbrake-js~Handbrake#event:end</code>, <code>module:handbrake-js~Handbrake#event:complete</code>
+* * *
 
 * [class: ~Handbrake](#module_handbrake-js..Handbrake)
   * _instance_
@@ -151,3 +152,4 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
 ###hbjs.cliOptions → <code>array</code>
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
+* * *
