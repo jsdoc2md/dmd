@@ -21,7 +21,7 @@ var hbjs = require("handbrake-js");
       * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
       * ["end"](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
-  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>module:handbrake-js~Handbrake</code>
+  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
   * [.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [.cliOptions](#module_handbrake-js.cliOptions) → <code>array</code>
 
@@ -30,9 +30,9 @@ var hbjs = require("handbrake-js");
 ###class: hbjs~Handbrake
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
-**Extends:** `EventEmitter`  
-**Scope**: inner class of <code>module:handbrake-js</code>  
-**Emits**: <code>module:handbrake-js~Handbrake#event:start</code>, <code>module:handbrake-js~Handbrake#event:begin</code>, <code>module:handbrake-js~Handbrake#event:progress</code>, <code>module:handbrake-js~Handbrake#event:output</code>, <code>module:handbrake-js~Handbrake#event:error</code>, <code>module:handbrake-js~Handbrake#event:end</code>, <code>module:handbrake-js~Handbrake#event:complete</code>
+**Extends:** <code>[EventEmitter](http://nodejs.org/api/events.html)</code>  
+**Scope**: inner class of <code>[handbrake-js](#module_handbrake-js)</code>  
+**Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>
 * * *
 
 * [class: ~Handbrake](#module_handbrake-js..Handbrake)
@@ -113,7 +113,7 @@ Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your enco
 
 * * *
 <a name="module_handbrake-js.spawn"></a>
-###hbjs.spawn(options) ⇒ <code>module:handbrake-js~Handbrake</code>
+###hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
 | Param | Type | Description |

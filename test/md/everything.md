@@ -35,14 +35,16 @@
           * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>module:cjs/human--Human~Organ~Cell</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+* [linkMod](#module_linkMod)
+  * [external: ~Math](#external_Math)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
+  * [class: ~linksYeah](#module_linkMod..linksYeah)
+    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 * [cjs/object-alias](#module_cjs/object-alias)
   * [teams](#exp_module_cjs/object-alias--teams) ⏏
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
-* [linkMod](#module_linkMod)
-  * [external: ~Math](#external_Math)
-  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
 
 ##Global
 * [class: GlobalClass](#GlobalClass)
@@ -309,6 +311,41 @@ an instance of Cell
 an instance of Organ
 
 * * *
+<a name="module_linkMod"></a>
+##linkMod
+A module. Refer to it using [module:linkMod](#module_linkMod).
+
+* * *
+
+* [linkMod](#module_linkMod)
+  * [external: ~Math](#external_Math)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
+  * [class: ~linksYeah](#module_linkMod..linksYeah)
+    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
+
+* * *
+<a name="external_Math"></a>
+###external: linkMod~Math
+The built in Math object. Refer to it with [external:Math](external:Math).
+
+**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
+* * *
+<a name="module_linkMod.event_MyEvent"></a>
+###event: "event:MyEvent"
+An event. Refer to with [module:linkMod.event:MyEvent](#module_linkMod.event_MyEvent).
+
+* * *
+<a name="module_linkMod..linksYeah"></a>
+###class: linkMod~linksYeah
+**Extends:** <code>Math</code>  
+**Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
+**Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
+* * *
+<a name="new_module_linkMod..linksYeah_new"></a>
+####new linksYeah()
+this is from [module:linkMod](#module_linkMod).. it also references [external:Math](external:Math)
+
+* * *
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
 a module exporting an object
@@ -346,7 +383,7 @@ this is the example
 ##class: GlobalClass
 a global class
 
-**Extends:** `String`  
+**Extends:** <code>String</code>  
 * * *
 
 * [class: GlobalClass](#GlobalClass)
@@ -428,7 +465,7 @@ var thisVar = funtion(){
 * * *
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest
-**Extends:** `external:XMLHttpRequest`  
+**Extends:** <code>[XMLHttpRequest](https://developer.mozilla.org/en/xmlhttprequest)</code>  
 * * *
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
@@ -523,28 +560,6 @@ say something
 <a name="LendsClass2#say"></a>
 ###lendsClass2.say()
 say something
-
-* * *
-<a name="module_linkMod"></a>
-##linkMod
-A module. Refer to it using [module:foo/bar](module:foo/bar).
-
-* * *
-
-* [linkMod](#module_linkMod)
-  * [external: ~Math](#external_Math)
-  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-
-* * *
-<a name="external_Math"></a>
-###external: linkMod~Math
-The built in Math object. Refer to it with [external:Math](external:Math).
-
-**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
-* * *
-<a name="module_linkMod.event_MyEvent"></a>
-###event: "event:MyEvent"
-An event. Refer to with [module:linkMod.event:MyEvent](#module_linkMod.event_MyEvent).
 
 * * *
 <a name="EventfulClass"></a>

@@ -300,6 +300,54 @@
     "codeName": "this.liver"
   },
   {
+    "id": "module:linkMod",
+    "longname": "module:linkMod",
+    "name": "linkMod",
+    "kind": "module",
+    "description": "A module. Refer to it using {@link module:linkMod}."
+  },
+  {
+    "id": "external:Math",
+    "longname": "external:Math",
+    "name": "Math",
+    "scope": "inner",
+    "kind": "external",
+    "description": "The built in Math object. Refer to it with {@link external:Math}.",
+    "memberof": "module:linkMod"
+  },
+  {
+    "id": "module:linkMod.event:MyEvent",
+    "longname": "module:linkMod.event:MyEvent",
+    "name": "event:MyEvent",
+    "scope": "static",
+    "kind": "event",
+    "description": "An event. Refer to with {@link module:linkMod.event:MyEvent}.",
+    "memberof": "module:linkMod"
+  },
+  {
+    "id": "module:linkMod~linksYeah",
+    "longname": "module:linkMod~linksYeah",
+    "name": "linksYeah",
+    "scope": "inner",
+    "kind": "class",
+    "augments": [
+      "external:Math"
+    ],
+    "memberof": "module:linkMod",
+    "fires": [
+      "module:linkMod.event:MyEvent"
+    ],
+    "codeName": "linksYeah"
+  },
+  {
+    "id": "module:linkMod~linksYeah()",
+    "name": "linksYeah",
+    "kind": "constructor",
+    "longname": "module:linkMod~linksYeah",
+    "description": "this is from {@link module:linkMod}.. it also references {@link external:Math}",
+    "memberof": "module:linkMod~linksYeah"
+  },
+  {
     "id": "module:cjs/object-alias",
     "longname": "module:cjs/object-alias",
     "name": "cjs/object-alias",
@@ -810,31 +858,6 @@
     "description": "say something",
     "memberof": "LendsClass2",
     "codeName": "say"
-  },
-  {
-    "id": "module:linkMod",
-    "longname": "module:linkMod",
-    "name": "linkMod",
-    "kind": "module",
-    "description": "A module. Refer to it using {@link module:foo/bar}."
-  },
-  {
-    "id": "external:Math",
-    "longname": "external:Math",
-    "name": "Math",
-    "scope": "inner",
-    "kind": "external",
-    "description": "The built in Math object. Refer to it with {@link external:Math}.",
-    "memberof": "module:linkMod"
-  },
-  {
-    "id": "module:linkMod.event:MyEvent",
-    "longname": "module:linkMod.event:MyEvent",
-    "name": "event:MyEvent",
-    "scope": "static",
-    "kind": "event",
-    "description": "An event. Refer to with {@link module:linkMod.event:MyEvent}.",
-    "memberof": "module:linkMod"
   },
   {
     "id": "EventfulClass",

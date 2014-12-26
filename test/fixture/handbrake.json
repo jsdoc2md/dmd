@@ -1,11 +1,22 @@
 [
   {
+    "id": "external:EventEmitter",
+    "longname": "external:EventEmitter",
+    "name": "EventEmitter",
+    "scope": "global",
+    "kind": "external",
+    "see": [
+      "http://nodejs.org/api/events.html"
+    ]
+  },
+  {
     "id": "module:handbrake-js~Handbrake",
+    "longname": "module:handbrake-js~Handbrake",
     "name": "Handbrake",
     "scope": "inner",
     "kind": "class",
     "augments": [
-      "EventEmitter"
+      "external:EventEmitter"
     ],
     "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.",
     "memberof": "module:handbrake-js",
@@ -25,6 +36,7 @@
     "name": "output",
     "scope": "instance",
     "kind": "member",
+    "longname": "module:handbrake-js~Handbrake#output",
     "description": "A `String` containing all handbrakeCLI output",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
@@ -39,6 +51,7 @@
     "name": "options",
     "scope": "instance",
     "kind": "member",
+    "longname": "module:handbrake-js~Handbrake#options",
     "description": "the options HandbrakeCLI was spawned with",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
@@ -50,6 +63,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:start",
+    "longname": "module:handbrake-js~Handbrake#event:start",
     "name": "start",
     "scope": "instance",
     "kind": "event",
@@ -58,6 +72,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:begin",
+    "longname": "module:handbrake-js~Handbrake#event:begin",
     "name": "begin",
     "scope": "instance",
     "kind": "event",
@@ -66,6 +81,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:progress",
+    "longname": "module:handbrake-js~Handbrake#event:progress",
     "name": "progress",
     "scope": "instance",
     "kind": "event",
@@ -147,6 +163,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:output",
+    "longname": "module:handbrake-js~Handbrake#event:output",
     "name": "output",
     "scope": "instance",
     "kind": "event",
@@ -165,6 +182,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:error",
+    "longname": "module:handbrake-js~Handbrake#event:error",
     "name": "error",
     "scope": "instance",
     "kind": "event",
@@ -208,6 +226,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:end",
+    "longname": "module:handbrake-js~Handbrake#event:end",
     "name": "end",
     "scope": "instance",
     "kind": "event",
@@ -216,6 +235,7 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#event:complete",
+    "longname": "module:handbrake-js~Handbrake#event:complete",
     "name": "complete",
     "scope": "instance",
     "kind": "event",
@@ -224,6 +244,7 @@
   },
   {
     "id": "module:handbrake-js",
+    "longname": "module:handbrake-js",
     "name": "handbrake-js",
     "kind": "module",
     "description": "Handbrake for node.js.",
@@ -233,6 +254,7 @@
     "typicalname": "hbjs"
   },
   {
+    "longname": "module:handbrake-js.spawn",
     "id": "module:handbrake-js.spawn",
     "name": "spawn",
     "scope": "static",
@@ -266,6 +288,7 @@
     "codeName": "spawn"
   },
   {
+    "longname": "module:handbrake-js.exec",
     "id": "module:handbrake-js.exec",
     "name": "exec",
     "scope": "static",
@@ -304,6 +327,7 @@
     "name": "cliOptions",
     "scope": "static",
     "kind": "member",
+    "longname": "module:handbrake-js.cliOptions",
     "description": "[Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.",
     "memberof": "module:handbrake-js",
     "type": {
