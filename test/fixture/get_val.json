@@ -1,6 +1,7 @@
 [
   {
     "id": "module:get_val",
+    "longname": "module:get_val",
     "name": "get_val",
     "kind": "module",
     "description": "Provides class for getting value by key",
@@ -19,6 +20,7 @@
     "name": "valuesArg",
     "scope": "inner",
     "kind": "typedef",
+    "longname": "GetVal~valuesArg",
     "memberof": "GetVal",
     "type": {
       "names": [
@@ -56,6 +58,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Exceptions",
+    "longname": "GetVal~exceptions",
     "memberof": "GetVal",
     "type": {
       "names": [
@@ -116,6 +119,7 @@
   },
   {
     "id": "module:get_val~GetVal",
+    "longname": "module:get_val~GetVal",
     "name": "GetVal",
     "scope": "inner",
     "kind": "class",
@@ -126,6 +130,7 @@
     "name": "GetVal",
     "kind": "constructor",
     "memberof": "module:get_val~GetVal",
+    "longname": "module:get_val~GetVal",
     "params": [
       {
         "type": {
@@ -187,6 +192,7 @@
       ]
     },
     "nullable": false,
+    "longname": "GetVal~_values",
     "access": "private"
   },
   {
@@ -200,6 +206,7 @@
         "Array.<string>"
       ]
     },
+    "longname": "GetVal~_required",
     "access": "private"
   },
   {
@@ -208,6 +215,7 @@
     "scope": "inner",
     "kind": "member",
     "description": "Link to class example for \"get\" method wrapper",
+    "longname": "GetVal~super",
     "memberof": "GetVal",
     "type": {
       "names": [
@@ -217,6 +225,7 @@
   },
   {
     "id": "GetVal~_check-required",
+    "longname": "GetVal~_check-required",
     "name": "_check-required",
     "scope": "inner",
     "kind": "function",
@@ -234,6 +243,7 @@
   },
   {
     "id": "GetVal~set",
+    "longname": "GetVal~set",
     "name": "set",
     "scope": "inner",
     "kind": "function",
@@ -282,6 +292,7 @@
     "scope": "inner",
     "kind": "function",
     "description": "Get value by key",
+    "longname": "GetVal~get",
     "memberof": "GetVal",
     "params": [
       {

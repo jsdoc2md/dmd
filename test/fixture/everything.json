@@ -319,6 +319,15 @@
     ]
   },
   {
+    "id": "external:Date",
+    "longname": "external:Date",
+    "name": "Date",
+    "scope": "inner",
+    "kind": "external",
+    "description": "The built in Date object, it has no see tag. Refer to it with {@link external:Date}.",
+    "memberof": "module:linkMod"
+  },
+  {
     "id": "module:linkMod.event:MyEvent",
     "longname": "module:linkMod.event:MyEvent",
     "name": "event:MyEvent",

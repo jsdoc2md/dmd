@@ -1,6 +1,7 @@
 [
   {
     "id": "module:array-tools",
+    "longname": "module:array-tools",
     "name": "array-tools",
     "kind": "module",
     "description": "Useful functions for working with arrays",
@@ -10,6 +11,7 @@
     "typicalname": "a"
   },
   {
+    "longname": "module:array-tools.pluck",
     "id": "module:array-tools.pluck",
     "name": "pluck",
     "scope": "static",
@@ -53,6 +55,7 @@
     "codeName": "pluck"
   },
   {
+    "longname": "module:array-tools.pick",
     "id": "module:array-tools.pick",
     "name": "pick",
     "scope": "static",
@@ -96,6 +99,7 @@
     "codeName": "pick"
   },
   {
+    "longname": "module:array-tools.arrayify",
     "id": "module:array-tools.arrayify",
     "name": "arrayify",
     "scope": "static",
@@ -129,6 +133,7 @@
     "codeName": "arrayify"
   },
   {
+    "longname": "module:array-tools.exists",
     "id": "module:array-tools.exists",
     "name": "exists",
     "scope": "static",
@@ -171,6 +176,7 @@
     "codeName": "exists"
   },
   {
+    "longname": "module:array-tools.where",
     "id": "module:array-tools.where",
     "name": "where",
     "scope": "static",
@@ -213,6 +219,7 @@
     "codeName": "where"
   },
   {
+    "longname": "module:array-tools.findWhere",
     "id": "module:array-tools.findWhere",
     "name": "findWhere",
     "scope": "static",
@@ -255,6 +262,7 @@
     "codeName": "findWhere"
   },
   {
+    "longname": "module:array-tools.without",
     "id": "module:array-tools.without",
     "name": "without",
     "scope": "static",
@@ -297,6 +305,7 @@
     "codeName": "without"
   },
   {
+    "longname": "module:array-tools.union",
     "id": "module:array-tools.union",
     "name": "union",
     "scope": "static",
@@ -348,6 +357,7 @@
     "codeName": "union"
   },
   {
+    "longname": "module:array-tools.commonSequence",
     "id": "module:array-tools.commonSequence",
     "name": "commonSequence",
     "scope": "static",
@@ -390,6 +400,7 @@
     "codeName": "commonSequence"
   },
   {
+    "longname": "module:array-tools.unique",
     "id": "module:array-tools.unique",
     "name": "unique",
     "scope": "static",
@@ -423,6 +434,7 @@
     "codeName": "unique"
   },
   {
+    "longname": "module:array-tools.spliceWhile",
     "id": "module:array-tools.spliceWhile",
     "name": "spliceWhile",
     "scope": "static",
@@ -483,6 +495,7 @@
     "codeName": "spliceWhile"
   },
   {
+    "longname": "module:array-tools.extract",
     "id": "module:array-tools.extract",
     "name": "extract",
     "scope": "static",
@@ -528,6 +541,7 @@
     "name": "flatten",
     "scope": "static",
     "kind": "function",
+    "longname": "module:array-tools.flatten",
     "description": "flatten an array of arrays into a single array",
     "memberof": "module:array-tools",
     "examples": [

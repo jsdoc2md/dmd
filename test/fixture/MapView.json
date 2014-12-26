@@ -1,6 +1,7 @@
 [
   {
     "id": "external:LatLng",
+    "longname": "external:LatLng",
     "name": "LatLng",
     "scope": "global",
     "kind": "external",
@@ -10,6 +11,7 @@
   },
   {
     "id": "module:MapView",
+    "longname": "module:MapView",
     "name": "MapView",
     "kind": "module",
     "description": "MapView encapsulates a Google maps view so it can be used with famo.us.\n\nAdditionally it adds methods to set the position and zoom-factor of the map using transitions.\nUse <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</code> to place famo.us renderables on the map, much like google-maps markers.\n\n**Map-types**\n\n|Value|Description|\n|---|---|\n|MapType.GOOGLEMAPS (default)|Google-maps.|\n|MapType.LEAFLET|Leaflet.js.|"
@@ -21,6 +23,7 @@
     "kind": "member",
     "description": "Map-type",
     "memberof": "module:MapView--MapView",
+    "longname": "module:MapView.MapType",
     "alias": "module:MapView.MapType",
     "type": {
       "names": [
@@ -62,6 +65,7 @@
   },
   {
     "id": "module:MapView--MapView.MapType.GOOGLEMAPS",
+    "longname": "module:MapView.MapType.GOOGLEMAPS",
     "name": "GOOGLEMAPS",
     "scope": "static",
     "kind": "member",
@@ -76,6 +80,7 @@
   },
   {
     "id": "module:MapView--MapView.MapType.LEAFLET",
+    "longname": "module:MapView.MapType.LEAFLET",
     "name": "LEAFLET",
     "scope": "static",
     "kind": "member",
@@ -90,6 +95,7 @@
   },
   {
     "id": "module:MapView--MapView",
+    "longname": "module:MapView",
     "name": "MapView",
     "kind": "class",
     "isExported": true,
@@ -102,6 +108,7 @@
     "name": "MapView",
     "kind": "constructor",
     "memberof": "module:MapView--MapView",
+    "longname": "module:MapView",
     "params": [
       {
         "type": {
@@ -154,6 +161,7 @@
   },
   {
     "id": "module:MapView--MapView.DEFAULT_OPTIONS",
+    "longname": "module:MapView.DEFAULT_OPTIONS",
     "name": "DEFAULT_OPTIONS",
     "scope": "static",
     "kind": "member",
@@ -168,6 +176,7 @@
   },
   {
     "id": "module:MapView--MapView#getMap",
+    "longname": "module:MapView#getMap",
     "name": "getMap",
     "scope": "instance",
     "kind": "function",
@@ -187,6 +196,7 @@
   },
   {
     "id": "module:MapView--MapView#setPosition",
+    "longname": "module:MapView#setPosition",
     "name": "setPosition",
     "scope": "instance",
     "kind": "function",
@@ -227,6 +237,7 @@
   },
   {
     "id": "module:MapView--MapView#getPosition",
+    "longname": "module:MapView#getPosition",
     "name": "getPosition",
     "scope": "instance",
     "kind": "function",
@@ -246,6 +257,7 @@
   },
   {
     "id": "module:MapView--MapView#getFinalPosition",
+    "longname": "module:MapView#getFinalPosition",
     "name": "getFinalPosition",
     "scope": "instance",
     "kind": "function",
@@ -265,6 +277,7 @@
   },
   {
     "id": "module:MapView--MapView#getZoom",
+    "longname": "module:MapView#getZoom",
     "name": "getZoom",
     "scope": "instance",
     "kind": "function",
@@ -284,6 +297,7 @@
   },
   {
     "id": "module:MapView--MapView#pointFromPosition",
+    "longname": "module:MapView#pointFromPosition",
     "name": "pointFromPosition",
     "scope": "instance",
     "kind": "function",
@@ -314,6 +328,7 @@
   },
   {
     "id": "module:MapView--MapView#positionFromPoint",
+    "longname": "module:MapView#positionFromPoint",
     "name": "positionFromPoint",
     "scope": "instance",
     "kind": "function",
@@ -344,6 +359,7 @@
   },
   {
     "id": "module:MapView--MapView#getSize",
+    "longname": "module:MapView#getSize",
     "name": "getSize",
     "scope": "instance",
     "kind": "function",
@@ -363,6 +379,7 @@
   },
   {
     "id": "module:MapView--MapView#halt",
+    "longname": "module:MapView#halt",
     "name": "halt",
     "scope": "instance",
     "kind": "function",
@@ -372,6 +389,7 @@
   },
   {
     "id": "module:MapView--MapView#isActive",
+    "longname": "module:MapView#isActive",
     "name": "isActive",
     "scope": "instance",
     "kind": "function",

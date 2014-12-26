@@ -28,15 +28,16 @@
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>module:cjs/human--Human~Organ</code>
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>module:cjs/human--Human~Organ~Cell</code>
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 * [linkMod](#module_linkMod)
   * [external: ~Math](#external_Math)
+  * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * [class: ~linksYeah](#module_linkMod..linksYeah)
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
@@ -201,7 +202,7 @@ a static property for the exported class
 ####ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of <code>module:cjs/class--ExportedClass</code>  
+**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 * * *
 <a name="module_cjs/falias-obj"></a>
 ##cjs/falias-obj
@@ -261,11 +262,11 @@ exports a class
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>module:cjs/human--Human~Organ</code>
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>module:cjs/human--Human~Organ~Cell</code>
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -285,12 +286,12 @@ the exported contructor
 ####class: Human~Organ
 a class inside a class
 
-**Scope**: inner class of <code>module:cjs/human--Human</code>  
+**Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 * * *
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
-    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>module:cjs/human--Human~Organ~Cell</code>
+    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -299,15 +300,15 @@ a class inside a class
 #####class: Organ~Cell
 a class inside a class inside a class
 
-**Scope**: inner class of <code>module:cjs/human--Human~Organ</code>  
+**Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 * * *
 <a name="module_cjs/human--Human..Organ#redCell"></a>
-#####organ.redCell → <code>module:cjs/human--Human~Organ~Cell</code>
+#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
 * * *
 <a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code>module:cjs/human--Human~Organ</code>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
 * * *
@@ -319,6 +320,7 @@ A module. Refer to it using [this link](#module_linkMod).
 
 * [linkMod](#module_linkMod)
   * [external: ~Math](#external_Math)
+  * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * [class: ~linksYeah](#module_linkMod..linksYeah)
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
@@ -326,13 +328,19 @@ A module. Refer to it using [this link](#module_linkMod).
 * * *
 <a name="external_Math"></a>
 ###external: linkMod~Math
-The built in Math object. Refer to it with [external:Math](http://www.math.com).
+The built in Math object. Refer to it with [Math](http://www.math.com).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 **See**
 
 - http://www.math.com
 
+* * *
+<a name="external_Date"></a>
+###external: linkMod~Date
+The built in Date object, it has no see tag. Refer to it with [Date](external:Date).
+
+**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 * * *
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
@@ -347,7 +355,7 @@ An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 * * *
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
-this is from [module:linkMod](#module_linkMod).. it also references [external:Math](http://www.math.com)
+this is from [linkMod](#module_linkMod).. it also references [Math](http://www.math.com)
 
 * * *
 <a name="module_cjs/object-alias"></a>

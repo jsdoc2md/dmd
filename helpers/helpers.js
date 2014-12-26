@@ -16,6 +16,7 @@ function linkify(text, options){
         var links = ddata.parseLink(text);
         links.forEach(function(link){
             var linked = ddata._link(link.url, options);
+            if (link.caption === link.url) link.caption = linked.name;
             if (linked.url) link.url = linked.url;
             text = text.replace(link.original, "[" + link.caption + "](" + link.url + ")");
         });
