@@ -1,3 +1,4 @@
+* * *
 <a name="module_get_val"></a>
 ##get_val
 Provides class for getting value by key
@@ -15,14 +16,16 @@ Provides class for getting value by key
   * [class: ~GetVal](#module_get_val..GetVal)
     * [new GetVal(values, [required])](#new_module_get_val..GetVal_new)
 
+* * *
 <a name="module_get_val..GetVal"></a>
 ###class: get_val~GetVal
-**Scope**: inner class of <code>[get_val](#module_get_val)</code>  
+**Scope**: inner class of <code>module:get_val</code>  
+* * *
 <a name="new_module_get_val..GetVal_new"></a>
 ####new GetVal(values, [required])
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| values | <code>[valuesArg](#GetVal..valuesArg)</code> | Key-value object of values |
+| values | <code>GetVal~valuesArg</code> | Key-value object of values |
 | \[required\] | <code>Object.&lt;\*&gt;</code> | Key-value object to set required values at instance creating |
 
 **Returns**: <code>function</code> - "get" method wrapper (you can get value from example of class directly as by function)  

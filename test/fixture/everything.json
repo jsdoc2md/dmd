@@ -1,6 +1,7 @@
 [
   {
     "id": "module:cjs/animals",
+    "longname": "module:cjs/animals",
     "name": "cjs/animals",
     "kind": "module",
     "description": "exports animals"
@@ -10,6 +11,7 @@
     "name": "cat",
     "scope": "static",
     "kind": "member",
+    "longname": "module:cjs/animals.cat",
     "description": "the exported cat",
     "memberof": "module:cjs/animals",
     "type": {
@@ -24,6 +26,7 @@
     "name": "dog",
     "scope": "static",
     "kind": "member",
+    "longname": "module:cjs/animals.dog",
     "description": "the exported dog",
     "memberof": "module:cjs/animals",
     "type": {
@@ -35,6 +38,7 @@
   },
   {
     "id": "module:cjs/animals~Animal",
+    "longname": "module:cjs/animals~Animal",
     "name": "Animal",
     "scope": "inner",
     "kind": "class",
@@ -43,6 +47,7 @@
   },
   {
     "id": "module:cjs/animals~Animal~Quadroped",
+    "longname": "module:cjs/animals~Animal~Quadroped",
     "name": "Quadroped",
     "scope": "inner",
     "kind": "class",
@@ -51,6 +56,7 @@
   },
   {
     "id": "module:cjs/animals~Animal~Quadroped#legs",
+    "longname": "module:cjs/animals~Animal~Quadroped#legs",
     "name": "legs",
     "scope": "instance",
     "kind": "member",
@@ -63,6 +69,7 @@
     "name": "type",
     "scope": "instance",
     "kind": "member",
+    "longname": "module:cjs/animals~Animal#type",
     "description": "animal type",
     "memberof": "module:cjs/animals~Animal",
     "type": {
@@ -74,6 +81,7 @@
   },
   {
     "id": "module:cjs/class",
+    "longname": "module:cjs/class",
     "name": "cjs/class",
     "kind": "module",
     "description": "exports a class",
@@ -81,6 +89,7 @@
   },
   {
     "id": "module:cjs/class--ExportedClass",
+    "longname": "module:cjs/class",
     "name": "ExportedClass",
     "kind": "class",
     "isExported": true,
@@ -93,11 +102,13 @@
     "id": "module:cjs/class--ExportedClass()",
     "name": "ExportedClass",
     "kind": "constructor",
+    "longname": "module:cjs/class",
     "description": "the exported contructor",
     "memberof": "module:cjs/class--ExportedClass"
   },
   {
     "id": "module:cjs/class--ExportedClass#prop",
+    "longname": "module:cjs/class#prop",
     "name": "prop",
     "scope": "instance",
     "kind": "member",
@@ -107,6 +118,7 @@
   },
   {
     "id": "module:cjs/class--ExportedClass.staticProp",
+    "longname": "module:cjs/class.staticProp",
     "name": "staticProp",
     "scope": "static",
     "kind": "member",
@@ -116,6 +128,7 @@
   },
   {
     "id": "module:cjs/class--ExportedClass~innerProp",
+    "longname": "module:cjs/class~innerProp",
     "name": "innerProp",
     "scope": "inner",
     "kind": "member",
@@ -125,12 +138,14 @@
   },
   {
     "id": "module:cjs/falias-obj",
+    "longname": "module:cjs/falias-obj",
     "name": "cjs/falias-obj",
     "kind": "module",
     "description": "exports a pointer to a function"
   },
   {
     "id": "module:cjs/falias-obj--sum",
+    "longname": "module:cjs/falias-obj",
     "name": "sum",
     "kind": "function",
     "isExported": true,
@@ -141,6 +156,7 @@
   },
   {
     "id": "module:cjs/falias-obj--sum.extra",
+    "longname": "module:cjs/falias-obj.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
@@ -150,11 +166,13 @@
   },
   {
     "id": "module:cjs/function-alias",
+    "longname": "module:cjs/function-alias",
     "name": "cjs/function-alias",
     "kind": "module",
     "description": "exports a pointer to a function"
   },
   {
+    "longname": "module:cjs/function-alias",
     "id": "module:cjs/function-alias--sum",
     "name": "sum",
     "kind": "function",
@@ -196,6 +214,7 @@
   },
   {
     "id": "module:cjs/function-alias--sum.sumthingStatic",
+    "longname": "module:cjs/function-alias.sumthingStatic",
     "name": "sumthingStatic",
     "scope": "static",
     "kind": "member",
@@ -205,6 +224,7 @@
   },
   {
     "id": "module:cjs/human",
+    "longname": "module:cjs/human",
     "name": "cjs/human",
     "kind": "module",
     "description": "exports a class",
@@ -212,6 +232,7 @@
   },
   {
     "id": "module:cjs/human--Human",
+    "longname": "module:cjs/human",
     "name": "Human",
     "kind": "class",
     "isExported": true,
@@ -224,11 +245,13 @@
     "id": "module:cjs/human--Human()",
     "name": "Human",
     "kind": "constructor",
+    "longname": "module:cjs/human",
     "description": "the exported contructor",
     "memberof": "module:cjs/human--Human"
   },
   {
     "id": "module:cjs/human--Human~Organ",
+    "longname": "module:cjs/human~Organ",
     "name": "Organ",
     "scope": "inner",
     "kind": "class",
@@ -238,6 +261,7 @@
   },
   {
     "id": "module:cjs/human--Human~Organ~Cell",
+    "longname": "module:cjs/human~Organ~Cell",
     "name": "Cell",
     "scope": "inner",
     "kind": "class",
@@ -250,6 +274,7 @@
     "name": "redCell",
     "scope": "instance",
     "kind": "member",
+    "longname": "module:cjs/human~Organ#redCell",
     "description": "an instance of Cell",
     "memberof": "module:cjs/human--Human~Organ",
     "type": {
@@ -264,6 +289,7 @@
     "name": "liver",
     "scope": "instance",
     "kind": "member",
+    "longname": "module:cjs/human#liver",
     "description": "an instance of Organ",
     "memberof": "module:cjs/human--Human",
     "type": {
@@ -275,12 +301,14 @@
   },
   {
     "id": "module:cjs/object-alias",
+    "longname": "module:cjs/object-alias",
     "name": "cjs/object-alias",
     "kind": "module",
     "description": "a module exporting an object"
   },
   {
     "id": "module:cjs/object-alias--teams",
+    "longname": "module:cjs/object-alias",
     "name": "teams",
     "kind": "member",
     "isExported": true,
@@ -291,6 +319,7 @@
   },
   {
     "id": "module:cjs/object",
+    "longname": "module:cjs/object",
     "name": "cjs/object",
     "kind": "module",
     "description": "a module exporting `exports` directly",
@@ -301,6 +330,7 @@
     "name": "one",
     "scope": "static",
     "kind": "member",
+    "longname": "module:cjs/object.one",
     "description": "the first property",
     "memberof": "module:cjs/object",
     "type": {
@@ -312,6 +342,7 @@
   },
   {
     "id": "module:cjs/object.two",
+    "longname": "module:cjs/object.two",
     "name": "two",
     "scope": "static",
     "kind": "function",
@@ -324,6 +355,7 @@
   },
   {
     "id": "GlobalClass",
+    "longname": "GlobalClass",
     "name": "GlobalClass",
     "scope": "global",
     "kind": "class",
@@ -337,6 +369,7 @@
     "id": "GlobalClass()",
     "name": "GlobalClass",
     "kind": "constructor",
+    "longname": "GlobalClass",
     "description": "the global class constructor",
     "memberof": "GlobalClass",
     "params": [
@@ -362,6 +395,7 @@
   },
   {
     "id": "GlobalClass#propOne",
+    "longname": "GlobalClass#propOne",
     "name": "propOne",
     "scope": "instance",
     "kind": "member",
@@ -371,6 +405,7 @@
   },
   {
     "id": "GlobalClass.propTwo",
+    "longname": "GlobalClass.propTwo",
     "name": "propTwo",
     "scope": "static",
     "kind": "member",
@@ -380,6 +415,7 @@
   },
   {
     "id": "customTagged",
+    "longname": "customTagged",
     "name": "customTagged",
     "scope": "global",
     "kind": "member",
@@ -398,6 +434,7 @@
   },
   {
     "id": "customClass",
+    "longname": "customClass",
     "name": "customClass",
     "scope": "global",
     "kind": "class",
@@ -418,11 +455,13 @@
     "id": "customClass()",
     "name": "customClass",
     "kind": "constructor",
+    "longname": "customClass",
     "description": "the constructor",
     "memberof": "customClass"
   },
   {
     "id": "customFunction",
+    "longname": "customFunction",
     "name": "customFunction",
     "scope": "global",
     "kind": "function",
@@ -449,6 +488,7 @@
         "object"
       ]
     },
+    "longname": "defaultedOne",
     "defaultvalue": "{ one: 1, two: \"yeah?\" }",
     "codeName": "defaultedOne"
   },
@@ -462,11 +502,13 @@
         "function"
       ]
     },
+    "longname": "defaultedTwo",
     "defaultvalue": "function f(n){ return something(n); }",
     "codeName": "defaultedTwo"
   },
   {
     "id": "event:docletEvent",
+    "longname": "event:docletEvent",
     "name": "docletEvent",
     "scope": "global",
     "kind": "event",
@@ -481,6 +523,7 @@
     "examples": [
       "var thisVar = funtion(){\n    return \"a value\";\n};"
     ],
+    "longname": "exampleVar",
     "type": {
       "names": [
         "string"
@@ -491,6 +534,7 @@
   },
   {
     "id": "external:String",
+    "longname": "external:String",
     "name": "String",
     "scope": "global",
     "kind": "external",
@@ -501,6 +545,7 @@
   },
   {
     "id": "external:String#rot13",
+    "longname": "external:String#rot13",
     "name": "rot13",
     "scope": "instance",
     "kind": "function",
@@ -512,6 +557,7 @@
   },
   {
     "id": "external:jQuery.fn",
+    "longname": "external:jQuery.fn",
     "name": "jQuery.fn",
     "scope": "global",
     "kind": "external",
@@ -522,6 +568,7 @@
   },
   {
     "id": "external:jQuery.fn.starfairy",
+    "longname": "external:jQuery.fn.starfairy",
     "name": "starfairy",
     "scope": "static",
     "kind": "function",
@@ -530,6 +577,7 @@
   },
   {
     "id": "external:XMLHttpRequest",
+    "longname": "external:XMLHttpRequest",
     "name": "XMLHttpRequest",
     "scope": "global",
     "kind": "external",
@@ -540,6 +588,7 @@
   },
   {
     "id": "EncryptedRequest",
+    "longname": "EncryptedRequest",
     "name": "EncryptedRequest",
     "scope": "global",
     "kind": "class",
@@ -551,11 +600,13 @@
     "id": "EncryptedRequest()",
     "name": "EncryptedRequest",
     "kind": "constructor",
+    "longname": "EncryptedRequest",
     "description": "Extends the built in XMLHttpRequest to send data encoded with a secret key.",
     "memberof": "EncryptedRequest"
   },
   {
     "id": "fileVar",
+    "longname": "fileVar",
     "name": "fileVar",
     "scope": "global",
     "kind": "member",
@@ -564,6 +615,7 @@
   },
   {
     "id": "firesError",
+    "longname": "firesError",
     "name": "firesError",
     "scope": "global",
     "kind": "function",
@@ -574,6 +626,7 @@
   },
   {
     "id": "firesMany",
+    "longname": "firesMany",
     "name": "firesMany",
     "scope": "global",
     "kind": "function",
@@ -586,6 +639,7 @@
   },
   {
     "id": "firesDefinedEvent",
+    "longname": "firesDefinedEvent",
     "name": "firesDefinedEvent",
     "scope": "global",
     "kind": "function",
@@ -596,6 +650,7 @@
   },
   {
     "id": "functionObj",
+    "longname": "functionObj",
     "name": "functionObj",
     "scope": "global",
     "kind": "function",
@@ -604,6 +659,7 @@
   },
   {
     "id": "functionObj.extra",
+    "longname": "functionObj.extra",
     "name": "extra",
     "scope": "static",
     "kind": "function",
@@ -613,6 +669,7 @@
   },
   {
     "id": "globalFunction",
+    "longname": "globalFunction",
     "name": "globalFunction",
     "scope": "global",
     "kind": "function",
@@ -641,6 +698,7 @@
   },
   {
     "id": "htmlGlobal",
+    "longname": "htmlGlobal",
     "name": "htmlGlobal",
     "scope": "global",
     "kind": "member",
@@ -649,6 +707,7 @@
   },
   {
     "id": "SOmething",
+    "longname": "SOmething",
     "name": "SOmething",
     "scope": "global",
     "kind": "class",
@@ -657,6 +716,7 @@
   },
   {
     "id": "SOmething#yeah",
+    "longname": "SOmething#yeah",
     "name": "yeah",
     "scope": "instance",
     "kind": "function",
@@ -670,6 +730,7 @@
     "scope": "global",
     "kind": "member",
     "description": "something in the head",
+    "longname": "headVar",
     "type": {
       "names": [
         "number"
@@ -679,6 +740,7 @@
   },
   {
     "id": "headObj",
+    "longname": "headObj",
     "name": "headObj",
     "scope": "global",
     "kind": "namespace",
@@ -705,6 +767,7 @@
   },
   {
     "id": "bodyGlobal",
+    "longname": "bodyGlobal",
     "name": "bodyGlobal",
     "scope": "global",
     "kind": "member",
@@ -713,6 +776,7 @@
   },
   {
     "id": "LendsClass",
+    "longname": "LendsClass",
     "name": "LendsClass",
     "scope": "global",
     "kind": "class",
@@ -720,6 +784,7 @@
   },
   {
     "id": "LendsClass.say",
+    "longname": "LendsClass.say",
     "name": "say",
     "scope": "static",
     "kind": "function",
@@ -729,6 +794,7 @@
   },
   {
     "id": "LendsClass2",
+    "longname": "LendsClass2",
     "name": "LendsClass2",
     "scope": "global",
     "kind": "class",
@@ -737,6 +803,7 @@
   },
   {
     "id": "LendsClass2#say",
+    "longname": "LendsClass2#say",
     "name": "say",
     "scope": "instance",
     "kind": "function",
@@ -746,12 +813,14 @@
   },
   {
     "id": "module:linkMod",
+    "longname": "module:linkMod",
     "name": "linkMod",
     "kind": "module",
     "description": "A module. Refer to it using {@link module:foo/bar}."
   },
   {
     "id": "external:Math",
+    "longname": "external:Math",
     "name": "Math",
     "scope": "inner",
     "kind": "external",
@@ -760,6 +829,7 @@
   },
   {
     "id": "module:linkMod.event:MyEvent",
+    "longname": "module:linkMod.event:MyEvent",
     "name": "event:MyEvent",
     "scope": "static",
     "kind": "event",
@@ -768,6 +838,7 @@
   },
   {
     "id": "EventfulClass",
+    "longname": "EventfulClass",
     "name": "EventfulClass",
     "scope": "global",
     "kind": "function",
@@ -779,6 +850,7 @@
   },
   {
     "id": "phantom",
+    "longname": "phantom",
     "name": "phantom",
     "scope": "global",
     "kind": "mixin",
@@ -786,6 +858,7 @@
   },
   {
     "id": "Eventful",
+    "longname": "Eventful",
     "name": "Eventful",
     "scope": "global",
     "kind": "mixin",
@@ -794,6 +867,7 @@
   },
   {
     "id": "Eventful.on",
+    "longname": "Eventful.on",
     "name": "on",
     "scope": "static",
     "kind": "function",
@@ -823,6 +897,7 @@
   },
   {
     "id": "Eventful.fire",
+    "longname": "Eventful.fire",
     "name": "fire",
     "scope": "static",
     "kind": "function",
@@ -852,6 +927,7 @@
   },
   {
     "id": "Documents",
+    "longname": "Documents",
     "name": "Documents",
     "scope": "global",
     "kind": "namespace",
@@ -859,6 +935,7 @@
   },
   {
     "id": "Documents.Newspaper",
+    "longname": "Documents.Newspaper",
     "name": "Newspaper",
     "scope": "static",
     "kind": "member",
@@ -868,6 +945,7 @@
   },
   {
     "id": "config",
+    "longname": "config",
     "name": "config",
     "scope": "global",
     "kind": "namespace",
@@ -922,6 +1000,7 @@
   },
   {
     "id": "globalFunction",
+    "longname": "globalFunction",
     "name": "globalFunction",
     "scope": "global",
     "kind": "function",
@@ -949,6 +1028,7 @@
   },
   {
     "id": "returnsSomething",
+    "longname": "returnsSomething",
     "name": "returnsSomething",
     "scope": "global",
     "kind": "function",
@@ -966,6 +1046,7 @@
   },
   {
     "id": "seeableVar",
+    "longname": "seeableVar",
     "name": "seeableVar",
     "scope": "global",
     "kind": "member",
@@ -977,6 +1058,7 @@
   },
   {
     "id": "seefoo",
+    "longname": "seefoo",
     "name": "seefoo",
     "scope": "global",
     "kind": "function",
@@ -989,6 +1071,7 @@
   },
   {
     "id": "seebar",
+    "longname": "seebar",
     "name": "seebar",
     "scope": "global",
     "kind": "function",
@@ -1000,6 +1083,7 @@
   },
   {
     "id": "throwingFunction",
+    "longname": "throwingFunction",
     "name": "throwingFunction",
     "scope": "global",
     "kind": "function",
@@ -1027,6 +1111,7 @@
   },
   {
     "id": "todoFunction1",
+    "longname": "todoFunction1",
     "name": "todoFunction1",
     "scope": "global",
     "kind": "function",
@@ -1044,6 +1129,7 @@
   },
   {
     "id": "todoFunction2",
+    "longname": "todoFunction2",
     "name": "todoFunction2",
     "scope": "global",
     "kind": "function",
@@ -1069,6 +1155,7 @@
   },
   {
     "id": "todoFunction3",
+    "longname": "todoFunction3",
     "name": "todoFunction3",
     "scope": "global",
     "kind": "function",
@@ -1090,6 +1177,7 @@
     "scope": "global",
     "kind": "member",
     "description": "a global var",
+    "longname": "globalVar",
     "type": {
       "names": [
         "string"

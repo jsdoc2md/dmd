@@ -11,10 +11,12 @@ function escape(input){
     return input.replace(/\*/g, "\\*");
 }
 
-function linkify(text){
+function linkify(text, options){
     if (text){
         var links = ddata.parseLink(text);
         links.forEach(function(link){
+            var linked = ddata._link(link.url, options);
+            if (linked.url) link.url = linked.url;
             text = text.replace(link.original, "[" + link.caption + "](" + link.url + ")");
         });
     }

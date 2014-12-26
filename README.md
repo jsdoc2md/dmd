@@ -73,20 +73,18 @@ $ cat examples/doclet.json | dmd
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
     
 #API Reference
-<a name="exp_module_dmd"></a>
-##dmd(options) ⏏
+<a name="exp_module_dmd--dmd"></a>
+###dmd(options) ⇒ <code>stream</code> ⏏
 Transforms doclet data into markdown documentation
 
-**Params**
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| options | <code>object</code> | The render options |
+| \[options.template\] | <code>string</code> | A handlebars template to insert your documentation into. |
+| \[options.heading-depth\] | <code>number</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). Defaults to `2`. |
+| \[options.partial\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
+| \[options.helper\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
+| \[options.plugin\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | packages containing overrides |
 
-- options `object` - The render options  
-  - \[template\] `string` - A handlebars template to insert your documentation into.  
-  - \[partial\] `string` | `Array.<string>` - overrides  
-  - \[helper\] `string` | `Array.<string>` - overrides  
-  - \[plugin\] `string` | `Array.<string>` - packages containing overrides  
-  - \[heading-depth\] `number` - Root heading depth, defaults to 2.  
-
-**Returns**: `stream` - A transform stream - pipe doclet data in to receive rendered markdown.  
-
-
+**Returns**: <code>stream</code> - A transform stream - pipe doclet data in to receive rendered markdown.  
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
