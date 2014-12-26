@@ -304,7 +304,7 @@
     "longname": "module:linkMod",
     "name": "linkMod",
     "kind": "module",
-    "description": "A module. Refer to it using {@link module:linkMod}."
+    "description": "A module. Refer to it using {@link module:linkMod|this link}."
   },
   {
     "id": "external:Math",
@@ -313,7 +313,10 @@
     "scope": "inner",
     "kind": "external",
     "description": "The built in Math object. Refer to it with {@link external:Math}.",
-    "memberof": "module:linkMod"
+    "memberof": "module:linkMod",
+    "see": [
+      "http://www.math.com"
+    ]
   },
   {
     "id": "module:linkMod.event:MyEvent",
@@ -321,7 +324,7 @@
     "name": "event:MyEvent",
     "scope": "static",
     "kind": "event",
-    "description": "An event. Refer to with {@link module:linkMod.event:MyEvent}.",
+    "description": "An event. Refer to with {@link module:linkMod.event:MyEvent this link}.",
     "memberof": "module:linkMod"
   },
   {

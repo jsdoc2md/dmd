@@ -313,7 +313,7 @@ an instance of Organ
 * * *
 <a name="module_linkMod"></a>
 ##linkMod
-A module. Refer to it using [module:linkMod](#module_linkMod).
+A module. Refer to it using [this link](#module_linkMod).
 
 * * *
 
@@ -326,24 +326,28 @@ A module. Refer to it using [module:linkMod](#module_linkMod).
 * * *
 <a name="external_Math"></a>
 ###external: linkMod~Math
-The built in Math object. Refer to it with [external:Math](external:Math).
+The built in Math object. Refer to it with [external:Math](http://www.math.com).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
+**See**
+
+- http://www.math.com
+
 * * *
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
-An event. Refer to with [module:linkMod.event:MyEvent](#module_linkMod.event_MyEvent).
+An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 * * *
 <a name="module_linkMod..linksYeah"></a>
 ###class: linkMod~linksYeah
-**Extends:** <code>Math</code>  
+**Extends:** <code>[Math](http://www.math.com)</code>  
 **Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
 * * *
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
-this is from [module:linkMod](#module_linkMod).. it also references [external:Math](external:Math)
+this is from [module:linkMod](#module_linkMod).. it also references [external:Math](http://www.math.com)
 
 * * *
 <a name="module_cjs/object-alias"></a>
