@@ -1,5 +1,6 @@
 {{>header~}}
 {{>body~}}
-* * *
+{{#if (option "separators")}}{{#unless (descendants min=2)~}}* * *
+{{/unless}}{{/if~}}
 {{>member-index~}}
 {{>members~}}
