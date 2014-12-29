@@ -1,15 +1,5 @@
 [
   {
-    "id": "external:LatLng",
-    "longname": "external:LatLng",
-    "name": "LatLng",
-    "scope": "global",
-    "kind": "external",
-    "see": [
-      "https://developers.google.com/maps/documentation/javascript/reference#LatLng"
-    ]
-  },
-  {
     "id": "module:MapView",
     "longname": "module:MapView",
     "name": "MapView",
@@ -18,12 +8,12 @@
   },
   {
     "id": "module:MapView--MapView.MapType",
+    "longname": "module:MapView.MapType",
     "name": "MapType",
     "scope": "static",
     "kind": "member",
     "description": "Map-type",
     "memberof": "module:MapView--MapView",
-    "longname": "module:MapView.MapType",
     "alias": "module:MapView.MapType",
     "type": {
       "names": [
@@ -105,10 +95,10 @@
   },
   {
     "id": "module:MapView--MapView()",
+    "longname": "module:MapView",
     "name": "MapView",
     "kind": "constructor",
     "memberof": "module:MapView--MapView",
-    "longname": "module:MapView",
     "params": [
       {
         "type": {
@@ -406,5 +396,16 @@
       }
     ],
     "codeName": "MapView.prototype.isActive"
+  },
+  {
+    "id": "external:LatLng",
+    "longname": "external:LatLng",
+    "name": "LatLng",
+    "scope": "inner",
+    "kind": "external",
+    "memberof": "module:MapView--MapView",
+    "see": [
+      "https://developers.google.com/maps/documentation/javascript/reference#LatLng"
+    ]
   }
 ]

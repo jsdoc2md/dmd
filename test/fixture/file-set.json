@@ -23,10 +23,10 @@
   },
   {
     "id": "module:file-set--FileSet()",
+    "longname": "module:file-set",
     "name": "FileSet",
     "kind": "constructor",
     "memberof": "module:file-set--FileSet",
-    "longname": "module:file-set",
     "params": [
       {
         "type": {
@@ -42,10 +42,10 @@
   },
   {
     "id": "module:file-set--FileSet#list",
+    "longname": "module:file-set#list",
     "name": "list",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:file-set#list",
     "description": "The full list of unique paths found, and not found.",
     "memberof": "module:file-set--FileSet",
     "type": {
@@ -57,10 +57,10 @@
   },
   {
     "id": "module:file-set--FileSet#files",
+    "longname": "module:file-set#files",
     "name": "files",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:file-set#files",
     "description": "The existing files found",
     "memberof": "module:file-set--FileSet",
     "type": {
@@ -72,10 +72,10 @@
   },
   {
     "id": "module:file-set--FileSet#dirs",
+    "longname": "module:file-set#dirs",
     "name": "dirs",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:file-set#dirs",
     "description": "The existing directories found",
     "memberof": "module:file-set--FileSet",
     "type": {
@@ -87,10 +87,10 @@
   },
   {
     "id": "module:file-set--FileSet#notExisting",
+    "longname": "module:file-set#notExisting",
     "name": "notExisting",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:file-set#notExisting",
     "description": "Paths which were not found",
     "memberof": "module:file-set--FileSet",
     "type": {
@@ -124,6 +124,7 @@
   },
   {
     "id": "module:file-set--FileSet.eFileType",
+    "longname": "module:file-set.eFileType",
     "name": "eFileType",
     "scope": "static",
     "kind": "member",
@@ -134,7 +135,6 @@
         "number"
       ]
     },
-    "longname": "module:file-set.eFileType",
     "readonly": true,
     "isEnum": true,
     "properties": [

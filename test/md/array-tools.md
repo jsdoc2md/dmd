@@ -6,7 +6,6 @@ Useful functions for working with arrays
 ```js
 var a = require("array-tools");
 ```
-* * *
 
 * [array-tools](#module_array-tools)
   * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
@@ -23,7 +22,6 @@ var a = require("array-tools");
   * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
   * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
 
-* * *
 <a name="module_array-tools.pluck"></a>
 ###a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
@@ -48,7 +46,6 @@ undefined
 > a.pluck(data, "one", "two");
 [ 1, 'two', 'one' ]
 ```
-* * *
 <a name="module_array-tools.pick"></a>
 ###a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
@@ -71,7 +68,6 @@ return a copy of the input `arrayOfObjects` containing objects having only the c
   { two: 'two' },
   { two: 'zwei' } ]
 ```
-* * *
 <a name="module_array-tools.arrayify"></a>
 ###a.arrayify(input) ⇒ <code>Array</code>
 Takes input and guarantees an array back. Result can be one of three things:
@@ -97,7 +93,6 @@ undefined
 > f(1,2,3)
 [ 1, 2, 3 ]
 ```
-* * *
 <a name="module_array-tools.exists"></a>
 ###a.exists(array, value) ⇒ <code>boolean</code>
 returns true if a value, or nested object value exists in an array
@@ -118,7 +113,6 @@ true
 > a.exists([ { result: true }, { result: true } ], { result: true })
 true
 ```
-* * *
 <a name="module_array-tools.where"></a>
 ###a.where(arrayOfObjects, query) ⇒ <code>Array</code>
 returns an array containing items from `arrayOfObjects` where key/value pairs 
@@ -139,7 +133,6 @@ from `query` are matched identically
 [ { name: 'Jim', age: 8 },
   { name: 'Clive', age: 8 } ]
 ```
-* * *
 <a name="module_array-tools.findWhere"></a>
 ###a.findWhere(arrayOfObjects, query) ⇒ <code>object</code>
 returns the first item from `arrayOfObjects` where key/value pairs 
@@ -159,7 +152,6 @@ from `query` are matched identically
 > a.findWhere(dudes, { age: 8})
 { name: 'Jim', age: 8 }
 ```
-* * *
 <a name="module_array-tools.without"></a>
 ###a.without(input, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
@@ -176,7 +168,6 @@ Returns the input minus the specified values.
 > a.without([ 1, 2, 3 ], [ 2, 3 ])
 [ 1 ]
 ```
-* * *
 <a name="module_array-tools.union"></a>
 ###a.union(array1, array2, idKey) ⇒ <code>Array</code>
 merge two arrays into a single array of unique values
@@ -207,7 +198,6 @@ undefined
 > a.union(array1, array2, "id")
 [ { id: 1 }, { id: 2 }, { id: 3 } ]
 ```
-* * *
 <a name="module_array-tools.commonSequence"></a>
 ###a.commonSequence(a, b) ⇒ <code>Array</code>
 Returns the initial elements which both input arrays have in common
@@ -222,7 +212,6 @@ Returns the initial elements which both input arrays have in common
 > a.commonSequence([1,2,3], [1,2,4])
 [ 1, 2 ]
 ```
-* * *
 <a name="module_array-tools.unique"></a>
 ###a.unique(array) ⇒ <code>Array</code>
 reduces an array to unique values
@@ -238,7 +227,6 @@ reduces an array to unique values
 > a.unique(n)
 [ 1, 6, 7 ]
 ```
-* * *
 <a name="module_array-tools.spliceWhile"></a>
 ###a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
 splice from `index` until `test` fails
@@ -259,7 +247,6 @@ splice from `index` until `test` fails
 > letters
 [ 'x', 'b' ]
 ```
-* * *
 <a name="module_array-tools.extract"></a>
 ###a.extract(array, query) ⇒ <code>Array</code>
 Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
@@ -270,7 +257,6 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 | query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
 
 **Returns**: <code>Array</code> - the extracted items.  
-* * *
 <a name="module_array-tools.flatten"></a>
 ###a.flatten() ⇒ <code>Array</code>
 flatten an array of arrays into a single array
@@ -290,4 +276,3 @@ flatten an array of arrays into a single array
 > a.flatten(numbers)
 [ 1, 2, 3, 4, 5 ]
 ```
-* * *

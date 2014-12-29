@@ -1,15 +1,5 @@
 [
   {
-    "id": "external:EventEmitter",
-    "longname": "external:EventEmitter",
-    "name": "EventEmitter",
-    "scope": "global",
-    "kind": "external",
-    "see": [
-      "http://nodejs.org/api/events.html"
-    ]
-  },
-  {
     "id": "module:handbrake-js~Handbrake",
     "longname": "module:handbrake-js~Handbrake",
     "name": "Handbrake",
@@ -33,10 +23,10 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#output",
+    "longname": "module:handbrake-js~Handbrake#output",
     "name": "output",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:handbrake-js~Handbrake#output",
     "description": "A `String` containing all handbrakeCLI output",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
@@ -48,10 +38,10 @@
   },
   {
     "id": "module:handbrake-js~Handbrake#options",
+    "longname": "module:handbrake-js~Handbrake#options",
     "name": "options",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:handbrake-js~Handbrake#options",
     "description": "the options HandbrakeCLI was spawned with",
     "memberof": "module:handbrake-js~Handbrake",
     "type": {
@@ -243,6 +233,16 @@
     "memberof": "module:handbrake-js~Handbrake"
   },
   {
+    "id": "external:EventEmitter",
+    "longname": "external:EventEmitter",
+    "name": "EventEmitter",
+    "scope": "global",
+    "kind": "external",
+    "see": [
+      "http://nodejs.org/api/events.html"
+    ]
+  },
+  {
     "id": "module:handbrake-js",
     "longname": "module:handbrake-js",
     "name": "handbrake-js",
@@ -254,8 +254,8 @@
     "typicalname": "hbjs"
   },
   {
-    "longname": "module:handbrake-js.spawn",
     "id": "module:handbrake-js.spawn",
+    "longname": "module:handbrake-js.spawn",
     "name": "spawn",
     "scope": "static",
     "kind": "function",
@@ -288,8 +288,8 @@
     "codeName": "spawn"
   },
   {
-    "longname": "module:handbrake-js.exec",
     "id": "module:handbrake-js.exec",
+    "longname": "module:handbrake-js.exec",
     "name": "exec",
     "scope": "static",
     "kind": "function",
@@ -324,10 +324,10 @@
   },
   {
     "id": "module:handbrake-js.cliOptions",
+    "longname": "module:handbrake-js.cliOptions",
     "name": "cliOptions",
     "scope": "static",
     "kind": "member",
-    "longname": "module:handbrake-js.cliOptions",
     "description": "[Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.",
     "memberof": "module:handbrake-js",
     "type": {

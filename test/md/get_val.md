@@ -10,17 +10,14 @@ Provides class for getting value by key
 **Version**: r10  
 **Author:** Viacheslav Lotsmanov  
 **License**: AGPLv3  
-* * *
 
 * [get_val](#module_get_val)
   * [class: ~GetVal](#module_get_val..GetVal)
     * [new GetVal(values, [required])](#new_module_get_val..GetVal_new)
 
-* * *
 <a name="module_get_val..GetVal"></a>
 ###class: get_val~GetVal
 **Scope**: inner class of <code>[get_val](#module_get_val)</code>  
-* * *
 <a name="new_module_get_val..GetVal_new"></a>
 ####new GetVal(values, [required])
 | Param | Type | Description |
@@ -34,4 +31,3 @@ Provides class for getting value by key
 - <code>GetVal~IncorrectArgument</code> 
 - <code>GetVal~RequiredArgumentKey</code> 
 
-* * *

@@ -17,10 +17,10 @@
   },
   {
     "id": "GetVal~valuesArg",
+    "longname": "GetVal~valuesArg",
     "name": "valuesArg",
     "scope": "inner",
     "kind": "typedef",
-    "longname": "GetVal~valuesArg",
     "memberof": "GetVal",
     "type": {
       "names": [
@@ -53,71 +53,6 @@
     "nullable": false
   },
   {
-    "id": "GetVal~exceptions",
-    "name": "exceptions",
-    "scope": "inner",
-    "kind": "member",
-    "description": "Exceptions",
-    "longname": "GetVal~exceptions",
-    "memberof": "GetVal",
-    "type": {
-      "names": [
-        "Object.<Error>"
-      ]
-    },
-    "readonly": true,
-    "properties": [
-      {
-        "type": {
-          "names": [
-            "GetVal~IncorrectArgument"
-          ]
-        },
-        "description": "Incorrect argument type for constructor"
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~RequiredArgumentKey"
-          ]
-        },
-        "description": "Required argument key is not set or has incorrect type (for constructor)"
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~IncorrectKey"
-          ]
-        },
-        "description": "Incorrect key type for get/set methods"
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~KeyIsNotExists"
-          ]
-        },
-        "description": "Value not found by key"
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~RequiredIsNotSet"
-          ]
-        },
-        "description": "Attempt to get value before all required values sets"
-      },
-      {
-        "type": {
-          "names": [
-            "GetVal~NoKeyInRequiredList"
-          ]
-        },
-        "description": "Attempt to set required value by key that not in required list"
-      }
-    ]
-  },
-  {
     "id": "module:get_val~GetVal",
     "longname": "module:get_val~GetVal",
     "name": "GetVal",
@@ -127,10 +62,10 @@
   },
   {
     "id": "module:get_val~GetVal()",
+    "longname": "module:get_val~GetVal",
     "name": "GetVal",
     "kind": "constructor",
     "memberof": "module:get_val~GetVal",
-    "longname": "module:get_val~GetVal",
     "params": [
       {
         "type": {
@@ -182,6 +117,7 @@
   },
   {
     "id": "GetVal~_values",
+    "longname": "GetVal~_values",
     "name": "_values",
     "scope": "inner",
     "kind": "member",
@@ -192,11 +128,11 @@
       ]
     },
     "nullable": false,
-    "longname": "GetVal~_values",
     "access": "private"
   },
   {
     "id": "GetVal~_required",
+    "longname": "GetVal~_required",
     "name": "_required",
     "scope": "inner",
     "kind": "member",
@@ -206,16 +142,15 @@
         "Array.<string>"
       ]
     },
-    "longname": "GetVal~_required",
     "access": "private"
   },
   {
     "id": "GetVal~super",
+    "longname": "GetVal~super",
     "name": "super",
     "scope": "inner",
     "kind": "member",
     "description": "Link to class example for \"get\" method wrapper",
-    "longname": "GetVal~super",
     "memberof": "GetVal",
     "type": {
       "names": [
@@ -288,11 +223,11 @@
   },
   {
     "id": "GetVal~get",
+    "longname": "GetVal~get",
     "name": "get",
     "scope": "inner",
     "kind": "function",
     "description": "Get value by key",
-    "longname": "GetVal~get",
     "memberof": "GetVal",
     "params": [
       {
@@ -345,6 +280,71 @@
             "GetVal~KeyIsNotExists"
           ]
         }
+      }
+    ]
+  },
+  {
+    "id": "GetVal~exceptions",
+    "longname": "GetVal~exceptions",
+    "name": "exceptions",
+    "scope": "inner",
+    "kind": "member",
+    "description": "Exceptions",
+    "memberof": "GetVal",
+    "type": {
+      "names": [
+        "Object.<Error>"
+      ]
+    },
+    "readonly": true,
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectArgument"
+          ]
+        },
+        "description": "Incorrect argument type for constructor"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredArgumentKey"
+          ]
+        },
+        "description": "Required argument key is not set or has incorrect type (for constructor)"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~IncorrectKey"
+          ]
+        },
+        "description": "Incorrect key type for get/set methods"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~KeyIsNotExists"
+          ]
+        },
+        "description": "Value not found by key"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~RequiredIsNotSet"
+          ]
+        },
+        "description": "Attempt to get value before all required values sets"
+      },
+      {
+        "type": {
+          "names": [
+            "GetVal~NoKeyInRequiredList"
+          ]
+        },
+        "description": "Attempt to set required value by key that not in required list"
       }
     ]
   }

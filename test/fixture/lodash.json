@@ -401,6 +401,7 @@
   },
   {
     "id": "_.runInContext",
+    "longname": "_.runInContext",
     "name": "runInContext",
     "scope": "static",
     "kind": "function",
@@ -419,7 +420,6 @@
         "name": "context"
       }
     ],
-    "longname": "_.runInContext",
     "examples": [
       "_.mixin({ 'add': function(a, b) { return a + b; } }, false);\n\nvar lodash = _.runInContext();\nlodash.mixin({ 'sub': function(a, b) { return a - b; } }, false);\n\n_.isFunction(_.add);\n// => true\n\n_.isFunction(_.sub);\n// => false\n\nlodash.isFunction(lodash.add);\n// => false\n\nlodash.isFunction(lodash.sub);\n// => true"
     ],
@@ -626,9 +626,9 @@
   },
   {
     "id": "_()",
+    "longname": "_",
     "name": "_",
     "kind": "constructor",
-    "longname": "_",
     "description": "Creates a `lodash` object which wraps `value` to enable intuitive chaining.\nMethods that operate on and return arrays, collections, and functions can\nbe chained together. Methods that return a boolean or single value will\nautomatically end the chain returning the unwrapped value. Explicit chaining\nmay be enabled using `_.chain`. The execution of chained methods is lazy,\nthat is, execution is deferred until `_#value` is implicitly or explicitly\ncalled.\n\nLazy evaluation allows several methods to support shortcut fusion. Shortcut\nfusion is an optimization that merges iteratees to avoid creating intermediate\narrays and reduce the number of iteratee executions.\n\nChaining is supported in custom builds as long as the `_#value` method is\ndirectly or indirectly included in the build.\n\nIn addition to Lo-Dash methods, wrappers also have the following `Array` methods:\n`concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`, `splice`,\nand `unshift`\n\nThe wrapper functons that support shortcut fusion are:\n`drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `first`,\n`initial`, `last`, `map`, `pluck`, `reject`, `rest`, `reverse`, `slice`,\n`take`, `takeRight`, `takeRightWhile`, `takeWhile`, and `where`\n\nThe chainable wrapper functions are:\n`after`, `ary`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`,\n`callback`, `chain`, `chunk`, `compact`, `concat`, `constant`, `countBy`,\n`create`, `curry`, `debounce`, `defaults`, `defer`, `delay`, `difference`,\n`drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`, `flatten`,\n`flattenDeep`, `flow`, `flowRight`, `forEach`, `forEachRight`, `forIn`,\n`forInRight`, `forOwn`, `forOwnRight`, `functions`, `groupBy`, `indexBy`,\n`initial`, `intersection`, `invert`, `invoke`, `keys`, `keysIn`, `map`,\n`mapValues`, `matches`, `memoize`, `merge`, `mixin`, `negate`, `noop`,\n`omit`, `once`, `pairs`, `partial`, `partialRight`, `partition`, `pick`,\n`pluck`, `property`, `propertyOf`, `pull`, `pullAt`, `push`, `range`,\n`rearg`, `reject`, `remove`, `rest`, `reverse`, `shuffle`, `slice`, `sort`,\n`sortBy`, `sortByAll`, `splice`, `take`, `takeRight`, `takeRightWhile`,\n`takeWhile`, `tap`, `throttle`, `thru`, `times`, `toArray`, `transform`,\n`union`, `uniq`, `unshift`, `unzip`, `values`, `valuesIn`, `where`,\n`without`, `wrap`, `xor`, `zip`, and `zipObject`\n\nThe wrapper functions that are **not** chainable by default are:\n`attempt`, `camelCase`, `capitalize`, `clone`, `cloneDeep`, `deburr`,\n`endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`,\n`findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`, `has`,\n`identity`, `includes`, `indexOf`, `isArguments`, `isArray`, `isBoolean`,\n`isDate`, `isElement`, `isEmpty`, `isEqual`, `isError`, `isFinite`,\n`isFunction`, `isMatch` , `isNative`, `isNaN`, `isNull`, `isNumber`,\n`isObject`, `isPlainObject`, `isRegExp`, `isString`, `isUndefined`, `join`,\n`kebabCase`, `last`, `lastIndexOf`, `max`, `min`, `noConflict`, `now`, `pad`,\n`padLeft`, `padRight`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,\n`repeat`, `result`, `runInContext`, `shift`, `size`, `snakeCase`, `some`,\n`sortedIndex`, `sortedLastIndex`, `startsWith`, `template`, `trim`, `trimLeft`,\n`trimRight`, `trunc`, `unescape`, `uniqueId`, `value`, and `words`\n\nThe wrapper function `sample` will return a wrapped value when `n` is provided,\notherwise an unwrapped value is returned.",
     "memberof": "_",
     "params": [
@@ -658,12 +658,12 @@
   },
   {
     "id": "_.support",
+    "longname": "_.support",
     "name": "support",
     "scope": "static",
     "kind": "member",
     "description": "An object environment feature flags.",
     "memberof": "_",
-    "longname": "_.support",
     "type": {
       "names": [
         "Object"
@@ -673,11 +673,11 @@
   },
   {
     "id": "_.support.support.argsClass",
+    "longname": "_.support.support.argsClass",
     "name": "support.argsClass",
     "scope": "static",
     "kind": "member",
     "description": "Detect if the `[[Class]]` of `arguments` objects is resolvable\n(all but Firefox < 4, IE < 9).",
-    "longname": "_.support.support.argsClass",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -688,11 +688,11 @@
   },
   {
     "id": "_.support.support.enumErrorProps",
+    "longname": "_.support.support.enumErrorProps",
     "name": "support.enumErrorProps",
     "scope": "static",
     "kind": "member",
     "description": "Detect if `name` or `message` properties of `Error.prototype` are\nenumerable by default (IE < 9, Safari < 5.1).",
-    "longname": "_.support.support.enumErrorProps",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -703,11 +703,11 @@
   },
   {
     "id": "_.support.support.enumPrototypes",
+    "longname": "_.support.support.enumPrototypes",
     "name": "support.enumPrototypes",
     "scope": "static",
     "kind": "member",
     "description": "Detect if `prototype` properties are enumerable by default.\n\nFirefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1\n(if the prototype or a property on the prototype has been set)\nincorrectly set the `[[Enumerable]]` value of a function's `prototype`\nproperty to `true`.",
-    "longname": "_.support.support.enumPrototypes",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -718,11 +718,11 @@
   },
   {
     "id": "_.support.support.funcDecomp",
+    "longname": "_.support.support.funcDecomp",
     "name": "support.funcDecomp",
     "scope": "static",
     "kind": "member",
     "description": "Detect if functions can be decompiled by `Function#toString`\n(all but Firefox OS certified apps, older Opera mobile browsers, and\nthe PlayStation 3; forced `false` for Windows 8 apps).",
-    "longname": "_.support.support.funcDecomp",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -733,11 +733,11 @@
   },
   {
     "id": "_.support.support.funcNames",
+    "longname": "_.support.support.funcNames",
     "name": "support.funcNames",
     "scope": "static",
     "kind": "member",
     "description": "Detect if `Function#name` is supported (all but IE).",
-    "longname": "_.support.support.funcNames",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -748,11 +748,11 @@
   },
   {
     "id": "_.support.support.nodeClass",
+    "longname": "_.support.support.nodeClass",
     "name": "support.nodeClass",
     "scope": "static",
     "kind": "member",
     "description": "Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).",
-    "longname": "_.support.support.nodeClass",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -763,11 +763,11 @@
   },
   {
     "id": "_.support.support.nonEnumStrings",
+    "longname": "_.support.support.nonEnumStrings",
     "name": "support.nonEnumStrings",
     "scope": "static",
     "kind": "member",
     "description": "Detect if string indexes are non-enumerable\n(IE < 9, RingoJS, Rhino, Narwhal).",
-    "longname": "_.support.support.nonEnumStrings",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -778,11 +778,11 @@
   },
   {
     "id": "_.support.support.nonEnumShadows",
+    "longname": "_.support.support.nonEnumShadows",
     "name": "support.nonEnumShadows",
     "scope": "static",
     "kind": "member",
     "description": "Detect if properties shadowing those on `Object.prototype` are\nnon-enumerable.\n\nIn IE < 9 an object's own properties, shadowing non-enumerable ones,\nare made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).",
-    "longname": "_.support.support.nonEnumShadows",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -793,11 +793,11 @@
   },
   {
     "id": "_.support.support.ownLast",
+    "longname": "_.support.support.ownLast",
     "name": "support.ownLast",
     "scope": "static",
     "kind": "member",
     "description": "Detect if own properties are iterated after inherited properties (IE < 9).",
-    "longname": "_.support.support.ownLast",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -808,11 +808,11 @@
   },
   {
     "id": "_.support.support.spliceObjects",
+    "longname": "_.support.support.spliceObjects",
     "name": "support.spliceObjects",
     "scope": "static",
     "kind": "member",
     "description": "Detect if `Array#shift` and `Array#splice` augment array-like objects\ncorrectly.\n\nFirefox < 10, compatibility modes of IE 8, and IE < 9 have buggy Array `shift()`\nand `splice()` functions that fail to remove the last element, `value[0]`,\nof array-like objects even though the `length` property is set to `0`.\nThe `shift()` method is buggy in compatibility modes of IE 8, while `splice()`\nis buggy regardless of mode in IE < 9.",
-    "longname": "_.support.support.spliceObjects",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -823,11 +823,11 @@
   },
   {
     "id": "_.support.support.unindexedChars",
+    "longname": "_.support.support.unindexedChars",
     "name": "support.unindexedChars",
     "scope": "static",
     "kind": "member",
     "description": "Detect lack of support for accessing string characters by index.\n\nIE < 8 can't access characters by index. IE 8 can only access characters\nby index on string literals, not string objects.",
-    "longname": "_.support.support.unindexedChars",
     "memberof": "_.support",
     "type": {
       "names": [
@@ -838,12 +838,12 @@
   },
   {
     "id": "_.lodash.templateSettings",
+    "longname": "_.lodash.templateSettings",
     "name": "templateSettings",
     "scope": "static",
     "kind": "member",
     "description": "By default, the template delimiters used by Lo-Dash are like those in\nembedded Ruby (ERB). Change the following template settings to use\nalternative delimiters.",
     "memberof": "_.lodash",
-    "longname": "_.lodash.templateSettings",
     "type": {
       "names": [
         "Object"
@@ -853,11 +853,11 @@
   },
   {
     "id": "_.templateSettings.escape",
+    "longname": "_.templateSettings.escape",
     "name": "escape",
     "scope": "static",
     "kind": "member",
     "description": "Used to detect `data` property values to be HTML-escaped.",
-    "longname": "_.templateSettings.escape",
     "memberof": "_.templateSettings",
     "type": {
       "names": [
@@ -868,11 +868,11 @@
   },
   {
     "id": "_.templateSettings.evaluate",
+    "longname": "_.templateSettings.evaluate",
     "name": "evaluate",
     "scope": "static",
     "kind": "member",
     "description": "Used to detect code to be evaluated.",
-    "longname": "_.templateSettings.evaluate",
     "memberof": "_.templateSettings",
     "type": {
       "names": [
@@ -883,11 +883,11 @@
   },
   {
     "id": "_.templateSettings.interpolate",
+    "longname": "_.templateSettings.interpolate",
     "name": "interpolate",
     "scope": "static",
     "kind": "member",
     "description": "Used to detect `data` property values to inject.",
-    "longname": "_.templateSettings.interpolate",
     "memberof": "_.templateSettings",
     "type": {
       "names": [
@@ -898,11 +898,11 @@
   },
   {
     "id": "_.templateSettings.variable",
+    "longname": "_.templateSettings.variable",
     "name": "variable",
     "scope": "static",
     "kind": "member",
     "description": "Used to reference the data object in the template text.",
-    "longname": "_.templateSettings.variable",
     "memberof": "_.templateSettings",
     "type": {
       "names": [
@@ -913,11 +913,11 @@
   },
   {
     "id": "_.templateSettings.imports",
+    "longname": "_.templateSettings.imports",
     "name": "imports",
     "scope": "static",
     "kind": "member",
     "description": "Used to import variables into the compiled template.",
-    "longname": "_.templateSettings.imports",
     "memberof": "_.templateSettings",
     "type": {
       "names": [
@@ -928,11 +928,11 @@
   },
   {
     "id": "_.templateSettings.imports._",
+    "longname": "_.templateSettings.imports._",
     "name": "_",
     "scope": "static",
     "kind": "member",
     "description": "A reference to the `lodash` function.",
-    "longname": "_.templateSettings.imports._",
     "memberof": "_.templateSettings.imports",
     "type": {
       "names": [
@@ -943,6 +943,7 @@
   },
   {
     "id": "_.chunk",
+    "longname": "_.chunk",
     "name": "chunk",
     "scope": "static",
     "kind": "function",
@@ -970,7 +971,6 @@
         "name": "size"
       }
     ],
-    "longname": "_.chunk",
     "examples": [
       "_.chunk(['a', 'b', 'c', 'd'], 2);\n// => [['a', 'b'], ['c', 'd']]\n\n_.chunk(['a', 'b', 'c', 'd'], 3);\n// => [['a', 'b', 'c'], ['d']]"
     ],
@@ -995,6 +995,7 @@
   },
   {
     "id": "_.compact",
+    "longname": "_.compact",
     "name": "compact",
     "scope": "static",
     "kind": "function",
@@ -1011,7 +1012,6 @@
         "name": "array"
       }
     ],
-    "longname": "_.compact",
     "examples": [
       "_.compact([0, 1, false, 2, '', 3]);\n// => [1, 2, 3]"
     ],
@@ -1030,6 +1030,7 @@
   },
   {
     "id": "_.difference",
+    "longname": "_.difference",
     "name": "difference",
     "scope": "static",
     "kind": "function",
@@ -1057,7 +1058,6 @@
         "name": "values"
       }
     ],
-    "longname": "_.difference",
     "examples": [
       "_.difference([1, 2, 3], [5, 2, 10]);\n// => [1, 3]"
     ],
@@ -1076,6 +1076,7 @@
   },
   {
     "id": "_.drop",
+    "longname": "_.drop",
     "name": "drop",
     "scope": "static",
     "kind": "function",
@@ -1121,7 +1122,6 @@
         "function"
       ]
     },
-    "longname": "_.drop",
     "category": "Array",
     "codeName": "drop",
     "customTags": [
@@ -1133,6 +1133,7 @@
   },
   {
     "id": "_.dropRight",
+    "longname": "_.dropRight",
     "name": "dropRight",
     "scope": "static",
     "kind": "function",
@@ -1178,7 +1179,6 @@
         "function"
       ]
     },
-    "longname": "_.dropRight",
     "category": "Array",
     "codeName": "dropRight",
     "customTags": [
@@ -1190,6 +1190,7 @@
   },
   {
     "id": "_.dropRightWhile",
+    "longname": "_.dropRightWhile",
     "name": "dropRightWhile",
     "scope": "static",
     "kind": "function",
@@ -1229,7 +1230,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.dropRightWhile",
     "examples": [
       "_.dropRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [1]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': false },\n  { 'user': 'fred',    'status': 'busy', 'active': true },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropRightWhile(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropRightWhile(users, { 'status': 'away' }), 'user');\n// => ['barney', 'fred']"
     ],
@@ -1253,6 +1253,7 @@
   },
   {
     "id": "_.dropWhile",
+    "longname": "_.dropWhile",
     "name": "dropWhile",
     "scope": "static",
     "kind": "function",
@@ -1292,7 +1293,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.dropWhile",
     "examples": [
       "_.dropWhile([1, 2, 3], function(n) { return n < 3; });\n// => [3]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': true },\n  { 'user': 'fred',    'status': 'busy', 'active': false },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.dropWhile(users, 'active'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.dropWhile(users, { 'status': 'busy' }), 'user');\n// => ['pebbles']"
     ],
@@ -1316,6 +1316,7 @@
   },
   {
     "id": "_.findIndex",
+    "longname": "_.findIndex",
     "name": "findIndex",
     "scope": "static",
     "kind": "function",
@@ -1355,7 +1356,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.findIndex",
     "examples": [
       "var users = [\n  { 'user': 'barney',  'age': 36, 'active': false },\n  { 'user': 'fred',    'age': 40, 'active': true },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n_.findIndex(users, function(chr) { return chr.age < 40; });\n// => 0\n\n// using \"_.where\" callback shorthand\n_.findIndex(users, { 'age': 1 });\n// => 2\n\n// using \"_.pluck\" callback shorthand\n_.findIndex(users, 'active');\n// => 1"
     ],
@@ -1374,6 +1374,7 @@
   },
   {
     "id": "_.findLastIndex",
+    "longname": "_.findLastIndex",
     "name": "findLastIndex",
     "scope": "static",
     "kind": "function",
@@ -1413,7 +1414,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.findLastIndex",
     "examples": [
       "var users = [\n  { 'user': 'barney',  'age': 36, 'active': true },\n  { 'user': 'fred',    'age': 40, 'active': false },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n_.findLastIndex(users, function(chr) { return chr.age < 40; });\n// => 2\n\n// using \"_.where\" callback shorthand\n_.findLastIndex(users, { 'age': 40 });\n// => 1\n\n// using \"_.pluck\" callback shorthand\n_.findLastIndex(users, 'active');\n// => 0"
     ],
@@ -1432,6 +1432,7 @@
   },
   {
     "id": "_.head",
+    "longname": "_.head",
     "name": "head",
     "scope": "static",
     "kind": "function",
@@ -1463,11 +1464,11 @@
       }
     ],
     "category": "Array",
-    "codeName": "first",
-    "longname": "_.head"
+    "codeName": "first"
   },
   {
     "id": "_.flatten",
+    "longname": "_.flatten",
     "name": "flatten",
     "scope": "static",
     "kind": "function",
@@ -1494,7 +1495,6 @@
         "name": "isDeep"
       }
     ],
-    "longname": "_.flatten",
     "examples": [
       "_.flatten([1, [2], [3, [[4]]]]);\n// => [1, 2, 3, [[4]]];\n\n// using `isDeep`\n_.flatten([1, [2], [3, [[4]]]], true);\n// => [1, 2, 3, 4];"
     ],
@@ -1519,6 +1519,7 @@
   },
   {
     "id": "_.flattenDeep",
+    "longname": "_.flattenDeep",
     "name": "flattenDeep",
     "scope": "static",
     "kind": "function",
@@ -1535,7 +1536,6 @@
         "name": "array"
       }
     ],
-    "longname": "_.flattenDeep",
     "examples": [
       "_.flattenDeep([1, [2], [3, [[4]]]]);\n// => [1, 2, 3, 4];"
     ],
@@ -1554,6 +1554,7 @@
   },
   {
     "id": "_.indexOf",
+    "longname": "_.indexOf",
     "name": "indexOf",
     "scope": "static",
     "kind": "function",
@@ -1591,7 +1592,6 @@
         "name": "fromIndex"
       }
     ],
-    "longname": "_.indexOf",
     "examples": [
       "_.indexOf([1, 2, 3, 1, 2, 3], 2);\n// => 1\n\n// using `fromIndex`\n_.indexOf([1, 2, 3, 1, 2, 3], 2, 3);\n// => 4\n\n// performing a binary search\n_.indexOf([4, 4, 5, 5, 6, 6], 5, true);\n// => 2"
     ],
@@ -1610,6 +1610,7 @@
   },
   {
     "id": "_.initial",
+    "longname": "_.initial",
     "name": "initial",
     "scope": "static",
     "kind": "function",
@@ -1626,7 +1627,6 @@
         "name": "array"
       }
     ],
-    "longname": "_.initial",
     "examples": [
       "_.initial([1, 2, 3]);\n// => [1, 2]"
     ],
@@ -1645,6 +1645,7 @@
   },
   {
     "id": "_.intersection",
+    "longname": "_.intersection",
     "name": "intersection",
     "scope": "static",
     "kind": "function",
@@ -1663,7 +1664,6 @@
         "name": "arrays"
       }
     ],
-    "longname": "_.intersection",
     "examples": [
       "_.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);\n// => [1, 2]"
     ],
@@ -1682,6 +1682,7 @@
   },
   {
     "id": "_.last",
+    "longname": "_.last",
     "name": "last",
     "scope": "static",
     "kind": "function",
@@ -1698,7 +1699,6 @@
         "name": "array"
       }
     ],
-    "longname": "_.last",
     "examples": [
       "_.last([1, 2, 3]);\n// => 3"
     ],
@@ -1717,6 +1717,7 @@
   },
   {
     "id": "_.lastIndexOf",
+    "longname": "_.lastIndexOf",
     "name": "lastIndexOf",
     "scope": "static",
     "kind": "function",
@@ -1754,7 +1755,6 @@
         "name": "fromIndex"
       }
     ],
-    "longname": "_.lastIndexOf",
     "examples": [
       "_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);\n// => 4\n\n// using `fromIndex`\n_.lastIndexOf([1, 2, 3, 1, 2, 3], 2, 3);\n// => 1\n\n// performing a binary search\n_.lastIndexOf([4, 4, 5, 5, 6, 6], 5, true);\n// => 3"
     ],
@@ -1773,6 +1773,7 @@
   },
   {
     "id": "_.pull",
+    "longname": "_.pull",
     "name": "pull",
     "scope": "static",
     "kind": "function",
@@ -1800,7 +1801,6 @@
         "name": "values"
       }
     ],
-    "longname": "_.pull",
     "examples": [
       "var array = [1, 2, 3, 1, 2, 3];\n_.pull(array, 2, 3);\nconsole.log(array);\n// => [1, 1]"
     ],
@@ -1819,6 +1819,7 @@
   },
   {
     "id": "_.pullAt",
+    "longname": "_.pullAt",
     "name": "pullAt",
     "scope": "static",
     "kind": "function",
@@ -1847,7 +1848,6 @@
         "name": "indexes"
       }
     ],
-    "longname": "_.pullAt",
     "examples": [
       "var array = [5, 10, 15, 20];\nvar evens = _.pullAt(array, [1, 3]);\n\nconsole.log(array);\n// => [5, 15]\n\nconsole.log(evens);\n// => [10, 20]"
     ],
@@ -1866,6 +1866,7 @@
   },
   {
     "id": "_.remove",
+    "longname": "_.remove",
     "name": "remove",
     "scope": "static",
     "kind": "function",
@@ -1905,7 +1906,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.remove",
     "examples": [
       "var array = [1, 2, 3, 4];\nvar evens = _.remove(array, function(n) { return n % 2 == 0; });\n\nconsole.log(array);\n// => [1, 3]\n\nconsole.log(evens);\n// => [2, 4]"
     ],
@@ -1924,6 +1924,7 @@
   },
   {
     "id": "_.tail",
+    "longname": "_.tail",
     "name": "tail",
     "scope": "static",
     "kind": "function",
@@ -1955,11 +1956,11 @@
       }
     ],
     "category": "Array",
-    "codeName": "rest",
-    "longname": "_.tail"
+    "codeName": "rest"
   },
   {
     "id": "_.slice",
+    "longname": "_.slice",
     "name": "slice",
     "scope": "static",
     "kind": "function",
@@ -1998,7 +1999,6 @@
         "name": "end"
       }
     ],
-    "longname": "_.slice",
     "returns": [
       {
         "type": {
@@ -2014,6 +2014,7 @@
   },
   {
     "id": "_.sortedIndex",
+    "longname": "_.sortedIndex",
     "name": "sortedIndex",
     "scope": "static",
     "kind": "function",
@@ -2062,7 +2063,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.sortedIndex",
     "examples": [
       "_.sortedIndex([30, 50], 40);\n// => 1\n\n_.sortedIndex([4, 4, 5, 5, 6, 6], 5);\n// => 2\n\nvar dict = { 'data': { 'thirty': 30, 'forty': 40, 'fifty': 50 } };\n\n// using an iteratee function\n_.sortedIndex(['thirty', 'fifty'], 'forty', function(word) {\n  return this.data[word];\n}, dict);\n// => 1\n\n// using \"_.pluck\" callback shorthand\n_.sortedIndex([{ 'x': 30 }, { 'x': 50 }], { 'x': 40 }, 'x');\n// => 1"
     ],
@@ -2081,6 +2081,7 @@
   },
   {
     "id": "_.sortedLastIndex",
+    "longname": "_.sortedLastIndex",
     "name": "sortedLastIndex",
     "scope": "static",
     "kind": "function",
@@ -2129,7 +2130,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.sortedLastIndex",
     "examples": [
       "_.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);\n// => 4"
     ],
@@ -2148,6 +2148,7 @@
   },
   {
     "id": "_.take",
+    "longname": "_.take",
     "name": "take",
     "scope": "static",
     "kind": "function",
@@ -2193,7 +2194,6 @@
         "function"
       ]
     },
-    "longname": "_.take",
     "category": "Array",
     "codeName": "take",
     "customTags": [
@@ -2205,6 +2205,7 @@
   },
   {
     "id": "_.takeRight",
+    "longname": "_.takeRight",
     "name": "takeRight",
     "scope": "static",
     "kind": "function",
@@ -2250,7 +2251,6 @@
         "function"
       ]
     },
-    "longname": "_.takeRight",
     "category": "Array",
     "codeName": "takeRight",
     "customTags": [
@@ -2262,6 +2262,7 @@
   },
   {
     "id": "_.takeRightWhile",
+    "longname": "_.takeRightWhile",
     "name": "takeRightWhile",
     "scope": "static",
     "kind": "function",
@@ -2301,7 +2302,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.takeRightWhile",
     "examples": [
       "_.takeRightWhile([1, 2, 3], function(n) { return n > 1; });\n// => [2, 3]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': false },\n  { 'user': 'fred',    'status': 'busy', 'active': true },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeRightWhile(users, 'active'), 'user');\n// => ['fred', 'pebbles']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeRightWhile(users, { 'status': 'away' }), 'user');\n// => ['pebbles']"
     ],
@@ -2325,6 +2325,7 @@
   },
   {
     "id": "_.takeWhile",
+    "longname": "_.takeWhile",
     "name": "takeWhile",
     "scope": "static",
     "kind": "function",
@@ -2364,7 +2365,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.takeWhile",
     "examples": [
       "_.takeWhile([1, 2, 3], function(n) { return n < 3; });\n// => [1, 2]\n\nvar users = [\n  { 'user': 'barney',  'status': 'busy', 'active': true },\n  { 'user': 'fred',    'status': 'busy', 'active': false },\n  { 'user': 'pebbles', 'status': 'away', 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.takeWhile(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.takeWhile(users, { 'status': 'busy' }), 'user');\n// => ['barney', 'fred']"
     ],
@@ -2388,6 +2388,7 @@
   },
   {
     "id": "_.union",
+    "longname": "_.union",
     "name": "union",
     "scope": "static",
     "kind": "function",
@@ -2406,7 +2407,6 @@
         "name": "arrays"
       }
     ],
-    "longname": "_.union",
     "examples": [
       "_.union([1, 2, 3], [5, 2, 1, 4], [2, 1]);\n// => [1, 2, 3, 5, 4]"
     ],
@@ -2425,6 +2425,7 @@
   },
   {
     "id": "_.unique",
+    "longname": "_.unique",
     "name": "unique",
     "scope": "static",
     "kind": "function",
@@ -2488,11 +2489,11 @@
       }
     ],
     "category": "Array",
-    "codeName": "uniq",
-    "longname": "_.unique"
+    "codeName": "uniq"
   },
   {
     "id": "_.unzip",
+    "longname": "_.unzip",
     "name": "unzip",
     "scope": "static",
     "kind": "function",
@@ -2509,7 +2510,6 @@
         "name": "array"
       }
     ],
-    "longname": "_.unzip",
     "examples": [
       "var zipped = _.zip(['fred', 'barney'], [30, 40], [true, false]);\n// => [['fred', 30, true], ['barney', 40, false]]\n\n_.unzip(zipped);\n// => [['fred', 'barney'], [30, 40], [true, false]]"
     ],
@@ -2528,6 +2528,7 @@
   },
   {
     "id": "_.without",
+    "longname": "_.without",
     "name": "without",
     "scope": "static",
     "kind": "function",
@@ -2555,7 +2556,6 @@
         "name": "values"
       }
     ],
-    "longname": "_.without",
     "examples": [
       "_.without([1, 2, 1, 0, 3, 1, 4], 0, 1);\n// => [2, 3, 4]"
     ],
@@ -2574,6 +2574,7 @@
   },
   {
     "id": "_.xor",
+    "longname": "_.xor",
     "name": "xor",
     "scope": "static",
     "kind": "function",
@@ -2592,7 +2593,6 @@
         "name": "arrays"
       }
     ],
-    "longname": "_.xor",
     "examples": [
       "_.xor([1, 2, 3], [5, 2, 1, 4]);\n// => [3, 5, 4]\n\n_.xor([1, 2, 5], [2, 3, 5], [3, 4, 5]);\n// => [1, 4, 5]"
     ],
@@ -2611,6 +2611,7 @@
   },
   {
     "id": "_.zip",
+    "longname": "_.zip",
     "name": "zip",
     "scope": "static",
     "kind": "function",
@@ -2629,7 +2630,6 @@
         "name": "arrays"
       }
     ],
-    "longname": "_.zip",
     "examples": [
       "_.zip(['fred', 'barney'], [30, 40], [true, false]);\n// => [['fred', 30, true], ['barney', 40, false]]"
     ],
@@ -2648,6 +2648,7 @@
   },
   {
     "id": "_.object",
+    "longname": "_.object",
     "name": "object",
     "scope": "static",
     "kind": "function",
@@ -2690,11 +2691,11 @@
       }
     ],
     "category": "Array",
-    "codeName": "zipObject",
-    "longname": "_.object"
+    "codeName": "zipObject"
   },
   {
     "id": "_.chain",
+    "longname": "_.chain",
     "name": "chain",
     "scope": "static",
     "kind": "function",
@@ -2711,7 +2712,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.chain",
     "examples": [
       "var users = [\n  { 'user': 'barney',  'age': 36 },\n  { 'user': 'fred',    'age': 40 },\n  { 'user': 'pebbles', 'age': 1 }\n];\n\nvar youngest = _.chain(users)\n  .sortBy('age')\n  .map(function(chr) { return chr.user + ' is ' + chr.age; })\n  .first()\n  .value();\n// => 'pebbles is 1'"
     ],
@@ -2730,6 +2730,7 @@
   },
   {
     "id": "_.tap",
+    "longname": "_.tap",
     "name": "tap",
     "scope": "static",
     "kind": "function",
@@ -2765,7 +2766,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.tap",
     "examples": [
       "_([1, 2, 3])\n .tap(function(array) { array.pop(); })\n .reverse()\n .value();\n// => [2, 1]"
     ],
@@ -2784,6 +2784,7 @@
   },
   {
     "id": "_.thru",
+    "longname": "_.thru",
     "name": "thru",
     "scope": "static",
     "kind": "function",
@@ -2819,7 +2820,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.thru",
     "examples": [
       "_([1, 2, 3])\n .last()\n .thru(function(value) { return [value]; })\n .value();\n// => [3]"
     ],
@@ -2838,12 +2838,12 @@
   },
   {
     "id": "_.chain",
+    "longname": "_.chain",
     "name": "chain",
     "scope": "static",
     "kind": "member",
     "description": "Enables explicit method chaining on the wrapper object.",
     "memberof": "_",
-    "longname": "_.chain",
     "examples": [
       "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n// without explicit chaining\n_(users).first();\n// => { 'user': 'barney', 'age': 36 }\n\n// with explicit chaining\n_(users).chain()\n  .first()\n  .pick('user')\n  .value();\n// => { 'user': 'barney' }"
     ],
@@ -2861,12 +2861,12 @@
   },
   {
     "id": "_.reverse",
+    "longname": "_.reverse",
     "name": "reverse",
     "scope": "static",
     "kind": "member",
     "description": "Reverses the wrapped array so the first element becomes the last, the\nsecond element becomes the second to last, and so on.\n\n**Note:** This method mutates the wrapped array.",
     "memberof": "_",
-    "longname": "_.reverse",
     "examples": [
       "var array = [1, 2, 3];\n\n_(array).reverse().value()\n// => [3, 2, 1]\n\nconsole.log(array);\n// => [3, 2, 1]"
     ],
@@ -2884,12 +2884,12 @@
   },
   {
     "id": "_.toString",
+    "longname": "_.toString",
     "name": "toString",
     "scope": "static",
     "kind": "member",
     "description": "Produces the result of coercing the unwrapped value to a string.",
     "memberof": "_",
-    "longname": "_.toString",
     "examples": [
       "_([1, 2, 3]).toString();\n// => '1,2,3'"
     ],
@@ -2907,13 +2907,13 @@
   },
   {
     "id": "_.value",
+    "longname": "_.value",
     "name": "value",
     "scope": "static",
     "kind": "member",
     "description": "Executes the chained sequence to extract the unwrapped value.",
     "memberof": "_",
     "alias": "toJSON, valueOf",
-    "longname": "_.value",
     "examples": [
       "_([1, 2, 3]).value();\n// => [1, 2, 3]"
     ],
@@ -2931,6 +2931,7 @@
   },
   {
     "id": "_.at",
+    "longname": "_.at",
     "name": "at",
     "scope": "static",
     "kind": "function",
@@ -2963,7 +2964,6 @@
         "name": "props"
       }
     ],
-    "longname": "_.at",
     "examples": [
       "_.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);\n// => ['a', 'c', 'e']\n\n_.at(['fred', 'barney', 'pebbles'], 0, 2);\n// => ['fred', 'pebbles']"
     ],
@@ -2982,6 +2982,7 @@
   },
   {
     "id": "_.contains, include",
+    "longname": "_.contains, include",
     "name": " include",
     "kind": "function",
     "description": "Checks if `value` is in `collection` using `SameValueZero` for equality\ncomparisons. If `fromIndex` is negative, it is used as the offset from\nthe end of `collection`.\n\n**Note:** `SameValueZero` comparisons are like strict equality comparisons,\ne.g. `===`, except that `NaN` matches `NaN`. See the\n[ES6 spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)\nfor more details.",
@@ -3034,11 +3035,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "includes",
-    "longname": "_.contains, include"
+    "codeName": "includes"
   },
   {
     "id": "_.countBy",
+    "longname": "_.countBy",
     "name": "countBy",
     "scope": "static",
     "kind": "member",
@@ -3080,7 +3081,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.countBy",
     "examples": [
       "_.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });\n// => { '4': 1, '6': 2 }\n\n_.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);\n// => { '4': 1, '6': 2 }\n\n_.countBy(['one', 'two', 'three'], 'length');\n// => { '3': 2, '5': 1 }"
     ],
@@ -3099,6 +3099,7 @@
   },
   {
     "id": "_.all",
+    "longname": "_.all",
     "name": "all",
     "scope": "static",
     "kind": "function",
@@ -3155,11 +3156,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "every",
-    "longname": "_.all"
+    "codeName": "every"
   },
   {
     "id": "_.select",
+    "longname": "_.select",
     "name": "select",
     "scope": "static",
     "kind": "function",
@@ -3216,11 +3217,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "filter",
-    "longname": "_.select"
+    "codeName": "filter"
   },
   {
     "id": "_.detect",
+    "longname": "_.detect",
     "name": "detect",
     "scope": "static",
     "kind": "function",
@@ -3277,11 +3278,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "find",
-    "longname": "_.detect"
+    "codeName": "find"
   },
   {
     "id": "_.findLast",
+    "longname": "_.findLast",
     "name": "findLast",
     "scope": "static",
     "kind": "function",
@@ -3323,7 +3324,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.findLast",
     "examples": [
       "_.findLast([1, 2, 3, 4], function(n) { return n % 2 == 1; });\n// => 3"
     ],
@@ -3342,6 +3342,7 @@
   },
   {
     "id": "_.findWhere",
+    "longname": "_.findWhere",
     "name": "findWhere",
     "scope": "static",
     "kind": "function",
@@ -3369,7 +3370,6 @@
         "name": "source"
       }
     ],
-    "longname": "_.findWhere",
     "examples": [
       "var users = [\n  { 'user': 'barney', 'age': 36, 'status': 'busy' },\n  { 'user': 'fred',   'age': 40, 'status': 'busy' }\n];\n\n_.result(_.findWhere(users, { 'status': 'busy' }), 'user');\n// => 'barney'\n\n_.result(_.findWhere(users, { 'age': 40 }), 'user');\n// => 'fred'"
     ],
@@ -3388,6 +3388,7 @@
   },
   {
     "id": "_.each",
+    "longname": "_.each",
     "name": "each",
     "scope": "static",
     "kind": "function",
@@ -3444,11 +3445,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "forEach",
-    "longname": "_.each"
+    "codeName": "forEach"
   },
   {
     "id": "_.eachRight",
+    "longname": "_.eachRight",
     "name": "eachRight",
     "scope": "static",
     "kind": "function",
@@ -3505,11 +3506,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "forEachRight",
-    "longname": "_.eachRight"
+    "codeName": "forEachRight"
   },
   {
     "id": "_.groupBy",
+    "longname": "_.groupBy",
     "name": "groupBy",
     "scope": "static",
     "kind": "member",
@@ -3551,7 +3552,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.groupBy",
     "examples": [
       "_.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });\n// => { '4': [4.2], '6': [6.1, 6.4] }\n\n_.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);\n// => { '4': [4.2], '6': [6.1, 6.4] }\n\n// using \"_.pluck\" callback shorthand\n_.groupBy(['one', 'two', 'three'], 'length');\n// => { '3': ['one', 'two'], '5': ['three'] }"
     ],
@@ -3570,6 +3570,7 @@
   },
   {
     "id": "_.indexBy",
+    "longname": "_.indexBy",
     "name": "indexBy",
     "scope": "static",
     "kind": "member",
@@ -3611,7 +3612,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.indexBy",
     "examples": [
       "var keyData = [\n  { 'dir': 'left', 'code': 97 },\n  { 'dir': 'right', 'code': 100 }\n];\n\n_.indexBy(keyData, 'dir');\n// => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }\n\n_.indexBy(keyData, function(object) { return String.fromCharCode(object.code); });\n// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }\n\n_.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);\n// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }"
     ],
@@ -3630,6 +3630,7 @@
   },
   {
     "id": "_.invoke",
+    "longname": "_.invoke",
     "name": "invoke",
     "scope": "static",
     "kind": "function",
@@ -3669,7 +3670,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.invoke",
     "examples": [
       "_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');\n// => [[1, 5, 7], [1, 2, 3]]\n\n_.invoke([123, 456], String.prototype.split, '');\n// => [['1', '2', '3'], ['4', '5', '6']]"
     ],
@@ -3688,6 +3688,7 @@
   },
   {
     "id": "_.collect",
+    "longname": "_.collect",
     "name": "collect",
     "scope": "static",
     "kind": "function",
@@ -3744,11 +3745,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "map",
-    "longname": "_.collect"
+    "codeName": "map"
   },
   {
     "id": "_.max",
+    "longname": "_.max",
     "name": "max",
     "scope": "static",
     "kind": "function",
@@ -3789,7 +3790,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.max",
     "examples": [
       "_.max([4, 2, 8, 6]);\n// => 8\n\n_.max([]);\n// => -Infinity\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n_.max(users, function(chr) { return chr.age; });\n// => { 'user': 'fred', 'age': 40 };\n\n// using \"_.pluck\" callback shorthand\n_.max(users, 'age');\n// => { 'user': 'fred', 'age': 40 };"
     ],
@@ -3808,6 +3808,7 @@
   },
   {
     "id": "_.min",
+    "longname": "_.min",
     "name": "min",
     "scope": "static",
     "kind": "function",
@@ -3848,7 +3849,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.min",
     "examples": [
       "_.min([4, 2, 8, 6]);\n// => 2\n\n_.min([]);\n// => Infinity\n\nvar users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n_.min(users, function(chr) { return chr.age; });\n// => { 'user': 'barney', 'age': 36 };\n\n// using \"_.pluck\" callback shorthand\n_.min(users, 'age');\n// => { 'user': 'barney', 'age': 36 };"
     ],
@@ -3867,6 +3867,7 @@
   },
   {
     "id": "_.partition",
+    "longname": "_.partition",
     "name": "partition",
     "scope": "static",
     "kind": "member",
@@ -3908,7 +3909,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.partition",
     "examples": [
       "_.partition([1, 2, 3], function(n) { return n % 2; });\n// => [[1, 3], [2]]\n\n_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);\n// => [[1, 3], [2]]\n\nvar users = [\n  { 'user': 'barney',  'age': 36, 'active': false },\n  { 'user': 'fred',    'age': 40, 'active': true },\n  { 'user': 'pebbles', 'age': 1,  'active': false }\n];\n\n// using \"_.where\" callback shorthand\n_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });\n// => [['pebbles'], ['barney', 'fred']]\n\n// using \"_.pluck\" callback shorthand\n_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });\n// => [['fred'], ['barney', 'pebbles']]"
     ],
@@ -3927,6 +3927,7 @@
   },
   {
     "id": "_.pluck",
+    "longname": "_.pluck",
     "name": "pluck",
     "scope": "static",
     "kind": "function",
@@ -3954,7 +3955,6 @@
         "name": "key"
       }
     ],
-    "longname": "_.pluck",
     "examples": [
       "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 }\n];\n\n_.pluck(users, 'user');\n// => ['barney', 'fred']\n\nvar userIndex = _.indexBy(users, 'user');\n_.pluck(userIndex, 'age');\n// => [36, 40] (iteration order is not guaranteed)"
     ],
@@ -3973,6 +3973,7 @@
   },
   {
     "id": "_.foldl, inject",
+    "longname": "_.foldl, inject",
     "name": " inject",
     "kind": "function",
     "description": "Reduces `collection` to a value which is the accumulated result of running\neach element in `collection` through `iteratee`, where each successive\ninvocation is supplied the return value of the previous. If `accumulator`\nis not provided the first element of `collection` is used as the initial\nvalue. The `iteratee` is bound to `thisArg`and invoked with four arguments;\n(accumulator, value, index|key, collection).",
@@ -4036,11 +4037,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "reduce",
-    "longname": "_.foldl, inject"
+    "codeName": "reduce"
   },
   {
     "id": "_.foldr",
+    "longname": "_.foldr",
     "name": "foldr",
     "scope": "static",
     "kind": "function",
@@ -4105,11 +4106,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "reduceRight",
-    "longname": "_.foldr"
+    "codeName": "reduceRight"
   },
   {
     "id": "_.reject",
+    "longname": "_.reject",
     "name": "reject",
     "scope": "static",
     "kind": "function",
@@ -4151,7 +4152,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.reject",
     "examples": [
       "var odds = _.reject([1, 2, 3, 4], function(n) { return n % 2 == 0; });\n// => [1, 3]\n\nvar users = [\n  { 'user': 'barney', 'age': 36, 'active': false },\n  { 'user': 'fred',   'age': 40, 'active': true }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.reject(users, 'active'), 'user');\n// => ['barney']\n\n// using \"_.where\" callback shorthand\n_.pluck(_.reject(users, { 'age': 36 }), 'user');\n// => ['fred']"
     ],
@@ -4170,6 +4170,7 @@
   },
   {
     "id": "_.sample",
+    "longname": "_.sample",
     "name": "sample",
     "scope": "static",
     "kind": "function",
@@ -4198,7 +4199,6 @@
         "name": "n"
       }
     ],
-    "longname": "_.sample",
     "examples": [
       "_.sample([1, 2, 3, 4]);\n// => 2\n\n_.sample([1, 2, 3, 4], 2);\n// => [3, 1]"
     ],
@@ -4223,6 +4223,7 @@
   },
   {
     "id": "_.shuffle",
+    "longname": "_.shuffle",
     "name": "shuffle",
     "scope": "static",
     "kind": "function",
@@ -4241,7 +4242,6 @@
         "name": "collection"
       }
     ],
-    "longname": "_.shuffle",
     "examples": [
       "_.shuffle([1, 2, 3, 4]);\n// => [4, 1, 3, 2]"
     ],
@@ -4260,6 +4260,7 @@
   },
   {
     "id": "_.size",
+    "longname": "_.size",
     "name": "size",
     "scope": "static",
     "kind": "function",
@@ -4278,7 +4279,6 @@
         "name": "collection"
       }
     ],
-    "longname": "_.size",
     "examples": [
       "_.size([1, 2]);\n// => 2\n\n_.size({ 'one': 1, 'two': 2, 'three': 3 });\n// => 3\n\n_.size('pebbles');\n// => 7"
     ],
@@ -4297,6 +4297,7 @@
   },
   {
     "id": "_.any",
+    "longname": "_.any",
     "name": "any",
     "scope": "static",
     "kind": "function",
@@ -4353,11 +4354,11 @@
       }
     ],
     "category": "Collection",
-    "codeName": "some",
-    "longname": "_.any"
+    "codeName": "some"
   },
   {
     "id": "_.sortBy",
+    "longname": "_.sortBy",
     "name": "sortBy",
     "scope": "static",
     "kind": "function",
@@ -4400,7 +4401,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.sortBy",
     "examples": [
       "_.sortBy([1, 2, 3], function(n) { return Math.sin(n); });\n// => [3, 1, 2]\n\n_.sortBy([1, 2, 3], function(n) { return this.sin(n); }, Math);\n// => [3, 1, 2]\n\nvar users = [\n  { 'user': 'fred' },\n  { 'user': 'pebbles' },\n  { 'user': 'barney' }\n];\n\n// using \"_.pluck\" callback shorthand\n_.pluck(_.sortBy(users, 'user'), 'user');\n// => ['barney', 'fred', 'pebbles']"
     ],
@@ -4419,6 +4419,7 @@
   },
   {
     "id": "_.sortByAll",
+    "longname": "_.sortByAll",
     "name": "sortByAll",
     "scope": "static",
     "kind": "function",
@@ -4448,7 +4449,6 @@
         "name": "props"
       }
     ],
-    "longname": "_.sortByAll",
     "examples": [
       "var users = [\n  { 'user': 'barney', 'age': 36 },\n  { 'user': 'fred',   'age': 40 },\n  { 'user': 'barney', 'age': 26 },\n  { 'user': 'fred',   'age': 30 }\n];\n\n_.map(_.sortByAll(users, ['user', 'age']), _.values);\n// => [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]"
     ],
@@ -4467,6 +4467,7 @@
   },
   {
     "id": "_.toArray",
+    "longname": "_.toArray",
     "name": "toArray",
     "scope": "static",
     "kind": "function",
@@ -4485,7 +4486,6 @@
         "name": "collection"
       }
     ],
-    "longname": "_.toArray",
     "examples": [
       "(function() { return _.toArray(arguments).slice(1); })(1, 2, 3, 4);\n// => [2, 3, 4]"
     ],
@@ -4504,6 +4504,7 @@
   },
   {
     "id": "_.where",
+    "longname": "_.where",
     "name": "where",
     "scope": "static",
     "kind": "function",
@@ -4531,7 +4532,6 @@
         "name": "source"
       }
     ],
-    "longname": "_.where",
     "examples": [
       "var users = [\n  { 'user': 'barney', 'age': 36, 'status': 'busy', 'pets': ['hoppy'] },\n  { 'user': 'fred',   'age': 40, 'status': 'busy', 'pets': ['baby puss', 'dino'] }\n];\n\n_.pluck(_.where(users, { 'age': 36 }), 'user');\n// => ['barney']\n\n_.pluck(_.where(users, { 'pets': ['dino'] }), 'user');\n// => ['fred']\n\n_.pluck(_.where(users, { 'status': 'busy' }), 'user');\n// => ['barney', 'fred']"
     ],
@@ -4564,6 +4564,7 @@
   },
   {
     "id": "_.after",
+    "longname": "_.after",
     "name": "after",
     "scope": "static",
     "kind": "function",
@@ -4589,7 +4590,6 @@
         "name": "func"
       }
     ],
-    "longname": "_.after",
     "examples": [
       "var saves = ['profile', 'settings'];\n\nvar done = _.after(saves.length, function() {\n  console.log('done saving!');\n});\n\n_.forEach(saves, function(type) {\n  asyncSave({ 'type': type, 'complete': done });\n});\n// => logs 'done saving!' after the two async saves have completed"
     ],
@@ -4608,6 +4608,7 @@
   },
   {
     "id": "_.ary",
+    "longname": "_.ary",
     "name": "ary",
     "scope": "static",
     "kind": "function",
@@ -4635,7 +4636,6 @@
         "name": "n"
       }
     ],
-    "longname": "_.ary",
     "examples": [
       "_.map(['6', '8', '10'], _.ary(parseInt, 1));\n// => [6, 8, 10]"
     ],
@@ -4660,6 +4660,7 @@
   },
   {
     "id": "_.before",
+    "longname": "_.before",
     "name": "before",
     "scope": "static",
     "kind": "function",
@@ -4685,7 +4686,6 @@
         "name": "func"
       }
     ],
-    "longname": "_.before",
     "examples": [
       "jQuery('#add').on('click', _.before(5, addContactToList));\n// => allows adding up to 4 contacts to the list"
     ],
@@ -4704,6 +4704,7 @@
   },
   {
     "id": "_.bind",
+    "longname": "_.bind",
     "name": "bind",
     "scope": "static",
     "kind": "function",
@@ -4741,7 +4742,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.bind",
     "examples": [
       "var greet = function(greeting, punctuation) {\n  return greeting + ' ' + this.user + punctuation;\n};\n\nvar object = { 'user': 'fred' };\n\nvar bound = _.bind(greet, object, 'hi');\nbound('!');\n// => 'hi fred!'\n\n// using placeholders\nvar bound = _.bind(greet, object, _, '!');\nbound('hi');\n// => 'hi fred!'"
     ],
@@ -4760,6 +4760,7 @@
   },
   {
     "id": "_.bindAll",
+    "longname": "_.bindAll",
     "name": "bindAll",
     "scope": "static",
     "kind": "function",
@@ -4788,7 +4789,6 @@
         "name": "methodNames"
       }
     ],
-    "longname": "_.bindAll",
     "examples": [
       "var view = {\n  'label': 'docs',\n  'onClick': function() { console.log('clicked ' + this.label); }\n};\n\n_.bindAll(view);\njQuery('#docs').on('click', view.onClick);\n// => logs 'clicked docs' when the element is clicked"
     ],
@@ -4807,6 +4807,7 @@
   },
   {
     "id": "_.bindKey",
+    "longname": "_.bindKey",
     "name": "bindKey",
     "scope": "static",
     "kind": "function",
@@ -4843,7 +4844,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.bindKey",
     "examples": [
       "var object = {\n  'user': 'fred',\n  'greet': function(greeting, punctuation) {\n    return greeting + ' ' + this.user + punctuation;\n  }\n};\n\nvar bound = _.bindKey(object, 'greet', 'hi');\nbound('!');\n// => 'hi fred!'\n\nobject.greet = function(greeting, punctuation) {\n  return greeting + 'ya ' + this.user + punctuation;\n};\n\nbound('!');\n// => 'hiya fred!'\n\n// using placeholders\nvar bound = _.bindKey(object, 'greet', _, '!');\nbound('hi');\n// => 'hiya fred!'"
     ],
@@ -4862,6 +4862,7 @@
   },
   {
     "id": "_.curry",
+    "longname": "_.curry",
     "name": "curry",
     "scope": "static",
     "kind": "function",
@@ -4889,7 +4890,6 @@
         "name": "arity"
       }
     ],
-    "longname": "_.curry",
     "examples": [
       "var abc = function(a, b, c) {\n  return [a, b, c];\n};\n\nvar curried = _.curry(abc);\n\ncurried(1)(2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2)(3);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]\n\n// using placeholders\ncurried(1)(_, 3)(2);\n// => [1, 2, 3]"
     ],
@@ -4914,6 +4914,7 @@
   },
   {
     "id": "_.curryRight",
+    "longname": "_.curryRight",
     "name": "curryRight",
     "scope": "static",
     "kind": "function",
@@ -4941,7 +4942,6 @@
         "name": "arity"
       }
     ],
-    "longname": "_.curryRight",
     "examples": [
       "var abc = function(a, b, c) {\n  return [a, b, c];\n};\n\nvar curried = _.curryRight(abc);\n\ncurried(3)(2)(1);\n// => [1, 2, 3]\n\ncurried(2, 3)(1);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]\n\n// using placeholders\ncurried(3)(1, _)(2);\n// => [1, 2, 3]"
     ],
@@ -4966,6 +4966,7 @@
   },
   {
     "id": "_.debounce",
+    "longname": "_.debounce",
     "name": "debounce",
     "scope": "static",
     "kind": "function",
@@ -5033,7 +5034,6 @@
         "name": "options.trailing"
       }
     ],
-    "longname": "_.debounce",
     "examples": [
       "// avoid costly calculations while the window size is in flux\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// invoke `sendMail` when the click event is fired, debouncing subsequent calls\njQuery('#postbox').on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n});\n\n// ensure `batchLog` is invoked once after 1 second of debounced calls\nvar source = new EventSource('/stream');\njQuery(source).on('message', _.debounce(batchLog, 250, {\n  'maxWait': 1000\n}, false);\n\n// cancel a debounced call\nvar todoChanges = _.debounce(batchLog, 1000);\nObject.observe(models.todo, todoChanges);\n\nObject.observe(models, function(changes) {\n  if (_.find(changes, { 'user': 'todo', 'type': 'delete'})) {\n    todoChanges.cancel();\n  }\n}, ['delete']);\n\n// ...at some point `models.todo` is changed\nmodels.todo.completed = true;\n\n// ...before 1 second has passed `models.todo` is deleted\n// which cancels the debounced `todoChanges` call\ndelete models.todo;"
     ],
@@ -5052,6 +5052,7 @@
   },
   {
     "id": "_.defer",
+    "longname": "_.defer",
     "name": "defer",
     "scope": "static",
     "kind": "function",
@@ -5079,7 +5080,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.defer",
     "examples": [
       "_.defer(function(text) { console.log(text); }, 'deferred');\n// logs 'deferred' after one or more milliseconds"
     ],
@@ -5098,6 +5098,7 @@
   },
   {
     "id": "_.delay",
+    "longname": "_.delay",
     "name": "delay",
     "scope": "static",
     "kind": "function",
@@ -5134,7 +5135,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.delay",
     "examples": [
       "_.delay(function(text) { console.log(text); }, 1000, 'later');\n// => logs 'later' after one second"
     ],
@@ -5153,6 +5153,7 @@
   },
   {
     "id": "_.flow",
+    "longname": "_.flow",
     "name": "flow",
     "scope": "static",
     "kind": "function",
@@ -5171,7 +5172,6 @@
         "name": "funcs"
       }
     ],
-    "longname": "_.flow",
     "examples": [
       "function add(x, y) {\n  return x + y;\n}\n\nfunction square(n) {\n  return n * n;\n}\n\nvar addSquare = _.flow(add, square);\naddSquare(1, 2);\n// => 9"
     ],
@@ -5190,6 +5190,7 @@
   },
   {
     "id": "_.backflow, compose",
+    "longname": "_.backflow, compose",
     "name": " compose",
     "kind": "function",
     "description": "This method is like `_.flow` except that it creates a function that\ninvokes the provided functions from right to left.",
@@ -5222,11 +5223,11 @@
       }
     ],
     "category": "Function",
-    "codeName": "flowRight",
-    "longname": "_.backflow, compose"
+    "codeName": "flowRight"
   },
   {
     "id": "_.memoize",
+    "longname": "_.memoize",
     "name": "memoize",
     "scope": "static",
     "kind": "function",
@@ -5253,7 +5254,6 @@
         "name": "resolver"
       }
     ],
-    "longname": "_.memoize",
     "examples": [
       "var fibonacci = _.memoize(function(n) {\n  return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);\n});\n\nfibonacci(9)\n// => 34\n\n// modifying the result cache\nvar upperCase = _.memoize(function(string) {\n  return string.toUpperCase();\n});\n\nupperCase('fred');\n// => 'FRED'\n\nupperCase.cache.set('fred, 'BARNEY');\nupperCase('fred');\n// => 'BARNEY'"
     ],
@@ -5272,6 +5272,7 @@
   },
   {
     "id": "_.negate",
+    "longname": "_.negate",
     "name": "negate",
     "scope": "static",
     "kind": "function",
@@ -5288,7 +5289,6 @@
         "name": "predicate"
       }
     ],
-    "longname": "_.negate",
     "examples": [
       "function isEven(n) {\n  return n % 2 == 0;\n}\n\n_.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));\n// => [1, 3, 5]"
     ],
@@ -5307,6 +5307,7 @@
   },
   {
     "id": "_.once",
+    "longname": "_.once",
     "name": "once",
     "scope": "static",
     "kind": "function",
@@ -5323,7 +5324,6 @@
         "name": "func"
       }
     ],
-    "longname": "_.once",
     "examples": [
       "var initialize = _.once(createApplication);\ninitialize();\ninitialize();\n// `initialize` invokes `createApplication` once"
     ],
@@ -5347,6 +5347,7 @@
   },
   {
     "id": "_.partial",
+    "longname": "_.partial",
     "name": "partial",
     "scope": "static",
     "kind": "function",
@@ -5374,7 +5375,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.partial",
     "examples": [
       "var greet = function(greeting, name) {\n  return greeting + ' ' + name;\n};\n\nvar sayHelloTo = _.partial(greet, 'hello');\nsayHelloTo('fred');\n// => 'hello fred'\n\n// using placeholders\nvar greetFred = _.partial(greet, _, 'fred');\ngreetFred('hi');\n// => 'hi fred'"
     ],
@@ -5393,6 +5393,7 @@
   },
   {
     "id": "_.partialRight",
+    "longname": "_.partialRight",
     "name": "partialRight",
     "scope": "static",
     "kind": "function",
@@ -5420,7 +5421,6 @@
         "name": "args"
       }
     ],
-    "longname": "_.partialRight",
     "examples": [
       "var greet = function(greeting, name) {\n  return greeting + ' ' + name;\n};\n\nvar greetFred = _.partialRight(greet, 'fred');\ngreetFred('hi');\n// => 'hi fred'\n\n// using placeholders\nvar sayHelloTo = _.partialRight(greet, 'hello', _);\nsayHelloTo('fred');\n// => 'hello fred'"
     ],
@@ -5439,6 +5439,7 @@
   },
   {
     "id": "_.rearg",
+    "longname": "_.rearg",
     "name": "rearg",
     "scope": "static",
     "kind": "function",
@@ -5466,7 +5467,6 @@
         "name": "indexes"
       }
     ],
-    "longname": "_.rearg",
     "examples": [
       "var rearged = _.rearg(function(a, b, c) {\n  return [a, b, c];\n}, 2, 0, 1);\n\nrearged('b', 'c', 'a')\n// => ['a', 'b', 'c']\n\nvar map = _.rearg(_.map, [1, 0]);\nmap(function(n) { return n * 3; }, [1, 2, 3]);\n// => [3, 6, 9]"
     ],
@@ -5485,6 +5485,7 @@
   },
   {
     "id": "_.throttle",
+    "longname": "_.throttle",
     "name": "throttle",
     "scope": "static",
     "kind": "function",
@@ -5542,7 +5543,6 @@
         "name": "options.trailing"
       }
     ],
-    "longname": "_.throttle",
     "examples": [
       "// avoid excessively updating the position while scrolling\njQuery(window).on('scroll', _.throttle(updatePosition, 100));\n\n// invoke `renewToken` when the click event is fired, but not more than once every 5 minutes\nvar throttled =  _.throttle(renewToken, 300000, { 'trailing': false })\njQuery('.interactive').on('click', throttled);\n\n// cancel a trailing throttled call\njQuery(window).on('popstate', throttled.cancel);"
     ],
@@ -5561,6 +5561,7 @@
   },
   {
     "id": "_.wrap",
+    "longname": "_.wrap",
     "name": "wrap",
     "scope": "static",
     "kind": "function",
@@ -5586,7 +5587,6 @@
         "name": "wrapper"
       }
     ],
-    "longname": "_.wrap",
     "examples": [
       "var p = _.wrap(_.escape, function(func, text) {\n  return '<p>' + func(text) + '</p>';\n});\n\np('fred, barney, & pebbles');\n// => '<p>fred, barney, &amp; pebbles</p>'"
     ],
@@ -5605,6 +5605,7 @@
   },
   {
     "id": "_.clone",
+    "longname": "_.clone",
     "name": "clone",
     "scope": "static",
     "kind": "function",
@@ -5651,7 +5652,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.clone",
     "examples": [
       "var users = [\n  { 'user': 'barney' },\n  { 'user': 'fred' }\n];\n\nvar shallow = _.clone(users);\nshallow[0] === users[0];\n// => true\n\nvar deep = _.clone(users, true);\ndeep[0] === users[0];\n// => false\n\n_.mixin({\n  'clone': _.partialRight(_.clone, function(value) {\n    return _.isElement(value) ? value.cloneNode(false) : undefined;\n  })\n});\n\nvar clone = _.clone(document.body);\nclone.childNodes.length;\n// => 0"
     ],
@@ -5670,6 +5670,7 @@
   },
   {
     "id": "_.cloneDeep",
+    "longname": "_.cloneDeep",
     "name": "cloneDeep",
     "scope": "static",
     "kind": "function",
@@ -5706,7 +5707,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.cloneDeep",
     "examples": [
       "var users = [\n  { 'user': 'barney' },\n  { 'user': 'fred' }\n];\n\nvar deep = _.cloneDeep(users);\ndeep[0] === users[0];\n// => false\n\nvar view = {\n  'label': 'docs',\n  'node': element\n};\n\nvar clone = _.cloneDeep(view, function(value) {\n  return _.isElement(value) ? value.cloneNode(true) : undefined;\n});\n\nclone.node == view.node;\n// => false"
     ],
@@ -5725,6 +5725,7 @@
   },
   {
     "id": "_.isArguments",
+    "longname": "_.isArguments",
     "name": "isArguments",
     "scope": "static",
     "kind": "function",
@@ -5741,7 +5742,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isArguments",
     "examples": [
       "(function() { return _.isArguments(arguments); })();\n// => true\n\n_.isArguments([1, 2, 3]);\n// => false"
     ],
@@ -5760,6 +5760,7 @@
   },
   {
     "id": "_.isArray",
+    "longname": "_.isArray",
     "name": "isArray",
     "scope": "static",
     "kind": "member",
@@ -5776,7 +5777,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isArray",
     "examples": [
       "_.isArray([1, 2, 3]);\n// => true\n\n(function() { return _.isArray(arguments); })();\n// => false"
     ],
@@ -5795,6 +5795,7 @@
   },
   {
     "id": "_.isBoolean",
+    "longname": "_.isBoolean",
     "name": "isBoolean",
     "scope": "static",
     "kind": "function",
@@ -5811,7 +5812,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isBoolean",
     "examples": [
       "_.isBoolean(false);\n// => true\n\n_.isBoolean(null);\n// => false"
     ],
@@ -5830,6 +5830,7 @@
   },
   {
     "id": "_.isDate",
+    "longname": "_.isDate",
     "name": "isDate",
     "scope": "static",
     "kind": "function",
@@ -5846,7 +5847,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isDate",
     "examples": [
       "_.isDate(new Date);\n// => true\n\n_.isDate('Mon April 23 2012');\n// => false"
     ],
@@ -5865,6 +5865,7 @@
   },
   {
     "id": "_.isElement",
+    "longname": "_.isElement",
     "name": "isElement",
     "scope": "static",
     "kind": "function",
@@ -5881,7 +5882,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isElement",
     "examples": [
       "_.isElement(document.body);\n// => true\n\n_.isElement('<body>');\n// => false"
     ],
@@ -5900,6 +5900,7 @@
   },
   {
     "id": "_.isEmpty",
+    "longname": "_.isEmpty",
     "name": "isEmpty",
     "scope": "static",
     "kind": "function",
@@ -5918,7 +5919,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isEmpty",
     "examples": [
       "_.isEmpty(null);\n// => true\n\n_.isEmpty(true);\n// => true\n\n_.isEmpty(1);\n// => true\n\n_.isEmpty([1, 2, 3]);\n// => false\n\n_.isEmpty({ 'a': 1 });\n// => false"
     ],
@@ -5937,6 +5937,7 @@
   },
   {
     "id": "_.isEqual",
+    "longname": "_.isEqual",
     "name": "isEqual",
     "scope": "static",
     "kind": "function",
@@ -5982,7 +5983,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.isEqual",
     "examples": [
       "var object = { 'user': 'fred' };\nvar other = { 'user': 'fred' };\n\nobject == other;\n// => false\n\n_.isEqual(object, other);\n// => true\n\nvar words = ['hello', 'goodbye'];\nvar otherWords = ['hi', 'goodbye'];\n\n_.isEqual(words, otherWords, function(value, other) {\n  return _.every([value, other], RegExp.prototype.test, /^h(?:i|ello)$/) || undefined;\n});\n// => true"
     ],
@@ -6001,6 +6001,7 @@
   },
   {
     "id": "_.isError",
+    "longname": "_.isError",
     "name": "isError",
     "scope": "static",
     "kind": "function",
@@ -6017,7 +6018,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isError",
     "examples": [
       "_.isError(new Error);\n// => true\n\n_.isError(Error);\n// => false"
     ],
@@ -6036,6 +6036,7 @@
   },
   {
     "id": "_.isFinite",
+    "longname": "_.isFinite",
     "name": "isFinite",
     "scope": "static",
     "kind": "member",
@@ -6052,7 +6053,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isFinite",
     "examples": [
       "_.isFinite(10);\n// => true\n\n_.isFinite('10');\n// => false\n\n_.isFinite(true);\n// => false\n\n_.isFinite(Object(10));\n// => false\n\n_.isFinite(Infinity);\n// => false"
     ],
@@ -6071,6 +6071,7 @@
   },
   {
     "id": "_.isFunction",
+    "longname": "_.isFunction",
     "name": "isFunction",
     "scope": "static",
     "kind": "function",
@@ -6087,7 +6088,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isFunction",
     "examples": [
       "_.isFunction(_);\n// => true\n\n_.isFunction(/abc/);\n// => false"
     ],
@@ -6106,6 +6106,7 @@
   },
   {
     "id": "_.isObject",
+    "longname": "_.isObject",
     "name": "isObject",
     "scope": "static",
     "kind": "function",
@@ -6122,7 +6123,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isObject",
     "examples": [
       "_.isObject({});\n// => true\n\n_.isObject([1, 2, 3]);\n// => true\n\n_.isObject(1);\n// => false"
     ],
@@ -6141,6 +6141,7 @@
   },
   {
     "id": "_.isMatch",
+    "longname": "_.isMatch",
     "name": "isMatch",
     "scope": "static",
     "kind": "function",
@@ -6186,7 +6187,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.isMatch",
     "examples": [
       "var object = { 'user': 'fred', 'age': 40 };\n\n_.isMatch(object, { 'age': 40 });\n// => true\n\n_.isMatch(object, { 'age': 36 });\n// => false\n\nvar object = { 'greeting': 'hello' };\nvar source = { 'greeting': 'hi' };\n\n_.isMatch(object, source, function(value, other) {\n  return _.every([value, other], RegExp.prototype.test, /^h(?:i|ello)$/) || undefined;\n});\n// => true"
     ],
@@ -6205,6 +6205,7 @@
   },
   {
     "id": "_.isNaN",
+    "longname": "_.isNaN",
     "name": "isNaN",
     "scope": "static",
     "kind": "function",
@@ -6221,7 +6222,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isNaN",
     "examples": [
       "_.isNaN(NaN);\n// => true\n\n_.isNaN(new Number(NaN));\n// => true\n\nisNaN(undefined);\n// => true\n\n_.isNaN(undefined);\n// => false"
     ],
@@ -6240,6 +6240,7 @@
   },
   {
     "id": "_.isNative",
+    "longname": "_.isNative",
     "name": "isNative",
     "scope": "static",
     "kind": "function",
@@ -6256,7 +6257,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isNative",
     "examples": [
       "_.isNative(Array.prototype.push);\n// => true\n\n_.isNative(_);\n// => false"
     ],
@@ -6275,6 +6275,7 @@
   },
   {
     "id": "_.isNull",
+    "longname": "_.isNull",
     "name": "isNull",
     "scope": "static",
     "kind": "function",
@@ -6291,7 +6292,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isNull",
     "examples": [
       "_.isNull(null);\n// => true\n\n_.isNull(void 0);\n// => false"
     ],
@@ -6310,6 +6310,7 @@
   },
   {
     "id": "_.isNumber",
+    "longname": "_.isNumber",
     "name": "isNumber",
     "scope": "static",
     "kind": "function",
@@ -6326,7 +6327,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isNumber",
     "examples": [
       "_.isNumber(8.4);\n// => true\n\n_.isNumber(NaN);\n// => true\n\n_.isNumber('8.4');\n// => false"
     ],
@@ -6345,6 +6345,7 @@
   },
   {
     "id": "_.isPlainObject",
+    "longname": "_.isPlainObject",
     "name": "isPlainObject",
     "scope": "static",
     "kind": "member",
@@ -6361,7 +6362,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isPlainObject",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\n_.isPlainObject(new Shape);\n// => false\n\n_.isPlainObject([1, 2, 3]);\n// => false\n\n_.isPlainObject({ 'x': 0, 'y': 0 });\n// => true\n\n_.isPlainObject(Object.create(null));\n// => true"
     ],
@@ -6380,6 +6380,7 @@
   },
   {
     "id": "_.isRegExp",
+    "longname": "_.isRegExp",
     "name": "isRegExp",
     "scope": "static",
     "kind": "function",
@@ -6396,7 +6397,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isRegExp",
     "examples": [
       "_.isRegExp(/abc/);\n// => true\n\n_.isRegExp('/abc/');\n// => false"
     ],
@@ -6415,6 +6415,7 @@
   },
   {
     "id": "_.isString",
+    "longname": "_.isString",
     "name": "isString",
     "scope": "static",
     "kind": "function",
@@ -6431,7 +6432,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isString",
     "examples": [
       "_.isString('abc');\n// => true\n\n_.isString(1);\n// => false"
     ],
@@ -6450,6 +6450,7 @@
   },
   {
     "id": "_.isUndefined",
+    "longname": "_.isUndefined",
     "name": "isUndefined",
     "scope": "static",
     "kind": "function",
@@ -6466,7 +6467,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.isUndefined",
     "examples": [
       "_.isUndefined(void 0);\n// => true\n\n_.isUndefined(null);\n// => false"
     ],
@@ -6485,6 +6485,7 @@
   },
   {
     "id": "_.extend",
+    "longname": "_.extend",
     "name": "extend",
     "scope": "static",
     "kind": "member",
@@ -6547,11 +6548,11 @@
       }
     ],
     "category": "Object",
-    "codeName": "assign",
-    "longname": "_.extend"
+    "codeName": "assign"
   },
   {
     "id": "_.create",
+    "longname": "_.create",
     "name": "create",
     "scope": "static",
     "kind": "function",
@@ -6578,7 +6579,6 @@
         "name": "properties"
       }
     ],
-    "longname": "_.create",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\nfunction Circle() {\n  Shape.call(this);\n}\n\nCircle.prototype = _.create(Shape.prototype, { 'constructor': Circle });\n\nvar circle = new Circle;\ncircle instanceof Circle;\n// => true\n\ncircle instanceof Shape;\n// => true"
     ],
@@ -6603,6 +6603,7 @@
   },
   {
     "id": "_.defaults",
+    "longname": "_.defaults",
     "name": "defaults",
     "scope": "static",
     "kind": "function",
@@ -6630,7 +6631,6 @@
         "name": "sources"
       }
     ],
-    "longname": "_.defaults",
     "examples": [
       "_.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });\n// => { 'user': 'barney', 'age': 36, 'status': 'busy' }"
     ],
@@ -6649,6 +6649,7 @@
   },
   {
     "id": "_.findKey",
+    "longname": "_.findKey",
     "name": "findKey",
     "scope": "static",
     "kind": "function",
@@ -6688,7 +6689,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.findKey",
     "examples": [
       "var users = {\n  'barney':  { 'age': 36, 'active': true },\n  'fred':    { 'age': 40, 'active': false },\n  'pebbles': { 'age': 1,  'active': true }\n};\n\n_.findKey(users, function(chr) { return chr.age < 40; });\n// => 'barney' (iteration order is not guaranteed)\n\n// using \"_.where\" callback shorthand\n_.findKey(users, { 'age': 1 });\n// => 'pebbles'\n\n// using \"_.pluck\" callback shorthand\n_.findKey(users, 'active');\n// => 'barney'"
     ],
@@ -6708,6 +6708,7 @@
   },
   {
     "id": "_.findLastKey",
+    "longname": "_.findLastKey",
     "name": "findLastKey",
     "scope": "static",
     "kind": "function",
@@ -6747,7 +6748,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.findLastKey",
     "examples": [
       "var users = {\n  'barney':  { 'age': 36, 'active': true },\n  'fred':    { 'age': 40, 'active': false },\n  'pebbles': { 'age': 1,  'active': true }\n};\n\n_.findLastKey(users, function(chr) { return chr.age < 40; });\n// => returns `pebbles` assuming `_.findKey` returns `barney`\n\n// using \"_.where\" callback shorthand\n_.findLastKey(users, { 'age': 40 });\n// => 'fred'\n\n// using \"_.pluck\" callback shorthand\n_.findLastKey(users, 'active');\n// => 'pebbles'"
     ],
@@ -6767,6 +6767,7 @@
   },
   {
     "id": "_.forIn",
+    "longname": "_.forIn",
     "name": "forIn",
     "scope": "static",
     "kind": "function",
@@ -6804,7 +6805,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.forIn",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\nShape.prototype.z = 0;\n\n_.forIn(new Shape, function(value, key) {\n  console.log(key);\n});\n// => logs 'x', 'y', and 'z' (iteration order is not guaranteed)"
     ],
@@ -6823,6 +6823,7 @@
   },
   {
     "id": "_.forInRight",
+    "longname": "_.forInRight",
     "name": "forInRight",
     "scope": "static",
     "kind": "function",
@@ -6860,7 +6861,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.forInRight",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\nShape.prototype.z = 0;\n\n_.forInRight(new Shape, function(value, key) {\n  console.log(key);\n});\n// => logs 'z', 'y', and 'x' assuming `_.forIn ` logs 'x', 'y', and 'z'"
     ],
@@ -6879,6 +6879,7 @@
   },
   {
     "id": "_.forOwn",
+    "longname": "_.forOwn",
     "name": "forOwn",
     "scope": "static",
     "kind": "function",
@@ -6916,7 +6917,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.forOwn",
     "examples": [
       "_.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {\n  console.log(key);\n});\n// => logs '0', '1', and 'length' (iteration order is not guaranteed)"
     ],
@@ -6935,6 +6935,7 @@
   },
   {
     "id": "_.forOwnRight",
+    "longname": "_.forOwnRight",
     "name": "forOwnRight",
     "scope": "static",
     "kind": "function",
@@ -6972,7 +6973,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.forOwnRight",
     "examples": [
       "_.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {\n  console.log(key);\n});\n// => logs 'length', '1', and '0' assuming `_.forOwn` logs '0', '1', and 'length'"
     ],
@@ -6991,6 +6991,7 @@
   },
   {
     "id": "_.methods",
+    "longname": "_.methods",
     "name": "methods",
     "scope": "static",
     "kind": "function",
@@ -7022,11 +7023,11 @@
       }
     ],
     "category": "Object",
-    "codeName": "functions",
-    "longname": "_.methods"
+    "codeName": "functions"
   },
   {
     "id": "_.has",
+    "longname": "_.has",
     "name": "has",
     "scope": "static",
     "kind": "function",
@@ -7052,7 +7053,6 @@
         "name": "key"
       }
     ],
-    "longname": "_.has",
     "examples": [
       "_.has({ 'a': 1, 'b': 2, 'c': 3 }, 'b');\n// => true"
     ],
@@ -7071,6 +7071,7 @@
   },
   {
     "id": "_.invert",
+    "longname": "_.invert",
     "name": "invert",
     "scope": "static",
     "kind": "function",
@@ -7097,7 +7098,6 @@
         "name": "multiValue"
       }
     ],
-    "longname": "_.invert",
     "examples": [
       "_.invert({ 'first': 'fred', 'second': 'barney' });\n// => { 'fred': 'first', 'barney': 'second' }\n\n// without `multiValue`\n_.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' });\n// => { 'fred': 'third', 'barney': 'second' }\n\n// with `multiValue`\n_.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);\n// => { 'fred': ['first', 'third'], 'barney': ['second'] }"
     ],
@@ -7122,6 +7122,7 @@
   },
   {
     "id": "_.keys",
+    "longname": "_.keys",
     "name": "keys",
     "scope": "static",
     "kind": "member",
@@ -7138,7 +7139,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.keys",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\nShape.prototype.z = 0;\n\n_.keys(new Shape);\n// => ['x', 'y'] (iteration order is not guaranteed)"
     ],
@@ -7157,6 +7157,7 @@
   },
   {
     "id": "_.keysIn",
+    "longname": "_.keysIn",
     "name": "keysIn",
     "scope": "static",
     "kind": "function",
@@ -7173,7 +7174,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.keysIn",
     "examples": [
       "function Shape() {\n  this.x = 0;\n  this.y = 0;\n}\n\nShape.prototype.z = 0;\n\n_.keysIn(new Shape);\n// => ['x', 'y', 'z'] (iteration order is not guaranteed)"
     ],
@@ -7192,6 +7192,7 @@
   },
   {
     "id": "_.mapValues",
+    "longname": "_.mapValues",
     "name": "mapValues",
     "scope": "static",
     "kind": "function",
@@ -7231,7 +7232,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.mapValues",
     "examples": [
       "_.mapValues({ 'a': 1, 'b': 2, 'c': 3} , function(n) { return n * 3; });\n// => { 'a': 3, 'b': 6, 'c': 9 }\n\nvar users = {\n  'fred':    { 'user': 'fred',    'age': 40 },\n  'pebbles': { 'user': 'pebbles', 'age': 1 }\n};\n\n// using \"_.pluck\" callback shorthand\n_.mapValues(users, 'age');\n// => { 'fred': 40, 'pebbles': 1 }"
     ],
@@ -7250,6 +7250,7 @@
   },
   {
     "id": "_.merge",
+    "longname": "_.merge",
     "name": "merge",
     "scope": "static",
     "kind": "member",
@@ -7297,7 +7298,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.merge",
     "examples": [
       "var users = {\n  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]\n};\n\nvar ages = {\n  'data': [{ 'age': 36 }, { 'age': 40 }]\n};\n\n_.merge(users, ages);\n// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }\n\nvar food = {\n  'fruits': ['apple'],\n  'vegetables': ['beet']\n};\n\nvar otherFood = {\n  'fruits': ['banana'],\n  'vegetables': ['carrot']\n};\n\n_.merge(food, otherFood, function(a, b) {\n  return _.isArray(a) ? a.concat(b) : undefined;\n});\n// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }"
     ],
@@ -7316,6 +7316,7 @@
   },
   {
     "id": "_.omit",
+    "longname": "_.omit",
     "name": "omit",
     "scope": "static",
     "kind": "function",
@@ -7352,7 +7353,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.omit",
     "examples": [
       "var object = { 'user': 'fred', 'age': 40 };\n\n_.omit(object, 'age');\n// => { 'user': 'fred' }\n\n_.omit(object, _.isNumber);\n// => { 'user': 'fred' }"
     ],
@@ -7371,6 +7371,7 @@
   },
   {
     "id": "_.pairs",
+    "longname": "_.pairs",
     "name": "pairs",
     "scope": "static",
     "kind": "function",
@@ -7387,7 +7388,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.pairs",
     "examples": [
       "_.pairs({ 'barney': 36, 'fred': 40 });\n// => [['barney', 36], ['fred', 40]] (iteration order is not guaranteed)"
     ],
@@ -7406,6 +7406,7 @@
   },
   {
     "id": "_.pick",
+    "longname": "_.pick",
     "name": "pick",
     "scope": "static",
     "kind": "function",
@@ -7442,7 +7443,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.pick",
     "examples": [
       "var object = { 'user': 'fred', 'age': 40 };\n\n_.pick(object, 'user');\n// => { 'user': 'fred' }\n\n_.pick(object, _.isString);\n// => { 'user': 'fred' }"
     ],
@@ -7461,6 +7461,7 @@
   },
   {
     "id": "_.result",
+    "longname": "_.result",
     "name": "result",
     "scope": "static",
     "kind": "function",
@@ -7496,7 +7497,6 @@
         "name": "defaultValue"
       }
     ],
-    "longname": "_.result",
     "examples": [
       "var object = { 'user': 'fred', 'age': _.constant(40) };\n\n_.result(object, 'user');\n// => 'fred'\n\n_.result(object, 'age');\n// => 40\n\n_.result(object, 'status', 'busy');\n// => 'busy'\n\n_.result(object, 'status', _.constant('busy'));\n// => 'busy'"
     ],
@@ -7515,6 +7515,7 @@
   },
   {
     "id": "_.transform",
+    "longname": "_.transform",
     "name": "transform",
     "scope": "static",
     "kind": "function",
@@ -7563,7 +7564,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.transform",
     "examples": [
       "var squares = _.transform([1, 2, 3, 4, 5, 6], function(result, n) {\n  n *= n;\n  if (n % 2) {\n    return result.push(n) < 3;\n  }\n});\n// => [1, 9, 25]\n\nvar mapped = _.transform({ 'a': 1, 'b': 2, 'c': 3 }, function(result, n, key) {\n  result[key] = n * 3;\n});\n// => { 'a': 3, 'b': 6, 'c': 9 }"
     ],
@@ -7582,6 +7582,7 @@
   },
   {
     "id": "_.values",
+    "longname": "_.values",
     "name": "values",
     "scope": "static",
     "kind": "function",
@@ -7598,7 +7599,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.values",
     "examples": [
       "function Shape(x, y) {\n  this.x = x;\n  this.y = y;\n}\n\nShape.prototype.z = 0;\n\n_.values(new Shape(2, 1));\n// => [2, 1] (iteration order is not guaranteed)"
     ],
@@ -7617,6 +7617,7 @@
   },
   {
     "id": "_.valuesIn",
+    "longname": "_.valuesIn",
     "name": "valuesIn",
     "scope": "static",
     "kind": "function",
@@ -7633,7 +7634,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.valuesIn",
     "examples": [
       "function Shape(x, y) {\n  this.x = x;\n  this.y = y;\n}\n\nShape.prototype.z = 0;\n\n_.valuesIn(new Shape(2, 1));\n// => [2, 1, 0] (iteration order is not guaranteed)"
     ],
@@ -7652,6 +7652,7 @@
   },
   {
     "id": "_.random",
+    "longname": "_.random",
     "name": "random",
     "scope": "static",
     "kind": "function",
@@ -7691,7 +7692,6 @@
         "name": "floating"
       }
     ],
-    "longname": "_.random",
     "examples": [
       "_.random(0, 5);\n// => an integer between 0 and 5\n\n_.random(5);\n// => also an integer between 0 and 5\n\n_.random(5, true);\n// => a floating-point number between 0 and 5\n\n_.random(1.2, 5.2);\n// => a floating-point number between 1.2 and 5.2"
     ],
@@ -7710,6 +7710,7 @@
   },
   {
     "id": "_.camelCase",
+    "longname": "_.camelCase",
     "name": "camelCase",
     "scope": "static",
     "kind": "member",
@@ -7728,7 +7729,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.camelCase",
     "examples": [
       "_.camelCase('Hello world');\n// => 'helloWorld'\n\n_.camelCase('--hello-world');\n// => 'helloWorld'\n\n_.camelCase('__hello_world__');\n// => 'helloWorld'"
     ],
@@ -7747,6 +7747,7 @@
   },
   {
     "id": "_.capitalize",
+    "longname": "_.capitalize",
     "name": "capitalize",
     "scope": "static",
     "kind": "function",
@@ -7765,7 +7766,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.capitalize",
     "examples": [
       "_.capitalize('fred');\n// => 'Fred'"
     ],
@@ -7784,6 +7784,7 @@
   },
   {
     "id": "_.deburr",
+    "longname": "_.deburr",
     "name": "deburr",
     "scope": "static",
     "kind": "function",
@@ -7802,7 +7803,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.deburr",
     "examples": [
       "_.deburr('déjà vu');\n// => 'deja vu'"
     ],
@@ -7821,6 +7821,7 @@
   },
   {
     "id": "_.endsWith",
+    "longname": "_.endsWith",
     "name": "endsWith",
     "scope": "static",
     "kind": "function",
@@ -7860,7 +7861,6 @@
         "name": "position"
       }
     ],
-    "longname": "_.endsWith",
     "examples": [
       "_.endsWith('abc', 'c');\n// => true\n\n_.endsWith('abc', 'b');\n// => false\n\n_.endsWith('abc', 'b', 2);\n// => true"
     ],
@@ -7879,6 +7879,7 @@
   },
   {
     "id": "_.escape",
+    "longname": "_.escape",
     "name": "escape",
     "scope": "static",
     "kind": "function",
@@ -7897,7 +7898,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.escape",
     "examples": [
       "_.escape('fred, barney, & pebbles');\n// => 'fred, barney, &amp; pebbles'"
     ],
@@ -7916,6 +7916,7 @@
   },
   {
     "id": "_.escapeRegExp",
+    "longname": "_.escapeRegExp",
     "name": "escapeRegExp",
     "scope": "static",
     "kind": "function",
@@ -7934,7 +7935,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.escapeRegExp",
     "examples": [
       "_.escapeRegExp('[lodash](https://lodash.com/)');\n// => '\\[lodash\\]\\(https://lodash\\.com/\\)'"
     ],
@@ -7953,6 +7953,7 @@
   },
   {
     "id": "_.kebabCase",
+    "longname": "_.kebabCase",
     "name": "kebabCase",
     "scope": "static",
     "kind": "member",
@@ -7971,7 +7972,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.kebabCase",
     "examples": [
       "_.kebabCase('Hello world');\n// => 'hello-world'\n\n_.kebabCase('helloWorld');\n// => 'hello-world'\n\n_.kebabCase('__hello_world__');\n// => 'hello-world'"
     ],
@@ -7990,6 +7990,7 @@
   },
   {
     "id": "_.pad",
+    "longname": "_.pad",
     "name": "pad",
     "scope": "static",
     "kind": "function",
@@ -8030,7 +8031,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.pad",
     "examples": [
       "_.pad('abc', 8);\n// => '  abc   '\n\n_.pad('abc', 8, '_-');\n// => '_-abc_-_'\n\n_.pad('abc', 3);\n// => 'abc'"
     ],
@@ -8049,6 +8049,7 @@
   },
   {
     "id": "_.padLeft",
+    "longname": "_.padLeft",
     "name": "padLeft",
     "scope": "static",
     "kind": "function",
@@ -8089,7 +8090,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.padLeft",
     "examples": [
       "_.padLeft('abc', 6);\n// => '   abc'\n\n_.padLeft('abc', 6, '_-');\n// => '_-_abc'\n\n_.padLeft('abc', 3);\n// => 'abc'"
     ],
@@ -8108,6 +8108,7 @@
   },
   {
     "id": "_.padRight",
+    "longname": "_.padRight",
     "name": "padRight",
     "scope": "static",
     "kind": "function",
@@ -8148,7 +8149,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.padRight",
     "examples": [
       "_.padRight('abc', 6);\n// => 'abc   '\n\n_.padRight('abc', 6, '_-');\n// => 'abc_-_'\n\n_.padRight('abc', 3);\n// => 'abc'"
     ],
@@ -8167,6 +8167,7 @@
   },
   {
     "id": "_.parseInt",
+    "longname": "_.parseInt",
     "name": "parseInt",
     "scope": "static",
     "kind": "function",
@@ -8193,7 +8194,6 @@
         "name": "radix"
       }
     ],
-    "longname": "_.parseInt",
     "examples": [
       "_.parseInt('08');\n// => 8"
     ],
@@ -8218,6 +8218,7 @@
   },
   {
     "id": "_.repeat",
+    "longname": "_.repeat",
     "name": "repeat",
     "scope": "static",
     "kind": "function",
@@ -8247,7 +8248,6 @@
         "name": "n"
       }
     ],
-    "longname": "_.repeat",
     "examples": [
       "_.repeat('*', 3);\n// => '***'\n\n_.repeat('abc', 2);\n// => 'abcabc'\n\n_.repeat('abc', 0);\n// => ''"
     ],
@@ -8266,6 +8266,7 @@
   },
   {
     "id": "_.snakeCase",
+    "longname": "_.snakeCase",
     "name": "snakeCase",
     "scope": "static",
     "kind": "member",
@@ -8284,7 +8285,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.snakeCase",
     "examples": [
       "_.snakeCase('Hello world');\n// => 'hello_world'\n\n_.snakeCase('--hello-world');\n// => 'hello_world'\n\n_.snakeCase('helloWorld');\n// => 'hello_world'"
     ],
@@ -8303,6 +8303,7 @@
   },
   {
     "id": "_.startsWith",
+    "longname": "_.startsWith",
     "name": "startsWith",
     "scope": "static",
     "kind": "function",
@@ -8342,7 +8343,6 @@
         "name": "position"
       }
     ],
-    "longname": "_.startsWith",
     "examples": [
       "_.startsWith('abc', 'a');\n// => true\n\n_.startsWith('abc', 'b');\n// => false\n\n_.startsWith('abc', 'b', 1);\n// => true"
     ],
@@ -8361,6 +8361,7 @@
   },
   {
     "id": "_.template",
+    "longname": "_.template",
     "name": "template",
     "scope": "static",
     "kind": "function",
@@ -8449,7 +8450,6 @@
         "name": "options.variable"
       }
     ],
-    "longname": "_.template",
     "examples": [
       "// using the \"interpolate\" delimiter to create a compiled template\nvar compiled = _.template('hello <%= user %>!');\ncompiled({ 'user': 'fred' });\n// => 'hello fred!'\n\n// using the HTML \"escape\" delimiter to escape data property values\nvar compiled = _.template('<b><%- value %></b>');\ncompiled({ 'value': '<script>' });\n// => '<b>&lt;script&gt;</b>'\n\n// using the \"evaluate\" delimiter to execute JavaScript and generate HTML\nvar compiled = _.template('<% _.forEach(users, function(user) { %><li><%- user %></li><% }); %>');\ncompiled({ 'users': ['fred', 'barney'] });\n// => '<li>fred</li><li>barney</li>'\n\n// using the internal `print` function in \"evaluate\" delimiters\nvar compiled = _.template('<% print(\"hello \" + user); %>!');\ncompiled({ 'user': 'barney' });\n// => 'hello barney!'\n\n// using the ES6 delimiter as an alternative to the default \"interpolate\" delimiter\nvar compiled = _.template('hello ${ user }!');\ncompiled({ 'user': 'pebbles' });\n// => 'hello pebbles!'\n\n// using custom template delimiters\n_.templateSettings.interpolate = /{{([\\s\\S]+?)}}/g;\nvar compiled = _.template('hello {{ user }}!');\ncompiled({ 'user': 'mustache' });\n// => 'hello mustache!'\n\n// using backslashes to treat delimiters as plain text\nvar compiled = _.template('<%= \"\\\\<%- value %\\\\>\" %>');\ncompiled({ 'value': 'ignored' });\n// => '<%- value %>'\n\n// using the `imports` option to import `jQuery` as `jq`\nvar text = '<% jq.each(users, function(user) { %><li><%- user %></li><% }); %>';\nvar compiled = _.template(text, { 'imports': { 'jq': jQuery } });\ncompiled({ 'users': ['fred', 'barney'] });\n// => '<li>fred</li><li>barney</li>'\n\n// using the `sourceURL` option to specify a custom sourceURL for the template\nvar compiled = _.template('hello <%= user %>!', { 'sourceURL': '/basic/greeting.jst' });\ncompiled(data);\n// => find the source of \"greeting.jst\" under the Sources tab or Resources panel of the web inspector\n\n// using the `variable` option to ensure a with-statement isn't used in the compiled template\nvar compiled = _.template('hi <%= data.user %>!', { 'variable': 'data' });\ncompiled.source;\n// => function(data) {\n  var __t, __p = '';\n  __p += 'hi ' + ((__t = ( data.user )) == null ? '' : __t) + '!';\n  return __p;\n}\n\n// using the `source` property to inline compiled templates for meaningful\n// line numbers in error messages and a stack trace\nfs.writeFileSync(path.join(cwd, 'jst.js'), '\\\n  var JST = {\\\n    \"main\": ' + _.template(mainText).source + '\\\n  };\\\n');"
     ],
@@ -8474,6 +8474,7 @@
   },
   {
     "id": "_.trim",
+    "longname": "_.trim",
     "name": "trim",
     "scope": "static",
     "kind": "function",
@@ -8503,7 +8504,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.trim",
     "examples": [
       "_.trim('  fred  ');\n// => 'fred'\n\n_.trim('-_-fred-_-', '_-');\n// => 'fred'"
     ],
@@ -8528,6 +8528,7 @@
   },
   {
     "id": "_.trimLeft",
+    "longname": "_.trimLeft",
     "name": "trimLeft",
     "scope": "static",
     "kind": "function",
@@ -8557,7 +8558,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.trimLeft",
     "examples": [
       "_.trimLeft('  fred  ');\n// => 'fred  '\n\n_.trimLeft('-_-fred-_-', '_-');\n// => 'fred-_-'"
     ],
@@ -8582,6 +8582,7 @@
   },
   {
     "id": "_.trimRight",
+    "longname": "_.trimRight",
     "name": "trimRight",
     "scope": "static",
     "kind": "function",
@@ -8611,7 +8612,6 @@
         "name": "chars"
       }
     ],
-    "longname": "_.trimRight",
     "examples": [
       "_.trimRight('  fred  ');\n// => '  fred'\n\n_.trimRight('-_-fred-_-', '_-');\n// => '-_-fred'"
     ],
@@ -8636,6 +8636,7 @@
   },
   {
     "id": "_.trunc",
+    "longname": "_.trunc",
     "name": "trunc",
     "scope": "static",
     "kind": "function",
@@ -8698,7 +8699,6 @@
         "name": "options.separator"
       }
     ],
-    "longname": "_.trunc",
     "examples": [
       "_.trunc('hi-diddly-ho there, neighborino');\n// => 'hi-diddly-ho there, neighbo...'\n\n_.trunc('hi-diddly-ho there, neighborino', 24);\n// => 'hi-diddly-ho there, n...'\n\n_.trunc('hi-diddly-ho there, neighborino', { 'length': 24, 'separator': ' ' });\n// => 'hi-diddly-ho there,...'\n\n_.trunc('hi-diddly-ho there, neighborino', { 'length': 24, 'separator': /,? +/ });\n//=> 'hi-diddly-ho there...'\n\n_.trunc('hi-diddly-ho there, neighborino', { 'omission': ' [...]' });\n// => 'hi-diddly-ho there, neig [...]'"
     ],
@@ -8723,6 +8723,7 @@
   },
   {
     "id": "_.unescape",
+    "longname": "_.unescape",
     "name": "unescape",
     "scope": "static",
     "kind": "function",
@@ -8741,7 +8742,6 @@
         "name": "string"
       }
     ],
-    "longname": "_.unescape",
     "examples": [
       "_.unescape('fred, barney, &amp; pebbles');\n// => 'fred, barney, & pebbles'"
     ],
@@ -8760,6 +8760,7 @@
   },
   {
     "id": "_.words",
+    "longname": "_.words",
     "name": "words",
     "scope": "static",
     "kind": "function",
@@ -8789,7 +8790,6 @@
         "name": "pattern"
       }
     ],
-    "longname": "_.words",
     "examples": [
       "_.words('fred, barney, & pebbles');\n// => ['fred', 'barney', 'pebbles']\n\n_.words('fred, barney, & pebbles', /[^, ]+/g);\n// => ['fred', 'barney', '&', 'pebbles']"
     ],
@@ -8814,6 +8814,7 @@
   },
   {
     "id": "_.attempt",
+    "longname": "_.attempt",
     "name": "attempt",
     "scope": "static",
     "kind": "function",
@@ -8830,7 +8831,6 @@
         "name": "func"
       }
     ],
-    "longname": "_.attempt",
     "examples": [
       "// avoid throwing errors for invalid selectors\nvar elements = _.attempt(function() {\n  return document.querySelectorAll(selector);\n});\n\nif (_.isError(elements)) {\n  elements = [];\n}"
     ],
@@ -8849,13 +8849,13 @@
   },
   {
     "id": "_.iteratee",
+    "longname": "_.iteratee",
     "name": "iteratee",
     "scope": "static",
     "kind": "function",
     "description": "Creates a function bound to an optional `thisArg`. If `func` is a property\nname the created callback returns the property value for a given element.\nIf `func` is an object the created callback returns `true` for elements\nthat contain the equivalent object properties, otherwise it returns `false`.",
     "memberof": "_",
     "alias": "iteratee",
-    "longname": "_.iteratee",
     "params": [
       {
         "type": {
@@ -8903,6 +8903,7 @@
   },
   {
     "id": "_.constant",
+    "longname": "_.constant",
     "name": "constant",
     "scope": "static",
     "kind": "function",
@@ -8919,7 +8920,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.constant",
     "examples": [
       "var object = { 'user': 'fred' };\nvar getter = _.constant(object);\ngetter() === object;\n// => true"
     ],
@@ -8938,6 +8938,7 @@
   },
   {
     "id": "_.identity",
+    "longname": "_.identity",
     "name": "identity",
     "scope": "static",
     "kind": "function",
@@ -8954,7 +8955,6 @@
         "name": "value"
       }
     ],
-    "longname": "_.identity",
     "examples": [
       "var object = { 'user': 'fred' };\n_.identity(object) === object;\n// => true"
     ],
@@ -8973,6 +8973,7 @@
   },
   {
     "id": "_.matches",
+    "longname": "_.matches",
     "name": "matches",
     "scope": "static",
     "kind": "function",
@@ -8989,7 +8990,6 @@
         "name": "source"
       }
     ],
-    "longname": "_.matches",
     "examples": [
       "var users = [\n  { 'user': 'fred',   'age': 40 },\n  { 'user': 'barney', 'age': 36 }\n];\n\nvar matchesAge = _.matches({ 'age': 36 });\n\n_.filter(users, matchesAge);\n// => [{ 'user': 'barney', 'age': 36 }]\n\n_.find(users, matchesAge);\n// => { 'user': 'barney', 'age': 36 }"
     ],
@@ -9008,6 +9008,7 @@
   },
   {
     "id": "_.mixin",
+    "longname": "_.mixin",
     "name": "mixin",
     "scope": "static",
     "kind": "function",
@@ -9057,7 +9058,6 @@
         "name": "options.chain"
       }
     ],
-    "longname": "_.mixin",
     "examples": [
       "function vowels(string) {\n  return _.filter(string, function(v) {\n    return /[aeiou]/i.test(v);\n  });\n}\n\n_.mixin({ 'vowels': vowels });\n_.vowels('fred');\n// => ['e']\n\n_('fred').vowels().value();\n// => ['e']\n\n_.mixin({ 'vowels': vowels }, { 'chain': false });\n_('fred').vowels();\n// => ['e']"
     ],
@@ -9077,12 +9077,12 @@
   },
   {
     "id": "_.noConflict",
+    "longname": "_.noConflict",
     "name": "noConflict",
     "scope": "static",
     "kind": "function",
     "description": "Reverts the `_` variable to its previous value and returns a reference to\nthe `lodash` function.",
     "memberof": "_",
-    "longname": "_.noConflict",
     "examples": [
       "var lodash = _.noConflict();"
     ],
@@ -9115,6 +9115,7 @@
   },
   {
     "id": "_.property",
+    "longname": "_.property",
     "name": "property",
     "scope": "static",
     "kind": "function",
@@ -9131,7 +9132,6 @@
         "name": "key"
       }
     ],
-    "longname": "_.property",
     "examples": [
       "var users = [\n  { 'user': 'fred' },\n  { 'user': 'barney' }\n];\n\nvar getName = _.property('user');\n\n_.map(users, getName);\n// => ['fred', barney']\n\n_.pluck(_.sortBy(users, getName), 'user');\n// => ['barney', 'fred']"
     ],
@@ -9150,6 +9150,7 @@
   },
   {
     "id": "_.propertyOf",
+    "longname": "_.propertyOf",
     "name": "propertyOf",
     "scope": "static",
     "kind": "function",
@@ -9166,7 +9167,6 @@
         "name": "object"
       }
     ],
-    "longname": "_.propertyOf",
     "examples": [
       "var object = { 'user': 'fred', 'age': 40, 'active': true };\n_.map(['active', 'user'], _.propertyOf(object));\n// => [true, 'fred']\n\nvar object = { 'a': 3, 'b': 1, 'c': 2 };\n_.sortBy(['a', 'b', 'c'], _.propertyOf(object));\n// => ['b', 'c', 'a']"
     ],
@@ -9185,6 +9185,7 @@
   },
   {
     "id": "_.range",
+    "longname": "_.range",
     "name": "range",
     "scope": "static",
     "kind": "function",
@@ -9223,7 +9224,6 @@
         "name": "step"
       }
     ],
-    "longname": "_.range",
     "examples": [
       "_.range(4);\n// => [0, 1, 2, 3]\n\n_.range(1, 5);\n// => [1, 2, 3, 4]\n\n_.range(0, 20, 5);\n// => [0, 5, 10, 15]\n\n_.range(0, -4, -1);\n// => [0, -1, -2, -3]\n\n_.range(1, 4, 0);\n// => [1, 1, 1]\n\n_.range(0);\n// => []"
     ],
@@ -9242,6 +9242,7 @@
   },
   {
     "id": "_.times",
+    "longname": "_.times",
     "name": "times",
     "scope": "static",
     "kind": "function",
@@ -9279,7 +9280,6 @@
         "name": "thisArg"
       }
     ],
-    "longname": "_.times",
     "examples": [
       "var diceRolls = _.times(3, _.partial(_.random, 1, 6, false));\n// => [3, 6, 4]\n\n_.times(3, function(n) { mage.castSpell(n); });\n// => invokes `mage.castSpell(n)` three times with `n` of `0`, `1`, and `2` respectively\n\n_.times(3, function(n) { this.cast(n); }, mage);\n// => also invokes `mage.castSpell(n)` three times"
     ],
@@ -9298,6 +9298,7 @@
   },
   {
     "id": "_.uniqueId",
+    "longname": "_.uniqueId",
     "name": "uniqueId",
     "scope": "static",
     "kind": "function",
@@ -9315,7 +9316,6 @@
         "name": "prefix"
       }
     ],
-    "longname": "_.uniqueId",
     "examples": [
       "_.uniqueId('contact_');\n// => 'contact_104'\n\n_.uniqueId();\n// => '105'"
     ],
@@ -9334,12 +9334,12 @@
   },
   {
     "id": "_.lodash.VERSION",
+    "longname": "_.lodash.VERSION",
     "name": "VERSION",
     "scope": "static",
     "kind": "member",
     "description": "The semantic version number.",
     "memberof": "_.lodash",
-    "longname": "_.lodash.VERSION",
     "type": {
       "names": [
         "string"

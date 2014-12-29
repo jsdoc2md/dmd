@@ -1,7 +1,6 @@
 <a name="_"></a>
 ##class: _
 **Category**: Chain  
-* * *
 
 * [class: _](#_)
   * [new _(value)](#new___new)
@@ -208,7 +207,6 @@
     * [.times(n, [iteratee], [thisArg])](#_.times) ⇒ <code>Array</code>
     * [.uniqueId([prefix])](#_.uniqueId) ⇒ <code>string</code>
 
-* * *
 <a name="_.runInContext"></a>
 ###_.runInContext([context]) ⇒ <code>function</code>
 Create a new pristine `lodash` function using the given `context` object.
@@ -238,7 +236,6 @@ lodash.isFunction(lodash.add);
 lodash.isFunction(lodash.sub);
 // => true
 ```
-* * *
 
 * [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
   * [~Array](#_.runInContext..Array)
@@ -260,91 +257,76 @@ lodash.isFunction(lodash.sub);
   * [~ctorByClass](#_.runInContext..ctorByClass)
   * [~nonEnumProps](#_.runInContext..nonEnumProps)
 
-* * *
 <a name="_.runInContext..Array"></a>
 ####runInContext~Array
 Native constructor references.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..arrayProto"></a>
 ####runInContext~arrayProto
 Used for native method references.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..document"></a>
 ####runInContext~document
 Used to detect DOM support.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..fnToString"></a>
 ####runInContext~fnToString
 Used to resolve the decompiled source of functions.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..hasOwnProperty"></a>
 ####runInContext~hasOwnProperty
 Used to check objects for own properties.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..idCounter"></a>
 ####runInContext~idCounter
 Used to generate unique IDs.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..oldDash"></a>
 ####runInContext~oldDash
 Used to restore the original `_` reference in `_.noConflict`.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..toString"></a>
 ####runInContext~toString
 Used to resolve the internal `[[Class]]` of values.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative
 Used to detect if a method is native.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..ArrayBuffer"></a>
 ####runInContext~ArrayBuffer
 Native method references.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..Float64Array"></a>
 ####runInContext~Float64Array
 Used to clone array buffers.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..NEGATIVE_INFINITY"></a>
 ####runInContext~NEGATIVE_INFINITY
 Used as references for `-Infinity` and `Infinity`.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..MAX_ARRAY_LENGTH"></a>
 ####runInContext~MAX_ARRAY_LENGTH
 Used as references for the maximum length and index of an array.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..FLOAT64_BYTES_PER_ELEMENT"></a>
 ####runInContext~FLOAT64_BYTES_PER_ELEMENT
 Used as the size, in bytes, of each `Float64Array` element.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..MAX_SAFE_INTEGER"></a>
 ####runInContext~MAX_SAFE_INTEGER
 Used as the maximum length of an array-like value.
@@ -352,25 +334,21 @@ See the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tole
 for more details.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..metaMap"></a>
 ####runInContext~metaMap
 Used to store function metadata.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..ctorByClass"></a>
 ####runInContext~ctorByClass
 Used to lookup a built-in constructor by `[[Class]]`.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="_.runInContext..nonEnumProps"></a>
 ####runInContext~nonEnumProps
 Used to avoid iterating over non-enumerable properties in IE < 9.
 
 **Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
-* * *
 <a name="new___new"></a>
 ###new _(value)
 Creates a `lodash` object which wraps `value` to enable intuitive chaining.
@@ -453,12 +431,10 @@ _.isArray(squares);
 _.isArray(squares.value());
 // => true
 ```
-* * *
 <a name="_.support"></a>
 ###_.support → <code>Object</code>
 An object environment feature flags.
 
-* * *
 
 * [.support](#_.support) → <code>Object</code>
   * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
@@ -473,19 +449,16 @@ An object environment feature flags.
   * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
   * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
 
-* * *
 <a name="_.support.support.argsClass"></a>
 ####support.support.argsClass → <code>boolean</code>
 Detect if the `[[Class]]` of `arguments` objects is resolvable
 (all but Firefox < 4, IE < 9).
 
-* * *
 <a name="_.support.support.enumErrorProps"></a>
 ####support.support.enumErrorProps → <code>boolean</code>
 Detect if `name` or `message` properties of `Error.prototype` are
 enumerable by default (IE < 9, Safari < 5.1).
 
-* * *
 <a name="_.support.support.enumPrototypes"></a>
 ####support.support.enumPrototypes → <code>boolean</code>
 Detect if `prototype` properties are enumerable by default.
@@ -495,30 +468,25 @@ Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
 incorrectly set the `[[Enumerable]]` value of a function's `prototype`
 property to `true`.
 
-* * *
 <a name="_.support.support.funcDecomp"></a>
 ####support.support.funcDecomp → <code>boolean</code>
 Detect if functions can be decompiled by `Function#toString`
 (all but Firefox OS certified apps, older Opera mobile browsers, and
 the PlayStation 3; forced `false` for Windows 8 apps).
 
-* * *
 <a name="_.support.support.funcNames"></a>
 ####support.support.funcNames → <code>boolean</code>
 Detect if `Function#name` is supported (all but IE).
 
-* * *
 <a name="_.support.support.nodeClass"></a>
 ####support.support.nodeClass → <code>boolean</code>
 Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
 
-* * *
 <a name="_.support.support.nonEnumStrings"></a>
 ####support.support.nonEnumStrings → <code>boolean</code>
 Detect if string indexes are non-enumerable
 (IE < 9, RingoJS, Rhino, Narwhal).
 
-* * *
 <a name="_.support.support.nonEnumShadows"></a>
 ####support.support.nonEnumShadows → <code>boolean</code>
 Detect if properties shadowing those on `Object.prototype` are
@@ -527,12 +495,10 @@ non-enumerable.
 In IE < 9 an object's own properties, shadowing non-enumerable ones,
 are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
 
-* * *
 <a name="_.support.support.ownLast"></a>
 ####support.support.ownLast → <code>boolean</code>
 Detect if own properties are iterated after inherited properties (IE < 9).
 
-* * *
 <a name="_.support.support.spliceObjects"></a>
 ####support.support.spliceObjects → <code>boolean</code>
 Detect if `Array#shift` and `Array#splice` augment array-like objects
@@ -544,7 +510,6 @@ of array-like objects even though the `length` property is set to `0`.
 The `shift()` method is buggy in compatibility modes of IE 8, while `splice()`
 is buggy regardless of mode in IE < 9.
 
-* * *
 <a name="_.support.support.unindexedChars"></a>
 ####support.support.unindexedChars → <code>boolean</code>
 Detect lack of support for accessing string characters by index.
@@ -552,7 +517,6 @@ Detect lack of support for accessing string characters by index.
 IE < 8 can't access characters by index. IE 8 can only access characters
 by index on string literals, not string objects.
 
-* * *
 <a name="_.chunk"></a>
 ###_.chunk(array, [size]) ⇒ <code>Array</code>
 Creates an array of elements split into groups the length of `size`.
@@ -575,7 +539,6 @@ _.chunk(['a', 'b', 'c', 'd'], 2);
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
-* * *
 <a name="_.compact"></a>
 ###_.compact(array) ⇒ <code>Array</code>
 Creates an array with all falsey values removed. The values `false`, `null`,
@@ -592,7 +555,6 @@ Creates an array with all falsey values removed. The values `false`, `null`,
 _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.difference"></a>
 ###_.difference(array, [...values]) ⇒ <code>Array</code>
 Creates an array excluding all values of the provided arrays using
@@ -615,7 +577,6 @@ for more details.
 _.difference([1, 2, 3], [5, 2, 10]);
 // => [1, 3]
 ```
-* * *
 <a name="_.drop"></a>
 ###_.drop(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` elements dropped from the beginning.
@@ -642,7 +603,6 @@ _.drop([1, 2, 3], 5);
 _.drop([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.dropRight"></a>
 ###_.dropRight(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` elements dropped from the end.
@@ -669,7 +629,6 @@ _.dropRight([1, 2, 3], 5);
 _.dropRight([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.dropRightWhile"></a>
 ###_.dropRightWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
 Creates a slice of `array` excluding elements dropped from the end.
@@ -710,7 +669,6 @@ _.pluck(_.dropRightWhile(users, 'active'), 'user');
 _.pluck(_.dropRightWhile(users, { 'status': 'away' }), 'user');
 // => ['barney', 'fred']
 ```
-* * *
 <a name="_.dropWhile"></a>
 ###_.dropWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
 Creates a slice of `array` excluding elements dropped from the beginning.
@@ -751,7 +709,6 @@ _.pluck(_.dropWhile(users, 'active'), 'user');
 _.pluck(_.dropWhile(users, { 'status': 'busy' }), 'user');
 // => ['pebbles']
 ```
-* * *
 <a name="_.findIndex"></a>
 ###_.findIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
 This method is like `_.find` except that it returns the index of the first
@@ -791,7 +748,6 @@ _.findIndex(users, { 'age': 1 });
 _.findIndex(users, 'active');
 // => 1
 ```
-* * *
 <a name="_.findLastIndex"></a>
 ###_.findLastIndex(array, [predicate], [thisArg]) ⇒ <code>number</code>
 This method is like `_.findIndex` except that it iterates over elements
@@ -831,7 +787,6 @@ _.findLastIndex(users, { 'age': 40 });
 _.findLastIndex(users, 'active');
 // => 0
 ```
-* * *
 <a name="_.head"></a>
 ###_.head(array) ⇒ <code>\*</code>
 Gets the first element of `array`.
@@ -850,7 +805,6 @@ _.first([1, 2, 3]);
 _.first([]);
 // => undefined
 ```
-* * *
 <a name="_.flatten"></a>
 ###_.flatten(array, [isDeep]) ⇒ <code>Array</code>
 Flattens a nested array. If `isDeep` is `true` the array is recursively
@@ -873,7 +827,6 @@ _.flatten([1, [2], [3, [[4]]]]);
 _.flatten([1, [2], [3, [[4]]]], true);
 // => [1, 2, 3, 4];
 ```
-* * *
 <a name="_.flattenDeep"></a>
 ###_.flattenDeep(array) ⇒ <code>Array</code>
 Recursively flattens a nested array.
@@ -889,7 +842,6 @@ Recursively flattens a nested array.
 _.flattenDeep([1, [2], [3, [[4]]]]);
 // => [1, 2, 3, 4];
 ```
-* * *
 <a name="_.indexOf"></a>
 ###_.indexOf(array, value, [fromIndex]) ⇒ <code>number</code>
 Gets the index at which the first occurrence of `value` is found in `array`
@@ -923,7 +875,6 @@ _.indexOf([1, 2, 3, 1, 2, 3], 2, 3);
 _.indexOf([4, 4, 5, 5, 6, 6], 5, true);
 // => 2
 ```
-* * *
 <a name="_.initial"></a>
 ###_.initial(array) ⇒ <code>Array</code>
 Gets all but the last element of `array`.
@@ -939,7 +890,6 @@ Gets all but the last element of `array`.
 _.initial([1, 2, 3]);
 // => [1, 2]
 ```
-* * *
 <a name="_.intersection"></a>
 ###_.intersection([...arrays]) ⇒ <code>Array</code>
 Creates an array of unique values in all provided arrays using `SameValueZero`
@@ -961,7 +911,6 @@ for more details.
 _.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 // => [1, 2]
 ```
-* * *
 <a name="_.last"></a>
 ###_.last(array) ⇒ <code>\*</code>
 Gets the last element of `array`.
@@ -977,7 +926,6 @@ Gets the last element of `array`.
 _.last([1, 2, 3]);
 // => 3
 ```
-* * *
 <a name="_.lastIndexOf"></a>
 ###_.lastIndexOf(array, value, [fromIndex]) ⇒ <code>number</code>
 This method is like `_.indexOf` except that it iterates over elements of
@@ -1004,7 +952,6 @@ _.lastIndexOf([1, 2, 3, 1, 2, 3], 2, 3);
 _.lastIndexOf([4, 4, 5, 5, 6, 6], 5, true);
 // => 3
 ```
-* * *
 <a name="_.pull"></a>
 ###_.pull(array, [...values]) ⇒ <code>Array</code>
 Removes all provided values from `array` using `SameValueZero` for equality
@@ -1030,7 +977,6 @@ _.pull(array, 2, 3);
 console.log(array);
 // => [1, 1]
 ```
-* * *
 <a name="_.pullAt"></a>
 ###_.pullAt(array, [...indexes]) ⇒ <code>Array</code>
 Removes elements from `array` corresponding to the specified indexes and
@@ -1057,7 +1003,6 @@ console.log(array);
 console.log(evens);
 // => [10, 20]
 ```
-* * *
 <a name="_.remove"></a>
 ###_.remove(array, [predicate], [thisArg]) ⇒ <code>Array</code>
 Removes all elements from `array` that `predicate` returns truthy for
@@ -1092,7 +1037,6 @@ console.log(array);
 console.log(evens);
 // => [2, 4]
 ```
-* * *
 <a name="_.tail"></a>
 ###_.tail(array) ⇒ <code>Array</code>
 Gets all but the first element of `array`.
@@ -1108,7 +1052,6 @@ Gets all but the first element of `array`.
 _.rest([1, 2, 3]);
 // => [2, 3]
 ```
-* * *
 <a name="_.slice"></a>
 ###_.slice(array, [start], [end]) ⇒ <code>Array</code>
 Creates a slice of `array` from `start` up to, but not including, `end`.
@@ -1124,7 +1067,6 @@ lists in IE < 9 and to ensure dense arrays are returned.
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
-* * *
 <a name="_.sortedIndex"></a>
 ###_.sortedIndex(array, value, [iteratee], [thisArg]) ⇒ <code>number</code>
 Uses a binary search to determine the lowest index at which `value` should
@@ -1170,7 +1112,6 @@ _.sortedIndex(['thirty', 'fifty'], 'forty', function(word) {
 _.sortedIndex([{ 'x': 30 }, { 'x': 50 }], { 'x': 40 }, 'x');
 // => 1
 ```
-* * *
 <a name="_.sortedLastIndex"></a>
 ###_.sortedLastIndex(array, value, [iteratee], [thisArg]) ⇒ <code>number</code>
 This method is like `_.sortedIndex` except that it returns the highest
@@ -1192,7 +1133,6 @@ maintain its sort order.
 _.sortedLastIndex([4, 4, 5, 5, 6, 6], 5);
 // => 4
 ```
-* * *
 <a name="_.take"></a>
 ###_.take(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` elements taken from the beginning.
@@ -1219,7 +1159,6 @@ _.take([1, 2, 3], 5);
 _.take([1, 2, 3], 0);
 // => []
 ```
-* * *
 <a name="_.takeRight"></a>
 ###_.takeRight(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` elements taken from the end.
@@ -1246,7 +1185,6 @@ _.takeRight([1, 2, 3], 5);
 _.takeRight([1, 2, 3], 0);
 // => []
 ```
-* * *
 <a name="_.takeRightWhile"></a>
 ###_.takeRightWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
 Creates a slice of `array` with elements taken from the end. Elements are
@@ -1287,7 +1225,6 @@ _.pluck(_.takeRightWhile(users, 'active'), 'user');
 _.pluck(_.takeRightWhile(users, { 'status': 'away' }), 'user');
 // => ['pebbles']
 ```
-* * *
 <a name="_.takeWhile"></a>
 ###_.takeWhile(array, [predicate], [thisArg]) ⇒ <code>Array</code>
 Creates a slice of `array` with elements taken from the beginning. Elements
@@ -1328,7 +1265,6 @@ _.pluck(_.takeWhile(users, 'active'), 'user');
 _.pluck(_.takeWhile(users, { 'status': 'busy' }), 'user');
 // => ['barney', 'fred']
 ```
-* * *
 <a name="_.union"></a>
 ###_.union([...arrays]) ⇒ <code>Array</code>
 Creates an array of unique values, in order, of the provided arrays using
@@ -1350,7 +1286,6 @@ for more details.
 _.union([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 // => [1, 2, 3, 5, 4]
 ```
-* * *
 <a name="_.unique"></a>
 ###_.unique(array, [isSorted], [iteratee], [thisArg]) ⇒ <code>Array</code>
 Creates a duplicate-value-free version of an array using `SameValueZero`
@@ -1398,7 +1333,6 @@ _.uniq([1, 2.5, 1.5, 2], function(n) { return this.floor(n); }, Math);
 _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }, { 'x': 2 }]
 ```
-* * *
 <a name="_.unzip"></a>
 ###_.unzip(array) ⇒ <code>Array</code>
 This method is like `_.zip` except that it accepts an array of grouped
@@ -1419,7 +1353,6 @@ var zipped = _.zip(['fred', 'barney'], [30, 40], [true, false]);
 _.unzip(zipped);
 // => [['fred', 'barney'], [30, 40], [true, false]]
 ```
-* * *
 <a name="_.without"></a>
 ###_.without(array, [...values]) ⇒ <code>Array</code>
 Creates an array excluding all provided values using `SameValueZero` for
@@ -1442,7 +1375,6 @@ for more details.
 _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 // => [2, 3, 4]
 ```
-* * *
 <a name="_.xor"></a>
 ###_.xor([...arrays]) ⇒ <code>Array</code>
 Creates an array that is the symmetric difference of the provided arrays.
@@ -1463,7 +1395,6 @@ _.xor([1, 2, 3], [5, 2, 1, 4]);
 _.xor([1, 2, 5], [2, 3, 5], [3, 4, 5]);
 // => [1, 4, 5]
 ```
-* * *
 <a name="_.zip"></a>
 ###_.zip([...arrays]) ⇒ <code>Array</code>
 Creates an array of grouped elements, the first of which contains the first
@@ -1481,7 +1412,6 @@ of the given arrays, and so on.
 _.zip(['fred', 'barney'], [30, 40], [true, false]);
 // => [['fred', 30, true], ['barney', 40, false]]
 ```
-* * *
 <a name="_.object"></a>
 ###_.object(props, [values]) ⇒ <code>Object</code>
 Creates an object composed from arrays of property names and values. Provide
@@ -1500,7 +1430,6 @@ or two arrays, one of property names and one of corresponding values.
 _.zipObject(['fred', 'barney'], [30, 40]);
 // => { 'fred': 30, 'barney': 40 }
 ```
-* * *
 <a name="_.chain"></a>
 ###_.chain(value) ⇒ <code>Object</code>
 Creates a `lodash` object that wraps `value` with explicit method
@@ -1527,7 +1456,6 @@ var youngest = _.chain(users)
   .value();
 // => 'pebbles is 1'
 ```
-* * *
 <a name="_.tap"></a>
 ###_.tap(value, interceptor, [thisArg]) ⇒ <code>\*</code>
 This method invokes `interceptor` and returns `value`. The interceptor is
@@ -1551,7 +1479,6 @@ _([1, 2, 3])
  .value();
 // => [2, 1]
 ```
-* * *
 <a name="_.thru"></a>
 ###_.thru(value, interceptor, [thisArg]) ⇒ <code>\*</code>
 This method is like `_.tap` except that it returns the result of `interceptor`.
@@ -1572,7 +1499,6 @@ _([1, 2, 3])
  .value();
 // => [3]
 ```
-* * *
 <a name="_.chain"></a>
 ###_.chain ⇒ <code>\*</code>
 Enables explicit method chaining on the wrapper object.
@@ -1597,7 +1523,6 @@ _(users).chain()
   .value();
 // => { 'user': 'barney' }
 ```
-* * *
 <a name="_.reverse"></a>
 ###_.reverse ⇒ <code>Object</code>
 Reverses the wrapped array so the first element becomes the last, the
@@ -1617,7 +1542,6 @@ _(array).reverse().value()
 console.log(array);
 // => [3, 2, 1]
 ```
-* * *
 <a name="_.toString"></a>
 ###_.toString ⇒ <code>string</code>
 Produces the result of coercing the unwrapped value to a string.
@@ -1629,7 +1553,6 @@ Produces the result of coercing the unwrapped value to a string.
 _([1, 2, 3]).toString();
 // => '1,2,3'
 ```
-* * *
 <a name="_.value"></a>
 ###_.value ⇒ <code>\*</code>
 Executes the chained sequence to extract the unwrapped value.
@@ -1641,7 +1564,6 @@ Executes the chained sequence to extract the unwrapped value.
 _([1, 2, 3]).value();
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.at"></a>
 ###_.at(collection, [...props]) ⇒ <code>Array</code>
 Creates an array of elements corresponding to the specified keys, or indexes,
@@ -1663,7 +1585,6 @@ _.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);
 _.at(['fred', 'barney', 'pebbles'], 0, 2);
 // => ['fred', 'pebbles']
 ```
-* * *
 <a name="_.countBy"></a>
 ###_.countBy ⇒ <code>Object</code>
 Creates an object composed of keys generated from the results of running
@@ -1698,7 +1619,6 @@ _.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
 _.countBy(['one', 'two', 'three'], 'length');
 // => { '3': 2, '5': 1 }
 ```
-* * *
 <a name="_.all"></a>
 ###_.all(collection, [predicate], [thisArg]) ⇒ <code>boolean</code>
 Checks if `predicate` returns truthy for **all** elements of `collection`.
@@ -1739,7 +1659,6 @@ _.every(users, 'age');
 _.every(users, { 'age': 36 });
 // => false
 ```
-* * *
 <a name="_.select"></a>
 ###_.select(collection, [predicate], [thisArg]) ⇒ <code>Array</code>
 Iterates over elements of `collection`, returning an array of all elements
@@ -1779,7 +1698,6 @@ _.pluck(_.filter(users, 'active'), 'user');
 _.pluck(_.filter(users, { 'age': 36 }), 'user');
 // => ['barney']
 ```
-* * *
 <a name="_.detect"></a>
 ###_.detect(collection, [predicate], [thisArg]) ⇒ <code>\*</code>
 Iterates over elements of `collection`, returning the first element
@@ -1820,7 +1738,6 @@ _.result(_.find(users, { 'age': 1 }), 'user');
 _.result(_.find(users, 'active'), 'user');
 // => 'fred'
 ```
-* * *
 <a name="_.findLast"></a>
 ###_.findLast(collection, [predicate], [thisArg]) ⇒ <code>\*</code>
 This method is like `_.find` except that it iterates over elements of
@@ -1839,7 +1756,6 @@ This method is like `_.find` except that it iterates over elements of
 _.findLast([1, 2, 3, 4], function(n) { return n % 2 == 1; });
 // => 3
 ```
-* * *
 <a name="_.findWhere"></a>
 ###_.findWhere(collection, source) ⇒ <code>\*</code>
 Performs a deep comparison between each element in `collection` and the
@@ -1866,7 +1782,6 @@ _.result(_.findWhere(users, { 'status': 'busy' }), 'user');
 _.result(_.findWhere(users, { 'age': 40 }), 'user');
 // => 'fred'
 ```
-* * *
 <a name="_.each"></a>
 ###_.each(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
 Iterates over elements of `collection` invoking `iteratee` for each element.
@@ -1894,7 +1809,6 @@ _([1, 2, 3]).forEach(function(n) { console.log(n); });
 _.forEach({ 'one': 1, 'two': 2, 'three': 3 }, function(n, key) { console.log(n, key); });
 // => logs each value-key pair and returns the object (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.eachRight"></a>
 ###_.eachRight(collection, [iteratee], [thisArg]) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
 This method is like `_.forEach` except that it iterates over elements of
@@ -1913,7 +1827,6 @@ This method is like `_.forEach` except that it iterates over elements of
 _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
-* * *
 <a name="_.groupBy"></a>
 ###_.groupBy ⇒ <code>Object</code>
 Creates an object composed of keys generated from the results of running
@@ -1949,7 +1862,6 @@ _.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
 _.groupBy(['one', 'two', 'three'], 'length');
 // => { '3': ['one', 'two'], '5': ['three'] }
 ```
-* * *
 <a name="_.indexBy"></a>
 ###_.indexBy ⇒ <code>Object</code>
 Creates an object composed of keys generated from the results of running
@@ -1989,7 +1901,6 @@ _.indexBy(keyData, function(object) { return String.fromCharCode(object.code); }
 _.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);
 // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
 ```
-* * *
 <a name="_.invoke"></a>
 ###_.invoke(collection, methodName, [...args]) ⇒ <code>Array</code>
 Invokes the method named by `methodName` on each element in `collection`,
@@ -2013,7 +1924,6 @@ _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
 _.invoke([123, 456], String.prototype.split, '');
 // => [['1', '2', '3'], ['4', '5', '6']]
 ```
-* * *
 <a name="_.collect"></a>
 ###_.collect(collection, [iteratee], [thisArg]) ⇒ <code>Array</code>
 Creates an array of values by running each element in `collection` through
@@ -2052,7 +1962,6 @@ var users = [
 _.map(users, 'user');
 // => ['barney', 'fred']
 ```
-* * *
 <a name="_.max"></a>
 ###_.max(collection, [iteratee], [thisArg]) ⇒ <code>\*</code>
 Retrieves the maximum value of `collection`. If `collection` is empty or
@@ -2096,7 +2005,6 @@ _.max(users, function(chr) { return chr.age; });
 _.max(users, 'age');
 // => { 'user': 'fred', 'age': 40 };
 ```
-* * *
 <a name="_.min"></a>
 ###_.min(collection, [iteratee], [thisArg]) ⇒ <code>\*</code>
 Retrieves the minimum value of `collection`. If `collection` is empty or
@@ -2140,7 +2048,6 @@ _.min(users, function(chr) { return chr.age; });
 _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
 ```
-* * *
 <a name="_.partition"></a>
 ###_.partition ⇒ <code>Array</code>
 Creates an array of elements split into two groups, the first of which
@@ -2185,7 +2092,6 @@ _.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 
 _.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });
 // => [['fred'], ['barney', 'pebbles']]
 ```
-* * *
 <a name="_.pluck"></a>
 ###_.pluck(collection, key) ⇒ <code>Array</code>
 Retrieves the value of a specified property from all elements in `collection`.
@@ -2211,7 +2117,6 @@ var userIndex = _.indexBy(users, 'user');
 _.pluck(userIndex, 'age');
 // => [36, 40] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.foldr"></a>
 ###_.foldr(collection, [iteratee], [accumulator], [thisArg]) ⇒ <code>\*</code>
 This method is like `_.reduce` except that it iterates over elements of
@@ -2232,7 +2137,6 @@ var array = [[0, 1], [2, 3], [4, 5]];
 _.reduceRight(array, function(flattened, other) { return flattened.concat(other); }, []);
 // => [4, 5, 2, 3, 0, 1]
 ```
-* * *
 <a name="_.reject"></a>
 ###_.reject(collection, [predicate], [thisArg]) ⇒ <code>Array</code>
 The opposite of `_.filter`; this method returns the elements of `collection`
@@ -2271,7 +2175,6 @@ _.pluck(_.reject(users, 'active'), 'user');
 _.pluck(_.reject(users, { 'age': 36 }), 'user');
 // => ['fred']
 ```
-* * *
 <a name="_.sample"></a>
 ###_.sample(collection, [n]) ⇒ <code>\*</code>
 Retrieves a random element or `n` random elements from a collection.
@@ -2292,7 +2195,6 @@ _.sample([1, 2, 3, 4]);
 _.sample([1, 2, 3, 4], 2);
 // => [3, 1]
 ```
-* * *
 <a name="_.shuffle"></a>
 ###_.shuffle(collection) ⇒ <code>Array</code>
 Creates an array of shuffled values, using a version of the Fisher-Yates
@@ -2310,7 +2212,6 @@ for more details.
 _.shuffle([1, 2, 3, 4]);
 // => [4, 1, 3, 2]
 ```
-* * *
 <a name="_.size"></a>
 ###_.size(collection) ⇒ <code>number</code>
 Gets the size of `collection` by returning `collection.length` for
@@ -2333,7 +2234,6 @@ _.size({ 'one': 1, 'two': 2, 'three': 3 });
 _.size('pebbles');
 // => 7
 ```
-* * *
 <a name="_.any"></a>
 ###_.any(collection, [predicate], [thisArg]) ⇒ <code>boolean</code>
 Checks if `predicate` returns truthy for **any** element of `collection`.
@@ -2375,7 +2275,6 @@ _.some(users, 'active');
 _.some(users, { 'age': 1 });
 // => false
 ```
-* * *
 <a name="_.sortBy"></a>
 ###_.sortBy(collection, [iteratee], [thisArg]) ⇒ <code>Array</code>
 Creates an array of elements, sorted in ascending order by the results of
@@ -2417,7 +2316,6 @@ var users = [
 _.pluck(_.sortBy(users, 'user'), 'user');
 // => ['barney', 'fred', 'pebbles']
 ```
-* * *
 <a name="_.sortByAll"></a>
 ###_.sortByAll(collection, ...props) ⇒ <code>Array</code>
 This method is like `_.sortBy` except that it sorts by property names
@@ -2442,7 +2340,6 @@ var users = [
 _.map(_.sortByAll(users, ['user', 'age']), _.values);
 // => [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]
 ```
-* * *
 <a name="_.toArray"></a>
 ###_.toArray(collection) ⇒ <code>Array</code>
 Converts `collection` to an array.
@@ -2458,7 +2355,6 @@ Converts `collection` to an array.
 (function() { return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
 // => [2, 3, 4]
 ```
-* * *
 <a name="_.where"></a>
 ###_.where(collection, source) ⇒ <code>Array</code>
 Performs a deep comparison between each element in `collection` and the
@@ -2488,7 +2384,6 @@ _.pluck(_.where(users, { 'pets': ['dino'] }), 'user');
 _.pluck(_.where(users, { 'status': 'busy' }), 'user');
 // => ['barney', 'fred']
 ```
-* * *
 <a name="_.now"></a>
 ###_.now
 Gets the number of milliseconds that have elapsed since the Unix epoch
@@ -2500,7 +2395,6 @@ Gets the number of milliseconds that have elapsed since the Unix epoch
 _.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
 // => logs the number of milliseconds it took for the deferred function to be invoked
 ```
-* * *
 <a name="_.after"></a>
 ###_.after(n, func) ⇒ <code>function</code>
 The opposite of `_.before`; this method creates a function that invokes
@@ -2526,7 +2420,6 @@ _.forEach(saves, function(type) {
 });
 // => logs 'done saving!' after the two async saves have completed
 ```
-* * *
 <a name="_.ary"></a>
 ###_.ary(func, [n]) ⇒ <code>function</code>
 Creates a function that accepts up to `n` arguments ignoring any
@@ -2545,7 +2438,6 @@ additional arguments.
 _.map(['6', '8', '10'], _.ary(parseInt, 1));
 // => [6, 8, 10]
 ```
-* * *
 <a name="_.before"></a>
 ###_.before(n, func) ⇒ <code>function</code>
 Creates a function that invokes `func`, with the `this` binding and arguments
@@ -2564,7 +2456,6 @@ calls to the created function return the result of the last `func` invocation.
 jQuery('#add').on('click', _.before(5, addContactToList));
 // => allows adding up to 4 contacts to the list
 ```
-* * *
 <a name="_.bind"></a>
 ###_.bind(func, [thisArg], [...args]) ⇒ <code>function</code>
 Creates a function that invokes `func` with the `this` binding of `thisArg`
@@ -2602,7 +2493,6 @@ var bound = _.bind(greet, object, _, '!');
 bound('hi');
 // => 'hi fred!'
 ```
-* * *
 <a name="_.bindAll"></a>
 ###_.bindAll(object, [...methodNames]) ⇒ <code>Object</code>
 Binds methods of an object to the object itself, overwriting the existing
@@ -2630,7 +2520,6 @@ _.bindAll(view);
 jQuery('#docs').on('click', view.onClick);
 // => logs 'clicked docs' when the element is clicked
 ```
-* * *
 <a name="_.bindKey"></a>
 ###_.bindKey(object, key, [...args]) ⇒ <code>function</code>
 Creates a function that invokes the method at `object[key]` and prepends
@@ -2677,7 +2566,6 @@ var bound = _.bindKey(object, 'greet', _, '!');
 bound('hi');
 // => 'hiya fred!'
 ```
-* * *
 <a name="_.curry"></a>
 ###_.curry(func, [arity]) ⇒ <code>function</code>
 Creates a function that accepts one or more arguments of `func` that when
@@ -2720,7 +2608,6 @@ curried(1, 2, 3);
 curried(1)(_, 3)(2);
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.curryRight"></a>
 ###_.curryRight(func, [arity]) ⇒ <code>function</code>
 This method is like `_.curry` except that arguments are applied to `func`
@@ -2760,7 +2647,6 @@ curried(1, 2, 3);
 curried(3)(1, _)(2);
 // => [1, 2, 3]
 ```
-* * *
 <a name="_.debounce"></a>
 ###_.debounce(func, wait, [options]) ⇒ <code>function</code>
 Creates a function that delays invoking `func` until after `wait` milliseconds
@@ -2822,7 +2708,6 @@ models.todo.completed = true;
 // which cancels the debounced `todoChanges` call
 delete models.todo;
 ```
-* * *
 <a name="_.defer"></a>
 ###_.defer(func, [...args]) ⇒ <code>number</code>
 Defers invoking the `func` until the current call stack has cleared. Any
@@ -2840,7 +2725,6 @@ additional arguments are provided to `func` when it is invoked.
 _.defer(function(text) { console.log(text); }, 'deferred');
 // logs 'deferred' after one or more milliseconds
 ```
-* * *
 <a name="_.delay"></a>
 ###_.delay(func, wait, [...args]) ⇒ <code>number</code>
 Invokes `func` after `wait` milliseconds. Any additional arguments are
@@ -2859,7 +2743,6 @@ provided to `func` when it is invoked.
 _.delay(function(text) { console.log(text); }, 1000, 'later');
 // => logs 'later' after one second
 ```
-* * *
 <a name="_.flow"></a>
 ###_.flow([...funcs]) ⇒ <code>function</code>
 Creates a function that returns the result of invoking the provided
@@ -2886,7 +2769,6 @@ var addSquare = _.flow(add, square);
 addSquare(1, 2);
 // => 9
 ```
-* * *
 <a name="_.memoize"></a>
 ###_.memoize(func, [resolver]) ⇒ <code>function</code>
 Creates a function that memoizes the result of `func`. If `resolver` is
@@ -2931,7 +2813,6 @@ upperCase.cache.set('fred, 'BARNEY');
 upperCase('fred');
 // => 'BARNEY'
 ```
-* * *
 <a name="_.negate"></a>
 ###_.negate(predicate) ⇒ <code>function</code>
 Creates a function that negates the result of the predicate `func`. The
@@ -2953,7 +2834,6 @@ function isEven(n) {
 _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
 // => [1, 3, 5]
 ```
-* * *
 <a name="_.once"></a>
 ###_.once(func) ⇒ <code>function</code>
 Creates a function that is restricted to invoking `func` once. Repeat calls
@@ -2973,7 +2853,6 @@ initialize();
 initialize();
 // `initialize` invokes `createApplication` once
 ```
-* * *
 <a name="_.partial"></a>
 ###_.partial(func, [...args]) ⇒ <code>function</code>
 Creates a function that invokes `func` with `partial` arguments prepended
@@ -3008,7 +2887,6 @@ var greetFred = _.partial(greet, _, 'fred');
 greetFred('hi');
 // => 'hi fred'
 ```
-* * *
 <a name="_.partialRight"></a>
 ###_.partialRight(func, [...args]) ⇒ <code>function</code>
 This method is like `_.partial` except that partially applied arguments
@@ -3042,7 +2920,6 @@ var sayHelloTo = _.partialRight(greet, 'hello', _);
 sayHelloTo('fred');
 // => 'hello fred'
 ```
-* * *
 <a name="_.rearg"></a>
 ###_.rearg(func, ...indexes) ⇒ <code>function</code>
 Creates a function that invokes `func` with arguments arranged according
@@ -3070,7 +2947,6 @@ var map = _.rearg(_.map, [1, 0]);
 map(function(n) { return n * 3; }, [1, 2, 3]);
 // => [3, 6, 9]
 ```
-* * *
 <a name="_.throttle"></a>
 ###_.throttle(func, wait, [options]) ⇒ <code>function</code>
 Creates a function that only invokes `func` at most once per every `wait`
@@ -3109,7 +2985,6 @@ jQuery('.interactive').on('click', throttled);
 // cancel a trailing throttled call
 jQuery(window).on('popstate', throttled.cancel);
 ```
-* * *
 <a name="_.wrap"></a>
 ###_.wrap(value, wrapper) ⇒ <code>function</code>
 Creates a function that provides `value` to the wrapper function as its
@@ -3133,7 +3008,6 @@ var p = _.wrap(_.escape, function(func, text) {
 p('fred, barney, & pebbles');
 // => '<p>fred, barney, &amp; pebbles</p>'
 ```
-* * *
 <a name="_.clone"></a>
 ###_.clone(value, [isDeep], [customizer], [thisArg]) ⇒ <code>\*</code>
 Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,
@@ -3183,7 +3057,6 @@ var clone = _.clone(document.body);
 clone.childNodes.length;
 // => 0
 ```
-* * *
 <a name="_.cloneDeep"></a>
 ###_.cloneDeep(value, [customizer], [thisArg]) ⇒ <code>\*</code>
 Creates a deep clone of `value`. If `customizer` is provided it is invoked
@@ -3229,7 +3102,6 @@ var clone = _.cloneDeep(view, function(value) {
 clone.node == view.node;
 // => false
 ```
-* * *
 <a name="_.isArguments"></a>
 ###_.isArguments(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as an `arguments` object.
@@ -3248,7 +3120,6 @@ Checks if `value` is classified as an `arguments` object.
 _.isArguments([1, 2, 3]);
 // => false
 ```
-* * *
 <a name="_.isArray"></a>
 ###_.isArray ⇒ <code>boolean</code>
 Checks if `value` is classified as an `Array` object.
@@ -3267,7 +3138,6 @@ _.isArray([1, 2, 3]);
 (function() { return _.isArray(arguments); })();
 // => false
 ```
-* * *
 <a name="_.isBoolean"></a>
 ###_.isBoolean(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a boolean primitive or object.
@@ -3286,7 +3156,6 @@ _.isBoolean(false);
 _.isBoolean(null);
 // => false
 ```
-* * *
 <a name="_.isDate"></a>
 ###_.isDate(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `Date` object.
@@ -3305,7 +3174,6 @@ _.isDate(new Date);
 _.isDate('Mon April 23 2012');
 // => false
 ```
-* * *
 <a name="_.isElement"></a>
 ###_.isElement(value) ⇒ <code>boolean</code>
 Checks if `value` is a DOM element.
@@ -3324,7 +3192,6 @@ _.isElement(document.body);
 _.isElement('<body>');
 // => false
 ```
-* * *
 <a name="_.isEmpty"></a>
 ###_.isEmpty(value) ⇒ <code>boolean</code>
 Checks if a collection is empty. A value is considered empty unless it is
@@ -3354,7 +3221,6 @@ _.isEmpty([1, 2, 3]);
 _.isEmpty({ 'a': 1 });
 // => false
 ```
-* * *
 <a name="_.isEqual"></a>
 ###_.isEqual(value, other, [customizer], [thisArg]) ⇒ <code>boolean</code>
 Performs a deep comparison between two values to determine if they are
@@ -3396,7 +3262,6 @@ _.isEqual(words, otherWords, function(value, other) {
 });
 // => true
 ```
-* * *
 <a name="_.isError"></a>
 ###_.isError(value) ⇒ <code>boolean</code>
 Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
@@ -3416,7 +3281,6 @@ _.isError(new Error);
 _.isError(Error);
 // => false
 ```
-* * *
 <a name="_.isFinite"></a>
 ###_.isFinite ⇒ <code>boolean</code>
 Checks if `value` is a finite primitive number.
@@ -3448,7 +3312,6 @@ _.isFinite(Object(10));
 _.isFinite(Infinity);
 // => false
 ```
-* * *
 <a name="_.isFunction"></a>
 ###_.isFunction(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `Function` object.
@@ -3467,7 +3330,6 @@ _.isFunction(_);
 _.isFunction(/abc/);
 // => false
 ```
-* * *
 <a name="_.isObject"></a>
 ###_.isObject(value) ⇒ <code>boolean</code>
 Checks if `value` is the language type of `Object`.
@@ -3492,7 +3354,6 @@ _.isObject([1, 2, 3]);
 _.isObject(1);
 // => false
 ```
-* * *
 <a name="_.isMatch"></a>
 ###_.isMatch(source, source, [customizer], [thisArg]) ⇒ <code>boolean</code>
 Performs a deep comparison between `object` and `source` to determine if
@@ -3533,7 +3394,6 @@ _.isMatch(object, source, function(value, other) {
 });
 // => true
 ```
-* * *
 <a name="_.isNaN"></a>
 ###_.isNaN(value) ⇒ <code>boolean</code>
 Checks if `value` is `NaN`.
@@ -3562,7 +3422,6 @@ isNaN(undefined);
 _.isNaN(undefined);
 // => false
 ```
-* * *
 <a name="_.isNative"></a>
 ###_.isNative(value) ⇒ <code>boolean</code>
 Checks if `value` is a native function.
@@ -3581,7 +3440,6 @@ _.isNative(Array.prototype.push);
 _.isNative(_);
 // => false
 ```
-* * *
 <a name="_.isNull"></a>
 ###_.isNull(value) ⇒ <code>boolean</code>
 Checks if `value` is `null`.
@@ -3600,7 +3458,6 @@ _.isNull(null);
 _.isNull(void 0);
 // => false
 ```
-* * *
 <a name="_.isNumber"></a>
 ###_.isNumber(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `Number` primitive or object.
@@ -3625,7 +3482,6 @@ _.isNumber(NaN);
 _.isNumber('8.4');
 // => false
 ```
-* * *
 <a name="_.isPlainObject"></a>
 ###_.isPlainObject ⇒ <code>boolean</code>
 Checks if `value` is an object created by the `Object` constructor or has
@@ -3659,7 +3515,6 @@ _.isPlainObject({ 'x': 0, 'y': 0 });
 _.isPlainObject(Object.create(null));
 // => true
 ```
-* * *
 <a name="_.isRegExp"></a>
 ###_.isRegExp(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `RegExp` object.
@@ -3678,7 +3533,6 @@ _.isRegExp(/abc/);
 _.isRegExp('/abc/');
 // => false
 ```
-* * *
 <a name="_.isString"></a>
 ###_.isString(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `String` primitive or object.
@@ -3697,7 +3551,6 @@ _.isString('abc');
 _.isString(1);
 // => false
 ```
-* * *
 <a name="_.isUndefined"></a>
 ###_.isUndefined(value) ⇒ <code>boolean</code>
 Checks if `value` is `undefined`.
@@ -3716,7 +3569,6 @@ _.isUndefined(void 0);
 _.isUndefined(null);
 // => false
 ```
-* * *
 <a name="_.extend"></a>
 ###_.extend ⇒ <code>Object</code>
 Assigns own enumerable properties of source object(s) to the destination
@@ -3746,7 +3598,6 @@ var defaults = _.partialRight(_.assign, function(value, other) {
 defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
 // => { 'user': 'barney', 'age': 36, 'status': 'busy' }
 ```
-* * *
 <a name="_.create"></a>
 ###_.create(prototype, [properties]) ⇒ <code>Object</code>
 Creates an object that inherits from the given `prototype` object. If a
@@ -3781,7 +3632,6 @@ circle instanceof Circle;
 circle instanceof Shape;
 // => true
 ```
-* * *
 <a name="_.defaults"></a>
 ###_.defaults(object, [...sources]) ⇒ <code>Object</code>
 Assigns own enumerable properties of source object(s) to the destination
@@ -3800,7 +3650,6 @@ property is set, additional defaults of the same property are ignored.
 _.defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
 // => { 'user': 'barney', 'age': 36, 'status': 'busy' }
 ```
-* * *
 <a name="_.findKey"></a>
 ###_.findKey(object, [predicate], [thisArg]) ⇒ <code>string</code> \| <code>undefined</code>
 This method is like `_.findIndex` except that it returns the key of the
@@ -3840,7 +3689,6 @@ _.findKey(users, { 'age': 1 });
 _.findKey(users, 'active');
 // => 'barney'
 ```
-* * *
 <a name="_.findLastKey"></a>
 ###_.findLastKey(object, [predicate], [thisArg]) ⇒ <code>string</code> \| <code>undefined</code>
 This method is like `_.findKey` except that it iterates over elements of
@@ -3880,7 +3728,6 @@ _.findLastKey(users, { 'age': 40 });
 _.findLastKey(users, 'active');
 // => 'pebbles'
 ```
-* * *
 <a name="_.forIn"></a>
 ###_.forIn(object, [iteratee], [thisArg]) ⇒ <code>Object</code>
 Iterates over own and inherited enumerable properties of an object invoking
@@ -3910,7 +3757,6 @@ _.forIn(new Shape, function(value, key) {
 });
 // => logs 'x', 'y', and 'z' (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.forInRight"></a>
 ###_.forInRight(object, [iteratee], [thisArg]) ⇒ <code>Object</code>
 This method is like `_.forIn` except that it iterates over properties of
@@ -3938,7 +3784,6 @@ _.forInRight(new Shape, function(value, key) {
 });
 // => logs 'z', 'y', and 'x' assuming `_.forIn ` logs 'x', 'y', and 'z'
 ```
-* * *
 <a name="_.forOwn"></a>
 ###_.forOwn(object, [iteratee], [thisArg]) ⇒ <code>Object</code>
 Iterates over own enumerable properties of an object invoking `iteratee`
@@ -3961,7 +3806,6 @@ _.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 });
 // => logs '0', '1', and 'length' (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.forOwnRight"></a>
 ###_.forOwnRight(object, [iteratee], [thisArg]) ⇒ <code>Object</code>
 This method is like `_.forOwn` except that it iterates over properties of
@@ -3982,7 +3826,6 @@ _.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(n, key) {
 });
 // => logs 'length', '1', and '0' assuming `_.forOwn` logs '0', '1', and 'length'
 ```
-* * *
 <a name="_.methods"></a>
 ###_.methods(object) ⇒ <code>Array</code>
 Creates an array of function property names from all enumerable properties,
@@ -3999,7 +3842,6 @@ own and inherited, of `object`.
 _.functions(_);
 // => ['all', 'any', 'bind', ...]
 ```
-* * *
 <a name="_.has"></a>
 ###_.has(object, key) ⇒ <code>boolean</code>
 Checks if the specified property name exists as a direct property of `object`,
@@ -4017,7 +3859,6 @@ instead of an inherited property.
 _.has({ 'a': 1, 'b': 2, 'c': 3 }, 'b');
 // => true
 ```
-* * *
 <a name="_.invert"></a>
 ###_.invert(object, [multiValue]) ⇒ <code>Object</code>
 Creates an object composed of the inverted keys and values of `object`.
@@ -4045,7 +3886,6 @@ _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' });
 _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);
 // => { 'fred': ['first', 'third'], 'barney': ['second'] }
 ```
-* * *
 <a name="_.keys"></a>
 ###_.keys ⇒ <code>Array</code>
 Creates an array of the own enumerable property names of `object`.
@@ -4068,7 +3908,6 @@ Shape.prototype.z = 0;
 _.keys(new Shape);
 // => ['x', 'y'] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.keysIn"></a>
 ###_.keysIn(object) ⇒ <code>Array</code>
 Creates an array of the own and inherited enumerable property names of `object`.
@@ -4091,7 +3930,6 @@ Shape.prototype.z = 0;
 _.keysIn(new Shape);
 // => ['x', 'y', 'z'] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.mapValues"></a>
 ###_.mapValues(object, [iteratee], [thisArg]) ⇒ <code>Object</code>
 Creates an object with the same keys as `object` and values generated by
@@ -4128,7 +3966,6 @@ var users = {
 _.mapValues(users, 'age');
 // => { 'fred': 40, 'pebbles': 1 }
 ```
-* * *
 <a name="_.merge"></a>
 ###_.merge ⇒ <code>Object</code>
 Recursively merges own enumerable properties of the source object(s), that
@@ -4176,7 +4013,6 @@ _.merge(food, otherFood, function(a, b) {
 });
 // => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
 ```
-* * *
 <a name="_.omit"></a>
 ###_.omit(object, [predicate], [thisArg]) ⇒ <code>Object</code>
 The opposite of `_.pick`; this method creates an object composed of the
@@ -4205,7 +4041,6 @@ _.omit(object, 'age');
 _.omit(object, _.isNumber);
 // => { 'user': 'fred' }
 ```
-* * *
 <a name="_.pairs"></a>
 ###_.pairs(object) ⇒ <code>Array</code>
 Creates a two dimensional array of the key-value pairs for `object`,
@@ -4222,7 +4057,6 @@ e.g. `[[key1, value1], [key2, value2]]`.
 _.pairs({ 'barney': 36, 'fred': 40 });
 // => [['barney', 36], ['fred', 40]] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.pick"></a>
 ###_.pick(object, [predicate], [thisArg]) ⇒ <code>Object</code>
 Creates an object composed of the picked `object` properties. Property
@@ -4249,7 +4083,6 @@ _.pick(object, 'user');
 _.pick(object, _.isString);
 // => { 'user': 'fred' }
 ```
-* * *
 <a name="_.result"></a>
 ###_.result(object, key, [defaultValue]) ⇒ <code>\*</code>
 Resolves the value of property `key` on `object`. If the value of `key` is
@@ -4281,7 +4114,6 @@ _.result(object, 'status', 'busy');
 _.result(object, 'status', _.constant('busy'));
 // => 'busy'
 ```
-* * *
 <a name="_.transform"></a>
 ###_.transform(object, [iteratee], [accumulator], [thisArg]) ⇒ <code>\*</code>
 An alternative to `_.reduce`; this method transforms `object` to a new
@@ -4315,7 +4147,6 @@ var mapped = _.transform({ 'a': 1, 'b': 2, 'c': 3 }, function(result, n, key) {
 });
 // => { 'a': 3, 'b': 6, 'c': 9 }
 ```
-* * *
 <a name="_.values"></a>
 ###_.values(object) ⇒ <code>Array</code>
 Creates an array of the own enumerable property values of `object`.
@@ -4338,7 +4169,6 @@ Shape.prototype.z = 0;
 _.values(new Shape(2, 1));
 // => [2, 1] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.valuesIn"></a>
 ###_.valuesIn(object) ⇒ <code>Array</code>
 Creates an array of the own and inherited enumerable property values
@@ -4362,7 +4192,6 @@ Shape.prototype.z = 0;
 _.valuesIn(new Shape(2, 1));
 // => [2, 1, 0] (iteration order is not guaranteed)
 ```
-* * *
 <a name="_.random"></a>
 ###_.random([min], [max], [floating]) ⇒ <code>number</code>
 Produces a random number between `min` and `max` (inclusive). If only one
@@ -4392,7 +4221,6 @@ _.random(5, true);
 _.random(1.2, 5.2);
 // => a floating-point number between 1.2 and 5.2
 ```
-* * *
 <a name="_.camelCase"></a>
 ###_.camelCase ⇒ <code>string</code>
 Converts `string` to camel case.
@@ -4415,7 +4243,6 @@ _.camelCase('--hello-world');
 _.camelCase('__hello_world__');
 // => 'helloWorld'
 ```
-* * *
 <a name="_.capitalize"></a>
 ###_.capitalize([string]) ⇒ <code>string</code>
 Capitalizes the first character of `string`.
@@ -4431,7 +4258,6 @@ Capitalizes the first character of `string`.
 _.capitalize('fred');
 // => 'Fred'
 ```
-* * *
 <a name="_.deburr"></a>
 ###_.deburr([string]) ⇒ <code>string</code>
 Deburrs `string` by converting latin-1 supplementary letters to basic latin letters.
@@ -4449,7 +4275,6 @@ for more details.
 _.deburr('déjà vu');
 // => 'deja vu'
 ```
-* * *
 <a name="_.endsWith"></a>
 ###_.endsWith([string], [target], [position]) ⇒ <code>boolean</code>
 Checks if `string` ends with the given target string.
@@ -4473,7 +4298,6 @@ _.endsWith('abc', 'b');
 _.endsWith('abc', 'b', 2);
 // => true
 ```
-* * *
 <a name="_.escape"></a>
 ###_.escape([string]) ⇒ <code>string</code>
 Converts the characters "&", "<", ">", '"', "'", and '`', in `string` to
@@ -4508,7 +4332,6 @@ for more details.
 _.escape('fred, barney, & pebbles');
 // => 'fred, barney, &amp; pebbles'
 ```
-* * *
 <a name="_.escapeRegExp"></a>
 ###_.escapeRegExp([string]) ⇒ <code>string</code>
 Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
@@ -4525,7 +4348,6 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 _.escapeRegExp('[lodash](https://lodash.com/)');
 // => '\[lodash\]\(https://lodash\.com/\)'
 ```
-* * *
 <a name="_.kebabCase"></a>
 ###_.kebabCase ⇒ <code>string</code>
 Converts `string` to kebab case (a.k.a. spinal case).
@@ -4549,7 +4371,6 @@ _.kebabCase('helloWorld');
 _.kebabCase('__hello_world__');
 // => 'hello-world'
 ```
-* * *
 <a name="_.pad"></a>
 ###_.pad([string], [length], [chars]) ⇒ <code>string</code>
 Pads `string` on the left and right sides if it is shorter then the given
@@ -4575,7 +4396,6 @@ _.pad('abc', 8, '_-');
 _.pad('abc', 3);
 // => 'abc'
 ```
-* * *
 <a name="_.padLeft"></a>
 ###_.padLeft([string], [length], [chars]) ⇒ <code>string</code>
 Pads `string` on the left side if it is shorter then the given padding
@@ -4601,7 +4421,6 @@ _.padLeft('abc', 6, '_-');
 _.padLeft('abc', 3);
 // => 'abc'
 ```
-* * *
 <a name="_.padRight"></a>
 ###_.padRight([string], [length], [chars]) ⇒ <code>string</code>
 Pads `string` on the right side if it is shorter then the given padding
@@ -4627,7 +4446,6 @@ _.padRight('abc', 6, '_-');
 _.padRight('abc', 3);
 // => 'abc'
 ```
-* * *
 <a name="_.parseInt"></a>
 ###_.parseInt(string, [radix]) ⇒ <code>number</code>
 Converts `string` to an integer of the specified radix. If `radix` is
@@ -4650,7 +4468,6 @@ See the [ES5 spec](http://es5.github.io/#E) for more details.
 _.parseInt('08');
 // => 8
 ```
-* * *
 <a name="_.repeat"></a>
 ###_.repeat([string], [n]) ⇒ <code>string</code>
 Repeats the given string `n` times.
@@ -4673,7 +4490,6 @@ _.repeat('abc', 2);
 _.repeat('abc', 0);
 // => ''
 ```
-* * *
 <a name="_.snakeCase"></a>
 ###_.snakeCase ⇒ <code>string</code>
 Converts `string` to snake case.
@@ -4696,7 +4512,6 @@ _.snakeCase('--hello-world');
 _.snakeCase('helloWorld');
 // => 'hello_world'
 ```
-* * *
 <a name="_.startsWith"></a>
 ###_.startsWith([string], [target], [position]) ⇒ <code>boolean</code>
 Checks if `string` starts with the given target string.
@@ -4720,7 +4535,6 @@ _.startsWith('abc', 'b');
 _.startsWith('abc', 'b', 1);
 // => true
 ```
-* * *
 <a name="_.template"></a>
 ###_.template([string], [options]) ⇒ <code>function</code>
 Creates a compiled template function that can interpolate data properties
@@ -4819,7 +4633,6 @@ fs.writeFileSync(path.join(cwd, 'jst.js'), '\
   };\
 ');
 ```
-* * *
 <a name="_.trim"></a>
 ###_.trim([string], [chars]) ⇒ <code>string</code>
 Removes leading and trailing whitespace or specified characters from `string`.
@@ -4840,7 +4653,6 @@ _.trim('  fred  ');
 _.trim('-_-fred-_-', '_-');
 // => 'fred'
 ```
-* * *
 <a name="_.trimLeft"></a>
 ###_.trimLeft([string], [chars]) ⇒ <code>string</code>
 Removes leading whitespace or specified characters from `string`.
@@ -4861,7 +4673,6 @@ _.trimLeft('  fred  ');
 _.trimLeft('-_-fred-_-', '_-');
 // => 'fred-_-'
 ```
-* * *
 <a name="_.trimRight"></a>
 ###_.trimRight([string], [chars]) ⇒ <code>string</code>
 Removes trailing whitespace or specified characters from `string`.
@@ -4882,7 +4693,6 @@ _.trimRight('  fred  ');
 _.trimRight('-_-fred-_-', '_-');
 // => '-_-fred'
 ```
-* * *
 <a name="_.trunc"></a>
 ###_.trunc([string], [options]) ⇒ <code>string</code>
 Truncates `string` if it is longer than the given maximum string length.
@@ -4917,7 +4727,6 @@ _.trunc('hi-diddly-ho there, neighborino', { 'length': 24, 'separator': /,? +/ }
 _.trunc('hi-diddly-ho there, neighborino', { 'omission': ' [...]' });
 // => 'hi-diddly-ho there, neig [...]'
 ```
-* * *
 <a name="_.unescape"></a>
 ###_.unescape([string]) ⇒ <code>string</code>
 The inverse of `_.escape`; this method converts the HTML entities
@@ -4938,7 +4747,6 @@ entities use a third-party library like [_he_](http://mths.be/he).
 _.unescape('fred, barney, &amp; pebbles');
 // => 'fred, barney, & pebbles'
 ```
-* * *
 <a name="_.words"></a>
 ###_.words([string], [pattern]) ⇒ <code>Array</code>
 Splits `string` into an array of its words.
@@ -4959,7 +4767,6 @@ _.words('fred, barney, & pebbles');
 _.words('fred, barney, & pebbles', /[^, ]+/g);
 // => ['fred', 'barney', '&', 'pebbles']
 ```
-* * *
 <a name="_.attempt"></a>
 ###_.attempt(func) ⇒ <code>\*</code>
 Attempts to invoke `func`, returning either the result or the caught
@@ -4982,7 +4789,6 @@ if (_.isError(elements)) {
   elements = [];
 }
 ```
-* * *
 <a name="_.iteratee"></a>
 ###_.iteratee([func], [thisArg]) ⇒ <code>function</code>
 Creates a function bound to an optional `thisArg`. If `func` is a property
@@ -5019,7 +4825,6 @@ _.callback = _.wrap(_.callback, function(callback, func, thisArg) {
 _.filter(users, 'age__gt36');
 // => [{ 'user': 'fred', 'age': 40 }]
 ```
-* * *
 <a name="_.constant"></a>
 ###_.constant(value) ⇒ <code>function</code>
 Creates a function that returns `value`.
@@ -5037,7 +4842,6 @@ var getter = _.constant(object);
 getter() === object;
 // => true
 ```
-* * *
 <a name="_.identity"></a>
 ###_.identity(value) ⇒ <code>\*</code>
 This method returns the first argument provided to it.
@@ -5054,7 +4858,6 @@ var object = { 'user': 'fred' };
 _.identity(object) === object;
 // => true
 ```
-* * *
 <a name="_.matches"></a>
 ###_.matches(source) ⇒ <code>function</code>
 Creates a "_.where" style predicate function which performs a deep comparison
@@ -5082,7 +4885,6 @@ _.filter(users, matchesAge);
 _.find(users, matchesAge);
 // => { 'user': 'barney', 'age': 36 }
 ```
-* * *
 <a name="_.mixin"></a>
 ###_.mixin([object], source, [options]) ⇒ <code>function</code> \| <code>Object</code>
 Adds all own enumerable function properties of a source object to the
@@ -5117,7 +4919,6 @@ _.mixin({ 'vowels': vowels }, { 'chain': false });
 _('fred').vowels();
 // => ['e']
 ```
-* * *
 <a name="_.noConflict"></a>
 ###_.noConflict() ⇒ <code>function</code>
 Reverts the `_` variable to its previous value and returns a reference to
@@ -5129,7 +4930,6 @@ the `lodash` function.
 ```js
 var lodash = _.noConflict();
 ```
-* * *
 <a name="_.noop"></a>
 ###_.noop()
 A no-operation function.
@@ -5141,7 +4941,6 @@ var object = { 'user': 'fred' };
 _.noop(object) === undefined;
 // => true
 ```
-* * *
 <a name="_.property"></a>
 ###_.property(key) ⇒ <code>function</code>
 Creates a "_.pluck" style function which returns the property value
@@ -5168,7 +4967,6 @@ _.map(users, getName);
 _.pluck(_.sortBy(users, getName), 'user');
 // => ['barney', 'fred']
 ```
-* * *
 <a name="_.propertyOf"></a>
 ###_.propertyOf(object) ⇒ <code>function</code>
 The inverse of `_.property`; this method creates a function which returns
@@ -5190,7 +4988,6 @@ var object = { 'a': 3, 'b': 1, 'c': 2 };
 _.sortBy(['a', 'b', 'c'], _.propertyOf(object));
 // => ['b', 'c', 'a']
 ```
-* * *
 <a name="_.range"></a>
 ###_.range([start], end, [step]) ⇒ <code>Array</code>
 Creates an array of numbers (positive and/or negative) progressing from
@@ -5225,7 +5022,6 @@ _.range(1, 4, 0);
 _.range(0);
 // => []
 ```
-* * *
 <a name="_.times"></a>
 ###_.times(n, [iteratee], [thisArg]) ⇒ <code>Array</code>
 Invokes the iteratee function `n` times, returning an array of the results
@@ -5251,7 +5047,6 @@ _.times(3, function(n) { mage.castSpell(n); });
 _.times(3, function(n) { this.cast(n); }, mage);
 // => also invokes `mage.castSpell(n)` three times
 ```
-* * *
 <a name="_.uniqueId"></a>
 ###_.uniqueId([prefix]) ⇒ <code>string</code>
 Generates a unique ID. If `prefix` is provided the ID is appended to it.
@@ -5270,4 +5065,3 @@ _.uniqueId('contact_');
 _.uniqueId();
 // => '105'
 ```
-* * *

@@ -8,10 +8,10 @@
   },
   {
     "id": "module:cjs/animals.cat",
+    "longname": "module:cjs/animals.cat",
     "name": "cat",
     "scope": "static",
     "kind": "member",
-    "longname": "module:cjs/animals.cat",
     "description": "the exported cat",
     "memberof": "module:cjs/animals",
     "type": {
@@ -23,10 +23,10 @@
   },
   {
     "id": "module:cjs/animals.dog",
+    "longname": "module:cjs/animals.dog",
     "name": "dog",
     "scope": "static",
     "kind": "member",
-    "longname": "module:cjs/animals.dog",
     "description": "the exported dog",
     "memberof": "module:cjs/animals",
     "type": {
@@ -66,10 +66,10 @@
   },
   {
     "id": "module:cjs/animals~Animal#type",
+    "longname": "module:cjs/animals~Animal#type",
     "name": "type",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:cjs/animals~Animal#type",
     "description": "animal type",
     "memberof": "module:cjs/animals~Animal",
     "type": {
@@ -100,9 +100,9 @@
   },
   {
     "id": "module:cjs/class--ExportedClass()",
+    "longname": "module:cjs/class",
     "name": "ExportedClass",
     "kind": "constructor",
-    "longname": "module:cjs/class",
     "description": "the exported contructor",
     "memberof": "module:cjs/class--ExportedClass"
   },
@@ -172,8 +172,8 @@
     "description": "exports a pointer to a function"
   },
   {
-    "longname": "module:cjs/function-alias",
     "id": "module:cjs/function-alias--sum",
+    "longname": "module:cjs/function-alias",
     "name": "sum",
     "kind": "function",
     "isExported": true,
@@ -243,9 +243,9 @@
   },
   {
     "id": "module:cjs/human--Human()",
+    "longname": "module:cjs/human",
     "name": "Human",
     "kind": "constructor",
-    "longname": "module:cjs/human",
     "description": "the exported contructor",
     "memberof": "module:cjs/human--Human"
   },
@@ -271,10 +271,10 @@
   },
   {
     "id": "module:cjs/human--Human~Organ#redCell",
+    "longname": "module:cjs/human~Organ#redCell",
     "name": "redCell",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:cjs/human~Organ#redCell",
     "description": "an instance of Cell",
     "memberof": "module:cjs/human--Human~Organ",
     "type": {
@@ -286,10 +286,10 @@
   },
   {
     "id": "module:cjs/human--Human#liver",
+    "longname": "module:cjs/human#liver",
     "name": "liver",
     "scope": "instance",
     "kind": "member",
-    "longname": "module:cjs/human#liver",
     "description": "an instance of Organ",
     "memberof": "module:cjs/human--Human",
     "type": {
@@ -353,9 +353,9 @@
   },
   {
     "id": "module:linkMod~linksYeah()",
+    "longname": "module:linkMod~linksYeah",
     "name": "linksYeah",
     "kind": "constructor",
-    "longname": "module:linkMod~linksYeah",
     "description": "this is from {@link module:linkMod}.. it also references {@link external:Math}",
     "memberof": "module:linkMod~linksYeah"
   },
@@ -387,10 +387,10 @@
   },
   {
     "id": "module:cjs/object.one",
+    "longname": "module:cjs/object.one",
     "name": "one",
     "scope": "static",
     "kind": "member",
-    "longname": "module:cjs/object.one",
     "description": "the first property",
     "memberof": "module:cjs/object",
     "type": {
@@ -427,9 +427,9 @@
   },
   {
     "id": "GlobalClass()",
+    "longname": "GlobalClass",
     "name": "GlobalClass",
     "kind": "constructor",
-    "longname": "GlobalClass",
     "description": "the global class constructor",
     "memberof": "GlobalClass",
     "params": [
@@ -513,9 +513,9 @@
   },
   {
     "id": "customClass()",
+    "longname": "customClass",
     "name": "customClass",
     "kind": "constructor",
-    "longname": "customClass",
     "description": "the constructor",
     "memberof": "customClass"
   },
@@ -540,6 +540,7 @@
   },
   {
     "id": "defaultedOne",
+    "longname": "defaultedOne",
     "name": "defaultedOne",
     "scope": "global",
     "kind": "member",
@@ -548,12 +549,12 @@
         "object"
       ]
     },
-    "longname": "defaultedOne",
     "defaultvalue": "{ one: 1, two: \"yeah?\" }",
     "codeName": "defaultedOne"
   },
   {
     "id": "defaultedTwo",
+    "longname": "defaultedTwo",
     "name": "defaultedTwo",
     "scope": "global",
     "kind": "member",
@@ -562,7 +563,6 @@
         "function"
       ]
     },
-    "longname": "defaultedTwo",
     "defaultvalue": "function f(n){ return something(n); }",
     "codeName": "defaultedTwo"
   },
@@ -576,6 +576,7 @@
   },
   {
     "id": "exampleVar",
+    "longname": "exampleVar",
     "name": "exampleVar",
     "scope": "global",
     "kind": "member",
@@ -583,7 +584,6 @@
     "examples": [
       "var thisVar = funtion(){\n    return \"a value\";\n};"
     ],
-    "longname": "exampleVar",
     "type": {
       "names": [
         "string"
@@ -658,9 +658,9 @@
   },
   {
     "id": "EncryptedRequest()",
+    "longname": "EncryptedRequest",
     "name": "EncryptedRequest",
     "kind": "constructor",
-    "longname": "EncryptedRequest",
     "description": "Extends the built in XMLHttpRequest to send data encoded with a secret key.",
     "memberof": "EncryptedRequest"
   },
@@ -757,84 +757,6 @@
     "codeName": "globalFunction"
   },
   {
-    "id": "htmlGlobal",
-    "longname": "htmlGlobal",
-    "name": "htmlGlobal",
-    "scope": "global",
-    "kind": "member",
-    "description": "inline global",
-    "codeName": "htmlGlobal"
-  },
-  {
-    "id": "SOmething",
-    "longname": "SOmething",
-    "name": "SOmething",
-    "scope": "global",
-    "kind": "class",
-    "description": "a class",
-    "codeName": "SOmething"
-  },
-  {
-    "id": "SOmething#yeah",
-    "longname": "SOmething#yeah",
-    "name": "yeah",
-    "scope": "instance",
-    "kind": "function",
-    "description": "a method yo",
-    "memberof": "SOmething",
-    "codeName": "this.yeah"
-  },
-  {
-    "id": "headVar",
-    "name": "headVar",
-    "scope": "global",
-    "kind": "member",
-    "description": "something in the head",
-    "longname": "headVar",
-    "type": {
-      "names": [
-        "number"
-      ]
-    },
-    "codeName": "headVar"
-  },
-  {
-    "id": "headObj",
-    "longname": "headObj",
-    "name": "headObj",
-    "scope": "global",
-    "kind": "namespace",
-    "description": "a head obj",
-    "properties": [
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "name": "name"
-      },
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "name": "age"
-      }
-    ],
-    "codeName": "headObj"
-  },
-  {
-    "id": "bodyGlobal",
-    "longname": "bodyGlobal",
-    "name": "bodyGlobal",
-    "scope": "global",
-    "kind": "member",
-    "description": "body global",
-    "codeName": "bodyGlobal"
-  },
-  {
     "id": "LendsClass",
     "longname": "LendsClass",
     "name": "LendsClass",
@@ -882,14 +804,6 @@
       "Eventful"
     ],
     "codeName": "EventfulClass"
-  },
-  {
-    "id": "phantom",
-    "longname": "phantom",
-    "name": "phantom",
-    "scope": "global",
-    "kind": "mixin",
-    "description": "phantom mixin"
   },
   {
     "id": "Eventful",
@@ -959,6 +873,14 @@
       }
     ],
     "codeName": "fire"
+  },
+  {
+    "id": "phantom",
+    "longname": "phantom",
+    "name": "phantom",
+    "scope": "global",
+    "kind": "mixin",
+    "description": "phantom mixin"
   },
   {
     "id": "Documents",
@@ -1208,11 +1130,11 @@
   },
   {
     "id": "globalVar",
+    "longname": "globalVar",
     "name": "globalVar",
     "scope": "global",
     "kind": "member",
     "description": "a global var",
-    "longname": "globalVar",
     "type": {
       "names": [
         "string"

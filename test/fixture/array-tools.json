@@ -11,8 +11,8 @@
     "typicalname": "a"
   },
   {
-    "longname": "module:array-tools.pluck",
     "id": "module:array-tools.pluck",
+    "longname": "module:array-tools.pluck",
     "name": "pluck",
     "scope": "static",
     "kind": "function",
@@ -55,8 +55,8 @@
     "codeName": "pluck"
   },
   {
-    "longname": "module:array-tools.pick",
     "id": "module:array-tools.pick",
+    "longname": "module:array-tools.pick",
     "name": "pick",
     "scope": "static",
     "kind": "function",
@@ -99,8 +99,8 @@
     "codeName": "pick"
   },
   {
-    "longname": "module:array-tools.arrayify",
     "id": "module:array-tools.arrayify",
+    "longname": "module:array-tools.arrayify",
     "name": "arrayify",
     "scope": "static",
     "kind": "function",
@@ -133,8 +133,8 @@
     "codeName": "arrayify"
   },
   {
-    "longname": "module:array-tools.exists",
     "id": "module:array-tools.exists",
+    "longname": "module:array-tools.exists",
     "name": "exists",
     "scope": "static",
     "kind": "function",
@@ -176,8 +176,8 @@
     "codeName": "exists"
   },
   {
-    "longname": "module:array-tools.where",
     "id": "module:array-tools.where",
+    "longname": "module:array-tools.where",
     "name": "where",
     "scope": "static",
     "kind": "function",
@@ -219,8 +219,8 @@
     "codeName": "where"
   },
   {
-    "longname": "module:array-tools.findWhere",
     "id": "module:array-tools.findWhere",
+    "longname": "module:array-tools.findWhere",
     "name": "findWhere",
     "scope": "static",
     "kind": "function",
@@ -262,8 +262,8 @@
     "codeName": "findWhere"
   },
   {
-    "longname": "module:array-tools.without",
     "id": "module:array-tools.without",
+    "longname": "module:array-tools.without",
     "name": "without",
     "scope": "static",
     "kind": "function",
@@ -305,8 +305,8 @@
     "codeName": "without"
   },
   {
-    "longname": "module:array-tools.union",
     "id": "module:array-tools.union",
+    "longname": "module:array-tools.union",
     "name": "union",
     "scope": "static",
     "kind": "function",
@@ -357,8 +357,8 @@
     "codeName": "union"
   },
   {
-    "longname": "module:array-tools.commonSequence",
     "id": "module:array-tools.commonSequence",
+    "longname": "module:array-tools.commonSequence",
     "name": "commonSequence",
     "scope": "static",
     "kind": "function",
@@ -400,8 +400,8 @@
     "codeName": "commonSequence"
   },
   {
-    "longname": "module:array-tools.unique",
     "id": "module:array-tools.unique",
+    "longname": "module:array-tools.unique",
     "name": "unique",
     "scope": "static",
     "kind": "function",
@@ -434,8 +434,8 @@
     "codeName": "unique"
   },
   {
-    "longname": "module:array-tools.spliceWhile",
     "id": "module:array-tools.spliceWhile",
+    "longname": "module:array-tools.spliceWhile",
     "name": "spliceWhile",
     "scope": "static",
     "kind": "function",
@@ -495,8 +495,8 @@
     "codeName": "spliceWhile"
   },
   {
-    "longname": "module:array-tools.extract",
     "id": "module:array-tools.extract",
+    "longname": "module:array-tools.extract",
     "name": "extract",
     "scope": "static",
     "kind": "function",
@@ -538,10 +538,10 @@
   },
   {
     "id": "module:array-tools.flatten",
+    "longname": "module:array-tools.flatten",
     "name": "flatten",
     "scope": "static",
     "kind": "function",
-    "longname": "module:array-tools.flatten",
     "description": "flatten an array of arrays into a single array",
     "memberof": "module:array-tools",
     "examples": [

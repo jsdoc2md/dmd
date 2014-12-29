@@ -6,7 +6,6 @@ Exports a contructor taking a list of file patterns as input, returning a `file-
 ```js
 var fileSet = require("file-set");
 ```
-* * *
 
 * [file-set](#module_file-set)
   * [class: FileSet](#exp_module_file-set--FileSet) ⏏
@@ -23,40 +22,32 @@ var fileSet = require("file-set");
         * [.FILE](#module_file-set--FileSet.eFileType.FILE) → <code>number</code>
         * [.DIR](#module_file-set--FileSet.eFileType.DIR) → <code>number</code>
 
-* * *
 <a name="exp_module_file-set--FileSet"></a>
 ###class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
-* * *
-* * *
 <a name="new_module_file-set--FileSet_new"></a>
 ####new FileSet(patternList)
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
-* * *
 <a name="module_file-set--FileSet#list"></a>
 ####fileSet.list → <code>Array.&lt;string&gt;</code>
 The full list of unique paths found, and not found.
 
-* * *
 <a name="module_file-set--FileSet#files"></a>
 ####fileSet.files → <code>Array.&lt;string&gt;</code>
 The existing files found
 
-* * *
 <a name="module_file-set--FileSet#dirs"></a>
 ####fileSet.dirs → <code>Array.&lt;string&gt;</code>
 The existing directories found
 
-* * *
 <a name="module_file-set--FileSet#notExisting"></a>
 ####fileSet.notExisting → <code>Array.&lt;string&gt;</code>
 Paths which were not found
 
-* * *
 <a name="module_file-set--FileSet#add"></a>
 ####fileSet.add(files)
 add file patterns to the set
@@ -65,7 +56,6 @@ add file patterns to the set
 | ----- | ---- | ----------- |
 | files | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
-* * *
 <a name="module_file-set--FileSet.eFileType"></a>
 ####enum: FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
@@ -80,27 +70,22 @@ Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
-* * *
 
 * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
   * [.NOEXIST](#module_file-set--FileSet.eFileType.NOEXIST) → <code>number</code>
   * [.FILE](#module_file-set--FileSet.eFileType.FILE) → <code>number</code>
   * [.DIR](#module_file-set--FileSet.eFileType.DIR) → <code>number</code>
 
-* * *
 <a name="module_file-set--FileSet.eFileType.NOEXIST"></a>
 #####eFileType.NOEXIST → <code>number</code>
 when a file doesn't exist
 
 **Default**: `0`  
-* * *
 <a name="module_file-set--FileSet.eFileType.FILE"></a>
 #####eFileType.FILE → <code>number</code>
 It's a file
 
 **Default**: `1`  
-* * *
 <a name="module_file-set--FileSet.eFileType.DIR"></a>
 #####eFileType.DIR → <code>number</code>
 **Default**: `2`  
-* * *
