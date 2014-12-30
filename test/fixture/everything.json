@@ -598,9 +598,18 @@
     "name": "String",
     "scope": "global",
     "kind": "external",
-    "description": "The built in string object.",
     "see": [
       "{@link https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String String}"
+    ]
+  },
+  {
+    "id": "external:Clive",
+    "longname": "external:Clive",
+    "name": "Clive",
+    "scope": "global",
+    "kind": "external",
+    "see": [
+      "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String"
     ]
   },
   {
@@ -663,6 +672,32 @@
     "kind": "constructor",
     "description": "Extends the built in XMLHttpRequest to send data encoded with a secret key.",
     "memberof": "EncryptedRequest"
+  },
+  {
+    "id": "cliveExternal",
+    "longname": "cliveExternal",
+    "name": "cliveExternal",
+    "scope": "global",
+    "kind": "member",
+    "type": {
+      "names": [
+        "external:Clive"
+      ]
+    },
+    "codeName": "cliveExternal"
+  },
+  {
+    "id": "stringExternal",
+    "longname": "stringExternal",
+    "name": "stringExternal",
+    "scope": "global",
+    "kind": "member",
+    "type": {
+      "names": [
+        "external:String"
+      ]
+    },
+    "codeName": "stringExternal"
   },
   {
     "id": "fileVar",
@@ -1127,6 +1162,109 @@
         "task": "finished"
       }
     ]
+  },
+  {
+    "id": "returnsArrayOfType",
+    "longname": "returnsArrayOfType",
+    "name": "returnsArrayOfType",
+    "scope": "global",
+    "kind": "member",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array.<module:cjs/human--Human>"
+          ]
+        }
+      }
+    ],
+    "codeName": "returnsArrayOfType"
+  },
+  {
+    "id": "returnsArrayOfType2",
+    "longname": "returnsArrayOfType2",
+    "name": "returnsArrayOfType2",
+    "scope": "global",
+    "kind": "member",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array.<module:cjs/human--Human>"
+          ]
+        },
+        "nullable": true
+      }
+    ],
+    "codeName": "returnsArrayOfType2"
+  },
+  {
+    "id": "nullableNumber",
+    "longname": "nullableNumber",
+    "name": "nullableNumber",
+    "scope": "global",
+    "kind": "member",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "nullable": true
+      }
+    ],
+    "codeName": "nullableNumber"
+  },
+  {
+    "id": "nonNullableNumber",
+    "longname": "nonNullableNumber",
+    "name": "nonNullableNumber",
+    "scope": "global",
+    "kind": "member",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "nullable": false
+      }
+    ],
+    "codeName": "nonNullableNumber"
+  },
+  {
+    "id": "objectType",
+    "longname": "objectType",
+    "name": "objectType",
+    "scope": "global",
+    "kind": "member",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "codeName": "objectType"
+  },
+  {
+    "id": "nullableArrayTypeParam",
+    "longname": "nullableArrayTypeParam",
+    "name": "nullableArrayTypeParam",
+    "scope": "global",
+    "kind": "function",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<module:cjs/human>"
+          ]
+        },
+        "nullable": true,
+        "name": "one"
+      }
+    ],
+    "codeName": "nullableArrayTypeParam"
   },
   {
     "id": "globalVar",

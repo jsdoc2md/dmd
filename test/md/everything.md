@@ -64,6 +64,8 @@
 * [exampleVar](#exampleVar) → <code>string</code>
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
+* [cliveExternal](#cliveExternal) → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+* [stringExternal](#stringExternal) → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 * [fileVar](#fileVar)
 * [firesError()](#firesError)
 * [firesMany()](#firesMany)
@@ -94,6 +96,12 @@
 * [todoFunction1()](#todoFunction1)
 * [todoFunction2()](#todoFunction2)
 * [todoFunction3()](#todoFunction3)
+* [returnsArrayOfType](#returnsArrayOfType) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+* [returnsArrayOfType2](#returnsArrayOfType2) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+* [nullableNumber](#nullableNumber) ⇒ <code>number</code>
+* [nonNullableNumber](#nonNullableNumber) ⇒ <code>number</code>
+* [objectType](#objectType) → <code>Object</code>
+* [nullableArrayTypeParam(one)](#nullableArrayTypeParam)
 * [globalVar](#globalVar) → <code>string</code>
 
 
@@ -284,7 +292,7 @@ A module. Refer to it using [this link](#module_linkMod).
 
 <a name="external_Math"></a>
 ###external: linkMod~Math
-The built in Math object. Refer to it with [Math](http://www.math.com).
+The built in Math object. Refer to it with [Math](#external_Math).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 **See**
@@ -293,7 +301,7 @@ The built in Math object. Refer to it with [Math](http://www.math.com).
 
 <a name="external_Date"></a>
 ###external: linkMod~Date
-The built in Date object, it has no see tag. Refer to it with [Date](external:Date).
+The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod.event_MyEvent"></a>
@@ -302,12 +310,12 @@ An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
 ###class: linkMod~linksYeah
-**Extends:** <code>[Math](http://www.math.com)</code>  
+**Extends:** <code>[Math](#external_Math)</code>  
 **Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
-this is from [linkMod](#module_linkMod).. it also references [Math](http://www.math.com)
+this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
 
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias
@@ -409,11 +417,15 @@ var thisVar = funtion(){
 };
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest
-**Extends:** <code>[XMLHttpRequest](https://developer.mozilla.org/en/xmlhttprequest)</code>  
+**Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
+<a name="cliveExternal"></a>
+##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+<a name="stringExternal"></a>
+##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="fileVar"></a>
 ##fileVar
 a variable in the file
@@ -572,6 +584,22 @@ Both of these will link to the bar function.
 
 - [x] this one is done
 - [x] finished
+
+<a name="returnsArrayOfType"></a>
+##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+<a name="returnsArrayOfType2"></a>
+##returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+<a name="nullableNumber"></a>
+##nullableNumber ⇒ <code>number</code>
+<a name="nonNullableNumber"></a>
+##nonNullableNumber ⇒ <code>number</code>
+<a name="objectType"></a>
+##objectType → <code>Object</code>
+<a name="nullableArrayTypeParam"></a>
+##nullableArrayTypeParam(one)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
 
 <a name="globalVar"></a>
 ##globalVar → <code>string</code>
