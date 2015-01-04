@@ -25,9 +25,18 @@
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
+{{#children inherited=undefined _overrides=".*" ~}}
+{{~indexDepthIncrement~}}
+{{#if @first}}{{>index-indent}}* _overridden from_
+{{indexDepthIncrement}}{{/if~}}
+{{>index2~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
+{{/children~}}
+
 {{#children inherited=true~}}
 {{~indexDepthIncrement~}}
-{{#if @first}}{{>index-indent}}* _inherited from _
+{{#if @first}}{{>index-indent}}* _inherited from_
 {{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
 {{~indexDepthDecrement~}}

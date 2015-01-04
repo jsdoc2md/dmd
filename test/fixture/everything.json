@@ -519,7 +519,7 @@
     "scope": "instance",
     "kind": "function",
     "overrides": "GlobalClass#methodTwo",
-    "description": "child method two",
+    "description": "overridden child methodTwo",
     "memberof": "GlobalChildClass",
     "codeName": "GlobalChildClass.prototype.methodTwo"
   },
