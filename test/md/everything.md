@@ -19,18 +19,11 @@
     * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
-  * _overridden from_
-    * [new GlobalClass(one, two)](#new_GlobalClass_new)
-    * [.propOne](#GlobalClass#propOne)
-    * [.propTwo](#GlobalClass.propTwo)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
 * [class: GlobalChildClass](#GlobalChildClass)
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _overridden from_
-    * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _inherited from_
     * [.propOne](#GlobalChildClass#propOne)
@@ -38,8 +31,6 @@
 * [customTagged](#customTagged)
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
-  * _overridden from_
-    * [new customClass()](#new_customClass_new)
 * [customFunction()](#customFunction)
 * [defaultedOne](#defaultedOne) → <code>object</code>
 * [defaultedTwo](#defaultedTwo) → <code>function</code>
@@ -47,8 +38,6 @@
 * [exampleVar](#exampleVar) → <code>string</code>
 * [class: EncryptedRequest](#EncryptedRequest)
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
-  * _overridden from_
-    * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [cliveExternal](#cliveExternal) → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 * [stringExternal](#stringExternal) → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 * [fileVar](#fileVar)
@@ -61,12 +50,8 @@
 * [class: LendsClass](#LendsClass)
   * _static_
     * [.say()](#LendsClass.say)
-  * _overridden from_
-    * [.say()](#LendsClass.say)
 * [class: LendsClass2](#LendsClass2)
   * _instance_
-    * [.say()](#LendsClass2#say)
-  * _overridden from_
     * [.say()](#LendsClass2#say)
 * [EventfulClass()](#EventfulClass)
 * [mixin: Eventful](#Eventful)
@@ -105,18 +90,9 @@ exports animals
   * [class: ~Animal](#module_cjs/animals..Animal)
     * _instance_
       * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _overridden from_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-        * _overridden from_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
     * _inner_
       * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
         * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-        * _overridden from_
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
@@ -134,18 +110,9 @@ the exported dog
 * [class: ~Animal](#module_cjs/animals..Animal)
   * _instance_
     * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-  * _overridden from_
-    * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-      * _instance_
-        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-      * _overridden from_
-        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-    * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
   * _inner_
     * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
       * _instance_
-        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-      * _overridden from_
         * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal..Quadroped"></a>
@@ -171,11 +138,6 @@ exports a class
       * [.prop](#module_cjs/class--ExportedClass#prop)
     * _static_
       * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-    * _overridden from_
-      * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
-      * [.prop](#module_cjs/class--ExportedClass#prop)
-      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
     * _inner_
       * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
@@ -250,23 +212,9 @@ exports a class
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
       * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
-    * _overridden from_
-      * [new Human()](#new_module_cjs/human--Human_new)
-      * [class: ~Organ](#module_cjs/human--Human..Organ)
-        * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _overridden from_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _inner_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
-      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _overridden from_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
           * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
@@ -287,9 +235,6 @@ a class inside a class
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
-    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-  * _overridden from_
-    * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
     * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
@@ -318,8 +263,6 @@ A module. Refer to it using [this link](#module_linkMod).
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * [class: ~linksYeah](#module_linkMod..linksYeah)
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
-    * _overridden from_
-      * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 
 <a name="external_Math"></a>
 ###external: linkMod~Math
@@ -388,12 +331,6 @@ a global class
     * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
-  * _overridden from_
-    * [new GlobalClass(one, two)](#new_GlobalClass_new)
-    * [.propOne](#GlobalClass#propOne)
-    * [.propTwo](#GlobalClass.propTwo)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
 
 <a name="new_GlobalClass_new"></a>
 ###new GlobalClass(one, two)
@@ -431,7 +368,6 @@ the child of global class
     * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _overridden from_
-    * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _inherited from_
     * [.propOne](#GlobalChildClass#propOne)
