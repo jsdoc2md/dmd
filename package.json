@@ -46,7 +46,7 @@
     "t4": "cat test/fixture/everything.json | dmd --template test/template/modules.hbs > test/md/modules.md",
     "p": "npm run p1 && npm run p2 && npm run p3 && npm run p4 && npm run p5 && npm run p7 && npm run p8;echo",
     "m": "npm run m1 && npm run m2 && npm run m3 && npm run m4 && npm run m5 && npm run m7 && npm run m8 && echo",
-    "t": "npm run t1 && npm run t2 && npm run t3 && npm run t4 && ",
+    "t": "npm run t1 && npm run t2 && npm run t3 && npm run t4",
     "all": "npm run p && npm run m && npm run t; "
   },
   "dependencies": {

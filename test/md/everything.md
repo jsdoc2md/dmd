@@ -19,13 +19,14 @@
     * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
-* [class: GlobalChildClass](#GlobalChildClass)
+* [class: GlobalChildClass](#GlobalChildClass) ← GlobalClass
+
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _overridden from_
+  * _overrides_
     * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _inherited from_
+  * _inherits_
     * [.propOne](#GlobalChildClass#propOne)
     * [.methodOne()](#GlobalChildClass#methodOne)
 * [customTagged](#customTagged)
@@ -36,7 +37,8 @@
 * [defaultedTwo](#defaultedTwo) → <code>function</code>
 * ["docletEvent"](#event_docletEvent)
 * [exampleVar](#exampleVar) → <code>string</code>
-* [class: EncryptedRequest](#EncryptedRequest)
+* [class: EncryptedRequest](#EncryptedRequest) ← external:XMLHttpRequest
+
   * [new EncryptedRequest()](#new_EncryptedRequest_new)
 * [cliveExternal](#cliveExternal) → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 * [stringExternal](#stringExternal) → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
@@ -53,7 +55,10 @@
 * [class: LendsClass2](#LendsClass2)
   * _instance_
     * [.say()](#LendsClass2#say)
-* [EventfulClass()](#EventfulClass)
+* [class: EventfulClass](#EventfulClass)
+  * _instance_
+    * [.on(eventName, handler)](#EventfulClass#on)
+    * [.fire(eventName, eventData)](#EventfulClass#fire)
 * [mixin: Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
@@ -261,7 +266,8 @@ A module. Refer to it using [this link](#module_linkMod).
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah)
+  * [class: ~linksYeah](#module_linkMod..linksYeah) ← external:Math
+
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 
 <a name="external_Math"></a>
@@ -283,7 +289,8 @@ The built in Date object, it has no see tag. Refer to it with [Date](#external_D
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah
+###class: linkMod~linksYeah ← external:Math
+
 **Extends:** <code>[Math](#external_Math)</code>  
 **Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
@@ -358,18 +365,20 @@ parent method one
 parent method two
 
 <a name="GlobalChildClass"></a>
-##class: GlobalChildClass
+##class: GlobalChildClass ← GlobalClass
+
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
-* [class: GlobalChildClass](#GlobalChildClass)
+* [class: GlobalChildClass](#GlobalChildClass) ← GlobalClass
+
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _overridden from_
+  * _overrides_
     * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _inherited from_
+  * _inherits_
     * [.propOne](#GlobalChildClass#propOne)
     * [.methodOne()](#GlobalChildClass#methodOne)
 
@@ -431,7 +440,8 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="EncryptedRequest"></a>
-##class: EncryptedRequest
+##class: EncryptedRequest ← external:XMLHttpRequest
+
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
@@ -484,8 +494,36 @@ say something
 say something
 
 <a name="EventfulClass"></a>
-##EventfulClass()
+##class: EventfulClass
+a class which mixes in Eventful behaviour
+
 **Mixes**: Eventful
+
+* [class: EventfulClass](#EventfulClass)
+  * _instance_
+    * [.on(eventName, handler)](#EventfulClass#on)
+    * [.fire(eventName, eventData)](#EventfulClass#fire)
+
+<a name="EventfulClass#on"></a>
+###eventfulClass.on(eventName, handler)
+Register a handler function to be called whenever this event is fired.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| handler | <code>function</code> | The handler to call. |
+
+**Mixes**: Eventful.on
+<a name="EventfulClass#fire"></a>
+###eventfulClass.fire(eventName, eventData)
+Fire an event, causing all handlers for that event name to run.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| eventData | <code>Object</code> | The data provided to each handler. |
+
+**Mixes**: Eventful.fire
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to

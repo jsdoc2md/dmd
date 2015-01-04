@@ -883,11 +883,11 @@
     "longname": "EventfulClass",
     "name": "EventfulClass",
     "scope": "global",
-    "kind": "function",
-    "classdesc": "a class which mixes in Eventful behaviour",
+    "kind": "class",
     "mixes": [
       "Eventful"
     ],
+    "description": "a class which mixes in Eventful behaviour",
     "codeName": "EventfulClass"
   },
   {
@@ -1356,5 +1356,73 @@
     "description": "parent method one",
     "memberof": "GlobalChildClass",
     "codeName": "GlobalClass.prototype.methodOne"
+  },
+  {
+    "id": "EventfulClass#on",
+    "longname": "EventfulClass#on",
+    "name": "on",
+    "scope": "instance",
+    "kind": "function",
+    "mixes": [
+      "Eventful.on"
+    ],
+    "description": "Register a handler function to be called whenever this event is fired.",
+    "memberof": "EventfulClass",
+    "mixed": true,
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of the event.",
+        "name": "eventName"
+      },
+      {
+        "type": {
+          "names": [
+            "function"
+          ]
+        },
+        "description": "The handler to call.",
+        "name": "handler"
+      }
+    ],
+    "codeName": "on"
+  },
+  {
+    "id": "EventfulClass#fire",
+    "longname": "EventfulClass#fire",
+    "name": "fire",
+    "scope": "instance",
+    "kind": "function",
+    "mixes": [
+      "Eventful.fire"
+    ],
+    "description": "Fire an event, causing all handlers for that event name to run.",
+    "memberof": "EventfulClass",
+    "mixed": true,
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "description": "Name of the event.",
+        "name": "eventName"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The data provided to each handler.",
+        "name": "eventData"
+      }
+    ],
+    "codeName": "fire"
   }
 ]

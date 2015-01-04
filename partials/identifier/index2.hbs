@@ -27,7 +27,7 @@
 
 {{#children inherited=undefined _overrides=".+" ~}}
 {{~indexDepthIncrement~}}
-{{#if @first}}{{>index-indent}}* _overridden from_
+{{#if @first}}{{>index-indent}}* _overrides_
 {{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
 {{~indexDepthDecrement~}}
@@ -36,7 +36,7 @@
 
 {{#children inherited=true~}}
 {{~indexDepthIncrement~}}
-{{#if @first}}{{>index-indent}}* _inherited from_
+{{#if @first}}{{>index-indent}}* _inherits_
 {{indexDepthIncrement}}{{/if~}}
 {{>index2~}}
 {{~indexDepthDecrement~}}

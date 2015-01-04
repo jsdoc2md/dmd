@@ -4,12 +4,13 @@
 ##class: GlobalClass
 a global class
 
-**Extends:** <code>String</code>  
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
     * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
+    * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
 
@@ -29,4 +30,12 @@ an instance property
 <a name="GlobalClass.propTwo"></a>
 ###GlobalClass.propTwo
 a static property
+
+<a name="GlobalClass#methodOne"></a>
+###globalClass.methodOne()
+parent method one
+
+<a name="GlobalClass#methodTwo"></a>
+###globalClass.methodTwo()
+parent method two
 
