@@ -28,9 +28,9 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
       * [`.halt()`](#module_MapView--MapView#halt)
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
     * _static_
-      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-        * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) → <code>Number</code>
-        * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) → <code>Number</code>
+      * [`enum: .MapType`](#module_MapView--MapView.MapType) : <code>Number</code>
+        * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) : <code>Number</code>
+        * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) : <code>Number</code>
       * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
     * _inner_
       * [`external: ~LatLng`](#external_LatLng)
@@ -38,7 +38,7 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
 <a name="exp_module_MapView--MapView"></a>
 ###class: MapView ⏏
 <a name="module_MapView--MapView.MapType"></a>
-####`enum: MapView.MapType` → <code>Number</code>
+####`enum: MapView.MapType` : <code>Number</code>
 Map-type
 
 **Properties**
@@ -50,15 +50,15 @@ Map-type
 
 **Properties**: `GOOGLEMAPS`, `LEAFLET`  
 
-* [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-  * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) → <code>Number</code>
-  * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) → <code>Number</code>
+* [`enum: .MapType`](#module_MapView--MapView.MapType) : <code>Number</code>
+  * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) : <code>Number</code>
+  * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) : <code>Number</code>
 
 <a name="module_MapView--MapView.MapType.GOOGLEMAPS"></a>
-#####`MapType.GOOGLEMAPS` → <code>Number</code>
+#####`MapType.GOOGLEMAPS` : <code>Number</code>
 **Default**: `1`  
 <a name="module_MapView--MapView.MapType.LEAFLET"></a>
-#####`MapType.LEAFLET` → <code>Number</code>
+#####`MapType.LEAFLET` : <code>Number</code>
 **Default**: `2`  
 <a name="new_module_MapView--MapView_new"></a>
 ####`new MapView(options)`

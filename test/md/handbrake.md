@@ -8,11 +8,11 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake) ← external:EventEmitter
+  * [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇦ external:EventEmitter
 
     * _instance_
-      * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
-      * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
+      * [.output](#module_handbrake-js..Handbrake#output) : <code>string</code>
+      * [.options](#module_handbrake-js..Handbrake#options) : <code>object</code>
     * _events_
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)
@@ -23,10 +23,10 @@ var hbjs = require("handbrake-js");
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
   * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
   * [.exec(options, [onComplete])](#module_handbrake-js.exec)
-  * [.cliOptions](#module_handbrake-js.cliOptions) → <code>array</code>
+  * [.cliOptions](#module_handbrake-js.cliOptions) : <code>array</code>
 
 <a name="module_handbrake-js..Handbrake"></a>
-###class: hbjs~Handbrake ← external:EventEmitter
+###class: hbjs~Handbrake ⇦ external:EventEmitter
 
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
@@ -34,11 +34,11 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
 **Scope**: inner class of <code>[handbrake-js](#module_handbrake-js)</code>  
 **Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>
 
-* [class: ~Handbrake](#module_handbrake-js..Handbrake) ← external:EventEmitter
+* [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇦ external:EventEmitter
 
   * _instance_
-    * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
-    * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
+    * [.output](#module_handbrake-js..Handbrake#output) : <code>string</code>
+    * [.options](#module_handbrake-js..Handbrake#options) : <code>object</code>
   * _events_
     * ["start"](#module_handbrake-js..Handbrake#event_start)
     * ["begin"](#module_handbrake-js..Handbrake#event_begin)
@@ -49,11 +49,11 @@ A thin wrapper on the handbrakeCLI child_process handle. An instance of this cla
     * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js..Handbrake#output"></a>
-####handbrake.output → <code>string</code>
+####handbrake.output : <code>string</code>
 A `String` containing all handbrakeCLI output
 
 <a name="module_handbrake-js..Handbrake#options"></a>
-####handbrake.options → <code>object</code>
+####handbrake.options : <code>object</code>
 the options HandbrakeCLI was spawned with
 
 <a name="module_handbrake-js..Handbrake#event_start"></a>
@@ -137,6 +137,6 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
 });
 ```
 <a name="module_handbrake-js.cliOptions"></a>
-###hbjs.cliOptions → <code>array</code>
+###hbjs.cliOptions : <code>array</code>
 [Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.
 
