@@ -419,9 +419,6 @@
     "name": "GlobalClass",
     "scope": "global",
     "kind": "class",
-    "augments": [
-      "String"
-    ],
     "description": "a global class",
     "codeName": "GlobalClass"
   },
@@ -472,6 +469,59 @@
     "description": "a static property",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.propTwo"
+  },
+  {
+    "id": "GlobalClass#methodOne",
+    "longname": "GlobalClass#methodOne",
+    "name": "methodOne",
+    "scope": "instance",
+    "kind": "function",
+    "description": "parent method one",
+    "memberof": "GlobalClass",
+    "codeName": "GlobalClass.prototype.methodOne"
+  },
+  {
+    "id": "GlobalClass#methodTwo",
+    "longname": "GlobalClass#methodTwo",
+    "name": "methodTwo",
+    "scope": "instance",
+    "kind": "function",
+    "description": "parent method two",
+    "memberof": "GlobalClass",
+    "codeName": "GlobalClass.prototype.methodTwo"
+  },
+  {
+    "id": "GlobalChildClass",
+    "longname": "GlobalChildClass",
+    "name": "GlobalChildClass",
+    "scope": "global",
+    "kind": "class",
+    "augments": [
+      "GlobalClass"
+    ],
+    "description": "the child of global class",
+    "codeName": "GlobalChildClass"
+  },
+  {
+    "id": "GlobalChildClass#propThree",
+    "longname": "GlobalChildClass#propThree",
+    "name": "propThree",
+    "scope": "instance",
+    "kind": "member",
+    "description": "an instance property",
+    "memberof": "GlobalChildClass",
+    "codeName": "this.propThree"
+  },
+  {
+    "id": "GlobalChildClass#methodTwo",
+    "longname": "GlobalChildClass#methodTwo",
+    "name": "methodTwo",
+    "scope": "instance",
+    "kind": "function",
+    "overrides": "GlobalClass#methodTwo",
+    "description": "child method two",
+    "memberof": "GlobalChildClass",
+    "codeName": "GlobalChildClass.prototype.methodTwo"
   },
   {
     "id": "customTagged",
@@ -1280,5 +1330,31 @@
     },
     "defaultvalue": "\"something\"",
     "codeName": "globalVar"
+  },
+  {
+    "id": "GlobalChildClass#propOne",
+    "longname": "GlobalChildClass#propOne",
+    "name": "propOne",
+    "scope": "instance",
+    "kind": "member",
+    "inherits": "GlobalClass#propOne",
+    "inherited": true,
+    "overrides": "GlobalClass#propOne",
+    "description": "an instance property",
+    "memberof": "GlobalChildClass",
+    "codeName": "this.propOne"
+  },
+  {
+    "id": "GlobalChildClass#methodOne",
+    "longname": "GlobalChildClass#methodOne",
+    "name": "methodOne",
+    "scope": "instance",
+    "kind": "function",
+    "inherits": "GlobalClass#methodOne",
+    "inherited": true,
+    "overrides": "GlobalClass#methodOne",
+    "description": "parent method one",
+    "memberof": "GlobalChildClass",
+    "codeName": "GlobalClass.prototype.methodOne"
   }
 ]

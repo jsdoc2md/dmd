@@ -1,8 +1,11 @@
 {{#if (showMainIndex)~}}
+{{>heading-indent}}Summary
 {{#modules~}}
-{{#if @first~}}{{>heading-indent}}Modules
+{{#if @first~}}
+| Module | Description |
+| ------ | ----------- |
 {{/if~}}
-{{>index2~}}
+| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{description}}} |
 {{/modules}}
 {{#globals~}}
 {{#if @first~}}{{>heading-indent}}Global

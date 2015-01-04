@@ -6,7 +6,7 @@
 ***preview release, not much documentation.. new version and docs coming soon***
 
 #dmd
-A transform stream transforming doclet json input in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source) into markdown documentation. The default template is inspired by the node documentation. See here for an example. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
+dmd (Document with Markdown) exposes a Transform stream class which, when fed [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data, outputs documentation in markdown format. The data at input is fed into the main template and rendered by handlebars. 
 
 ##Customise
 No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.

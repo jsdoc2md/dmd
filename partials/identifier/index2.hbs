@@ -1,13 +1,13 @@
 {{>index-indent}}* {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}
 {{#if (isClass)~}}
 
-{{#children scope=undefined~}}
+{{#children scope=undefined inherited=undefined~}}
 {{~indexDepthIncrement~}}
 {{>index2~}}
 {{~indexDepthDecrement~}}
 {{/children~}}
 
-{{#children scope="instance" -kind="event" ~}}
+{{#children scope="instance" -kind="event" inherited=undefined~}}
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _instance_
 {{indexDepthIncrement}}{{/if~}}
@@ -16,7 +16,7 @@
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
-{{#children scope="static"~}}
+{{#children scope="static" inherited=undefined~}}
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _static_
 {{indexDepthIncrement}}{{/if~}}
@@ -25,7 +25,16 @@
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
-{{#children scope="inner"~}}
+{{#children inherited=true~}}
+{{~indexDepthIncrement~}}
+{{#if @first}}{{>index-indent}}* _inherited from _
+{{indexDepthIncrement}}{{/if~}}
+{{>index2~}}
+{{~indexDepthDecrement~}}
+{{#if @last}}{{indexDepthDecrement}}{{/if~}}
+{{/children~}}
+
+{{#children scope="inner" inherited=undefined~}}
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _inner_
 {{indexDepthIncrement}}{{/if~}}
@@ -34,7 +43,7 @@
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
 
-{{#children kind="event"~}}
+{{#children kind="event" inherited=undefined~}}
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _events_
 {{indexDepthIncrement}}{{/if~}}

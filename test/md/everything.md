@@ -1,59 +1,31 @@
-##Modules
-* [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
-  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-* [cjs/class](#module_cjs/class)
-  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
-    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
-    * _instance_
-      * [.prop](#module_cjs/class--ExportedClass#prop)
-    * _static_
-      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-    * _inner_
-      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
-* [cjs/falias-obj](#module_cjs/falias-obj)
-  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
-    * [.extra()](#module_cjs/falias-obj--sum.extra)
-* [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
-    * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
-* [cjs/human](#module_cjs/human)
-  * [class: Human](#exp_module_cjs/human--Human) ⏏
-    * [new Human()](#new_module_cjs/human--Human_new)
-    * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
-    * _inner_
-      * [class: ~Organ](#module_cjs/human--Human..Organ)
-        * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _inner_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
-* [linkMod](#module_linkMod)
-  * [external: ~Math](#external_Math)
-  * [external: ~Date](#external_Date)
-  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah)
-    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
-* [cjs/object-alias](#module_cjs/object-alias)
-  * [teams](#exp_module_cjs/object-alias--teams) ⏏
-* [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) → <code>number</code>
-  * [.two()](#module_cjs/object.two)
+##Summary
+| Module | Description |
+| ------ | ----------- |
+| [cjs/animals](#module_cjs/animals) | exports animals |
+| [cjs/class](#module_cjs/class) | exports a class |
+| [cjs/falias-obj](#module_cjs/falias-obj) | exports a pointer to a function |
+| [cjs/function-alias](#module_cjs/function-alias) | exports a pointer to a function |
+| [cjs/human](#module_cjs/human) | exports a class |
+| [linkMod](#module_linkMod) | A module. Refer to it using {@link module:linkMod|this link}. |
+| [cjs/object-alias](#module_cjs/object-alias) | a module exporting an object |
+| [cjs/object](#module_cjs/object) | a module exporting `exports` directly |
 
 ##Global
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
     * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
+    * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
+* [class: GlobalChildClass](#GlobalChildClass)
+  * _instance_
+    * [.propThree](#GlobalChildClass#propThree)
+    * [.methodTwo()](#GlobalChildClass#methodTwo)
+  * _inherited from _
+    * [.propOne](#GlobalChildClass#propOne)
+    * [.methodOne()](#GlobalChildClass#methodOne)
 * [customTagged](#customTagged)
 * [class: customClass](#customClass)
   * [new customClass()](#new_customClass_new)
@@ -348,12 +320,13 @@ this is the example
 ##class: GlobalClass
 a global class
 
-**Extends:** <code>String</code>  
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
     * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
+    * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
 
@@ -373,6 +346,44 @@ an instance property
 <a name="GlobalClass.propTwo"></a>
 ###GlobalClass.propTwo
 a static property
+
+<a name="GlobalClass#methodOne"></a>
+###globalClass.methodOne()
+parent method one
+
+<a name="GlobalClass#methodTwo"></a>
+###globalClass.methodTwo()
+parent method two
+
+<a name="GlobalChildClass"></a>
+##class: GlobalChildClass
+the child of global class
+
+**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
+
+* [class: GlobalChildClass](#GlobalChildClass)
+  * _instance_
+    * [.propThree](#GlobalChildClass#propThree)
+    * [.methodTwo()](#GlobalChildClass#methodTwo)
+  * _inherited from _
+    * [.propOne](#GlobalChildClass#propOne)
+    * [.methodOne()](#GlobalChildClass#methodOne)
+
+<a name="GlobalChildClass#propThree"></a>
+###globalChildClass.propThree
+an instance property
+
+<a name="GlobalChildClass#methodTwo"></a>
+###globalChildClass.methodTwo()
+child method two
+
+<a name="GlobalChildClass#propOne"></a>
+###globalChildClass.propOne
+an instance property
+
+<a name="GlobalChildClass#methodOne"></a>
+###globalChildClass.methodOne()
+parent method one
 
 <a name="customTagged"></a>
 ##customTagged
