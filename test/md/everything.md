@@ -13,7 +13,7 @@
 | Global | Description |
 | ------ | ----------- |
 | [class: GlobalClass](#GlobalClass) | a global class |
-| [class: GlobalChildClass](#GlobalChildClass) ⇐ GlobalClass | the child of global class |
+| [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code> | the child of global class |
 | [customTagged](#customTagged) | a global var with custom tags |
 | [class: customClass](#customClass) | a class that has custom tags |
 | [customFunction()](#customFunction) | a global function with custom tags |
@@ -21,7 +21,7 @@
 | [defaultedTwo](#defaultedTwo) → <code>function</code> |  |
 | ["docletEvent"](#event_docletEvent) | an event defined in a doclet |
 | [exampleVar](#exampleVar) → <code>string</code> | an example var |
-| [class: EncryptedRequest](#EncryptedRequest) ⇐ external:XMLHttpRequest |  |
+| [class: EncryptedRequest](#EncryptedRequest) ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code> |  |
 | [cliveExternal](#cliveExternal) → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code> |  |
 | [stringExternal](#stringExternal) → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code> |  |
 | [fileVar](#fileVar) | a variable in the file |
@@ -233,7 +233,7 @@ A module. Refer to it using [this link](#module_linkMod).
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ external:Math
+  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 
 <a name="external_Math"></a>
@@ -253,7 +253,7 @@ The built in Date object, it has no see tag. Refer to it with [Date](#external_D
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah ⇐ external:Math
+###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
 **Extends:** <code>[Math](#external_Math)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
 <a name="new_module_linkMod..linksYeah_new"></a>
@@ -327,12 +327,12 @@ parent method one
 parent method two
 
 <a name="GlobalChildClass"></a>
-##class: GlobalChildClass ⇐ GlobalClass
+##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
-* [class: GlobalChildClass](#GlobalChildClass) ⇐ GlobalClass
+* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
   * _overrides_
@@ -391,7 +391,7 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="EncryptedRequest"></a>
-##class: EncryptedRequest ⇐ external:XMLHttpRequest
+##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()

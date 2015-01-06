@@ -8,6 +8,7 @@ exports.linkify = linkify;
 Escape special markdown characters
 */
 function escape(input){
+    if (typeof input !== "string") return null;
     return input.replace(/\*/g, "\\*");
 }
 
