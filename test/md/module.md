@@ -35,4 +35,3 @@ a static property for the exported class
 ####ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  

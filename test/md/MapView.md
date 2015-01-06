@@ -146,7 +146,6 @@ Is there at least one action pending completion?
 **Returns**: <code>Bool</code> - True when there are active transitions running.  
 <a name="external_LatLng"></a>
 ####`external: MapView~LatLng`
-**Scope**: inner external of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **See**
 
 - https://developers.google.com/maps/documentation/javascript/reference#LatLng

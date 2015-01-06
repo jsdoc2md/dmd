@@ -261,94 +261,76 @@ lodash.isFunction(lodash.sub);
 ####runInContext~Array
 Native constructor references.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..arrayProto"></a>
 ####runInContext~arrayProto
 Used for native method references.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..document"></a>
 ####runInContext~document
 Used to detect DOM support.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..fnToString"></a>
 ####runInContext~fnToString
 Used to resolve the decompiled source of functions.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..hasOwnProperty"></a>
 ####runInContext~hasOwnProperty
 Used to check objects for own properties.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..idCounter"></a>
 ####runInContext~idCounter
 Used to generate unique IDs.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..oldDash"></a>
 ####runInContext~oldDash
 Used to restore the original `_` reference in `_.noConflict`.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..toString"></a>
 ####runInContext~toString
 Used to resolve the internal `[[Class]]` of values.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..reNative"></a>
 ####runInContext~reNative
 Used to detect if a method is native.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..ArrayBuffer"></a>
 ####runInContext~ArrayBuffer
 Native method references.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..Float64Array"></a>
 ####runInContext~Float64Array
 Used to clone array buffers.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..NEGATIVE_INFINITY"></a>
 ####runInContext~NEGATIVE_INFINITY
 Used as references for `-Infinity` and `Infinity`.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..MAX_ARRAY_LENGTH"></a>
 ####runInContext~MAX_ARRAY_LENGTH
 Used as references for the maximum length and index of an array.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..FLOAT64_BYTES_PER_ELEMENT"></a>
 ####runInContext~FLOAT64_BYTES_PER_ELEMENT
 Used as the size, in bytes, of each `Float64Array` element.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..MAX_SAFE_INTEGER"></a>
 ####runInContext~MAX_SAFE_INTEGER
 Used as the maximum length of an array-like value.
 See the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)
 for more details.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..metaMap"></a>
 ####runInContext~metaMap
 Used to store function metadata.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..ctorByClass"></a>
 ####runInContext~ctorByClass
 Used to lookup a built-in constructor by `[[Class]]`.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="_.runInContext..nonEnumProps"></a>
 ####runInContext~nonEnumProps
 Used to avoid iterating over non-enumerable properties in IE < 9.
 
-**Scope**: inner member of <code>[runInContext](#_.runInContext)</code>  
 <a name="new___new"></a>
 ###new _(value)
 Creates a `lodash` object which wraps `value` to enable intuitive chaining.

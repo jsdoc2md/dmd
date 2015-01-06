@@ -10,7 +10,6 @@
 | [cjs/object-alias](#module_cjs/object-alias) | a module exporting an object |
 | [cjs/object](#module_cjs/object) | a module exporting `exports` directly |
 
-
 | Global | Description |
 | ------ | ----------- |
 | [class: GlobalClass](#GlobalClass) | a global class |
@@ -83,7 +82,6 @@ the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
 ###class: cjs/animals~Animal
-**Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
 
 * [class: ~Animal](#module_cjs/animals..Animal)
   * _instance_
@@ -95,7 +93,6 @@ the exported dog
 
 <a name="module_cjs/animals..Animal..Quadroped"></a>
 ####class: Animal~Quadroped
-**Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
 #####quadroped.legs
 leg count
@@ -139,7 +136,6 @@ a static property for the exported class
 ####ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/falias-obj"></a>
 ##cjs/falias-obj
 exports a pointer to a function
@@ -209,7 +205,6 @@ the exported contructor
 ####class: Human~Organ
 a class inside a class
 
-**Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
@@ -221,7 +216,6 @@ a class inside a class
 #####class: Organ~Cell
 a class inside a class inside a class
 
-**Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 #####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
@@ -246,7 +240,6 @@ A module. Refer to it using [this link](#module_linkMod).
 ###external: linkMod~Math
 The built in Math object. Refer to it with [Math](#external_Math).
 
-**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 **See**
 
 - http://www.math.com
@@ -255,7 +248,6 @@ The built in Math object. Refer to it with [Math](#external_Math).
 ###external: linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
 
-**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
@@ -263,7 +255,6 @@ An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 <a name="module_linkMod..linksYeah"></a>
 ###class: linkMod~linksYeah ⇐ external:Math
 **Extends:** <code>[Math](#external_Math)</code>  
-**Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
@@ -344,12 +335,11 @@ the child of global class
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ GlobalClass
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
-    * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _overrides_
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _inherits_
-    * [.propOne](#GlobalChildClass#propOne)
-    * [.methodOne()](#GlobalChildClass#methodOne)
+    * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
 ###globalChildClass.propThree
@@ -358,14 +348,6 @@ an instance property
 <a name="GlobalChildClass#methodTwo"></a>
 ###globalChildClass.methodTwo()
 overridden child methodTwo
-
-<a name="GlobalChildClass#propOne"></a>
-###globalChildClass.propOne
-an instance property
-
-<a name="GlobalChildClass#methodOne"></a>
-###globalChildClass.methodOne()
-parent method one
 
 <a name="customTagged"></a>
 ##customTagged
