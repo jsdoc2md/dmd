@@ -5,12 +5,14 @@
 | Module | Description |
 | ------ | ----------- |
 {{/if~}}
-| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{description}}} |
+| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{linkify description}}} |
 {{/modules}}
 {{#globals~}}
-{{#if @first~}}{{>heading-indent}}Global
+{{#if @first~}}
+| Global | Description |
+| ------ | ----------- |
 {{/if~}}
-{{>index2~}}
+| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{linkify description}}} |
 {{/globals}}
 {{#misc~}}
 {{#if @first~}}{{>heading-indent}}Misc

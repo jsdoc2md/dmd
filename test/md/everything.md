@@ -6,82 +6,55 @@
 | [cjs/falias-obj](#module_cjs/falias-obj) | exports a pointer to a function |
 | [cjs/function-alias](#module_cjs/function-alias) | exports a pointer to a function |
 | [cjs/human](#module_cjs/human) | exports a class |
-| [linkMod](#module_linkMod) | A module. Refer to it using {@link module:linkMod|this link}. |
+| [linkMod](#module_linkMod) | A module. Refer to it using [this link](#module_linkMod). |
 | [cjs/object-alias](#module_cjs/object-alias) | a module exporting an object |
 | [cjs/object](#module_cjs/object) | a module exporting `exports` directly |
 
-##Global
-* [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * _instance_
-    * [.propOne](#GlobalClass#propOne)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
-  * _static_
-    * [.propTwo](#GlobalClass.propTwo)
-* [class: GlobalChildClass](#GlobalChildClass) ⇦ GlobalClass
 
-  * _instance_
-    * [.propThree](#GlobalChildClass#propThree)
-    * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _overrides_
-    * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _inherits_
-    * [.propOne](#GlobalChildClass#propOne)
-    * [.methodOne()](#GlobalChildClass#methodOne)
-* [customTagged](#customTagged)
-* [class: customClass](#customClass)
-  * [new customClass()](#new_customClass_new)
-* [customFunction()](#customFunction)
-* [defaultedOne](#defaultedOne) : <code>object</code>
-* [defaultedTwo](#defaultedTwo) : <code>function</code>
-* ["docletEvent"](#event_docletEvent)
-* [exampleVar](#exampleVar) : <code>string</code>
-* [class: EncryptedRequest](#EncryptedRequest) ⇦ external:XMLHttpRequest
-
-  * [new EncryptedRequest()](#new_EncryptedRequest_new)
-* [cliveExternal](#cliveExternal) : <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-* [stringExternal](#stringExternal) : <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-* [fileVar](#fileVar)
-* [firesError()](#firesError)
-* [firesMany()](#firesMany)
-* [firesDefinedEvent()](#firesDefinedEvent)
-* [functionObj()](#functionObj)
-  * [.extra()](#functionObj.extra)
-* [globalFunction(one, two)](#globalFunction)
-* [class: LendsClass](#LendsClass)
-  * _static_
-    * [.say()](#LendsClass.say)
-* [class: LendsClass2](#LendsClass2)
-  * _instance_
-    * [.say()](#LendsClass2#say)
-* [class: EventfulClass](#EventfulClass)
-  * _instance_
-    * [.on(eventName, handler)](#EventfulClass#on)
-    * [.fire(eventName, eventData)](#EventfulClass#fire)
-* [mixin: Eventful](#Eventful)
-  * [.on(eventName, handler)](#Eventful.on)
-  * [.fire(eventName, eventData)](#Eventful.fire)
-* [mixin: phantom](#phantom)
-* [Documents](#Documents)
-  * [.Newspaper](#Documents.Newspaper)
-* [config](#config)
-* [globalFunction()](#globalFunction) ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
-* [returnsSomething()](#returnsSomething) ⇒ <code>string</code>
-* [seeableVar](#seeableVar)
-* [seefoo()](#seefoo)
-* [seebar()](#seebar)
-* [throwingFunction()](#throwingFunction)
-* [todoFunction1()](#todoFunction1)
-* [todoFunction2()](#todoFunction2)
-* [todoFunction3()](#todoFunction3)
-* [returnsArrayOfType](#returnsArrayOfType) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-* [returnsArrayOfType2](#returnsArrayOfType2) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-* [nullableNumber](#nullableNumber) ⇒ <code>number</code>
-* [nonNullableNumber](#nonNullableNumber) ⇒ <code>number</code>
-* [objectType](#objectType) : <code>Object</code>
-* [nullableArrayTypeParam(one)](#nullableArrayTypeParam)
-* [globalVar](#globalVar) : <code>string</code>
+| Global | Description |
+| ------ | ----------- |
+| [class: GlobalClass](#GlobalClass) | a global class |
+| [class: GlobalChildClass](#GlobalChildClass) ⇐ GlobalClass | the child of global class |
+| [customTagged](#customTagged) | a global var with custom tags |
+| [class: customClass](#customClass) | a class that has custom tags |
+| [customFunction()](#customFunction) | a global function with custom tags |
+| [defaultedOne](#defaultedOne) → <code>object</code> |  |
+| [defaultedTwo](#defaultedTwo) → <code>function</code> |  |
+| ["docletEvent"](#event_docletEvent) | an event defined in a doclet |
+| [exampleVar](#exampleVar) → <code>string</code> | an example var |
+| [class: EncryptedRequest](#EncryptedRequest) ⇐ external:XMLHttpRequest |  |
+| [cliveExternal](#cliveExternal) → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code> |  |
+| [stringExternal](#stringExternal) → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code> |  |
+| [fileVar](#fileVar) | a variable in the file |
+| [firesError()](#firesError) |  |
+| [firesMany()](#firesMany) |  |
+| [firesDefinedEvent()](#firesDefinedEvent) |  |
+| [functionObj()](#functionObj) | the function |
+| [globalFunction(one, two)](#globalFunction) | a global function |
+| [class: LendsClass](#LendsClass) |  |
+| [class: LendsClass2](#LendsClass2) |  |
+| [class: EventfulClass](#EventfulClass) | a class which mixes in Eventful behaviour |
+| [mixin: Eventful](#Eventful) | This provides methods used for event handling. It's not meant to
+be used directly. |
+| [mixin: phantom](#phantom) | phantom mixin |
+| [Documents](#Documents) |  |
+| [config](#config) |  |
+| [globalFunction()](#globalFunction) ⇒ <code>string</code> \| <code>object</code> \| <code>function</code> | a global function returning multiple stuff |
+| [returnsSomething()](#returnsSomething) ⇒ <code>string</code> | returns has no desc |
+| [seeableVar](#seeableVar) | a global var with a @see |
+| [seefoo()](#seefoo) | Both of these will link to the bar function. |
+| [seebar()](#seebar) |  |
+| [throwingFunction()](#throwingFunction) |  |
+| [todoFunction1()](#todoFunction1) |  |
+| [todoFunction2()](#todoFunction2) |  |
+| [todoFunction3()](#todoFunction3) |  |
+| [returnsArrayOfType](#returnsArrayOfType) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code> |  |
+| [returnsArrayOfType2](#returnsArrayOfType2) ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code> |  |
+| [nullableNumber](#nullableNumber) ⇒ <code>number</code> |  |
+| [nonNullableNumber](#nonNullableNumber) ⇒ <code>number</code> |  |
+| [objectType](#objectType) → <code>Object</code> |  |
+| [nullableArrayTypeParam(one)](#nullableArrayTypeParam) |  |
+| [globalVar](#globalVar) → <code>string</code> | a global var |
 
 
 <a name="module_cjs/animals"></a>
@@ -90,22 +63,22 @@ exports animals
 
 
 * [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) : <code>Animal</code>
-  * [.dog](#module_cjs/animals.dog) : <code>Animal</code>
+  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
+  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
   * [class: ~Animal](#module_cjs/animals..Animal)
     * _instance_
-      * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
+      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
     * _inner_
       * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
         * _instance_
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
-###cjs/animals.cat : <code>Animal</code>
+###cjs/animals.cat → <code>Animal</code>
 the exported cat
 
 <a name="module_cjs/animals.dog"></a>
-###cjs/animals.dog : <code>Animal</code>
+###cjs/animals.dog → <code>Animal</code>
 the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
@@ -114,7 +87,7 @@ the exported dog
 
 * [class: ~Animal](#module_cjs/animals..Animal)
   * _instance_
-    * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
+    * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
   * _inner_
     * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
       * _instance_
@@ -128,7 +101,7 @@ the exported dog
 leg count
 
 <a name="module_cjs/animals..Animal#type"></a>
-####animal.type : <code>Quadroped</code>
+####animal.type → <code>Quadroped</code>
 animal type
 
 <a name="module_cjs/class"></a>
@@ -216,11 +189,11 @@ exports a class
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) : <code>[Organ](#module_cjs/human--Human..Organ)</code>
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -240,7 +213,7 @@ a class inside a class
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
-    * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -250,11 +223,11 @@ a class inside a class inside a class
 
 **Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/human--Human..Organ#redCell"></a>
-#####organ.redCell : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
 <a name="module_cjs/human--Human#liver"></a>
-####human.liver : <code>[Organ](#module_cjs/human--Human..Organ)</code>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
 <a name="module_linkMod"></a>
@@ -266,8 +239,7 @@ A module. Refer to it using [this link](#module_linkMod).
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇦ external:Math
-
+  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ external:Math
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 
 <a name="external_Math"></a>
@@ -289,8 +261,7 @@ The built in Date object, it has no see tag. Refer to it with [Date](#external_D
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah ⇦ external:Math
-
+###class: linkMod~linksYeah ⇐ external:Math
 **Extends:** <code>[Math](#external_Math)</code>  
 **Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>
@@ -312,11 +283,11 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) : <code>number</code>
+  * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###obj.one : <code>number</code>
+###obj.one → <code>number</code>
 the first property
 
 <a name="module_cjs/object.two"></a>
@@ -365,14 +336,12 @@ parent method one
 parent method two
 
 <a name="GlobalChildClass"></a>
-##class: GlobalChildClass ⇦ GlobalClass
-
+##class: GlobalChildClass ⇐ GlobalClass
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
-* [class: GlobalChildClass](#GlobalChildClass) ⇦ GlobalClass
-
+* [class: GlobalChildClass](#GlobalChildClass) ⇐ GlobalClass
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
     * [.methodTwo()](#GlobalChildClass#methodTwo)
@@ -421,17 +390,17 @@ a global function with custom tags
 **sitcom**: Brass Eye  
 **character**: Noel Edmonds  
 <a name="defaultedOne"></a>
-##defaultedOne : <code>object</code>
+##defaultedOne → <code>object</code>
 **Default**: `{ one: 1, two: "yeah?" }`  
 <a name="defaultedTwo"></a>
-##defaultedTwo : <code>function</code>
+##defaultedTwo → <code>function</code>
 **Default**: `function f(n){ return something(n); }`  
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"
 an event defined in a doclet
 
 <a name="exampleVar"></a>
-##exampleVar : <code>string</code>
+##exampleVar → <code>string</code>
 an example var
 
 **Default**: `"something"`  
@@ -440,17 +409,16 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="EncryptedRequest"></a>
-##class: EncryptedRequest ⇦ external:XMLHttpRequest
-
+##class: EncryptedRequest ⇐ external:XMLHttpRequest
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
 <a name="cliveExternal"></a>
-##cliveExternal : <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="stringExternal"></a>
-##stringExternal : <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="fileVar"></a>
 ##fileVar
 a variable in the file
@@ -647,7 +615,7 @@ Both of these will link to the bar function.
 <a name="nonNullableNumber"></a>
 ##nonNullableNumber ⇒ <code>number</code>
 <a name="objectType"></a>
-##objectType : <code>Object</code>
+##objectType → <code>Object</code>
 <a name="nullableArrayTypeParam"></a>
 ##nullableArrayTypeParam(one)
 | Param | Type | Description |
@@ -655,7 +623,7 @@ Both of these will link to the bar function.
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
 
 <a name="globalVar"></a>
-##globalVar : <code>string</code>
+##globalVar → <code>string</code>
 a global var
 
 **Default**: `"something"`  

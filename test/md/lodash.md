@@ -24,18 +24,18 @@
       * [~metaMap](#_.runInContext..metaMap)
       * [~ctorByClass](#_.runInContext..ctorByClass)
       * [~nonEnumProps](#_.runInContext..nonEnumProps)
-    * [.support](#_.support) : <code>Object</code>
-      * [.support.argsClass](#_.support.support.argsClass) : <code>boolean</code>
-      * [.support.enumErrorProps](#_.support.support.enumErrorProps) : <code>boolean</code>
-      * [.support.enumPrototypes](#_.support.support.enumPrototypes) : <code>boolean</code>
-      * [.support.funcDecomp](#_.support.support.funcDecomp) : <code>boolean</code>
-      * [.support.funcNames](#_.support.support.funcNames) : <code>boolean</code>
-      * [.support.nodeClass](#_.support.support.nodeClass) : <code>boolean</code>
-      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) : <code>boolean</code>
-      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) : <code>boolean</code>
-      * [.support.ownLast](#_.support.support.ownLast) : <code>boolean</code>
-      * [.support.spliceObjects](#_.support.support.spliceObjects) : <code>boolean</code>
-      * [.support.unindexedChars](#_.support.support.unindexedChars) : <code>boolean</code>
+    * [.support](#_.support) → <code>Object</code>
+      * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+      * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+      * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+      * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+      * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+      * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+      * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
     * [.chunk(array, [size])](#_.chunk) ⇒ <code>Array</code>
     * [.compact(array)](#_.compact) ⇒ <code>Array</code>
     * [.difference(array, [...values])](#_.difference) ⇒ <code>Array</code>
@@ -432,35 +432,35 @@ _.isArray(squares.value());
 // => true
 ```
 <a name="_.support"></a>
-###_.support : <code>Object</code>
+###_.support → <code>Object</code>
 An object environment feature flags.
 
 
-* [.support](#_.support) : <code>Object</code>
-  * [.support.argsClass](#_.support.support.argsClass) : <code>boolean</code>
-  * [.support.enumErrorProps](#_.support.support.enumErrorProps) : <code>boolean</code>
-  * [.support.enumPrototypes](#_.support.support.enumPrototypes) : <code>boolean</code>
-  * [.support.funcDecomp](#_.support.support.funcDecomp) : <code>boolean</code>
-  * [.support.funcNames](#_.support.support.funcNames) : <code>boolean</code>
-  * [.support.nodeClass](#_.support.support.nodeClass) : <code>boolean</code>
-  * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) : <code>boolean</code>
-  * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) : <code>boolean</code>
-  * [.support.ownLast](#_.support.support.ownLast) : <code>boolean</code>
-  * [.support.spliceObjects](#_.support.support.spliceObjects) : <code>boolean</code>
-  * [.support.unindexedChars](#_.support.support.unindexedChars) : <code>boolean</code>
+* [.support](#_.support) → <code>Object</code>
+  * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+  * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+  * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+  * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+  * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+  * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+  * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+  * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+  * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
 
 <a name="_.support.support.argsClass"></a>
-####support.support.argsClass : <code>boolean</code>
+####support.support.argsClass → <code>boolean</code>
 Detect if the `[[Class]]` of `arguments` objects is resolvable
 (all but Firefox < 4, IE < 9).
 
 <a name="_.support.support.enumErrorProps"></a>
-####support.support.enumErrorProps : <code>boolean</code>
+####support.support.enumErrorProps → <code>boolean</code>
 Detect if `name` or `message` properties of `Error.prototype` are
 enumerable by default (IE < 9, Safari < 5.1).
 
 <a name="_.support.support.enumPrototypes"></a>
-####support.support.enumPrototypes : <code>boolean</code>
+####support.support.enumPrototypes → <code>boolean</code>
 Detect if `prototype` properties are enumerable by default.
 
 Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
@@ -469,26 +469,26 @@ incorrectly set the `[[Enumerable]]` value of a function's `prototype`
 property to `true`.
 
 <a name="_.support.support.funcDecomp"></a>
-####support.support.funcDecomp : <code>boolean</code>
+####support.support.funcDecomp → <code>boolean</code>
 Detect if functions can be decompiled by `Function#toString`
 (all but Firefox OS certified apps, older Opera mobile browsers, and
 the PlayStation 3; forced `false` for Windows 8 apps).
 
 <a name="_.support.support.funcNames"></a>
-####support.support.funcNames : <code>boolean</code>
+####support.support.funcNames → <code>boolean</code>
 Detect if `Function#name` is supported (all but IE).
 
 <a name="_.support.support.nodeClass"></a>
-####support.support.nodeClass : <code>boolean</code>
+####support.support.nodeClass → <code>boolean</code>
 Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
 
 <a name="_.support.support.nonEnumStrings"></a>
-####support.support.nonEnumStrings : <code>boolean</code>
+####support.support.nonEnumStrings → <code>boolean</code>
 Detect if string indexes are non-enumerable
 (IE < 9, RingoJS, Rhino, Narwhal).
 
 <a name="_.support.support.nonEnumShadows"></a>
-####support.support.nonEnumShadows : <code>boolean</code>
+####support.support.nonEnumShadows → <code>boolean</code>
 Detect if properties shadowing those on `Object.prototype` are
 non-enumerable.
 
@@ -496,11 +496,11 @@ In IE < 9 an object's own properties, shadowing non-enumerable ones,
 are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
 
 <a name="_.support.support.ownLast"></a>
-####support.support.ownLast : <code>boolean</code>
+####support.support.ownLast → <code>boolean</code>
 Detect if own properties are iterated after inherited properties (IE < 9).
 
 <a name="_.support.support.spliceObjects"></a>
-####support.support.spliceObjects : <code>boolean</code>
+####support.support.spliceObjects → <code>boolean</code>
 Detect if `Array#shift` and `Array#splice` augment array-like objects
 correctly.
 
@@ -511,7 +511,7 @@ The `shift()` method is buggy in compatibility modes of IE 8, while `splice()`
 is buggy regardless of mode in IE < 9.
 
 <a name="_.support.support.unindexedChars"></a>
-####support.support.unindexedChars : <code>boolean</code>
+####support.support.unindexedChars → <code>boolean</code>
 Detect lack of support for accessing string characters by index.
 
 IE < 8 can't access characters by index. IE 8 can only access characters
