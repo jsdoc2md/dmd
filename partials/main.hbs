@@ -1,19 +1,8 @@
 {{#if (showMainIndex)~}}
-{{>heading-indent}}Summary
-{{#modules~}}
-{{#if @first~}}
-| Module | Description |
-| ------ | ----------- |
-{{/if~}}
-| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{linkify description}}} |
-{{/modules}}
-{{#globals~}}
-{{#if @first~}}
-| Global | Description |
-| ------ | ----------- |
-{{/if~}}
-| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{linkify description}}} |
-{{/globals}}
+{{>heading-indent}}Modules
+{{>module-index-dl ~}}
+{{>heading-indent}}Globals
+{{>global-index-dl ~}}
 {{#misc~}}
 {{#if @first~}}{{>heading-indent}}Misc
 {{/if~}}
