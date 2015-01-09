@@ -1,107 +1,60 @@
 ##Modules
-<dl>
-<dt><a href="#module_cjs/animals">cjs/animals</a></dt>
-<dd>exports animals</dd>
-<dt><a href="#module_cjs/class">cjs/class</a></dt>
-<dd>exports a class</dd>
-<dt><a href="#module_cjs/falias-obj">cjs/falias-obj</a></dt>
-<dd>exports a pointer to a function</dd>
-<dt><a href="#module_cjs/function-alias">cjs/function-alias</a></dt>
-<dd>exports a pointer to a function</dd>
-<dt><a href="#module_cjs/human">cjs/human</a></dt>
-<dd>exports a class</dd>
-<dt><a href="#module_linkMod">linkMod</a></dt>
-<dd>A module. Refer to it using [this link](#module_linkMod).</dd>
-<dt><a href="#module_cjs/object-alias">cjs/object-alias</a></dt>
-<dd>a module exporting an object</dd>
-<dt><a href="#module_cjs/object">cjs/object</a></dt>
-<dd>a module exporting `exports` directly</dd>
-</dl>
+| Module | Description |
+| ------ | ----------- |
+| [cjs/animals](#module_cjs/animals) | exports animals |
+| [cjs/class](#module_cjs/class) | exports a class |
+| [cjs/falias-obj](#module_cjs/falias-obj) | exports a pointer to a function |
+| [cjs/function-alias](#module_cjs/function-alias) | exports a pointer to a function |
+| [cjs/human](#module_cjs/human) | exports a class |
+| [linkMod](#module_linkMod) | A module. Refer to it using [this link](#module_linkMod). |
+| [cjs/object-alias](#module_cjs/object-alias) | a module exporting an object |
+| [cjs/object](#module_cjs/object) | a module exporting `exports` directly |
+
 ##Globals
-<dl>
-<dt><a href="#GlobalClass">class: GlobalClass</a></dt>
-<dd>a global class</dd>
-<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
-<dd>the child of global class</dd>
-<dt><a href="#customTagged">customTagged</a></dt>
-<dd>a global var with custom tags</dd>
-<dt><a href="#customClass">class: customClass</a></dt>
-<dd>a class that has custom tags</dd>
-<dt><a href="#customFunction">customFunction()</a></dt>
-<dd>a global function with custom tags</dd>
-<dt><a href="#defaultedOne">defaultedOne</a> → <code>object</code></dt>
-<dd></dd>
-<dt><a href="#defaultedTwo">defaultedTwo</a> → <code>function</code></dt>
-<dd></dd>
-<dt><a href="#event_docletEvent">"docletEvent"</a></dt>
-<dd>an event defined in a doclet</dd>
-<dt><a href="#exampleVar">exampleVar</a> → <code>string</code></dt>
-<dd>an example var</dd>
-<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
-<dd></dd>
-<dt><a href="#cliveExternal">cliveExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code></dt>
-<dd></dd>
-<dt><a href="#stringExternal">stringExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
-<dd></dd>
-<dt><a href="#fileVar">fileVar</a></dt>
-<dd>a variable in the file</dd>
-<dt><a href="#firesError">firesError()</a></dt>
-<dd></dd>
-<dt><a href="#firesMany">firesMany()</a></dt>
-<dd></dd>
-<dt><a href="#firesDefinedEvent">firesDefinedEvent()</a></dt>
-<dd></dd>
-<dt><a href="#functionObj">functionObj()</a></dt>
-<dd>the function</dd>
-<dt><a href="#globalFunction">globalFunction(one, two)</a></dt>
-<dd>a global function</dd>
-<dt><a href="#LendsClass">class: LendsClass</a></dt>
-<dd></dd>
-<dt><a href="#LendsClass2">class: LendsClass2</a></dt>
-<dd></dd>
-<dt><a href="#EventfulClass">class: EventfulClass</a></dt>
-<dd>a class which mixes in Eventful behaviour</dd>
-<dt><a href="#Eventful">mixin: Eventful</a></dt>
-<dd>This provides methods used for event handling. It's not meant to be used directly.</dd>
-<dt><a href="#phantom">mixin: phantom</a></dt>
-<dd>phantom mixin</dd>
-<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
-<dd></dd>
-<dt><a href="#config">config</a> → <code>object</code></dt>
-<dd></dd>
-<dt><a href="#globalFunction">globalFunction()</a> ⇒ <code>string</code> | <code>object</code> | <code>function</code></dt>
-<dd>a global function returning multiple stuff</dd>
-<dt><a href="#returnsSomething">returnsSomething()</a> ⇒ <code>string</code></dt>
-<dd>returns has no desc</dd>
-<dt><a href="#seeableVar">seeableVar</a></dt>
-<dd>a global var with a @see</dd>
-<dt><a href="#seefoo">seefoo()</a></dt>
-<dd>Both of these will link to the bar function.</dd>
-<dt><a href="#seebar">seebar()</a></dt>
-<dd></dd>
-<dt><a href="#throwingFunction">throwingFunction()</a></dt>
-<dd></dd>
-<dt><a href="#todoFunction1">todoFunction1()</a></dt>
-<dd></dd>
-<dt><a href="#todoFunction2">todoFunction2()</a></dt>
-<dd></dd>
-<dt><a href="#todoFunction3">todoFunction3()</a></dt>
-<dd></dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
-<dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
-<dd></dd>
-<dt><a href="#nullableNumber">nullableNumber</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#nonNullableNumber">nonNullableNumber</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#objectType">objectType</a> → <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#nullableArrayTypeParam">nullableArrayTypeParam(one)</a></dt>
-<dd></dd>
-<dt><a href="#globalVar">globalVar</a> → <code>string</code></dt>
-<dd>a global var</dd>
-</dl>
+| Global | Description |
+| ------ | ----------- |
+| [class: GlobalClass](#GlobalClass) | a global class |
+| [class: GlobalChildClass](#GlobalChildClass) ⇐ <code><a href="#GlobalClass">GlobalClass</a></code> | the child of global class |
+| [customTagged](#customTagged) | a global var with custom tags |
+| [class: customClass](#customClass) | a class that has custom tags |
+| [customFunction()](#customFunction) | a global function with custom tags |
+| [defaultedOne](#defaultedOne) → <code>object</code> |  |
+| [defaultedTwo](#defaultedTwo) → <code>function</code> |  |
+| ["docletEvent"](#event_docletEvent) | an event defined in a doclet |
+| [exampleVar](#exampleVar) → <code>string</code> | an example var |
+| [class: EncryptedRequest](#EncryptedRequest) ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code> |  |
+| [cliveExternal](#cliveExternal) → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code> |  |
+| [stringExternal](#stringExternal) → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code> |  |
+| [fileVar](#fileVar) | a variable in the file |
+| [firesError()](#firesError) |  |
+| [firesMany()](#firesMany) |  |
+| [firesDefinedEvent()](#firesDefinedEvent) |  |
+| [functionObj()](#functionObj) | the function |
+| [globalFunction(one, two)](#globalFunction) | a global function |
+| [class: LendsClass](#LendsClass) |  |
+| [class: LendsClass2](#LendsClass2) |  |
+| [class: EventfulClass](#EventfulClass) | a class which mixes in Eventful behaviour |
+| [mixin: Eventful](#Eventful) | This provides methods used for event handling. It's not meant to be used directly. |
+| [mixin: phantom](#phantom) | phantom mixin |
+| [Documents](#Documents) → <code>object</code> |  |
+| [config](#config) → <code>object</code> |  |
+| [globalFunction()](#globalFunction) ⇒ <code>string</code> \| <code>object</code> \| <code>function</code> | a global function returning multiple stuff |
+| [returnsSomething()](#returnsSomething) ⇒ <code>string</code> | returns has no desc |
+| [seeableVar](#seeableVar) | a global var with a @see |
+| [seefoo()](#seefoo) | Both of these will link to the bar function. |
+| [seebar()](#seebar) |  |
+| [throwingFunction()](#throwingFunction) |  |
+| [todoFunction1()](#todoFunction1) |  |
+| [todoFunction2()](#todoFunction2) |  |
+| [todoFunction3()](#todoFunction3) |  |
+| [returnsArrayOfType](#returnsArrayOfType) ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code> |  |
+| [returnsArrayOfType2](#returnsArrayOfType2) ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code> |  |
+| [nullableNumber](#nullableNumber) ⇒ <code>number</code> |  |
+| [nonNullableNumber](#nonNullableNumber) ⇒ <code>number</code> |  |
+| [objectType](#objectType) → <code>Object</code> |  |
+| [nullableArrayTypeParam(one)](#nullableArrayTypeParam) |  |
+| [globalVar](#globalVar) → <code>string</code> | a global var |
+
 <a name="module_cjs/animals"></a>
 ##cjs/animals
 exports animals
@@ -615,24 +568,24 @@ Both of these will link to the bar function.
 ##todoFunction1()
 **Todo**
 
-- [ ] Write the documentation.
-- [ ] Implement this function.
+- Write the documentation.
+- Implement this function.
 
 <a name="todoFunction2"></a>
 ##todoFunction2()
 **Todo**
 
-- [ ] Write the documentation.
-- [ ] Implement this function.
-- [x] this one is done
-- [x] finished
+- Write the documentation.
+- Implement this function.
+- this one is done ✓
+- finished ✓
 
 <a name="todoFunction3"></a>
 ##todoFunction3()
 **Todo**
 
-- [x] this one is done
-- [x] finished
+- this one is done ✓
+- finished ✓
 
 <a name="returnsArrayOfType"></a>
 ##returnsArrayOfType ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code>
