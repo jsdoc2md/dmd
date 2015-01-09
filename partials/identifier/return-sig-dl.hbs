@@ -1,0 +1,4 @@
+{{#if augments}} ⇐ {{#with augments.[0]}}{{>linked-type}}{{/with~}}
+{{else~}}
+{{#returnSig2}} {{symbol}} {{>linked-type-list types=types delimiter=" | " ~}}{{/returnSig2~}}
+{{/if}}
