@@ -1,13 +1,8 @@
 {{#if (showMainIndex)~}}
-{{>heading-indent}}Modules
-{{>module-index-dl ~}}
-{{>heading-indent}}Globals
+{{#if (optionEquals "module-index-format" "dl")}}{{>module-index-dl ~}}{{/if~}}
+{{#if (optionEquals "module-index-format" "list")}}{{>module-index-list ~}}{{/if~}}
+{{#if (optionEquals "module-index-format" "table")}}{{>module-index-table ~}}{{/if~}}
 {{>global-index-dl ~}}
-{{#misc~}}
-{{#if @first~}}{{>heading-indent}}Misc
-{{/if~}}
-{{>index2~}}
-{{/misc}}
 {{/if~}}
 
 {{#orphans~}}

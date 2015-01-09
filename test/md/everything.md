@@ -102,7 +102,6 @@
 <dt><a href="#globalVar">globalVar</a> → <code>string</code></dt>
 <dd>a global var</dd>
 </dl>
-
 <a name="module_cjs/animals"></a>
 ##cjs/animals
 exports animals
@@ -302,7 +301,7 @@ An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 <a name="module_linkMod..linksYeah"></a>
 ###class: linkMod~linksYeah ⇐ <code><a href="#external_Math">Math</a></code>
 **Extends:** <code><a href="#external_Math">Math</a></code>  
-**Emits**: <code><a href="#module_linkMod.event_MyEvent">event:MyEvent</a></code>
+**Emits**: <code><a href="#module_linkMod.event_MyEvent">event:MyEvent</a></code>  
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
 this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
@@ -454,13 +453,13 @@ a variable in the file
 
 <a name="firesError"></a>
 ##firesError()
-**Emits**: <code>event:error</code>
+**Emits**: <code>event:error</code>  
 <a name="firesMany"></a>
 ##firesMany()
-**Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>
+**Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
 <a name="firesDefinedEvent"></a>
 ##firesDefinedEvent()
-**Emits**: <code><a href="#event_docletEvent">docletEvent</a></code>
+**Emits**: <code><a href="#event_docletEvent">docletEvent</a></code>  
 <a name="functionObj"></a>
 ##functionObj()
 the function

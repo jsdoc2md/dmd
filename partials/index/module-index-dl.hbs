@@ -1,6 +1,9 @@
-<dl>
 {{#modules~}}
-<dt>{{#if deprecated}}~~{{/if}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}</dt>
+{{#if @first~}}{{>heading-indent}}Modules
+<dl>
+{{/if~}}
+<dt>{{#if deprecated}}~~{{/if}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}</dt>
 <dd>{{{stripNewlines (linkify description)}}}</dd>
+{{#if @last~}}</dl>
+{{/if~}}
 {{/modules~}}
-</dl>
