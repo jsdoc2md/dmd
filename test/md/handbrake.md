@@ -8,7 +8,7 @@ var hbjs = require("handbrake-js");
 ```
 
 * [handbrake-js](#module_handbrake-js)
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+  * [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>
     * _instance_
       * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
       * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
@@ -20,18 +20,18 @@ var hbjs = require("handbrake-js");
       * ["error" (error)](#module_handbrake-js..Handbrake#event_error)
       * ["end"](#module_handbrake-js..Handbrake#event_end)
       * ["complete"](#module_handbrake-js..Handbrake#event_complete)
-  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
+  * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code><a href="#module_handbrake-js..Handbrake">Handbrake</a></code>
   * [.exec(options, [onComplete])](#module_handbrake-js.exec)
   * [.cliOptions](#module_handbrake-js.cliOptions) → <code>array</code>
 
 <a name="module_handbrake-js..Handbrake"></a>
-###class: hbjs~Handbrake ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+###class: hbjs~Handbrake ⇐ <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
-**Extends:** <code>[EventEmitter](http://nodejs.org/api/events.html)</code>  
-**Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>
+**Extends:** <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>  
+**Emits**: <code><a href="#module_handbrake-js..Handbrake#event_start">start</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_begin">begin</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_progress">progress</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_output">output</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_error">error</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_end">end</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_complete">complete</a></code>
 
-* [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+* [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>
   * _instance_
     * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
     * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
@@ -99,7 +99,7 @@ Fired on successful completion of an encoding task. Always follows a `begin` eve
 Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..
 
 <a name="module_handbrake-js.spawn"></a>
-###hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
+###hbjs.spawn(options) ⇒ <code><a href="#module_handbrake-js..Handbrake">Handbrake</a></code>
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
 | Param | Type | Description |
