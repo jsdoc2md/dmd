@@ -213,7 +213,7 @@ Create a new pristine `lodash` function using the given `context` object.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[context=root\] | <code>Object</code> | The context object. |
+| \[context=<code>root</code>\] | <code>Object</code> | The context object. |
 
 **Returns**: <code>function</code> - Returns a new `lodash` function.  
 **Category**: Utility  
@@ -508,7 +508,7 @@ elements.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to process. |
-| \[size=1\] | <code>numer</code> | The length of each chunk. |
+| \[size=<code>1</code>\] | <code>numer</code> | The length of each chunk. |
 
 **Returns**: <code>Array</code> - Returns the new array containing chunks.  
 **Category**: Array  
@@ -566,7 +566,7 @@ Creates a slice of `array` with `n` elements dropped from the beginning.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to drop. |
+| \[n=<code>1</code>\] | <code>number</code> | The number of elements to drop. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
@@ -592,7 +592,7 @@ Creates a slice of `array` with `n` elements dropped from the end.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to drop. |
+| \[n=<code>1</code>\] | <code>number</code> | The number of elements to drop. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
@@ -627,7 +627,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
@@ -667,7 +667,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
@@ -706,7 +706,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
@@ -745,7 +745,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>number</code> - Returns the index of the found element, else `-1`.  
@@ -840,7 +840,7 @@ for more details.
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to search. |
 | value | <code>\*</code> | The value to search for. |
-| \[fromIndex=0\] | <code>boolean</code> \| <code>number</code> | The index to search from or `true`  to perform a binary search on a sorted array. |
+| \[fromIndex=<code>0</code>\] | <code>boolean</code> \| <code>number</code> | The index to search from or `true`  to perform a binary search on a sorted array. |
 
 **Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
 **Category**: Array  
@@ -917,7 +917,7 @@ This method is like `_.indexOf` except that it iterates over elements of
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to search. |
 | value | <code>\*</code> | The value to search for. |
-| \[fromIndex=array.length-1\] | <code>boolean</code> \| <code>number</code> | The index to search from  or `true` to perform a binary search on a sorted array. |
+| \[fromIndex=<code>array.length-1</code>\] | <code>boolean</code> \| <code>number</code> | The index to search from  or `true` to perform a binary search on a sorted array. |
 
 **Returns**: <code>number</code> - Returns the index of the matched value, else `-1`.  
 **Category**: Array  
@@ -1003,7 +1003,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to modify. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the new array of removed elements.  
@@ -1044,8 +1044,8 @@ lists in IE < 9 and to ensure dense arrays are returned.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to slice. |
-| \[start=0\] | <code>number</code> | The start position. |
-| \[end=array.length\] | <code>number</code> | The end position. |
+| \[start=<code>0</code>\] | <code>number</code> | The start position. |
+| \[end=<code>array.length</code>\] | <code>number</code> | The end position. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
@@ -1068,7 +1068,7 @@ else `false`.
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The sorted array to inspect. |
 | value | <code>\*</code> | The value to evaluate. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>number</code> - Returns the index at which `value` should be inserted
@@ -1104,7 +1104,7 @@ maintain its sort order.
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The sorted array to inspect. |
 | value | <code>\*</code> | The value to evaluate. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>number</code> - Returns the index at which `value` should be inserted
@@ -1122,7 +1122,7 @@ Creates a slice of `array` with `n` elements taken from the beginning.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to take. |
+| \[n=<code>1</code>\] | <code>number</code> | The number of elements to take. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
@@ -1148,7 +1148,7 @@ Creates a slice of `array` with `n` elements taken from the end.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[n=1\] | <code>number</code> | The number of elements to take. |
+| \[n=<code>1</code>\] | <code>number</code> | The number of elements to take. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
 **Category**: Array  
@@ -1183,7 +1183,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
@@ -1223,7 +1223,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | array | <code>Array</code> | The array to query. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per element. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the slice of `array`.  
@@ -1403,7 +1403,7 @@ or two arrays, one of property names and one of corresponding values.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | props | <code>Array</code> | The property names. |
-| \[values=[]\] | <code>Array</code> | The property values. |
+| \[values=<code>[]</code>\] | <code>Array</code> | The property values. |
 
 **Returns**: <code>Object</code> - Returns the new object.  
 **Category**: Array  
@@ -1585,7 +1585,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns the composed aggregate object.  
@@ -1617,7 +1617,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>boolean</code> - Returns `true` if all elements pass the predicate check,
@@ -1657,7 +1657,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the new filtered array.  
@@ -1696,7 +1696,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>\*</code> - Returns the matched element, else `undefined`.  
@@ -1728,7 +1728,7 @@ This method is like `_.find` except that it iterates over elements of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>\*</code> - Returns the matched element, else `undefined`.  
@@ -1778,7 +1778,7 @@ may be used for object iteration.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Array</code> \| <code>Object</code> \| <code>string</code> - Returns `collection`.  
@@ -1799,7 +1799,7 @@ This method is like `_.forEach` except that it iterates over elements of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Array</code> \| <code>Object</code> \| <code>string</code> - Returns `collection`.  
@@ -1827,7 +1827,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns the composed aggregate object.  
@@ -1862,7 +1862,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns the composed aggregate object.  
@@ -1922,7 +1922,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Array</code> - Returns the new mapped array.  
@@ -2047,7 +2047,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the array of grouped elements.  
@@ -2107,7 +2107,7 @@ This method is like `_.reduce` except that it iterates over elements of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[accumulator\] | <code>\*</code> | The initial value. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
@@ -2134,7 +2134,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>Array</code> - Returns the new filtered array.  
@@ -2233,7 +2233,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>boolean</code> - Returns `true` if any element passes the predicate check,
@@ -2275,7 +2275,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>Array</code> \| <code>function</code> \| <code>Object</code> \| <code>string</code> | The function  invoked per iteration. If a property name or an object is provided it is  used to create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>Array</code> \| <code>function</code> \| <code>Object</code> \| <code>string</code> | The function  invoked per iteration. If a property name or an object is provided it is  used to create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Array</code> - Returns the new sorted array.  
@@ -2410,7 +2410,7 @@ additional arguments.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | <code>function</code> | The function to cap arguments for. |
-| \[n=func.length\] | <code>number</code> | The arity cap. |
+| \[n=<code>func.length</code>\] | <code>number</code> | The arity cap. |
 
 **Returns**: <code>function</code> - Returns the new function.  
 **Category**: Function  
@@ -2564,7 +2564,7 @@ may be used as a placeholder for provided arguments.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | <code>function</code> | The function to curry. |
-| \[arity=func.length\] | <code>number</code> | The arity of `func`. |
+| \[arity=<code>func.length</code>\] | <code>number</code> | The arity of `func`. |
 
 **Returns**: <code>function</code> - Returns the new curried function.  
 **Category**: Function  
@@ -2603,7 +2603,7 @@ builds, may be used as a placeholder for provided arguments.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | func | <code>function</code> | The function to curry. |
-| \[arity=func.length\] | <code>number</code> | The arity of `func`. |
+| \[arity=<code>func.length</code>\] | <code>number</code> | The arity of `func`. |
 
 **Returns**: <code>function</code> - Returns the new curried function.  
 **Category**: Function  
@@ -2650,9 +2650,9 @@ for details over the differences between `_.debounce` and `_.throttle`.
 | func | <code>function</code> | The function to debounce. |
 | wait | <code>number</code> | The number of milliseconds to delay. |
 | \[options\] | <code>Object</code> | The options object. |
-| \[options.leading=false\] | <code>boolean</code> | Specify invoking on the leading  edge of the timeout. |
+| \[options.leading=<code>false</code>\] | <code>boolean</code> | Specify invoking on the leading  edge of the timeout. |
 | \[options.maxWait\] | <code>number</code> | The maximum time `func` is allowed to be  delayed before it is invoked. |
-| \[options.trailing=true\] | <code>boolean</code> | Specify invoking on the trailing  edge of the timeout. |
+| \[options.trailing=<code>true</code>\] | <code>boolean</code> | Specify invoking on the trailing  edge of the timeout. |
 
 **Returns**: <code>function</code> - Returns the new debounced function.  
 **Category**: Function  
@@ -2950,8 +2950,8 @@ for details over the differences between `_.throttle` and `_.debounce`.
 | func | <code>function</code> | The function to throttle. |
 | wait | <code>number</code> | The number of milliseconds to throttle invocations to. |
 | \[options\] | <code>Object</code> | The options object. |
-| \[options.leading=true\] | <code>boolean</code> | Specify invoking on the leading  edge of the timeout. |
-| \[options.trailing=true\] | <code>boolean</code> | Specify invoking on the trailing  edge of the timeout. |
+| \[options.leading=<code>true</code>\] | <code>boolean</code> | Specify invoking on the leading  edge of the timeout. |
+| \[options.trailing=<code>true</code>\] | <code>boolean</code> | Specify invoking on the trailing  edge of the timeout. |
 
 **Returns**: <code>function</code> - Returns the new throttled function.  
 **Category**: Function  
@@ -3647,7 +3647,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>string</code> \| <code>undefined</code> - Returns the key of the matched element, else `undefined`.  
@@ -3686,7 +3686,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to search. |
-| \[predicate=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[predicate=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
 
 **Returns**: <code>string</code> \| <code>undefined</code> - Returns the key of the matched element, else `undefined`.  
@@ -3720,7 +3720,7 @@ iteration early by explicitly returning `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns `object`.  
@@ -3747,7 +3747,7 @@ This method is like `_.forIn` except that it iterates over properties of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns `object`.  
@@ -3776,7 +3776,7 @@ early by explicitly returning `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns `object`.  
@@ -3796,7 +3796,7 @@ This method is like `_.forOwn` except that it iterates over properties of
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns `object`.  
@@ -3929,7 +3929,7 @@ else `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Object</code> - Returns the new mapped object.  
@@ -4108,7 +4108,7 @@ may exit iteration early by explicitly returning `false`.
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | object | <code>Array</code> \| <code>Object</code> | The object to iterate over. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[accumulator\] | <code>\*</code> | The custom accumulator value. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
@@ -4183,8 +4183,8 @@ number is returned instead of an integer.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[min=0\] | <code>number</code> | The minimum possible value. |
-| \[max=1\] | <code>number</code> | The maximum possible value. |
+| \[min=<code>0</code>\] | <code>number</code> | The minimum possible value. |
+| \[max=<code>1</code>\] | <code>number</code> | The maximum possible value. |
 | \[floating\] | <code>boolean</code> | Specify returning a floating-point number. |
 
 **Returns**: <code>number</code> - Returns the random number.  
@@ -4210,7 +4210,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to camel case. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to camel case. |
 
 **Returns**: <code>string</code> - Returns the camel cased string.  
 **Category**: String  
@@ -4231,7 +4231,7 @@ Capitalizes the first character of `string`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to capitalize. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to capitalize. |
 
 **Returns**: <code>string</code> - Returns the capitalized string.  
 **Category**: String  
@@ -4248,7 +4248,7 @@ for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to deburr. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to deburr. |
 
 **Returns**: <code>string</code> - Returns the deburred string.  
 **Category**: String  
@@ -4263,9 +4263,9 @@ Checks if `string` ends with the given target string.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to search. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to search. |
 | \[target\] | <code>string</code> | The string to search for. |
-| \[position=string.length\] | <code>number</code> | The position to search from. |
+| \[position=<code>string.length</code>\] | <code>number</code> | The position to search from. |
 
 **Returns**: <code>boolean</code> - Returns `true` if `string` ends with `target`, else `false`.  
 **Category**: String  
@@ -4305,7 +4305,7 @@ for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to escape. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to escape. |
 
 **Returns**: <code>string</code> - Returns the escaped string.  
 **Category**: String  
@@ -4321,7 +4321,7 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to escape. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to escape. |
 
 **Returns**: <code>string</code> - Returns the escaped string.  
 **Category**: String  
@@ -4338,7 +4338,7 @@ more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to kebab case. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to kebab case. |
 
 **Returns**: <code>string</code> - Returns the kebab cased string.  
 **Category**: String  
@@ -4361,9 +4361,9 @@ characters can't be evenly divided by the padding length.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to pad. |
-| \[length=0\] | <code>number</code> | The padding length. |
-| \[chars=' '\] | <code>string</code> | The string used as padding. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to pad. |
+| \[length=<code>0</code>\] | <code>number</code> | The padding length. |
+| \[chars=<code>&#x27; &#x27;</code>\] | <code>string</code> | The string used as padding. |
 
 **Returns**: <code>string</code> - Returns the padded string.  
 **Category**: String  
@@ -4386,9 +4386,9 @@ characters exceeds the padding length.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to pad. |
-| \[length=0\] | <code>number</code> | The padding length. |
-| \[chars=' '\] | <code>string</code> | The string used as padding. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to pad. |
+| \[length=<code>0</code>\] | <code>number</code> | The padding length. |
+| \[chars=<code>&#x27; &#x27;</code>\] | <code>string</code> | The string used as padding. |
 
 **Returns**: <code>string</code> - Returns the padded string.  
 **Category**: String  
@@ -4411,9 +4411,9 @@ characters exceeds the padding length.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to pad. |
-| \[length=0\] | <code>number</code> | The padding length. |
-| \[chars=' '\] | <code>string</code> | The string used as padding. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to pad. |
+| \[length=<code>0</code>\] | <code>number</code> | The padding length. |
+| \[chars=<code>&#x27; &#x27;</code>\] | <code>string</code> | The string used as padding. |
 
 **Returns**: <code>string</code> - Returns the padded string.  
 **Category**: String  
@@ -4456,8 +4456,8 @@ Repeats the given string `n` times.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to repeat. |
-| \[n=0\] | <code>number</code> | The number of times to repeat the string. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to repeat. |
+| \[n=<code>0</code>\] | <code>number</code> | The number of times to repeat the string. |
 
 **Returns**: <code>string</code> - Returns the repeated string.  
 **Category**: String  
@@ -4479,7 +4479,7 @@ See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to snake case. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to snake case. |
 
 **Returns**: <code>string</code> - Returns the snake cased string.  
 **Category**: String  
@@ -4500,9 +4500,9 @@ Checks if `string` starts with the given target string.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to search. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to search. |
 | \[target\] | <code>string</code> | The string to search for. |
-| \[position=0\] | <code>number</code> | The position to search from. |
+| \[position=<code>0</code>\] | <code>number</code> | The position to search from. |
 
 **Returns**: <code>boolean</code> - Returns `true` if `string` starts with `target`, else `false`.  
 **Category**: String  
@@ -4537,7 +4537,7 @@ For more information on Chrome extension sandboxes see
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The template string. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The template string. |
 | \[options\] | <code>Object</code> | The options object. |
 | \[options.escape\] | <code>RegExp</code> | The HTML "escape" delimiter. |
 | \[options.evaluate\] | <code>RegExp</code> | The "evaluate" delimiter. |
@@ -4621,8 +4621,8 @@ Removes leading and trailing whitespace or specified characters from `string`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to trim. |
-| \[chars=whitespace\] | <code>string</code> | The characters to trim. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to trim. |
+| \[chars=<code>whitespace</code>\] | <code>string</code> | The characters to trim. |
 
 **Returns**: <code>string</code> - Returns the trimmed string.  
 **Category**: String  
@@ -4641,8 +4641,8 @@ Removes leading whitespace or specified characters from `string`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to trim. |
-| \[chars=whitespace\] | <code>string</code> | The characters to trim. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to trim. |
+| \[chars=<code>whitespace</code>\] | <code>string</code> | The characters to trim. |
 
 **Returns**: <code>string</code> - Returns the trimmed string.  
 **Category**: String  
@@ -4661,8 +4661,8 @@ Removes trailing whitespace or specified characters from `string`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to trim. |
-| \[chars=whitespace\] | <code>string</code> | The characters to trim. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to trim. |
+| \[chars=<code>whitespace</code>\] | <code>string</code> | The characters to trim. |
 
 **Returns**: <code>string</code> - Returns the trimmed string.  
 **Category**: String  
@@ -4683,10 +4683,10 @@ string which defaults to "...".
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to truncate. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to truncate. |
 | \[options\] | <code>Object</code> \| <code>number</code> | The options object or maximum string length. |
-| \[options.length=30\] | <code>number</code> | The maximum string length. |
-| \[options.omission='...'\] | <code>string</code> | The string to indicate text is omitted. |
+| \[options.length=<code>30</code>\] | <code>number</code> | The maximum string length. |
+| \[options.omission=<code>&#x27;...&#x27;</code>\] | <code>string</code> | The string to indicate text is omitted. |
 | \[options.separator\] | <code>RegExp</code> \| <code>string</code> | The separator pattern to truncate to. |
 
 **Returns**: <code>string</code> - Returns the truncated string.  
@@ -4720,7 +4720,7 @@ entities use a third-party library like [_he_](http://mths.be/he).
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to unescape. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to unescape. |
 
 **Returns**: <code>string</code> - Returns the unescaped string.  
 **Category**: String  
@@ -4735,7 +4735,7 @@ Splits `string` into an array of its words.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[string=''\] | <code>string</code> | The string to inspect. |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to inspect. |
 | \[pattern\] | <code>RegExp</code> \| <code>string</code> | The pattern to match words. |
 
 **Returns**: <code>Array</code> - Returns the words of `string`.  
@@ -4780,7 +4780,7 @@ that contain the equivalent object properties, otherwise it returns `false`.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[func=[identity](#_.identity)\] | <code>\*</code> | The value to convert to a callback. |
+| \[func=<code><a href="#_.identity">identity</a></code>\] | <code>\*</code> | The value to convert to a callback. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of the created callback. |
 
 **Returns**: <code>function</code> - Returns the new function.  
@@ -4875,10 +4875,10 @@ its prototype as well.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[object=this\] | <code>function</code> \| <code>Object</code> | object The destination object. |
+| \[object=<code>this</code>\] | <code>function</code> \| <code>Object</code> | object The destination object. |
 | source | <code>Object</code> | The object of functions to add. |
 | \[options\] | <code>Object</code> | The options object. |
-| \[options.chain=true\] | <code>boolean</code> | Specify whether the functions added  are chainable. |
+| \[options.chain=<code>true</code>\] | <code>boolean</code> | Specify whether the functions added  are chainable. |
 
 **Returns**: <code>function</code> \| <code>Object</code> - Returns `object`.  
 **Category**: Utility  
@@ -4978,9 +4978,9 @@ zero-length range is created unless a negative `step` is specified.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| \[start=0\] | <code>number</code> | The start of the range. |
+| \[start=<code>0</code>\] | <code>number</code> | The start of the range. |
 | end | <code>number</code> | The end of the range. |
-| \[step=1\] | <code>number</code> | The value to increment or decrement by. |
+| \[step=<code>1</code>\] | <code>number</code> | The value to increment or decrement by. |
 
 **Returns**: <code>Array</code> - Returns the new array of numbers.  
 **Category**: Utility  
@@ -5013,7 +5013,7 @@ one argument; (index).
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | n | <code>number</code> | The number of times to invoke `iteratee`. |
-| \[iteratee=[identity](#_.identity)\] | <code>function</code> | The function invoked per iteration. |
+| \[iteratee=<code><a href="#_.identity">identity</a></code>\] | <code>function</code> | The function invoked per iteration. |
 | \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
 
 **Returns**: <code>Array</code> - Returns the array of results.  

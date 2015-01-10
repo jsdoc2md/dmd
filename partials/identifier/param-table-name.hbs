@@ -1,5 +1,5 @@
 {{#if optional}}\[{{/if~}}
 {{#if variable}}...{{/if~}}
 {{{name}~}}
-{{#if defaultvalue}}={{{linkTo defaultvalue style="plain"}}}{{/if~}}
+{{#if defaultvalue}}={{#with defaultvalue}}{{>linked-type}}{{/with}}{{/if~}}
 {{#if optional}}\]{{/if}}

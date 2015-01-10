@@ -29,7 +29,7 @@ var hbjs = require("handbrake-js");
 A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.
 
 **Extends:** <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>  
-**Emits**: <code><a href="#module_handbrake-js..Handbrake#event_start">start</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_begin">begin</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_progress">progress</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_output">output</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_error">error</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_end">end</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_complete">complete</a></code>
+**Emits**: <code><a href="#module_handbrake-js..Handbrake#event_start">start</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_begin">begin</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_progress">progress</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_output">output</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_error">error</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_end">end</a></code>, <code><a href="#module_handbrake-js..Handbrake#event_complete">complete</a></code>  
 
 * [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code><a href="http://nodejs.org/api/events.html">EventEmitter</a></code>
   * _instance_

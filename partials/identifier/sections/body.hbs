@@ -1,6 +1,7 @@
 {{>deprecated~}}
 {{>description~}}
-{{>params-table~}}
+{{#if (optionEquals "params-format" "list")}}{{>params~}}{{/if~}}
+{{#if (optionEquals "params-format" "table")}}{{>params-table~}}{{/if~}}
 {{>properties-table~}}
 {{>augments~}}
 {{>mixes~}}

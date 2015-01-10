@@ -1,1 +1,1 @@
-{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{>param-name}} {{{join (linkTo type.names style="code") " | "}}}{{#if description}} - {{{linkify description}}}{{/if}}  
+{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{>param-name}} {{>linked-type-list types=type.names delimiter=" | " }}{{#if description}} - {{{linkify description}}}{{/if}}  

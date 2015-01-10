@@ -1,2 +1,2 @@
-{{#if type}}**Type**: {{{join (linkTo type.names) " | "}}}  
+{{#if type}}**Type**: {{>linked-type-list types=type.names delimiter=" \| " ~}}  
 {{/if}}
