@@ -28,5 +28,7 @@ function linkify(text, options){
 }
 
 function renderMarkdown(input){
-    return marked(input);
+    if (input){
+        return marked(input);
+    }
 }
