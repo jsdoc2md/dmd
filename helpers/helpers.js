@@ -11,7 +11,7 @@ Escape special markdown characters
 */
 function escape(input){
     if (typeof input !== "string") return null;
-    return input.replace(/\*/g, "\\*");
+    return input.replace(/([\*|])/g, "\\$1");
 }
 
 function linkify(text, options){
