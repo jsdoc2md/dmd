@@ -6,5 +6,5 @@ exports.escape = escape;
 Escape special markdown characters
 */
 function escape(input){
-    return input.replace(/\*/g, "\\*");
+    return input.replace(/([\*|])/g, "\\$1");
 }
