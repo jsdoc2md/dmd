@@ -1,8 +1,9 @@
 {{>deprecated~}}
 {{>description~}}
-{{#if (optionEquals "params-format" "list")}}{{>params~}}{{/if~}}
-{{#if (optionEquals "params-format" "table")}}{{>params-table~}}{{/if~}}
-{{>properties-table~}}
+{{#if (optionEquals "param-list-format" "list")}}{{>params~}}{{/if~}}
+{{#if (optionEquals "param-list-format" "table")}}{{>params-table~}}{{/if~}}
+{{#if (optionEquals "property-list-format" "list")}}{{>properties-list~}}{{/if~}}
+{{#if (optionEquals "property-list-format" "table")}}{{>properties-table~}}{{/if~}}
 {{>augments~}}
 {{>mixes~}}
 {{>default~}}
