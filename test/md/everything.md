@@ -562,11 +562,13 @@ An ordinary newspaper.
 ##config → <code>object</code>
 **Properties**
 
-- defaults <code>object</code> - The default values for parties.  
-  - defaults.players <code>number</code> - The default number of players.  
-  - defaults.level <code>string</code> - The default level for the party.  
-  - defaults.treasure <code>object</code> - The default treasure.  
-  - defaults.treasure.gold <code>number</code> - How much gold the party starts with.  
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| defaults | <code>object</code> | The default values for parties. |
+| defaults.players | <code>number</code> | The default number of players. |
+| defaults.level | <code>string</code> | The default level for the party. |
+| defaults.treasure | <code>object</code> | The default treasure. |
+| defaults.treasure.gold | <code>number</code> | How much gold the party starts with. |
 
 <a name="globalFunction"></a>
 ##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>

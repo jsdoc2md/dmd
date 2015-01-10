@@ -88,3 +88,5 @@ Transforms doclet data into markdown documentation
 
 **Returns**: <code>stream</code> - A transform stream - pipe doclet data in to receive rendered markdown.  
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
+
+&copy; 2015 Lloyd Brookes <75pound@gmail.com>
