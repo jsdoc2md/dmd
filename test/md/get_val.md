@@ -21,7 +21,7 @@ Provides class for getting value by key
 ####new GetVal(values, [required])
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| values | <code><a href="#GetVal..valuesArg">valuesArg</a></code> | Key-value object of values |
+| values | <code>[valuesArg](#GetVal..valuesArg)</code> | Key-value object of values |
 | \[required\] | <code>Object.&lt;\*&gt;</code> | Key-value object to set required values at instance creating |
 
 **Returns**: <code>function</code> - "get" method wrapper (you can get value from example of class directly as by function)  

@@ -3,7 +3,7 @@
 <dl>
 {{/if~}}
 <dt>{{#if deprecated}}~~{{/if}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}</dt>
-<dd>{{{stripNewlines (linkify description)}}}</dd>
+<dd>{{{renderMarkdown (linkify description)}}}</dd>
 {{#if @last~}}</dl>
 {{/if~}}
 {{/modules~}}

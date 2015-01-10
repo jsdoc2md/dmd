@@ -1,8 +1,10 @@
 "use strict";
 var ddata = require("ddata");
+var marked = require("marked");
 
 exports.escape = escape;
 exports.linkify = linkify;
+exports.renderMarkdown = renderMarkdown;
 
 /**
 Escape special markdown characters
@@ -23,4 +25,8 @@ function linkify(text, options){
         });
     }
     return text;
+}
+
+function renderMarkdown(input){
+    return marked(input);
 }

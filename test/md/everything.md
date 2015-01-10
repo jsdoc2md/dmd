@@ -11,17 +11,17 @@
 <dt><a href="#module_cjs/human">cjs/human</a></dt>
 <dd>exports a class</dd>
 <dt><a href="#module_linkMod">linkMod</a></dt>
-<dd>A module. Refer to it using [this link](#module_linkMod).</dd>
+<dd>A module. Refer to it using <a href="#module_linkMod">this link</a>.</dd>
 <dt><a href="#module_cjs/object-alias">cjs/object-alias</a></dt>
 <dd>a module exporting an object</dd>
 <dt><a href="#module_cjs/object">cjs/object</a></dt>
-<dd>a module exporting `exports` directly</dd>
+<dd>a module exporting <code>exports</code> directly</dd>
 </dl>
 ##Globals
 <dl>
 <dt><a href="#GlobalClass">class: GlobalClass</a></dt>
 <dd>a global class</dd>
-<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code>[GlobalClass](#GlobalClass)</code></dt>
 <dd>the child of global class</dd>
 <dt><a href="#customTagged">customTagged</a></dt>
 <dd>a global var with custom tags</dd>
@@ -37,11 +37,11 @@
 <dd>an event defined in a doclet</dd>
 <dt><a href="#exampleVar">exampleVar</a> → <code>string</code></dt>
 <dd>an example var</dd>
-<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
+<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code></dt>
 <dd></dd>
-<dt><a href="#cliveExternal">cliveExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code></dt>
+<dt><a href="#cliveExternal">cliveExternal</a> → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code></dt>
 <dd></dd>
-<dt><a href="#stringExternal">stringExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
+<dt><a href="#stringExternal">stringExternal</a> → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code></dt>
 <dd></dd>
 <dt><a href="#fileVar">fileVar</a></dt>
 <dd>a variable in the file</dd>
@@ -87,9 +87,9 @@
 <dd></dd>
 <dt><a href="#todoFunction3">todoFunction3()</a></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code></dt>
 <dd></dd>
 <dt><a href="#nullableNumber">nullableNumber</a> ⇒ <code>number</code></dt>
 <dd></dd>
@@ -231,11 +231,11 @@ exports a class
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code><a href="#module_cjs/human--Human..Organ">Organ</a></code>
+      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code><a href="#module_cjs/human--Human..Organ..Cell">Cell</a></code>
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -254,7 +254,7 @@ a class inside a class
 
 * [class: ~Organ](#module_cjs/human--Human..Organ)
   * _instance_
-    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code><a href="#module_cjs/human--Human..Organ..Cell">Cell</a></code>
+    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -263,11 +263,11 @@ a class inside a class
 a class inside a class inside a class
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
-#####organ.redCell → <code><a href="#module_cjs/human--Human..Organ..Cell">Cell</a></code>
+#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
 <a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code><a href="#module_cjs/human--Human..Organ">Organ</a></code>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
 <a name="module_linkMod"></a>
@@ -279,7 +279,7 @@ A module. Refer to it using [this link](#module_linkMod).
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code><a href="#external_Math">Math</a></code>
+  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
 
 <a name="external_Math"></a>
@@ -299,9 +299,9 @@ The built in Date object, it has no see tag. Refer to it with [Date](#external_D
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah ⇐ <code><a href="#external_Math">Math</a></code>
-**Extends:** <code><a href="#external_Math">Math</a></code>  
-**Emits**: <code><a href="#module_linkMod.event_MyEvent">event:MyEvent</a></code>  
+###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
+**Extends:** <code>[Math](#external_Math)</code>  
+**Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
 <a name="new_module_linkMod..linksYeah_new"></a>
 ####new linksYeah()
 this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
@@ -373,12 +373,12 @@ parent method one
 parent method two
 
 <a name="GlobalChildClass"></a>
-##class: GlobalChildClass ⇐ <code><a href="#GlobalClass">GlobalClass</a></code>
+##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
 
-**Extends:** <code><a href="#GlobalClass">GlobalClass</a></code>  
+**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
-* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code><a href="#GlobalClass">GlobalClass</a></code>
+* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
   * _overrides_
@@ -437,16 +437,16 @@ var thisVar = funtion(){
     return "a value";
 };
 <a name="EncryptedRequest"></a>
-##class: EncryptedRequest ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code>
-**Extends:** <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code>  
+##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
+**Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
 <a name="cliveExternal"></a>
-##cliveExternal → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code>
+##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="stringExternal"></a>
-##stringExternal → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code>
+##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="fileVar"></a>
 ##fileVar
 a variable in the file
@@ -459,7 +459,7 @@ a variable in the file
 **Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
 <a name="firesDefinedEvent"></a>
 ##firesDefinedEvent()
-**Emits**: <code><a href="#event_docletEvent">docletEvent</a></code>  
+**Emits**: <code>[docletEvent](#event_docletEvent)</code>  
 <a name="functionObj"></a>
 ##functionObj()
 the function
@@ -635,9 +635,9 @@ Both of these will link to the bar function.
 - [x] finished
 
 <a name="returnsArrayOfType"></a>
-##returnsArrayOfType ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code>
+##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 <a name="returnsArrayOfType2"></a>
-##returnsArrayOfType2 ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code>
+##returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 <a name="nullableNumber"></a>
 ##nullableNumber ⇒ <code>number</code>
 <a name="nonNullableNumber"></a>
@@ -648,7 +648,7 @@ Both of these will link to the bar function.
 ##nullableArrayTypeParam(one)
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| one | <code><a href="#module_cjs/human">Array.&lt;cjs/human&gt;</a></code> |  |
+| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
 
 <a name="globalVar"></a>
 ##globalVar → <code>string</code>
