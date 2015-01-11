@@ -837,6 +837,25 @@
         },
         "description": "second param",
         "name": "two"
+      },
+      {
+        "type": {
+          "names": [
+            "number",
+            "string"
+          ]
+        },
+        "description": "third",
+        "name": "three"
+      },
+      {
+        "type": {
+          "names": [
+            "Array.<(Number|String)>"
+          ]
+        },
+        "description": "fourth",
+        "name": "four"
       }
     ],
     "codeName": "globalFunction"

@@ -8,7 +8,7 @@
     "augments": [
       "external:EventEmitter"
     ],
-    "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by `hbjs.spawn()`.",
+    "description": "A thin wrapper on the handbrakeCLI child_process handle. An instance of this class is returned by {@link module:handbrake-js.spawn}.",
     "memberof": "module:handbrake-js",
     "fires": [
       "module:handbrake-js~Handbrake#event:start",
@@ -321,20 +321,5 @@
       "```js\nvar hbjs = require(\"handbrake-js\");\n\nhbjs.exec({ preset-list: true }, function(err, stdout, stderr){\n    if (err) throw err;\n    console.log(stdout);\n});\n```"
     ],
     "codeName": "exec"
-  },
-  {
-    "id": "module:handbrake-js.cliOptions",
-    "longname": "module:handbrake-js.cliOptions",
-    "name": "cliOptions",
-    "scope": "static",
-    "kind": "member",
-    "description": "[Command-line-args](https://github.com/75lb/command-line-args) option definitions, useful when building a CLI.",
-    "memberof": "module:handbrake-js",
-    "type": {
-      "names": [
-        "array"
-      ]
-    },
-    "codeName": "exports.cliOptions"
   }
 ]

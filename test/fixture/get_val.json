@@ -8,8 +8,8 @@
     "author": [
       "Viacheslav Lotsmanov"
     ],
-    "version": "r10",
-    "license": "AGPLv3",
+    "version": "r11",
+    "license": "GNU/AGPLv3",
     "see": [
       "{@link https://github.com/unclechu/js-useful-umd-modules/|GitHub}",
       "{@link https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE|License}"

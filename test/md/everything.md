@@ -1,21 +1,29 @@
 ##Modules
 <dl>
 <dt><a href="#module_cjs/animals">cjs/animals</a></dt>
-<dd>exports animals</dd>
+<dd><p>exports animals</p>
+</dd>
 <dt><a href="#module_cjs/class">cjs/class</a></dt>
-<dd>exports a class</dd>
+<dd><p>exports a class</p>
+</dd>
 <dt><a href="#module_cjs/falias-obj">cjs/falias-obj</a></dt>
-<dd>exports a pointer to a function</dd>
+<dd><p>exports a pointer to a function</p>
+</dd>
 <dt><a href="#module_cjs/function-alias">cjs/function-alias</a></dt>
-<dd>exports a pointer to a function</dd>
+<dd><p>exports a pointer to a function</p>
+</dd>
 <dt><a href="#module_cjs/human">cjs/human</a></dt>
-<dd>exports a class</dd>
+<dd><p>exports a class</p>
+</dd>
 <dt><a href="#module_linkMod">linkMod</a></dt>
-<dd>A module. Refer to it using <a href="#module_linkMod">this link</a>.</dd>
+<dd><p>A module. Refer to it using <a href="#module_linkMod">this link</a>.</p>
+</dd>
 <dt><a href="#module_cjs/object-alias">cjs/object-alias</a></dt>
-<dd>a module exporting an object</dd>
+<dd><p>a module exporting an object</p>
+</dd>
 <dt><a href="#module_cjs/object">cjs/object</a></dt>
-<dd>a module exporting <code>exports</code> directly</dd>
+<dd><p>a module exporting <code>exports</code> directly</p>
+</dd>
 </dl>
 ##Globals
 <dl>
@@ -53,7 +61,7 @@
 <dd></dd>
 <dt><a href="#functionObj">functionObj()</a></dt>
 <dd>the function</dd>
-<dt><a href="#globalFunction">globalFunction(one, two)</a></dt>
+<dt><a href="#globalFunction">globalFunction(one, two, three, four)</a></dt>
 <dd>a global function</dd>
 <dt><a href="#LendsClass">class: LendsClass</a></dt>
 <dd></dd>
@@ -469,13 +477,15 @@ the function
 a static method on the function
 
 <a name="globalFunction"></a>
-##globalFunction(one, two)
+##globalFunction(one, two, three, four)
 a global function
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
+| three | <code>number</code> \| <code>string</code> | third |
+| four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
 
 <a name="LendsClass"></a>
 ##class: LendsClass

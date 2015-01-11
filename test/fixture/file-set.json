@@ -184,52 +184,5 @@
       }
     ],
     "codeName": "FileSet.eFileType"
-  },
-  {
-    "id": "module:file-set--FileSet.eFileType.NOEXIST",
-    "longname": "module:file-set.eFileType.NOEXIST",
-    "name": "NOEXIST",
-    "scope": "static",
-    "kind": "member",
-    "description": "when a file doesn't exist",
-    "memberof": "module:file-set--FileSet.eFileType",
-    "type": {
-      "names": [
-        "number"
-      ]
-    },
-    "defaultvalue": "0",
-    "codeName": "NOEXIST"
-  },
-  {
-    "id": "module:file-set--FileSet.eFileType.FILE",
-    "longname": "module:file-set.eFileType.FILE",
-    "name": "FILE",
-    "scope": "static",
-    "kind": "member",
-    "description": "It's a file",
-    "memberof": "module:file-set--FileSet.eFileType",
-    "type": {
-      "names": [
-        "number"
-      ]
-    },
-    "defaultvalue": "1",
-    "codeName": "FILE"
-  },
-  {
-    "id": "module:file-set--FileSet.eFileType.DIR",
-    "longname": "module:file-set.eFileType.DIR",
-    "name": "DIR",
-    "scope": "static",
-    "kind": "member",
-    "memberof": "module:file-set--FileSet.eFileType",
-    "type": {
-      "names": [
-        "number"
-      ]
-    },
-    "defaultvalue": "2",
-    "codeName": "DIR"
   }
 ]

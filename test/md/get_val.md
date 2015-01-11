@@ -7,9 +7,9 @@ Provides class for getting value by key
 - [GitHub](https://github.com/unclechu/js-useful-umd-modules/)
 - [License](https://github.com/unclechu/js-useful-umd-modules/blob/master/AGPLv3-LICENSE)
 
-**Version**: r10  
+**Version**: r11  
 **Author:** Viacheslav Lotsmanov  
-**License**: AGPLv3  
+**License**: GNU/AGPLv3  
 
 * [get_val](#module_get_val)
   * [class: ~GetVal](#module_get_val..GetVal)

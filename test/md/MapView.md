@@ -3,7 +3,7 @@
 MapView encapsulates a Google maps view so it can be used with famo.us.
 
 Additionally it adds methods to set the position and zoom-factor of the map using transitions.
-Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</code> to place famo.us renderables on the map, much like google-maps markers.
+Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place famo.us renderables on the map, much like google-maps markers.
 
 **Map-types**
 
@@ -29,8 +29,6 @@ Use <code>[MapModifier](#mapmod)</code> and <code>[MapStateModifier](#mapmod)</c
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
     * _static_
       * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-        * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) → <code>Number</code>
-        * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) → <code>Number</code>
       * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
     * _inner_
       * [`external: ~LatLng`](#external_LatLng)
@@ -49,17 +47,6 @@ Map-type
 | LEAFLET | <code>Number</code> |  |
 
 **Properties**: `GOOGLEMAPS`, `LEAFLET`  
-
-* [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-  * [`.GOOGLEMAPS`](#module_MapView--MapView.MapType.GOOGLEMAPS) → <code>Number</code>
-  * [`.LEAFLET`](#module_MapView--MapView.MapType.LEAFLET) → <code>Number</code>
-
-<a name="module_MapView--MapView.MapType.GOOGLEMAPS"></a>
-#####`MapType.GOOGLEMAPS` → <code>Number</code>
-**Default**: `1`  
-<a name="module_MapView--MapView.MapType.LEAFLET"></a>
-#####`MapType.LEAFLET` → <code>Number</code>
-**Default**: `2`  
 <a name="new_module_MapView--MapView_new"></a>
 ####`new MapView(options)`
 | Param | Type | Description |
