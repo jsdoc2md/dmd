@@ -1,8 +1,8 @@
 {{#if properties~}}**Properties**
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
+| Name | Type | Default | Description |
+| ---- | ---- | ------- |----------- |
 {{#each properties~}}
-| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{{stripNewlines (linkify description)}}} |
+| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | `{{defaultvalue}}` | {{{stripNewlines (linkify description)}}} |
 {{/each}}
 {{/if}}

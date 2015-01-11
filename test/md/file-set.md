@@ -59,11 +59,10 @@ Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| NOEXIST | <code>number</code> | when a file doesn't exist |
-| FILE | <code>number</code> | It's a file |
-| DIR | <code>number</code> |  |
+| Name | Type | Default | Description |
+| ---- | ---- | ------- |----------- |
+| NOEXIST | <code>number</code> | `0` | when a file doesn't exist |
+| FILE | <code>number</code> | `1` | It's a file |
+| DIR | <code>number</code> | `2` |  |
 
-**Properties**: `NOEXIST`, `FILE`, `DIR`  
 **Read only**: true  
