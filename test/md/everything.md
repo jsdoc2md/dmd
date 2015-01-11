@@ -465,6 +465,26 @@ var thisVar = funtion(){
     return "a value";
 };
 
+<a name="external_jQuery.fn"></a>
+##external: jQuery.fn
+The jQuery plugin namespace.
+
+**See**
+
+- [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)
+
+<a name="external_jQuery.fn.starfairy"></a>
+###jQuery.fn.starfairy()
+A jQuery plugin to make stars fly around your home page.
+
+<a name="external_XMLHttpRequest"></a>
+##external: XMLHttpRequest
+Namespace provided by the browser.
+
+**See**
+
+- https://developer.mozilla.org/en/xmlhttprequest
+
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
