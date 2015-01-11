@@ -28,31 +28,39 @@
 ##Globals
 <dl>
 <dt><a href="#GlobalClass">class: GlobalClass</a></dt>
-<dd>a global class</dd>
-<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code>[GlobalClass](#GlobalClass)</code></dt>
-<dd>the child of global class</dd>
+<dd><p>a global class</p>
+</dd>
+<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dd><p>the child of global class</p>
+</dd>
 <dt><a href="#customTagged">customTagged</a></dt>
-<dd>a global var with custom tags</dd>
+<dd><p>a global var with custom tags</p>
+</dd>
 <dt><a href="#customClass">class: customClass</a></dt>
-<dd>a class that has custom tags</dd>
+<dd><p>a class that has custom tags</p>
+</dd>
 <dt><a href="#customFunction">customFunction()</a></dt>
-<dd>a global function with custom tags</dd>
+<dd><p>a global function with custom tags</p>
+</dd>
 <dt><a href="#defaultedOne">defaultedOne</a> → <code>object</code></dt>
 <dd></dd>
 <dt><a href="#defaultedTwo">defaultedTwo</a> → <code>function</code></dt>
 <dd></dd>
 <dt><a href="#event_docletEvent">"docletEvent"</a></dt>
-<dd>an event defined in a doclet</dd>
+<dd><p>an event defined in a doclet</p>
+</dd>
 <dt><a href="#exampleVar">exampleVar</a> → <code>string</code></dt>
-<dd>an example var</dd>
-<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code></dt>
+<dd><p>an example var</p>
+</dd>
+<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
 <dd></dd>
-<dt><a href="#cliveExternal">cliveExternal</a> → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code></dt>
+<dt><a href="#cliveExternal">cliveExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code></dt>
 <dd></dd>
-<dt><a href="#stringExternal">stringExternal</a> → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code></dt>
+<dt><a href="#stringExternal">stringExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
 <dd></dd>
 <dt><a href="#fileVar">fileVar</a></dt>
-<dd>a variable in the file</dd>
+<dd><p>a variable in the file</p>
+</dd>
 <dt><a href="#firesError">firesError()</a></dt>
 <dd></dd>
 <dt><a href="#firesMany">firesMany()</a></dt>
@@ -60,31 +68,41 @@
 <dt><a href="#firesDefinedEvent">firesDefinedEvent()</a></dt>
 <dd></dd>
 <dt><a href="#functionObj">functionObj()</a></dt>
-<dd>the function</dd>
+<dd><p>the function</p>
+</dd>
 <dt><a href="#globalFunction">globalFunction(one, two, three, four)</a></dt>
-<dd>a global function</dd>
+<dd><p>a global function</p>
+</dd>
 <dt><a href="#LendsClass">class: LendsClass</a></dt>
 <dd></dd>
 <dt><a href="#LendsClass2">class: LendsClass2</a></dt>
 <dd></dd>
 <dt><a href="#EventfulClass">class: EventfulClass</a></dt>
-<dd>a class which mixes in Eventful behaviour</dd>
+<dd><p>a class which mixes in Eventful behaviour</p>
+</dd>
 <dt><a href="#Eventful">mixin: Eventful</a></dt>
-<dd>This provides methods used for event handling. It's not meant to be used directly.</dd>
+<dd><p>This provides methods used for event handling. It&#39;s not meant to
+be used directly.</p>
+</dd>
 <dt><a href="#phantom">mixin: phantom</a></dt>
-<dd>phantom mixin</dd>
+<dd><p>phantom mixin</p>
+</dd>
 <dt><a href="#Documents">Documents</a> → <code>object</code></dt>
 <dd></dd>
 <dt><a href="#config">config</a> → <code>object</code></dt>
 <dd></dd>
 <dt><a href="#globalFunction">globalFunction()</a> ⇒ <code>string</code> | <code>object</code> | <code>function</code></dt>
-<dd>a global function returning multiple stuff</dd>
+<dd><p>a global function returning multiple stuff</p>
+</dd>
 <dt><a href="#returnsSomething">returnsSomething()</a> ⇒ <code>string</code></dt>
-<dd>returns has no desc</dd>
+<dd><p>returns has no desc</p>
+</dd>
 <dt><a href="#seeableVar">seeableVar</a></dt>
-<dd>a global var with a @see</dd>
+<dd><p>a global var with a @see</p>
+</dd>
 <dt><a href="#seefoo">seefoo()</a></dt>
-<dd>Both of these will link to the bar function.</dd>
+<dd><p>Both of these will link to the bar function.</p>
+</dd>
 <dt><a href="#seebar">seebar()</a></dt>
 <dd></dd>
 <dt><a href="#throwingFunction">throwingFunction()</a></dt>
@@ -95,9 +113,9 @@
 <dd></dd>
 <dt><a href="#todoFunction3">todoFunction3()</a></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code></dt>
+<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code></dt>
+<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
 <dt><a href="#nullableNumber">nullableNumber</a> ⇒ <code>number</code></dt>
 <dd></dd>
@@ -108,7 +126,8 @@
 <dt><a href="#nullableArrayTypeParam">nullableArrayTypeParam(one)</a></dt>
 <dd></dd>
 <dt><a href="#globalVar">globalVar</a> → <code>string</code></dt>
-<dd>a global var</dd>
+<dd><p>a global var</p>
+</dd>
 </dl>
 <a name="module_cjs/animals"></a>
 ##cjs/animals
