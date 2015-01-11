@@ -19,7 +19,8 @@
       "module:handbrake-js~Handbrake#event:end",
       "module:handbrake-js~Handbrake#event:complete"
     ],
-    "codeName": "Handbrake"
+    "codeName": "Handbrake",
+    "order": 0
   },
   {
     "id": "module:handbrake-js~Handbrake#output",
@@ -34,7 +35,8 @@
         "string"
       ]
     },
-    "codeName": "this.output"
+    "codeName": "this.output",
+    "order": 1
   },
   {
     "id": "module:handbrake-js~Handbrake#options",
@@ -49,7 +51,8 @@
         "object"
       ]
     },
-    "codeName": "this.options"
+    "codeName": "this.options",
+    "order": 2
   },
   {
     "id": "module:handbrake-js~Handbrake#event:start",
@@ -58,7 +61,8 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired as HandbrakeCLI is launched. Nothing has happened yet.",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "order": 3
   },
   {
     "id": "module:handbrake-js~Handbrake#event:begin",
@@ -67,7 +71,8 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "order": 4
   },
   {
     "id": "module:handbrake-js~Handbrake#event:progress",
@@ -149,7 +154,8 @@
         "description": "Task description, either \"Encoding\" or \"Muxing\"",
         "name": "progress.task"
       }
-    ]
+    ],
+    "order": 5
   },
   {
     "id": "module:handbrake-js~Handbrake#event:output",
@@ -168,7 +174,8 @@
         "description": "An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.",
         "name": "output"
       }
-    ]
+    ],
+    "order": 6
   },
   {
     "id": "module:handbrake-js~Handbrake#event:error",
@@ -212,7 +219,8 @@
         },
         "name": "error.errno"
       }
-    ]
+    ],
+    "order": 7
   },
   {
     "id": "module:handbrake-js~Handbrake#event:end",
@@ -221,7 +229,8 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired on successful completion of an encoding task. Always follows a `begin` event, with some `progress` in between.",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "order": 8
   },
   {
     "id": "module:handbrake-js~Handbrake#event:complete",
@@ -230,7 +239,8 @@
     "scope": "instance",
     "kind": "event",
     "description": "Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..",
-    "memberof": "module:handbrake-js~Handbrake"
+    "memberof": "module:handbrake-js~Handbrake",
+    "order": 9
   },
   {
     "id": "external:EventEmitter",
@@ -240,7 +250,8 @@
     "kind": "external",
     "see": [
       "http://nodejs.org/api/events.html"
-    ]
+    ],
+    "order": 10
   },
   {
     "id": "module:handbrake-js",
@@ -251,7 +262,8 @@
     "examples": [
       "```js\nvar hbjs = require(\"handbrake-js\");\n```"
     ],
-    "typicalname": "hbjs"
+    "typicalname": "hbjs",
+    "order": 11
   },
   {
     "id": "module:handbrake-js.spawn",
@@ -285,7 +297,8 @@
         }
       }
     ],
-    "codeName": "spawn"
+    "codeName": "spawn",
+    "order": 12
   },
   {
     "id": "module:handbrake-js.exec",
@@ -320,6 +333,7 @@
     "examples": [
       "```js\nvar hbjs = require(\"handbrake-js\");\n\nhbjs.exec({ preset-list: true }, function(err, stdout, stderr){\n    if (err) throw err;\n    console.log(stdout);\n});\n```"
     ],
-    "codeName": "exec"
+    "codeName": "exec",
+    "order": 13
   }
 ]

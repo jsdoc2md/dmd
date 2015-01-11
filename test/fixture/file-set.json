@@ -8,7 +8,8 @@
     "examples": [
       "```js\nvar fileSet = require(\"file-set\");\n```"
     ],
-    "typicalname": "FileSet"
+    "typicalname": "FileSet",
+    "order": 0
   },
   {
     "id": "module:file-set--FileSet",
@@ -19,7 +20,8 @@
     "description": "Expands file patterns, returning the matched and unmatched files and directories",
     "memberof": "module:file-set",
     "alias": "module:file-set",
-    "codeName": "FileSet"
+    "codeName": "FileSet",
+    "order": 1
   },
   {
     "id": "module:file-set--FileSet()",
@@ -38,7 +40,8 @@
         "description": "A pattern, or array of patterns to expand",
         "name": "patternList"
       }
-    ]
+    ],
+    "order": 2
   },
   {
     "id": "module:file-set--FileSet#list",
@@ -53,7 +56,8 @@
         "Array.<string>"
       ]
     },
-    "codeName": "this.list"
+    "codeName": "this.list",
+    "order": 3
   },
   {
     "id": "module:file-set--FileSet#files",
@@ -68,7 +72,8 @@
         "Array.<string>"
       ]
     },
-    "codeName": "this.files"
+    "codeName": "this.files",
+    "order": 4
   },
   {
     "id": "module:file-set--FileSet#dirs",
@@ -83,7 +88,8 @@
         "Array.<string>"
       ]
     },
-    "codeName": "this.dirs"
+    "codeName": "this.dirs",
+    "order": 5
   },
   {
     "id": "module:file-set--FileSet#notExisting",
@@ -98,7 +104,8 @@
         "Array.<string>"
       ]
     },
-    "codeName": "this.notExisting"
+    "codeName": "this.notExisting",
+    "order": 6
   },
   {
     "id": "module:file-set--FileSet#add",
@@ -120,7 +127,8 @@
         "name": "files"
       }
     ],
-    "codeName": "FileSet.prototype.add"
+    "codeName": "FileSet.prototype.add",
+    "order": 7
   },
   {
     "id": "module:file-set--FileSet.eFileType",
@@ -183,6 +191,7 @@
         "codeName": "DIR"
       }
     ],
-    "codeName": "FileSet.eFileType"
+    "codeName": "FileSet.eFileType",
+    "order": 8
   }
 ]

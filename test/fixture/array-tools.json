@@ -8,7 +8,8 @@
     "examples": [
       "var a = require(\"array-tools\");"
     ],
-    "typicalname": "a"
+    "typicalname": "a",
+    "order": 0
   },
   {
     "id": "module:array-tools.pluck",
@@ -52,7 +53,8 @@
         }
       }
     ],
-    "codeName": "pluck"
+    "codeName": "pluck",
+    "order": 1
   },
   {
     "id": "module:array-tools.pick",
@@ -96,7 +98,8 @@
         }
       }
     ],
-    "codeName": "pick"
+    "codeName": "pick",
+    "order": 2
   },
   {
     "id": "module:array-tools.arrayify",
@@ -130,7 +133,8 @@
         }
       }
     ],
-    "codeName": "arrayify"
+    "codeName": "arrayify",
+    "order": 3
   },
   {
     "id": "module:array-tools.exists",
@@ -173,7 +177,8 @@
         }
       }
     ],
-    "codeName": "exists"
+    "codeName": "exists",
+    "order": 4
   },
   {
     "id": "module:array-tools.where",
@@ -216,7 +221,8 @@
         }
       }
     ],
-    "codeName": "where"
+    "codeName": "where",
+    "order": 5
   },
   {
     "id": "module:array-tools.findWhere",
@@ -259,7 +265,8 @@
         }
       }
     ],
-    "codeName": "findWhere"
+    "codeName": "findWhere",
+    "order": 6
   },
   {
     "id": "module:array-tools.without",
@@ -302,7 +309,8 @@
         }
       }
     ],
-    "codeName": "without"
+    "codeName": "without",
+    "order": 7
   },
   {
     "id": "module:array-tools.union",
@@ -354,7 +362,8 @@
         }
       }
     ],
-    "codeName": "union"
+    "codeName": "union",
+    "order": 8
   },
   {
     "id": "module:array-tools.commonSequence",
@@ -397,7 +406,8 @@
         }
       }
     ],
-    "codeName": "commonSequence"
+    "codeName": "commonSequence",
+    "order": 9
   },
   {
     "id": "module:array-tools.unique",
@@ -431,7 +441,8 @@
         }
       }
     ],
-    "codeName": "unique"
+    "codeName": "unique",
+    "order": 10
   },
   {
     "id": "module:array-tools.spliceWhile",
@@ -492,7 +503,8 @@
         }
       }
     ],
-    "codeName": "spliceWhile"
+    "codeName": "spliceWhile",
+    "order": 11
   },
   {
     "id": "module:array-tools.extract",
@@ -534,7 +546,8 @@
         "description": "the extracted items."
       }
     ],
-    "codeName": "extract"
+    "codeName": "extract",
+    "order": 12
   },
   {
     "id": "module:array-tools.flatten",
@@ -563,6 +576,7 @@
         "done": false,
         "task": "document"
       }
-    ]
+    ],
+    "order": 13
   }
 ]

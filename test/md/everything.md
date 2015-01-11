@@ -164,15 +164,15 @@ the exported dog
       * _instance_
         * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
+<a name="module_cjs/animals..Animal#type"></a>
+####animal.type → <code>Quadroped</code>
+animal type
+
 <a name="module_cjs/animals..Animal..Quadroped"></a>
 ####class: Animal~Quadroped
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
 #####quadroped.legs
 leg count
-
-<a name="module_cjs/animals..Animal#type"></a>
-####animal.type → <code>Quadroped</code>
-animal type
 
 <a name="module_cjs/class"></a>
 ##cjs/class
@@ -274,6 +274,10 @@ the exported class
 ####new Human()
 the exported contructor
 
+<a name="module_cjs/human--Human#liver"></a>
+####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+an instance of Organ
+
 <a name="module_cjs/human--Human..Organ"></a>
 ####class: Human~Organ
 a class inside a class
@@ -285,17 +289,13 @@ a class inside a class
   * _inner_
     * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
-<a name="module_cjs/human--Human..Organ..Cell"></a>
-#####class: Organ~Cell
-a class inside a class inside a class
-
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 #####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
-<a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
-an instance of Organ
+<a name="module_cjs/human--Human..Organ..Cell"></a>
+#####class: Organ~Cell
+a class inside a class inside a class
 
 <a name="module_linkMod"></a>
 ##linkMod
@@ -303,11 +303,15 @@ A module. Refer to it using [this link](#module_linkMod).
 
 
 * [linkMod](#module_linkMod)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
-  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
+
+<a name="module_linkMod.event_MyEvent"></a>
+###event: "event:MyEvent"
+An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="external_Math"></a>
 ###external: linkMod~Math
@@ -320,10 +324,6 @@ The built in Math object. Refer to it with [Math](#external_Math).
 <a name="external_Date"></a>
 ###external: linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
-
-<a name="module_linkMod.event_MyEvent"></a>
-###event: "event:MyEvent"
-An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
 ###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
@@ -388,10 +388,6 @@ the global class constructor
 ###globalClass.propOne
 an instance property
 
-<a name="GlobalClass.propTwo"></a>
-###GlobalClass.propTwo
-a static property
-
 <a name="GlobalClass#methodOne"></a>
 ###globalClass.methodOne()
 parent method one
@@ -399,6 +395,10 @@ parent method one
 <a name="GlobalClass#methodTwo"></a>
 ###globalClass.methodTwo()
 parent method two
+
+<a name="GlobalClass.propTwo"></a>
+###GlobalClass.propTwo
+a static property
 
 <a name="GlobalChildClass"></a>
 ##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>

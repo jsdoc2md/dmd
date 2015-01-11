@@ -4,7 +4,8 @@
     "longname": "module:MapView",
     "name": "MapView",
     "kind": "module",
-    "description": "MapView encapsulates a Google maps view so it can be used with famo.us.\n\nAdditionally it adds methods to set the position and zoom-factor of the map using transitions.\nUse {@link MapModifier} and {@link MapStateModifier} to place famo.us renderables on the map, much like google-maps markers.\n\n**Map-types**\n\n|Value|Description|\n|---|---|\n|MapType.GOOGLEMAPS (default)|Google-maps.|\n|MapType.LEAFLET|Leaflet.js.|"
+    "description": "MapView encapsulates a Google maps view so it can be used with famo.us.\n\nAdditionally it adds methods to set the position and zoom-factor of the map using transitions.\nUse {@link MapModifier} and {@link MapStateModifier} to place famo.us renderables on the map, much like google-maps markers.\n\n**Map-types**\n\n|Value|Description|\n|---|---|\n|MapType.GOOGLEMAPS (default)|Google-maps.|\n|MapType.LEAFLET|Leaflet.js.|",
+    "order": 0
   },
   {
     "id": "module:MapView--MapView.MapType",
@@ -51,7 +52,8 @@
         "codeName": "LEAFLET"
       }
     ],
-    "codeName": "MapType"
+    "codeName": "MapType",
+    "order": 1
   },
   {
     "id": "module:MapView--MapView",
@@ -61,7 +63,8 @@
     "isExported": true,
     "memberof": "module:MapView",
     "alias": "module:MapView",
-    "codeName": "MapView"
+    "codeName": "MapView",
+    "order": 2
   },
   {
     "id": "module:MapView--MapView()",
@@ -117,7 +120,8 @@
         "description": "Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used).",
         "name": "options.zoomTransition"
       }
-    ]
+    ],
+    "order": 3
   },
   {
     "id": "module:MapView--MapView.DEFAULT_OPTIONS",
@@ -132,7 +136,8 @@
       }
     ],
     "access": "protected",
-    "codeName": "MapView.DEFAULT_OPTIONS"
+    "codeName": "MapView.DEFAULT_OPTIONS",
+    "order": 4
   },
   {
     "id": "module:MapView--MapView#getMap",
@@ -152,7 +157,8 @@
         "description": "Map object."
       }
     ],
-    "codeName": "MapView.prototype.getMap"
+    "codeName": "MapView.prototype.getMap",
+    "order": 6
   },
   {
     "id": "module:MapView--MapView#setPosition",
@@ -193,7 +199,8 @@
         "name": "callback"
       }
     ],
-    "codeName": "MapView.prototype.setPosition"
+    "codeName": "MapView.prototype.setPosition",
+    "order": 7
   },
   {
     "id": "module:MapView--MapView#getPosition",
@@ -213,7 +220,8 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.getPosition"
+    "codeName": "MapView.prototype.getPosition",
+    "order": 8
   },
   {
     "id": "module:MapView--MapView#getFinalPosition",
@@ -233,7 +241,8 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.getFinalPosition"
+    "codeName": "MapView.prototype.getFinalPosition",
+    "order": 9
   },
   {
     "id": "module:MapView--MapView#getZoom",
@@ -253,7 +262,8 @@
         "description": "Zoom-level."
       }
     ],
-    "codeName": "MapView.prototype.getZoom"
+    "codeName": "MapView.prototype.getZoom",
+    "order": 10
   },
   {
     "id": "module:MapView--MapView#pointFromPosition",
@@ -284,7 +294,8 @@
         "description": "Position in pixels, relative to the left-top of the mapView."
       }
     ],
-    "codeName": "MapView.prototype.pointFromPosition"
+    "codeName": "MapView.prototype.pointFromPosition",
+    "order": 11
   },
   {
     "id": "module:MapView--MapView#positionFromPoint",
@@ -315,7 +326,8 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.positionFromPoint"
+    "codeName": "MapView.prototype.positionFromPoint",
+    "order": 12
   },
   {
     "id": "module:MapView--MapView#getSize",
@@ -335,7 +347,8 @@
         "description": "Size of the mapView."
       }
     ],
-    "codeName": "MapView.prototype.getSize"
+    "codeName": "MapView.prototype.getSize",
+    "order": 13
   },
   {
     "id": "module:MapView--MapView#halt",
@@ -345,7 +358,8 @@
     "kind": "function",
     "description": "Halts any pending transitions.",
     "memberof": "module:MapView--MapView",
-    "codeName": "MapView.prototype.halt"
+    "codeName": "MapView.prototype.halt",
+    "order": 14
   },
   {
     "id": "module:MapView--MapView#isActive",
@@ -365,7 +379,8 @@
         "description": "True when there are active transitions running."
       }
     ],
-    "codeName": "MapView.prototype.isActive"
+    "codeName": "MapView.prototype.isActive",
+    "order": 15
   },
   {
     "id": "external:LatLng",
@@ -376,6 +391,7 @@
     "memberof": "module:MapView--MapView",
     "see": [
       "https://developers.google.com/maps/documentation/javascript/reference#LatLng"
-    ]
+    ],
+    "order": 19
   }
 ]

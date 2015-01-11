@@ -7,7 +7,8 @@
     "kind": "member",
     "description": "Used as a safe reference for `undefined` in pre ES5 environments.",
     "memberof": "<anonymous>",
-    "codeName": "undefined"
+    "codeName": "undefined",
+    "order": 0
   },
   {
     "id": "<anonymous>~VERSION",
@@ -17,7 +18,8 @@
     "kind": "member",
     "description": "Used as the semantic version number.",
     "memberof": "<anonymous>",
-    "codeName": "VERSION"
+    "codeName": "VERSION",
+    "order": 1
   },
   {
     "id": "<anonymous>~BIND_FLAG",
@@ -27,7 +29,8 @@
     "kind": "member",
     "description": "Used to compose bitmasks for wrapper metadata.",
     "memberof": "<anonymous>",
-    "codeName": "BIND_FLAG"
+    "codeName": "BIND_FLAG",
+    "order": 2
   },
   {
     "id": "<anonymous>~DEFAULT_TRUNC_LENGTH",
@@ -37,7 +40,8 @@
     "kind": "member",
     "description": "Used as default options for `_.trunc`.",
     "memberof": "<anonymous>",
-    "codeName": "DEFAULT_TRUNC_LENGTH"
+    "codeName": "DEFAULT_TRUNC_LENGTH",
+    "order": 3
   },
   {
     "id": "<anonymous>~HOT_COUNT",
@@ -47,7 +51,8 @@
     "kind": "member",
     "description": "Used to detect when a function becomes hot.",
     "memberof": "<anonymous>",
-    "codeName": "HOT_COUNT"
+    "codeName": "HOT_COUNT",
+    "order": 4
   },
   {
     "id": "<anonymous>~LAZY_FILTER_FLAG",
@@ -57,7 +62,8 @@
     "kind": "member",
     "description": "Used to indicate the type of lazy iteratees.",
     "memberof": "<anonymous>",
-    "codeName": "LAZY_FILTER_FLAG"
+    "codeName": "LAZY_FILTER_FLAG",
+    "order": 5
   },
   {
     "id": "<anonymous>~FUNC_ERROR_TEXT",
@@ -67,7 +73,8 @@
     "kind": "member",
     "description": "Used as the `TypeError` message for \"Functions\" methods.",
     "memberof": "<anonymous>",
-    "codeName": "FUNC_ERROR_TEXT"
+    "codeName": "FUNC_ERROR_TEXT",
+    "order": 6
   },
   {
     "id": "<anonymous>~PLACEHOLDER",
@@ -77,7 +84,8 @@
     "kind": "member",
     "description": "Used as the internal argument placeholder.",
     "memberof": "<anonymous>",
-    "codeName": "PLACEHOLDER"
+    "codeName": "PLACEHOLDER",
+    "order": 7
   },
   {
     "id": "<anonymous>~reEmptyStringLeading",
@@ -87,7 +95,8 @@
     "kind": "member",
     "description": "Used to match empty string literals in compiled template source.",
     "memberof": "<anonymous>",
-    "codeName": "reEmptyStringLeading"
+    "codeName": "reEmptyStringLeading",
+    "order": 8
   },
   {
     "id": "<anonymous>~reEscapedHtml",
@@ -97,7 +106,8 @@
     "kind": "member",
     "description": "Used to match HTML entities and HTML characters.",
     "memberof": "<anonymous>",
-    "codeName": "reEscapedHtml"
+    "codeName": "reEscapedHtml",
+    "order": 9
   },
   {
     "id": "<anonymous>~reEscape",
@@ -107,7 +117,8 @@
     "kind": "member",
     "description": "Used to match template delimiters.",
     "memberof": "<anonymous>",
-    "codeName": "reEscape"
+    "codeName": "reEscape",
+    "order": 10
   },
   {
     "id": "<anonymous>~reEsTemplate",
@@ -117,7 +128,8 @@
     "kind": "member",
     "description": "Used to match ES6 template delimiters.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literal-lexical-components)\nfor more details.",
     "memberof": "<anonymous>",
-    "codeName": "reEsTemplate"
+    "codeName": "reEsTemplate",
+    "order": 11
   },
   {
     "id": "<anonymous>~reFlags",
@@ -127,7 +139,8 @@
     "kind": "member",
     "description": "Used to match `RegExp` flags from their coerced string values.",
     "memberof": "<anonymous>",
-    "codeName": "reFlags"
+    "codeName": "reFlags",
+    "order": 12
   },
   {
     "id": "<anonymous>~reFuncName",
@@ -137,7 +150,8 @@
     "kind": "member",
     "description": "Used to detect named functions.",
     "memberof": "<anonymous>",
-    "codeName": "reFuncName"
+    "codeName": "reFuncName",
+    "order": 13
   },
   {
     "id": "<anonymous>~reHexPrefix",
@@ -147,7 +161,8 @@
     "kind": "member",
     "description": "Used to detect hexadecimal string values.",
     "memberof": "<anonymous>",
-    "codeName": "reHexPrefix"
+    "codeName": "reHexPrefix",
+    "order": 14
   },
   {
     "id": "<anonymous>~reHostCtor",
@@ -157,7 +172,8 @@
     "kind": "member",
     "description": "Used to detect host constructors (Safari > 5).",
     "memberof": "<anonymous>",
-    "codeName": "reHostCtor"
+    "codeName": "reHostCtor",
+    "order": 15
   },
   {
     "id": "<anonymous>~reLatin1",
@@ -167,7 +183,8 @@
     "kind": "member",
     "description": "Used to match latin-1 supplementary letters (excluding mathematical operators).",
     "memberof": "<anonymous>",
-    "codeName": "reLatin1"
+    "codeName": "reLatin1",
+    "order": 16
   },
   {
     "id": "<anonymous>~reNoMatch",
@@ -177,7 +194,8 @@
     "kind": "member",
     "description": "Used to ensure capturing order of template delimiters.",
     "memberof": "<anonymous>",
-    "codeName": "reNoMatch"
+    "codeName": "reNoMatch",
+    "order": 17
   },
   {
     "id": "<anonymous>~reRegExpChars",
@@ -187,7 +205,8 @@
     "kind": "member",
     "description": "Used to match `RegExp` special characters.\nSee this [article on `RegExp` characters](http://www.regular-expressions.info/characters.html#special)\nfor more details.",
     "memberof": "<anonymous>",
-    "codeName": "reRegExpChars"
+    "codeName": "reRegExpChars",
+    "order": 18
   },
   {
     "id": "<anonymous>~reThis",
@@ -197,7 +216,8 @@
     "kind": "member",
     "description": "Used to detect functions containing a `this` reference.",
     "memberof": "<anonymous>",
-    "codeName": "reThis"
+    "codeName": "reThis",
+    "order": 19
   },
   {
     "id": "<anonymous>~reUnescapedString",
@@ -207,7 +227,8 @@
     "kind": "member",
     "description": "Used to match unescaped characters in compiled string literals.",
     "memberof": "<anonymous>",
-    "codeName": "reUnescapedString"
+    "codeName": "reUnescapedString",
+    "order": 20
   },
   {
     "id": "<anonymous>~reWords",
@@ -217,7 +238,8 @@
     "kind": "member",
     "description": "Used to match words to create compound words.",
     "memberof": "<anonymous>",
-    "codeName": "reWords"
+    "codeName": "reWords",
+    "order": 21
   },
   {
     "id": "<anonymous>~whitespace",
@@ -227,7 +249,8 @@
     "kind": "member",
     "description": "Used to detect and test for whitespace.",
     "memberof": "<anonymous>",
-    "codeName": "whitespace"
+    "codeName": "whitespace",
+    "order": 22
   },
   {
     "id": "<anonymous>~contextProps",
@@ -237,7 +260,8 @@
     "kind": "member",
     "description": "Used to assign default `context` object properties.",
     "memberof": "<anonymous>",
-    "codeName": "contextProps"
+    "codeName": "contextProps",
+    "order": 23
   },
   {
     "id": "<anonymous>~shadowProps",
@@ -247,7 +271,8 @@
     "kind": "member",
     "description": "Used to fix the JScript `[[DontEnum]]` bug.",
     "memberof": "<anonymous>",
-    "codeName": "shadowProps"
+    "codeName": "shadowProps",
+    "order": 24
   },
   {
     "id": "<anonymous>~templateCounter",
@@ -257,7 +282,8 @@
     "kind": "member",
     "description": "Used to make template sourceURLs easier to identify.",
     "memberof": "<anonymous>",
-    "codeName": "templateCounter"
+    "codeName": "templateCounter",
+    "order": 25
   },
   {
     "id": "<anonymous>~argsClass",
@@ -267,7 +293,8 @@
     "kind": "member",
     "description": "`Object#toString` result references.",
     "memberof": "<anonymous>",
-    "codeName": "argsClass"
+    "codeName": "argsClass",
+    "order": 26
   },
   {
     "id": "<anonymous>~arrayLikeClasses",
@@ -277,7 +304,8 @@
     "kind": "member",
     "description": "Used to identify object classifications that are treated like arrays.",
     "memberof": "<anonymous>",
-    "codeName": "arrayLikeClasses"
+    "codeName": "arrayLikeClasses",
+    "order": 27
   },
   {
     "id": "<anonymous>~cloneableClasses",
@@ -287,7 +315,8 @@
     "kind": "member",
     "description": "Used to identify object classifications that `_.clone` supports.",
     "memberof": "<anonymous>",
-    "codeName": "cloneableClasses"
+    "codeName": "cloneableClasses",
+    "order": 28
   },
   {
     "id": "<anonymous>~debounceOptions",
@@ -297,7 +326,8 @@
     "kind": "member",
     "description": "Used as an internal `_.debounce` options object by `_.throttle`.",
     "memberof": "<anonymous>",
-    "codeName": "debounceOptions"
+    "codeName": "debounceOptions",
+    "order": 29
   },
   {
     "id": "<anonymous>~deburredLetters",
@@ -307,7 +337,8 @@
     "kind": "member",
     "description": "Used to map latin-1 supplementary letters to basic latin letters.",
     "memberof": "<anonymous>",
-    "codeName": "deburredLetters"
+    "codeName": "deburredLetters",
+    "order": 30
   },
   {
     "id": "<anonymous>~htmlEscapes",
@@ -317,7 +348,8 @@
     "kind": "member",
     "description": "Used to map characters to HTML entities.",
     "memberof": "<anonymous>",
-    "codeName": "htmlEscapes"
+    "codeName": "htmlEscapes",
+    "order": 31
   },
   {
     "id": "<anonymous>~htmlUnescapes",
@@ -327,7 +359,8 @@
     "kind": "member",
     "description": "Used to map HTML entities to characters.",
     "memberof": "<anonymous>",
-    "codeName": "htmlUnescapes"
+    "codeName": "htmlUnescapes",
+    "order": 32
   },
   {
     "id": "<anonymous>~objectTypes",
@@ -337,7 +370,8 @@
     "kind": "member",
     "description": "Used to determine if values are of the language type `Object`.",
     "memberof": "<anonymous>",
-    "codeName": "objectTypes"
+    "codeName": "objectTypes",
+    "order": 33
   },
   {
     "id": "<anonymous>~stringEscapes",
@@ -347,7 +381,8 @@
     "kind": "member",
     "description": "Used to escape characters for inclusion in compiled string literals.",
     "memberof": "<anonymous>",
-    "codeName": "stringEscapes"
+    "codeName": "stringEscapes",
+    "order": 34
   },
   {
     "id": "<anonymous>~root",
@@ -357,7 +392,8 @@
     "kind": "member",
     "description": "Used as a reference to the global object.\n\nThe `this` value is used if it is the global object to avoid Greasemonkey's\nrestricted `window` object, otherwise the `window` object is used.",
     "memberof": "<anonymous>",
-    "codeName": "root"
+    "codeName": "root",
+    "order": 35
   },
   {
     "id": "<anonymous>~freeExports",
@@ -367,7 +403,8 @@
     "kind": "member",
     "description": "Detect free variable `exports`.",
     "memberof": "<anonymous>",
-    "codeName": "freeExports"
+    "codeName": "freeExports",
+    "order": 36
   },
   {
     "id": "<anonymous>~freeModule",
@@ -377,7 +414,8 @@
     "kind": "member",
     "description": "Detect free variable `module`.",
     "memberof": "<anonymous>",
-    "codeName": "freeModule"
+    "codeName": "freeModule",
+    "order": 37
   },
   {
     "id": "<anonymous>~freeGlobal",
@@ -387,7 +425,8 @@
     "kind": "member",
     "description": "Detect free variable `global` from Node.js or Browserified code and use it as `root`.",
     "memberof": "<anonymous>",
-    "codeName": "freeGlobal"
+    "codeName": "freeGlobal",
+    "order": 38
   },
   {
     "id": "<anonymous>~moduleExports",
@@ -397,7 +436,8 @@
     "kind": "member",
     "description": "Detect the popular CommonJS extension `module.exports`.",
     "memberof": "<anonymous>",
-    "codeName": "moduleExports"
+    "codeName": "moduleExports",
+    "order": 39
   },
   {
     "id": "_.runInContext",
@@ -434,7 +474,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "runInContext"
+    "codeName": "runInContext",
+    "order": 70
   },
   {
     "id": "_.runInContext~Array",
@@ -444,7 +485,8 @@
     "kind": "member",
     "description": "Native constructor references.",
     "memberof": "_.runInContext",
-    "codeName": "Array"
+    "codeName": "Array",
+    "order": 71
   },
   {
     "id": "_.runInContext~arrayProto",
@@ -454,7 +496,8 @@
     "kind": "member",
     "description": "Used for native method references.",
     "memberof": "_.runInContext",
-    "codeName": "arrayProto"
+    "codeName": "arrayProto",
+    "order": 72
   },
   {
     "id": "_.runInContext~document",
@@ -464,7 +507,8 @@
     "kind": "member",
     "description": "Used to detect DOM support.",
     "memberof": "_.runInContext",
-    "codeName": "document"
+    "codeName": "document",
+    "order": 73
   },
   {
     "id": "_.runInContext~fnToString",
@@ -474,7 +518,8 @@
     "kind": "member",
     "description": "Used to resolve the decompiled source of functions.",
     "memberof": "_.runInContext",
-    "codeName": "fnToString"
+    "codeName": "fnToString",
+    "order": 74
   },
   {
     "id": "_.runInContext~hasOwnProperty",
@@ -484,7 +529,8 @@
     "kind": "member",
     "description": "Used to check objects for own properties.",
     "memberof": "_.runInContext",
-    "codeName": "hasOwnProperty"
+    "codeName": "hasOwnProperty",
+    "order": 75
   },
   {
     "id": "_.runInContext~idCounter",
@@ -494,7 +540,8 @@
     "kind": "member",
     "description": "Used to generate unique IDs.",
     "memberof": "_.runInContext",
-    "codeName": "idCounter"
+    "codeName": "idCounter",
+    "order": 76
   },
   {
     "id": "_.runInContext~oldDash",
@@ -504,7 +551,8 @@
     "kind": "member",
     "description": "Used to restore the original `_` reference in `_.noConflict`.",
     "memberof": "_.runInContext",
-    "codeName": "oldDash"
+    "codeName": "oldDash",
+    "order": 77
   },
   {
     "id": "_.runInContext~toString",
@@ -514,7 +562,8 @@
     "kind": "member",
     "description": "Used to resolve the internal `[[Class]]` of values.",
     "memberof": "_.runInContext",
-    "codeName": "toString"
+    "codeName": "toString",
+    "order": 78
   },
   {
     "id": "_.runInContext~reNative",
@@ -524,7 +573,8 @@
     "kind": "member",
     "description": "Used to detect if a method is native.",
     "memberof": "_.runInContext",
-    "codeName": "reNative"
+    "codeName": "reNative",
+    "order": 79
   },
   {
     "id": "_.runInContext~ArrayBuffer",
@@ -534,7 +584,8 @@
     "kind": "member",
     "description": "Native method references.",
     "memberof": "_.runInContext",
-    "codeName": "ArrayBuffer"
+    "codeName": "ArrayBuffer",
+    "order": 80
   },
   {
     "id": "_.runInContext~Float64Array",
@@ -544,7 +595,8 @@
     "kind": "member",
     "description": "Used to clone array buffers.",
     "memberof": "_.runInContext",
-    "codeName": "Float64Array"
+    "codeName": "Float64Array",
+    "order": 81
   },
   {
     "id": "_.runInContext~NEGATIVE_INFINITY",
@@ -554,7 +606,8 @@
     "kind": "member",
     "description": "Used as references for `-Infinity` and `Infinity`.",
     "memberof": "_.runInContext",
-    "codeName": "NEGATIVE_INFINITY"
+    "codeName": "NEGATIVE_INFINITY",
+    "order": 82
   },
   {
     "id": "_.runInContext~MAX_ARRAY_LENGTH",
@@ -564,7 +617,8 @@
     "kind": "member",
     "description": "Used as references for the maximum length and index of an array.",
     "memberof": "_.runInContext",
-    "codeName": "MAX_ARRAY_LENGTH"
+    "codeName": "MAX_ARRAY_LENGTH",
+    "order": 83
   },
   {
     "id": "_.runInContext~FLOAT64_BYTES_PER_ELEMENT",
@@ -574,7 +628,8 @@
     "kind": "member",
     "description": "Used as the size, in bytes, of each `Float64Array` element.",
     "memberof": "_.runInContext",
-    "codeName": "FLOAT64_BYTES_PER_ELEMENT"
+    "codeName": "FLOAT64_BYTES_PER_ELEMENT",
+    "order": 84
   },
   {
     "id": "_.runInContext~MAX_SAFE_INTEGER",
@@ -584,7 +639,8 @@
     "kind": "member",
     "description": "Used as the maximum length of an array-like value.\nSee the [ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength)\nfor more details.",
     "memberof": "_.runInContext",
-    "codeName": "MAX_SAFE_INTEGER"
+    "codeName": "MAX_SAFE_INTEGER",
+    "order": 85
   },
   {
     "id": "_.runInContext~metaMap",
@@ -594,7 +650,8 @@
     "kind": "member",
     "description": "Used to store function metadata.",
     "memberof": "_.runInContext",
-    "codeName": "metaMap"
+    "codeName": "metaMap",
+    "order": 86
   },
   {
     "id": "_.runInContext~ctorByClass",
@@ -604,7 +661,8 @@
     "kind": "member",
     "description": "Used to lookup a built-in constructor by `[[Class]]`.",
     "memberof": "_.runInContext",
-    "codeName": "ctorByClass"
+    "codeName": "ctorByClass",
+    "order": 87
   },
   {
     "id": "_.runInContext~nonEnumProps",
@@ -614,7 +672,8 @@
     "kind": "member",
     "description": "Used to avoid iterating over non-enumerable properties in IE < 9.",
     "memberof": "_.runInContext",
-    "codeName": "nonEnumProps"
+    "codeName": "nonEnumProps",
+    "order": 88
   },
   {
     "id": "_",
@@ -622,7 +681,8 @@
     "name": "_",
     "scope": "global",
     "kind": "class",
-    "category": "Chain"
+    "category": "Chain",
+    "order": 89
   },
   {
     "id": "_()",
@@ -654,7 +714,8 @@
         },
         "description": "Returns a `lodash` instance."
       }
-    ]
+    ],
+    "order": 90
   },
   {
     "id": "_.support",
@@ -669,7 +730,8 @@
         "Object"
       ]
     },
-    "codeName": "support"
+    "codeName": "support",
+    "order": 92
   },
   {
     "id": "_.support.support.argsClass",
@@ -684,7 +746,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.argsClass"
+    "codeName": "support.argsClass",
+    "order": 93
   },
   {
     "id": "_.support.support.enumErrorProps",
@@ -699,7 +762,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.enumErrorProps"
+    "codeName": "support.enumErrorProps",
+    "order": 94
   },
   {
     "id": "_.support.support.enumPrototypes",
@@ -714,7 +778,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.enumPrototypes"
+    "codeName": "support.enumPrototypes",
+    "order": 95
   },
   {
     "id": "_.support.support.funcDecomp",
@@ -729,7 +794,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.funcDecomp"
+    "codeName": "support.funcDecomp",
+    "order": 96
   },
   {
     "id": "_.support.support.funcNames",
@@ -744,7 +810,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.funcNames"
+    "codeName": "support.funcNames",
+    "order": 97
   },
   {
     "id": "_.support.support.nodeClass",
@@ -759,7 +826,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.nodeClass"
+    "codeName": "support.nodeClass",
+    "order": 98
   },
   {
     "id": "_.support.support.nonEnumStrings",
@@ -774,7 +842,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.nonEnumStrings"
+    "codeName": "support.nonEnumStrings",
+    "order": 99
   },
   {
     "id": "_.support.support.nonEnumShadows",
@@ -789,7 +858,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.nonEnumShadows"
+    "codeName": "support.nonEnumShadows",
+    "order": 100
   },
   {
     "id": "_.support.support.ownLast",
@@ -804,7 +874,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.ownLast"
+    "codeName": "support.ownLast",
+    "order": 101
   },
   {
     "id": "_.support.support.spliceObjects",
@@ -819,7 +890,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.spliceObjects"
+    "codeName": "support.spliceObjects",
+    "order": 102
   },
   {
     "id": "_.support.support.unindexedChars",
@@ -834,7 +906,8 @@
         "boolean"
       ]
     },
-    "codeName": "support.unindexedChars"
+    "codeName": "support.unindexedChars",
+    "order": 103
   },
   {
     "id": "_.lodash.templateSettings",
@@ -849,7 +922,8 @@
         "Object"
       ]
     },
-    "codeName": "lodash.templateSettings"
+    "codeName": "lodash.templateSettings",
+    "order": 104
   },
   {
     "id": "_.templateSettings.escape",
@@ -864,7 +938,8 @@
         "RegExp"
       ]
     },
-    "codeName": "escape"
+    "codeName": "escape",
+    "order": 105
   },
   {
     "id": "_.templateSettings.evaluate",
@@ -879,7 +954,8 @@
         "RegExp"
       ]
     },
-    "codeName": "evaluate"
+    "codeName": "evaluate",
+    "order": 106
   },
   {
     "id": "_.templateSettings.interpolate",
@@ -894,7 +970,8 @@
         "RegExp"
       ]
     },
-    "codeName": "interpolate"
+    "codeName": "interpolate",
+    "order": 107
   },
   {
     "id": "_.templateSettings.variable",
@@ -909,7 +986,8 @@
         "string"
       ]
     },
-    "codeName": "variable"
+    "codeName": "variable",
+    "order": 108
   },
   {
     "id": "_.templateSettings.imports",
@@ -924,7 +1002,8 @@
         "Object"
       ]
     },
-    "codeName": "imports"
+    "codeName": "imports",
+    "order": 109
   },
   {
     "id": "_.templateSettings.imports._",
@@ -939,7 +1018,8 @@
         "function"
       ]
     },
-    "codeName": "_"
+    "codeName": "_",
+    "order": 110
   },
   {
     "id": "_.chunk",
@@ -991,7 +1071,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 201
   },
   {
     "id": "_.compact",
@@ -1026,7 +1107,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "compact"
+    "codeName": "compact",
+    "order": 202
   },
   {
     "id": "_.difference",
@@ -1072,7 +1154,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "difference"
+    "codeName": "difference",
+    "order": 203
   },
   {
     "id": "_.drop",
@@ -1129,7 +1212,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 204
   },
   {
     "id": "_.dropRight",
@@ -1186,7 +1270,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 205
   },
   {
     "id": "_.dropRightWhile",
@@ -1249,7 +1334,8 @@
       ]
     },
     "category": "Array",
-    "codeName": "dropRightWhile"
+    "codeName": "dropRightWhile",
+    "order": 206
   },
   {
     "id": "_.dropWhile",
@@ -1312,7 +1398,8 @@
       ]
     },
     "category": "Array",
-    "codeName": "dropWhile"
+    "codeName": "dropWhile",
+    "order": 207
   },
   {
     "id": "_.findIndex",
@@ -1370,7 +1457,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "findIndex"
+    "codeName": "findIndex",
+    "order": 208
   },
   {
     "id": "_.findLastIndex",
@@ -1428,7 +1516,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "findLastIndex"
+    "codeName": "findLastIndex",
+    "order": 209
   },
   {
     "id": "_.head",
@@ -1464,7 +1553,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "first"
+    "codeName": "first",
+    "order": 210
   },
   {
     "id": "_.flatten",
@@ -1515,7 +1605,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 211
   },
   {
     "id": "_.flattenDeep",
@@ -1550,7 +1641,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "flattenDeep"
+    "codeName": "flattenDeep",
+    "order": 212
   },
   {
     "id": "_.indexOf",
@@ -1606,7 +1698,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "indexOf"
+    "codeName": "indexOf",
+    "order": 213
   },
   {
     "id": "_.initial",
@@ -1641,7 +1734,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "initial"
+    "codeName": "initial",
+    "order": 214
   },
   {
     "id": "_.intersection",
@@ -1678,7 +1772,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "intersection"
+    "codeName": "intersection",
+    "order": 215
   },
   {
     "id": "_.last",
@@ -1713,7 +1808,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "last"
+    "codeName": "last",
+    "order": 216
   },
   {
     "id": "_.lastIndexOf",
@@ -1769,7 +1865,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "lastIndexOf"
+    "codeName": "lastIndexOf",
+    "order": 217
   },
   {
     "id": "_.pull",
@@ -1815,7 +1912,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "pull"
+    "codeName": "pull",
+    "order": 218
   },
   {
     "id": "_.pullAt",
@@ -1862,7 +1960,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "pullAt"
+    "codeName": "pullAt",
+    "order": 219
   },
   {
     "id": "_.remove",
@@ -1920,7 +2019,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "remove"
+    "codeName": "remove",
+    "order": 220
   },
   {
     "id": "_.tail",
@@ -1956,7 +2056,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "rest"
+    "codeName": "rest",
+    "order": 221
   },
   {
     "id": "_.slice",
@@ -2010,7 +2111,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "slice"
+    "codeName": "slice",
+    "order": 222
   },
   {
     "id": "_.sortedIndex",
@@ -2077,7 +2179,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "sortedIndex"
+    "codeName": "sortedIndex",
+    "order": 223
   },
   {
     "id": "_.sortedLastIndex",
@@ -2144,7 +2247,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "sortedLastIndex"
+    "codeName": "sortedLastIndex",
+    "order": 224
   },
   {
     "id": "_.take",
@@ -2201,7 +2305,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 225
   },
   {
     "id": "_.takeRight",
@@ -2258,7 +2363,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 226
   },
   {
     "id": "_.takeRightWhile",
@@ -2321,7 +2427,8 @@
       ]
     },
     "category": "Array",
-    "codeName": "takeRightWhile"
+    "codeName": "takeRightWhile",
+    "order": 227
   },
   {
     "id": "_.takeWhile",
@@ -2384,7 +2491,8 @@
       ]
     },
     "category": "Array",
-    "codeName": "takeWhile"
+    "codeName": "takeWhile",
+    "order": 228
   },
   {
     "id": "_.union",
@@ -2421,7 +2529,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "union"
+    "codeName": "union",
+    "order": 229
   },
   {
     "id": "_.unique",
@@ -2489,7 +2598,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "uniq"
+    "codeName": "uniq",
+    "order": 230
   },
   {
     "id": "_.unzip",
@@ -2524,7 +2634,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "unzip"
+    "codeName": "unzip",
+    "order": 231
   },
   {
     "id": "_.without",
@@ -2570,7 +2681,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "without"
+    "codeName": "without",
+    "order": 232
   },
   {
     "id": "_.xor",
@@ -2607,7 +2719,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "xor"
+    "codeName": "xor",
+    "order": 233
   },
   {
     "id": "_.zip",
@@ -2644,7 +2757,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "zip"
+    "codeName": "zip",
+    "order": 234
   },
   {
     "id": "_.object",
@@ -2691,7 +2805,8 @@
       }
     ],
     "category": "Array",
-    "codeName": "zipObject"
+    "codeName": "zipObject",
+    "order": 235
   },
   {
     "id": "_.chain",
@@ -2726,7 +2841,8 @@
       }
     ],
     "category": "Chain",
-    "codeName": "chain"
+    "codeName": "chain",
+    "order": 236
   },
   {
     "id": "_.tap",
@@ -2780,7 +2896,8 @@
       }
     ],
     "category": "Chain",
-    "codeName": "tap"
+    "codeName": "tap",
+    "order": 237
   },
   {
     "id": "_.thru",
@@ -2834,7 +2951,8 @@
       }
     ],
     "category": "Chain",
-    "codeName": "thru"
+    "codeName": "thru",
+    "order": 238
   },
   {
     "id": "_.chain",
@@ -2857,7 +2975,8 @@
         "description": "Returns the `lodash` object."
       }
     ],
-    "category": "Chain"
+    "category": "Chain",
+    "order": 239
   },
   {
     "id": "_.reverse",
@@ -2880,7 +2999,8 @@
         "description": "Returns the new reversed `lodash` object."
       }
     ],
-    "category": "Chain"
+    "category": "Chain",
+    "order": 240
   },
   {
     "id": "_.toString",
@@ -2903,7 +3023,8 @@
         "description": "Returns the coerced string value."
       }
     ],
-    "category": "Chain"
+    "category": "Chain",
+    "order": 241
   },
   {
     "id": "_.value",
@@ -2927,7 +3048,8 @@
         "description": "Returns the resolved unwrapped value."
       }
     ],
-    "category": "Chain"
+    "category": "Chain",
+    "order": 242
   },
   {
     "id": "_.at",
@@ -2978,7 +3100,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "at"
+    "codeName": "at",
+    "order": 243
   },
   {
     "id": "_.contains, include",
@@ -3035,7 +3158,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "includes"
+    "codeName": "includes",
+    "order": 244
   },
   {
     "id": "_.countBy",
@@ -3095,7 +3219,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "countBy"
+    "codeName": "countBy",
+    "order": 245
   },
   {
     "id": "_.all",
@@ -3156,7 +3281,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "every"
+    "codeName": "every",
+    "order": 246
   },
   {
     "id": "_.select",
@@ -3217,7 +3343,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "filter"
+    "codeName": "filter",
+    "order": 247
   },
   {
     "id": "_.detect",
@@ -3278,7 +3405,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "find"
+    "codeName": "find",
+    "order": 248
   },
   {
     "id": "_.findLast",
@@ -3338,7 +3466,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "findLast"
+    "codeName": "findLast",
+    "order": 249
   },
   {
     "id": "_.findWhere",
@@ -3384,7 +3513,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "findWhere"
+    "codeName": "findWhere",
+    "order": 250
   },
   {
     "id": "_.each",
@@ -3445,7 +3575,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "forEach"
+    "codeName": "forEach",
+    "order": 251
   },
   {
     "id": "_.eachRight",
@@ -3506,7 +3637,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "forEachRight"
+    "codeName": "forEachRight",
+    "order": 252
   },
   {
     "id": "_.groupBy",
@@ -3566,7 +3698,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "groupBy"
+    "codeName": "groupBy",
+    "order": 253
   },
   {
     "id": "_.indexBy",
@@ -3626,7 +3759,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "indexBy"
+    "codeName": "indexBy",
+    "order": 254
   },
   {
     "id": "_.invoke",
@@ -3684,7 +3818,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "invoke"
+    "codeName": "invoke",
+    "order": 255
   },
   {
     "id": "_.collect",
@@ -3745,7 +3880,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "map"
+    "codeName": "map",
+    "order": 256
   },
   {
     "id": "_.max",
@@ -3804,7 +3940,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "max"
+    "codeName": "max",
+    "order": 257
   },
   {
     "id": "_.min",
@@ -3863,7 +4000,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "min"
+    "codeName": "min",
+    "order": 258
   },
   {
     "id": "_.partition",
@@ -3923,7 +4061,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "partition"
+    "codeName": "partition",
+    "order": 259
   },
   {
     "id": "_.pluck",
@@ -3969,7 +4108,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "pluck"
+    "codeName": "pluck",
+    "order": 260
   },
   {
     "id": "_.foldl, inject",
@@ -4037,7 +4177,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "reduce"
+    "codeName": "reduce",
+    "order": 261
   },
   {
     "id": "_.foldr",
@@ -4106,7 +4247,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "reduceRight"
+    "codeName": "reduceRight",
+    "order": 262
   },
   {
     "id": "_.reject",
@@ -4166,7 +4308,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "reject"
+    "codeName": "reject",
+    "order": 263
   },
   {
     "id": "_.sample",
@@ -4219,7 +4362,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 264
   },
   {
     "id": "_.shuffle",
@@ -4256,7 +4400,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "shuffle"
+    "codeName": "shuffle",
+    "order": 265
   },
   {
     "id": "_.size",
@@ -4293,7 +4438,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "size"
+    "codeName": "size",
+    "order": 266
   },
   {
     "id": "_.any",
@@ -4354,7 +4500,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "some"
+    "codeName": "some",
+    "order": 267
   },
   {
     "id": "_.sortBy",
@@ -4415,7 +4562,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "sortBy"
+    "codeName": "sortBy",
+    "order": 268
   },
   {
     "id": "_.sortByAll",
@@ -4463,7 +4611,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "sortByAll"
+    "codeName": "sortByAll",
+    "order": 269
   },
   {
     "id": "_.toArray",
@@ -4500,7 +4649,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "toArray"
+    "codeName": "toArray",
+    "order": 270
   },
   {
     "id": "_.where",
@@ -4546,7 +4696,8 @@
       }
     ],
     "category": "Collection",
-    "codeName": "where"
+    "codeName": "where",
+    "order": 271
   },
   {
     "id": "_.now",
@@ -4560,7 +4711,8 @@
       "_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());\n// => logs the number of milliseconds it took for the deferred function to be invoked"
     ],
     "category": "Date",
-    "codeName": "now"
+    "codeName": "now",
+    "order": 272
   },
   {
     "id": "_.after",
@@ -4604,7 +4756,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "after"
+    "codeName": "after",
+    "order": 273
   },
   {
     "id": "_.ary",
@@ -4656,7 +4809,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 274
   },
   {
     "id": "_.before",
@@ -4700,7 +4854,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "before"
+    "codeName": "before",
+    "order": 275
   },
   {
     "id": "_.bind",
@@ -4756,7 +4911,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "bind"
+    "codeName": "bind",
+    "order": 276
   },
   {
     "id": "_.bindAll",
@@ -4803,7 +4959,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "bindAll"
+    "codeName": "bindAll",
+    "order": 277
   },
   {
     "id": "_.bindKey",
@@ -4858,7 +5015,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "bindKey"
+    "codeName": "bindKey",
+    "order": 278
   },
   {
     "id": "_.curry",
@@ -4910,7 +5068,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 279
   },
   {
     "id": "_.curryRight",
@@ -4962,7 +5121,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 280
   },
   {
     "id": "_.debounce",
@@ -5048,7 +5208,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "debounce"
+    "codeName": "debounce",
+    "order": 281
   },
   {
     "id": "_.defer",
@@ -5094,7 +5255,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "defer"
+    "codeName": "defer",
+    "order": 282
   },
   {
     "id": "_.delay",
@@ -5149,7 +5311,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "delay"
+    "codeName": "delay",
+    "order": 283
   },
   {
     "id": "_.flow",
@@ -5186,7 +5349,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "flow"
+    "codeName": "flow",
+    "order": 284
   },
   {
     "id": "_.backflow, compose",
@@ -5223,7 +5387,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "flowRight"
+    "codeName": "flowRight",
+    "order": 285
   },
   {
     "id": "_.memoize",
@@ -5268,7 +5433,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "memoize"
+    "codeName": "memoize",
+    "order": 286
   },
   {
     "id": "_.negate",
@@ -5303,7 +5469,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "negate"
+    "codeName": "negate",
+    "order": 287
   },
   {
     "id": "_.once",
@@ -5343,7 +5510,8 @@
       ]
     },
     "category": "Function",
-    "codeName": "once"
+    "codeName": "once",
+    "order": 288
   },
   {
     "id": "_.partial",
@@ -5389,7 +5557,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "partial"
+    "codeName": "partial",
+    "order": 289
   },
   {
     "id": "_.partialRight",
@@ -5435,7 +5604,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "partialRight"
+    "codeName": "partialRight",
+    "order": 290
   },
   {
     "id": "_.rearg",
@@ -5481,7 +5651,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "rearg"
+    "codeName": "rearg",
+    "order": 291
   },
   {
     "id": "_.throttle",
@@ -5557,7 +5728,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "throttle"
+    "codeName": "throttle",
+    "order": 292
   },
   {
     "id": "_.wrap",
@@ -5601,7 +5773,8 @@
       }
     ],
     "category": "Function",
-    "codeName": "wrap"
+    "codeName": "wrap",
+    "order": 293
   },
   {
     "id": "_.clone",
@@ -5666,7 +5839,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "clone"
+    "codeName": "clone",
+    "order": 294
   },
   {
     "id": "_.cloneDeep",
@@ -5721,7 +5895,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "cloneDeep"
+    "codeName": "cloneDeep",
+    "order": 295
   },
   {
     "id": "_.isArguments",
@@ -5756,7 +5931,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isArguments"
+    "codeName": "isArguments",
+    "order": 296
   },
   {
     "id": "_.isArray",
@@ -5791,7 +5967,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isArray"
+    "codeName": "isArray",
+    "order": 297
   },
   {
     "id": "_.isBoolean",
@@ -5826,7 +6003,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isBoolean"
+    "codeName": "isBoolean",
+    "order": 298
   },
   {
     "id": "_.isDate",
@@ -5861,7 +6039,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isDate"
+    "codeName": "isDate",
+    "order": 299
   },
   {
     "id": "_.isElement",
@@ -5896,7 +6075,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isElement"
+    "codeName": "isElement",
+    "order": 300
   },
   {
     "id": "_.isEmpty",
@@ -5933,7 +6113,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isEmpty"
+    "codeName": "isEmpty",
+    "order": 301
   },
   {
     "id": "_.isEqual",
@@ -5997,7 +6178,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isEqual"
+    "codeName": "isEqual",
+    "order": 302
   },
   {
     "id": "_.isError",
@@ -6032,7 +6214,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isError"
+    "codeName": "isError",
+    "order": 303
   },
   {
     "id": "_.isFinite",
@@ -6067,7 +6250,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isFinite"
+    "codeName": "isFinite",
+    "order": 304
   },
   {
     "id": "_.isFunction",
@@ -6102,7 +6286,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isFunction"
+    "codeName": "isFunction",
+    "order": 305
   },
   {
     "id": "_.isObject",
@@ -6137,7 +6322,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isObject"
+    "codeName": "isObject",
+    "order": 306
   },
   {
     "id": "_.isMatch",
@@ -6201,7 +6387,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isMatch"
+    "codeName": "isMatch",
+    "order": 307
   },
   {
     "id": "_.isNaN",
@@ -6236,7 +6423,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isNaN"
+    "codeName": "isNaN",
+    "order": 308
   },
   {
     "id": "_.isNative",
@@ -6271,7 +6459,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isNative"
+    "codeName": "isNative",
+    "order": 309
   },
   {
     "id": "_.isNull",
@@ -6306,7 +6495,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isNull"
+    "codeName": "isNull",
+    "order": 310
   },
   {
     "id": "_.isNumber",
@@ -6341,7 +6531,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isNumber"
+    "codeName": "isNumber",
+    "order": 311
   },
   {
     "id": "_.isPlainObject",
@@ -6376,7 +6567,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isPlainObject"
+    "codeName": "isPlainObject",
+    "order": 312
   },
   {
     "id": "_.isRegExp",
@@ -6411,7 +6603,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isRegExp"
+    "codeName": "isRegExp",
+    "order": 313
   },
   {
     "id": "_.isString",
@@ -6446,7 +6639,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isString"
+    "codeName": "isString",
+    "order": 314
   },
   {
     "id": "_.isUndefined",
@@ -6481,7 +6675,8 @@
       }
     ],
     "category": "Lang",
-    "codeName": "isUndefined"
+    "codeName": "isUndefined",
+    "order": 315
   },
   {
     "id": "_.extend",
@@ -6548,7 +6743,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "assign"
+    "codeName": "assign",
+    "order": 316
   },
   {
     "id": "_.create",
@@ -6599,7 +6795,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 317
   },
   {
     "id": "_.defaults",
@@ -6645,7 +6842,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "defaults"
+    "codeName": "defaults",
+    "order": 318
   },
   {
     "id": "_.findKey",
@@ -6704,7 +6902,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "findKey"
+    "codeName": "findKey",
+    "order": 319
   },
   {
     "id": "_.findLastKey",
@@ -6763,7 +6962,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "findLastKey"
+    "codeName": "findLastKey",
+    "order": 320
   },
   {
     "id": "_.forIn",
@@ -6819,7 +7019,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "forIn"
+    "codeName": "forIn",
+    "order": 321
   },
   {
     "id": "_.forInRight",
@@ -6875,7 +7076,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "forInRight"
+    "codeName": "forInRight",
+    "order": 322
   },
   {
     "id": "_.forOwn",
@@ -6931,7 +7133,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "forOwn"
+    "codeName": "forOwn",
+    "order": 323
   },
   {
     "id": "_.forOwnRight",
@@ -6987,7 +7190,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "forOwnRight"
+    "codeName": "forOwnRight",
+    "order": 324
   },
   {
     "id": "_.methods",
@@ -7023,7 +7227,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "functions"
+    "codeName": "functions",
+    "order": 325
   },
   {
     "id": "_.has",
@@ -7067,7 +7272,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "has"
+    "codeName": "has",
+    "order": 326
   },
   {
     "id": "_.invert",
@@ -7118,7 +7324,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 327
   },
   {
     "id": "_.keys",
@@ -7153,7 +7360,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "keys"
+    "codeName": "keys",
+    "order": 328
   },
   {
     "id": "_.keysIn",
@@ -7188,7 +7396,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "keysIn"
+    "codeName": "keysIn",
+    "order": 329
   },
   {
     "id": "_.mapValues",
@@ -7246,7 +7455,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "mapValues"
+    "codeName": "mapValues",
+    "order": 330
   },
   {
     "id": "_.merge",
@@ -7312,7 +7522,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "merge"
+    "codeName": "merge",
+    "order": 331
   },
   {
     "id": "_.omit",
@@ -7367,7 +7578,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "omit"
+    "codeName": "omit",
+    "order": 332
   },
   {
     "id": "_.pairs",
@@ -7402,7 +7614,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "pairs"
+    "codeName": "pairs",
+    "order": 333
   },
   {
     "id": "_.pick",
@@ -7457,7 +7670,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "pick"
+    "codeName": "pick",
+    "order": 334
   },
   {
     "id": "_.result",
@@ -7511,7 +7725,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "result"
+    "codeName": "result",
+    "order": 335
   },
   {
     "id": "_.transform",
@@ -7578,7 +7793,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "transform"
+    "codeName": "transform",
+    "order": 336
   },
   {
     "id": "_.values",
@@ -7613,7 +7829,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "values"
+    "codeName": "values",
+    "order": 337
   },
   {
     "id": "_.valuesIn",
@@ -7648,7 +7865,8 @@
       }
     ],
     "category": "Object",
-    "codeName": "valuesIn"
+    "codeName": "valuesIn",
+    "order": 338
   },
   {
     "id": "_.random",
@@ -7706,7 +7924,8 @@
       }
     ],
     "category": "Number",
-    "codeName": "random"
+    "codeName": "random",
+    "order": 339
   },
   {
     "id": "_.camelCase",
@@ -7743,7 +7962,8 @@
       }
     ],
     "category": "String",
-    "codeName": "camelCase"
+    "codeName": "camelCase",
+    "order": 340
   },
   {
     "id": "_.capitalize",
@@ -7780,7 +8000,8 @@
       }
     ],
     "category": "String",
-    "codeName": "capitalize"
+    "codeName": "capitalize",
+    "order": 341
   },
   {
     "id": "_.deburr",
@@ -7817,7 +8038,8 @@
       }
     ],
     "category": "String",
-    "codeName": "deburr"
+    "codeName": "deburr",
+    "order": 342
   },
   {
     "id": "_.endsWith",
@@ -7875,7 +8097,8 @@
       }
     ],
     "category": "String",
-    "codeName": "endsWith"
+    "codeName": "endsWith",
+    "order": 343
   },
   {
     "id": "_.escape",
@@ -7912,7 +8135,8 @@
       }
     ],
     "category": "String",
-    "codeName": "escape"
+    "codeName": "escape",
+    "order": 344
   },
   {
     "id": "_.escapeRegExp",
@@ -7949,7 +8173,8 @@
       }
     ],
     "category": "String",
-    "codeName": "escapeRegExp"
+    "codeName": "escapeRegExp",
+    "order": 345
   },
   {
     "id": "_.kebabCase",
@@ -7986,7 +8211,8 @@
       }
     ],
     "category": "String",
-    "codeName": "kebabCase"
+    "codeName": "kebabCase",
+    "order": 346
   },
   {
     "id": "_.pad",
@@ -8045,7 +8271,8 @@
       }
     ],
     "category": "String",
-    "codeName": "pad"
+    "codeName": "pad",
+    "order": 347
   },
   {
     "id": "_.padLeft",
@@ -8104,7 +8331,8 @@
       }
     ],
     "category": "String",
-    "codeName": "padLeft"
+    "codeName": "padLeft",
+    "order": 348
   },
   {
     "id": "_.padRight",
@@ -8163,7 +8391,8 @@
       }
     ],
     "category": "String",
-    "codeName": "padRight"
+    "codeName": "padRight",
+    "order": 349
   },
   {
     "id": "_.parseInt",
@@ -8214,7 +8443,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 350
   },
   {
     "id": "_.repeat",
@@ -8262,7 +8492,8 @@
       }
     ],
     "category": "String",
-    "codeName": "repeat"
+    "codeName": "repeat",
+    "order": 351
   },
   {
     "id": "_.snakeCase",
@@ -8299,7 +8530,8 @@
       }
     ],
     "category": "String",
-    "codeName": "snakeCase"
+    "codeName": "snakeCase",
+    "order": 352
   },
   {
     "id": "_.startsWith",
@@ -8357,7 +8589,8 @@
       }
     ],
     "category": "String",
-    "codeName": "startsWith"
+    "codeName": "startsWith",
+    "order": 353
   },
   {
     "id": "_.template",
@@ -8470,7 +8703,8 @@
         "tag": "param-",
         "value": "{Object} [otherOptions] Enables the legacy `options` param signature."
       }
-    ]
+    ],
+    "order": 354
   },
   {
     "id": "_.trim",
@@ -8524,7 +8758,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 355
   },
   {
     "id": "_.trimLeft",
@@ -8578,7 +8813,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 356
   },
   {
     "id": "_.trimRight",
@@ -8632,7 +8868,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 357
   },
   {
     "id": "_.trunc",
@@ -8719,7 +8956,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 358
   },
   {
     "id": "_.unescape",
@@ -8756,7 +8994,8 @@
       }
     ],
     "category": "String",
-    "codeName": "unescape"
+    "codeName": "unescape",
+    "order": 359
   },
   {
     "id": "_.words",
@@ -8810,7 +9049,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 360
   },
   {
     "id": "_.attempt",
@@ -8845,7 +9085,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "attempt"
+    "codeName": "attempt",
+    "order": 361
   },
   {
     "id": "_.iteratee",
@@ -8899,7 +9140,8 @@
         "tag": "param-",
         "value": "{Object} [guard] Enables use as a callback for functions like `_.map`."
       }
-    ]
+    ],
+    "order": 362
   },
   {
     "id": "_.constant",
@@ -8934,7 +9176,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "constant"
+    "codeName": "constant",
+    "order": 363
   },
   {
     "id": "_.identity",
@@ -8969,7 +9212,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "identity"
+    "codeName": "identity",
+    "order": 364
   },
   {
     "id": "_.matches",
@@ -9004,7 +9248,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "matches"
+    "codeName": "matches",
+    "order": 365
   },
   {
     "id": "_.mixin",
@@ -9073,7 +9318,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "mixin"
+    "codeName": "mixin",
+    "order": 366
   },
   {
     "id": "_.noConflict",
@@ -9097,7 +9343,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "noConflict"
+    "codeName": "noConflict",
+    "order": 367
   },
   {
     "id": "_.noop",
@@ -9111,7 +9358,8 @@
       "var object = { 'user': 'fred' };\n_.noop(object) === undefined;\n// => true"
     ],
     "category": "Utility",
-    "codeName": "noop"
+    "codeName": "noop",
+    "order": 368
   },
   {
     "id": "_.property",
@@ -9146,7 +9394,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "property"
+    "codeName": "property",
+    "order": 369
   },
   {
     "id": "_.propertyOf",
@@ -9181,7 +9430,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "propertyOf"
+    "codeName": "propertyOf",
+    "order": 370
   },
   {
     "id": "_.range",
@@ -9238,7 +9488,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "range"
+    "codeName": "range",
+    "order": 371
   },
   {
     "id": "_.times",
@@ -9294,7 +9545,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "times"
+    "codeName": "times",
+    "order": 372
   },
   {
     "id": "_.uniqueId",
@@ -9330,7 +9582,8 @@
       }
     ],
     "category": "Utility",
-    "codeName": "uniqueId"
+    "codeName": "uniqueId",
+    "order": 373
   },
   {
     "id": "_.lodash.VERSION",
@@ -9345,6 +9598,7 @@
         "string"
       ]
     },
-    "codeName": "lodash.VERSION"
+    "codeName": "lodash.VERSION",
+    "order": 374
   }
 ]

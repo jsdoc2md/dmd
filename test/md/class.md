@@ -27,10 +27,6 @@ the global class constructor
 ###globalClass.propOne
 an instance property
 
-<a name="GlobalClass.propTwo"></a>
-###GlobalClass.propTwo
-a static property
-
 <a name="GlobalClass#methodOne"></a>
 ###globalClass.methodOne()
 parent method one
@@ -38,4 +34,8 @@ parent method one
 <a name="GlobalClass#methodTwo"></a>
 ###globalClass.methodTwo()
 parent method two
+
+<a name="GlobalClass.propTwo"></a>
+###GlobalClass.propTwo
+a static property
 
