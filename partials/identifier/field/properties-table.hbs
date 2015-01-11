@@ -3,6 +3,6 @@
 | Name | Type | Default | Description |
 | ---- | ---- | ------- |----------- |
 {{#each properties~}}
-| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | `{{defaultvalue}}` | {{{stripNewlines (linkify description)}}} |
+| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{#if defaultvalue}}`{{defaultvalue}}`{{/if}} | {{{stripNewlines (linkify description)}}} |
 {{/each}}
 {{/if}}
