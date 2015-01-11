@@ -304,14 +304,22 @@ A module. Refer to it using [this link](#module_linkMod).
 
 * [linkMod](#module_linkMod)
   * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [external: ~Math](#external_Math)
-  * [external: ~Date](#external_Date)
   * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
+  * [external: ~Math](#external_Math)
+  * [external: ~Date](#external_Date)
 
 <a name="module_linkMod.event_MyEvent"></a>
 ###event: "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
+
+<a name="module_linkMod..linksYeah"></a>
+###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
+**Extends:** <code>[Math](#external_Math)</code>  
+**Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
+<a name="new_module_linkMod..linksYeah_new"></a>
+####new linksYeah()
+this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
 
 <a name="external_Math"></a>
 ###external: linkMod~Math
@@ -324,14 +332,6 @@ The built in Math object. Refer to it with [Math](#external_Math).
 <a name="external_Date"></a>
 ###external: linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
-
-<a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
-**Extends:** <code>[Math](#external_Math)</code>  
-**Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
-<a name="new_module_linkMod..linksYeah_new"></a>
-####new linksYeah()
-this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
 
 <a name="module_cjs/object-alias"></a>
 ##cjs/object-alias

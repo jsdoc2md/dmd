@@ -5,6 +5,36 @@
 * [class: _](#_)
   * [new _(value)](#new___new)
   * _static_
+    * [.support](#_.support) → <code>Object</code>
+      * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+      * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+      * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+      * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+      * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+      * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+      * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
+    * [.chain](#_.chain) ⇒ <code>\*</code>
+    * [.reverse](#_.reverse) ⇒ <code>Object</code>
+    * [.toString](#_.toString) ⇒ <code>string</code>
+    * [.value](#_.value) ⇒ <code>\*</code>
+    * [.countBy](#_.countBy) ⇒ <code>Object</code>
+    * [.groupBy](#_.groupBy) ⇒ <code>Object</code>
+    * [.indexBy](#_.indexBy) ⇒ <code>Object</code>
+    * [.partition](#_.partition) ⇒ <code>Array</code>
+    * [.now](#_.now)
+    * [.isArray](#_.isArray) ⇒ <code>boolean</code>
+    * [.isFinite](#_.isFinite) ⇒ <code>boolean</code>
+    * [.isPlainObject](#_.isPlainObject) ⇒ <code>boolean</code>
+    * [.extend](#_.extend) ⇒ <code>Object</code>
+    * [.keys](#_.keys) ⇒ <code>Array</code>
+    * [.merge](#_.merge) ⇒ <code>Object</code>
+    * [.camelCase](#_.camelCase) ⇒ <code>string</code>
+    * [.kebabCase](#_.kebabCase) ⇒ <code>string</code>
+    * [.snakeCase](#_.snakeCase) ⇒ <code>string</code>
     * [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
       * [~Array](#_.runInContext..Array)
       * [~arrayProto](#_.runInContext..arrayProto)
@@ -24,18 +54,6 @@
       * [~metaMap](#_.runInContext..metaMap)
       * [~ctorByClass](#_.runInContext..ctorByClass)
       * [~nonEnumProps](#_.runInContext..nonEnumProps)
-    * [.support](#_.support) → <code>Object</code>
-      * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
-      * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
-      * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
-      * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
-      * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
-      * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
-      * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
-      * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
-      * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
-      * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
-      * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
     * [.chunk(array, [size])](#_.chunk) ⇒ <code>Array</code>
     * [.compact(array)](#_.compact) ⇒ <code>Array</code>
     * [.difference(array, [...values])](#_.difference) ⇒ <code>Array</code>
@@ -74,12 +92,7 @@
     * [.chain(value)](#_.chain) ⇒ <code>Object</code>
     * [.tap(value, interceptor, [thisArg])](#_.tap) ⇒ <code>\*</code>
     * [.thru(value, interceptor, [thisArg])](#_.thru) ⇒ <code>\*</code>
-    * [.chain](#_.chain) ⇒ <code>\*</code>
-    * [.reverse](#_.reverse) ⇒ <code>Object</code>
-    * [.toString](#_.toString) ⇒ <code>string</code>
-    * [.value](#_.value) ⇒ <code>\*</code>
     * [.at(collection, [...props])](#_.at) ⇒ <code>Array</code>
-    * [.countBy](#_.countBy) ⇒ <code>Object</code>
     * [.all(collection, [predicate], [thisArg])](#_.all) ⇒ <code>boolean</code>
     * [.select(collection, [predicate], [thisArg])](#_.select) ⇒ <code>Array</code>
     * [.detect(collection, [predicate], [thisArg])](#_.detect) ⇒ <code>\*</code>
@@ -87,13 +100,10 @@
     * [.findWhere(collection, source)](#_.findWhere) ⇒ <code>\*</code>
     * [.each(collection, [iteratee], [thisArg])](#_.each) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
     * [.eachRight(collection, [iteratee], [thisArg])](#_.eachRight) ⇒ <code>Array</code> \| <code>Object</code> \| <code>string</code>
-    * [.groupBy](#_.groupBy) ⇒ <code>Object</code>
-    * [.indexBy](#_.indexBy) ⇒ <code>Object</code>
     * [.invoke(collection, methodName, [...args])](#_.invoke) ⇒ <code>Array</code>
     * [.collect(collection, [iteratee], [thisArg])](#_.collect) ⇒ <code>Array</code>
     * [.max(collection, [iteratee], [thisArg])](#_.max) ⇒ <code>\*</code>
     * [.min(collection, [iteratee], [thisArg])](#_.min) ⇒ <code>\*</code>
-    * [.partition](#_.partition) ⇒ <code>Array</code>
     * [.pluck(collection, key)](#_.pluck) ⇒ <code>Array</code>
     * [.foldr(collection, [iteratee], [accumulator], [thisArg])](#_.foldr) ⇒ <code>\*</code>
     * [.reject(collection, [predicate], [thisArg])](#_.reject) ⇒ <code>Array</code>
@@ -105,7 +115,6 @@
     * [.sortByAll(collection, ...props)](#_.sortByAll) ⇒ <code>Array</code>
     * [.toArray(collection)](#_.toArray) ⇒ <code>Array</code>
     * [.where(collection, source)](#_.where) ⇒ <code>Array</code>
-    * [.now](#_.now)
     * [.after(n, func)](#_.after) ⇒ <code>function</code>
     * [.ary(func, [n])](#_.ary) ⇒ <code>function</code>
     * [.before(n, func)](#_.before) ⇒ <code>function</code>
@@ -129,14 +138,12 @@
     * [.clone(value, [isDeep], [customizer], [thisArg])](#_.clone) ⇒ <code>\*</code>
     * [.cloneDeep(value, [customizer], [thisArg])](#_.cloneDeep) ⇒ <code>\*</code>
     * [.isArguments(value)](#_.isArguments) ⇒ <code>boolean</code>
-    * [.isArray](#_.isArray) ⇒ <code>boolean</code>
     * [.isBoolean(value)](#_.isBoolean) ⇒ <code>boolean</code>
     * [.isDate(value)](#_.isDate) ⇒ <code>boolean</code>
     * [.isElement(value)](#_.isElement) ⇒ <code>boolean</code>
     * [.isEmpty(value)](#_.isEmpty) ⇒ <code>boolean</code>
     * [.isEqual(value, other, [customizer], [thisArg])](#_.isEqual) ⇒ <code>boolean</code>
     * [.isError(value)](#_.isError) ⇒ <code>boolean</code>
-    * [.isFinite](#_.isFinite) ⇒ <code>boolean</code>
     * [.isFunction(value)](#_.isFunction) ⇒ <code>boolean</code>
     * [.isObject(value)](#_.isObject) ⇒ <code>boolean</code>
     * [.isMatch(source, source, [customizer], [thisArg])](#_.isMatch) ⇒ <code>boolean</code>
@@ -144,11 +151,9 @@
     * [.isNative(value)](#_.isNative) ⇒ <code>boolean</code>
     * [.isNull(value)](#_.isNull) ⇒ <code>boolean</code>
     * [.isNumber(value)](#_.isNumber) ⇒ <code>boolean</code>
-    * [.isPlainObject](#_.isPlainObject) ⇒ <code>boolean</code>
     * [.isRegExp(value)](#_.isRegExp) ⇒ <code>boolean</code>
     * [.isString(value)](#_.isString) ⇒ <code>boolean</code>
     * [.isUndefined(value)](#_.isUndefined) ⇒ <code>boolean</code>
-    * [.extend](#_.extend) ⇒ <code>Object</code>
     * [.create(prototype, [properties])](#_.create) ⇒ <code>Object</code>
     * [.defaults(object, [...sources])](#_.defaults) ⇒ <code>Object</code>
     * [.findKey(object, [predicate], [thisArg])](#_.findKey) ⇒ <code>string</code> \| <code>undefined</code>
@@ -160,10 +165,8 @@
     * [.methods(object)](#_.methods) ⇒ <code>Array</code>
     * [.has(object, key)](#_.has) ⇒ <code>boolean</code>
     * [.invert(object, [multiValue])](#_.invert) ⇒ <code>Object</code>
-    * [.keys](#_.keys) ⇒ <code>Array</code>
     * [.keysIn(object)](#_.keysIn) ⇒ <code>Array</code>
     * [.mapValues(object, [iteratee], [thisArg])](#_.mapValues) ⇒ <code>Object</code>
-    * [.merge](#_.merge) ⇒ <code>Object</code>
     * [.omit(object, [predicate], [thisArg])](#_.omit) ⇒ <code>Object</code>
     * [.pairs(object)](#_.pairs) ⇒ <code>Array</code>
     * [.pick(object, [predicate], [thisArg])](#_.pick) ⇒ <code>Object</code>
@@ -172,19 +175,16 @@
     * [.values(object)](#_.values) ⇒ <code>Array</code>
     * [.valuesIn(object)](#_.valuesIn) ⇒ <code>Array</code>
     * [.random([min], [max], [floating])](#_.random) ⇒ <code>number</code>
-    * [.camelCase](#_.camelCase) ⇒ <code>string</code>
     * [.capitalize([string])](#_.capitalize) ⇒ <code>string</code>
     * [.deburr([string])](#_.deburr) ⇒ <code>string</code>
     * [.endsWith([string], [target], [position])](#_.endsWith) ⇒ <code>boolean</code>
     * [.escape([string])](#_.escape) ⇒ <code>string</code>
     * [.escapeRegExp([string])](#_.escapeRegExp) ⇒ <code>string</code>
-    * [.kebabCase](#_.kebabCase) ⇒ <code>string</code>
     * [.pad([string], [length], [chars])](#_.pad) ⇒ <code>string</code>
     * [.padLeft([string], [length], [chars])](#_.padLeft) ⇒ <code>string</code>
     * [.padRight([string], [length], [chars])](#_.padRight) ⇒ <code>string</code>
     * [.parseInt(string, [radix])](#_.parseInt) ⇒ <code>number</code>
     * [.repeat([string], [n])](#_.repeat) ⇒ <code>string</code>
-    * [.snakeCase](#_.snakeCase) ⇒ <code>string</code>
     * [.startsWith([string], [target], [position])](#_.startsWith) ⇒ <code>boolean</code>
     * [.template([string], [options])](#_.template) ⇒ <code>function</code>
     * [.trim([string], [chars])](#_.trim) ⇒ <code>string</code>
@@ -288,6 +288,567 @@ _.isArray(squares);
 
 _.isArray(squares.value());
 // => true
+```
+<a name="_.support"></a>
+###_.support → <code>Object</code>
+An object environment feature flags.
+
+
+* [.support](#_.support) → <code>Object</code>
+  * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
+  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
+  * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
+  * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
+  * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
+  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
+  * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
+  * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
+  * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
+  * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
+  * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
+
+<a name="_.support.support.argsClass"></a>
+####support.support.argsClass → <code>boolean</code>
+Detect if the `[[Class]]` of `arguments` objects is resolvable
+(all but Firefox < 4, IE < 9).
+
+<a name="_.support.support.enumErrorProps"></a>
+####support.support.enumErrorProps → <code>boolean</code>
+Detect if `name` or `message` properties of `Error.prototype` are
+enumerable by default (IE < 9, Safari < 5.1).
+
+<a name="_.support.support.enumPrototypes"></a>
+####support.support.enumPrototypes → <code>boolean</code>
+Detect if `prototype` properties are enumerable by default.
+
+Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
+(if the prototype or a property on the prototype has been set)
+incorrectly set the `[[Enumerable]]` value of a function's `prototype`
+property to `true`.
+
+<a name="_.support.support.funcDecomp"></a>
+####support.support.funcDecomp → <code>boolean</code>
+Detect if functions can be decompiled by `Function#toString`
+(all but Firefox OS certified apps, older Opera mobile browsers, and
+the PlayStation 3; forced `false` for Windows 8 apps).
+
+<a name="_.support.support.funcNames"></a>
+####support.support.funcNames → <code>boolean</code>
+Detect if `Function#name` is supported (all but IE).
+
+<a name="_.support.support.nodeClass"></a>
+####support.support.nodeClass → <code>boolean</code>
+Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
+
+<a name="_.support.support.nonEnumStrings"></a>
+####support.support.nonEnumStrings → <code>boolean</code>
+Detect if string indexes are non-enumerable
+(IE < 9, RingoJS, Rhino, Narwhal).
+
+<a name="_.support.support.nonEnumShadows"></a>
+####support.support.nonEnumShadows → <code>boolean</code>
+Detect if properties shadowing those on `Object.prototype` are
+non-enumerable.
+
+In IE < 9 an object's own properties, shadowing non-enumerable ones,
+are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
+
+<a name="_.support.support.ownLast"></a>
+####support.support.ownLast → <code>boolean</code>
+Detect if own properties are iterated after inherited properties (IE < 9).
+
+<a name="_.support.support.spliceObjects"></a>
+####support.support.spliceObjects → <code>boolean</code>
+Detect if `Array#shift` and `Array#splice` augment array-like objects
+correctly.
+
+Firefox < 10, compatibility modes of IE 8, and IE < 9 have buggy Array `shift()`
+and `splice()` functions that fail to remove the last element, `value[0]`,
+of array-like objects even though the `length` property is set to `0`.
+The `shift()` method is buggy in compatibility modes of IE 8, while `splice()`
+is buggy regardless of mode in IE < 9.
+
+<a name="_.support.support.unindexedChars"></a>
+####support.support.unindexedChars → <code>boolean</code>
+Detect lack of support for accessing string characters by index.
+
+IE < 8 can't access characters by index. IE 8 can only access characters
+by index on string literals, not string objects.
+
+<a name="_.chain"></a>
+###_.chain ⇒ <code>\*</code>
+Enables explicit method chaining on the wrapper object.
+
+**Returns**: <code>\*</code> - Returns the `lodash` object.  
+**Category**: Chain  
+**Example**  
+```js
+var users = [
+  { 'user': 'barney', 'age': 36 },
+  { 'user': 'fred',   'age': 40 }
+];
+
+// without explicit chaining
+_(users).first();
+// => { 'user': 'barney', 'age': 36 }
+
+// with explicit chaining
+_(users).chain()
+  .first()
+  .pick('user')
+  .value();
+// => { 'user': 'barney' }
+```
+<a name="_.reverse"></a>
+###_.reverse ⇒ <code>Object</code>
+Reverses the wrapped array so the first element becomes the last, the
+second element becomes the second to last, and so on.
+
+**Note:** This method mutates the wrapped array.
+
+**Returns**: <code>Object</code> - Returns the new reversed `lodash` object.  
+**Category**: Chain  
+**Example**  
+```js
+var array = [1, 2, 3];
+
+_(array).reverse().value()
+// => [3, 2, 1]
+
+console.log(array);
+// => [3, 2, 1]
+```
+<a name="_.toString"></a>
+###_.toString ⇒ <code>string</code>
+Produces the result of coercing the unwrapped value to a string.
+
+**Returns**: <code>string</code> - Returns the coerced string value.  
+**Category**: Chain  
+**Example**  
+```js
+_([1, 2, 3]).toString();
+// => '1,2,3'
+```
+<a name="_.value"></a>
+###_.value ⇒ <code>\*</code>
+Executes the chained sequence to extract the unwrapped value.
+
+**Returns**: <code>\*</code> - Returns the resolved unwrapped value.  
+**Category**: Chain  
+**Example**  
+```js
+_([1, 2, 3]).value();
+// => [1, 2, 3]
+```
+<a name="_.countBy"></a>
+###_.countBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is the number of times the key was returned by `iteratee`.
+The `iteratee` is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
+
+If a property name is provided for `iteratee` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `iteratee` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
+
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
+**Example**  
+```js
+_.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });
+// => { '4': 1, '6': 2 }
+
+_.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
+// => { '4': 1, '6': 2 }
+
+_.countBy(['one', 'two', 'three'], 'length');
+// => { '3': 2, '5': 1 }
+```
+<a name="_.groupBy"></a>
+###_.groupBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is an array of the elements responsible for generating the key.
+The `iteratee` is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
+
+If a property name is provided for `iteratee` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `iteratee` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
+
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
+**Example**  
+```js
+_.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });
+// => { '4': [4.2], '6': [6.1, 6.4] }
+
+_.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
+// => { '4': [4.2], '6': [6.1, 6.4] }
+
+// using "_.pluck" callback shorthand
+_.groupBy(['one', 'two', 'three'], 'length');
+// => { '3': ['one', 'two'], '5': ['three'] }
+```
+<a name="_.indexBy"></a>
+###_.indexBy ⇒ <code>Object</code>
+Creates an object composed of keys generated from the results of running
+each element of `collection` through `iteratee`. The corresponding value
+of each key is the last element responsible for generating the key. The
+iteratee function is bound to `thisArg` and invoked with three arguments;
+(value, index|key, collection).
+
+If a property name is provided for `iteratee` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `iteratee` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
+
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
+**Category**: Collection  
+**Example**  
+```js
+var keyData = [
+  { 'dir': 'left', 'code': 97 },
+  { 'dir': 'right', 'code': 100 }
+];
+
+_.indexBy(keyData, 'dir');
+// => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
+
+_.indexBy(keyData, function(object) { return String.fromCharCode(object.code); });
+// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
+
+_.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);
+// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
+```
+<a name="_.partition"></a>
+###_.partition ⇒ <code>Array</code>
+Creates an array of elements split into two groups, the first of which
+contains elements `predicate` returns truthy for, while the second of which
+contains elements `predicate` returns falsey for. The predicate is bound
+to `thisArg` and invoked with three arguments; (value, index|key, collection).
+
+If a property name is provided for `predicate` the created "_.pluck" style
+callback returns the property value of the given element.
+
+If an object is provided for `predicate` the created "_.where" style callback
+returns `true` for elements that have the properties of the given object,
+else `false`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
+| \[predicate=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
+
+**Returns**: <code>Array</code> - Returns the array of grouped elements.  
+**Category**: Collection  
+**Example**  
+```js
+_.partition([1, 2, 3], function(n) { return n % 2; });
+// => [[1, 3], [2]]
+
+_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);
+// => [[1, 3], [2]]
+
+var users = [
+  { 'user': 'barney',  'age': 36, 'active': false },
+  { 'user': 'fred',    'age': 40, 'active': true },
+  { 'user': 'pebbles', 'age': 1,  'active': false }
+];
+
+// using "_.where" callback shorthand
+_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });
+// => [['pebbles'], ['barney', 'fred']]
+
+// using "_.pluck" callback shorthand
+_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });
+// => [['fred'], ['barney', 'pebbles']]
+```
+<a name="_.now"></a>
+###_.now
+Gets the number of milliseconds that have elapsed since the Unix epoch
+(1 January 1970 00:00:00 UTC).
+
+**Category**: Date  
+**Example**  
+```js
+_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
+// => logs the number of milliseconds it took for the deferred function to be invoked
+```
+<a name="_.isArray"></a>
+###_.isArray ⇒ <code>boolean</code>
+Checks if `value` is classified as an `Array` object.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| value | <code>\*</code> | The value to check. |
+
+**Returns**: <code>boolean</code> - Returns `true` if `value` is correctly classified, else `false`.  
+**Category**: Lang  
+**Example**  
+```js
+_.isArray([1, 2, 3]);
+// => true
+
+(function() { return _.isArray(arguments); })();
+// => false
+```
+<a name="_.isFinite"></a>
+###_.isFinite ⇒ <code>boolean</code>
+Checks if `value` is a finite primitive number.
+
+**Note:** This method is based on ES6 `Number.isFinite`. See the
+[ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite)
+for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| value | <code>\*</code> | The value to check. |
+
+**Returns**: <code>boolean</code> - Returns `true` if `value` is a finite number, else `false`.  
+**Category**: Lang  
+**Example**  
+```js
+_.isFinite(10);
+// => true
+
+_.isFinite('10');
+// => false
+
+_.isFinite(true);
+// => false
+
+_.isFinite(Object(10));
+// => false
+
+_.isFinite(Infinity);
+// => false
+```
+<a name="_.isPlainObject"></a>
+###_.isPlainObject ⇒ <code>boolean</code>
+Checks if `value` is an object created by the `Object` constructor or has
+a `[[Prototype]]` of `null`.
+
+**Note:** This method assumes objects created by the `Object` constructor
+have no inherited enumerable properties.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| value | <code>\*</code> | The value to check. |
+
+**Returns**: <code>boolean</code> - Returns `true` if `value` is a plain object, else `false`.  
+**Category**: Lang  
+**Example**  
+```js
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+_.isPlainObject(new Shape);
+// => false
+
+_.isPlainObject([1, 2, 3]);
+// => false
+
+_.isPlainObject({ 'x': 0, 'y': 0 });
+// => true
+
+_.isPlainObject(Object.create(null));
+// => true
+```
+<a name="_.extend"></a>
+###_.extend ⇒ <code>Object</code>
+Assigns own enumerable properties of source object(s) to the destination
+object. Subsequent sources overwrite property assignments of previous sources.
+If `customizer` is provided it is invoked to produce the assigned values.
+The `customizer` is bound to `thisArg` and invoked with five arguments;
+(objectValue, sourceValue, key, object, source).
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| object | <code>Object</code> | The destination object. |
+| \[...sources\] | <code>Object</code> | The source objects. |
+| \[customizer\] | <code>function</code> | The function to customize assigning values. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
+
+**Returns**: <code>Object</code> - Returns the destination object.  
+**Category**: Object  
+**Example**  
+```js
+_.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred', 'status': 'busy' });
+// => { 'user': 'fred', 'age': 40, 'status': 'busy' }
+
+var defaults = _.partialRight(_.assign, function(value, other) {
+  return typeof value == 'undefined' ? other : value;
+});
+
+defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
+// => { 'user': 'barney', 'age': 36, 'status': 'busy' }
+```
+<a name="_.keys"></a>
+###_.keys ⇒ <code>Array</code>
+Creates an array of the own enumerable property names of `object`.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| object | <code>Object</code> | The object to inspect. |
+
+**Returns**: <code>Array</code> - Returns the array of property names.  
+**Category**: Object  
+**Example**  
+```js
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+Shape.prototype.z = 0;
+
+_.keys(new Shape);
+// => ['x', 'y'] (iteration order is not guaranteed)
+```
+<a name="_.merge"></a>
+###_.merge ⇒ <code>Object</code>
+Recursively merges own enumerable properties of the source object(s), that
+don't resolve to `undefined` into the destination object. Subsequent sources
+overwrite property assignments of previous sources. If `customizer` is
+provided it is invoked to produce the merged values of the destination and
+source properties. If `customizer` returns `undefined` merging is handled
+by the method instead. The `customizer` is bound to `thisArg` and invoked
+with five arguments; (objectValue, sourceValue, key, object, source).
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| object | <code>Object</code> | The destination object. |
+| \[...sources\] | <code>Object</code> | The source objects. |
+| \[customizer\] | <code>function</code> | The function to customize merging properties. |
+| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
+
+**Returns**: <code>Object</code> - Returns the destination object.  
+**Category**: Object  
+**Example**  
+```js
+var users = {
+  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
+};
+
+var ages = {
+  'data': [{ 'age': 36 }, { 'age': 40 }]
+};
+
+_.merge(users, ages);
+// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
+
+var food = {
+  'fruits': ['apple'],
+  'vegetables': ['beet']
+};
+
+var otherFood = {
+  'fruits': ['banana'],
+  'vegetables': ['carrot']
+};
+
+_.merge(food, otherFood, function(a, b) {
+  return _.isArray(a) ? a.concat(b) : undefined;
+});
+// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
+```
+<a name="_.camelCase"></a>
+###_.camelCase ⇒ <code>string</code>
+Converts `string` to camel case.
+See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to camel case. |
+
+**Returns**: <code>string</code> - Returns the camel cased string.  
+**Category**: String  
+**Example**  
+```js
+_.camelCase('Hello world');
+// => 'helloWorld'
+
+_.camelCase('--hello-world');
+// => 'helloWorld'
+
+_.camelCase('__hello_world__');
+// => 'helloWorld'
+```
+<a name="_.kebabCase"></a>
+###_.kebabCase ⇒ <code>string</code>
+Converts `string` to kebab case (a.k.a. spinal case).
+See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
+more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to kebab case. |
+
+**Returns**: <code>string</code> - Returns the kebab cased string.  
+**Category**: String  
+**Example**  
+```js
+_.kebabCase('Hello world');
+// => 'hello-world'
+
+_.kebabCase('helloWorld');
+// => 'hello-world'
+
+_.kebabCase('__hello_world__');
+// => 'hello-world'
+```
+<a name="_.snakeCase"></a>
+###_.snakeCase ⇒ <code>string</code>
+Converts `string` to snake case.
+See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to snake case. |
+
+**Returns**: <code>string</code> - Returns the snake cased string.  
+**Category**: String  
+**Example**  
+```js
+_.snakeCase('Hello world');
+// => 'hello_world'
+
+_.snakeCase('--hello-world');
+// => 'hello_world'
+
+_.snakeCase('helloWorld');
+// => 'hello_world'
 ```
 <a name="_.runInContext"></a>
 ###_.runInContext([context]) ⇒ <code>function</code>
@@ -412,92 +973,6 @@ Used to lookup a built-in constructor by `[[Class]]`.
 <a name="_.runInContext..nonEnumProps"></a>
 ####runInContext~nonEnumProps
 Used to avoid iterating over non-enumerable properties in IE < 9.
-
-<a name="_.support"></a>
-###_.support → <code>Object</code>
-An object environment feature flags.
-
-
-* [.support](#_.support) → <code>Object</code>
-  * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
-  * [.support.enumErrorProps](#_.support.support.enumErrorProps) → <code>boolean</code>
-  * [.support.enumPrototypes](#_.support.support.enumPrototypes) → <code>boolean</code>
-  * [.support.funcDecomp](#_.support.support.funcDecomp) → <code>boolean</code>
-  * [.support.funcNames](#_.support.support.funcNames) → <code>boolean</code>
-  * [.support.nodeClass](#_.support.support.nodeClass) → <code>boolean</code>
-  * [.support.nonEnumStrings](#_.support.support.nonEnumStrings) → <code>boolean</code>
-  * [.support.nonEnumShadows](#_.support.support.nonEnumShadows) → <code>boolean</code>
-  * [.support.ownLast](#_.support.support.ownLast) → <code>boolean</code>
-  * [.support.spliceObjects](#_.support.support.spliceObjects) → <code>boolean</code>
-  * [.support.unindexedChars](#_.support.support.unindexedChars) → <code>boolean</code>
-
-<a name="_.support.support.argsClass"></a>
-####support.support.argsClass → <code>boolean</code>
-Detect if the `[[Class]]` of `arguments` objects is resolvable
-(all but Firefox < 4, IE < 9).
-
-<a name="_.support.support.enumErrorProps"></a>
-####support.support.enumErrorProps → <code>boolean</code>
-Detect if `name` or `message` properties of `Error.prototype` are
-enumerable by default (IE < 9, Safari < 5.1).
-
-<a name="_.support.support.enumPrototypes"></a>
-####support.support.enumPrototypes → <code>boolean</code>
-Detect if `prototype` properties are enumerable by default.
-
-Firefox < 3.6, Opera > 9.50 - Opera < 11.60, and Safari < 5.1
-(if the prototype or a property on the prototype has been set)
-incorrectly set the `[[Enumerable]]` value of a function's `prototype`
-property to `true`.
-
-<a name="_.support.support.funcDecomp"></a>
-####support.support.funcDecomp → <code>boolean</code>
-Detect if functions can be decompiled by `Function#toString`
-(all but Firefox OS certified apps, older Opera mobile browsers, and
-the PlayStation 3; forced `false` for Windows 8 apps).
-
-<a name="_.support.support.funcNames"></a>
-####support.support.funcNames → <code>boolean</code>
-Detect if `Function#name` is supported (all but IE).
-
-<a name="_.support.support.nodeClass"></a>
-####support.support.nodeClass → <code>boolean</code>
-Detect if the `[[Class]]` of DOM nodes is resolvable (all but IE < 9).
-
-<a name="_.support.support.nonEnumStrings"></a>
-####support.support.nonEnumStrings → <code>boolean</code>
-Detect if string indexes are non-enumerable
-(IE < 9, RingoJS, Rhino, Narwhal).
-
-<a name="_.support.support.nonEnumShadows"></a>
-####support.support.nonEnumShadows → <code>boolean</code>
-Detect if properties shadowing those on `Object.prototype` are
-non-enumerable.
-
-In IE < 9 an object's own properties, shadowing non-enumerable ones,
-are made non-enumerable as well (a.k.a the JScript `[[DontEnum]]` bug).
-
-<a name="_.support.support.ownLast"></a>
-####support.support.ownLast → <code>boolean</code>
-Detect if own properties are iterated after inherited properties (IE < 9).
-
-<a name="_.support.support.spliceObjects"></a>
-####support.support.spliceObjects → <code>boolean</code>
-Detect if `Array#shift` and `Array#splice` augment array-like objects
-correctly.
-
-Firefox < 10, compatibility modes of IE 8, and IE < 9 have buggy Array `shift()`
-and `splice()` functions that fail to remove the last element, `value[0]`,
-of array-like objects even though the `length` property is set to `0`.
-The `shift()` method is buggy in compatibility modes of IE 8, while `splice()`
-is buggy regardless of mode in IE < 9.
-
-<a name="_.support.support.unindexedChars"></a>
-####support.support.unindexedChars → <code>boolean</code>
-Detect lack of support for accessing string characters by index.
-
-IE < 8 can't access characters by index. IE 8 can only access characters
-by index on string literals, not string objects.
 
 <a name="_.chunk"></a>
 ###_.chunk(array, [size]) ⇒ <code>Array</code>
@@ -1481,71 +1956,6 @@ _([1, 2, 3])
  .value();
 // => [3]
 ```
-<a name="_.chain"></a>
-###_.chain ⇒ <code>\*</code>
-Enables explicit method chaining on the wrapper object.
-
-**Returns**: <code>\*</code> - Returns the `lodash` object.  
-**Category**: Chain  
-**Example**  
-```js
-var users = [
-  { 'user': 'barney', 'age': 36 },
-  { 'user': 'fred',   'age': 40 }
-];
-
-// without explicit chaining
-_(users).first();
-// => { 'user': 'barney', 'age': 36 }
-
-// with explicit chaining
-_(users).chain()
-  .first()
-  .pick('user')
-  .value();
-// => { 'user': 'barney' }
-```
-<a name="_.reverse"></a>
-###_.reverse ⇒ <code>Object</code>
-Reverses the wrapped array so the first element becomes the last, the
-second element becomes the second to last, and so on.
-
-**Note:** This method mutates the wrapped array.
-
-**Returns**: <code>Object</code> - Returns the new reversed `lodash` object.  
-**Category**: Chain  
-**Example**  
-```js
-var array = [1, 2, 3];
-
-_(array).reverse().value()
-// => [3, 2, 1]
-
-console.log(array);
-// => [3, 2, 1]
-```
-<a name="_.toString"></a>
-###_.toString ⇒ <code>string</code>
-Produces the result of coercing the unwrapped value to a string.
-
-**Returns**: <code>string</code> - Returns the coerced string value.  
-**Category**: Chain  
-**Example**  
-```js
-_([1, 2, 3]).toString();
-// => '1,2,3'
-```
-<a name="_.value"></a>
-###_.value ⇒ <code>\*</code>
-Executes the chained sequence to extract the unwrapped value.
-
-**Returns**: <code>\*</code> - Returns the resolved unwrapped value.  
-**Category**: Chain  
-**Example**  
-```js
-_([1, 2, 3]).value();
-// => [1, 2, 3]
-```
 <a name="_.at"></a>
 ###_.at(collection, [...props]) ⇒ <code>Array</code>
 Creates an array of elements corresponding to the specified keys, or indexes,
@@ -1566,40 +1976,6 @@ _.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);
 
 _.at(['fred', 'barney', 'pebbles'], 0, 2);
 // => ['fred', 'pebbles']
-```
-<a name="_.countBy"></a>
-###_.countBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is the number of times the key was returned by `iteratee`.
-The `iteratee` is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-_.countBy([4.3, 6.1, 6.4], function(n) { return Math.floor(n); });
-// => { '4': 1, '6': 2 }
-
-_.countBy([4.3, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
-// => { '4': 1, '6': 2 }
-
-_.countBy(['one', 'two', 'three'], 'length');
-// => { '3': 2, '5': 1 }
 ```
 <a name="_.all"></a>
 ###_.all(collection, [predicate], [thisArg]) ⇒ <code>boolean</code>
@@ -1809,80 +2185,6 @@ This method is like `_.forEach` except that it iterates over elements of
 _([1, 2, 3]).forEachRight(function(n) { console.log(n); }).join(',');
 // => logs each value from right to left and returns the array
 ```
-<a name="_.groupBy"></a>
-###_.groupBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is an array of the elements responsible for generating the key.
-The `iteratee` is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-_.groupBy([4.2, 6.1, 6.4], function(n) { return Math.floor(n); });
-// => { '4': [4.2], '6': [6.1, 6.4] }
-
-_.groupBy([4.2, 6.1, 6.4], function(n) { return this.floor(n); }, Math);
-// => { '4': [4.2], '6': [6.1, 6.4] }
-
-// using "_.pluck" callback shorthand
-_.groupBy(['one', 'two', 'three'], 'length');
-// => { '3': ['one', 'two'], '5': ['three'] }
-```
-<a name="_.indexBy"></a>
-###_.indexBy ⇒ <code>Object</code>
-Creates an object composed of keys generated from the results of running
-each element of `collection` through `iteratee`. The corresponding value
-of each key is the last element responsible for generating the key. The
-iteratee function is bound to `thisArg` and invoked with three arguments;
-(value, index|key, collection).
-
-If a property name is provided for `iteratee` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `iteratee` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[iteratee=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `iteratee`. |
-
-**Returns**: <code>Object</code> - Returns the composed aggregate object.  
-**Category**: Collection  
-**Example**  
-```js
-var keyData = [
-  { 'dir': 'left', 'code': 97 },
-  { 'dir': 'right', 'code': 100 }
-];
-
-_.indexBy(keyData, 'dir');
-// => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
-
-_.indexBy(keyData, function(object) { return String.fromCharCode(object.code); });
-// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
-
-_.indexBy(keyData, function(object) { return this.fromCharCode(object.code); }, String);
-// => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
-```
 <a name="_.invoke"></a>
 ###_.invoke(collection, methodName, [...args]) ⇒ <code>Array</code>
 Invokes the method named by `methodName` on each element in `collection`,
@@ -2029,50 +2331,6 @@ _.min(users, function(chr) { return chr.age; });
 // using "_.pluck" callback shorthand
 _.min(users, 'age');
 // => { 'user': 'barney', 'age': 36 };
-```
-<a name="_.partition"></a>
-###_.partition ⇒ <code>Array</code>
-Creates an array of elements split into two groups, the first of which
-contains elements `predicate` returns truthy for, while the second of which
-contains elements `predicate` returns falsey for. The predicate is bound
-to `thisArg` and invoked with three arguments; (value, index|key, collection).
-
-If a property name is provided for `predicate` the created "_.pluck" style
-callback returns the property value of the given element.
-
-If an object is provided for `predicate` the created "_.where" style callback
-returns `true` for elements that have the properties of the given object,
-else `false`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| collection | <code>Array</code> \| <code>Object</code> \| <code>string</code> | The collection to iterate over. |
-| \[predicate=<code>[identity](#_.identity)</code>\] | <code>function</code> \| <code>Object</code> \| <code>string</code> | The function invoked  per iteration. If a property name or object is provided it is used to  create a "_.pluck" or "_.where" style callback respectively. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `predicate`. |
-
-**Returns**: <code>Array</code> - Returns the array of grouped elements.  
-**Category**: Collection  
-**Example**  
-```js
-_.partition([1, 2, 3], function(n) { return n % 2; });
-// => [[1, 3], [2]]
-
-_.partition([1.2, 2.3, 3.4], function(n) { return this.floor(n) % 2; }, Math);
-// => [[1, 3], [2]]
-
-var users = [
-  { 'user': 'barney',  'age': 36, 'active': false },
-  { 'user': 'fred',    'age': 40, 'active': true },
-  { 'user': 'pebbles', 'age': 1,  'active': false }
-];
-
-// using "_.where" callback shorthand
-_.map(_.partition(users, { 'age': 1 }), function(array) { return _.pluck(array, 'user'); });
-// => [['pebbles'], ['barney', 'fred']]
-
-// using "_.pluck" callback shorthand
-_.map(_.partition(users, 'active'), function(array) { return _.pluck(array, 'user'); });
-// => [['fred'], ['barney', 'pebbles']]
 ```
 <a name="_.pluck"></a>
 ###_.pluck(collection, key) ⇒ <code>Array</code>
@@ -2365,17 +2623,6 @@ _.pluck(_.where(users, { 'pets': ['dino'] }), 'user');
 
 _.pluck(_.where(users, { 'status': 'busy' }), 'user');
 // => ['barney', 'fred']
-```
-<a name="_.now"></a>
-###_.now
-Gets the number of milliseconds that have elapsed since the Unix epoch
-(1 January 1970 00:00:00 UTC).
-
-**Category**: Date  
-**Example**  
-```js
-_.defer(function(stamp) { console.log(_.now() - stamp); }, _.now());
-// => logs the number of milliseconds it took for the deferred function to be invoked
 ```
 <a name="_.after"></a>
 ###_.after(n, func) ⇒ <code>function</code>
@@ -3102,24 +3349,6 @@ Checks if `value` is classified as an `arguments` object.
 _.isArguments([1, 2, 3]);
 // => false
 ```
-<a name="_.isArray"></a>
-###_.isArray ⇒ <code>boolean</code>
-Checks if `value` is classified as an `Array` object.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
-
-**Returns**: <code>boolean</code> - Returns `true` if `value` is correctly classified, else `false`.  
-**Category**: Lang  
-**Example**  
-```js
-_.isArray([1, 2, 3]);
-// => true
-
-(function() { return _.isArray(arguments); })();
-// => false
-```
 <a name="_.isBoolean"></a>
 ###_.isBoolean(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a boolean primitive or object.
@@ -3261,37 +3490,6 @@ _.isError(new Error);
 // => true
 
 _.isError(Error);
-// => false
-```
-<a name="_.isFinite"></a>
-###_.isFinite ⇒ <code>boolean</code>
-Checks if `value` is a finite primitive number.
-
-**Note:** This method is based on ES6 `Number.isFinite`. See the
-[ES6 spec](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite)
-for more details.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
-
-**Returns**: <code>boolean</code> - Returns `true` if `value` is a finite number, else `false`.  
-**Category**: Lang  
-**Example**  
-```js
-_.isFinite(10);
-// => true
-
-_.isFinite('10');
-// => false
-
-_.isFinite(true);
-// => false
-
-_.isFinite(Object(10));
-// => false
-
-_.isFinite(Infinity);
 // => false
 ```
 <a name="_.isFunction"></a>
@@ -3464,39 +3662,6 @@ _.isNumber(NaN);
 _.isNumber('8.4');
 // => false
 ```
-<a name="_.isPlainObject"></a>
-###_.isPlainObject ⇒ <code>boolean</code>
-Checks if `value` is an object created by the `Object` constructor or has
-a `[[Prototype]]` of `null`.
-
-**Note:** This method assumes objects created by the `Object` constructor
-have no inherited enumerable properties.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| value | <code>\*</code> | The value to check. |
-
-**Returns**: <code>boolean</code> - Returns `true` if `value` is a plain object, else `false`.  
-**Category**: Lang  
-**Example**  
-```js
-function Shape() {
-  this.x = 0;
-  this.y = 0;
-}
-
-_.isPlainObject(new Shape);
-// => false
-
-_.isPlainObject([1, 2, 3]);
-// => false
-
-_.isPlainObject({ 'x': 0, 'y': 0 });
-// => true
-
-_.isPlainObject(Object.create(null));
-// => true
-```
 <a name="_.isRegExp"></a>
 ###_.isRegExp(value) ⇒ <code>boolean</code>
 Checks if `value` is classified as a `RegExp` object.
@@ -3550,35 +3715,6 @@ _.isUndefined(void 0);
 
 _.isUndefined(null);
 // => false
-```
-<a name="_.extend"></a>
-###_.extend ⇒ <code>Object</code>
-Assigns own enumerable properties of source object(s) to the destination
-object. Subsequent sources overwrite property assignments of previous sources.
-If `customizer` is provided it is invoked to produce the assigned values.
-The `customizer` is bound to `thisArg` and invoked with five arguments;
-(objectValue, sourceValue, key, object, source).
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| object | <code>Object</code> | The destination object. |
-| \[...sources\] | <code>Object</code> | The source objects. |
-| \[customizer\] | <code>function</code> | The function to customize assigning values. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
-
-**Returns**: <code>Object</code> - Returns the destination object.  
-**Category**: Object  
-**Example**  
-```js
-_.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred', 'status': 'busy' });
-// => { 'user': 'fred', 'age': 40, 'status': 'busy' }
-
-var defaults = _.partialRight(_.assign, function(value, other) {
-  return typeof value == 'undefined' ? other : value;
-});
-
-defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred', 'status': 'busy' });
-// => { 'user': 'barney', 'age': 36, 'status': 'busy' }
 ```
 <a name="_.create"></a>
 ###_.create(prototype, [properties]) ⇒ <code>Object</code>
@@ -3868,28 +4004,6 @@ _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' });
 _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true);
 // => { 'fred': ['first', 'third'], 'barney': ['second'] }
 ```
-<a name="_.keys"></a>
-###_.keys ⇒ <code>Array</code>
-Creates an array of the own enumerable property names of `object`.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| object | <code>Object</code> | The object to inspect. |
-
-**Returns**: <code>Array</code> - Returns the array of property names.  
-**Category**: Object  
-**Example**  
-```js
-function Shape() {
-  this.x = 0;
-  this.y = 0;
-}
-
-Shape.prototype.z = 0;
-
-_.keys(new Shape);
-// => ['x', 'y'] (iteration order is not guaranteed)
-```
 <a name="_.keysIn"></a>
 ###_.keysIn(object) ⇒ <code>Array</code>
 Creates an array of the own and inherited enumerable property names of `object`.
@@ -3947,53 +4061,6 @@ var users = {
 // using "_.pluck" callback shorthand
 _.mapValues(users, 'age');
 // => { 'fred': 40, 'pebbles': 1 }
-```
-<a name="_.merge"></a>
-###_.merge ⇒ <code>Object</code>
-Recursively merges own enumerable properties of the source object(s), that
-don't resolve to `undefined` into the destination object. Subsequent sources
-overwrite property assignments of previous sources. If `customizer` is
-provided it is invoked to produce the merged values of the destination and
-source properties. If `customizer` returns `undefined` merging is handled
-by the method instead. The `customizer` is bound to `thisArg` and invoked
-with five arguments; (objectValue, sourceValue, key, object, source).
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| object | <code>Object</code> | The destination object. |
-| \[...sources\] | <code>Object</code> | The source objects. |
-| \[customizer\] | <code>function</code> | The function to customize merging properties. |
-| \[thisArg\] | <code>\*</code> | The `this` binding of `customizer`. |
-
-**Returns**: <code>Object</code> - Returns the destination object.  
-**Category**: Object  
-**Example**  
-```js
-var users = {
-  'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
-};
-
-var ages = {
-  'data': [{ 'age': 36 }, { 'age': 40 }]
-};
-
-_.merge(users, ages);
-// => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
-
-var food = {
-  'fruits': ['apple'],
-  'vegetables': ['beet']
-};
-
-var otherFood = {
-  'fruits': ['banana'],
-  'vegetables': ['carrot']
-};
-
-_.merge(food, otherFood, function(a, b) {
-  return _.isArray(a) ? a.concat(b) : undefined;
-});
-// => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
 ```
 <a name="_.omit"></a>
 ###_.omit(object, [predicate], [thisArg]) ⇒ <code>Object</code>
@@ -4203,28 +4270,6 @@ _.random(5, true);
 _.random(1.2, 5.2);
 // => a floating-point number between 1.2 and 5.2
 ```
-<a name="_.camelCase"></a>
-###_.camelCase ⇒ <code>string</code>
-Converts `string` to camel case.
-See [Wikipedia](http://en.wikipedia.org/wiki/CamelCase) for more details.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to camel case. |
-
-**Returns**: <code>string</code> - Returns the camel cased string.  
-**Category**: String  
-**Example**  
-```js
-_.camelCase('Hello world');
-// => 'helloWorld'
-
-_.camelCase('--hello-world');
-// => 'helloWorld'
-
-_.camelCase('__hello_world__');
-// => 'helloWorld'
-```
 <a name="_.capitalize"></a>
 ###_.capitalize([string]) ⇒ <code>string</code>
 Capitalizes the first character of `string`.
@@ -4329,29 +4374,6 @@ Escapes the `RegExp` special characters "\", "^", "$", ".", "|", "?", "*",
 ```js
 _.escapeRegExp('[lodash](https://lodash.com/)');
 // => '\[lodash\]\(https://lodash\.com/\)'
-```
-<a name="_.kebabCase"></a>
-###_.kebabCase ⇒ <code>string</code>
-Converts `string` to kebab case (a.k.a. spinal case).
-See [Wikipedia](http://en.wikipedia.org/wiki/Letter_case#Computers) for
-more details.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to kebab case. |
-
-**Returns**: <code>string</code> - Returns the kebab cased string.  
-**Category**: String  
-**Example**  
-```js
-_.kebabCase('Hello world');
-// => 'hello-world'
-
-_.kebabCase('helloWorld');
-// => 'hello-world'
-
-_.kebabCase('__hello_world__');
-// => 'hello-world'
 ```
 <a name="_.pad"></a>
 ###_.pad([string], [length], [chars]) ⇒ <code>string</code>
@@ -4471,28 +4493,6 @@ _.repeat('abc', 2);
 
 _.repeat('abc', 0);
 // => ''
-```
-<a name="_.snakeCase"></a>
-###_.snakeCase ⇒ <code>string</code>
-Converts `string` to snake case.
-See [Wikipedia](http://en.wikipedia.org/wiki/Snake_case) for more details.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| \[string=<code>&#x27;&#x27;</code>\] | <code>string</code> | The string to snake case. |
-
-**Returns**: <code>string</code> - Returns the snake cased string.  
-**Category**: String  
-**Example**  
-```js
-_.snakeCase('Hello world');
-// => 'hello_world'
-
-_.snakeCase('--hello-world');
-// => 'hello_world'
-
-_.snakeCase('helloWorld');
-// => 'hello_world'
 ```
 <a name="_.startsWith"></a>
 ###_.startsWith([string], [target], [position]) ⇒ <code>boolean</code>
