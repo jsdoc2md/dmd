@@ -17,6 +17,7 @@ Provides class for getting value by key
 
 <a name="module_get_val..GetVal"></a>
 ###class: get_val~GetVal
+**Access:** public  
 <a name="new_module_get_val..GetVal_new"></a>
 ####new GetVal(values, [required])
 | Param | Type | Description |

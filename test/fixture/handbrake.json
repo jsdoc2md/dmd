@@ -1,15 +1,5 @@
 [
   {
-    "id": "external:EventEmitter",
-    "longname": "external:EventEmitter",
-    "name": "EventEmitter",
-    "scope": "global",
-    "kind": "external",
-    "see": [
-      "http://nodejs.org/api/events.html"
-    ]
-  },
-  {
     "id": "module:handbrake-js~Handbrake",
     "longname": "module:handbrake-js~Handbrake",
     "name": "Handbrake",
@@ -241,6 +231,16 @@
     "kind": "event",
     "description": "Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..",
     "memberof": "module:handbrake-js~Handbrake"
+  },
+  {
+    "id": "external:EventEmitter",
+    "longname": "external:EventEmitter",
+    "name": "EventEmitter",
+    "scope": "global",
+    "kind": "external",
+    "see": [
+      "http://nodejs.org/api/events.html"
+    ]
   },
   {
     "id": "module:handbrake-js",
