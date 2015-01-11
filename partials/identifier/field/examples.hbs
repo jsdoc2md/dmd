@@ -4,8 +4,9 @@
 
 {{#if (optionIsSet "example-lang")~}}
 {{#if (optionEquals "example-lang" "none")~}}
-{{{indent (linkify this)}}}
-
+```
+{{{linkify this}}}
+```
 {{else~}}
 ```{{option "example-lang"}}
 {{{linkify this}}}
