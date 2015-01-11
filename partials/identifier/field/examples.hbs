@@ -1,13 +1,19 @@
 {{#if examples}}{{#each examples}}**Example**  
 {{#if (regexp-test this "```")}}{{{linkify this}}}
 {{else~}}
-{{#if (option "example-code-gfm")}}```{{option "example-code-gfm"}}
-{{{linkify this}}}
-```
-{{else}}{{#if (option "example-code")}}
+
+{{#if (optionIsSet "example-lang")~}}
+{{#if (optionEquals "example-lang" "none")~}}
 {{{indent (linkify this)}}}
 
-{{else}}{{{linkify this}}}
-{{/if}}{{/if~}}
+{{else~}}
+```{{option "example-lang"}}
+{{{linkify this}}}
+```
+{{/if~}}
+{{else~}}
+{{{linkify this}}}
+{{/if~}}
+
 {{/if~}}
 {{/each}}{{/if~}}

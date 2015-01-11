@@ -62,7 +62,7 @@ Map-type
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- |----------- |
-| DEFAULT_OPTIONS |  | `` |  |
+| DEFAULT_OPTIONS |  |  |  |
 
 **Access:** protected  
 <a name="module_MapView--MapView#getMap"></a>
