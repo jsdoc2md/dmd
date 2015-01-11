@@ -361,6 +361,209 @@ the second property, a function
 **Example**  
 this is the example
 
+<a name="Eventful"></a>
+##mixin: Eventful
+This provides methods used for event handling. It's not meant to
+be used directly.
+
+
+* [mixin: Eventful](#Eventful)
+  * [.on(eventName, handler)](#Eventful.on)
+  * [.fire(eventName, eventData)](#Eventful.fire)
+
+<a name="Eventful.on"></a>
+###Eventful.on(eventName, handler)
+Register a handler function to be called whenever this event is fired.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| handler | <code>function</code> | The handler to call. |
+
+<a name="Eventful.fire"></a>
+###Eventful.fire(eventName, eventData)
+Fire an event, causing all handlers for that event name to run.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| eventData | <code>Object</code> | The data provided to each handler. |
+
+<a name="phantom"></a>
+##mixin: phantom
+phantom mixin
+
+<a name="customTagged"></a>
+##customTagged
+a global var with custom tags
+
+**sitcom**: The Office  
+**character**: Oggmeister  
+<a name="defaultedOne"></a>
+##defaultedOne → <code>object</code>
+**Default**: `{ one: 1, two: "yeah?" }`  
+<a name="defaultedTwo"></a>
+##defaultedTwo → <code>function</code>
+**Default**: `function f(n){ return something(n); }`  
+<a name="exampleVar"></a>
+##exampleVar → <code>string</code>
+an example var
+
+**Default**: `"something"`  
+**Example**  
+var thisVar = funtion(){
+    return "a value";
+};
+
+<a name="cliveExternal"></a>
+##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+<a name="stringExternal"></a>
+##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+<a name="fileVar"></a>
+##fileVar
+a variable in the file
+
+<a name="seeableVar"></a>
+##seeableVar
+a global var with a @see
+
+**See**
+
+- something or other
+
+<a name="returnsArrayOfType"></a>
+##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+<a name="returnsArrayOfType2"></a>
+##returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+<a name="nullableNumber"></a>
+##nullableNumber ⇒ <code>number</code>
+<a name="nonNullableNumber"></a>
+##nonNullableNumber ⇒ <code>number</code>
+<a name="objectType"></a>
+##objectType → <code>Object</code>
+<a name="globalVar"></a>
+##globalVar → <code>string</code>
+a global var
+
+**Default**: `"something"`  
+<a name="customFunction"></a>
+##customFunction()
+a global function with custom tags
+
+**sitcom**: Brass Eye  
+**character**: Noel Edmonds  
+<a name="firesError"></a>
+##firesError()
+**Emits**: <code>event:error</code>  
+<a name="firesMany"></a>
+##firesMany()
+**Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
+<a name="firesDefinedEvent"></a>
+##firesDefinedEvent()
+**Emits**: <code>[docletEvent](#event_docletEvent)</code>  
+<a name="functionObj"></a>
+##functionObj()
+the function
+
+<a name="functionObj.extra"></a>
+###functionObj.extra()
+a static method on the function
+
+<a name="globalFunction"></a>
+##globalFunction(one, two, three, four)
+a global function
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | <code>number</code> | first param |
+| two | <code>string</code> | second param |
+| three | <code>number</code> \| <code>string</code> | third |
+| four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
+
+<a name="globalFunction"></a>
+##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
+a global function returning multiple stuff
+
+**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
+<a name="returnsSomething"></a>
+##returnsSomething() ⇒ <code>string</code>
+returns has no desc
+
+<a name="seefoo"></a>
+##seefoo()
+Both of these will link to the bar function.
+
+**See**
+
+- [seebar](#seebar)
+- bar
+
+<a name="seebar"></a>
+##seebar()
+**See**
+
+- [seefoo](#seefoo) for further information.
+- [GitHub](http://github.com)
+
+<a name="throwingFunction"></a>
+##throwingFunction()
+**Throws**:
+
+- Will throw an error if the argument is null
+- <code>InvalidArgumentException</code> 
+- <code>DivideByZero</code> Argument x must be non-zero
+
+<a name="todoFunction1"></a>
+##todoFunction1()
+**Todo**
+
+- [ ] Write the documentation.
+- [ ] Implement this function.
+
+<a name="todoFunction2"></a>
+##todoFunction2()
+**Todo**
+
+- [ ] Write the documentation.
+- [ ] Implement this function.
+- [x] this one is done
+- [x] finished
+
+<a name="todoFunction3"></a>
+##todoFunction3()
+**Todo**
+
+- [x] this one is done
+- [x] finished
+
+<a name="nullableArrayTypeParam"></a>
+##nullableArrayTypeParam(one)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
+
+<a name="Documents"></a>
+##Documents → <code>object</code>
+<a name="Documents.Newspaper"></a>
+###Documents.Newspaper
+An ordinary newspaper.
+
+<a name="config"></a>
+##config → <code>object</code>
+**Properties**
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- |----------- |
+| defaults | <code>object</code> |  | The default values for parties. |
+| defaults.players | <code>number</code> |  | The default number of players. |
+| defaults.level | <code>string</code> |  | The default level for the party. |
+| defaults.treasure | <code>object</code> |  | The default treasure. |
+| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
+
+<a name="event_docletEvent"></a>
+##event: "docletEvent"
+an event defined in a doclet
+
 <a name="GlobalClass"></a>
 ##class: GlobalClass
 a global class
@@ -423,12 +626,6 @@ an instance property
 ###globalChildClass.methodTwo()
 overridden child methodTwo
 
-<a name="customTagged"></a>
-##customTagged
-a global var with custom tags
-
-**sitcom**: The Office  
-**character**: Oggmeister  
 <a name="customClass"></a>
 ##class: customClass
 a class that has custom tags
@@ -439,94 +636,12 @@ a class that has custom tags
 ###new customClass()
 the constructor
 
-<a name="customFunction"></a>
-##customFunction()
-a global function with custom tags
-
-**sitcom**: Brass Eye  
-**character**: Noel Edmonds  
-<a name="defaultedOne"></a>
-##defaultedOne → <code>object</code>
-**Default**: `{ one: 1, two: "yeah?" }`  
-<a name="defaultedTwo"></a>
-##defaultedTwo → <code>function</code>
-**Default**: `function f(n){ return something(n); }`  
-<a name="event_docletEvent"></a>
-##event: "docletEvent"
-an event defined in a doclet
-
-<a name="exampleVar"></a>
-##exampleVar → <code>string</code>
-an example var
-
-**Default**: `"something"`  
-**Example**  
-var thisVar = funtion(){
-    return "a value";
-};
-
-<a name="external_jQuery.fn"></a>
-##external: jQuery.fn
-The jQuery plugin namespace.
-
-**See**
-
-- [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)
-
-<a name="external_jQuery.fn.starfairy"></a>
-###jQuery.fn.starfairy()
-A jQuery plugin to make stars fly around your home page.
-
-<a name="external_XMLHttpRequest"></a>
-##external: XMLHttpRequest
-Namespace provided by the browser.
-
-**See**
-
-- https://developer.mozilla.org/en/xmlhttprequest
-
 <a name="EncryptedRequest"></a>
 ##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
 ###new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
-
-<a name="cliveExternal"></a>
-##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-<a name="stringExternal"></a>
-##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-<a name="fileVar"></a>
-##fileVar
-a variable in the file
-
-<a name="firesError"></a>
-##firesError()
-**Emits**: <code>event:error</code>  
-<a name="firesMany"></a>
-##firesMany()
-**Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
-<a name="firesDefinedEvent"></a>
-##firesDefinedEvent()
-**Emits**: <code>[docletEvent](#event_docletEvent)</code>  
-<a name="functionObj"></a>
-##functionObj()
-the function
-
-<a name="functionObj.extra"></a>
-###functionObj.extra()
-a static method on the function
-
-<a name="globalFunction"></a>
-##globalFunction(one, two, three, four)
-a global function
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| one | <code>number</code> | first param |
-| two | <code>string</code> | second param |
-| three | <code>number</code> \| <code>string</code> | third |
-| four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
 
 <a name="LendsClass"></a>
 ##class: LendsClass
@@ -571,138 +686,23 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 **Mixes**: Eventful.fire
-<a name="Eventful"></a>
-##mixin: Eventful
-This provides methods used for event handling. It's not meant to
-be used directly.
-
-
-* [mixin: Eventful](#Eventful)
-  * [.on(eventName, handler)](#Eventful.on)
-  * [.fire(eventName, eventData)](#Eventful.fire)
-
-<a name="Eventful.on"></a>
-###Eventful.on(eventName, handler)
-Register a handler function to be called whenever this event is fired.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| handler | <code>function</code> | The handler to call. |
-
-<a name="Eventful.fire"></a>
-###Eventful.fire(eventName, eventData)
-Fire an event, causing all handlers for that event name to run.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| eventData | <code>Object</code> | The data provided to each handler. |
-
-<a name="phantom"></a>
-##mixin: phantom
-phantom mixin
-
-<a name="Documents"></a>
-##Documents → <code>object</code>
-<a name="Documents.Newspaper"></a>
-###Documents.Newspaper
-An ordinary newspaper.
-
-<a name="config"></a>
-##config → <code>object</code>
-**Properties**
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-| defaults | <code>object</code> |  | The default values for parties. |
-| defaults.players | <code>number</code> |  | The default number of players. |
-| defaults.level | <code>string</code> |  | The default level for the party. |
-| defaults.treasure | <code>object</code> |  | The default treasure. |
-| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
-
-<a name="globalFunction"></a>
-##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
-a global function returning multiple stuff
-
-**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
-<a name="returnsSomething"></a>
-##returnsSomething() ⇒ <code>string</code>
-returns has no desc
-
-<a name="seeableVar"></a>
-##seeableVar
-a global var with a @see
+<a name="external_jQuery.fn"></a>
+##external: jQuery.fn
+The jQuery plugin namespace.
 
 **See**
 
-- something or other
+- [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)
 
-<a name="seefoo"></a>
-##seefoo()
-Both of these will link to the bar function.
+<a name="external_jQuery.fn.starfairy"></a>
+###jQuery.fn.starfairy()
+A jQuery plugin to make stars fly around your home page.
+
+<a name="external_XMLHttpRequest"></a>
+##external: XMLHttpRequest
+Namespace provided by the browser.
 
 **See**
 
-- [seebar](#seebar)
-- bar
+- https://developer.mozilla.org/en/xmlhttprequest
 
-<a name="seebar"></a>
-##seebar()
-**See**
-
-- [seefoo](#seefoo) for further information.
-- [GitHub](http://github.com)
-
-<a name="throwingFunction"></a>
-##throwingFunction()
-**Throws**:
-
-- Will throw an error if the argument is null
-- <code>InvalidArgumentException</code> 
-- <code>DivideByZero</code> Argument x must be non-zero
-
-<a name="todoFunction1"></a>
-##todoFunction1()
-**Todo**
-
-- [ ] Write the documentation.
-- [ ] Implement this function.
-
-<a name="todoFunction2"></a>
-##todoFunction2()
-**Todo**
-
-- [ ] Write the documentation.
-- [ ] Implement this function.
-- [x] this one is done
-- [x] finished
-
-<a name="todoFunction3"></a>
-##todoFunction3()
-**Todo**
-
-- [x] this one is done
-- [x] finished
-
-<a name="returnsArrayOfType"></a>
-##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-<a name="returnsArrayOfType2"></a>
-##returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-<a name="nullableNumber"></a>
-##nullableNumber ⇒ <code>number</code>
-<a name="nonNullableNumber"></a>
-##nonNullableNumber ⇒ <code>number</code>
-<a name="objectType"></a>
-##objectType → <code>Object</code>
-<a name="nullableArrayTypeParam"></a>
-##nullableArrayTypeParam(one)
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
-
-<a name="globalVar"></a>
-##globalVar → <code>string</code>
-a global var
-
-**Default**: `"something"`  

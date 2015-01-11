@@ -7,6 +7,6 @@
 {{#if (optionEquals "global-index-format" "table")}}{{>global-index-table ~}}{{/if~}}
 {{/if~}}
 
-{{#orphans~}}
+{{#orphans sortBy=(option "sort-by")~}}
 {{>identifier~}}
 {{/orphans~}}
