@@ -69,10 +69,10 @@
 <dd></dd>
 <dt><a href="#EventfulClass">class: EventfulClass</a></dt>
 <dd>a class which mixes in Eventful behaviour</dd>
-<dt><a href="#Eventful">mixin: Eventful</a></dt>
-<dd>This provides methods used for event handling. It's not meant to be used directly.</dd>
 <dt><a href="#phantom">mixin: phantom</a></dt>
 <dd>phantom mixin</dd>
+<dt><a href="#Eventful">mixin: Eventful</a></dt>
+<dd>This provides methods used for event handling. It's not meant to be used directly.</dd>
 <dt><a href="#Documents">Documents</a> → <code>object</code></dt>
 <dd></dd>
 <dt><a href="#config">config</a> → <code>object</code></dt>
@@ -389,7 +389,6 @@ the child of global class
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * _instance_
     * [.propThree](#GlobalChildClass#propThree)
-  * _overrides_
     * [.methodTwo()](#GlobalChildClass#methodTwo)
   * _inherits_
     * [.propOne](#GlobalClass#propOne)
@@ -504,32 +503,10 @@ say something
 a class which mixes in Eventful behaviour
 
 **Mixes**: Eventful
+<a name="phantom"></a>
+##mixin: phantom
+phantom mixin
 
-* [class: EventfulClass](#EventfulClass)
-  * _instance_
-    * [.on(eventName, handler)](#EventfulClass#on)
-    * [.fire(eventName, eventData)](#EventfulClass#fire)
-
-<a name="EventfulClass#on"></a>
-###eventfulClass.on(eventName, handler)
-Register a handler function to be called whenever this event is fired.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| handler | <code>function</code> | The handler to call. |
-
-**Mixes**: Eventful.on
-<a name="EventfulClass#fire"></a>
-###eventfulClass.fire(eventName, eventData)
-Fire an event, causing all handlers for that event name to run.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| eventData | <code>Object</code> | The data provided to each handler. |
-
-**Mixes**: Eventful.fire
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
@@ -557,10 +534,6 @@ Fire an event, causing all handlers for that event name to run.
 | ----- | ---- | ----------- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
-
-<a name="phantom"></a>
-##mixin: phantom
-phantom mixin
 
 <a name="Documents"></a>
 ##Documents → <code>object</code>

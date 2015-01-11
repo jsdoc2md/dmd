@@ -30,8 +30,6 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
     * _static_
       * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
       * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
-    * _inner_
-      * [`external: ~LatLng`](#external_LatLng)
 
 <a name="exp_module_MapView--MapView"></a>
 ###class: MapView ⏏
@@ -130,9 +128,3 @@ Halts any pending transitions.
 Is there at least one action pending completion?
 
 **Returns**: <code>Bool</code> - True when there are active transitions running.  
-<a name="external_LatLng"></a>
-####`external: MapView~LatLng`
-**See**
-
-- https://developers.google.com/maps/documentation/javascript/reference#LatLng
-
