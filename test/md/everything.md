@@ -27,6 +27,28 @@
 </dl>
 ##Globals
 <dl>
+<dt><a href="#GlobalClass">class: GlobalClass</a></dt>
+<dd><p>a global class</p>
+</dd>
+<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dd><p>the child of global class</p>
+</dd>
+<dt><a href="#customClass">class: customClass</a></dt>
+<dd><p>a class that has custom tags</p>
+</dd>
+<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
+<dd></dd>
+<dt><a href="#LendsClass">class: LendsClass</a></dt>
+<dd></dd>
+<dt><a href="#LendsClass2">class: LendsClass2</a></dt>
+<dd></dd>
+<dt><a href="#EventfulClass">class: EventfulClass</a></dt>
+<dd><p>a class which mixes in Eventful behaviour</p>
+</dd>
+<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
+<dd></dd>
+<dt><a href="#config">config</a> → <code>object</code></dt>
+<dd></dd>
 <dt><a href="#Eventful">mixin: Eventful</a></dt>
 <dd><p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
@@ -103,30 +125,14 @@ be used directly.</p>
 <dd></dd>
 <dt><a href="#nullableArrayTypeParam">nullableArrayTypeParam(one)</a></dt>
 <dd></dd>
-<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
-<dd></dd>
-<dt><a href="#config">config</a> → <code>object</code></dt>
-<dd></dd>
 <dt><a href="#event_docletEvent">"docletEvent"</a></dt>
 <dd><p>an event defined in a doclet</p>
 </dd>
-<dt><a href="#GlobalClass">class: GlobalClass</a></dt>
-<dd><p>a global class</p>
+<dt><a href="#external_jQuery.fn">external: jQuery.fn</a></dt>
+<dd><p>The jQuery plugin namespace.</p>
 </dd>
-<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
-<dd><p>the child of global class</p>
-</dd>
-<dt><a href="#customClass">class: customClass</a></dt>
-<dd><p>a class that has custom tags</p>
-</dd>
-<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
-<dd></dd>
-<dt><a href="#LendsClass">class: LendsClass</a></dt>
-<dd></dd>
-<dt><a href="#LendsClass2">class: LendsClass2</a></dt>
-<dd></dd>
-<dt><a href="#EventfulClass">class: EventfulClass</a></dt>
-<dd><p>a class which mixes in Eventful behaviour</p>
+<dt><a href="#external_XMLHttpRequest">external: XMLHttpRequest</a></dt>
+<dd><p>Namespace provided by the browser.</p>
 </dd>
 </dl>
 <a name="module_cjs/animals"></a>
@@ -361,6 +367,146 @@ the second property, a function
 **Example**  
 this is the example
 
+<a name="GlobalClass"></a>
+##class: GlobalClass
+a global class
+
+
+* [class: GlobalClass](#GlobalClass)
+  * [new GlobalClass(one, two)](#new_GlobalClass_new)
+  * _instance_
+    * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
+    * [.methodTwo()](#GlobalClass#methodTwo)
+  * _static_
+    * [.propTwo](#GlobalClass.propTwo)
+
+<a name="new_GlobalClass_new"></a>
+###new GlobalClass(one, two)
+the global class constructor
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | <code>number</code> | first param |
+| two | <code>string</code> | second param |
+
+<a name="GlobalClass#propOne"></a>
+###globalClass.propOne
+an instance property
+
+<a name="GlobalClass#methodOne"></a>
+###globalClass.methodOne()
+parent method one
+
+<a name="GlobalClass#methodTwo"></a>
+###globalClass.methodTwo()
+parent method two
+
+<a name="GlobalClass.propTwo"></a>
+###GlobalClass.propTwo
+a static property
+
+<a name="GlobalChildClass"></a>
+##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
+the child of global class
+
+**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
+
+* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
+  * _instance_
+    * [.propThree](#GlobalChildClass#propThree)
+  * _overrides_
+    * [.methodTwo()](#GlobalChildClass#methodTwo)
+  * _inherits_
+    * [.propOne](#GlobalClass#propOne)
+    * [.methodOne()](#GlobalClass#methodOne)
+
+<a name="GlobalChildClass#propThree"></a>
+###globalChildClass.propThree
+an instance property
+
+<a name="GlobalChildClass#methodTwo"></a>
+###globalChildClass.methodTwo()
+overridden child methodTwo
+
+<a name="customClass"></a>
+##class: customClass
+a class that has custom tags
+
+**sitcom**: Only Fools  
+**character**: Rodney Trotter  
+<a name="new_customClass_new"></a>
+###new customClass()
+the constructor
+
+<a name="EncryptedRequest"></a>
+##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
+**Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
+<a name="new_EncryptedRequest_new"></a>
+###new EncryptedRequest()
+Extends the built in XMLHttpRequest to send data encoded with a secret key.
+
+<a name="LendsClass"></a>
+##class: LendsClass
+<a name="LendsClass.say"></a>
+###LendsClass.say()
+say something
+
+<a name="LendsClass2"></a>
+##class: LendsClass2
+<a name="LendsClass2#say"></a>
+###lendsClass2.say()
+say something
+
+<a name="EventfulClass"></a>
+##class: EventfulClass
+a class which mixes in Eventful behaviour
+
+**Mixes**: Eventful
+
+* [class: EventfulClass](#EventfulClass)
+  * _instance_
+    * [.on(eventName, handler)](#EventfulClass#on)
+    * [.fire(eventName, eventData)](#EventfulClass#fire)
+
+<a name="EventfulClass#on"></a>
+###eventfulClass.on(eventName, handler)
+Register a handler function to be called whenever this event is fired.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| handler | <code>function</code> | The handler to call. |
+
+**Mixes**: Eventful.on
+<a name="EventfulClass#fire"></a>
+###eventfulClass.fire(eventName, eventData)
+Fire an event, causing all handlers for that event name to run.
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| eventName | <code>string</code> | Name of the event. |
+| eventData | <code>Object</code> | The data provided to each handler. |
+
+**Mixes**: Eventful.fire
+<a name="Documents"></a>
+##Documents → <code>object</code>
+<a name="Documents.Newspaper"></a>
+###Documents.Newspaper
+An ordinary newspaper.
+
+<a name="config"></a>
+##config → <code>object</code>
+**Properties**
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- |----------- |
+| defaults | <code>object</code> |  | The default values for parties. |
+| defaults.players | <code>number</code> |  | The default number of players. |
+| defaults.level | <code>string</code> |  | The default level for the party. |
+| defaults.treasure | <code>object</code> |  | The default treasure. |
+| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
+
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
@@ -542,150 +688,10 @@ Both of these will link to the bar function.
 | ----- | ---- | ----------- |
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
 
-<a name="Documents"></a>
-##Documents → <code>object</code>
-<a name="Documents.Newspaper"></a>
-###Documents.Newspaper
-An ordinary newspaper.
-
-<a name="config"></a>
-##config → <code>object</code>
-**Properties**
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-| defaults | <code>object</code> |  | The default values for parties. |
-| defaults.players | <code>number</code> |  | The default number of players. |
-| defaults.level | <code>string</code> |  | The default level for the party. |
-| defaults.treasure | <code>object</code> |  | The default treasure. |
-| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
-
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"
 an event defined in a doclet
 
-<a name="GlobalClass"></a>
-##class: GlobalClass
-a global class
-
-
-* [class: GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * _instance_
-    * [.propOne](#GlobalClass#propOne)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
-  * _static_
-    * [.propTwo](#GlobalClass.propTwo)
-
-<a name="new_GlobalClass_new"></a>
-###new GlobalClass(one, two)
-the global class constructor
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| one | <code>number</code> | first param |
-| two | <code>string</code> | second param |
-
-<a name="GlobalClass#propOne"></a>
-###globalClass.propOne
-an instance property
-
-<a name="GlobalClass#methodOne"></a>
-###globalClass.methodOne()
-parent method one
-
-<a name="GlobalClass#methodTwo"></a>
-###globalClass.methodTwo()
-parent method two
-
-<a name="GlobalClass.propTwo"></a>
-###GlobalClass.propTwo
-a static property
-
-<a name="GlobalChildClass"></a>
-##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
-the child of global class
-
-**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
-
-* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
-  * _instance_
-    * [.propThree](#GlobalChildClass#propThree)
-  * _overrides_
-    * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * _inherits_
-    * [.propOne](#GlobalClass#propOne)
-    * [.methodOne()](#GlobalClass#methodOne)
-
-<a name="GlobalChildClass#propThree"></a>
-###globalChildClass.propThree
-an instance property
-
-<a name="GlobalChildClass#methodTwo"></a>
-###globalChildClass.methodTwo()
-overridden child methodTwo
-
-<a name="customClass"></a>
-##class: customClass
-a class that has custom tags
-
-**sitcom**: Only Fools  
-**character**: Rodney Trotter  
-<a name="new_customClass_new"></a>
-###new customClass()
-the constructor
-
-<a name="EncryptedRequest"></a>
-##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
-**Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
-<a name="new_EncryptedRequest_new"></a>
-###new EncryptedRequest()
-Extends the built in XMLHttpRequest to send data encoded with a secret key.
-
-<a name="LendsClass"></a>
-##class: LendsClass
-<a name="LendsClass.say"></a>
-###LendsClass.say()
-say something
-
-<a name="LendsClass2"></a>
-##class: LendsClass2
-<a name="LendsClass2#say"></a>
-###lendsClass2.say()
-say something
-
-<a name="EventfulClass"></a>
-##class: EventfulClass
-a class which mixes in Eventful behaviour
-
-**Mixes**: Eventful
-
-* [class: EventfulClass](#EventfulClass)
-  * _instance_
-    * [.on(eventName, handler)](#EventfulClass#on)
-    * [.fire(eventName, eventData)](#EventfulClass#fire)
-
-<a name="EventfulClass#on"></a>
-###eventfulClass.on(eventName, handler)
-Register a handler function to be called whenever this event is fired.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| handler | <code>function</code> | The handler to call. |
-
-**Mixes**: Eventful.on
-<a name="EventfulClass#fire"></a>
-###eventfulClass.fire(eventName, eventData)
-Fire an event, causing all handlers for that event name to run.
-
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| eventName | <code>string</code> | Name of the event. |
-| eventData | <code>Object</code> | The data provided to each handler. |
-
-**Mixes**: Eventful.fire
 <a name="external_jQuery.fn"></a>
 ##external: jQuery.fn
 The jQuery plugin namespace.
