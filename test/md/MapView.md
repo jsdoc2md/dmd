@@ -1,4 +1,3 @@
-#API Reference
 <a name="module_MapView"></a>
 ##MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.
@@ -12,7 +11,6 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 |---|---|
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
-
 
 * [MapView](#module_MapView)
   * [class: MapView](#exp_module_MapView--MapView) ⏏

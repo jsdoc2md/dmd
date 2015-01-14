@@ -1,7 +1,7 @@
 #exported class API
 
 <a name="exp_module_file-set--FileSet"></a>
-#class: FileSet ⏏
+##class: FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
 
@@ -15,30 +15,31 @@ Expands file patterns, returning the matched and unmatched files and directories
     * [.add(files)](#module_file-set--FileSet#add)
   * _static_
     * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
+
 <a name="new_module_file-set--FileSet_new"></a>
-##new FileSet(patternList)
+###new FileSet(patternList)
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet#list"></a>
-##fileSet.list → <code>Array.&lt;string&gt;</code>
+###fileSet.list → <code>Array.&lt;string&gt;</code>
 The full list of unique paths found, and not found.
 
 <a name="module_file-set--FileSet#files"></a>
-##fileSet.files → <code>Array.&lt;string&gt;</code>
+###fileSet.files → <code>Array.&lt;string&gt;</code>
 The existing files found
 
 <a name="module_file-set--FileSet#dirs"></a>
-##fileSet.dirs → <code>Array.&lt;string&gt;</code>
+###fileSet.dirs → <code>Array.&lt;string&gt;</code>
 The existing directories found
 
 <a name="module_file-set--FileSet#notExisting"></a>
-##fileSet.notExisting → <code>Array.&lt;string&gt;</code>
+###fileSet.notExisting → <code>Array.&lt;string&gt;</code>
 Paths which were not found
 
 <a name="module_file-set--FileSet#add"></a>
-##fileSet.add(files)
+###fileSet.add(files)
 add file patterns to the set
 
 | Param | Type | Description |
@@ -46,7 +47,7 @@ add file patterns to the set
 | files | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet.eFileType"></a>
-##enum: FileSet.eFileType → <code>number</code>
+###enum: FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**

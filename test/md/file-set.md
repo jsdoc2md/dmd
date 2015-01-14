@@ -1,4 +1,3 @@
-#API Reference
 <a name="module_file-set"></a>
 ##file-set
 Exports a contructor taking a list of file patterns as input, returning a `file-set` instance containing the expanded patterns split into separate lists of `files`, `dirs` and `notExisting`.
@@ -7,7 +6,6 @@ Exports a contructor taking a list of file patterns as input, returning a `file-
 ```js
 var fileSet = require("file-set");
 ```
-
 * [file-set](#module_file-set)
   * [class: FileSet](#exp_module_file-set--FileSet) ⏏
     * [new FileSet(patternList)](#new_module_file-set--FileSet_new)

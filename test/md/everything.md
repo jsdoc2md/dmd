@@ -1,4 +1,3 @@
-#API Reference
 ##Modules
 <dl>
 <dt><a href="#module_cjs/animals">cjs/animals</a></dt>

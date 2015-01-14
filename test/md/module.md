@@ -1,9 +1,8 @@
 #module API
 
 <a name="module_cjs/class"></a>
-#cjs/class
+##cjs/class
 exports a class
-
 
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
@@ -14,23 +13,24 @@ exports a class
       * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
     * _inner_
       * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
+
 <a name="exp_module_cjs/class--ExportedClass"></a>
-##class: ExportedClass ⏏
+###class: ExportedClass ⏏
 the exported class
 
 <a name="new_module_cjs/class--ExportedClass_new"></a>
-###new ExportedClass()
+####new ExportedClass()
 the exported contructor
 
 <a name="module_cjs/class--ExportedClass#prop"></a>
-###exportedClass.prop
+####exportedClass.prop
 instance property
 
 <a name="module_cjs/class--ExportedClass.staticProp"></a>
-###ExportedClass.staticProp
+####ExportedClass.staticProp
 a static property for the exported class
 
 <a name="module_cjs/class--ExportedClass..innerProp"></a>
-###ExportedClass~innerProp
+####ExportedClass~innerProp
 inner module property
 

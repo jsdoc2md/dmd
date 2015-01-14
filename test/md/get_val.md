@@ -1,4 +1,3 @@
-#API Reference
 <a name="module_get_val"></a>
 ##get_val
 Provides class for getting value by key
@@ -11,7 +10,6 @@ Provides class for getting value by key
 **Version**: r11  
 **Author:** Viacheslav Lotsmanov  
 **License**: GNU/AGPLv3  
-
 * [get_val](#module_get_val)
   * [class: ~GetVal](#module_get_val..GetVal)
     * [new GetVal(values, [required])](#new_module_get_val..GetVal_new)
