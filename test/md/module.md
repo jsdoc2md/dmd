@@ -14,7 +14,6 @@ exports a class
       * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
     * _inner_
       * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
-
 <a name="exp_module_cjs/class--ExportedClass"></a>
 ##class: ExportedClass ⏏
 the exported class

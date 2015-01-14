@@ -15,7 +15,6 @@ Expands file patterns, returning the matched and unmatched files and directories
     * [.add(files)](#module_file-set--FileSet#add)
   * _static_
     * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
-
 <a name="new_module_file-set--FileSet_new"></a>
 ##new FileSet(patternList)
 | Param | Type | Description |

@@ -1,9 +1,9 @@
 {{#if (descendants min=2)~}}
 {{#if isExported~}}
 {{#if (equal (depth) 0)}}
-{{>index2}}
+{{#if (optionEquals "class-member-index-format" "list")}}{{>index-list~}}{{else}}{{>index-grouped~}}{{/if}}
 {{/if~}}
-{{else}}
-{{>index2}}
+{{else~}}
+{{#if (optionEquals "class-member-index-format" "list")}}{{>index-list~}}{{else}}{{>index-grouped~}}{{/if}}
 {{/if~}}
-{{/if~}}
+{{/if}}

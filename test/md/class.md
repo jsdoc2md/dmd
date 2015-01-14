@@ -13,7 +13,6 @@ a global class
     * [.methodTwo()](#GlobalClass#methodTwo)
   * _static_
     * [.propTwo](#GlobalClass.propTwo)
-
 <a name="new_GlobalClass_new"></a>
 ##new GlobalClass(one, two)
 the global class constructor
