@@ -1,7 +1,7 @@
 #class API
 
 <a name="GlobalClass"></a>
-##class: GlobalClass
+#class: GlobalClass
 a global class
 
 
@@ -15,7 +15,7 @@ a global class
     * [.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass_new"></a>
-###new GlobalClass(one, two)
+##new GlobalClass(one, two)
 the global class constructor
 
 | Param | Type | Description |
@@ -24,18 +24,18 @@ the global class constructor
 | two | <code>string</code> | second param |
 
 <a name="GlobalClass#propOne"></a>
-###globalClass.propOne
+##globalClass.propOne
 an instance property
 
 <a name="GlobalClass#methodOne"></a>
-###globalClass.methodOne()
+##globalClass.methodOne()
 parent method one
 
 <a name="GlobalClass#methodTwo"></a>
-###globalClass.methodTwo()
+##globalClass.methodTwo()
 parent method two
 
 <a name="GlobalClass.propTwo"></a>
-###GlobalClass.propTwo
+##GlobalClass.propTwo
 a static property
 

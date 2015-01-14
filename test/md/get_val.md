@@ -1,3 +1,4 @@
+#API Reference
 <a name="module_get_val"></a>
 ##get_val
 Provides class for getting value by key

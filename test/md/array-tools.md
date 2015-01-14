@@ -1,3 +1,4 @@
+#API Reference
 <a name="module_array-tools"></a>
 ##array-tools
 Useful functions for working with arrays

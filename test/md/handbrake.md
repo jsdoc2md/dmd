@@ -1,3 +1,4 @@
+#API Reference
 <a name="module_handbrake-js"></a>
 ##handbrake-js
 Handbrake for node.js.

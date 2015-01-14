@@ -1,3 +1,4 @@
+#API Reference
 <a name="module_MapView"></a>
 ##MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.

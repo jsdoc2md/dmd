@@ -1,3 +1,4 @@
+#API Reference
 <a name="module_file-set"></a>
 ##file-set
 Exports a contructor taking a list of file patterns as input, returning a `file-set` instance containing the expanded patterns split into separate lists of `files`, `dirs` and `notExisting`.

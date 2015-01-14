@@ -1,3 +1,4 @@
+#API Reference
 ##Modules
 <dl>
 <dt><a href="#module_cjs/animals">cjs/animals</a></dt>
@@ -45,10 +46,6 @@
 <dt><a href="#EventfulClass">class: EventfulClass</a></dt>
 <dd><p>a class which mixes in Eventful behaviour</p>
 </dd>
-<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
-<dd></dd>
-<dt><a href="#config">config</a> → <code>object</code></dt>
-<dd></dd>
 <dt><a href="#Eventful">mixin: Eventful</a></dt>
 <dd><p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
@@ -89,6 +86,10 @@ be used directly.</p>
 <dt><a href="#globalVar">globalVar</a> → <code>string</code></dt>
 <dd><p>a global var</p>
 </dd>
+<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
+<dd></dd>
+<dt><a href="#config">config</a> → <code>object</code></dt>
+<dd></dd>
 <dt><a href="#customFunction">customFunction()</a></dt>
 <dd><p>a global function with custom tags</p>
 </dd>
@@ -489,24 +490,6 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 **Mixes**: Eventful.fire
-<a name="Documents"></a>
-##Documents → <code>object</code>
-<a name="Documents.Newspaper"></a>
-###Documents.Newspaper
-An ordinary newspaper.
-
-<a name="config"></a>
-##config → <code>object</code>
-**Properties**
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-| defaults | <code>object</code> |  | The default values for parties. |
-| defaults.players | <code>number</code> |  | The default number of players. |
-| defaults.level | <code>string</code> |  | The default level for the party. |
-| defaults.treasure | <code>object</code> |  | The default treasure. |
-| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
-
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
@@ -592,6 +575,24 @@ a global var with a @see
 a global var
 
 **Default**: `"something"`  
+<a name="Documents"></a>
+##Documents → <code>object</code>
+<a name="Documents.Newspaper"></a>
+###Documents.Newspaper
+An ordinary newspaper.
+
+<a name="config"></a>
+##config → <code>object</code>
+**Properties**
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- |----------- |
+| defaults | <code>object</code> |  | The default values for parties. |
+| defaults.players | <code>number</code> |  | The default number of players. |
+| defaults.level | <code>string</code> |  | The default level for the party. |
+| defaults.treasure | <code>object</code> |  | The default treasure. |
+| defaults.treasure.gold | <code>number</code> |  | How much gold the party starts with. |
+
 <a name="customFunction"></a>
 ##customFunction()
 a global function with custom tags
