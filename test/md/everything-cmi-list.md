@@ -143,10 +143,10 @@ exports animals
 * [cjs/animals](#module_cjs/animals)
   * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
   * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
-  * [class: cjs/animals~Animal](#module_cjs/animals..Animal)
-    * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+  * [class: ~Animal](#module_cjs/animals..Animal)
+    * [animal.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
     * [class: Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
-      * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+      * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
 ###cjs/animals.cat → <code>Animal</code>
@@ -159,10 +159,10 @@ the exported dog
 <a name="module_cjs/animals..Animal"></a>
 ###class: cjs/animals~Animal
 
-* [class: cjs/animals~Animal](#module_cjs/animals..Animal)
-  * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+* [class: ~Animal](#module_cjs/animals..Animal)
+  * [animal.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
   * [class: Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
-    * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+    * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
 ####animal.type → <code>Quadroped</code>
@@ -182,9 +182,9 @@ exports a class
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
-    * [.prop](#module_cjs/class--ExportedClass#prop)
-    * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-    * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
+    * [exportedClass.prop](#module_cjs/class--ExportedClass#prop)
+    * [ExportedClass.staticProp](#module_cjs/class--ExportedClass.staticProp)
+    * [ExportedClass~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class--ExportedClass"></a>
 ###class: ExportedClass ⏏
@@ -254,9 +254,9 @@ exports a class
 * [cjs/human](#module_cjs/human)
   * [class: Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
-    * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+    * [human.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * [class: Human~Organ](#module_cjs/human--Human..Organ)
-      * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+      * [organ.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
       * [class: Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="exp_module_cjs/human--Human"></a>
@@ -277,7 +277,7 @@ a class inside a class
 
 
 * [class: Human~Organ](#module_cjs/human--Human..Organ)
-  * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+  * [organ.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * [class: Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
@@ -295,7 +295,7 @@ A module. Refer to it using [this link](#module_linkMod).
 
 * [linkMod](#module_linkMod)
   * [event: "event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: linkMod~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
+  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
     * [new linksYeah()](#new_module_linkMod..linksYeah_new)
   * [external: ~Math](#external_Math)
   * [external: ~Date](#external_Date)
@@ -359,10 +359,10 @@ a global class
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * [.propOne](#GlobalClass#propOne)
-  * [.methodOne()](#GlobalClass#methodOne)
-  * [.methodTwo()](#GlobalClass#methodTwo)
-  * [.propTwo](#GlobalClass.propTwo)
+  * [globalClass.propOne](#GlobalClass#propOne)
+  * [globalClass.methodOne()](#GlobalClass#methodOne)
+  * [globalClass.methodTwo()](#GlobalClass#methodTwo)
+  * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass_new"></a>
 ###new GlobalClass(one, two)
@@ -396,10 +396,10 @@ the child of global class
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
-  * [.propThree](#GlobalChildClass#propThree)
-  * [.propOne](#GlobalChildClass#propOne)
-  * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * [.methodOne()](#GlobalChildClass#methodOne)
+  * [globalChildClass.propThree](#GlobalChildClass#propThree)
+  * [globalChildClass.propOne](#GlobalChildClass#propOne)
+  * [globalChildClass.methodTwo()](#GlobalChildClass#methodTwo)
+  * [globalChildClass.methodOne()](#GlobalChildClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
 ###globalChildClass.propThree
@@ -445,8 +445,8 @@ a class which mixes in Eventful behaviour
 **Mixes**: <code>[Eventful](#Eventful)</code>  
 
 * [class: EventfulClass](#EventfulClass)
-  * [.on(eventName, handler)](#EventfulClass#on)
-  * [.fire(eventName, eventData)](#EventfulClass#fire)
+  * [eventfulClass.on(eventName, handler)](#EventfulClass#on)
+  * [eventfulClass.fire(eventName, eventData)](#EventfulClass#fire)
 
 <a name="EventfulClass#on"></a>
 ###eventfulClass.on(eventName, handler)
