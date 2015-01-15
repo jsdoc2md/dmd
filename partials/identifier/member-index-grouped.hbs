@@ -10,7 +10,7 @@
 
 {{#children sortBy=(option "sort-by") scope=undefined inherited=undefined~}}
 {{~indexDepthIncrement~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{/children~}}
 
@@ -18,7 +18,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _instance_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -27,7 +27,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _static_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -36,7 +36,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _overrides_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -45,7 +45,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _inherits_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -54,7 +54,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _inner_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -63,7 +63,7 @@
 {{~indexDepthIncrement~}}
 {{#if @first}}{{>index-indent}}* _events_
 {{indexDepthIncrement}}{{/if~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
 {{/children~}}
@@ -72,7 +72,7 @@
 
 {{#children sortBy=(option "sort-by")~}}
 {{~indexDepthIncrement~}}
-{{>index-grouped~}}
+{{>member-index-grouped~}}
 {{~indexDepthDecrement~}}
 {{/children~}}
 
