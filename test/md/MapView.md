@@ -12,6 +12,7 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 |MapType.GOOGLEMAPS (default)|Google-maps.|
 |MapType.LEAFLET|Leaflet.js.|
 
+
 * [MapView](#module_MapView)
   * [class: MapView](#exp_module_MapView--MapView) ⏏
     * [`new MapView(options)`](#new_module_MapView--MapView_new)

@@ -139,6 +139,7 @@ be used directly.</p>
 ##cjs/animals
 exports animals
 
+
 * [cjs/animals](#module_cjs/animals)
   * [cjs/animals.cat](#module_cjs/animals.cat) → <code>Animal</code>
   * [cjs/animals.dog](#module_cjs/animals.dog) → <code>Animal</code>
@@ -157,6 +158,7 @@ the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
 ###class: cjs/animals~Animal
+
 * [class: cjs/animals~Animal](#module_cjs/animals..Animal)
   * [animal.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
   * [class: Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
@@ -175,6 +177,7 @@ leg count
 <a name="module_cjs/class"></a>
 ##cjs/class
 exports a class
+
 
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
@@ -207,6 +210,7 @@ inner module property
 ##cjs/falias-obj
 exports a pointer to a function
 
+
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
     * [sum.extra()](#module_cjs/falias-obj--sum.extra)
@@ -222,6 +226,7 @@ a static method on the exported function
 <a name="module_cjs/function-alias"></a>
 ##cjs/function-alias
 exports a pointer to a function
+
 
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
@@ -244,6 +249,7 @@ an additional static property
 <a name="module_cjs/human"></a>
 ##cjs/human
 exports a class
+
 
 * [cjs/human](#module_cjs/human)
   * [class: Human](#exp_module_cjs/human--Human) ⏏
@@ -269,6 +275,7 @@ an instance of Organ
 ####class: Human~Organ
 a class inside a class
 
+
 * [class: Human~Organ](#module_cjs/human--Human..Organ)
   * [organ.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
   * [class: Organ~Cell](#module_cjs/human--Human..Organ..Cell)
@@ -284,6 +291,7 @@ a class inside a class inside a class
 <a name="module_linkMod"></a>
 ##linkMod
 A module. Refer to it using [this link](#module_linkMod).
+
 
 * [linkMod](#module_linkMod)
   * [event: "event:MyEvent"](#module_linkMod.event_MyEvent)
@@ -328,6 +336,7 @@ the teams
 ##cjs/object
 a module exporting `exports` directly
 
+
 * [cjs/object](#module_cjs/object)
   * [obj.one](#module_cjs/object.one) → <code>number</code>
   * [obj.two()](#module_cjs/object.two)
@@ -346,6 +355,7 @@ this is the example
 <a name="GlobalClass"></a>
 ##class: GlobalClass
 a global class
+
 
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
@@ -384,6 +394,7 @@ a static property
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
+
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * [globalChildClass.propThree](#GlobalChildClass#propThree)
   * [globalChildClass.propOne](#GlobalChildClass#propOne)
@@ -431,7 +442,8 @@ say something
 ##class: EventfulClass
 a class which mixes in Eventful behaviour
 
-**Mixes**: Eventful
+**Mixes**: <code>[Eventful](#Eventful)</code>  
+
 * [class: EventfulClass](#EventfulClass)
   * [eventfulClass.on(eventName, handler)](#EventfulClass#on)
   * [eventfulClass.fire(eventName, eventData)](#EventfulClass#fire)
@@ -445,7 +457,7 @@ Register a handler function to be called whenever this event is fired.
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
 
-**Mixes**: Eventful.on
+**Mixes**: <code>[on](#Eventful.on)</code>  
 <a name="EventfulClass#fire"></a>
 ###eventfulClass.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
@@ -455,11 +467,12 @@ Fire an event, causing all handlers for that event name to run.
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
 
-**Mixes**: Eventful.fire
+**Mixes**: <code>[fire](#Eventful.fire)</code>  
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
+
 
 * [mixin: Eventful](#Eventful)
   * [Eventful.on(eventName, handler)](#Eventful.on)

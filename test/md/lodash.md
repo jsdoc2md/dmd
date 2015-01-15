@@ -1,6 +1,7 @@
 <a name="_"></a>
 ##class: _
 **Category**: Chain  
+
 * [class: _](#_)
   * [new _(value)](#new___new)
   * _static_
@@ -291,6 +292,7 @@ _.isArray(squares.value());
 <a name="_.support"></a>
 ###_.support → <code>Object</code>
 An object environment feature flags.
+
 
 * [.support](#_.support) → <code>Object</code>
   * [.support.argsClass](#_.support.support.argsClass) → <code>boolean</code>
@@ -877,6 +879,7 @@ lodash.isFunction(lodash.add);
 lodash.isFunction(lodash.sub);
 // => true
 ```
+
 * [.runInContext([context])](#_.runInContext) ⇒ <code>function</code>
   * [~Array](#_.runInContext..Array)
   * [~arrayProto](#_.runInContext..arrayProto)
