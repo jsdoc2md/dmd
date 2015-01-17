@@ -58,7 +58,7 @@ Map-type
 ####`MapView.DEFAULT_OPTIONS`
 **Properties**
 
-| Name | Default |
+| Name |
 | --- |
 | DEFAULT_OPTIONS | 
 

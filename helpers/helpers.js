@@ -50,13 +50,18 @@ function tableHead(){
     cols = cols.map(function(col){
         return col.split("|")[0];
     });
+    var toSplice = [];
     cols = cols.filter(function(col, index){
         var hasValue = data.every(function(row){
             return typeof row[col] !== "undefined";
         });
-        if (!hasValue) colHeaders.splice(index, 1);
+        if (!hasValue) toSplice.push(index);
         return hasValue;
     });
+    toSplice.reverse().forEach(function(index){
+        colHeaders.splice(index, 1);
+    }); 
+    
     var table = "| " + colHeaders.join(" | ") + " |\n";
     table += cols.reduce(function(p){ return p + " --- |" }, "|") + "\n";
     return table;
