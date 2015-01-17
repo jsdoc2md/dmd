@@ -4,6 +4,7 @@
 ##class: GlobalClass
 a global class
 
+
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_

@@ -1,8 +1,11 @@
 {{#if properties~}}**Properties**
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-{{#each properties~}}
-| {{name}} | {{>linked-type-list types=type.names delimiter=" \| " }} | {{#if defaultvalue}}`{{defaultvalue}}`{{/if}} | {{{stripNewlines (linkify description)}}} |
-{{/each}}
+{{tableHead properties "name|Name" "type|Type" "defaultvalue|Default" "description|Description" ~}}
+
+{{#tableRow properties "name" "type" "defaultvalue" "description" ~}}
+| {{#if @col1}}{{name}} | {{/if~}}
+{{#if @col2}}{{>linked-type-list types=type.names delimiter=" \| " }} | {{/if~}}
+{{#if @col3}}{{#if defaultvalue}}`{{defaultvalue}}`{{/if}} | {{/if~}}
+{{#if @col4}}{{{stripNewlines (linkify description)}}} |{{/if}}
+{{/tableRow}}
 {{/if}}

@@ -39,10 +39,10 @@ Map-type
 
 **Properties**
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-| GOOGLEMAPS | <code>Number</code> | `1` |  |
-| LEAFLET | <code>Number</code> | `2` |  |
+| Name | Type | Default |
+| --- | --- | --- |
+| GOOGLEMAPS | <code>Number</code> | `1` | 
+| LEAFLET | <code>Number</code> | `2` | 
 
 <a name="new_module_MapView--MapView_new"></a>
 ####`new MapView(options)`
@@ -58,9 +58,9 @@ Map-type
 ####`MapView.DEFAULT_OPTIONS`
 **Properties**
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- |----------- |
-| DEFAULT_OPTIONS |  |  |  |
+| Name | Default |
+| --- |
+| DEFAULT_OPTIONS | 
 
 **Access:** protected  
 <a name="module_MapView--MapView#getMap"></a>

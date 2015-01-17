@@ -1,10 +1,14 @@
 "use strict";
 var ddata = require("ddata");
 var marked = require("marked");
+var a = require("array-tools");
+var handlebars = require("boil")._handlebars;
 
 exports.escape = escape;
 exports.linkify = linkify;
 exports.renderMarkdown = renderMarkdown;
+exports.tableHead = tableHead;
+exports.tableRow = tableRow;
 
 /**
 Escape special markdown characters
@@ -33,3 +37,55 @@ function renderMarkdown(input){
     }
 }
 
+function tableHead(){
+    var args = a.arrayify(arguments);
+    var data = args.shift();
+    if (!data) return;
+    var options = args.pop();
+    var cols = args;
+    var colHeaders = cols.map(function(col){
+        var spl = col.split("|");
+        return spl[1] || spl[0];
+    });
+    cols = cols.map(function(col){
+        return col.split("|")[0];
+    });
+    cols = cols.filter(function(col, index){
+        var hasValue = data.every(function(row){
+            return typeof row[col] !== "undefined";
+        });
+        if (!hasValue) colHeaders.splice(index, 1);
+        return hasValue;
+    });
+    var table = "| " + colHeaders.join(" | ") + " |\n";
+    table += cols.reduce(function(p){ return p + " --- |" }, "|") + "\n";
+    return table;
+}
+
+function containsData(rows, col){
+    return rows.every(function(row){
+        return typeof row[col] !== "undefined";
+    });
+}
+
+function tableRow(){
+    var args = a.arrayify(arguments);
+    var rows = args.shift();
+    if (!rows) return;
+    var options = args.pop();
+    var cols = args;
+    var output = "";
+    var self = this;
+    
+    if (options.data){
+        var data = handlebars.createFrame(options.data);
+        cols.forEach(function(col, index){
+            var colNumber = index + 1;
+            data["col" + colNumber] = containsData(rows, col)
+        });
+    }
+    rows.forEach(function(row){
+        output += options.fn(row, { data: data });
+    });
+    return output;
+}
