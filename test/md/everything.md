@@ -42,9 +42,17 @@
 <dd></dd>
 <dt><a href="#LendsClass2">class: LendsClass2</a></dt>
 <dd></dd>
+<dt><a href="#Animal">class: Animal</a></dt>
+<dd><p>Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).</p>
+</dd>
+<dt><a href="#Species">class: Species</a></dt>
+<dd><p>In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into &quot;infraspecific taxa&quot; such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).</p>
+</dd>
 <dt><a href="#EventfulClass">class: EventfulClass</a></dt>
 <dd><p>a class which mixes in Eventful behaviour</p>
 </dd>
+<dt><a href="#builder">mixin: builder</a></dt>
+<dd></dd>
 <dt><a href="#Eventful">mixin: Eventful</a></dt>
 <dd><p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
@@ -141,8 +149,8 @@ exports animals
 
 
 * [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
-  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
+  * [.cat](#module_cjs/animals.cat) → <code>[Animal](#Animal)</code>
+  * [.dog](#module_cjs/animals.dog) → <code>[Animal](#Animal)</code>
   * [class: ~Animal](#module_cjs/animals..Animal)
     * _instance_
       * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
@@ -152,11 +160,11 @@ exports animals
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
-###cjs/animals.cat → <code>Animal</code>
+###cjs/animals.cat → <code>[Animal](#Animal)</code>
 the exported cat
 
 <a name="module_cjs/animals.dog"></a>
-###cjs/animals.dog → <code>Animal</code>
+###cjs/animals.dog → <code>[Animal](#Animal)</code>
 the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
@@ -458,6 +466,72 @@ say something
 ###lendsClass2.say()
 say something
 
+<a name="Animal"></a>
+##class: Animal
+Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).
+
+
+* [class: Animal](#Animal)
+  * [new Animal(species, parents)](#new_Animal_new)
+  * _instance_
+    * [.age](#Animal#age) → <code>number</code>
+    * [.species](#Animal#species) → <code>[Species](#Species)</code>
+  * _static_
+    * [enum: .eMood](#Animal.eMood)
+
+<a name="new_Animal_new"></a>
+###new Animal(species, parents)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| species | <code>array</code> | an array of two parent [Animal](#Animal) objects |
+| parents | <code>[Species](#Species)</code> | the species |
+
+<a name="Animal#age"></a>
+###animal.age → <code>number</code>
+the current age
+
+**Default**: `0`  
+<a name="Animal#species"></a>
+###animal.species → <code>[Species](#Species)</code>
+<a name="Animal.eMood"></a>
+###enum: Animal.eMood
+Animal moods
+
+**Properties**
+
+| Name | Default | Description |
+| --- | --- | --- |
+| satisfied | `0` | chilling |
+| angry | `1` | pissed off |
+| hungry | `2` | need to eat |
+
+<a name="Species"></a>
+##class: Species
+In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into "infraspecific taxa" such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).
+
+
+* [class: Species](#Species)
+  * _instance_
+    * [.name](#Species#name) → <code>string</code>
+    * [.species](#Species#species) → <code>[Species](#Species)</code>
+  * _static_
+    * [.merge(one, two)](#Species.merge) ⇒ <code>[Species](#Species)</code>
+
+<a name="Species#name"></a>
+###species.name → <code>string</code>
+the species name
+
+<a name="Species#species"></a>
+###species.species → <code>[Species](#Species)</code>
+<a name="Species.merge"></a>
+###Species.merge(one, two) ⇒ <code>[Species](#Species)</code>
+merge two species into a new one
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| one | <code>[Species](#Species)</code> | first |
+| two | <code>[Species](#Species)</code> | second |
+
 <a name="EventfulClass"></a>
 ##class: EventfulClass
 a class which mixes in Eventful behaviour
@@ -489,6 +563,21 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 **Mixes**: <code>[fire](#Eventful.fire)</code>  
+<a name="builder"></a>
+##mixin: builder
+
+* [mixin: builder](#builder)
+  * [.construct()](#builder.construct)
+  * [.repair()](#builder.repair)
+
+<a name="builder.construct"></a>
+###builder.construct()
+construct something
+
+<a name="builder.repair"></a>
+###builder.repair()
+repair something
+
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to

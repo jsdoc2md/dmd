@@ -2,7 +2,7 @@
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.3.14",
-  "description": "dmd",
+  "description": "dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
   "bin": {
@@ -41,14 +41,9 @@
     "m5": "cat test/fixture/MapView.json | dmd --sort-by none --name-format code > test/md/MapView.md;",
     "m7": "cat test/fixture/array-tools.json | dmd --example-lang js > test/md/array-tools.md;",
     "m8": "cat test/fixture/get_val.json | dmd > test/md/get_val.md",
-    "t1": "cat test/fixture/everything.json | dmd --template test/template/module.hbs > test/md/module.md",
-    "t2": "cat test/fixture/file-set.json | dmd --template test/template/exported-class.hbs > test/md/exported-class.md",
-    "t3": "cat test/fixture/everything.json | dmd --template test/template/class.hbs > test/md/class.md",
-    "t4": "cat test/fixture/everything.json | dmd --template test/template/modules.hbs > test/md/modules.md",
     "p": "npm run p1 && npm run p2 && npm run p3 && npm run p5 && npm run p7 && npm run p8;echo",
     "m": "npm run m1 && npm run m2 && npm run m3 && npm run m5 && npm run m7 && npm run m8 && npm run m9 && npm run m10 && npm run m11 && echo",
-    "t": "npm run t1 && npm run t2 && npm run t3 && npm run t4",
-    "all": "npm run p && npm run m && npm run t; "
+    "all": "npm run p && npm run m; "
   },
   "dependencies": {
     "array-tools": "^1.3.0",

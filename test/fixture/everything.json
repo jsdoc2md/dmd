@@ -973,6 +973,232 @@
     "order": 74
   },
   {
+    "id": "Animal",
+    "longname": "Animal",
+    "name": "Animal",
+    "scope": "global",
+    "kind": "class",
+    "description": "Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).",
+    "codeName": "Animal",
+    "order": 75
+  },
+  {
+    "id": "Animal()",
+    "longname": "Animal",
+    "name": "Animal",
+    "kind": "constructor",
+    "memberof": "Animal",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "array"
+          ]
+        },
+        "description": "an array of two parent {@link Animal} objects",
+        "name": "species"
+      },
+      {
+        "type": {
+          "names": [
+            "Species"
+          ]
+        },
+        "description": "the species",
+        "name": "parents"
+      }
+    ],
+    "order": 76
+  },
+  {
+    "id": "Animal#age",
+    "longname": "Animal#age",
+    "name": "age",
+    "scope": "instance",
+    "kind": "member",
+    "description": "the current age",
+    "memberof": "Animal",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "defaultvalue": "0",
+    "codeName": "this.age",
+    "order": 77
+  },
+  {
+    "id": "Animal#species",
+    "longname": "Animal#species",
+    "name": "species",
+    "scope": "instance",
+    "kind": "member",
+    "memberof": "Animal",
+    "type": {
+      "names": [
+        "Species"
+      ]
+    },
+    "codeName": "this.species",
+    "order": 78
+  },
+  {
+    "id": "Animal.eMood",
+    "longname": "Animal.eMood",
+    "name": "eMood",
+    "scope": "static",
+    "kind": "member",
+    "description": "Animal moods",
+    "memberof": "Animal",
+    "isEnum": true,
+    "properties": [
+      {
+        "description": "chilling",
+        "name": "satisfied",
+        "longname": "Animal.eMood.satisfied",
+        "kind": "member",
+        "memberof": "Animal.eMood",
+        "scope": "static",
+        "defaultvalue": "0",
+        "codeName": "satisfied"
+      },
+      {
+        "description": "pissed off",
+        "name": "angry",
+        "longname": "Animal.eMood.angry",
+        "kind": "member",
+        "memberof": "Animal.eMood",
+        "scope": "static",
+        "defaultvalue": "1",
+        "codeName": "angry"
+      },
+      {
+        "description": "need to eat",
+        "name": "hungry",
+        "longname": "Animal.eMood.hungry",
+        "kind": "member",
+        "memberof": "Animal.eMood",
+        "scope": "static",
+        "defaultvalue": "2",
+        "codeName": "hungry"
+      }
+    ],
+    "codeName": "Animal.eMood",
+    "order": 79
+  },
+  {
+    "id": "builder",
+    "longname": "builder",
+    "name": "builder",
+    "scope": "global",
+    "kind": "mixin",
+    "codeName": "builder",
+    "order": 80
+  },
+  {
+    "id": "builder.construct",
+    "longname": "builder.construct",
+    "name": "construct",
+    "scope": "static",
+    "kind": "function",
+    "description": "construct something",
+    "memberof": "builder",
+    "codeName": "construct",
+    "order": 81
+  },
+  {
+    "id": "builder.repair",
+    "longname": "builder.repair",
+    "name": "repair",
+    "scope": "static",
+    "kind": "function",
+    "description": "repair something",
+    "memberof": "builder",
+    "codeName": "repair",
+    "order": 82
+  },
+  {
+    "id": "Species",
+    "longname": "Species",
+    "name": "Species",
+    "scope": "global",
+    "kind": "class",
+    "description": "In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into \"infraspecific taxa\" such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).",
+    "codeName": "Species",
+    "order": 83
+  },
+  {
+    "id": "Species#name",
+    "longname": "Species#name",
+    "name": "name",
+    "scope": "instance",
+    "kind": "member",
+    "description": "the species name",
+    "memberof": "Species",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "codeName": "this.name",
+    "order": 84
+  },
+  {
+    "id": "Species#species",
+    "longname": "Species#species",
+    "name": "species",
+    "scope": "instance",
+    "kind": "member",
+    "memberof": "Species",
+    "type": {
+      "names": [
+        "Species"
+      ]
+    },
+    "codeName": "this.species",
+    "order": 85
+  },
+  {
+    "id": "Species.merge",
+    "longname": "Species.merge",
+    "name": "merge",
+    "scope": "static",
+    "kind": "function",
+    "description": "merge two species into a new one",
+    "memberof": "Species",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Species"
+          ]
+        },
+        "description": "first",
+        "name": "one"
+      },
+      {
+        "type": {
+          "names": [
+            "Species"
+          ]
+        },
+        "description": "second",
+        "name": "two"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Species"
+          ]
+        }
+      }
+    ],
+    "codeName": "Species.merge",
+    "order": 86
+  },
+  {
     "id": "EventfulClass",
     "longname": "EventfulClass",
     "name": "EventfulClass",
@@ -983,7 +1209,7 @@
     ],
     "description": "a class which mixes in Eventful behaviour",
     "codeName": "EventfulClass",
-    "order": 75
+    "order": 87
   },
   {
     "id": "Eventful",
@@ -993,7 +1219,7 @@
     "kind": "mixin",
     "description": "This provides methods used for event handling. It's not meant to\nbe used directly.",
     "codeName": "Eventful",
-    "order": 76
+    "order": 88
   },
   {
     "id": "Eventful.on",
@@ -1024,7 +1250,7 @@
       }
     ],
     "codeName": "on",
-    "order": 77
+    "order": 89
   },
   {
     "id": "Eventful.fire",
@@ -1055,7 +1281,7 @@
       }
     ],
     "codeName": "fire",
-    "order": 78
+    "order": 90
   },
   {
     "id": "phantom",
@@ -1064,7 +1290,7 @@
     "scope": "global",
     "kind": "mixin",
     "description": "phantom mixin",
-    "order": 79
+    "order": 91
   },
   {
     "id": "Documents",
@@ -1073,7 +1299,7 @@
     "scope": "global",
     "kind": "namespace",
     "codeName": "Documents",
-    "order": 80
+    "order": 92
   },
   {
     "id": "Documents.Newspaper",
@@ -1084,7 +1310,7 @@
     "description": "An ordinary newspaper.",
     "memberof": "Documents",
     "codeName": "Newspaper",
-    "order": 81
+    "order": 93
   },
   {
     "id": "config",
@@ -1140,7 +1366,7 @@
       }
     ],
     "codeName": "config",
-    "order": 83
+    "order": 95
   },
   {
     "id": "globalFunction",
@@ -1169,7 +1395,7 @@
       }
     ],
     "codeName": "globalFunction",
-    "order": 84
+    "order": 96
   },
   {
     "id": "returnsSomething",
@@ -1188,7 +1414,7 @@
       }
     ],
     "codeName": "returnsSomething",
-    "order": 85
+    "order": 97
   },
   {
     "id": "seeableVar",
@@ -1201,7 +1427,7 @@
       "something or other"
     ],
     "codeName": "seeableVar",
-    "order": 86
+    "order": 98
   },
   {
     "id": "seefoo",
@@ -1215,7 +1441,7 @@
       "bar"
     ],
     "codeName": "seefoo",
-    "order": 87
+    "order": 99
   },
   {
     "id": "seebar",
@@ -1228,7 +1454,7 @@
       "{@link http://github.com|GitHub}"
     ],
     "codeName": "seebar",
-    "order": 88
+    "order": 100
   },
   {
     "id": "throwingFunction",
@@ -1257,7 +1483,7 @@
       }
     ],
     "codeName": "throwingFunction",
-    "order": 89
+    "order": 101
   },
   {
     "id": "todoFunction1",
@@ -1276,7 +1502,7 @@
         "task": "Implement this function."
       }
     ],
-    "order": 90
+    "order": 102
   },
   {
     "id": "todoFunction2",
@@ -1303,7 +1529,7 @@
         "task": "finished"
       }
     ],
-    "order": 91
+    "order": 103
   },
   {
     "id": "todoFunction3",
@@ -1322,7 +1548,7 @@
         "task": "finished"
       }
     ],
-    "order": 92
+    "order": 104
   },
   {
     "id": "returnsArrayOfType",
@@ -1340,7 +1566,7 @@
       }
     ],
     "codeName": "returnsArrayOfType",
-    "order": 93
+    "order": 105
   },
   {
     "id": "returnsArrayOfType2",
@@ -1359,7 +1585,7 @@
       }
     ],
     "codeName": "returnsArrayOfType2",
-    "order": 94
+    "order": 106
   },
   {
     "id": "nullableNumber",
@@ -1378,7 +1604,7 @@
       }
     ],
     "codeName": "nullableNumber",
-    "order": 95
+    "order": 107
   },
   {
     "id": "nonNullableNumber",
@@ -1397,7 +1623,7 @@
       }
     ],
     "codeName": "nonNullableNumber",
-    "order": 96
+    "order": 108
   },
   {
     "id": "objectType",
@@ -1411,7 +1637,7 @@
       ]
     },
     "codeName": "objectType",
-    "order": 97
+    "order": 109
   },
   {
     "id": "nullableArrayTypeParam",
@@ -1431,7 +1657,7 @@
       }
     ],
     "codeName": "nullableArrayTypeParam",
-    "order": 98
+    "order": 110
   },
   {
     "id": "globalVar",
@@ -1447,7 +1673,7 @@
     },
     "defaultvalue": "\"something\"",
     "codeName": "globalVar",
-    "order": 99
+    "order": 111
   },
   {
     "id": "GlobalChildClass#propOne",
@@ -1460,7 +1686,7 @@
     "description": "an instance property",
     "memberof": "GlobalChildClass",
     "codeName": "this.propOne",
-    "order": 100
+    "order": 112
   },
   {
     "id": "GlobalChildClass#methodOne",
@@ -1473,7 +1699,7 @@
     "description": "parent method one",
     "memberof": "GlobalChildClass",
     "codeName": "GlobalClass.prototype.methodOne",
-    "order": 101
+    "order": 113
   },
   {
     "id": "EventfulClass#on",
@@ -1508,7 +1734,7 @@
       }
     ],
     "codeName": "on",
-    "order": 102
+    "order": 114
   },
   {
     "id": "EventfulClass#fire",
@@ -1543,6 +1769,6 @@
       }
     ],
     "codeName": "fire",
-    "order": 103
+    "order": 115
   }
 ]
