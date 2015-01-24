@@ -1,6 +1,4 @@
 {{>index-indent}}* [{{>index-name}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix}}
-{{#children sortBy=(option "sort-by")~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by")~}}
 {{>member-index-list~}}
-{{~indexDepthDecrement~}}
-{{/children}}
+{{/indexChildren}}

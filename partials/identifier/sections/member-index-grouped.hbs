@@ -8,72 +8,56 @@
 
 {{#if (isClass)~}}
 
-{{#children sortBy=(option "sort-by") scope=undefined inherited=undefined~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") scope=undefined inherited=undefined~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") scope="instance" -kind="event" inherited=undefined overrides=undefined ~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") scope="instance" -kind="event" inherited=undefined overrides=undefined ~}}
 {{#if @first}}{{>index-indent}}* _instance_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") scope="static" inherited=undefined ~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") scope="static" inherited=undefined ~}}
 {{#if @first}}{{>index-indent}}* _static_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") inherited=undefined _overrides=".+" ~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") inherited=undefined _overrides=".+" ~}}
 {{#if @first}}{{>index-indent}}* _overrides_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") inherited=true~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") inherited=true~}}
 {{#if @first}}{{>index-indent}}* _inherits_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") scope="inner" inherited=undefined~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") scope="inner" inherited=undefined~}}
 {{#if @first}}{{>index-indent}}* _inner_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
-{{#children sortBy=(option "sort-by") kind="event" inherited=undefined~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by") kind="event" inherited=undefined~}}
 {{#if @first}}{{>index-indent}}* _events_
 {{indexDepthIncrement}}{{/if~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
 {{#if @last}}{{indexDepthDecrement}}{{/if~}}
-{{/children~}}
+{{/indexChildren~}}
 
 {{else~}}
 
-{{#children sortBy=(option "sort-by")~}}
-{{~indexDepthIncrement~}}
+{{#indexChildren sortBy=(option "sort-by")~}}
 {{>member-index-grouped~}}
-{{~indexDepthDecrement~}}
-{{/children~}}
+{{/indexChildren~}}
 
 {{/if}}
