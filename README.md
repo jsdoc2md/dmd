@@ -6,7 +6,9 @@
 ***preview release, not much documentation.. new version and docs coming soon***
 
 #dmd
-dmd (Document with Markdown) exposes a Transform stream class which, when fed [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data, outputs documentation in markdown format. The data at input is fed into the main template and rendered by handlebars. 
+dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.
+
+dmd  exposes a Transform stream class which, when fed [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data, outputs documentation in markdown format. The data at input is fed into the main template and rendered by handlebars. 
 
 ##Customise
 No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.

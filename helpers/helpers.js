@@ -52,7 +52,7 @@ function tableHead(){
     });
     var toSplice = [];
     cols = cols.filter(function(col, index){
-        var hasValue = data.every(function(row){
+        var hasValue = data.some(function(row){
             return typeof row[col] !== "undefined";
         });
         if (!hasValue) toSplice.push(index);
@@ -68,7 +68,7 @@ function tableHead(){
 }
 
 function containsData(rows, col){
-    return rows.every(function(row){
+    return rows.some(function(row){
         return typeof row[col] !== "undefined";
     });
 }
