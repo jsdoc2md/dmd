@@ -8,6 +8,7 @@ exports.escape = escape;
 exports.linkify = linkify;
 exports.renderMarkdown = renderMarkdown;
 exports.tableHead = tableHead;
+exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
 
 /**
@@ -93,4 +94,34 @@ function tableRow(){
         output += options.fn(row, { data: data });
     });
     return output;
+}
+
+function tableHeadHtml(){
+    var args = a.arrayify(arguments);
+    var data = args.shift();
+    if (!data) return;
+    var options = args.pop();
+    var cols = args;
+    var colHeaders = cols.map(function(col){
+        var spl = col.split("|");
+        return spl[1] || spl[0];
+    });
+    cols = cols.map(function(col){
+        return col.split("|")[0];
+    });
+    var toSplice = [];
+    cols = cols.filter(function(col, index){
+        var hasValue = data.some(function(row){
+            return typeof row[col] !== "undefined";
+        });
+        if (!hasValue) toSplice.push(index);
+        return hasValue;
+    });
+    toSplice.reverse().forEach(function(index){
+        colHeaders.splice(index, 1);
+    }); 
+    
+    // var table = "| " + colHeaders.join(" | ") + " |\n";
+    // table += cols.reduce(function(p){ return p + " --- |" }, "|") + "\n";
+    return colHeaders;
 }

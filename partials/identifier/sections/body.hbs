@@ -1,7 +1,9 @@
 {{>deprecated~}}
 {{>description~}}
 {{#if (optionEquals "param-list-format" "list")}}{{>params-list~}}{{/if~}}
-{{#if (optionEquals "param-list-format" "table")}}{{>params-table~}}{{/if~}}
+{{#if (optionEquals "param-list-format" "table")~}}
+  {{#if (optionEquals "no-gfm" true)}}{{>params-table-html~}}{{else}}{{>params-table~}}{{/if~}}
+{{/if~}}
 {{#if (optionEquals "property-list-format" "list")}}{{>properties-list~}}{{/if~}}
 {{#if (optionEquals "property-list-format" "table")}}{{>properties-table~}}{{/if~}}
 {{>augments~}}

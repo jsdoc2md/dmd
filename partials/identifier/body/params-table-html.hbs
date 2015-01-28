@@ -1,0 +1,21 @@
+{{#if params~}}
+
+<table>
+  <thead>
+    <tr>
+      {{#each (tableHeadHtml params "name|Param" "type|Type" "defaultvalue|Default" "description|Description")}}<td>{{this}}</td>{{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#tableRow params "name" "type" "defaultvalue" "description" ~}}
+    <tr>
+    {{#if @col1}}<td>{{>param-table-name}}</td>{{/if~}}
+    {{#if @col2}}<td>{{>linked-type-list types=type.names delimiter=" | " }}</td>{{/if~}}
+    {{#if @col3}}<td>{{#if defaultvalue}}{{#with defaultvalue}}{{>linked-type  input=this}}{{/with}}{{/if}}</td>{{/if~}}
+    {{#if @col4}}<td>{{{stripNewlines (linkify description)}}}</td>{{/if}}
+    </tr>
+    {{~/tableRow}}
+  </tbody>
+</table>
+
+{{/if}}
