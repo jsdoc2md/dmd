@@ -1,8 +1,20 @@
 {{#modules~}}
 {{#if @first~}}
 {{>heading-indent}}Modules
-| Module | Description |
-| ------ | ----------- |
+<table>
+  <thead>
+    <tr>
+      <th>Module</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
 {{/if~}}
-| {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}} | {{{stripNewlines (linkify description)}}} |
+    <tr>
+    <td>{{#if deprecated}}~~{{/if}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}</td>
+    <td>{{#md}}{{{linkify description}}}{{/md}}</td>
+    </tr>
+{{#if @last~}}
+  </tbody>
+</table>
+{{/if~}}
 {{/modules}}

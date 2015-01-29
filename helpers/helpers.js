@@ -1,12 +1,10 @@
 "use strict";
 var ddata = require("ddata");
-var marked = require("marked");
 var a = require("array-tools");
 var handlebars = require("boil")._handlebars;
 
 exports.escape = escape;
 exports.linkify = linkify;
-exports.renderMarkdown = renderMarkdown;
 exports.tableHead = tableHead;
 exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
@@ -30,12 +28,6 @@ function linkify(text, options){
         });
     }
     return text;
-}
-
-function renderMarkdown(input){
-    if (input){
-        return marked(input);
-    }
 }
 
 function tableHead(){
@@ -96,6 +88,10 @@ function tableRow(){
     return output;
 }
 
+/**
+@example
+{{#each (tableHeadHtml params "name|Param" "type|Type" )}}<td>{{this}}</td>{{/each}}
+*/
 function tableHeadHtml(){
     var args = a.arrayify(arguments);
     var data = args.shift();
@@ -121,7 +117,5 @@ function tableHeadHtml(){
         colHeaders.splice(index, 1);
     }); 
     
-    // var table = "| " + colHeaders.join(" | ") + " |\n";
-    // table += cols.reduce(function(p){ return p + " --- |" }, "|") + "\n";
     return colHeaders;
 }

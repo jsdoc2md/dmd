@@ -51,7 +51,6 @@
     "command-line-args": "~0.5.1",
     "console-dope": "~0.3.6",
     "ddata": "~0.1.0",
-    "marked": "^0.3.2",
     "object-tools": "^1.1.1"
   },
   "devDependencies": {
