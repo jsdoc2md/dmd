@@ -26,7 +26,7 @@ Expands file patterns, returning the matched and unmatched files and directories
 <a name="new_module_file-set--FileSet_new"></a>
 ####new FileSet(patternList)
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet#list"></a>
@@ -50,7 +50,7 @@ Paths which were not found
 add file patterns to the set
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | files | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet.eFileType"></a>
@@ -59,10 +59,10 @@ Enum for the `type` value of each record in `fileSet.list`
 
 **Properties**
 
-| Name | Type | Default |
-| --- | --- | --- |
-| NOEXIST | <code>number</code> | `0` | 
-| FILE | <code>number</code> | `1` | 
-| DIR | <code>number</code> | `2` | 
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| NOEXIST | <code>number</code> | `0` | when a file doesn't exist |
+| FILE | <code>number</code> | `1` | It's a file |
+| DIR | <code>number</code> | `2` |  |
 
 **Read only**: true  

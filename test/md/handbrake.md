@@ -29,7 +29,7 @@ var hbjs = require("handbrake-js");
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
 
 **Example**  
@@ -45,9 +45,9 @@ hbjs.spawn(options)
 Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-| \[onComplete\] | <code>function</code> | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
+| [onComplete] | <code>function</code> | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
 
 **Example**  
 ```js
@@ -113,7 +113,7 @@ Fired when encoding begins. If you're expecting an encode and this never fired, 
 Fired at regular intervals passing a `progress` object.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | progress | <code>object</code> | details of encode progress |
 | progress.taskNumber | <code>number</code> | current task index |
 | progress.taskCount | <code>number</code> | total tasks in the queue |
@@ -126,13 +126,13 @@ Fired at regular intervals passing a `progress` object.
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 ####event: "output" (output)
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | output | <code>string</code> | An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process. |
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
 ####event: "error" (error)
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | error | <code>Error</code> | All operational exceptions are delivered via this event. |
 | error.name | <code>[eError](#module_handbrake-js..Handbrake#eError)</code> | The unique error identifier |
 | error.message | <code>string</code> | Error description |

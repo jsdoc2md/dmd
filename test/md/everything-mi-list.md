@@ -1,52 +1,3 @@
-##Modules
-* [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>[Animal](#Animal)</code>
-  * [.dog](#module_cjs/animals.dog) → <code>[Animal](#Animal)</code>
-  * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * _instance_
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
-* [cjs/class](#module_cjs/class)
-  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
-    * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
-    * _instance_
-      * [.prop](#module_cjs/class--ExportedClass#prop)
-    * _static_
-      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-    * _inner_
-      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
-* [cjs/falias-obj](#module_cjs/falias-obj)
-  * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
-    * [.extra()](#module_cjs/falias-obj--sum.extra)
-* [cjs/function-alias](#module_cjs/function-alias)
-  * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
-    * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
-* [cjs/human](#module_cjs/human)
-  * [class: Human](#exp_module_cjs/human--Human) ⏏
-    * [new Human()](#new_module_cjs/human--Human_new)
-    * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
-    * _inner_
-      * [class: ~Organ](#module_cjs/human--Human..Organ)
-        * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _inner_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
-* [linkMod](#module_linkMod)
-  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
-    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
-  * [external: ~Math](#external_Math)
-  * [external: ~Date](#external_Date)
-* [cjs/object-alias](#module_cjs/object-alias)
-  * [teams](#exp_module_cjs/object-alias--teams) ⏏
-* [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) → <code>number</code>
-  * [.two()](#module_cjs/object.two)
-
 ##Globals
 <dl>
 <dt><a href="#GlobalClass">class: GlobalClass</a></dt>
@@ -276,7 +227,7 @@ exports a pointer to a function
 the function
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | one | <code>number</code> | the first number |
 | two | <code>number</code> | the second number |
 
@@ -416,7 +367,7 @@ a global class
 the global class constructor
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
 
@@ -504,7 +455,7 @@ Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also ca
 <a name="new_Animal_new"></a>
 ###new Animal(species, parents)
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | species | <code>array</code> | an array of two parent [Animal](#Animal) objects |
 | parents | <code>[Species](#Species)</code> | the species |
 
@@ -550,7 +501,7 @@ the species name
 merge two species into a new one
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | one | <code>[Species](#Species)</code> | first |
 | two | <code>[Species](#Species)</code> | second |
 
@@ -570,7 +521,7 @@ a class which mixes in Eventful behaviour
 Register a handler function to be called whenever this event is fired.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
 
@@ -580,7 +531,7 @@ Register a handler function to be called whenever this event is fired.
 Fire an event, causing all handlers for that event name to run.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
 
@@ -615,7 +566,7 @@ be used directly.
 Register a handler function to be called whenever this event is fired.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
 
@@ -624,7 +575,7 @@ Register a handler function to be called whenever this event is fired.
 Fire an event, causing all handlers for that event name to run.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
 
@@ -731,7 +682,7 @@ a static method on the function
 a global function
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
 | three | <code>number</code> \| <code>string</code> | third |
@@ -795,9 +746,9 @@ Both of these will link to the bar function.
 
 <a name="nullableArrayTypeParam"></a>
 ##nullableArrayTypeParam(one)
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> |  |
+| Param | Type |
+| --- | --- |
+| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
 
 <a name="event_docletEvent"></a>
 ##event: "docletEvent"

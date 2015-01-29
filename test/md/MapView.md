@@ -47,12 +47,12 @@ Map-type
 <a name="new_module_MapView--MapView_new"></a>
 ####`new MapView(options)`
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | options | <code>Object</code> | Options. |
 | options.type | <code>[MapType](#module_MapView--MapView.MapType)</code> | Map-type (e.g. MapView.MapType.GOOGLEMAPS, MapView.MapType.LEAFLET). |
 | options.mapOptions | <code>Object</code> | Options that are passed directly to the Map object. The options should include the 'center' and 'zoom'. |
-| \[options.id\] | <code>String</code> | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
-| \[options.zoomTransition\] | <code>Transition</code> | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
+| [options.id] | <code>String</code> | Id of the DOM-element to use. When ommitted, a DOM-element is created using a surface. |
+| [options.zoomTransition] | <code>Transition</code> | Transition to use for smoothly zooming renderables (by default a transition of 120 ms is used). |
 
 <a name="module_MapView--MapView.DEFAULT_OPTIONS"></a>
 ####`MapView.DEFAULT_OPTIONS`
@@ -74,10 +74,10 @@ guarenteed to be valid after the 'load' event has been emited.
 Set the center of the map to the given geographical coordinates.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | Position in geographical coordinates. |
-| \[transition\] | <code>Transitionable</code> | Transitionable. |
-| \[callback\] | <code>function</code> | callback to call after transition completes. |
+| [transition] | <code>Transitionable</code> | Transitionable. |
+| [callback] | <code>function</code> | callback to call after transition completes. |
 
 <a name="module_MapView--MapView#getPosition"></a>
 ####`mapView.getPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
@@ -101,7 +101,7 @@ at 5, over time. The used zoomTransition can be set as an option.
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | in geographical coordinates. |
 
 **Returns**: <code>Point</code> - Position in pixels, relative to the left-top of the mapView.  
@@ -110,7 +110,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | point | <code>Point</code> | Position in pixels, relative to the left-top of the mapView. |
 
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  

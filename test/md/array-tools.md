@@ -27,7 +27,7 @@ var a = require("array-tools");
 Plucks the value of the specified property from each object in the input array
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input array of objects |
 | ...property | <code>string</code> | the property(s) to pluck |
 
@@ -51,7 +51,7 @@ undefined
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
 | ...property | <code>string</code> | the properties to include in the result |
 
@@ -77,7 +77,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 - converts `null` or `undefined` to an empty array
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | input | <code>\*</code> | the input value to convert to an array |
 
 **Example**  
@@ -98,7 +98,7 @@ undefined
 returns true if a value, or nested object value exists in an array
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | array | <code>Array</code> | the array to search |
 | value | <code>\*</code> | the value to search for |
 
@@ -119,7 +119,7 @@ returns an array containing items from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | arrayOfObjects | <code>Array</code> | the array to search |
 | query | <code>query</code> | an object containing the key/value pairs you want to match |
 
@@ -139,7 +139,7 @@ returns the first item from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | arrayOfObjects | <code>Array</code> | the array to search |
 | query | <code>query</code> | an object containing the key/value pairs you want to match |
 
@@ -157,7 +157,7 @@ from `query` are matched identically
 Returns the input minus the specified values.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | input | <code>Array</code> | the input array |
 | toRemove | <code>\*</code> | a single, or array of values to omit |
 
@@ -173,7 +173,7 @@ Returns the input minus the specified values.
 merge two arrays into a single array of unique values
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | array1 | <code>Array</code> | First array |
 | array2 | <code>Array</code> | Second array |
 | idKey | <code>string</code> | the unique ID property name |
@@ -203,7 +203,7 @@ undefined
 Returns the initial elements which both input arrays have in common
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | a | <code>Array</code> | first array to compare |
 | b | <code>Array</code> | second array to compare |
 
@@ -217,7 +217,7 @@ Returns the initial elements which both input arrays have in common
 reduces an array to unique values
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | array | <code>Array</code> | input array |
 
 **Example**  
@@ -232,7 +232,7 @@ reduces an array to unique values
 splice from `index` until `test` fails
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | array | <code>Array</code> | the input array |
 | index | <code>number</code> | the position to begin splicing from |
 | test | <code>RegExp</code> | the test to continue splicing while true |
@@ -252,7 +252,7 @@ splice from `index` until `test` fails
 Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
 
 | Param | Type | Description |
-| ----- | ---- | ----------- |
+| --- | --- | --- |
 | array | <code>Array</code> | the input array, modified directly |
 | query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
 
