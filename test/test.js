@@ -44,6 +44,15 @@ test("linkify", function (t) {
 
 });
 
+test("camel case", function(t){
+    t.plan(1);
+
+    fs.createReadStream("test/fixture/camelcase.json").pipe(dmd()).on("readable", function(){
+        var md = this.read();
+        if (md) t.ok(/jsonParser.parse/.test(md.toString()));
+    });
+});
+
 test("partials");
 test("headers");
 test("plugins");

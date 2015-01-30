@@ -1,7 +1,9 @@
 var a = require("array-tools");
 
 function instantiate(input){
-    return input.charAt(0).toLowerCase() + input.slice(1);
+    return input.replace(/^([A-Z]+)([A-Z])/, function (str, p1, p2) {
+        return p1.toLowerCase() + p2;
+    });
 }
 
 module.exports = function(handlebars){
