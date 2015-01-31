@@ -10,7 +10,7 @@
   <tbody>
 {{/if~}}
     <tr>
-    <td>{{#if deprecated}}~~{{/if}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}</td>
+    <td>{{#deprecated no-gfm=true}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{/deprecated}}</td>
     <td>{{#md}}{{{linkify description}}}{{/md}}</td>
     </tr>
 {{#if @last~}}

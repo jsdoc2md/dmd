@@ -1,9 +1,9 @@
 {{#if inherited~}}
 {{#with (identifier longname=inherits)~}}
-{{>index-indent}}* {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}
+{{>index-indent}}* {{#deprecated}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{/deprecated}}
 {{/with~}}
 {{else~}}
-{{>index-indent}}* {{#if deprecated}}~~{{/if}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{#if deprecated}}~~{{/if}}
+{{>index-indent}}* {{#deprecated}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{/deprecated}}
 {{/if~}}
 
 {{#if (isClass)~}}

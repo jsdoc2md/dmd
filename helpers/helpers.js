@@ -8,6 +8,7 @@ exports.linkify = linkify;
 exports.tableHead = tableHead;
 exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
+exports.deprecated = deprecated;
 
 /**
 Escape special markdown characters
@@ -118,4 +119,16 @@ function tableHeadHtml(){
     }); 
     
     return colHeaders;
+}
+
+function deprecated(options){
+    if (this.deprecated){
+        if (ddata.optionEquals("no-gfm", true, options) || options.hash["no-gfm"]){
+            return "<del>" + options.fn(this) + "</del>";
+        } else {
+            return "~~" + options.fn(this) + "~~";
+        }
+    } else {
+        return options.fn(this);
+    }
 }
