@@ -1,11 +1,33 @@
 [
   {
+    "id": "Chainable",
+    "longname": "Chainable",
+    "name": "Chainable",
+    "scope": "global",
+    "kind": "class",
+    "description": "has a chainable method",
+    "codeName": "Chainable",
+    "order": 0
+  },
+  {
+    "chainable": true,
+    "id": "Chainable#method",
+    "longname": "Chainable#method",
+    "name": "method",
+    "scope": "instance",
+    "kind": "function",
+    "description": "returns itself",
+    "memberof": "Chainable",
+    "codeName": "this.method",
+    "order": 1
+  },
+  {
     "id": "module:cjs/animals",
     "longname": "module:cjs/animals",
     "name": "cjs/animals",
     "kind": "module",
     "description": "exports animals",
-    "order": 0
+    "order": 2
   },
   {
     "id": "module:cjs/animals.cat",
@@ -21,7 +43,7 @@
       ]
     },
     "codeName": "exports.cat",
-    "order": 1
+    "order": 3
   },
   {
     "id": "module:cjs/animals.dog",
@@ -37,7 +59,7 @@
       ]
     },
     "codeName": "exports.dog",
-    "order": 2
+    "order": 4
   },
   {
     "id": "module:cjs/animals~Animal",
@@ -47,7 +69,7 @@
     "kind": "class",
     "memberof": "module:cjs/animals",
     "codeName": "Animal",
-    "order": 3
+    "order": 5
   },
   {
     "id": "module:cjs/animals~Animal~Quadroped",
@@ -57,7 +79,7 @@
     "kind": "class",
     "memberof": "module:cjs/animals~Animal",
     "codeName": "Quadroped",
-    "order": 4
+    "order": 6
   },
   {
     "id": "module:cjs/animals~Animal~Quadroped#legs",
@@ -68,7 +90,7 @@
     "description": "leg count",
     "memberof": "module:cjs/animals~Animal~Quadroped",
     "codeName": "this.legs",
-    "order": 5
+    "order": 7
   },
   {
     "id": "module:cjs/animals~Animal#type",
@@ -84,7 +106,7 @@
       ]
     },
     "codeName": "this.type",
-    "order": 6
+    "order": 8
   },
   {
     "id": "module:cjs/class",
@@ -93,7 +115,7 @@
     "kind": "module",
     "description": "exports a class",
     "typicalname": "exp",
-    "order": 7
+    "order": 9
   },
   {
     "id": "module:cjs/class--ExportedClass",
@@ -105,7 +127,7 @@
     "memberof": "module:cjs/class",
     "alias": "module:cjs/class",
     "codeName": "ExportedClass",
-    "order": 8
+    "order": 10
   },
   {
     "id": "module:cjs/class--ExportedClass()",
@@ -114,7 +136,7 @@
     "kind": "constructor",
     "description": "the exported contructor",
     "memberof": "module:cjs/class--ExportedClass",
-    "order": 9
+    "order": 11
   },
   {
     "id": "module:cjs/class--ExportedClass#prop",
@@ -125,7 +147,7 @@
     "description": "instance property",
     "memberof": "module:cjs/class--ExportedClass",
     "codeName": "this.prop",
-    "order": 10
+    "order": 12
   },
   {
     "id": "module:cjs/class--ExportedClass.staticProp",
@@ -136,7 +158,7 @@
     "description": "a static property for the exported class",
     "memberof": "module:cjs/class--ExportedClass",
     "codeName": "ExportedClass.staticProp",
-    "order": 11
+    "order": 13
   },
   {
     "id": "module:cjs/class--ExportedClass~innerProp",
@@ -147,7 +169,7 @@
     "description": "inner module property",
     "memberof": "module:cjs/class--ExportedClass",
     "codeName": "innerProp",
-    "order": 12
+    "order": 14
   },
   {
     "id": "module:cjs/falias-obj",
@@ -155,7 +177,7 @@
     "name": "cjs/falias-obj",
     "kind": "module",
     "description": "exports a pointer to a function",
-    "order": 13
+    "order": 15
   },
   {
     "id": "module:cjs/falias-obj--sum",
@@ -167,7 +189,7 @@
     "memberof": "module:cjs/falias-obj",
     "alias": "module:cjs/falias-obj",
     "codeName": "sum",
-    "order": 14
+    "order": 16
   },
   {
     "id": "module:cjs/falias-obj--sum.extra",
@@ -178,7 +200,7 @@
     "description": "a static method on the exported function",
     "memberof": "module:cjs/falias-obj--sum",
     "codeName": "sum.extra",
-    "order": 15
+    "order": 17
   },
   {
     "id": "module:cjs/function-alias",
@@ -186,7 +208,7 @@
     "name": "cjs/function-alias",
     "kind": "module",
     "description": "exports a pointer to a function",
-    "order": 16
+    "order": 18
   },
   {
     "id": "module:cjs/function-alias--sum",
@@ -228,7 +250,7 @@
       }
     ],
     "codeName": "sum",
-    "order": 17
+    "order": 19
   },
   {
     "id": "module:cjs/function-alias--sum.sumthingStatic",
@@ -239,7 +261,7 @@
     "description": "an additional static property",
     "memberof": "module:cjs/function-alias--sum",
     "codeName": "sum.sumthingStatic",
-    "order": 18
+    "order": 20
   },
   {
     "id": "module:cjs/human",
@@ -248,7 +270,7 @@
     "kind": "module",
     "description": "exports a class",
     "typicalname": "d",
-    "order": 19
+    "order": 21
   },
   {
     "id": "module:cjs/human--Human",
@@ -260,7 +282,7 @@
     "memberof": "module:cjs/human",
     "alias": "module:cjs/human",
     "codeName": "Human",
-    "order": 20
+    "order": 22
   },
   {
     "id": "module:cjs/human--Human()",
@@ -269,7 +291,7 @@
     "kind": "constructor",
     "description": "the exported contructor",
     "memberof": "module:cjs/human--Human",
-    "order": 21
+    "order": 23
   },
   {
     "id": "module:cjs/human--Human~Organ",
@@ -280,7 +302,7 @@
     "description": "a class inside a class",
     "memberof": "module:cjs/human--Human",
     "codeName": "Organ",
-    "order": 22
+    "order": 24
   },
   {
     "id": "module:cjs/human--Human~Organ~Cell",
@@ -291,7 +313,7 @@
     "description": "a class inside a class inside a class",
     "memberof": "module:cjs/human--Human~Organ",
     "codeName": "Cell",
-    "order": 23
+    "order": 25
   },
   {
     "id": "module:cjs/human--Human~Organ#redCell",
@@ -307,7 +329,7 @@
       ]
     },
     "codeName": "this.redCell",
-    "order": 24
+    "order": 26
   },
   {
     "id": "module:cjs/human--Human#liver",
@@ -323,7 +345,7 @@
       ]
     },
     "codeName": "this.liver",
-    "order": 25
+    "order": 27
   },
   {
     "id": "module:linkMod",
@@ -331,7 +353,7 @@
     "name": "linkMod",
     "kind": "module",
     "description": "A module. Refer to it using {@link module:linkMod|this link}.",
-    "order": 26
+    "order": 28
   },
   {
     "id": "external:Math",
@@ -344,7 +366,7 @@
     "see": [
       "http://www.math.com"
     ],
-    "order": 27
+    "order": 29
   },
   {
     "id": "external:Date",
@@ -354,7 +376,7 @@
     "kind": "external",
     "description": "The built in Date object, it has no see tag. Refer to it with {@link external:Date}.",
     "memberof": "module:linkMod",
-    "order": 28
+    "order": 30
   },
   {
     "id": "module:linkMod.event:MyEvent",
@@ -364,7 +386,7 @@
     "kind": "event",
     "description": "An event. Refer to with {@link module:linkMod.event:MyEvent this link}.",
     "memberof": "module:linkMod",
-    "order": 29
+    "order": 31
   },
   {
     "id": "module:linkMod~linksYeah",
@@ -380,7 +402,7 @@
       "module:linkMod.event:MyEvent"
     ],
     "codeName": "linksYeah",
-    "order": 30
+    "order": 32
   },
   {
     "id": "module:linkMod~linksYeah()",
@@ -389,7 +411,7 @@
     "kind": "constructor",
     "description": "this is from {@link module:linkMod}.. it also references {@link external:Math}",
     "memberof": "module:linkMod~linksYeah",
-    "order": 31
+    "order": 33
   },
   {
     "id": "module:cjs/object-alias",
@@ -397,7 +419,7 @@
     "name": "cjs/object-alias",
     "kind": "module",
     "description": "a module exporting an object",
-    "order": 32
+    "order": 34
   },
   {
     "id": "module:cjs/object-alias--teams",
@@ -409,7 +431,7 @@
     "memberof": "module:cjs/object-alias",
     "alias": "module:cjs/object-alias",
     "codeName": "teams",
-    "order": 33
+    "order": 35
   },
   {
     "id": "module:cjs/object",
@@ -418,7 +440,7 @@
     "kind": "module",
     "description": "a module exporting `exports` directly",
     "typicalname": "obj",
-    "order": 34
+    "order": 36
   },
   {
     "id": "module:cjs/object.one",
@@ -434,7 +456,7 @@
       ]
     },
     "codeName": "exports.one",
-    "order": 35
+    "order": 37
   },
   {
     "id": "module:cjs/object.two",
@@ -448,7 +470,7 @@
       "this is the example"
     ],
     "codeName": "exports.two",
-    "order": 36
+    "order": 38
   },
   {
     "id": "GlobalClass",
@@ -458,7 +480,7 @@
     "kind": "class",
     "description": "a global class",
     "codeName": "GlobalClass",
-    "order": 37
+    "order": 39
   },
   {
     "id": "GlobalClass()",
@@ -487,7 +509,7 @@
         "name": "two"
       }
     ],
-    "order": 38
+    "order": 40
   },
   {
     "id": "GlobalClass#propOne",
@@ -498,7 +520,7 @@
     "description": "an instance property",
     "memberof": "GlobalClass",
     "codeName": "this.propOne",
-    "order": 39
+    "order": 41
   },
   {
     "id": "GlobalClass.propTwo",
@@ -509,7 +531,7 @@
     "description": "a static property",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.propTwo",
-    "order": 40
+    "order": 42
   },
   {
     "id": "GlobalClass#methodOne",
@@ -520,7 +542,7 @@
     "description": "parent method one",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.prototype.methodOne",
-    "order": 41
+    "order": 43
   },
   {
     "id": "GlobalClass#methodTwo",
@@ -531,7 +553,7 @@
     "description": "parent method two",
     "memberof": "GlobalClass",
     "codeName": "GlobalClass.prototype.methodTwo",
-    "order": 42
+    "order": 44
   },
   {
     "id": "GlobalChildClass",
@@ -544,7 +566,7 @@
     ],
     "description": "the child of global class",
     "codeName": "GlobalChildClass",
-    "order": 43
+    "order": 45
   },
   {
     "id": "GlobalChildClass#propThree",
@@ -555,7 +577,7 @@
     "description": "an instance property",
     "memberof": "GlobalChildClass",
     "codeName": "this.propThree",
-    "order": 44
+    "order": 46
   },
   {
     "id": "GlobalChildClass#methodTwo",
@@ -567,7 +589,7 @@
     "description": "overridden child methodTwo",
     "memberof": "GlobalChildClass",
     "codeName": "GlobalChildClass.prototype.methodTwo",
-    "order": 45
+    "order": 47
   },
   {
     "id": "customTagged",
@@ -587,7 +609,7 @@
         "value": "Oggmeister"
       }
     ],
-    "order": 46
+    "order": 48
   },
   {
     "id": "customClass",
@@ -607,7 +629,7 @@
         "value": "Rodney Trotter"
       }
     ],
-    "order": 47
+    "order": 49
   },
   {
     "id": "customClass()",
@@ -616,7 +638,7 @@
     "kind": "constructor",
     "description": "the constructor",
     "memberof": "customClass",
-    "order": 48
+    "order": 50
   },
   {
     "id": "customFunction",
@@ -636,7 +658,7 @@
         "value": "Noel Edmonds"
       }
     ],
-    "order": 49
+    "order": 51
   },
   {
     "id": "defaultedOne",
@@ -651,7 +673,7 @@
     },
     "defaultvalue": "{ one: 1, two: \"yeah?\" }",
     "codeName": "defaultedOne",
-    "order": 50
+    "order": 52
   },
   {
     "id": "defaultedTwo",
@@ -666,7 +688,7 @@
     },
     "defaultvalue": "function f(n){ return something(n); }",
     "codeName": "defaultedTwo",
-    "order": 51
+    "order": 53
   },
   {
     "id": "event:docletEvent",
@@ -675,7 +697,7 @@
     "scope": "global",
     "kind": "event",
     "description": "an event defined in a doclet",
-    "order": 52
+    "order": 54
   },
   {
     "id": "exampleVar",
@@ -694,7 +716,7 @@
     },
     "defaultvalue": "\"something\"",
     "codeName": "exampleVar",
-    "order": 53
+    "order": 55
   },
   {
     "id": "external:String",
@@ -705,7 +727,7 @@
     "see": [
       "{@link https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String String}"
     ],
-    "order": 54
+    "order": 56
   },
   {
     "id": "external:Clive",
@@ -716,7 +738,7 @@
     "see": [
       "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String"
     ],
-    "order": 55
+    "order": 57
   },
   {
     "id": "external:String#rot13",
@@ -729,7 +751,7 @@
     "examples": [
       "var greeting = new String('hello world');\nconsole.log( greeting.rot13() ); // uryyb jbeyq"
     ],
-    "order": 56
+    "order": 58
   },
   {
     "id": "external:jQuery.fn",
@@ -741,7 +763,7 @@
     "see": [
       "{@link http://docs.jquery.com/Plugins/Authoring The jQuery Plugin Guide}"
     ],
-    "order": 57
+    "order": 59
   },
   {
     "id": "external:jQuery.fn.starfairy",
@@ -751,7 +773,7 @@
     "kind": "function",
     "description": "A jQuery plugin to make stars fly around your home page.",
     "memberof": "external:jQuery.fn",
-    "order": 58
+    "order": 60
   },
   {
     "id": "external:XMLHttpRequest",
@@ -763,7 +785,7 @@
     "see": [
       "https://developer.mozilla.org/en/xmlhttprequest"
     ],
-    "order": 59
+    "order": 61
   },
   {
     "id": "EncryptedRequest",
@@ -774,7 +796,7 @@
     "augments": [
       "external:XMLHttpRequest"
     ],
-    "order": 60
+    "order": 62
   },
   {
     "id": "EncryptedRequest()",
@@ -783,7 +805,7 @@
     "kind": "constructor",
     "description": "Extends the built in XMLHttpRequest to send data encoded with a secret key.",
     "memberof": "EncryptedRequest",
-    "order": 61
+    "order": 63
   },
   {
     "id": "cliveExternal",
@@ -797,7 +819,7 @@
       ]
     },
     "codeName": "cliveExternal",
-    "order": 62
+    "order": 64
   },
   {
     "id": "stringExternal",
@@ -811,7 +833,7 @@
       ]
     },
     "codeName": "stringExternal",
-    "order": 63
+    "order": 65
   },
   {
     "id": "fileVar",
@@ -821,7 +843,7 @@
     "kind": "member",
     "description": "a variable in the file",
     "codeName": "fileVar",
-    "order": 64
+    "order": 66
   },
   {
     "id": "firesError",
@@ -833,7 +855,7 @@
       "event:error"
     ],
     "codeName": "firesError",
-    "order": 65
+    "order": 67
   },
   {
     "id": "firesMany",
@@ -847,7 +869,7 @@
       "event:end"
     ],
     "codeName": "firesMany",
-    "order": 66
+    "order": 68
   },
   {
     "id": "firesDefinedEvent",
@@ -859,7 +881,7 @@
       "event:docletEvent"
     ],
     "codeName": "firesDefinedEvent",
-    "order": 67
+    "order": 69
   },
   {
     "id": "functionObj",
@@ -869,7 +891,7 @@
     "kind": "function",
     "description": "the function",
     "codeName": "functionObj",
-    "order": 68
+    "order": 70
   },
   {
     "id": "functionObj.extra",
@@ -880,7 +902,7 @@
     "description": "a static method on the function",
     "memberof": "functionObj",
     "codeName": "functionObj.extra",
-    "order": 69
+    "order": 71
   },
   {
     "id": "globalFunction",
@@ -929,7 +951,7 @@
       }
     ],
     "codeName": "globalFunction",
-    "order": 70
+    "order": 72
   },
   {
     "id": "LendsClass",
@@ -938,7 +960,7 @@
     "scope": "global",
     "kind": "class",
     "codeName": "LendsClass",
-    "order": 71
+    "order": 73
   },
   {
     "id": "LendsClass.say",
@@ -949,7 +971,7 @@
     "description": "say something",
     "memberof": "LendsClass",
     "codeName": "say",
-    "order": 72
+    "order": 74
   },
   {
     "id": "LendsClass2",
@@ -959,7 +981,7 @@
     "kind": "class",
     "alias": "LendsClass2",
     "codeName": "initialize",
-    "order": 73
+    "order": 75
   },
   {
     "id": "LendsClass2#say",
@@ -970,233 +992,7 @@
     "description": "say something",
     "memberof": "LendsClass2",
     "codeName": "say",
-    "order": 74
-  },
-  {
-    "id": "Animal",
-    "longname": "Animal",
-    "name": "Animal",
-    "scope": "global",
-    "kind": "class",
-    "description": "Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).",
-    "codeName": "Animal",
-    "order": 75
-  },
-  {
-    "id": "Animal()",
-    "longname": "Animal",
-    "name": "Animal",
-    "kind": "constructor",
-    "memberof": "Animal",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "array"
-          ]
-        },
-        "description": "an array of two parent {@link Animal} objects",
-        "name": "species"
-      },
-      {
-        "type": {
-          "names": [
-            "Species"
-          ]
-        },
-        "description": "the species",
-        "name": "parents"
-      }
-    ],
     "order": 76
-  },
-  {
-    "id": "Animal#age",
-    "longname": "Animal#age",
-    "name": "age",
-    "scope": "instance",
-    "kind": "member",
-    "description": "the current age",
-    "memberof": "Animal",
-    "type": {
-      "names": [
-        "number"
-      ]
-    },
-    "defaultvalue": "0",
-    "codeName": "this.age",
-    "order": 77
-  },
-  {
-    "id": "Animal#species",
-    "longname": "Animal#species",
-    "name": "species",
-    "scope": "instance",
-    "kind": "member",
-    "memberof": "Animal",
-    "type": {
-      "names": [
-        "Species"
-      ]
-    },
-    "codeName": "this.species",
-    "order": 78
-  },
-  {
-    "id": "Animal.eMood",
-    "longname": "Animal.eMood",
-    "name": "eMood",
-    "scope": "static",
-    "kind": "member",
-    "description": "Animal moods",
-    "memberof": "Animal",
-    "isEnum": true,
-    "properties": [
-      {
-        "description": "chilling",
-        "name": "satisfied",
-        "longname": "Animal.eMood.satisfied",
-        "kind": "member",
-        "memberof": "Animal.eMood",
-        "scope": "static",
-        "defaultvalue": "0",
-        "codeName": "satisfied"
-      },
-      {
-        "description": "pissed off",
-        "name": "angry",
-        "longname": "Animal.eMood.angry",
-        "kind": "member",
-        "memberof": "Animal.eMood",
-        "scope": "static",
-        "defaultvalue": "1",
-        "codeName": "angry"
-      },
-      {
-        "description": "need to eat",
-        "name": "hungry",
-        "longname": "Animal.eMood.hungry",
-        "kind": "member",
-        "memberof": "Animal.eMood",
-        "scope": "static",
-        "defaultvalue": "2",
-        "codeName": "hungry"
-      }
-    ],
-    "codeName": "Animal.eMood",
-    "order": 79
-  },
-  {
-    "id": "builder",
-    "longname": "builder",
-    "name": "builder",
-    "scope": "global",
-    "kind": "mixin",
-    "codeName": "builder",
-    "order": 80
-  },
-  {
-    "id": "builder.construct",
-    "longname": "builder.construct",
-    "name": "construct",
-    "scope": "static",
-    "kind": "function",
-    "description": "construct something",
-    "memberof": "builder",
-    "codeName": "construct",
-    "order": 81
-  },
-  {
-    "id": "builder.repair",
-    "longname": "builder.repair",
-    "name": "repair",
-    "scope": "static",
-    "kind": "function",
-    "description": "repair something",
-    "memberof": "builder",
-    "codeName": "repair",
-    "order": 82
-  },
-  {
-    "id": "Species",
-    "longname": "Species",
-    "name": "Species",
-    "scope": "global",
-    "kind": "class",
-    "description": "In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into \"infraspecific taxa\" such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).",
-    "codeName": "Species",
-    "order": 83
-  },
-  {
-    "id": "Species#name",
-    "longname": "Species#name",
-    "name": "name",
-    "scope": "instance",
-    "kind": "member",
-    "description": "the species name",
-    "memberof": "Species",
-    "type": {
-      "names": [
-        "string"
-      ]
-    },
-    "codeName": "this.name",
-    "order": 84
-  },
-  {
-    "id": "Species#species",
-    "longname": "Species#species",
-    "name": "species",
-    "scope": "instance",
-    "kind": "member",
-    "memberof": "Species",
-    "type": {
-      "names": [
-        "Species"
-      ]
-    },
-    "codeName": "this.species",
-    "order": 85
-  },
-  {
-    "id": "Species.merge",
-    "longname": "Species.merge",
-    "name": "merge",
-    "scope": "static",
-    "kind": "function",
-    "description": "merge two species into a new one",
-    "memberof": "Species",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Species"
-          ]
-        },
-        "description": "first",
-        "name": "one"
-      },
-      {
-        "type": {
-          "names": [
-            "Species"
-          ]
-        },
-        "description": "second",
-        "name": "two"
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Species"
-          ]
-        }
-      }
-    ],
-    "codeName": "Species.merge",
-    "order": 86
   },
   {
     "id": "EventfulClass",
@@ -1209,7 +1005,7 @@
     ],
     "description": "a class which mixes in Eventful behaviour",
     "codeName": "EventfulClass",
-    "order": 87
+    "order": 77
   },
   {
     "id": "Eventful",
@@ -1219,7 +1015,7 @@
     "kind": "mixin",
     "description": "This provides methods used for event handling. It's not meant to\nbe used directly.",
     "codeName": "Eventful",
-    "order": 88
+    "order": 78
   },
   {
     "id": "Eventful.on",
@@ -1250,7 +1046,7 @@
       }
     ],
     "codeName": "on",
-    "order": 89
+    "order": 79
   },
   {
     "id": "Eventful.fire",
@@ -1281,7 +1077,7 @@
       }
     ],
     "codeName": "fire",
-    "order": 90
+    "order": 80
   },
   {
     "id": "phantom",
@@ -1290,7 +1086,7 @@
     "scope": "global",
     "kind": "mixin",
     "description": "phantom mixin",
-    "order": 91
+    "order": 81
   },
   {
     "id": "Documents",
@@ -1299,7 +1095,7 @@
     "scope": "global",
     "kind": "namespace",
     "codeName": "Documents",
-    "order": 92
+    "order": 82
   },
   {
     "id": "Documents.Newspaper",
@@ -1310,7 +1106,7 @@
     "description": "An ordinary newspaper.",
     "memberof": "Documents",
     "codeName": "Newspaper",
-    "order": 93
+    "order": 83
   },
   {
     "id": "config",
@@ -1366,7 +1162,7 @@
       }
     ],
     "codeName": "config",
-    "order": 95
+    "order": 85
   },
   {
     "id": "globalFunction",
@@ -1395,7 +1191,7 @@
       }
     ],
     "codeName": "globalFunction",
-    "order": 96
+    "order": 86
   },
   {
     "id": "returnsSomething",
@@ -1414,7 +1210,7 @@
       }
     ],
     "codeName": "returnsSomething",
-    "order": 97
+    "order": 87
   },
   {
     "id": "seeableVar",
@@ -1427,7 +1223,7 @@
       "something or other"
     ],
     "codeName": "seeableVar",
-    "order": 98
+    "order": 88
   },
   {
     "id": "seefoo",
@@ -1441,7 +1237,7 @@
       "bar"
     ],
     "codeName": "seefoo",
-    "order": 99
+    "order": 89
   },
   {
     "id": "seebar",
@@ -1454,7 +1250,7 @@
       "{@link http://github.com|GitHub}"
     ],
     "codeName": "seebar",
-    "order": 100
+    "order": 90
   },
   {
     "id": "throwingFunction",
@@ -1483,7 +1279,7 @@
       }
     ],
     "codeName": "throwingFunction",
-    "order": 101
+    "order": 91
   },
   {
     "id": "todoFunction1",
@@ -1502,7 +1298,7 @@
         "task": "Implement this function."
       }
     ],
-    "order": 102
+    "order": 92
   },
   {
     "id": "todoFunction2",
@@ -1529,7 +1325,7 @@
         "task": "finished"
       }
     ],
-    "order": 103
+    "order": 93
   },
   {
     "id": "todoFunction3",
@@ -1548,7 +1344,7 @@
         "task": "finished"
       }
     ],
-    "order": 104
+    "order": 94
   },
   {
     "id": "returnsArrayOfType",
@@ -1566,7 +1362,7 @@
       }
     ],
     "codeName": "returnsArrayOfType",
-    "order": 105
+    "order": 95
   },
   {
     "id": "returnsArrayOfType2",
@@ -1585,7 +1381,7 @@
       }
     ],
     "codeName": "returnsArrayOfType2",
-    "order": 106
+    "order": 96
   },
   {
     "id": "nullableNumber",
@@ -1604,7 +1400,7 @@
       }
     ],
     "codeName": "nullableNumber",
-    "order": 107
+    "order": 97
   },
   {
     "id": "nonNullableNumber",
@@ -1623,7 +1419,7 @@
       }
     ],
     "codeName": "nonNullableNumber",
-    "order": 108
+    "order": 98
   },
   {
     "id": "objectType",
@@ -1637,7 +1433,7 @@
       ]
     },
     "codeName": "objectType",
-    "order": 109
+    "order": 99
   },
   {
     "id": "nullableArrayTypeParam",
@@ -1657,7 +1453,7 @@
       }
     ],
     "codeName": "nullableArrayTypeParam",
-    "order": 110
+    "order": 100
   },
   {
     "id": "globalVar",
@@ -1673,7 +1469,7 @@
     },
     "defaultvalue": "\"something\"",
     "codeName": "globalVar",
-    "order": 111
+    "order": 101
   },
   {
     "id": "GlobalChildClass#propOne",
@@ -1686,7 +1482,7 @@
     "description": "an instance property",
     "memberof": "GlobalChildClass",
     "codeName": "this.propOne",
-    "order": 112
+    "order": 102
   },
   {
     "id": "GlobalChildClass#methodOne",
@@ -1699,7 +1495,7 @@
     "description": "parent method one",
     "memberof": "GlobalChildClass",
     "codeName": "GlobalClass.prototype.methodOne",
-    "order": 113
+    "order": 103
   },
   {
     "id": "EventfulClass#on",
@@ -1734,7 +1530,7 @@
       }
     ],
     "codeName": "on",
-    "order": 114
+    "order": 104
   },
   {
     "id": "EventfulClass#fire",
@@ -1769,6 +1565,6 @@
       }
     ],
     "codeName": "fire",
-    "order": 115
+    "order": 105
   }
 ]

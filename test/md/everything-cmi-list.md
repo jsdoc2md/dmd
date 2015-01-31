@@ -27,6 +27,9 @@
 </dl>
 ##Globals
 <dl>
+<dt><a href="#Chainable">class: Chainable</a></dt>
+<dd><p>has a chainable method</p>
+</dd>
 <dt><a href="#GlobalClass">class: GlobalClass</a></dt>
 <dd><p>a global class</p>
 </dd>
@@ -42,17 +45,9 @@
 <dd></dd>
 <dt><a href="#LendsClass2">class: LendsClass2</a></dt>
 <dd></dd>
-<dt><a href="#Animal">class: Animal</a></dt>
-<dd><p>Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).</p>
-</dd>
-<dt><a href="#Species">class: Species</a></dt>
-<dd><p>In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into &quot;infraspecific taxa&quot; such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).</p>
-</dd>
 <dt><a href="#EventfulClass">class: EventfulClass</a></dt>
 <dd><p>a class which mixes in Eventful behaviour</p>
 </dd>
-<dt><a href="#builder">mixin: builder</a></dt>
-<dd></dd>
 <dt><a href="#Eventful">mixin: Eventful</a></dt>
 <dd><p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
@@ -149,19 +144,19 @@ exports animals
 
 
 * [cjs/animals](#module_cjs/animals)
-  * [.cat](#module_cjs/animals.cat) → <code>[Animal](#Animal)</code>
-  * [.dog](#module_cjs/animals.dog) → <code>[Animal](#Animal)</code>
+  * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
+  * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
   * [class: ~Animal](#module_cjs/animals..Animal)
     * [animal.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
     * [class: Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
       * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
-###cjs/animals.cat → <code>[Animal](#Animal)</code>
+###cjs/animals.cat → <code>Animal</code>
 the exported cat
 
 <a name="module_cjs/animals.dog"></a>
-###cjs/animals.dog → <code>[Animal](#Animal)</code>
+###cjs/animals.dog → <code>Animal</code>
 the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
@@ -324,10 +319,7 @@ this is from [linkMod](#module_linkMod).. it also references [Math](#external_Ma
 ###external: linkMod~Math
 The built in Math object. Refer to it with [Math](#external_Math).
 
-**See**
-
-- http://www.math.com
-
+**See**: http://www.math.com  
 <a name="external_Date"></a>
 ###external: linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
@@ -360,6 +352,15 @@ the second property, a function
 **Example**  
 this is the example
 
+<a name="Chainable"></a>
+##class: Chainable
+has a chainable method
+
+<a name="Chainable#method"></a>
+###chainable.method() ↩︎
+returns itself
+
+**Chainable**  
 <a name="GlobalClass"></a>
 ##class: GlobalClass
 a global class
@@ -446,68 +447,6 @@ say something
 ###lendsClass2.say()
 say something
 
-<a name="Animal"></a>
-##class: Animal
-Animals are multicellular, eukaryotic organisms of the kingdom Animalia (also called Metazoa). Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later on in their lives. Most animals are motile, meaning they can move spontaneously and independently. All animals must ingest other organisms or their products for sustenance (see Heterotroph).
-
-
-* [class: Animal](#Animal)
-  * [new Animal(species, parents)](#new_Animal_new)
-  * [animal.age](#Animal#age) → <code>number</code>
-  * [animal.species](#Animal#species) → <code>[Species](#Species)</code>
-  * [enum: Animal.eMood](#Animal.eMood)
-
-<a name="new_Animal_new"></a>
-###new Animal(species, parents)
-| Param | Type | Description |
-| --- | --- | --- |
-| species | <code>array</code> | an array of two parent [Animal](#Animal) objects |
-| parents | <code>[Species](#Species)</code> | the species |
-
-<a name="Animal#age"></a>
-###animal.age → <code>number</code>
-the current age
-
-**Default**: `0`  
-<a name="Animal#species"></a>
-###animal.species → <code>[Species](#Species)</code>
-<a name="Animal.eMood"></a>
-###enum: Animal.eMood
-Animal moods
-
-**Properties**
-
-| Name | Default | Description |
-| --- | --- | --- |
-| satisfied | `0` | chilling |
-| angry | `1` | pissed off |
-| hungry | `2` | need to eat |
-
-<a name="Species"></a>
-##class: Species
-In biology, a species (abbreviated sp., with the plural form species abbreviated spp.) is one of the basic units of biological classification and a taxonomic rank. A species is often defined as the largest group of organisms capable of interbreeding and producing fertile offspring. While in many cases this definition is adequate, the difficulty of defining species is known as the species problem. Differing measures are often used, such as similarity of DNA, morphology, or ecological niche. Presence of specific locally adapted traits may further subdivide species into "infraspecific taxa" such as subspecies (and in botany other taxa are used, such as varieties, subvarieties, and formae).
-
-
-* [class: Species](#Species)
-  * [species.name](#Species#name) → <code>string</code>
-  * [species.species](#Species#species) → <code>[Species](#Species)</code>
-  * [Species.merge(one, two)](#Species.merge) ⇒ <code>[Species](#Species)</code>
-
-<a name="Species#name"></a>
-###species.name → <code>string</code>
-the species name
-
-<a name="Species#species"></a>
-###species.species → <code>[Species](#Species)</code>
-<a name="Species.merge"></a>
-###Species.merge(one, two) ⇒ <code>[Species](#Species)</code>
-merge two species into a new one
-
-| Param | Type | Description |
-| --- | --- | --- |
-| one | <code>[Species](#Species)</code> | first |
-| two | <code>[Species](#Species)</code> | second |
-
 <a name="EventfulClass"></a>
 ##class: EventfulClass
 a class which mixes in Eventful behaviour
@@ -538,21 +477,6 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 **Mixes**: <code>[fire](#Eventful.fire)</code>  
-<a name="builder"></a>
-##mixin: builder
-
-* [mixin: builder](#builder)
-  * [.construct()](#builder.construct)
-  * [.repair()](#builder.repair)
-
-<a name="builder.construct"></a>
-###builder.construct()
-construct something
-
-<a name="builder.repair"></a>
-###builder.repair()
-repair something
-
 <a name="Eventful"></a>
 ##mixin: Eventful
 This provides methods used for event handling. It's not meant to
@@ -619,10 +543,7 @@ a variable in the file
 ##seeableVar
 a global var with a @see
 
-**See**
-
-- something or other
-
+**See**: something or other  
 <a name="returnsArrayOfType"></a>
 ##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 <a name="returnsArrayOfType2"></a>
@@ -760,10 +681,7 @@ an event defined in a doclet
 ##external: jQuery.fn
 The jQuery plugin namespace.
 
-**See**
-
-- [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)
-
+**See**: [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)  
 <a name="external_jQuery.fn.starfairy"></a>
 ###jQuery.fn.starfairy()
 A jQuery plugin to make stars fly around your home page.
@@ -772,7 +690,4 @@ A jQuery plugin to make stars fly around your home page.
 ##external: XMLHttpRequest
 Namespace provided by the browser.
 
-**See**
-
-- https://developer.mozilla.org/en/xmlhttprequest
-
+**See**: https://developer.mozilla.org/en/xmlhttprequest  
