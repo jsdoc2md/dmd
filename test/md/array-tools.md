@@ -1,5 +1,5 @@
 <a name="module_array-tools"></a>
-##array-tools
+## array-tools
 Useful functions for working with arrays
 
 **Example**  
@@ -23,7 +23,7 @@ var a = require("array-tools");
   * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
 
 <a name="module_array-tools.pluck"></a>
-###a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
+### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
 
 | Param | Type | Description |
@@ -47,7 +47,7 @@ undefined
 [ 1, 'two', 'one' ]
 ```
 <a name="module_array-tools.pick"></a>
-###a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
+### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
 
 | Param | Type | Description |
@@ -69,7 +69,7 @@ return a copy of the input `arrayOfObjects` containing objects having only the c
   { two: 'zwei' } ]
 ```
 <a name="module_array-tools.arrayify"></a>
-###a.arrayify(input) ⇒ <code>Array</code>
+### a.arrayify(input) ⇒ <code>Array</code>
 Takes input and guarantees an array back. Result can be one of three things:
 
 - puts a single scalar in an array
@@ -94,7 +94,7 @@ undefined
 [ 1, 2, 3 ]
 ```
 <a name="module_array-tools.exists"></a>
-###a.exists(array, value) ⇒ <code>boolean</code>
+### a.exists(array, value) ⇒ <code>boolean</code>
 returns true if a value, or nested object value exists in an array
 
 | Param | Type | Description |
@@ -114,7 +114,7 @@ true
 true
 ```
 <a name="module_array-tools.where"></a>
-###a.where(arrayOfObjects, query) ⇒ <code>Array</code>
+### a.where(arrayOfObjects, query) ⇒ <code>Array</code>
 returns an array containing items from `arrayOfObjects` where key/value pairs 
 from `query` are matched identically
 
@@ -134,7 +134,7 @@ from `query` are matched identically
   { name: 'Clive', age: 8 } ]
 ```
 <a name="module_array-tools.findWhere"></a>
-###a.findWhere(arrayOfObjects, query) ⇒ <code>object</code>
+### a.findWhere(arrayOfObjects, query) ⇒ <code>object</code>
 returns the first item from `arrayOfObjects` where key/value pairs 
 from `query` are matched identically
 
@@ -153,7 +153,7 @@ from `query` are matched identically
 { name: 'Jim', age: 8 }
 ```
 <a name="module_array-tools.without"></a>
-###a.without(input, toRemove) ⇒ <code>Array</code>
+### a.without(input, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
 
 | Param | Type | Description |
@@ -169,7 +169,7 @@ Returns the input minus the specified values.
 [ 1 ]
 ```
 <a name="module_array-tools.union"></a>
-###a.union(array1, array2, idKey) ⇒ <code>Array</code>
+### a.union(array1, array2, idKey) ⇒ <code>Array</code>
 merge two arrays into a single array of unique values
 
 | Param | Type | Description |
@@ -199,7 +199,7 @@ undefined
 [ { id: 1 }, { id: 2 }, { id: 3 } ]
 ```
 <a name="module_array-tools.commonSequence"></a>
-###a.commonSequence(a, b) ⇒ <code>Array</code>
+### a.commonSequence(a, b) ⇒ <code>Array</code>
 Returns the initial elements which both input arrays have in common
 
 | Param | Type | Description |
@@ -213,7 +213,7 @@ Returns the initial elements which both input arrays have in common
 [ 1, 2 ]
 ```
 <a name="module_array-tools.unique"></a>
-###a.unique(array) ⇒ <code>Array</code>
+### a.unique(array) ⇒ <code>Array</code>
 reduces an array to unique values
 
 | Param | Type | Description |
@@ -228,7 +228,7 @@ reduces an array to unique values
 [ 1, 6, 7 ]
 ```
 <a name="module_array-tools.spliceWhile"></a>
-###a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
+### a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
 splice from `index` until `test` fails
 
 | Param | Type | Description |
@@ -248,17 +248,17 @@ splice from `index` until `test` fails
 [ 'x', 'b' ]
 ```
 <a name="module_array-tools.extract"></a>
-###a.extract(array, query) ⇒ <code>Array</code>
+### a.extract(array, query) ⇒ <code>Array</code>
 Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
 
+**Returns**: <code>Array</code> - the extracted items.  
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | the input array, modified directly |
 | query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
 
-**Returns**: <code>Array</code> - the extracted items.  
 <a name="module_array-tools.flatten"></a>
-###a.flatten() ⇒ <code>Array</code>
+### a.flatten() ⇒ <code>Array</code>
 flatten an array of arrays into a single array
 
 **Since**: 1.4.0  

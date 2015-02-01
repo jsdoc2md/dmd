@@ -1,4 +1,4 @@
-##Modules
+## Modules
 <dl>
 <dt><a href="#module_cjs/animals">cjs/animals</a></dt>
 <dd><p>exports animals</p>
@@ -25,7 +25,7 @@
 <dd><p>a module exporting <code>exports</code> directly</p>
 </dd>
 </dl>
-##Globals
+## Globals
 <dl>
 <dt><a href="#Chainable">class: Chainable</a></dt>
 <dd><p>has a chainable method</p>
@@ -139,7 +139,7 @@ be used directly.</p>
 </dd>
 </dl>
 <a name="module_cjs/animals"></a>
-##cjs/animals
+## cjs/animals
 exports animals
 
 
@@ -152,15 +152,15 @@ exports animals
       * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
-###cjs/animals.cat → <code>Animal</code>
+### cjs/animals.cat → <code>Animal</code>
 the exported cat
 
 <a name="module_cjs/animals.dog"></a>
-###cjs/animals.dog → <code>Animal</code>
+### cjs/animals.dog → <code>Animal</code>
 the exported dog
 
 <a name="module_cjs/animals..Animal"></a>
-###class: cjs/animals~Animal
+### class: cjs/animals~Animal
 
 * [class: ~Animal](#module_cjs/animals..Animal)
   * [animal.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
@@ -168,17 +168,17 @@ the exported dog
     * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
-####animal.type → <code>Quadroped</code>
+#### animal.type → <code>Quadroped</code>
 animal type
 
 <a name="module_cjs/animals..Animal..Quadroped"></a>
-####class: Animal~Quadroped
+#### class: Animal~Quadroped
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
-#####quadroped.legs
+##### quadroped.legs
 leg count
 
 <a name="module_cjs/class"></a>
-##cjs/class
+## cjs/class
 exports a class
 
 
@@ -190,27 +190,27 @@ exports a class
     * [ExportedClass~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class--ExportedClass"></a>
-###class: ExportedClass ⏏
+### class: ExportedClass ⏏
 the exported class
 
 <a name="new_module_cjs/class--ExportedClass_new"></a>
-####new ExportedClass()
+#### new ExportedClass()
 the exported contructor
 
 <a name="module_cjs/class--ExportedClass#prop"></a>
-####exportedClass.prop
+#### exportedClass.prop
 instance property
 
 <a name="module_cjs/class--ExportedClass.staticProp"></a>
-####ExportedClass.staticProp
+#### ExportedClass.staticProp
 a static property for the exported class
 
 <a name="module_cjs/class--ExportedClass..innerProp"></a>
-####ExportedClass~innerProp
+#### ExportedClass~innerProp
 inner module property
 
 <a name="module_cjs/falias-obj"></a>
-##cjs/falias-obj
+## cjs/falias-obj
 exports a pointer to a function
 
 
@@ -219,15 +219,15 @@ exports a pointer to a function
     * [.extra()](#module_cjs/falias-obj--sum.extra)
 
 <a name="exp_module_cjs/falias-obj--sum"></a>
-###sum() ⏏
+### sum() ⏏
 the function
 
 <a name="module_cjs/falias-obj--sum.extra"></a>
-####sum.extra()
+#### sum.extra()
 a static method on the exported function
 
 <a name="module_cjs/function-alias"></a>
-##cjs/function-alias
+## cjs/function-alias
 exports a pointer to a function
 
 
@@ -236,21 +236,21 @@ exports a pointer to a function
     * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
 
 <a name="exp_module_cjs/function-alias--sum"></a>
-###sum(one, two) ⇒ <code>number</code> ⏏
+### sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
+**Returns**: <code>number</code> - the calculation result  
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | the first number |
 | two | <code>number</code> | the second number |
 
-**Returns**: <code>number</code> - the calculation result  
 <a name="module_cjs/function-alias--sum.sumthingStatic"></a>
-####sum.sumthingStatic
+#### sum.sumthingStatic
 an additional static property
 
 <a name="module_cjs/human"></a>
-##cjs/human
+## cjs/human
 exports a class
 
 
@@ -263,19 +263,19 @@ exports a class
       * [class: Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="exp_module_cjs/human--Human"></a>
-###class: Human ⏏
+### class: Human ⏏
 the exported class
 
 <a name="new_module_cjs/human--Human_new"></a>
-####new Human()
+#### new Human()
 the exported contructor
 
 <a name="module_cjs/human--Human#liver"></a>
-####human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+#### human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
 <a name="module_cjs/human--Human..Organ"></a>
-####class: Human~Organ
+#### class: Human~Organ
 a class inside a class
 
 
@@ -284,15 +284,15 @@ a class inside a class
   * [class: Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
-#####organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+##### organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
 <a name="module_cjs/human--Human..Organ..Cell"></a>
-#####class: Organ~Cell
+##### class: Organ~Cell
 a class inside a class inside a class
 
 <a name="module_linkMod"></a>
-##linkMod
+## linkMod
 A module. Refer to it using [this link](#module_linkMod).
 
 
@@ -304,36 +304,36 @@ A module. Refer to it using [this link](#module_linkMod).
   * [external: ~Date](#external_Date)
 
 <a name="module_linkMod.event_MyEvent"></a>
-###event: "event:MyEvent"
+### event: "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 <a name="module_linkMod..linksYeah"></a>
-###class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
+### class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
 **Extends:** <code>[Math](#external_Math)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
 <a name="new_module_linkMod..linksYeah_new"></a>
-####new linksYeah()
+#### new linksYeah()
 this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
 
 <a name="external_Math"></a>
-###external: linkMod~Math
+### external: linkMod~Math
 The built in Math object. Refer to it with [Math](#external_Math).
 
 **See**: http://www.math.com  
 <a name="external_Date"></a>
-###external: linkMod~Date
+### external: linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
 
 <a name="module_cjs/object-alias"></a>
-##cjs/object-alias
+## cjs/object-alias
 a module exporting an object
 
 <a name="exp_module_cjs/object-alias--teams"></a>
-###teams ⏏
+### teams ⏏
 the teams
 
 <a name="module_cjs/object"></a>
-##cjs/object
+## cjs/object
 a module exporting `exports` directly
 
 
@@ -342,27 +342,27 @@ a module exporting `exports` directly
   * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-###obj.one → <code>number</code>
+### obj.one → <code>number</code>
 the first property
 
 <a name="module_cjs/object.two"></a>
-###obj.two()
+### obj.two()
 the second property, a function
 
 **Example**  
 this is the example
 
 <a name="Chainable"></a>
-##class: Chainable
+## class: Chainable
 has a chainable method
 
 <a name="Chainable#method"></a>
-###chainable.method() ↩︎
+### chainable.method() ↩︎
 returns itself
 
 **Chainable**  
 <a name="GlobalClass"></a>
-##class: GlobalClass
+## class: GlobalClass
 a global class
 
 
@@ -374,7 +374,7 @@ a global class
   * [GlobalClass.propTwo](#GlobalClass.propTwo)
 
 <a name="new_GlobalClass_new"></a>
-###new GlobalClass(one, two)
+### new GlobalClass(one, two)
 the global class constructor
 
 | Param | Type | Description |
@@ -383,23 +383,23 @@ the global class constructor
 | two | <code>string</code> | second param |
 
 <a name="GlobalClass#propOne"></a>
-###globalClass.propOne
+### globalClass.propOne
 an instance property
 
 <a name="GlobalClass#methodOne"></a>
-###globalClass.methodOne()
+### globalClass.methodOne()
 parent method one
 
 <a name="GlobalClass#methodTwo"></a>
-###globalClass.methodTwo()
+### globalClass.methodTwo()
 parent method two
 
 <a name="GlobalClass.propTwo"></a>
-###GlobalClass.propTwo
+### GlobalClass.propTwo
 a static property
 
 <a name="GlobalChildClass"></a>
-##class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
+## class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
@@ -411,44 +411,44 @@ the child of global class
   * [globalChildClass.methodOne()](#GlobalChildClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
-###globalChildClass.propThree
+### globalChildClass.propThree
 an instance property
 
 <a name="GlobalChildClass#methodTwo"></a>
-###globalChildClass.methodTwo()
+### globalChildClass.methodTwo()
 overridden child methodTwo
 
 <a name="customClass"></a>
-##class: customClass
+## class: customClass
 a class that has custom tags
 
 **sitcom**: Only Fools  
 **character**: Rodney Trotter  
 <a name="new_customClass_new"></a>
-###new customClass()
+### new customClass()
 the constructor
 
 <a name="EncryptedRequest"></a>
-##class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
+## class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 <a name="new_EncryptedRequest_new"></a>
-###new EncryptedRequest()
+### new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
 <a name="LendsClass"></a>
-##class: LendsClass
+## class: LendsClass
 <a name="LendsClass.say"></a>
-###LendsClass.say()
+### LendsClass.say()
 say something
 
 <a name="LendsClass2"></a>
-##class: LendsClass2
+## class: LendsClass2
 <a name="LendsClass2#say"></a>
-###lendsClass2.say()
+### lendsClass2.say()
 say something
 
 <a name="EventfulClass"></a>
-##class: EventfulClass
+## class: EventfulClass
 a class which mixes in Eventful behaviour
 
 **Mixes**: <code>[Eventful](#Eventful)</code>  
@@ -458,27 +458,27 @@ a class which mixes in Eventful behaviour
   * [eventfulClass.fire(eventName, eventData)](#EventfulClass#fire)
 
 <a name="EventfulClass#on"></a>
-###eventfulClass.on(eventName, handler)
+### eventfulClass.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
+**Mixes**: <code>[on](#Eventful.on)</code>  
 | Param | Type | Description |
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
 
-**Mixes**: <code>[on](#Eventful.on)</code>  
 <a name="EventfulClass#fire"></a>
-###eventfulClass.fire(eventName, eventData)
+### eventfulClass.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
+**Mixes**: <code>[fire](#Eventful.fire)</code>  
 | Param | Type | Description |
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
 
-**Mixes**: <code>[fire](#Eventful.fire)</code>  
 <a name="Eventful"></a>
-##mixin: Eventful
+## mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
 
@@ -488,7 +488,7 @@ be used directly.
   * [.fire(eventName, eventData)](#Eventful.fire)
 
 <a name="Eventful.on"></a>
-###Eventful.on(eventName, handler)
+### Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
 | Param | Type | Description |
@@ -497,7 +497,7 @@ Register a handler function to be called whenever this event is fired.
 | handler | <code>function</code> | The handler to call. |
 
 <a name="Eventful.fire"></a>
-###Eventful.fire(eventName, eventData)
+### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
 | Param | Type | Description |
@@ -506,23 +506,23 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 <a name="phantom"></a>
-##mixin: phantom
+## mixin: phantom
 phantom mixin
 
 <a name="customTagged"></a>
-##customTagged
+## customTagged
 a global var with custom tags
 
 **sitcom**: The Office  
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
-##defaultedOne → <code>object</code>
+## defaultedOne → <code>object</code>
 **Default**: `{ one: 1, two: "yeah?" }`  
 <a name="defaultedTwo"></a>
-##defaultedTwo → <code>function</code>
+## defaultedTwo → <code>function</code>
 **Default**: `function f(n){ return something(n); }`  
 <a name="exampleVar"></a>
-##exampleVar → <code>string</code>
+## exampleVar → <code>string</code>
 an example var
 
 **Default**: `"something"`  
@@ -532,41 +532,41 @@ var thisVar = funtion(){
 };
 
 <a name="cliveExternal"></a>
-##cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+## cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="stringExternal"></a>
-##stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+## stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 <a name="fileVar"></a>
-##fileVar
+## fileVar
 a variable in the file
 
 <a name="seeableVar"></a>
-##seeableVar
+## seeableVar
 a global var with a @see
 
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
-##returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 <a name="returnsArrayOfType2"></a>
-##returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 <a name="nullableNumber"></a>
-##nullableNumber ⇒ <code>number</code>
+## nullableNumber ⇒ <code>number</code>
 <a name="nonNullableNumber"></a>
-##nonNullableNumber ⇒ <code>number</code>
+## nonNullableNumber ⇒ <code>number</code>
 <a name="objectType"></a>
-##objectType → <code>Object</code>
+## objectType → <code>Object</code>
 <a name="globalVar"></a>
-##globalVar → <code>string</code>
+## globalVar → <code>string</code>
 a global var
 
 **Default**: `"something"`  
 <a name="Documents"></a>
-##Documents → <code>object</code>
+## Documents → <code>object</code>
 <a name="Documents.Newspaper"></a>
-###Documents.Newspaper
+### Documents.Newspaper
 An ordinary newspaper.
 
 <a name="config"></a>
-##config → <code>object</code>
+## config → <code>object</code>
 **Properties**
 
 | Name | Type | Description |
@@ -578,30 +578,30 @@ An ordinary newspaper.
 | defaults.treasure.gold | <code>number</code> | How much gold the party starts with. |
 
 <a name="customFunction"></a>
-##customFunction()
+## customFunction()
 a global function with custom tags
 
 **sitcom**: Brass Eye  
 **character**: Noel Edmonds  
 <a name="firesError"></a>
-##firesError()
+## firesError()
 **Emits**: <code>event:error</code>  
 <a name="firesMany"></a>
-##firesMany()
+## firesMany()
 **Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
 <a name="firesDefinedEvent"></a>
-##firesDefinedEvent()
+## firesDefinedEvent()
 **Emits**: <code>[docletEvent](#event_docletEvent)</code>  
 <a name="functionObj"></a>
-##functionObj()
+## functionObj()
 the function
 
 <a name="functionObj.extra"></a>
-###functionObj.extra()
+### functionObj.extra()
 a static method on the function
 
 <a name="globalFunction"></a>
-##globalFunction(one, two, three, four)
+## globalFunction(one, two, three, four)
 a global function
 
 | Param | Type | Description |
@@ -612,16 +612,16 @@ a global function
 | four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
 
 <a name="globalFunction"></a>
-##globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
+## globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
 **Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
 <a name="returnsSomething"></a>
-##returnsSomething() ⇒ <code>string</code>
+## returnsSomething() ⇒ <code>string</code>
 returns has no desc
 
 <a name="seefoo"></a>
-##seefoo()
+## seefoo()
 Both of these will link to the bar function.
 
 **See**
@@ -630,14 +630,14 @@ Both of these will link to the bar function.
 - bar
 
 <a name="seebar"></a>
-##seebar()
+## seebar()
 **See**
 
 - [seefoo](#seefoo) for further information.
 - [GitHub](http://github.com)
 
 <a name="throwingFunction"></a>
-##throwingFunction()
+## throwingFunction()
 **Throws**:
 
 - Will throw an error if the argument is null
@@ -645,14 +645,14 @@ Both of these will link to the bar function.
 - <code>DivideByZero</code> Argument x must be non-zero
 
 <a name="todoFunction1"></a>
-##todoFunction1()
+## todoFunction1()
 **Todo**
 
 - [ ] Write the documentation.
 - [ ] Implement this function.
 
 <a name="todoFunction2"></a>
-##todoFunction2()
+## todoFunction2()
 **Todo**
 
 - [ ] Write the documentation.
@@ -661,33 +661,33 @@ Both of these will link to the bar function.
 - [x] finished
 
 <a name="todoFunction3"></a>
-##todoFunction3()
+## todoFunction3()
 **Todo**
 
 - [x] this one is done
 - [x] finished
 
 <a name="nullableArrayTypeParam"></a>
-##nullableArrayTypeParam(one)
+## nullableArrayTypeParam(one)
 | Param | Type |
 | --- | --- |
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
 
 <a name="event_docletEvent"></a>
-##event: "docletEvent"
+## event: "docletEvent"
 an event defined in a doclet
 
 <a name="external_jQuery.fn"></a>
-##external: jQuery.fn
+## external: jQuery.fn
 The jQuery plugin namespace.
 
 **See**: [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)  
 <a name="external_jQuery.fn.starfairy"></a>
-###jQuery.fn.starfairy()
+### jQuery.fn.starfairy()
 A jQuery plugin to make stars fly around your home page.
 
 <a name="external_XMLHttpRequest"></a>
-##external: XMLHttpRequest
+## external: XMLHttpRequest
 Namespace provided by the browser.
 
 **See**: https://developer.mozilla.org/en/xmlhttprequest  

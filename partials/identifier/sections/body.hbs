@@ -1,13 +1,5 @@
 {{>deprecated~}}
 {{>description~}}
-{{#if (optionEquals "param-list-format" "list")}}{{>params-list~}}{{/if~}}
-{{#if (optionEquals "param-list-format" "table")~}}
-  {{#if (optionEquals "no-gfm" true)}}{{>params-table-html~}}{{else}}{{>params-table~}}{{/if~}}
-{{/if~}}
-{{#if (optionEquals "property-list-format" "list")}}{{>properties-list~}}{{/if~}}
-{{#if (optionEquals "property-list-format" "table")~}}
-  {{#if (optionEquals "no-gfm" true)}}{{>properties-table-html}}{{else}}{{>properties-table}}{{/if~}}
-{{/if~}}
 {{>augments~}}
 {{>mixes~}}
 {{>default~}}
@@ -26,4 +18,12 @@
 {{>license~}}
 {{>copyright~}}
 {{>todo~}}
+{{#if (optionEquals "param-list-format" "list")}}{{>params-list~}}{{/if~}}
+{{#if (optionEquals "param-list-format" "table")~}}
+  {{#if (optionEquals "no-gfm" true)}}{{>params-table-html~}}{{else}}{{>params-table~}}{{/if~}}
+{{/if~}}
+{{#if (optionEquals "property-list-format" "list")}}{{>properties-list~}}{{/if~}}
+{{#if (optionEquals "property-list-format" "table")~}}
+  {{#if (optionEquals "no-gfm" true)}}{{>properties-table-html}}{{else}}{{>properties-table}}{{/if~}}
+{{/if~}}
 {{>examples~}}

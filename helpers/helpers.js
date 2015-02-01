@@ -3,6 +3,11 @@ var ddata = require("ddata");
 var a = require("array-tools");
 var handlebars = require("boil")._handlebars;
 
+/**
+A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata and boil.
+@module
+*/
+
 exports.escape = escape;
 exports.linkify = linkify;
 exports.tableHead = tableHead;
