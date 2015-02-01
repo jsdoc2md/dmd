@@ -1,12 +1,16 @@
 <code>{{#link input~}}
 {{#if url~}}
 {{#if ../../html~}}
-<a href="{{{url}}}">{{escape name}}</a>
+<a href="{{{url}}}">{{name}}</a>
 {{~else ~}}
 [{{escape name}}]({{{url}}})
 {{~/if~}}
 {{~else~}}
+{{#if ../../html~}}
+{{name~}}
+{{else~}}
 {{escape name~}}
+{{/if~}}
 {{/if~}}
 {{~/link~}}
 </code>
