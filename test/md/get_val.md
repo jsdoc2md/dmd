@@ -30,5 +30,5 @@ Provides class for getting value by key
 | Param | Type | Description |
 | --- | --- | --- |
 | values | <code>[valuesArg](#GetVal..valuesArg)</code> | Key-value object of values |
-| [required] | <code>Object.<\*></code> | Key-value object to set required values at instance creating |
+| [required] | <code>Object.&lt;\*&gt;</code> | Key-value object to set required values at instance creating |
 

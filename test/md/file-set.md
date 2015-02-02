@@ -11,10 +11,10 @@ var fileSet = require("file-set");
   * [class: FileSet](#exp_module_file-set--FileSet) ⏏
     * [new FileSet(patternList)](#new_module_file-set--FileSet_new)
     * _instance_
-      * [.list](#module_file-set--FileSet#list) → <code>Array.<string></code>
-      * [.files](#module_file-set--FileSet#files) → <code>Array.<string></code>
-      * [.dirs](#module_file-set--FileSet#dirs) → <code>Array.<string></code>
-      * [.notExisting](#module_file-set--FileSet#notExisting) → <code>Array.<string></code>
+      * [.list](#module_file-set--FileSet#list) → <code>Array.&lt;string&gt;</code>
+      * [.files](#module_file-set--FileSet#files) → <code>Array.&lt;string&gt;</code>
+      * [.dirs](#module_file-set--FileSet#dirs) → <code>Array.&lt;string&gt;</code>
+      * [.notExisting](#module_file-set--FileSet#notExisting) → <code>Array.&lt;string&gt;</code>
       * [.add(files)](#module_file-set--FileSet#add)
     * _static_
       * [enum: .eFileType](#module_file-set--FileSet.eFileType) → <code>number</code>
@@ -28,22 +28,22 @@ Expands file patterns, returning the matched and unmatched files and directories
 
 | Param | Type | Description |
 | --- | --- | --- |
-| patternList | <code>string</code> \| <code>Array.<string></code> | A pattern, or array of patterns to expand |
+| patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet#list"></a>
-#### fileSet.list → <code>Array.<string></code>
+#### fileSet.list → <code>Array.&lt;string&gt;</code>
 The full list of unique paths found, and not found.
 
 <a name="module_file-set--FileSet#files"></a>
-#### fileSet.files → <code>Array.<string></code>
+#### fileSet.files → <code>Array.&lt;string&gt;</code>
 The existing files found
 
 <a name="module_file-set--FileSet#dirs"></a>
-#### fileSet.dirs → <code>Array.<string></code>
+#### fileSet.dirs → <code>Array.&lt;string&gt;</code>
 The existing directories found
 
 <a name="module_file-set--FileSet#notExisting"></a>
-#### fileSet.notExisting → <code>Array.<string></code>
+#### fileSet.notExisting → <code>Array.&lt;string&gt;</code>
 Paths which were not found
 
 <a name="module_file-set--FileSet#add"></a>
@@ -53,7 +53,7 @@ add file patterns to the set
 
 | Param | Type | Description |
 | --- | --- | --- |
-| files | <code>string</code> \| <code>Array.<string></code> | A pattern, or array of patterns to expand |
+| files | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet.eFileType"></a>
 #### enum: FileSet.eFileType → <code>number</code>
@@ -64,7 +64,7 @@ Enum for the `type` value of each record in `fileSet.list`
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| NOEXIST | <code>number</code> | <code>"0"</code> | when a file doesn't exist |
-| FILE | <code>number</code> | <code>"1"</code> | It's a file |
-| DIR | <code>number</code> | <code>"2"</code> |  |
+| NOEXIST | <code>number</code> | <code>&quot;0&quot;</code> | when a file doesn't exist |
+| FILE | <code>number</code> | <code>&quot;1&quot;</code> | It's a file |
+| DIR | <code>number</code> | <code>&quot;2&quot;</code> |  |
 
