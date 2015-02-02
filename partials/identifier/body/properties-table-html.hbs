@@ -11,7 +11,7 @@
     <tr>
     {{#if @col1}}<td>{{name}}</td>{{/if~}}
     {{#if @col2}}<td>{{>linked-type-list types=type.names delimiter=" | " }}</td>{{/if~}}
-    {{#if @col3}}<td>{{#if defaultvalue}}{{#with defaultvalue}}{{>linked-type  input=this}}{{/with}}{{/if}}</td>{{/if~}}
+    {{#if @col3}}<td>{{#unless (equal defaultvalue undefined)}}{{#with defaultvalue}}{{>linked-type  html=true input=(json-stringify this)}}{{/with}}{{/unless}}</td>{{/if~}}
     {{#if @col4}}<td>{{{stripNewlines (linkify description)}}}</td>{{/if}}
     </tr>
     {{~/tableRow}}

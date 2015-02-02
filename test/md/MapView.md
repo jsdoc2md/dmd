@@ -41,8 +41,8 @@ Map-type
 
 | Name | Type | Default |
 | --- | --- | --- |
-| GOOGLEMAPS | <code>Number</code> | `1` | 
-| LEAFLET | <code>Number</code> | `2` | 
+| GOOGLEMAPS | <code>Number</code> | <code>&quot;1&quot;</code> | 
+| LEAFLET | <code>Number</code> | <code>&quot;2&quot;</code> | 
 
 <a name="new_module_MapView--MapView_new"></a>
 #### `new MapView(options)`

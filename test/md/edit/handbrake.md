@@ -10,12 +10,11 @@ var hbjs = require("handbrake-js");
 * [handbrake-js](#module_handbrake-js)
   * [.spawn(options)](#module_handbrake-js.spawn) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
   * [.exec(options, [onComplete])](#module_handbrake-js.exec)
-  * [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
-    * _instance_
+  * [~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+    * new Handbrake()
       * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
       * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
-      * [enum: .eError](#module_handbrake-js..Handbrake#eError)
-    * _events_
+      * [.eError](#module_handbrake-js..Handbrake#eError)
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)
       * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
@@ -59,18 +58,18 @@ hbjs.exec({ preset-list: true }, function(err, stdout, stderr){
 });
 ```
 <a name="module_handbrake-js..Handbrake"></a>
-### class: hbjs~Handbrake ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+### hbjs~Handbrake ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
 A handle on the HandbrakeCLI process. Emits events you can monitor to track progress. An instance of this class is returned by [spawn](#module_handbrake-js.spawn).
 
+**Kind: **class  
 **Extends:** <code>[EventEmitter](http://nodejs.org/api/events.html)</code>  
 **Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>  
 
-* [class: ~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
+* [~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
   * _instance_
     * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
     * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
     * [enum: .eError](#module_handbrake-js..Handbrake#eError)
-  * _events_
     * ["start"](#module_handbrake-js..Handbrake#event_start)
     * ["begin"](#module_handbrake-js..Handbrake#event_begin)
     * ["progress" (progress)](#module_handbrake-js..Handbrake#event_progress)
@@ -95,10 +94,10 @@ All operational errors are emitted via the [error](#module_handbrake-js..Handbra
 
 | Name | Default | Description |
 | --- | --- | --- |
-| VALIDATION | <code>&quot;ValidationError&quot;</code> | Thrown if you accidentally set identical input and output paths (which would clobber the input file), forget to specifiy an output path and other validation errors |
-| INVALID_INPUT | <code>&quot;InvalidInput&quot;</code> | Thrown when the input file specified does not appear to be a video file |
-| OTHER | <code>&quot;Other&quot;</code> | Thrown if Handbrake crashes |
-| NOT_FOUND | <code>&quot;HandbrakeCLINotFound&quot;</code> | Thrown if the installed HandbrakeCLI binary has gone missing.. |
+| VALIDATION | `ValidationError` | Thrown if you accidentally set identical input and output paths (which would clobber the input file), forget to specifiy an output path and other validation errors |
+| INVALID_INPUT | `InvalidInput` | Thrown when the input file specified does not appear to be a video file |
+| OTHER | `Other` | Thrown if Handbrake crashes |
+| NOT_FOUND | `HandbrakeCLINotFound` | Thrown if the installed HandbrakeCLI binary has gone missing.. |
 
 <a name="module_handbrake-js..Handbrake#event_start"></a>
 #### event: "start"

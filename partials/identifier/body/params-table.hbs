@@ -5,7 +5,7 @@
 {{#tableRow params "name" "type" "defaultvalue" "description" ~}}
 | {{#if @col1}}{{>param-table-name}} | {{/if~}}
 {{#if @col2}}{{>linked-type-list types=type.names delimiter=" \| " }} | {{/if~}}
-{{#if @col3}}{{#if defaultvalue}}{{#with defaultvalue}}{{>linked-type  input=this}}{{/with}}{{/if}} | {{/if~}}
+{{#if @col3}}{{#unless (equal defaultvalue undefined)}}{{#with defaultvalue}}{{>linked-type  input=(json-stringify this)}}{{/with}}{{/unless}} | {{/if~}}
 {{#if @col4}}{{{stripNewlines (linkify description)}}} |{{/if}}
 {{/tableRow}}
 {{/if}}

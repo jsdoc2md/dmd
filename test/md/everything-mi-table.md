@@ -562,15 +562,15 @@ a global var with custom tags
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne → <code>object</code>
-**Default**: `{ one: 1, two: "yeah?" }`  
+**Default**: <code>&quot;{ one: 1, two: \&quot;yeah?\&quot; }&quot;</code>  
 <a name="defaultedTwo"></a>
 ## defaultedTwo → <code>function</code>
-**Default**: `function f(n){ return something(n); }`  
+**Default**: <code>&quot;function f(n){ return something(n); }&quot;</code>  
 <a name="exampleVar"></a>
 ## exampleVar → <code>string</code>
 an example var
 
-**Default**: `"something"`  
+**Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
 **Example**  
 var thisVar = funtion(){
     return "a value";
@@ -603,7 +603,7 @@ a global var with a @see
 ## globalVar → <code>string</code>
 a global var
 
-**Default**: `"something"`  
+**Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
 <a name="Documents"></a>
 ## Documents → <code>object</code>
 <a name="Documents.Newspaper"></a>
