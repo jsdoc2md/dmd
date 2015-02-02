@@ -1,2 +1,2 @@
-{{#unless (equal defaultvalue undefined)}}**Default**: {{#with defaultvalue}}{{>linked-type  input=(json-stringify this)}}{{/with}}  
+{{#unless (equal defaultvalue undefined)}}**Default**: {{>defaultvalue}}  
 {{/unless}}

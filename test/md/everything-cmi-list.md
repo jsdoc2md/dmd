@@ -75,9 +75,9 @@ be used directly.</p>
 <dt><a href="#seeableVar">seeableVar</a></dt>
 <dd><p>a global var with a @see</p>
 </dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.<Human></a></code></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.<Human></a></code></dt>
 <dd></dd>
 <dt><a href="#nullableNumber">nullableNumber</a> ⇒ <code>number</code></dt>
 <dd></dd>
@@ -523,15 +523,15 @@ a global var with custom tags
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne → <code>object</code>
-**Default**: <code>&quot;{ one: 1, two: \&quot;yeah?\&quot; }&quot;</code>  
+**Default**: <code>"{ one: 1, two: \"yeah?\" }"</code>  
 <a name="defaultedTwo"></a>
 ## defaultedTwo → <code>function</code>
-**Default**: <code>&quot;function f(n){ return something(n); }&quot;</code>  
+**Default**: <code>"function f(n){ return something(n); }"</code>  
 <a name="exampleVar"></a>
 ## exampleVar → <code>string</code>
 an example var
 
-**Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
+**Default**: <code>"\"something\""</code>  
 **Example**  
 var thisVar = funtion(){
     return "a value";
@@ -551,9 +551,9 @@ a global var with a @see
 
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
-## returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType ⇒ <code>[Array.<Human>](#exp_module_cjs/human--Human)</code>
 <a name="returnsArrayOfType2"></a>
-## returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType2 ⇒ <code>[Array.<Human>](#exp_module_cjs/human--Human)</code>
 <a name="nullableNumber"></a>
 ## nullableNumber ⇒ <code>number</code>
 <a name="nonNullableNumber"></a>
@@ -564,7 +564,7 @@ a global var with a @see
 ## globalVar → <code>string</code>
 a global var
 
-**Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
+**Default**: <code>"\"something\""</code>  
 <a name="Documents"></a>
 ## Documents → <code>object</code>
 <a name="Documents.Newspaper"></a>
@@ -616,7 +616,7 @@ a global function
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
 | three | <code>number</code> \| <code>string</code> | third |
-| four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
+| four | <code>Array.<(Number\|String)></code> | fourth |
 
 <a name="globalFunction"></a>
 ## globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
@@ -679,7 +679,7 @@ Both of these will link to the bar function.
 
 | Param | Type |
 | --- | --- |
-| one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
+| one | <code>[Array.<cjs/human>](#module_cjs/human)</code> | 
 
 <a name="event_docletEvent"></a>
 ## event: "docletEvent"

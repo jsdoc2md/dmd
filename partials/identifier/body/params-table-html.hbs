@@ -10,7 +10,7 @@
     <tr>
     {{#if @col1}}<td>{{>param-table-name}}</td>{{/if~}}
     {{#if @col2}}<td>{{>linked-type-list types=type.names delimiter=" | " html=true}}</td>{{/if~}}
-    {{#if @col3}}<td>{{#unless (equal defaultvalue undefined)}}{{#with defaultvalue}}{{>linked-type  html=true input=(json-stringify this)}}{{/with}}{{/unless}}</td>{{/if~}}
+    {{#if @col3}}<td>{{>defaultvalue}}</td>{{/if~}}
     {{#if @col4}}<td>{{{stripNewlines (linkify description)}}}</td>{{/if}}
     </tr>
     {{~/tableRow}}

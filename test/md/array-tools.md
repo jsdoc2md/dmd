@@ -9,7 +9,7 @@ var a = require("array-tools");
 
 * [array-tools](#module_array-tools)
   * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
-  * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
+  * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.<object></code>
   * [.arrayify(input)](#module_array-tools.arrayify) ⇒ <code>Array</code>
   * [.exists(array, value)](#module_array-tools.exists) ⇒ <code>boolean</code>
   * [.where(arrayOfObjects, query)](#module_array-tools.where) ⇒ <code>Array</code>
@@ -29,7 +29,7 @@ Plucks the value of the specified property from each object in the input array
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input array of objects |
+| arrayOfObjects | <code>Array.<object></code> | the input array of objects |
 | ...property | <code>string</code> | the property(s) to pluck |
 
 **Example**  
@@ -48,13 +48,13 @@ undefined
 [ 1, 'two', 'one' ]
 ```
 <a name="module_array-tools.pick"></a>
-### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
+### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.<object></code>
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
+| arrayOfObjects | <code>Array.<object></code> | the input |
 | ...property | <code>string</code> | the properties to include in the result |
 
 **Example**  
