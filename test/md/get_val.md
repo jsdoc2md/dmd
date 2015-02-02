@@ -26,6 +26,7 @@ Provides class for getting value by key
 - <code>GetVal~IncorrectArgument</code> 
 - <code>GetVal~RequiredArgumentKey</code> 
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | values | <code>[valuesArg](#GetVal..valuesArg)</code> | Key-value object of values |

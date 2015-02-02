@@ -28,6 +28,7 @@ var hbjs = require("handbrake-js");
 ### hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
@@ -43,6 +44,7 @@ hbjs.spawn(options)
 <a name="module_handbrake-js.exec"></a>
 ### hbjs.exec(options, [onComplete])
 Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -112,6 +114,7 @@ Fired when encoding begins. If you're expecting an encode and this never fired, 
 #### event: "progress" (progress)
 Fired at regular intervals passing a `progress` object.
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | progress | <code>object</code> | details of encode progress |
@@ -125,12 +128,14 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 #### event: "output" (output)
+
 | Param | Type | Description |
 | --- | --- | --- |
 | output | <code>string</code> | An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process. |
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
 #### event: "error" (error)
+
 | Param | Type | Description |
 | --- | --- | --- |
 | error | <code>Error</code> | All operational exceptions are delivered via this event. |

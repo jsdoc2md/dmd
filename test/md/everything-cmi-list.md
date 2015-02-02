@@ -240,6 +240,7 @@ exports a pointer to a function
 the function
 
 **Returns**: <code>number</code> - the calculation result  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | the first number |
@@ -377,6 +378,7 @@ a global class
 ### new GlobalClass(one, two)
 the global class constructor
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | first param |
@@ -462,6 +464,7 @@ a class which mixes in Eventful behaviour
 Register a handler function to be called whenever this event is fired.
 
 **Mixes**: <code>[on](#Eventful.on)</code>  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
@@ -472,6 +475,7 @@ Register a handler function to be called whenever this event is fired.
 Fire an event, causing all handlers for that event name to run.
 
 **Mixes**: <code>[fire](#Eventful.fire)</code>  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
@@ -491,6 +495,7 @@ be used directly.
 ### Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
@@ -499,6 +504,7 @@ Register a handler function to be called whenever this event is fired.
 <a name="Eventful.fire"></a>
 ### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -604,6 +610,7 @@ a static method on the function
 ## globalFunction(one, two, three, four)
 a global function
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | first param |
@@ -669,6 +676,7 @@ Both of these will link to the bar function.
 
 <a name="nullableArrayTypeParam"></a>
 ## nullableArrayTypeParam(one)
+
 | Param | Type |
 | --- | --- |
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 

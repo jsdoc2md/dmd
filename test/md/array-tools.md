@@ -26,6 +26,7 @@ var a = require("array-tools");
 ### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input array of objects |
@@ -49,6 +50,7 @@ undefined
 <a name="module_array-tools.pick"></a>
 ### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -76,6 +78,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 - converts array-like object (e.g. `arguments`) to a real array
 - converts `null` or `undefined` to an empty array
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | input | <code>\*</code> | the input value to convert to an array |
@@ -96,6 +99,7 @@ undefined
 <a name="module_array-tools.exists"></a>
 ### a.exists(array, value) ⇒ <code>boolean</code>
 returns true if a value, or nested object value exists in an array
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -118,6 +122,7 @@ true
 returns an array containing items from `arrayOfObjects` where key/value pairs 
 from `query` are matched identically
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | arrayOfObjects | <code>Array</code> | the array to search |
@@ -138,6 +143,7 @@ from `query` are matched identically
 returns the first item from `arrayOfObjects` where key/value pairs 
 from `query` are matched identically
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | arrayOfObjects | <code>Array</code> | the array to search |
@@ -156,6 +162,7 @@ from `query` are matched identically
 ### a.without(input, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | input | <code>Array</code> | the input array |
@@ -171,6 +178,7 @@ Returns the input minus the specified values.
 <a name="module_array-tools.union"></a>
 ### a.union(array1, array2, idKey) ⇒ <code>Array</code>
 merge two arrays into a single array of unique values
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -202,6 +210,7 @@ undefined
 ### a.commonSequence(a, b) ⇒ <code>Array</code>
 Returns the initial elements which both input arrays have in common
 
+
 | Param | Type | Description |
 | --- | --- | --- |
 | a | <code>Array</code> | first array to compare |
@@ -215,6 +224,7 @@ Returns the initial elements which both input arrays have in common
 <a name="module_array-tools.unique"></a>
 ### a.unique(array) ⇒ <code>Array</code>
 reduces an array to unique values
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -230,6 +240,7 @@ reduces an array to unique values
 <a name="module_array-tools.spliceWhile"></a>
 ### a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
 splice from `index` until `test` fails
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -252,6 +263,7 @@ splice from `index` until `test` fails
 Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
 
 **Returns**: <code>Array</code> - the extracted items.  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | the input array, modified directly |

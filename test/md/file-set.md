@@ -25,6 +25,7 @@ Expands file patterns, returning the matched and unmatched files and directories
 
 <a name="new_module_file-set--FileSet_new"></a>
 #### new FileSet(patternList)
+
 | Param | Type | Description |
 | --- | --- | --- |
 | patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
@@ -48,6 +49,7 @@ Paths which were not found
 <a name="module_file-set--FileSet#add"></a>
 #### fileSet.add(files)
 add file patterns to the set
+
 
 | Param | Type | Description |
 | --- | --- | --- |

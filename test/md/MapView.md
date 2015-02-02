@@ -46,6 +46,7 @@ Map-type
 
 <a name="new_module_MapView--MapView_new"></a>
 #### `new MapView(options)`
+
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> | Options. |
@@ -72,6 +73,7 @@ guarenteed to be valid after the 'load' event has been emited.
 <a name="module_MapView--MapView#setPosition"></a>
 #### `mapView.setPosition(position, [transition], [callback])`
 Set the center of the map to the given geographical coordinates.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -101,6 +103,7 @@ at 5, over time. The used zoomTransition can be set as an option.
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
 
 **Returns**: <code>Point</code> - Position in pixels, relative to the left-top of the mapView.  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | position | <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> | in geographical coordinates. |
@@ -110,6 +113,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
 
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | point | <code>Point</code> | Position in pixels, relative to the left-top of the mapView. |
