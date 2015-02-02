@@ -568,10 +568,10 @@ a global var with custom tags
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne → <code>object</code>
-**Default**: <code>&quot;{ one: 1, two: \&quot;yeah?\&quot; }&quot;</code>  
+**Default**: <code>{ one: 1, two: &quot;yeah?&quot; }</code>  
 <a name="defaultedTwo"></a>
 ## defaultedTwo → <code>function</code>
-**Default**: <code>&quot;function f(n){ return something(n); }&quot;</code>  
+**Default**: <code>function f(n){ return something(n); }</code>  
 <a name="exampleVar"></a>
 ## exampleVar → <code>string</code>
 an example var

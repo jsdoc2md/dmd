@@ -1,1 +1,1 @@
-{{#unless (equal defaultvalue undefined)}}{{#with defaultvalue}}{{>linked-type  html=true input=(json-stringify this)}}{{/with}}{{/unless}}
+{{#unless (equal defaultvalue undefined)}}<code>{{#if (equal type.names.[0] "string")}}{{json-stringify defaultvalue}}{{else}}{{defaultvalue}}{{/if}}</code>{{/unless}}
