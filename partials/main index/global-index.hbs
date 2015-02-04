@@ -1,3 +1,5 @@
+{{#unless (optionEquals "global-index-format" "none")~}}
 {{#if (optionEquals "global-index-format" "dl")}}{{>global-index-dl ~}}{{/if~}}
 {{#if (optionEquals "global-index-format" "grouped")}}{{>global-index-grouped ~}}{{/if~}}
 {{#if (optionEquals "global-index-format" "table")}}{{>global-index-table ~}}{{/if~}}
+{{/unless~}}
