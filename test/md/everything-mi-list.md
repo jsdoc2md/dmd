@@ -558,7 +558,7 @@ a global var with a @see
 ## globalVar → <code>string</code>
 a global var
 
-**Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
+**Default**: <code>&quot;something&quot;</code>  
 <a name="Documents"></a>
 ## Documents → <code>object</code>
 <a name="Documents.Newspaper"></a>

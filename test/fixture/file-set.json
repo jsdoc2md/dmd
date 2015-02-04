@@ -158,7 +158,7 @@
             "number"
           ]
         },
-        "defaultvalue": "0",
+        "defaultvalue": 0,
         "codeName": "NOEXIST"
       },
       {
@@ -173,7 +173,7 @@
             "number"
           ]
         },
-        "defaultvalue": "1",
+        "defaultvalue": 1,
         "codeName": "FILE"
       },
       {
@@ -187,7 +187,7 @@
             "number"
           ]
         },
-        "defaultvalue": "2",
+        "defaultvalue": 2,
         "codeName": "DIR"
       }
     ],
