@@ -124,7 +124,7 @@ All operational errors are emitted via the [error](#module_handbrake-js..Handbra
 #### "start"
 Fired as HandbrakeCLI is launched. Nothing has happened yet.
 
-**Kind: **event  
+**Kind:** event  
 
 -
 
@@ -133,7 +133,7 @@ Fired as HandbrakeCLI is launched. Nothing has happened yet.
 #### "begin"
 Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.
 
-**Kind: **event  
+**Kind:** event  
 
 -
 
@@ -142,7 +142,7 @@ Fired when encoding begins. If you're expecting an encode and this never fired, 
 #### "progress" (progress)
 Fired at regular intervals passing a `progress` object.
 
-**Kind: **event  
+**Kind:** event  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -160,7 +160,7 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 #### "output" (output)
-**Kind: **event  
+**Kind:** event  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -171,7 +171,7 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
 #### "error" (error)
-**Kind: **event  
+**Kind:** event  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -185,7 +185,7 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_end"></a>
 #### "end"
-**Kind: **event  
+**Kind:** event  
 
 Fired on successful completion of an encoding task. Always follows a [begin](#module_handbrake-js..Handbrake#event_begin) event, with some [progress](#module_handbrake-js..Handbrake#event_progress) in between.
 
@@ -194,7 +194,7 @@ Fired on successful completion of an encoding task. Always follows a [begin](#mo
 
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 #### "complete"
-**Kind: **event  
+**Kind:** event  
 
 Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..
 
