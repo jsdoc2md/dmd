@@ -1,0 +1,116 @@
+[
+    {
+    "id": "FurQ()",
+    "longname": "FurQ",
+    "name": "FurQ",
+    "kind": "constructor",
+    "memberof": "FurQ",
+    "order": 1,
+    "level": 1
+    },
+    { "title": "instance", "level": 1 },
+    { "title": "standard", "level": 2 },
+    {
+    "id": "FurQ#kill",
+    "name": "kill",
+    "scope": "instance",
+    "kind": "function",
+    "memberof": "FurQ",
+    "category": "standard",
+    "order": 2,
+    "level": 3
+    },
+    {
+    "id": "FurQ#respect",
+    "name": "respect",
+    "scope": "instance",
+    "kind": "function",
+    "memberof": "FurQ",
+    "category": "standard",
+    "order": 3,
+    "level": 3
+    },
+    {
+    "id": "FurQ#LOVE",
+    "longname": "FurQ#LOVE",
+    "name": "LOVE",
+    "scope": "instance",
+    "kind": "constant",
+    "memberof": "FurQ",
+    "order": 4,
+    "level": 2
+    },
+    {
+    "id": "FurQ#wannaTryIt",
+    "longname": "FurQ#wannaTryIt",
+    "name": "wannaTryIt",
+    "scope": "instance",
+    "kind": "member",
+    "memberof": "FurQ",
+    "order": 5,
+    "level": 2
+    },
+    {
+    "id": "FurQ#spit",
+    "longname": "FurQ#spit",
+    "name": "spit",
+    "scope": "instance",
+    "kind": "function",
+    "memberof": "FurQ",
+    "order": 6,
+    "level": 2
+    },
+    {
+    "id": "FurQ#event:pop",
+    "longname": "FurQ#event:pop",
+    "name": "pop",
+    "scope": "instance",
+    "kind": "event",
+    "memberof": "FurQ",
+    "order": 7,
+    "level": 2
+    },
+    {
+    "id": "FurQ#event:slap",
+    "longname": "FurQ#event:slap",
+    "name": "slap",
+    "scope": "instance",
+    "kind": "event",
+    "description": "slap man",
+    "memberof": "FurQ",
+    "order": 8,
+    "level": 2
+    },
+    { "title": "static", "level": 1 },
+    {
+    "id": "FurQ.peace",
+    "name": "peace",
+    "scope": "static",
+    "kind": "function",
+    "memberof": "FurQ",
+    "order": 9,
+    "level": 2
+    },
+    {
+    "id": "FurQ.enemy",
+    "name": "enemy",
+    "scope": "static",
+    "kind": "member",
+    "memberof": "FurQ",
+    "readonly": true,
+    "isEnum": true,
+    "codeName": "FurQ.enemy",
+    "order": 10,
+    "level": 2
+    },
+    { "title": "inner", "level": 1 },
+    {
+    "id": "FurQ~onRespect",
+    "name": "onRespect",
+    "scope": "inner",
+    "kind": "typedef",
+    "memberof": "FurQ",
+    "order": 12,
+    "level": 2
+    }
+]

@@ -25,7 +25,7 @@ var a = require("array-tools");
       * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
       * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
   * _inner_
-    * * [~inner()](#module_array-tools.extract) ⇒ <code>number</code>
+    * [~inner()](#module_array-tools.extract) ⇒ <code>number</code>
 
 <a name="module_array-tools.pluck"></a>
 ### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>

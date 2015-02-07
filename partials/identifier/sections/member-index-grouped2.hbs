@@ -1,0 +1,6 @@
+{{#each this~}}
+{{#if title}}{{string-repeat "  " level}}* {{title}}
+{{else~}}
+{{string-repeat "  " level}}* {{id}}
+{{/if~}}
+{{/each~}}
