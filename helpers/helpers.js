@@ -14,6 +14,7 @@ exports.tableHead = tableHead;
 exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
 exports.deprecated = deprecated;
+exports.ting = ting;
 
 /**
 Escape special markdown characters
@@ -136,4 +137,22 @@ function deprecated(options){
     } else {
         return options.fn(this);
     }
+}
+
+function ting(options){
+    var result = "";
+    var output = [];
+    var level = 0;
+    var title;
+    
+    var children = ddata._children(options).map(function(child){
+        child._group = child.scope + "¦";
+        return child
+    });
+    
+    children.forEach(function(child){
+        if ()
+    });
+    
+    return result;
 }

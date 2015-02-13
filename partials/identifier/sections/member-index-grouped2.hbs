@@ -1,6 +1,7 @@
-{{#each this~}}
 {{#if title}}{{string-repeat "  " level}}* {{title}}
 {{else~}}
-{{string-repeat "  " level}}* {{id}}
+{{string-repeat "  " level}}* [{{scope}}] {{kind}}: {{name}} {{#if memberof}}*{{memberof}}*{{/if}}
 {{/if~}}
-{{/each~}}
+{{#children~}}
+{{>member-index-grouped2~}}
+{{/children~}}
