@@ -1,0 +1,367 @@
+[
+  {
+    "id": "FurQ()",
+    "longname": "FurQ",
+    "name": "FurQ",
+    "kind": "constructor",
+    "description": "She's an Uzi lover. \n\n![uzi](https://sampleface.co.uk/wp-content/uploads/2013/07/fur-q-uzi-lover.png)",
+    "memberof": "FurQ",
+    "examples": [
+      "var uziLover = require(\"FurQ\");"
+    ],
+    "order": 1
+  },
+  {
+    "id": "Rapper.train~School()",
+    "longname": "Rapper.train~School",
+    "name": "School",
+    "kind": "constructor",
+    "description": "rap school",
+    "memberof": "Rapper.train~School",
+    "order": 18
+  },
+  {
+    "id": "FurQ",
+    "longname": "FurQ",
+    "name": "FurQ",
+    "scope": "global",
+    "kind": "class",
+    "augments": [
+      "Rapper"
+    ],
+    "description": "C\\*ck, b!tch, c\\*ck, b!tch, m\\*therf!cker. You gotta kill people, to respect people.",
+    "fires": [
+      "FurQ#event:pop",
+      "FurQ#event:slap"
+    ],
+    "author": [
+      "Chris Morris"
+    ],
+    "access": "public",
+    "see": [
+      "https://www.youtube.com/watch?v=1sxZ4tsp8gc"
+    ],
+    "codeName": "FurQ",
+    "order": 0
+  },
+  {
+    "id": "Rapper",
+    "longname": "Rapper",
+    "name": "Rapper",
+    "scope": "global",
+    "kind": "class",
+    "codeName": "Rapper",
+    "order": 13
+  },
+  {
+    "id": "plant",
+    "longname": "plant",
+    "name": "plant",
+    "scope": "global",
+    "kind": "function",
+    "description": "to plant ones fist in a buster's mush",
+    "codeName": "plant",
+    "order": 11
+  },
+  {
+    "id": "FurQ#wannaTryIt",
+    "longname": "FurQ#wannaTryIt",
+    "name": "wannaTryIt",
+    "scope": "instance",
+    "kind": "member",
+    "memberof": "FurQ",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "bitch",
+    "see": [
+      "\"Uzi like a metal dick in my hand.\"",
+      "\"Magazine like a big testicle gland.\""
+    ],
+    "codeName": "this.wannaTryIt",
+    "order": 5
+  },
+  {
+    "id": "FurQ#LOVE",
+    "longname": "FurQ#LOVE",
+    "name": "LOVE",
+    "scope": "instance",
+    "kind": "constant",
+    "memberof": "FurQ",
+    "type": {
+      "names": [
+        "string"
+      ]
+    },
+    "defaultvalue": "UZI",
+    "codeName": "this.LOVE",
+    "order": 4
+  },
+  {
+    "id": "FurQ#kill",
+    "longname": "FurQ#kill",
+    "name": "kill",
+    "scope": "instance",
+    "kind": "function",
+    "description": "kill",
+    "memberof": "FurQ",
+    "examples": [
+      "var kill = uziLover.kill();\n    ",
+      "uziLover.kill();"
+    ],
+    "category": "standard",
+    "codeName": "this.kill",
+    "order": 2
+  },
+  {
+    "id": "FurQ#respect",
+    "longname": "FurQ#respect",
+    "name": "respect",
+    "scope": "instance",
+    "kind": "function",
+    "description": "respect",
+    "memberof": "FurQ",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "FurQ~onRespect"
+          ]
+        },
+        "description": "called on reciprocation of respect",
+        "name": "done"
+      }
+    ],
+    "examples": [
+      "uziLover.respect(function(err, gain){\n    console.log(gain);\n});"
+    ],
+    "category": "standard",
+    "codeName": "this.respect",
+    "order": 3
+  },
+  {
+    "id": "FurQ#spit",
+    "longname": "FurQ#spit",
+    "name": "spit",
+    "scope": "instance",
+    "kind": "function",
+    "overrides": "Rapper#spit",
+    "description": "override",
+    "memberof": "FurQ",
+    "codeName": "this.spit",
+    "order": 6
+  },
+  {
+    "id": "Rapper#spit",
+    "longname": "Rapper#spit",
+    "name": "spit",
+    "scope": "instance",
+    "kind": "function",
+    "description": "spit",
+    "memberof": "Rapper",
+    "codeName": "this.spit",
+    "order": 14
+  },
+  {
+    "id": "Rapper#battle",
+    "longname": "Rapper#battle",
+    "name": "battle",
+    "scope": "instance",
+    "kind": "function",
+    "description": "battle",
+    "memberof": "Rapper",
+    "codeName": "this.battle",
+    "order": 15
+  },
+  {
+    "id": "FurQ#battle",
+    "longname": "FurQ#battle",
+    "name": "battle",
+    "scope": "instance",
+    "kind": "function",
+    "inherits": "Rapper#battle",
+    "inherited": true,
+    "description": "battle",
+    "memberof": "FurQ",
+    "codeName": "this.battle",
+    "order": 19
+  },
+  {
+    "id": "FurQ#punch",
+    "longname": "FurQ#punch",
+    "name": "punch",
+    "scope": "instance",
+    "kind": "function",
+    "description": "to plant ones fist in a buster's mush",
+    "memberof": "FurQ",
+    "codeName": "plant",
+    "order": 20
+  },
+  {
+    "id": "FurQ#event:pop",
+    "longname": "FurQ#event:pop",
+    "name": "pop",
+    "scope": "instance",
+    "kind": "event",
+    "description": "fire weapon",
+    "memberof": "FurQ",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "description": "make 'zooping' sound as you fire",
+        "name": "zoop"
+      }
+    ],
+    "order": 7
+  },
+  {
+    "id": "FurQ#event:slap",
+    "longname": "FurQ#event:slap",
+    "name": "slap",
+    "scope": "instance",
+    "kind": "event",
+    "description": "slap man",
+    "memberof": "FurQ",
+    "order": 8
+  },
+  {
+    "id": "FurQ.enemy",
+    "longname": "FurQ.enemy",
+    "name": "enemy",
+    "scope": "static",
+    "kind": "member",
+    "description": "FUR-Q enemy types",
+    "memberof": "FurQ",
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "readonly": true,
+    "isEnum": true,
+    "properties": [
+      {
+        "description": "an awful individual",
+        "name": "COCK",
+        "longname": "FurQ.enemy.COCK",
+        "kind": "member",
+        "memberof": "FurQ.enemy",
+        "scope": "static",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "defaultvalue": 0,
+        "codeName": "COCK"
+      },
+      {
+        "name": "BITCH",
+        "longname": "FurQ.enemy.BITCH",
+        "kind": "member",
+        "memberof": "FurQ.enemy",
+        "scope": "static",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "defaultvalue": 1,
+        "codeName": "BITCH"
+      },
+      {
+        "name": "MUTHAFUCKA",
+        "longname": "FurQ.enemy.MUTHAFUCKA",
+        "kind": "member",
+        "memberof": "FurQ.enemy",
+        "scope": "static",
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "defaultvalue": 2,
+        "codeName": "MUTHAFUCKA"
+      }
+    ],
+    "codeName": "FurQ.enemy",
+    "order": 10
+  },
+  {
+    "id": "FurQ.peace",
+    "longname": "FurQ.peace",
+    "name": "peace",
+    "scope": "static",
+    "kind": "function",
+    "description": "check if at peace",
+    "memberof": "FurQ",
+    "examples": [
+      "var peace = FurQ.peace();"
+    ],
+    "deprecated": true,
+    "codeName": "FurQ.peace",
+    "order": 9
+  },
+  {
+    "id": "Rapper.train",
+    "longname": "Rapper.train",
+    "name": "train",
+    "scope": "static",
+    "kind": "function",
+    "description": "train new rappers",
+    "memberof": "Rapper",
+    "codeName": "Rapper.train",
+    "order": 16
+  },
+  {
+    "id": "Rapper.train~School",
+    "longname": "Rapper.train~School",
+    "name": "School",
+    "scope": "inner",
+    "kind": "class",
+    "memberof": "Rapper.train",
+    "codeName": "School",
+    "order": 17
+  },
+  {
+    "id": "FurQ~onRespect",
+    "longname": "FurQ~onRespect",
+    "name": "onRespect",
+    "scope": "inner",
+    "kind": "typedef",
+    "description": "Passed to {@link FurQ#respect}",
+    "memberof": "FurQ",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Error"
+          ]
+        },
+        "description": "an issue with the punch",
+        "name": "err"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "the respect percentage gained",
+        "name": "gain"
+      }
+    ],
+    "type": {
+      "names": [
+        "function"
+      ]
+    },
+    "order": 12
+  }
+]

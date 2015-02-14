@@ -15,6 +15,7 @@ exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
 exports.deprecated = deprecated;
 exports.ting = ting;
+exports._ting = _ting;
 
 /**
 Escape special markdown characters
@@ -139,20 +140,49 @@ function deprecated(options){
     }
 }
 
+function _ting(options){
+    // console.error("id", this.id);
+    
+    /* group by scope, do on data sorted by scope-kind */
+    var children = ddata._children.call(this, options).map(function(identifier){
+        identifier._group = (identifier.scope || "") + "¦";
+        identifier.level = identifier._group.split("¦").filter(function(i){return i;}).length + 1;
+        return identifier
+    });
+    
+    /* insert title items */
+    var inserts = [];
+    var prevGroup;
+    var prevGroupSplit = [];
+    children.forEach(function(identifier, index){
+        if (identifier._group !== prevGroup){
+            var split = identifier._group.split("¦");
+            split.forEach(function(group, i){
+                // console.log("c", group, "p", prevGroupSplit[index]);
+                if (group !== (prevGroupSplit[i] || "")){
+                    inserts.push({
+                        index: index,
+                        _title: group,
+                        level: 1
+                    });
+                }
+            });
+        }
+        
+        prevGroup = identifier._group;
+        prevGroupSplit = prevGroup.split("¦");
+        // console.log(prevGroup, prevGroupSplit);
+    });
+    
+    inserts.reverse().forEach(function(insert){
+        children.splice(insert.index, 0, insert);
+    });
+    
+    return children;
+}
+
 function ting(options){
-    var result = "";
-    var output = [];
-    var level = 0;
-    var title;
-    
-    var children = ddata._children(options).map(function(child){
-        child._group = child.scope + "¦";
-        return child
-    });
-    
-    children.forEach(function(child){
-        if ()
-    });
-    
-    return result;
+    // console.error(this)
+    return handlebars.helpers.each(_ting.call(this, options), options);
+    // return options.fn(_ting.call(this, options));
 }
