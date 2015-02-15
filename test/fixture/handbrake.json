@@ -1,26 +1,26 @@
 [
   {
-    "id": "module:handbrake-js~Handbrake",
-    "longname": "module:handbrake-js~Handbrake",
-    "name": "Handbrake",
-    "scope": "inner",
-    "kind": "class",
-    "augments": [
-      "external:EventEmitter"
+    "id": "module:handbrake-js",
+    "longname": "module:handbrake-js",
+    "name": "handbrake-js",
+    "kind": "module",
+    "description": "Handbrake for node.js.",
+    "examples": [
+      "```js\nvar hbjs = require(\"handbrake-js\");\n```"
     ],
-    "description": "A handle on the HandbrakeCLI process. Emits events you can monitor to track progress. An instance of this class is returned by {@link module:handbrake-js.spawn}.",
-    "memberof": "module:handbrake-js",
-    "fires": [
-      "module:handbrake-js~Handbrake#event:start",
-      "module:handbrake-js~Handbrake#event:begin",
-      "module:handbrake-js~Handbrake#event:progress",
-      "module:handbrake-js~Handbrake#event:output",
-      "module:handbrake-js~Handbrake#event:error",
-      "module:handbrake-js~Handbrake#event:end",
-      "module:handbrake-js~Handbrake#event:complete"
+    "typicalname": "hbjs",
+    "order": 12
+  },
+  {
+    "id": "external:EventEmitter",
+    "longname": "external:EventEmitter",
+    "name": "EventEmitter",
+    "scope": "global",
+    "kind": "external",
+    "see": [
+      "http://nodejs.org/api/events.html"
     ],
-    "codeName": "Handbrake",
-    "order": 0
+    "order": 11
   },
   {
     "id": "module:handbrake-js~Handbrake#output",
@@ -53,6 +53,60 @@
     },
     "codeName": "this.options",
     "order": 2
+  },
+  {
+    "id": "module:handbrake-js~Handbrake#eError",
+    "longname": "module:handbrake-js~Handbrake#eError",
+    "name": "eError",
+    "scope": "instance",
+    "kind": "member",
+    "description": "All operational errors are emitted via the {@link module:handbrake-js~Handbrake#event:error} event.",
+    "memberof": "module:handbrake-js~Handbrake",
+    "isEnum": true,
+    "properties": [
+      {
+        "description": "Thrown if you accidentally set identical input and output paths (which would clobber the input file), forget to specifiy an output path and other validation errors",
+        "name": "VALIDATION",
+        "longname": "module:handbrake-js~Handbrake#eError.VALIDATION",
+        "kind": "member",
+        "memberof": "module:handbrake-js~Handbrake#eError",
+        "scope": "static",
+        "defaultvalue": "ValidationError",
+        "codeName": "VALIDATION"
+      },
+      {
+        "description": "Thrown when the input file specified does not appear to be a video file",
+        "name": "INVALID_INPUT",
+        "longname": "module:handbrake-js~Handbrake#eError.INVALID_INPUT",
+        "kind": "member",
+        "memberof": "module:handbrake-js~Handbrake#eError",
+        "scope": "static",
+        "defaultvalue": "InvalidInput",
+        "codeName": "INVALID_INPUT"
+      },
+      {
+        "description": "Thrown if Handbrake crashes",
+        "name": "OTHER",
+        "longname": "module:handbrake-js~Handbrake#eError.OTHER",
+        "kind": "member",
+        "memberof": "module:handbrake-js~Handbrake#eError",
+        "scope": "static",
+        "defaultvalue": "Other",
+        "codeName": "OTHER"
+      },
+      {
+        "description": "Thrown if the installed HandbrakeCLI binary has gone missing..",
+        "name": "NOT_FOUND",
+        "longname": "module:handbrake-js~Handbrake#eError.NOT_FOUND",
+        "kind": "member",
+        "memberof": "module:handbrake-js~Handbrake#eError",
+        "scope": "static",
+        "defaultvalue": "HandbrakeCLINotFound",
+        "codeName": "NOT_FOUND"
+      }
+    ],
+    "codeName": "Handbrake.prototype.eError",
+    "order": 10
   },
   {
     "id": "module:handbrake-js~Handbrake#event:start",
@@ -246,83 +300,6 @@
     "order": 9
   },
   {
-    "id": "module:handbrake-js~Handbrake#eError",
-    "longname": "module:handbrake-js~Handbrake#eError",
-    "name": "eError",
-    "scope": "instance",
-    "kind": "member",
-    "description": "All operational errors are emitted via the {@link module:handbrake-js~Handbrake#event:error} event.",
-    "memberof": "module:handbrake-js~Handbrake",
-    "isEnum": true,
-    "properties": [
-      {
-        "description": "Thrown if you accidentally set identical input and output paths (which would clobber the input file), forget to specifiy an output path and other validation errors",
-        "name": "VALIDATION",
-        "longname": "module:handbrake-js~Handbrake#eError.VALIDATION",
-        "kind": "member",
-        "memberof": "module:handbrake-js~Handbrake#eError",
-        "scope": "static",
-        "defaultvalue": "ValidationError",
-        "codeName": "VALIDATION"
-      },
-      {
-        "description": "Thrown when the input file specified does not appear to be a video file",
-        "name": "INVALID_INPUT",
-        "longname": "module:handbrake-js~Handbrake#eError.INVALID_INPUT",
-        "kind": "member",
-        "memberof": "module:handbrake-js~Handbrake#eError",
-        "scope": "static",
-        "defaultvalue": "InvalidInput",
-        "codeName": "INVALID_INPUT"
-      },
-      {
-        "description": "Thrown if Handbrake crashes",
-        "name": "OTHER",
-        "longname": "module:handbrake-js~Handbrake#eError.OTHER",
-        "kind": "member",
-        "memberof": "module:handbrake-js~Handbrake#eError",
-        "scope": "static",
-        "defaultvalue": "Other",
-        "codeName": "OTHER"
-      },
-      {
-        "description": "Thrown if the installed HandbrakeCLI binary has gone missing..",
-        "name": "NOT_FOUND",
-        "longname": "module:handbrake-js~Handbrake#eError.NOT_FOUND",
-        "kind": "member",
-        "memberof": "module:handbrake-js~Handbrake#eError",
-        "scope": "static",
-        "defaultvalue": "HandbrakeCLINotFound",
-        "codeName": "NOT_FOUND"
-      }
-    ],
-    "codeName": "Handbrake.prototype.eError",
-    "order": 10
-  },
-  {
-    "id": "external:EventEmitter",
-    "longname": "external:EventEmitter",
-    "name": "EventEmitter",
-    "scope": "global",
-    "kind": "external",
-    "see": [
-      "http://nodejs.org/api/events.html"
-    ],
-    "order": 11
-  },
-  {
-    "id": "module:handbrake-js",
-    "longname": "module:handbrake-js",
-    "name": "handbrake-js",
-    "kind": "module",
-    "description": "Handbrake for node.js.",
-    "examples": [
-      "```js\nvar hbjs = require(\"handbrake-js\");\n```"
-    ],
-    "typicalname": "hbjs",
-    "order": 12
-  },
-  {
     "id": "module:handbrake-js.spawn",
     "longname": "module:handbrake-js.spawn",
     "name": "spawn",
@@ -392,5 +369,28 @@
     ],
     "codeName": "exec",
     "order": 14
+  },
+  {
+    "id": "module:handbrake-js~Handbrake",
+    "longname": "module:handbrake-js~Handbrake",
+    "name": "Handbrake",
+    "scope": "inner",
+    "kind": "class",
+    "augments": [
+      "external:EventEmitter"
+    ],
+    "description": "A handle on the HandbrakeCLI process. Emits events you can monitor to track progress. An instance of this class is returned by {@link module:handbrake-js.spawn}.",
+    "memberof": "module:handbrake-js",
+    "fires": [
+      "module:handbrake-js~Handbrake#event:start",
+      "module:handbrake-js~Handbrake#event:begin",
+      "module:handbrake-js~Handbrake#event:progress",
+      "module:handbrake-js~Handbrake#event:output",
+      "module:handbrake-js~Handbrake#event:error",
+      "module:handbrake-js~Handbrake#event:end",
+      "module:handbrake-js~Handbrake#event:complete"
+    ],
+    "codeName": "Handbrake",
+    "order": 0
   }
 ]

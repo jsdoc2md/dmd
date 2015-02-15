@@ -14,8 +14,9 @@ exports.tableHead = tableHead;
 exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
 exports.deprecated = deprecated;
-exports.ting = ting;
-exports._ting = _ting;
+exports.groupBy = groupBy;
+exports._groupBy = _groupBy;
+exports.add = add;
 
 /**
 Escape special markdown characters
@@ -140,13 +141,13 @@ function deprecated(options){
     }
 }
 
-function _ting(options){
+function _groupBy(options){
     // console.error("id", this.id);
     
     /* group by scope, do on data sorted by scope-kind */
     var children = ddata._children.call(this, options).map(function(identifier){
         identifier._group = (identifier.scope || "") + "¦";
-        identifier.level = identifier._group.split("¦").filter(function(i){return i;}).length + 1;
+        identifier.level = identifier._group.split("¦").filter(function(i){return i;}).length;
         return identifier
     });
     
@@ -163,7 +164,7 @@ function _ting(options){
                     inserts.push({
                         index: index,
                         _title: group,
-                        level: 1
+                        level: 0
                     });
                 }
             });
@@ -177,12 +178,14 @@ function _ting(options){
     inserts.reverse().forEach(function(insert){
         children.splice(insert.index, 0, insert);
     });
-    
+    // console.error(children);
     return children;
 }
 
-function ting(options){
-    // console.error(this)
-    return handlebars.helpers.each(_ting.call(this, options), options);
-    // return options.fn(_ting.call(this, options));
+function groupBy(options){
+    return handlebars.helpers.each(_groupBy.call(this, options), options);
+}
+
+function add(x, y, options){
+    return (x || 0) + (y || 0);
 }

@@ -42,7 +42,7 @@
       }
     ],
     "examples": [
-      "> var data = [\n...     {one: 1, two: 2},\n...     {two: \"two\"},\n...     {one: \"one\", two: \"zwei\"},\n... ];\nundefined\n> a.pluck(data, \"one\");\n[ 1, 'one' ]\n> a.pluck(data, \"two\");\n[ 2, 'two', 'zwei' ]\n> a.pluck(data, \"one\", \"two\");\n[ 1, 'two', 'one' ]"
+      "> var data = [\n    {one: 1, two: 2},\n    {two: \"two\"},\n    {one: \"one\", two: \"zwei\"},\n];\n> a.pluck(data, \"one\");\n[ 1, 'one' ]\n> a.pluck(data, \"two\");\n[ 2, 'two', 'zwei' ]\n> a.pluck(data, \"one\", \"two\");\n[ 1, 'two', 'one' ]"
     ],
     "returns": [
       {
@@ -122,7 +122,7 @@
       }
     ],
     "examples": [
-      "> a.arrayify(null)\n[]\n> a.arrayify(0)\n[ 0 ]\n> a.arrayify([ 1, 2 ])\n[ 1, 2 ]\n> function f(){ return a.arrayify(arguments); }\nundefined\n> f(1,2,3)\n[ 1, 2, 3 ]"
+      "> a.arrayify(null)\n[]\n> a.arrayify(0)\n[ 0 ]\n> a.arrayify([ 1, 2 ])\n[ 1, 2 ]\n> function f(){ return a.arrayify(arguments); }\n> f(1,2,3)\n[ 1, 2, 3 ]"
     ],
     "returns": [
       {
@@ -351,7 +351,7 @@
       }
     ],
     "examples": [
-      "> var array1 = [ 1, 2 ], array2 = [ 2, 3 ];\nundefined\n> a.union(array1, array2)\n[ 1, 2, 3 ]\n> var array1 = [ { id: 1 }, { id: 2 } ], array2 = [ { id: 2 }, { id: 3 } ];\nundefined\n> a.union(array1, array2)\n[ { id: 1 }, { id: 2 }, { id: 3 } ]\n> var array2 = [ { id: 2, blah: true }, { id: 3 } ]\nundefined\n> a.union(array1, array2)\n[ { id: 1 },\n  { id: 2 },\n  { id: 2, blah: true },\n  { id: 3 } ]\n> a.union(array1, array2, \"id\")\n[ { id: 1 }, { id: 2 }, { id: 3 } ]"
+      "> var array1 = [ 1, 2 ], array2 = [ 2, 3 ];\n> a.union(array1, array2)\n[ 1, 2, 3 ]\n> var array1 = [ { id: 1 }, { id: 2 } ], array2 = [ { id: 2 }, { id: 3 } ];\n> a.union(array1, array2)\n[ { id: 1 }, { id: 2 }, { id: 3 } ]\n> var array2 = [ { id: 2, blah: true }, { id: 3 } ]\n> a.union(array1, array2)\n[ { id: 1 },\n  { id: 2 },\n  { id: 2, blah: true },\n  { id: 3 } ]\n> a.union(array1, array2, \"id\")\n[ { id: 1 }, { id: 2 }, { id: 3 } ]"
     ],
     "returns": [
       {
@@ -558,7 +558,7 @@
     "description": "flatten an array of arrays into a single array",
     "memberof": "module:array-tools",
     "examples": [
-      "> numbers = [ 1, 2, [ 3, 4 ], 5 ]\n[ 1,\n  2,\n  [ 3, 4 ],\n  5 ]\n> a.flatten(numbers)\n[ 1, 2, 3, 4, 5 ]"
+      "> numbers = [ 1, 2, [ 3, 4 ], 5 ]\n> a.flatten(numbers)\n[ 1, 2, 3, 4, 5 ]"
     ],
     "returns": [
       {
@@ -578,5 +578,58 @@
       }
     ],
     "order": 13
+  },
+  {
+    "id": "module:array-tools.sortBy",
+    "longname": "module:array-tools.sortBy",
+    "name": "sortBy",
+    "scope": "static",
+    "kind": "function",
+    "description": "Sort an array of objects by one or more fields",
+    "memberof": "module:array-tools",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "array"
+          ]
+        },
+        "description": "input array",
+        "name": "arrayOfObject"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "column names to sort by",
+        "name": "columns"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "specific sort orders, per columns",
+        "name": "order"
+      }
+    ],
+    "examples": [
+      ">  var fixture = [\n    { a: 4, b: 1, c: 1},\n    { a: 4, b: 3, c: 1},\n    { a: 2, b: 2, c: 3},\n    { a: 2, b: 2, c: 2},\n    { a: 1, b: 3, c: 4},\n    { a: 1, b: 1, c: 4},\n    { a: 1, b: 2, c: 4},\n    { a: 3, b: 3, c: 3},\n    { a: 4, b: 3, c: 1} \n];\n> a.sortBy(fixture, \"a\", \"b\", \"c\")\n[ { a: 1, b: 1, c: 4 },\n  { a: 1, b: 2, c: 4 },\n  { a: 1, b: 3, c: 4 },\n  { a: 2, b: 2, c: 2 },\n  { a: 2, b: 2, c: 3 },\n  { a: 3, b: 3, c: 3 },\n  { a: 4, b: 1, c: 1 },\n  { a: 4, b: 3, c: 1 },\n  { a: 4, b: 3, c: 1 } ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "codeName": "sortBy",
+    "order": 14
   }
 ]

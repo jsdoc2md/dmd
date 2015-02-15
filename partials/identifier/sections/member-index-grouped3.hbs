@@ -1,4 +1,4 @@
-{{string-repeat "  " level}}* {{#if _title}}{{_title}}{{else}}{{#deprecated}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{/deprecated}}{{/if}}
-{{#ting~}}
-{{>member-index-grouped3~}}
-{{/ting~}}
+{{string-repeat "  " (add level baseLevel)}}* {{#unless (equal _title undefined)}}_{{_title}}_{{else}}{{#deprecated}}[{{>index-name2}}](#{{{anchorName}}}){{>return-sig}}{{>name-suffix~}}{{/deprecated}}{{/unless}}
+{{#groupBy~}}
+{{>member-index-grouped3 baseLevel=(add ../baseLevel 1)~}}
+{{/groupBy~}}

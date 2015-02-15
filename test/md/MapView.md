@@ -15,7 +15,12 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 
 * [MapView](#module_MapView)
   * [class: MapView](#exp_module_MapView--MapView) ⏏
+    * _static_
+      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
+    * __
     * [`new MapView(options)`](#new_module_MapView--MapView_new)
+    * _static_
+      * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
     * _instance_
       * [`.getMap()`](#module_MapView--MapView#getMap) ⇒ <code>Map</code>
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
@@ -27,9 +32,6 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
       * [`.getSize()`](#module_MapView--MapView#getSize) ⇒ <code>Array.Number</code>
       * [`.halt()`](#module_MapView--MapView#halt)
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
-    * _static_
-      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-      * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
 
 <a name="exp_module_MapView--MapView"></a>
 ### class: MapView ⏏
