@@ -36,7 +36,7 @@ function linkify(text, options){
             text = text.replace(link.original, "[" + link.caption + "](" + link.url + ")");
         });
     }
-    return text;
+    return new handlebars.SafeString(text);
 }
 
 function tableHead(){
