@@ -8,70 +8,24 @@ var a = require("array-tools");
 ```
 
 * [array-tools](#module_array-tools)
-  * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
-  * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
-  * [.arrayify(input)](#module_array-tools.arrayify) ⇒ <code>Array</code>
+  * [.arrayify(any)](#module_array-tools.arrayify) ⇒ <code>Array</code>
   * [.exists(array, value)](#module_array-tools.exists) ⇒ <code>boolean</code>
-  * [.where(arrayOfObjects, query)](#module_array-tools.where) ⇒ <code>Array</code>
-  * [.findWhere(arrayOfObjects, query)](#module_array-tools.findWhere) ⇒ <code>object</code>
-  * [.without(input, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
+  * [.without(array, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
   * [.union(array1, array2, idKey)](#module_array-tools.union) ⇒ <code>Array</code>
   * [.commonSequence(a, b)](#module_array-tools.commonSequence) ⇒ <code>Array</code>
   * [.unique(array)](#module_array-tools.unique) ⇒ <code>Array</code>
   * [.spliceWhile(array, index, test, ...elementN)](#module_array-tools.spliceWhile) ⇒ <code>Array</code>
   * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
   * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
-  * [.sortBy(arrayOfObject, ...columns, order)](#module_array-tools.sortBy) ⇒ <code>Array</code>
+  * _Record sets_
+    * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
+    * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
+    * [.where(arrayOfObjects, query)](#module_array-tools.where) ⇒ <code>Array</code>
+    * [.findWhere(arrayOfObjects, query)](#module_array-tools.findWhere) ⇒ <code>object</code>
+    * [.sortBy(arrayOfObjects, columns, customOrder)](#module_array-tools.sortBy) ⇒ <code>Array</code>
 
-<a name="module_array-tools.pluck"></a>
-### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
-Plucks the value of the specified property from each object in the input array
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input array of objects |
-| ...property | <code>string</code> | the property(s) to pluck |
-
-**Example**  
-```js
-> var data = [
-    {one: 1, two: 2},
-    {two: "two"},
-    {one: "one", two: "zwei"},
-];
-> a.pluck(data, "one");
-[ 1, 'one' ]
-> a.pluck(data, "two");
-[ 2, 'two', 'zwei' ]
-> a.pluck(data, "one", "two");
-[ 1, 'two', 'one' ]
-```
-<a name="module_array-tools.pick"></a>
-### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
-return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
-| ...property | <code>string</code> | the properties to include in the result |
-
-**Example**  
-```js
-> data = [
-    { one: "un", two: "deux", three: "trois" },
-    { two: "two", one: "one" },
-    { four: "quattro" },
-    { two: "zwei" }
-]
-> a.pick(data, "two")
-[ { two: 'deux' },
-  { two: 'two' },
-  { two: 'zwei' } ]
-```
 <a name="module_array-tools.arrayify"></a>
-### a.arrayify(input) ⇒ <code>Array</code>
+### a.arrayify(any) ⇒ <code>Array</code>
 Takes input and guarantees an array back. Result can be one of three things:
 
 - puts a single scalar in an array
@@ -81,7 +35,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 
 | Param | Type | Description |
 | --- | --- | --- |
-| input | <code>\*</code> | the input value to convert to an array |
+| any | <code>\*</code> | the input value to convert to an array |
 
 **Example**  
 ```js
@@ -116,55 +70,14 @@ true
 > a.exists([ { result: true }, { result: true } ], { result: true })
 true
 ```
-<a name="module_array-tools.where"></a>
-### a.where(arrayOfObjects, query) ⇒ <code>Array</code>
-returns an array containing items from `arrayOfObjects` where key/value pairs 
-from `query` are matched identically
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| arrayOfObjects | <code>Array</code> | the array to search |
-| query | <code>query</code> | an object containing the key/value pairs you want to match |
-
-**Example**  
-```js
-> dudes = [{ name: "Jim", age: 8}, { name: "Clive", age: 8}, { name: "Hater", age: 9}]
-[ { name: 'Jim', age: 8 },
-  { name: 'Clive', age: 8 },
-  { name: 'Hater', age: 9 } ]
-> a.where(dudes, { age: 8})
-[ { name: 'Jim', age: 8 },
-  { name: 'Clive', age: 8 } ]
-```
-<a name="module_array-tools.findWhere"></a>
-### a.findWhere(arrayOfObjects, query) ⇒ <code>object</code>
-returns the first item from `arrayOfObjects` where key/value pairs 
-from `query` are matched identically
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| arrayOfObjects | <code>Array</code> | the array to search |
-| query | <code>query</code> | an object containing the key/value pairs you want to match |
-
-**Example**  
-```js
-> dudes = [{ name: "Jim", age: 8}, { name: "Clive", age: 8}, { name: "Hater", age: 9}]
-[ { name: 'Jim', age: 8 },
-  { name: 'Clive', age: 8 },
-  { name: 'Hater', age: 9 } ]
-> a.findWhere(dudes, { age: 8})
-{ name: 'Jim', age: 8 }
-```
 <a name="module_array-tools.without"></a>
-### a.without(input, toRemove) ⇒ <code>Array</code>
+### a.without(array, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| input | <code>Array</code> | the input array |
+| array | <code>Array</code> | the input array |
 | toRemove | <code>\*</code> | a single, or array of values to omit |
 
 **Example**  
@@ -219,7 +132,7 @@ Returns the initial elements which both input arrays have in common
 ```
 <a name="module_array-tools.unique"></a>
 ### a.unique(array) ⇒ <code>Array</code>
-reduces an array to unique values
+returns an array of unique values
 
 
 | Param | Type | Description |
@@ -280,16 +193,110 @@ flatten an array of arrays into a single array
 > a.flatten(numbers)
 [ 1, 2, 3, 4, 5 ]
 ```
-<a name="module_array-tools.sortBy"></a>
-### a.sortBy(arrayOfObject, ...columns, order) ⇒ <code>Array</code>
-Sort an array of objects by one or more fields
+<a name="module_array-tools.pluck"></a>
+### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
+Plucks the value of the specified property from each object in the input array
 
+**Category**: Record sets  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arrayOfObject | <code>array</code> | input array |
-| ...columns | <code>string</code> | column names to sort by |
-| order | <code>object</code> | specific sort orders, per columns |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input array of objects |
+| ...property | <code>string</code> | the property(s) to pluck |
+
+**Example**  
+```js
+> var data = [
+    {one: 1, two: 2},
+    {two: "two"},
+    {one: "one", two: "zwei"},
+];
+> a.pluck(data, "one");
+[ 1, 'one' ]
+> a.pluck(data, "two");
+[ 2, 'two', 'zwei' ]
+> a.pluck(data, "one", "two");
+[ 1, 'two', 'one' ]
+```
+<a name="module_array-tools.pick"></a>
+### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
+return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
+
+**Category**: Record sets  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the input |
+| ...property | <code>string</code> | the properties to include in the result |
+
+**Example**  
+```js
+> data = [
+    { one: "un", two: "deux", three: "trois" },
+    { two: "two", one: "one" },
+    { four: "quattro" },
+    { two: "zwei" }
+]
+> a.pick(data, "two")
+[ { two: 'deux' },
+  { two: 'two' },
+  { two: 'zwei' } ]
+```
+<a name="module_array-tools.where"></a>
+### a.where(arrayOfObjects, query) ⇒ <code>Array</code>
+returns an array containing items from `arrayOfObjects` where key/value pairs
+from `query` are matched identically
+
+**Category**: Record sets  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the array to search |
+| query | <code>query</code> | an object containing the key/value pairs you want to match |
+
+**Example**  
+```js
+> dudes = [{ name: "Jim", age: 8}, { name: "Clive", age: 8}, { name: "Hater", age: 9}]
+[ { name: 'Jim', age: 8 },
+  { name: 'Clive', age: 8 },
+  { name: 'Hater', age: 9 } ]
+> a.where(dudes, { age: 8})
+[ { name: 'Jim', age: 8 },
+  { name: 'Clive', age: 8 } ]
+```
+<a name="module_array-tools.findWhere"></a>
+### a.findWhere(arrayOfObjects, query) ⇒ <code>object</code>
+returns the first item from `arrayOfObjects` where key/value pairs
+from `query` are matched identically
+
+**Category**: Record sets  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | the array to search |
+| query | <code>object</code> | an object containing the key/value pairs you want to match |
+
+**Example**  
+```js
+> dudes = [{ name: "Jim", age: 8}, { name: "Clive", age: 8}, { name: "Hater", age: 9}]
+[ { name: 'Jim', age: 8 },
+  { name: 'Clive', age: 8 },
+  { name: 'Hater', age: 9 } ]
+> a.findWhere(dudes, { age: 8})
+{ name: 'Jim', age: 8 }
+```
+<a name="module_array-tools.sortBy"></a>
+### a.sortBy(arrayOfObjects, columns, customOrder) ⇒ <code>Array</code>
+Sort an array of objects by one or more fields
+
+**Category**: Record sets  
+**Since**: 1.5.0  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arrayOfObjects | <code>Array.&lt;object&gt;</code> | input array |
+| columns | <code>string</code> \| <code>Array.&lt;string&gt;</code> | column name(s) to sort by |
+| customOrder | <code>object</code> | specific sort orders, per columns |
 
 **Example**  
 ```js
@@ -302,9 +309,9 @@ Sort an array of objects by one or more fields
     { a: 1, b: 1, c: 4},
     { a: 1, b: 2, c: 4},
     { a: 3, b: 3, c: 3},
-    { a: 4, b: 3, c: 1} 
+    { a: 4, b: 3, c: 1}
 ];
-> a.sortBy(fixture, "a", "b", "c")
+> a.sortBy(fixture, ["a", "b", "c"])
 [ { a: 1, b: 1, c: 4 },
   { a: 1, b: 2, c: 4 },
   { a: 1, b: 3, c: 4 },

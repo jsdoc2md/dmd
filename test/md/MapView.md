@@ -1,3 +1,4 @@
+
 <a name="module_MapView"></a>
 ## MapView
 MapView encapsulates a Google maps view so it can be used with famo.us.
@@ -15,8 +16,8 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 
 * [MapView](#module_MapView)
   * [class: MapView](#exp_module_MapView--MapView) ⏏
-    * _static_
-      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
+    * _instance_
+      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
     * [`new MapView(options)`](#new_module_MapView--MapView_new)
     * _static_
       * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
@@ -24,7 +25,9 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
       * [`.getMap()`](#module_MapView--MapView#getMap) ⇒ <code>Map</code>
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
       * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-      * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+    * _static_
+      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
+    * _instance_
       * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
       * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
       * [`.positionFromPoint(point)`](#module_MapView--MapView#positionFromPoint) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
@@ -34,17 +37,11 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 
 <a name="exp_module_MapView--MapView"></a>
 ### class: MapView ⏏
-<a name="module_MapView--MapView.MapType"></a>
-#### `enum: MapView.MapType` → <code>Number</code>
-Map-type
+<a name="module_MapView--MapView#getFinalPosition"></a>
+#### `mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
+Get the destination center position of the map, in geographical coordinates.
 
-**Properties**
-
-| Name | Type | Default |
-| --- | --- | --- |
-| GOOGLEMAPS | <code>Number</code> | <code>1</code> | 
-| LEAFLET | <code>Number</code> | <code>2</code> | 
-
+**Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="new_module_MapView--MapView_new"></a>
 #### `new MapView(options)`
 
@@ -87,11 +84,17 @@ Set the center of the map to the given geographical coordinates.
 Get the current center position of the map, in geographical coordinates.
 
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
-<a name="module_MapView--MapView#getFinalPosition"></a>
-#### `mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
-Get the destination center position of the map, in geographical coordinates.
+<a name="module_MapView--MapView.MapType"></a>
+#### `enum: MapView.MapType` → <code>Number</code>
+Map-type
 
-**Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
+**Properties**
+
+| Name | Type | Default |
+| --- | --- | --- |
+| GOOGLEMAPS | <code>Number</code> | <code>1</code> | 
+| LEAFLET | <code>Number</code> | <code>2</code> | 
+
 <a name="module_MapView--MapView#getZoom"></a>
 #### `mapView.getZoom()` ⇒ <code>Number</code>
 Get the current zoom-level of the map, taking into account smooth transition between zoom-levels.

@@ -165,50 +165,39 @@ takes the children of this, groups them, inserts group headings..
 */
 function _groupBy(identifiers, groupByFields){
     /* insert title items */
-    groupByFields = groupByFields || [ "scope", "kind" ];
+    groupByFields = groupByFields.slice(0);
+    groupByFields.forEach(function(group){
+        var groupValues = a.unique(identifiers.map(function(i){ return i[group]; }));
+        if (groupValues.length <= 1) groupByFields = a.without(groupByFields, group);
+    });
     identifiers = _addGroup(identifiers, groupByFields);
-    var groupCount = a.unique(
-        a.pluck(identifiers, "_group").map(function(group){
-            return JSON.stringify(group);
-        })
-    ).length;
-    
-    if (groupCount > 1){
-        var inserts = [];
-        var prevGroup = [];
-        var level;
-        identifiers.forEach(function(identifier, index){
-            if (!deepEqual(identifier._group, prevGroup)){
-                var common = a.commonSequence(identifier._group, prevGroup);
-                // console.log(prevGroup, identifier._group, common);
-                level = common.length;
-                identifier._group.forEach(function(group, i){
-                    if (group !== common[i] && group !== null){
-                        inserts.push({
-                            index: index,
-                            _title: group,
-                            level: level++
-                        });
-                    }
-                });
-            }
-            identifier.level = level;
-            prevGroup = identifier._group;
-            delete identifier._group;
-        });
-    
-        inserts.reverse().forEach(function(insert){
-            identifiers.splice(insert.index, 0, { _title: insert._title, level: insert.level });
-        });
-        return identifiers;
-    } else {
-        return identifiers.map(function(identifier){
-            identifier.level = 0;
-            delete identifier._group;
-            return identifier;
-        });
-    }
-    
+
+    var inserts = [];
+    var prevGroup = [];
+    var level = 0;
+    identifiers.forEach(function(identifier, index){
+        if (!deepEqual(identifier._group, prevGroup)){
+            var common = a.commonSequence(identifier._group, prevGroup);
+            level = common.length;
+            identifier._group.forEach(function(group, i){
+                if (group !== common[i] && group !== null){
+                    inserts.push({
+                        index: index,
+                        _title: group,
+                        level: level++
+                    });
+                }
+            });
+        }
+        identifier.level = level;
+        prevGroup = identifier._group;
+        delete identifier._group;
+    });
+
+    inserts.reverse().forEach(function(insert){
+        identifiers.splice(insert.index, 0, { _title: insert._title, level: insert.level });
+    });
+    return identifiers;
 }
 
 function add(){

@@ -100,48 +100,6 @@
     "order": 4
   },
   {
-    "id": "FurQ#kill",
-    "longname": "FurQ#kill",
-    "name": "kill",
-    "scope": "instance",
-    "kind": "function",
-    "description": "kill",
-    "memberof": "FurQ",
-    "examples": [
-      "var kill = uziLover.kill();\n    ",
-      "uziLover.kill();"
-    ],
-    "category": "standard",
-    "codeName": "this.kill",
-    "order": 2
-  },
-  {
-    "id": "FurQ#respect",
-    "longname": "FurQ#respect",
-    "name": "respect",
-    "scope": "instance",
-    "kind": "function",
-    "description": "respect",
-    "memberof": "FurQ",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "FurQ~onRespect"
-          ]
-        },
-        "description": "called on reciprocation of respect",
-        "name": "done"
-      }
-    ],
-    "examples": [
-      "uziLover.respect(function(err, gain){\n    console.log(gain);\n});"
-    ],
-    "category": "standard",
-    "codeName": "this.respect",
-    "order": 3
-  },
-  {
     "id": "FurQ#spit",
     "longname": "FurQ#spit",
     "name": "spit",
@@ -229,6 +187,48 @@
     "description": "slap man",
     "memberof": "FurQ",
     "order": 8
+  },
+  {
+    "id": "FurQ#kill",
+    "longname": "FurQ#kill",
+    "name": "kill",
+    "scope": "instance",
+    "kind": "function",
+    "description": "kill",
+    "memberof": "FurQ",
+    "examples": [
+      "var kill = uziLover.kill();\n    ",
+      "uziLover.kill();"
+    ],
+    "category": "standard",
+    "codeName": "this.kill",
+    "order": 2
+  },
+  {
+    "id": "FurQ#respect",
+    "longname": "FurQ#respect",
+    "name": "respect",
+    "scope": "instance",
+    "kind": "function",
+    "description": "respect",
+    "memberof": "FurQ",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "FurQ~onRespect"
+          ]
+        },
+        "description": "called on reciprocation of respect",
+        "name": "done"
+      }
+    ],
+    "examples": [
+      "uziLover.respect(function(err, gain){\n    console.log(gain);\n});"
+    ],
+    "category": "standard",
+    "codeName": "this.respect",
+    "order": 3
   },
   {
     "id": "FurQ.enemy",

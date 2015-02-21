@@ -101,3 +101,25 @@ test("_groupBy skips if only one group", function(t){
     // console.log(result);
     t.end();
 });
+
+test("_groupBy skips if only one group, where there are subgroups", function(t){
+    var fixture = [
+        { "name": "aaa", "scope": "global" },
+        { "name": "bbb", "scope": "global", cat: "yeah" },
+        { "name": "ccc", "scope": "global", cat: "yeah" },
+    ];
+
+    var expected = [
+        { "name": "aaa", "scope": "global", level: 0 },
+        { _title: "yeah", level: 0 },
+        { "name": "bbb", "scope": "global", cat: "yeah", level: 1 },
+        { "name": "ccc", "scope": "global", cat: "yeah", level: 1 },
+    ];
+
+    var result = helpers._groupBy(fixture, [ "scope", "cat" ]);
+    t.deepEqual(result, expected);
+
+    // console.log(expected);
+    // console.log(result);
+    t.end();
+});
