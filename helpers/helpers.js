@@ -7,7 +7,6 @@ var handlebars = require("boil")._handlebars;
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata and boil.
 @module
 */
-
 exports.escape = escape;
 exports.linkify = linkify;
 exports.tableHead = tableHead;
@@ -16,6 +15,7 @@ exports.tableRow = tableRow;
 exports.deprecated = deprecated;
 exports.groupBy = groupBy;
 exports._groupBy = _groupBy;
+exports._addGroup = _addGroup;
 exports.add = add;
 
 /**
@@ -141,51 +141,82 @@ function deprecated(options){
     }
 }
 
-function _groupBy(options){
-    // console.error("id", this.id);
-    
-    /* group by scope, do on data sorted by scope-kind */
-    var children = ddata._children.call(this, options).map(function(identifier){
-        identifier._group = (identifier.scope || "") + "¦";
-        identifier.level = identifier._group.split("¦").filter(function(i){return i;}).length;
+function groupBy(groupByFields, options){
+    return handlebars.helpers.each(_groupChildren.call(this, groupByFields, options), options);
+}
+
+function _addGroup(identifiers, groupByFields){
+    return identifiers.map(function(identifier){
+        identifier._group = groupByFields.map(function(field){
+            return typeof identifier[field] === "undefined" ? null : identifier[field];
+        });
         return identifier
     });
-    
+}
+
+function _groupChildren(groupByFields, options){
+    /* group by scope, do on data sorted by scope-kind */
+    var children = ddata._children.call(this, options);
+    return _groupBy(children, groupByFields);
+}
+
+/**
+takes the children of this, groups them, inserts group headings.. 
+*/
+function _groupBy(identifiers, groupByFields){
     /* insert title items */
-    var inserts = [];
-    var prevGroup;
-    var prevGroupSplit = [];
-    children.forEach(function(identifier, index){
-        if (identifier._group !== prevGroup){
-            var split = identifier._group.split("¦");
-            split.forEach(function(group, i){
-                // console.log("c", group, "p", prevGroupSplit[index]);
-                if (group !== (prevGroupSplit[i] || "")){
-                    inserts.push({
-                        index: index,
-                        _title: group,
-                        level: 0
-                    });
-                }
-            });
-        }
-        
-        prevGroup = identifier._group;
-        prevGroupSplit = prevGroup.split("¦");
-        // console.log(prevGroup, prevGroupSplit);
-    });
+    groupByFields = groupByFields || [ "scope", "kind" ];
+    identifiers = _addGroup(identifiers, groupByFields);
+    var groupCount = a.unique(
+        a.pluck(identifiers, "_group").map(function(group){
+            return JSON.stringify(group);
+        })
+    ).length;
     
-    inserts.reverse().forEach(function(insert){
-        children.splice(insert.index, 0, insert);
-    });
-    // console.error(children);
-    return children;
+    if (groupCount > 1){
+        var inserts = [];
+        var prevGroup = [];
+        var level;
+        identifiers.forEach(function(identifier, index){
+            if (!deepEqual(identifier._group, prevGroup)){
+                var common = a.commonSequence(identifier._group, prevGroup);
+                // console.log(prevGroup, identifier._group, common);
+                level = common.length;
+                identifier._group.forEach(function(group, i){
+                    if (group !== common[i] && group !== null){
+                        inserts.push({
+                            index: index,
+                            _title: group,
+                            level: level++
+                        });
+                    }
+                });
+            }
+            identifier.level = level;
+            prevGroup = identifier._group;
+            delete identifier._group;
+        });
+    
+        inserts.reverse().forEach(function(insert){
+            identifiers.splice(insert.index, 0, { _title: insert._title, level: insert.level });
+        });
+        return identifiers;
+    } else {
+        return identifiers.map(function(identifier){
+            identifier.level = 0;
+            delete identifier._group;
+            return identifier;
+        });
+    }
+    
 }
 
-function groupBy(options){
-    return handlebars.helpers.each(_groupBy.call(this, options), options);
+function add(){
+    var args = a.arrayify(arguments);
+    args.pop(); 
+    return args.reduce(function(p, c){ return p + (c || 0); }, 0);
 }
 
-function add(x, y, options){
-    return (x || 0) + (y || 0);
+function deepEqual(a, b){
+    return JSON.stringify(a) === JSON.stringify(b);
 }
