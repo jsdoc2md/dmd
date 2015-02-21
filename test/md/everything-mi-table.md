@@ -173,12 +173,11 @@ exports animals
     * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
   * _inner_
     * [class: ~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-    * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
       * _instance_
-        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+        * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+      * _inner_
+        * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
+          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
 ### cjs/animals.cat → <code>Animal</code>
@@ -192,12 +191,11 @@ the exported dog
 ### class: cjs/animals~Animal
 
   * [class: ~Animal](#module_cjs/animals..Animal)
-  * _instance_
-    * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
-  * _inner_
-    * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
     * _instance_
-      * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+    * _inner_
+      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
+        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
 #### animal.type → <code>Quadroped</code>
@@ -251,8 +249,7 @@ exports a pointer to a function
 
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
-    * _static_
-      * [.extra()](#module_cjs/falias-obj--sum.extra)
+    * [.extra()](#module_cjs/falias-obj--sum.extra)
 
 <a name="exp_module_cjs/falias-obj--sum"></a>
 ### sum() ⏏
@@ -269,8 +266,7 @@ exports a pointer to a function
 
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
-    * _static_
-      * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
+    * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
 
 <a name="exp_module_cjs/function-alias--sum"></a>
 ### sum(one, two) ⇒ <code>number</code> ⏏
@@ -299,10 +295,10 @@ exports a class
       * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [class: ~Organ](#module_cjs/human--Human..Organ)
-      * _instance_
-        * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-      * _inner_
-        * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+        * _instance_
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+        * _inner_
+          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="exp_module_cjs/human--Human"></a>
 ### class: Human ⏏
@@ -322,10 +318,10 @@ a class inside a class
 
 
   * [class: ~Organ](#module_cjs/human--Human..Organ)
-  * _instance_
-    * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-  * _inner_
-    * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+    * _instance_
+      * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+    * _inner_
+      * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 ##### organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
@@ -345,7 +341,7 @@ A module. Refer to it using [this link](#module_linkMod).
     * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * _inner_
     * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
-    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
+      * [new linksYeah()](#new_module_linkMod..linksYeah_new)
     * [external: ~Math](#external_Math)
     * [external: ~Date](#external_Date)
 
@@ -384,9 +380,8 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * _static_
-    * [.one](#module_cjs/object.one) → <code>number</code>
-    * [.two()](#module_cjs/object.two)
+  * [.one](#module_cjs/object.one) → <code>number</code>
+  * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
 ### obj.one → <code>number</code>
@@ -455,11 +450,10 @@ the child of global class
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
-  * _instance_
-    * [.propThree](#GlobalChildClass#propThree)
-    * [.propOne](#GlobalChildClass#propOne)
-    * [.methodTwo()](#GlobalChildClass#methodTwo)
-    * [.methodOne()](#GlobalChildClass#methodOne)
+  * [.propThree](#GlobalChildClass#propThree)
+  * [.propOne](#GlobalChildClass#propOne)
+  * [.methodTwo()](#GlobalChildClass#methodTwo)
+  * [.methodOne()](#GlobalChildClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
 ### globalChildClass.propThree
@@ -505,9 +499,8 @@ a class which mixes in Eventful behaviour
 **Mixes**: <code>[Eventful](#Eventful)</code>  
 
 * [class: EventfulClass](#EventfulClass)
-  * _instance_
-    * [.on(eventName, handler)](#EventfulClass#on)
-    * [.fire(eventName, eventData)](#EventfulClass#fire)
+  * [.on(eventName, handler)](#EventfulClass#on)
+  * [.fire(eventName, eventData)](#EventfulClass#fire)
 
 <a name="EventfulClass#on"></a>
 ### eventfulClass.on(eventName, handler)
@@ -538,9 +531,8 @@ be used directly.
 
 
 * [mixin: Eventful](#Eventful)
-  * _static_
-    * [.on(eventName, handler)](#Eventful.on)
-    * [.fire(eventName, eventData)](#Eventful.fire)
+  * [.on(eventName, handler)](#Eventful.on)
+  * [.fire(eventName, eventData)](#Eventful.fire)
 
 <a name="Eventful.on"></a>
 ### Eventful.on(eventName, handler)

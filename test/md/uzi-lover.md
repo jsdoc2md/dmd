@@ -24,8 +24,9 @@ C\*ck, b!tch, c\*ck, b!tch, m\*therf!cker. You gotta kill people, to respect peo
   * _instance_
     * [.wannaTryIt](#FurQ#wannaTryIt) → <code>string</code>
     * [const: .LOVE](#FurQ#LOVE) → <code>string</code>
-    * [.kill()](#FurQ#kill)
-    * [.respect(done)](#FurQ#respect)
+    * _standard_
+      * [.kill()](#FurQ#kill)
+      * [.respect(done)](#FurQ#respect)
     * [.spit()](#FurQ#spit)
     * [.battle()](#FurQ#battle)
     * [.punch()](#FurQ#punch)
@@ -146,9 +147,8 @@ Passed to [respect](#FurQ#respect)
     * [.battle()](#Rapper#battle)
   * _static_
     * [.train()](#Rapper.train)
-    * _inner_
       * [class: ~School](#Rapper.train..School)
-      * [new School()](#new_Rapper.train..School_new)
+        * [new School()](#new_Rapper.train..School_new)
 
 <a name="Rapper#spit"></a>
 ### rapper.spit()
@@ -164,9 +164,8 @@ train new rappers
 
 
   * [.train()](#Rapper.train)
-  * _inner_
     * [class: ~School](#Rapper.train..School)
-    * [new School()](#new_Rapper.train..School_new)
+      * [new School()](#new_Rapper.train..School_new)
 
 <a name="Rapper.train..School"></a>
 #### class: train~School

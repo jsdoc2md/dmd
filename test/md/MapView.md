@@ -17,7 +17,6 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
   * [class: MapView](#exp_module_MapView--MapView) ⏏
     * _static_
       * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
-    * __
     * [`new MapView(options)`](#new_module_MapView--MapView_new)
     * _static_
       * [`.DEFAULT_OPTIONS`](#module_MapView--MapView.DEFAULT_OPTIONS)
