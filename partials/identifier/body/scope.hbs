@@ -1,2 +1,5 @@
 {{#if scope}}**Scope**: {{scope}} {{kind}}{{#if memberof}} of {{>linked-type input=memberof}}{{/if}}  
+{{else~}}
+{{#if isExported}}**Scope**: Exported {{kind}}  
+{{/if~}}
 {{/if~}}

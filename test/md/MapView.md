@@ -36,6 +36,7 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 
 <a name="exp_module_MapView--MapView"></a>
 ### MapView ⏏
+**Scope**: Exported class  
 <a name="module_MapView--MapView#getFinalPosition"></a>
 #### `mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the destination center position of the map, in geographical coordinates.

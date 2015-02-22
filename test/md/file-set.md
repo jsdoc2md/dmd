@@ -23,6 +23,7 @@ var fileSet = require("file-set");
 ### FileSet ⏏
 Expands file patterns, returning the matched and unmatched files and directories
 
+**Scope**: Exported class  
 <a name="new_module_file-set--FileSet_new"></a>
 #### new FileSet(patternList)
 

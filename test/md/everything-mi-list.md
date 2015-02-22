@@ -199,6 +199,7 @@ exports a class
 ### ExportedClass ⏏
 the exported class
 
+**Scope**: Exported class  
 <a name="new_module_cjs/class--ExportedClass_new"></a>
 #### new ExportedClass()
 the exported contructor
@@ -231,6 +232,7 @@ exports a pointer to a function
 ### sum() ⏏
 the function
 
+**Scope**: Exported function  
 <a name="module_cjs/falias-obj--sum.extra"></a>
 #### sum.extra()
 a static method on the exported function
@@ -249,6 +251,7 @@ exports a pointer to a function
 ### sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
+**Scope**: Exported function  
 **Returns**: <code>number</code> - the calculation result  
 
 | Param | Type | Description |
@@ -282,6 +285,7 @@ exports a class
 ### Human ⏏
 the exported class
 
+**Scope**: Exported class  
 <a name="new_module_cjs/human--Human_new"></a>
 #### new Human()
 the exported contructor
@@ -360,6 +364,7 @@ a module exporting an object
 ### teams ⏏
 the teams
 
+**Scope**: Exported member  
 <a name="module_cjs/object"></a>
 ## cjs/object
 a module exporting `exports` directly
