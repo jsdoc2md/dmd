@@ -1,8 +1,8 @@
-{{#globals sortBy=(option "sort-by") ~}}
-{{#if @first~}}{{>heading-indent}}Globals
+{{#globals sortBy=(option "sort-by") kind=kind ~}}
+{{#if @first~}}{{>heading-indent}}{{../../title}}
 <dl>
 {{/if~}}
-<dt>{{#deprecated no-gfm=true}}<a href="#{{{anchorName}}}">{{>index-name2}}</a>{{>return-sig-dl}}{{>name-suffix~}}{{/deprecated}}</dt>
+<dt>{{>sig-html}}</dt>
 <dd>{{{md (linkify description)}}}</dd>
 {{#if @last~}}</dl>
 {{/if~}}

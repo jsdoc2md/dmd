@@ -1,5 +1,5 @@
-{{#globals sortBy=(option "sort-by") ~}}
-{{#if @first~}}{{>heading-indent}}Global
+{{#globals sortBy=(option "sort-by") kind=kind~}}
+{{#if @first~}}{{>heading-indent}}{{../title}}
 {{/if~}}
 {{>member-index-grouped~}}
 {{/globals}}

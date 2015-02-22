@@ -1,6 +1,6 @@
-{{#globals sortBy=(option "sort-by") ~}}
+{{#globals sortBy=(option "sort-by") kind=kind~}}
 {{#if @first~}}
-{{>heading-indent}}Globals
+{{>heading-indent}}{{../title}}
 <table>
   <thead>
     <tr>
