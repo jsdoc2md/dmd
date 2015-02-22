@@ -93,7 +93,7 @@ Get the current center position of the map, in geographical coordinates.
 #### `MapView.MapType` → <code>Number</code>
 Map-type
 
-**Scope**: static property of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: static enum property of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Properties**
 
 | Name | Type | Default |

@@ -96,7 +96,7 @@ a copy of the options passed to [spawn](#module_handbrake-js.spawn)
 #### handbrake.eError
 All operational errors are emitted via the [error](#module_handbrake-js..Handbrake#event_error) event.
 
-**Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: instance enum property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 **Properties**
 
 | Name | Default | Description |

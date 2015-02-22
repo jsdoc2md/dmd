@@ -221,8 +221,12 @@ function deepEqual(a, b){
 function kindInThisContext(options){
     if (this.kind === "function" && this.memberof){
         return "method";
-    } else if (this.kind === "member" && this.memberof){
+    } else if (this.kind === "member" && !this.isEnum && this.memberof){
         return "property";
+    } else if (this.kind === "member" && this.isEnum && this.memberof){
+        return "enum property";
+    } else if (this.kind === "member" && this.isEnum && !this.memberof){
+        return "enum";
     } else {
         return this.kind;
     }

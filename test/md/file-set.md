@@ -65,7 +65,7 @@ add file patterns to the set
 #### FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
 
-**Scope**: static property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: static enum property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 **Read only**: true  
 **Properties**
 
