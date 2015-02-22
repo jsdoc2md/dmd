@@ -14,7 +14,7 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
 
 
 * [MapView](#module_MapView)
-  * [class: MapView](#exp_module_MapView--MapView) ⏏
+  * [MapView](#exp_module_MapView--MapView) ⏏
     * _instance_
       * [`.getFinalPosition()`](#module_MapView--MapView#getFinalPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
     * [`new MapView(options)`](#new_module_MapView--MapView_new)
@@ -25,7 +25,7 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
       * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
     * _static_
-      * [`enum: .MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
+      * [`.MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
     * _instance_
       * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
       * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
@@ -35,12 +35,12 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
       * [`.isActive()`](#module_MapView--MapView#isActive) ⇒ <code>Bool</code>
 
 <a name="exp_module_MapView--MapView"></a>
-### class: MapView ⏏
+### MapView ⏏
 <a name="module_MapView--MapView#getFinalPosition"></a>
 #### `mapView.getFinalPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the destination center position of the map, in geographical coordinates.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="new_module_MapView--MapView_new"></a>
 #### `new MapView(options)`
@@ -68,13 +68,13 @@ Get the destination center position of the map, in geographical coordinates.
 Get the internal map-object. This object may not yet have been initialized, the map is only
 guarenteed to be valid after the 'load' event has been emited.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>Map</code> - Map object.  
 <a name="module_MapView--MapView#setPosition"></a>
 #### `mapView.setPosition(position, [transition], [callback])`
 Set the center of the map to the given geographical coordinates.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -86,10 +86,10 @@ Set the center of the map to the given geographical coordinates.
 #### `mapView.getPosition()` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the current center position of the map, in geographical coordinates.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView.MapType"></a>
-#### `enum: MapView.MapType` → <code>Number</code>
+#### `MapView.MapType` → <code>Number</code>
 Map-type
 
 **Scope**: static member of <code>[MapView](#exp_module_MapView--MapView)</code>  
@@ -106,13 +106,13 @@ Get the current zoom-level of the map, taking into account smooth transition bet
 E.g., when zooming from zoom-level 4 to 5, this function returns an increasing value starting at 4 and ending
 at 5, over time. The used zoomTransition can be set as an option.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>Number</code> - Zoom-level.  
 <a name="module_MapView--MapView#pointFromPosition"></a>
 #### `mapView.pointFromPosition(position)` ⇒ <code>Point</code>
 Get the position in pixels (relative to the left-top of the container) for the given geographical position.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>Point</code> - Position in pixels, relative to the left-top of the mapView.  
 
 | Param | Type | Description |
@@ -123,7 +123,7 @@ Get the position in pixels (relative to the left-top of the container) for the g
 #### `mapView.positionFromPoint(point)` ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
 Get the geographical coordinates for a given position in pixels (relative to the left-top of the container).
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 
 | Param | Type | Description |
@@ -134,16 +134,16 @@ Get the geographical coordinates for a given position in pixels (relative to the
 #### `mapView.getSize()` ⇒ <code>Array.Number</code>
 Get the size of the map-view in pixels.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>Array.Number</code> - Size of the mapView.  
 <a name="module_MapView--MapView#halt"></a>
 #### `mapView.halt()`
 Halts any pending transitions.
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 <a name="module_MapView--MapView#isActive"></a>
 #### `mapView.isActive()` ⇒ <code>Bool</code>
 Is there at least one action pending completion?
 
-**Scope**: instance member of <code>[MapView](#exp_module_MapView--MapView)</code>  
+**Scope**: instance function of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>Bool</code> - True when there are active transitions running.  

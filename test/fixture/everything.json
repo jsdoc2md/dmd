@@ -471,15 +471,11 @@
     "name": "returnsArrayOfType",
     "scope": "global",
     "kind": "member",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array.<module:cjs/human--Human>"
-          ]
-        }
-      }
-    ],
+    "type": {
+      "names": [
+        "Array.<module:cjs/human--Human>"
+      ]
+    },
     "codeName": "returnsArrayOfType",
     "order": 95
   },
@@ -489,16 +485,12 @@
     "name": "returnsArrayOfType2",
     "scope": "global",
     "kind": "member",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array.<module:cjs/human--Human>"
-          ]
-        },
-        "nullable": true
-      }
-    ],
+    "type": {
+      "names": [
+        "Array.<module:cjs/human--Human>"
+      ]
+    },
+    "nullable": true,
     "codeName": "returnsArrayOfType2",
     "order": 96
   },
@@ -508,16 +500,12 @@
     "name": "nullableNumber",
     "scope": "global",
     "kind": "member",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "nullable": true
-      }
-    ],
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "nullable": true,
     "codeName": "nullableNumber",
     "order": 97
   },
@@ -527,16 +515,12 @@
     "name": "nonNullableNumber",
     "scope": "global",
     "kind": "member",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "number"
-          ]
-        },
-        "nullable": false
-      }
-    ],
+    "type": {
+      "names": [
+        "number"
+      ]
+    },
+    "nullable": false,
     "codeName": "nonNullableNumber",
     "order": 98
   },

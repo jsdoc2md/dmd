@@ -27,35 +27,35 @@
 </dl>
 ## Classes
 <dl>
-<dt><a href="#Chainable">class: Chainable</a></dt>
+<dt><a href="#Chainable">Chainable</a></dt>
 <dd><p>has a chainable method</p>
 </dd>
-<dt><a href="#GlobalClass">class: GlobalClass</a></dt>
+<dt><a href="#GlobalClass">GlobalClass</a></dt>
 <dd><p>a global class</p>
 </dd>
-<dt><a href="#GlobalChildClass">class: GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dt><a href="#GlobalChildClass">GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
 <dd><p>the child of global class</p>
 </dd>
-<dt><a href="#customClass">class: customClass</a></dt>
+<dt><a href="#customClass">customClass</a></dt>
 <dd><p>a class that has custom tags</p>
 </dd>
-<dt><a href="#EncryptedRequest">class: EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
+<dt><a href="#EncryptedRequest">EncryptedRequest</a> ⇐ <code><a href="#external_XMLHttpRequest">XMLHttpRequest</a></code></dt>
 <dd></dd>
-<dt><a href="#LendsClass">class: LendsClass</a></dt>
+<dt><a href="#LendsClass">LendsClass</a></dt>
 <dd></dd>
-<dt><a href="#LendsClass2">class: LendsClass2</a></dt>
+<dt><a href="#LendsClass2">LendsClass2</a></dt>
 <dd></dd>
-<dt><a href="#EventfulClass">class: EventfulClass</a></dt>
+<dt><a href="#EventfulClass">EventfulClass</a></dt>
 <dd><p>a class which mixes in Eventful behaviour</p>
 </dd>
 </dl>
 ## Mixins
 <dl>
-<dt><a href="#Eventful">mixin: Eventful</a></dt>
+<dt><a href="#Eventful">Eventful</a></dt>
 <dd><p>This provides methods used for event handling. It&#39;s not meant to
 be used directly.</p>
 </dd>
-<dt><a href="#phantom">mixin: phantom</a></dt>
+<dt><a href="#phantom">phantom</a></dt>
 <dd><p>phantom mixin</p>
 </dd>
 </dl>
@@ -81,13 +81,13 @@ be used directly.</p>
 <dt><a href="#seeableVar">seeableVar</a></dt>
 <dd><p>a global var with a @see</p>
 </dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> → <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> ⇒ <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> → <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
-<dt><a href="#nullableNumber">nullableNumber</a> ⇒ <code>number</code></dt>
+<dt><a href="#nullableNumber">nullableNumber</a> → <code>number</code></dt>
 <dd></dd>
-<dt><a href="#nonNullableNumber">nonNullableNumber</a> ⇒ <code>number</code></dt>
+<dt><a href="#nonNullableNumber">nonNullableNumber</a> → <code>number</code></dt>
 <dd></dd>
 <dt><a href="#objectType">objectType</a> → <code>Object</code></dt>
 <dd></dd>
@@ -149,10 +149,10 @@ be used directly.</p>
 </dl>
 ## External
 <dl>
-<dt><a href="#external_jQuery.fn">external: jQuery.fn</a></dt>
+<dt><a href="#external_jQuery.fn">jQuery.fn</a></dt>
 <dd><p>The jQuery plugin namespace.</p>
 </dd>
-<dt><a href="#external_XMLHttpRequest">external: XMLHttpRequest</a></dt>
+<dt><a href="#external_XMLHttpRequest">XMLHttpRequest</a></dt>
 <dd><p>Namespace provided by the browser.</p>
 </dd>
 </dl>
@@ -166,11 +166,11 @@ exports animals
     * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
     * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
   * _inner_
-    * [class: ~Animal](#module_cjs/animals..Animal)
+    * [~Animal](#module_cjs/animals..Animal)
       * _instance_
         * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
       * _inner_
-        * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
+        * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
@@ -184,14 +184,14 @@ the exported dog
 
 **Scope**: static member of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals..Animal"></a>
-### class: cjs/animals~Animal
+### cjs/animals~Animal
 **Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
 
-  * [class: ~Animal](#module_cjs/animals..Animal)
+  * [~Animal](#module_cjs/animals..Animal)
     * _instance_
       * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
     * _inner_
-      * [class: ~Quadroped](#module_cjs/animals..Animal..Quadroped)
+      * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
         * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
@@ -200,7 +200,7 @@ animal type
 
 **Scope**: instance member of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped"></a>
-#### class: Animal~Quadroped
+#### Animal~Quadroped
 **Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
 ##### quadroped.legs
@@ -213,7 +213,7 @@ exports a class
 
 
 * [cjs/class](#module_cjs/class)
-  * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
+  * [ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
     * _instance_
       * [.prop](#module_cjs/class--ExportedClass#prop)
@@ -223,7 +223,7 @@ exports a class
       * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class--ExportedClass"></a>
-### class: ExportedClass ⏏
+### ExportedClass ⏏
 the exported class
 
 <a name="new_module_cjs/class--ExportedClass_new"></a>
@@ -294,19 +294,19 @@ exports a class
 
 
 * [cjs/human](#module_cjs/human)
-  * [class: Human](#exp_module_cjs/human--Human) ⏏
+  * [Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
       * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
-      * [class: ~Organ](#module_cjs/human--Human..Organ)
+      * [~Organ](#module_cjs/human--Human..Organ)
         * _instance_
           * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
-          * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+          * [~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="exp_module_cjs/human--Human"></a>
-### class: Human ⏏
+### Human ⏏
 the exported class
 
 <a name="new_module_cjs/human--Human_new"></a>
@@ -319,16 +319,16 @@ an instance of Organ
 
 **Scope**: instance member of <code>[Human](#exp_module_cjs/human--Human)</code>  
 <a name="module_cjs/human--Human..Organ"></a>
-#### class: Human~Organ
+#### Human~Organ
 a class inside a class
 
 **Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 
-  * [class: ~Organ](#module_cjs/human--Human..Organ)
+  * [~Organ](#module_cjs/human--Human..Organ)
     * _instance_
       * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
     * _inner_
-      * [class: ~Cell](#module_cjs/human--Human..Organ..Cell)
+      * [~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 ##### organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
@@ -336,7 +336,7 @@ an instance of Cell
 
 **Scope**: instance member of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/human--Human..Organ..Cell"></a>
-##### class: Organ~Cell
+##### Organ~Cell
 a class inside a class inside a class
 
 **Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
@@ -349,18 +349,18 @@ A module. Refer to it using [this link](#module_linkMod).
   * _static_
     * ["event:MyEvent"](#module_linkMod.event_MyEvent)
   * _inner_
-    * [class: ~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
+    * [~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
       * [new linksYeah()](#new_module_linkMod..linksYeah_new)
-    * [external: ~Math](#external_Math)
-    * [external: ~Date](#external_Date)
+    * [~Math](#external_Math)
+    * [~Date](#external_Date)
 
 <a name="module_linkMod.event_MyEvent"></a>
-### event: "event:MyEvent"
+### "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
 **Scope**: static event of <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod..linksYeah"></a>
-### class: linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
+### linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
 **Extends:** <code>[Math](#external_Math)</code>  
 **Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
@@ -369,13 +369,13 @@ An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 this is from [linkMod](#module_linkMod).. it also references [Math](#external_Math)
 
 <a name="external_Math"></a>
-### external: linkMod~Math
+### linkMod~Math
 The built in Math object. Refer to it with [Math](#external_Math).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
 **See**: http://www.math.com  
 <a name="external_Date"></a>
-### external: linkMod~Date
+### linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
 
 **Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
@@ -410,7 +410,7 @@ the second property, a function
 this is the example
 
 <a name="Chainable"></a>
-## class: Chainable
+## Chainable
 has a chainable method
 
 **Scope**: global class  
@@ -421,12 +421,12 @@ returns itself
 **Chainable**  
 **Scope**: instance function of <code>[Chainable](#Chainable)</code>  
 <a name="GlobalClass"></a>
-## class: GlobalClass
+## GlobalClass
 a global class
 
 **Scope**: global class  
 
-* [class: GlobalClass](#GlobalClass)
+* [GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
     * [.propOne](#GlobalClass#propOne)
@@ -466,13 +466,13 @@ a static property
 
 **Scope**: static member of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalChildClass"></a>
-## class: GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
+## GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 **Scope**: global class  
 
-* [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
+* [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * [.propThree](#GlobalChildClass#propThree)
   * [.propOne](#GlobalChildClass#propOne)
   * [.methodTwo()](#GlobalChildClass#methodTwo)
@@ -489,7 +489,7 @@ overridden child methodTwo
 
 **Scope**: instance function of <code>[GlobalChildClass](#GlobalChildClass)</code>  
 <a name="customClass"></a>
-## class: customClass
+## customClass
 a class that has custom tags
 
 **Scope**: global class  
@@ -500,7 +500,7 @@ a class that has custom tags
 the constructor
 
 <a name="EncryptedRequest"></a>
-## class: EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
+## EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
 **Scope**: global class  
 <a name="new_EncryptedRequest_new"></a>
@@ -508,7 +508,7 @@ the constructor
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
 <a name="LendsClass"></a>
-## class: LendsClass
+## LendsClass
 **Scope**: global class  
 <a name="LendsClass.say"></a>
 ### LendsClass.say()
@@ -516,7 +516,7 @@ say something
 
 **Scope**: static function of <code>[LendsClass](#LendsClass)</code>  
 <a name="LendsClass2"></a>
-## class: LendsClass2
+## LendsClass2
 **Scope**: global class  
 <a name="LendsClass2#say"></a>
 ### lendsClass2.say()
@@ -524,13 +524,13 @@ say something
 
 **Scope**: instance function of <code>[LendsClass2](#LendsClass2)</code>  
 <a name="EventfulClass"></a>
-## class: EventfulClass
+## EventfulClass
 a class which mixes in Eventful behaviour
 
 **Mixes**: <code>[Eventful](#Eventful)</code>  
 **Scope**: global class  
 
-* [class: EventfulClass](#EventfulClass)
+* [EventfulClass](#EventfulClass)
   * [.on(eventName, handler)](#EventfulClass#on)
   * [.fire(eventName, eventData)](#EventfulClass#fire)
 
@@ -559,13 +559,13 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 <a name="Eventful"></a>
-## mixin: Eventful
+## Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
 
 **Scope**: global mixin  
 
-* [mixin: Eventful](#Eventful)
+* [Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
 
@@ -592,7 +592,7 @@ Fire an event, causing all handlers for that event name to run.
 | eventData | <code>Object</code> | The data provided to each handler. |
 
 <a name="phantom"></a>
-## mixin: phantom
+## phantom
 phantom mixin
 
 **Scope**: global mixin  
@@ -640,16 +640,16 @@ a global var with a @see
 **Scope**: global member  
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
-## returnsArrayOfType ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType → <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 **Scope**: global member  
 <a name="returnsArrayOfType2"></a>
-## returnsArrayOfType2 ⇒ <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType2 → <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 **Scope**: global member  
 <a name="nullableNumber"></a>
-## nullableNumber ⇒ <code>number</code>
+## nullableNumber → <code>number</code>
 **Scope**: global member  
 <a name="nonNullableNumber"></a>
-## nonNullableNumber ⇒ <code>number</code>
+## nonNullableNumber → <code>number</code>
 **Scope**: global member  
 <a name="objectType"></a>
 ## objectType → <code>Object</code>
@@ -796,12 +796,12 @@ Both of these will link to the bar function.
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
 
 <a name="event_docletEvent"></a>
-## event: "docletEvent"
+## "docletEvent"
 an event defined in a doclet
 
 **Scope**: global event  
 <a name="external_jQuery.fn"></a>
-## external: jQuery.fn
+## jQuery.fn
 The jQuery plugin namespace.
 
 **Scope**: global external  
@@ -812,7 +812,7 @@ A jQuery plugin to make stars fly around your home page.
 
 **Scope**: static function of <code>[jQuery.fn](#external_jQuery.fn)</code>  
 <a name="external_XMLHttpRequest"></a>
-## external: XMLHttpRequest
+## XMLHttpRequest
 Namespace provided by the browser.
 
 **Scope**: global external  
