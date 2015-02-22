@@ -25,7 +25,7 @@ Use [MapModifier](MapModifier) and [MapStateModifier](MapStateModifier) to place
       * [`.setPosition(position, [transition], [callback])`](#module_MapView--MapView#setPosition)
       * [`.getPosition()`](#module_MapView--MapView#getPosition) ⇒ <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code>
     * _static_
-      * [`.MapType`](#module_MapView--MapView.MapType) → <code>Number</code>
+      * [`.MapType`](#module_MapView--MapView.MapType) : <code>Number</code>
     * _instance_
       * [`.getZoom()`](#module_MapView--MapView#getZoom) ⇒ <code>Number</code>
       * [`.pointFromPosition(position)`](#module_MapView--MapView#pointFromPosition) ⇒ <code>Point</code>
@@ -90,7 +90,7 @@ Get the current center position of the map, in geographical coordinates.
 **Scope**: instance method of <code>[MapView](#exp_module_MapView--MapView)</code>  
 **Returns**: <code>[LatLng](https://developers.google.com/maps/documentation/javascript/reference#LatLng)</code> - Position in geographical coordinates.  
 <a name="module_MapView--MapView.MapType"></a>
-#### `MapView.MapType` → <code>Number</code>
+#### `MapView.MapType` : <code>Number</code>
 Map-type
 
 **Scope**: static enum property of <code>[MapView](#exp_module_MapView--MapView)</code>  

@@ -13,8 +13,8 @@ var hbjs = require("handbrake-js");
     * [.exec(options, [onComplete])](#module_handbrake-js.exec)
   * _inner_
     * [~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
-      * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
-      * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
+      * [.output](#module_handbrake-js..Handbrake#output) : <code>string</code>
+      * [.options](#module_handbrake-js..Handbrake#options) : <code>object</code>
       * [.eError](#module_handbrake-js..Handbrake#eError)
       * ["start"](#module_handbrake-js..Handbrake#event_start)
       * ["begin"](#module_handbrake-js..Handbrake#event_begin)
@@ -71,8 +71,8 @@ A handle on the HandbrakeCLI process. Emits events you can monitor to track prog
 **Emits**: <code>[start](#module_handbrake-js..Handbrake#event_start)</code>, <code>[begin](#module_handbrake-js..Handbrake#event_begin)</code>, <code>[progress](#module_handbrake-js..Handbrake#event_progress)</code>, <code>[output](#module_handbrake-js..Handbrake#event_output)</code>, <code>[error](#module_handbrake-js..Handbrake#event_error)</code>, <code>[end](#module_handbrake-js..Handbrake#event_end)</code>, <code>[complete](#module_handbrake-js..Handbrake#event_complete)</code>  
 
   * [~Handbrake](#module_handbrake-js..Handbrake) ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>
-    * [.output](#module_handbrake-js..Handbrake#output) → <code>string</code>
-    * [.options](#module_handbrake-js..Handbrake#options) → <code>object</code>
+    * [.output](#module_handbrake-js..Handbrake#output) : <code>string</code>
+    * [.options](#module_handbrake-js..Handbrake#options) : <code>object</code>
     * [.eError](#module_handbrake-js..Handbrake#eError)
     * ["start"](#module_handbrake-js..Handbrake#event_start)
     * ["begin"](#module_handbrake-js..Handbrake#event_begin)
@@ -83,12 +83,12 @@ A handle on the HandbrakeCLI process. Emits events you can monitor to track prog
     * ["complete"](#module_handbrake-js..Handbrake#event_complete)
 
 <a name="module_handbrake-js..Handbrake#output"></a>
-#### handbrake.output → <code>string</code>
+#### handbrake.output : <code>string</code>
 A `string` containing all handbrakeCLI output
 
 **Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#options"></a>
-#### handbrake.options → <code>object</code>
+#### handbrake.options : <code>object</code>
 a copy of the options passed to [spawn](#module_handbrake-js.spawn)
 
 **Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  

@@ -64,16 +64,16 @@ be used directly.</p>
 <dt><a href="#customTagged">customTagged</a></dt>
 <dd><p>a global var with custom tags</p>
 </dd>
-<dt><a href="#defaultedOne">defaultedOne</a> → <code>object</code></dt>
+<dt><a href="#defaultedOne">defaultedOne</a> : <code>object</code></dt>
 <dd></dd>
-<dt><a href="#defaultedTwo">defaultedTwo</a> → <code>function</code></dt>
+<dt><a href="#defaultedTwo">defaultedTwo</a> : <code>function</code></dt>
 <dd></dd>
-<dt><a href="#exampleVar">exampleVar</a> → <code>string</code></dt>
+<dt><a href="#exampleVar">exampleVar</a> : <code>string</code></dt>
 <dd><p>an example var</p>
 </dd>
-<dt><a href="#cliveExternal">cliveExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code></dt>
+<dt><a href="#cliveExternal">cliveExternal</a> : <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">Clive</a></code></dt>
 <dd></dd>
-<dt><a href="#stringExternal">stringExternal</a> → <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
+<dt><a href="#stringExternal">stringExternal</a> : <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
 <dd></dd>
 <dt><a href="#fileVar">fileVar</a></dt>
 <dd><p>a variable in the file</p>
@@ -81,25 +81,25 @@ be used directly.</p>
 <dt><a href="#seeableVar">seeableVar</a></dt>
 <dd><p>a global var with a @see</p>
 </dd>
-<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> → <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType">returnsArrayOfType</a> : <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
-<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> → <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
+<dt><a href="#returnsArrayOfType2">returnsArrayOfType2</a> : <code><a href="#exp_module_cjs/human--Human">Array.&lt;Human&gt;</a></code></dt>
 <dd></dd>
-<dt><a href="#nullableNumber">nullableNumber</a> → <code>number</code></dt>
+<dt><a href="#nullableNumber">nullableNumber</a> : <code>number</code></dt>
 <dd></dd>
-<dt><a href="#nonNullableNumber">nonNullableNumber</a> → <code>number</code></dt>
+<dt><a href="#nonNullableNumber">nonNullableNumber</a> : <code>number</code></dt>
 <dd></dd>
-<dt><a href="#objectType">objectType</a> → <code>Object</code></dt>
+<dt><a href="#objectType">objectType</a> : <code>Object</code></dt>
 <dd></dd>
-<dt><a href="#globalVar">globalVar</a> → <code>string</code></dt>
+<dt><a href="#globalVar">globalVar</a> : <code>string</code></dt>
 <dd><p>a global var</p>
 </dd>
 </dl>
 ## Objects
 <dl>
-<dt><a href="#Documents">Documents</a> → <code>object</code></dt>
+<dt><a href="#Documents">Documents</a> : <code>object</code></dt>
 <dd></dd>
-<dt><a href="#config">config</a> → <code>object</code></dt>
+<dt><a href="#config">config</a> : <code>object</code></dt>
 <dd></dd>
 </dl>
 ## Functions
@@ -163,23 +163,23 @@ exports animals
 
 * [cjs/animals](#module_cjs/animals)
   * _static_
-    * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
-    * [.dog](#module_cjs/animals.dog) → <code>Animal</code>
+    * [.cat](#module_cjs/animals.cat) : <code>Animal</code>
+    * [.dog](#module_cjs/animals.dog) : <code>Animal</code>
   * _inner_
     * [~Animal](#module_cjs/animals..Animal)
       * _instance_
-        * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+        * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
       * _inner_
         * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
           * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
-### cjs/animals.cat → <code>Animal</code>
+### cjs/animals.cat : <code>Animal</code>
 the exported cat
 
 **Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals.dog"></a>
-### cjs/animals.dog → <code>Animal</code>
+### cjs/animals.dog : <code>Animal</code>
 the exported dog
 
 **Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
@@ -189,13 +189,13 @@ the exported dog
 
   * [~Animal](#module_cjs/animals..Animal)
     * _instance_
-      * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
+      * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
     * _inner_
       * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
         * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
-#### animal.type → <code>Quadroped</code>
+#### animal.type : <code>Quadroped</code>
 animal type
 
 **Scope**: instance property of <code>[Animal](#module_cjs/animals..Animal)</code>  
@@ -300,11 +300,11 @@ exports a class
   * [Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
     * _instance_
-      * [.liver](#module_cjs/human--Human#liver) → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+      * [.liver](#module_cjs/human--Human#liver) : <code>[Organ](#module_cjs/human--Human..Organ)</code>
     * _inner_
       * [~Organ](#module_cjs/human--Human..Organ)
         * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+          * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
         * _inner_
           * [~Cell](#module_cjs/human--Human..Organ..Cell)
 
@@ -318,7 +318,7 @@ the exported class
 the exported contructor
 
 <a name="module_cjs/human--Human#liver"></a>
-#### human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
+#### human.liver : <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
 **Scope**: instance property of <code>[Human](#exp_module_cjs/human--Human)</code>  
@@ -330,12 +330,12 @@ a class inside a class
 
   * [~Organ](#module_cjs/human--Human..Organ)
     * _instance_
-      * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+      * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
     * _inner_
       * [~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
-##### organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+##### organ.redCell : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
 **Scope**: instance property of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
@@ -398,11 +398,11 @@ a module exporting `exports` directly
 
 
 * [cjs/object](#module_cjs/object)
-  * [.one](#module_cjs/object.one) → <code>number</code>
+  * [.one](#module_cjs/object.one) : <code>number</code>
   * [.two()](#module_cjs/object.two)
 
 <a name="module_cjs/object.one"></a>
-### obj.one → <code>number</code>
+### obj.one : <code>number</code>
 the first property
 
 **Scope**: static property of <code>[cjs/object](#module_cjs/object)</code>  
@@ -479,9 +479,9 @@ the child of global class
 
 * [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * [.propThree](#GlobalChildClass#propThree)
-  * [.propOne](#GlobalChildClass#propOne)
+  * [.propOne](#GlobalClass#propOne)
   * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * [.methodOne()](#GlobalChildClass#methodOne)
+  * [.methodOne()](#GlobalClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
 ### globalChildClass.propThree
@@ -493,6 +493,7 @@ an instance property
 overridden child methodTwo
 
 **Scope**: instance method of <code>[GlobalChildClass](#GlobalChildClass)</code>  
+**Overrides:** <code>[methodTwo](#GlobalClass#methodTwo)</code>  
 <a name="customClass"></a>
 ## customClass
 a class that has custom tags
@@ -609,15 +610,15 @@ a global var with custom tags
 **sitcom**: The Office  
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
-## defaultedOne → <code>object</code>
+## defaultedOne : <code>object</code>
 **Default**: <code>{ one: 1, two: &quot;yeah?&quot; }</code>  
 **Scope**: global member  
 <a name="defaultedTwo"></a>
-## defaultedTwo → <code>function</code>
+## defaultedTwo : <code>function</code>
 **Default**: <code>function f(n){ return something(n); }</code>  
 **Scope**: global member  
 <a name="exampleVar"></a>
-## exampleVar → <code>string</code>
+## exampleVar : <code>string</code>
 an example var
 
 **Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
@@ -628,10 +629,10 @@ var thisVar = funtion(){
 };
 
 <a name="cliveExternal"></a>
-## cliveExternal → <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+## cliveExternal : <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 **Scope**: global member  
 <a name="stringExternal"></a>
-## stringExternal → <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
+## stringExternal : <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
 **Scope**: global member  
 <a name="fileVar"></a>
 ## fileVar
@@ -645,28 +646,28 @@ a global var with a @see
 **Scope**: global member  
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
-## returnsArrayOfType → <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 **Scope**: global member  
 <a name="returnsArrayOfType2"></a>
-## returnsArrayOfType2 → <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
+## returnsArrayOfType2 : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
 **Scope**: global member  
 <a name="nullableNumber"></a>
-## nullableNumber → <code>number</code>
+## nullableNumber : <code>number</code>
 **Scope**: global member  
 <a name="nonNullableNumber"></a>
-## nonNullableNumber → <code>number</code>
+## nonNullableNumber : <code>number</code>
 **Scope**: global member  
 <a name="objectType"></a>
-## objectType → <code>Object</code>
+## objectType : <code>Object</code>
 **Scope**: global member  
 <a name="globalVar"></a>
-## globalVar → <code>string</code>
+## globalVar : <code>string</code>
 a global var
 
 **Default**: <code>&quot;something&quot;</code>  
 **Scope**: global member  
 <a name="Documents"></a>
-## Documents → <code>object</code>
+## Documents : <code>object</code>
 **Scope**: global namespace  
 <a name="Documents.Newspaper"></a>
 ### Documents.Newspaper
@@ -674,7 +675,7 @@ An ordinary newspaper.
 
 **Scope**: static property of <code>[Documents](#Documents)</code>  
 <a name="config"></a>
-## config → <code>object</code>
+## config : <code>object</code>
 **Scope**: global namespace  
 **Properties**
 
