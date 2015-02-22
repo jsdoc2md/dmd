@@ -253,11 +253,13 @@ exports a pointer to a function
 ### sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
-**Returns**: <code>number</code> - the calculation result
+**Returns**: <code>number</code> - the calculation result  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | the first number |
 | two | <code>number</code> | the second number |
+
 <a name="module_cjs/function-alias--sum.sumthingStatic"></a>
 #### sum.sumthingStatic
 an additional static property
@@ -414,6 +416,7 @@ the global class constructor
 | --- | --- | --- |
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
+
 <a name="GlobalClass#propOne"></a>
 ### globalClass.propOne
 an instance property
@@ -512,6 +515,7 @@ Register a handler function to be called whenever this event is fired.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
+
 <a name="EventfulClass#fire"></a>
 ### eventfulClass.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
@@ -523,6 +527,7 @@ Fire an event, causing all handlers for that event name to run.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
+
 <a name="Eventful"></a>
 ## mixin: Eventful
 This provides methods used for event handling. It's not meant to
@@ -543,6 +548,7 @@ Register a handler function to be called whenever this event is fired.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
+
 <a name="Eventful.fire"></a>
 ### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
@@ -553,6 +559,7 @@ Fire an event, causing all handlers for that event name to run.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
+
 <a name="phantom"></a>
 ## mixin: phantom
 phantom mixin
@@ -683,12 +690,14 @@ a global function
 | two | <code>string</code> | second param |
 | three | <code>number</code> \| <code>string</code> | third |
 | four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
+
 <a name="globalFunction"></a>
 ## globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
 **Scope**: global  
-**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function<a name="returnsSomething"></a>
+**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
+<a name="returnsSomething"></a>
 ## returnsSomething() ⇒ <code>string</code>
 returns has no desc
 
@@ -747,6 +756,7 @@ Both of these will link to the bar function.
 | Param | Type |
 | --- | --- |
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
+
 <a name="event_docletEvent"></a>
 ## event: "docletEvent"
 an event defined in a doclet
