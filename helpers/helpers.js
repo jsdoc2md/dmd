@@ -155,7 +155,6 @@ function _addGroup(identifiers, groupByFields){
 }
 
 function _groupChildren(groupByFields, options){
-    /* group by scope, do on data sorted by scope-kind */
     var children = ddata._children.call(this, options);
     return _groupBy(children, groupByFields);
 }
