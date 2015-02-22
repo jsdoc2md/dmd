@@ -19,6 +19,7 @@ C\*ck, b!tch, c\*ck, b!tch, m\*therf!cker. You gotta kill people, to respect peo
 **Access:** public  
 **See**: https://www.youtube.com/watch?v=1sxZ4tsp8gc  
 **Author:** Chris Morris  
+
 * [class: FurQ](#FurQ) ⇐ <code>[Rapper](#Rapper)</code>
   * [new FurQ()](#new_FurQ_new)
   * _instance_
@@ -55,6 +56,7 @@ var uziLover = require("FurQ");
 
 - "Uzi like a metal dick in my hand."
 - "Magazine like a big testicle gland."
+
 <a name="FurQ#LOVE"></a>
 ### const: furQ.LOVE → <code>string</code>
 **Default**: <code>&quot;UZI&quot;</code>  
@@ -78,6 +80,7 @@ fire weapon
 | Param | Type | Description |
 | --- | --- | --- |
 | zoop | <code>boolean</code> | make 'zooping' sound as you fire |
+
 <a name="FurQ#event_slap"></a>
 ### event: "slap"
 slap man
@@ -106,6 +109,7 @@ respect
 | Param | Type | Description |
 | --- | --- | --- |
 | done | <code>[onRespect](#FurQ..onRespect)</code> | called on reciprocation of respect |
+
 **Example**  
 uziLover.respect(function(err, gain){
     console.log(gain);
@@ -124,6 +128,7 @@ FUR-Q enemy types
 | COCK | <code>number</code> | <code>0</code> | an awful individual |
 | BITCH | <code>number</code> | <code>1</code> |  |
 | MUTHAFUCKA | <code>number</code> | <code>2</code> |  |
+
 <a name="FurQ.peace"></a>
 ### ~~FurQ.peace()~~
 ***Deprecated***
@@ -144,9 +149,11 @@ Passed to [respect](#FurQ#respect)
 | --- | --- | --- |
 | err | <code>Error</code> | an issue with the punch |
 | gain | <code>\*</code> | the respect percentage gained |
+
 <a name="Rapper"></a>
 ## class: Rapper
 **Scope**: global  
+
 * [class: Rapper](#Rapper)
   * _instance_
     * [.spit()](#Rapper#spit)
@@ -172,6 +179,7 @@ battle
 train new rappers
 
 **Scope**: static member of <code>[Rapper](#Rapper)</code>  
+
   * [.train()](#Rapper.train)
     * [class: ~School](#Rapper.train..School)
       * [new School()](#new_Rapper.train..School_new)
@@ -180,6 +188,7 @@ train new rappers
 <a name="Rapper.train..School"></a>
 #### class: train~School
 **Scope**: inner member of <code>[train](#Rapper.train)</code>  
+
 * [class: ~School](#Rapper.train..School)
   * [new School()](#new_Rapper.train..School_new)
   * [.bestStudent](#Rapper.train..School#bestStudent)

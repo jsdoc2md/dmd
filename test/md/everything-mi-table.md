@@ -165,6 +165,7 @@ be used directly.</p>
 ## cjs/animals
 exports animals
 
+
 * [cjs/animals](#module_cjs/animals)
   * _static_
     * [.cat](#module_cjs/animals.cat) → <code>Animal</code>
@@ -190,6 +191,7 @@ the exported dog
 <a name="module_cjs/animals..Animal"></a>
 ### class: cjs/animals~Animal
 **Scope**: inner member of <code>[cjs/animals](#module_cjs/animals)</code>  
+
   * [class: ~Animal](#module_cjs/animals..Animal)
     * _instance_
       * [.type](#module_cjs/animals..Animal#type) → <code>Quadroped</code>
@@ -213,6 +215,7 @@ leg count
 <a name="module_cjs/class"></a>
 ## cjs/class
 exports a class
+
 
 * [cjs/class](#module_cjs/class)
   * [class: ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
@@ -251,6 +254,7 @@ inner module property
 ## cjs/falias-obj
 exports a pointer to a function
 
+
 * [cjs/falias-obj](#module_cjs/falias-obj)
   * [sum()](#exp_module_cjs/falias-obj--sum) ⏏
     * [.extra()](#module_cjs/falias-obj--sum.extra)
@@ -268,6 +272,7 @@ a static method on the exported function
 ## cjs/function-alias
 exports a pointer to a function
 
+
 * [cjs/function-alias](#module_cjs/function-alias)
   * [sum(one, two)](#exp_module_cjs/function-alias--sum) ⇒ <code>number</code> ⏏
     * [.sumthingStatic](#module_cjs/function-alias--sum.sumthingStatic)
@@ -276,11 +281,13 @@ exports a pointer to a function
 ### sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
-**Returns**: <code>number</code> - the calculation result
+**Returns**: <code>number</code> - the calculation result  
+
 | Param | Type | Description |
 | --- | --- | --- |
 | one | <code>number</code> | the first number |
 | two | <code>number</code> | the second number |
+
 <a name="module_cjs/function-alias--sum.sumthingStatic"></a>
 #### sum.sumthingStatic
 an additional static property
@@ -289,6 +296,7 @@ an additional static property
 <a name="module_cjs/human"></a>
 ## cjs/human
 exports a class
+
 
 * [cjs/human](#module_cjs/human)
   * [class: Human](#exp_module_cjs/human--Human) ⏏
@@ -320,6 +328,7 @@ an instance of Organ
 a class inside a class
 
 **Scope**: inner member of <code>[Human](#exp_module_cjs/human--Human)</code>  
+
   * [class: ~Organ](#module_cjs/human--Human..Organ)
     * _instance_
       * [.redCell](#module_cjs/human--Human..Organ#redCell) → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
@@ -339,6 +348,7 @@ a class inside a class inside a class
 <a name="module_linkMod"></a>
 ## linkMod
 A module. Refer to it using [this link](#module_linkMod).
+
 
 * [linkMod](#module_linkMod)
   * _static_
@@ -386,6 +396,7 @@ the teams
 ## cjs/object
 a module exporting `exports` directly
 
+
 * [cjs/object](#module_cjs/object)
   * [.one](#module_cjs/object.one) → <code>number</code>
   * [.two()](#module_cjs/object.two)
@@ -419,6 +430,7 @@ returns itself
 a global class
 
 **Scope**: global  
+
 * [class: GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
   * _instance_
@@ -437,6 +449,7 @@ the global class constructor
 | --- | --- | --- |
 | one | <code>number</code> | first param |
 | two | <code>string</code> | second param |
+
 <a name="GlobalClass#propOne"></a>
 ### globalClass.propOne
 an instance property
@@ -463,6 +476,7 @@ the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
 **Scope**: global  
+
 * [class: GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * [.propThree](#GlobalChildClass#propThree)
   * [.propOne](#GlobalChildClass#propOne)
@@ -520,6 +534,7 @@ a class which mixes in Eventful behaviour
 
 **Mixes**: <code>[Eventful](#Eventful)</code>  
 **Scope**: global  
+
 * [class: EventfulClass](#EventfulClass)
   * [.on(eventName, handler)](#EventfulClass#on)
   * [.fire(eventName, eventData)](#EventfulClass#fire)
@@ -535,6 +550,7 @@ Register a handler function to be called whenever this event is fired.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
+
 <a name="EventfulClass#fire"></a>
 ### eventfulClass.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
@@ -546,12 +562,14 @@ Fire an event, causing all handlers for that event name to run.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
+
 <a name="Eventful"></a>
 ## mixin: Eventful
 This provides methods used for event handling. It's not meant to
 be used directly.
 
 **Scope**: global  
+
 * [mixin: Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
   * [.fire(eventName, eventData)](#Eventful.fire)
@@ -566,6 +584,7 @@ Register a handler function to be called whenever this event is fired.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | handler | <code>function</code> | The handler to call. |
+
 <a name="Eventful.fire"></a>
 ### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
@@ -576,6 +595,7 @@ Fire an event, causing all handlers for that event name to run.
 | --- | --- | --- |
 | eventName | <code>string</code> | Name of the event. |
 | eventData | <code>Object</code> | The data provided to each handler. |
+
 <a name="phantom"></a>
 ## mixin: phantom
 phantom mixin
@@ -665,6 +685,7 @@ An ordinary newspaper.
 | defaults.level | <code>string</code> | The default level for the party. |
 | defaults.treasure | <code>object</code> | The default treasure. |
 | defaults.treasure.gold | <code>number</code> | How much gold the party starts with. |
+
 <a name="customFunction"></a>
 ## customFunction()
 a global function with custom tags
@@ -706,12 +727,14 @@ a global function
 | two | <code>string</code> | second param |
 | three | <code>number</code> \| <code>string</code> | third |
 | four | <code>Array.&lt;(Number\|String)&gt;</code> | fourth |
+
 <a name="globalFunction"></a>
 ## globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
 **Scope**: global  
-**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function<a name="returnsSomething"></a>
+**Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
+<a name="returnsSomething"></a>
 ## returnsSomething() ⇒ <code>string</code>
 returns has no desc
 
@@ -725,6 +748,7 @@ Both of these will link to the bar function.
 
 - [seebar](#seebar)
 - bar
+
 <a name="seebar"></a>
 ## seebar()
 **Scope**: global  
@@ -732,6 +756,7 @@ Both of these will link to the bar function.
 
 - [seefoo](#seefoo) for further information.
 - [GitHub](http://github.com)
+
 <a name="throwingFunction"></a>
 ## throwingFunction()
 **Scope**: global  
@@ -740,6 +765,7 @@ Both of these will link to the bar function.
 - Will throw an error if the argument is null
 - <code>InvalidArgumentException</code> 
 - <code>DivideByZero</code> Argument x must be non-zero
+
 <a name="todoFunction1"></a>
 ## todoFunction1()
 **Scope**: global  
@@ -747,6 +773,7 @@ Both of these will link to the bar function.
 
 - [ ] Write the documentation.
 - [ ] Implement this function.
+
 <a name="todoFunction2"></a>
 ## todoFunction2()
 **Scope**: global  
@@ -756,6 +783,7 @@ Both of these will link to the bar function.
 - [ ] Implement this function.
 - [x] this one is done
 - [x] finished
+
 <a name="todoFunction3"></a>
 ## todoFunction3()
 **Scope**: global  
@@ -763,6 +791,7 @@ Both of these will link to the bar function.
 
 - [x] this one is done
 - [x] finished
+
 <a name="nullableArrayTypeParam"></a>
 ## nullableArrayTypeParam(one)
 **Scope**: global  
@@ -770,6 +799,7 @@ Both of these will link to the bar function.
 | Param | Type |
 | --- | --- |
 | one | <code>[Array.&lt;cjs/human&gt;](#module_cjs/human)</code> | 
+
 <a name="event_docletEvent"></a>
 ## event: "docletEvent"
 an event defined in a doclet
