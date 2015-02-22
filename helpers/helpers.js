@@ -17,6 +17,7 @@ exports.groupBy = groupBy;
 exports._groupBy = _groupBy;
 exports._addGroup = _addGroup;
 exports.add = add;
+exports.kindInThisContext = kindInThisContext;
 
 /**
 Escape special markdown characters
@@ -215,4 +216,14 @@ function add(){
 
 function deepEqual(a, b){
     return JSON.stringify(a) === JSON.stringify(b);
+}
+
+function kindInThisContext(options){
+    if (this.kind === "function" && this.memberof){
+        return "method";
+    } else if (this.kind === "member" && this.memberof){
+        return "property";
+    } else {
+        return this.kind;
+    }
 }

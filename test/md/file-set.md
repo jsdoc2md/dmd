@@ -35,27 +35,27 @@ Expands file patterns, returning the matched and unmatched files and directories
 #### fileSet.list → <code>Array.&lt;string&gt;</code>
 The full list of unique paths found, and not found.
 
-**Scope**: instance member of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: instance property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 <a name="module_file-set--FileSet#files"></a>
 #### fileSet.files → <code>Array.&lt;string&gt;</code>
 The existing files found
 
-**Scope**: instance member of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: instance property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 <a name="module_file-set--FileSet#dirs"></a>
 #### fileSet.dirs → <code>Array.&lt;string&gt;</code>
 The existing directories found
 
-**Scope**: instance member of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: instance property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 <a name="module_file-set--FileSet#notExisting"></a>
 #### fileSet.notExisting → <code>Array.&lt;string&gt;</code>
 Paths which were not found
 
-**Scope**: instance member of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: instance property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 <a name="module_file-set--FileSet#add"></a>
 #### fileSet.add(files)
 add file patterns to the set
 
-**Scope**: instance function of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: instance method of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ add file patterns to the set
 #### FileSet.eFileType → <code>number</code>
 Enum for the `type` value of each record in `fileSet.list`
 
-**Scope**: static member of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
+**Scope**: static property of <code>[FileSet](#exp_module_file-set--FileSet)</code>  
 **Read only**: true  
 **Properties**
 

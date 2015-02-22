@@ -28,7 +28,7 @@ var hbjs = require("handbrake-js");
 ### hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>
 Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.
 
-**Scope**: static function of <code>[handbrake-js](#module_handbrake-js)</code>  
+**Scope**: static method of <code>[handbrake-js](#module_handbrake-js)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ hbjs.spawn(options)
 ### hbjs.exec(options, [onComplete])
 Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.
 
-**Scope**: static function of <code>[handbrake-js](#module_handbrake-js)</code>  
+**Scope**: static method of <code>[handbrake-js](#module_handbrake-js)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -86,17 +86,17 @@ A handle on the HandbrakeCLI process. Emits events you can monitor to track prog
 #### handbrake.output → <code>string</code>
 A `string` containing all handbrakeCLI output
 
-**Scope**: instance member of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#options"></a>
 #### handbrake.options → <code>object</code>
 a copy of the options passed to [spawn](#module_handbrake-js.spawn)
 
-**Scope**: instance member of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#eError"></a>
 #### handbrake.eError
 All operational errors are emitted via the [error](#module_handbrake-js..Handbrake#event_error) event.
 
-**Scope**: instance member of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: instance property of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 **Properties**
 
 | Name | Default | Description |
@@ -110,17 +110,17 @@ All operational errors are emitted via the [error](#module_handbrake-js..Handbra
 #### "start"
 Fired as HandbrakeCLI is launched. Nothing has happened yet.
 
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#event_begin"></a>
 #### "begin"
 Fired when encoding begins. If you're expecting an encode and this never fired, something went wrong.
 
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#event_progress"></a>
 #### "progress" (progress)
 Fired at regular intervals passing a `progress` object.
 
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_output"></a>
 #### "output" (output)
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -143,7 +143,7 @@ Fired at regular intervals passing a `progress` object.
 
 <a name="module_handbrake-js..Handbrake#event_error"></a>
 #### "error" (error)
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -156,9 +156,9 @@ Fired at regular intervals passing a `progress` object.
 #### "end"
 Fired on successful completion of an encoding task. Always follows a [begin](#module_handbrake-js..Handbrake#event_begin) event, with some [progress](#module_handbrake-js..Handbrake#event_progress) in between.
 
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
 <a name="module_handbrake-js..Handbrake#event_complete"></a>
 #### "complete"
 Fired when HandbrakeCLI exited cleanly. This does not necessarily mean your encode completed as planned..
 
-**Scope**: instance event of <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  
+**Scope**: event emitted by <code>[Handbrake](#module_handbrake-js..Handbrake)</code>  

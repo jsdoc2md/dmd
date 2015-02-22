@@ -54,7 +54,7 @@ var uziLover = require("FurQ");
 <a name="FurQ#wannaTryIt"></a>
 ### furQ.wannaTryIt → <code>string</code>
 **Default**: <code>&quot;bitch&quot;</code>  
-**Scope**: instance member of <code>[FurQ](#FurQ)</code>  
+**Scope**: instance property of <code>[FurQ](#FurQ)</code>  
 **See**
 
 - "Uzi like a metal dick in my hand."
@@ -68,17 +68,17 @@ var uziLover = require("FurQ");
 ### furQ.spit()
 override
 
-**Scope**: instance function of <code>[FurQ](#FurQ)</code>  
+**Scope**: instance method of <code>[FurQ](#FurQ)</code>  
 <a name="FurQ#punch"></a>
 ### furQ.punch()
 to plant ones fist in a buster's mush
 
-**Scope**: instance function of <code>[FurQ](#FurQ)</code>  
+**Scope**: instance method of <code>[FurQ](#FurQ)</code>  
 <a name="FurQ#event_pop"></a>
 ### "pop" (zoop)
 fire weapon
 
-**Scope**: instance event of <code>[FurQ](#FurQ)</code>  
+**Scope**: event emitted by <code>[FurQ](#FurQ)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -88,12 +88,12 @@ fire weapon
 ### "slap"
 slap man
 
-**Scope**: instance event of <code>[FurQ](#FurQ)</code>  
+**Scope**: event emitted by <code>[FurQ](#FurQ)</code>  
 <a name="FurQ#kill"></a>
 ### furQ.kill()
 kill
 
-**Scope**: instance function of <code>[FurQ](#FurQ)</code>  
+**Scope**: instance method of <code>[FurQ](#FurQ)</code>  
 **Category**: standard  
 **Example**  
 var kill = uziLover.kill();
@@ -106,7 +106,7 @@ uziLover.kill();
 ### furQ.respect(done)
 respect
 
-**Scope**: instance function of <code>[FurQ](#FurQ)</code>  
+**Scope**: instance method of <code>[FurQ](#FurQ)</code>  
 **Category**: standard  
 
 | Param | Type | Description |
@@ -122,7 +122,7 @@ uziLover.respect(function(err, gain){
 ### FurQ.enemy → <code>number</code>
 FUR-Q enemy types
 
-**Scope**: static member of <code>[FurQ](#FurQ)</code>  
+**Scope**: static property of <code>[FurQ](#FurQ)</code>  
 **Read only**: true  
 **Properties**
 
@@ -138,7 +138,7 @@ FUR-Q enemy types
 
 check if at peace
 
-**Scope**: static function of <code>[FurQ](#FurQ)</code>  
+**Scope**: static method of <code>[FurQ](#FurQ)</code>  
 **Example**  
 var peace = FurQ.peace();
 
@@ -171,17 +171,17 @@ Passed to [respect](#FurQ#respect)
 ### rapper.spit()
 spit
 
-**Scope**: instance function of <code>[Rapper](#Rapper)</code>  
+**Scope**: instance method of <code>[Rapper](#Rapper)</code>  
 <a name="Rapper#battle"></a>
 ### rapper.battle()
 battle
 
-**Scope**: instance function of <code>[Rapper](#Rapper)</code>  
+**Scope**: instance method of <code>[Rapper](#Rapper)</code>  
 <a name="Rapper.train"></a>
 ### Rapper.train()
 train new rappers
 
-**Scope**: static function of <code>[Rapper](#Rapper)</code>  
+**Scope**: static method of <code>[Rapper](#Rapper)</code>  
 
   * [.train()](#Rapper.train)
     * [~School](#Rapper.train..School)
@@ -204,7 +204,7 @@ rap school
 ##### school.bestStudent
 best student
 
-**Scope**: instance member of <code>[School](#Rapper.train..School)</code>  
+**Scope**: instance property of <code>[School](#Rapper.train..School)</code>  
 <a name="plant"></a>
 ## plant()
 to plant ones fist in a buster's mush

@@ -200,12 +200,12 @@ exports animals
 ### cjs/animals.cat → <code>Animal</code>
 the exported cat
 
-**Scope**: static member of <code>[cjs/animals](#module_cjs/animals)</code>  
+**Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals.dog"></a>
 ### cjs/animals.dog → <code>Animal</code>
 the exported dog
 
-**Scope**: static member of <code>[cjs/animals](#module_cjs/animals)</code>  
+**Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals..Animal"></a>
 ### cjs/animals~Animal
 **Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
@@ -221,7 +221,7 @@ the exported dog
 #### animal.type → <code>Quadroped</code>
 animal type
 
-**Scope**: instance member of <code>[Animal](#module_cjs/animals..Animal)</code>  
+**Scope**: instance property of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped"></a>
 #### Animal~Quadroped
 **Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
@@ -229,7 +229,7 @@ animal type
 ##### quadroped.legs
 leg count
 
-**Scope**: instance member of <code>[Quadroped](#module_cjs/animals..Animal..Quadroped)</code>  
+**Scope**: instance property of <code>[Quadroped](#module_cjs/animals..Animal..Quadroped)</code>  
 <a name="module_cjs/class"></a>
 ## cjs/class
 exports a class
@@ -258,17 +258,17 @@ the exported contructor
 #### exportedClass.prop
 instance property
 
-**Scope**: instance member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Scope**: instance property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/class--ExportedClass.staticProp"></a>
 #### ExportedClass.staticProp
 a static property for the exported class
 
-**Scope**: static member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Scope**: static property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/class--ExportedClass..innerProp"></a>
 #### ExportedClass~innerProp
 inner module property
 
-**Scope**: inner member of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Scope**: inner property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/falias-obj"></a>
 ## cjs/falias-obj
 exports a pointer to a function
@@ -287,7 +287,7 @@ the function
 #### sum.extra()
 a static method on the exported function
 
-**Scope**: static function of <code>[sum](#exp_module_cjs/falias-obj--sum)</code>  
+**Scope**: static method of <code>[sum](#exp_module_cjs/falias-obj--sum)</code>  
 <a name="module_cjs/function-alias"></a>
 ## cjs/function-alias
 exports a pointer to a function
@@ -313,7 +313,7 @@ the function
 #### sum.sumthingStatic
 an additional static property
 
-**Scope**: static member of <code>[sum](#exp_module_cjs/function-alias--sum)</code>  
+**Scope**: static property of <code>[sum](#exp_module_cjs/function-alias--sum)</code>  
 <a name="module_cjs/human"></a>
 ## cjs/human
 exports a class
@@ -344,7 +344,7 @@ the exported contructor
 #### human.liver → <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
-**Scope**: instance member of <code>[Human](#exp_module_cjs/human--Human)</code>  
+**Scope**: instance property of <code>[Human](#exp_module_cjs/human--Human)</code>  
 <a name="module_cjs/human--Human..Organ"></a>
 #### Human~Organ
 a class inside a class
@@ -361,7 +361,7 @@ a class inside a class
 ##### organ.redCell → <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
-**Scope**: instance member of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
+**Scope**: instance property of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/human--Human..Organ..Cell"></a>
 ##### Organ~Cell
 a class inside a class inside a class
@@ -385,7 +385,7 @@ A module. Refer to it using [this link](#module_linkMod).
 ### "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
-**Scope**: static event of <code>[linkMod](#module_linkMod)</code>  
+**Scope**: event emitted by <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod..linksYeah"></a>
 ### linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
 **Extends:** <code>[Math](#external_Math)</code>  
@@ -428,12 +428,12 @@ a module exporting `exports` directly
 ### obj.one → <code>number</code>
 the first property
 
-**Scope**: static member of <code>[cjs/object](#module_cjs/object)</code>  
+**Scope**: static property of <code>[cjs/object](#module_cjs/object)</code>  
 <a name="module_cjs/object.two"></a>
 ### obj.two()
 the second property, a function
 
-**Scope**: static function of <code>[cjs/object](#module_cjs/object)</code>  
+**Scope**: static method of <code>[cjs/object](#module_cjs/object)</code>  
 **Example**  
 this is the example
 
@@ -447,7 +447,7 @@ has a chainable method
 returns itself
 
 **Chainable**  
-**Scope**: instance function of <code>[Chainable](#Chainable)</code>  
+**Scope**: instance method of <code>[Chainable](#Chainable)</code>  
 <a name="GlobalClass"></a>
 ## GlobalClass
 a global class
@@ -477,22 +477,22 @@ the global class constructor
 ### globalClass.propOne
 an instance property
 
-**Scope**: instance member of <code>[GlobalClass](#GlobalClass)</code>  
+**Scope**: instance property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass#methodOne"></a>
 ### globalClass.methodOne()
 parent method one
 
-**Scope**: instance function of <code>[GlobalClass](#GlobalClass)</code>  
+**Scope**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass#methodTwo"></a>
 ### globalClass.methodTwo()
 parent method two
 
-**Scope**: instance function of <code>[GlobalClass](#GlobalClass)</code>  
+**Scope**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass.propTwo"></a>
 ### GlobalClass.propTwo
 a static property
 
-**Scope**: static member of <code>[GlobalClass](#GlobalClass)</code>  
+**Scope**: static property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalChildClass"></a>
 ## GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
@@ -510,12 +510,12 @@ the child of global class
 ### globalChildClass.propThree
 an instance property
 
-**Scope**: instance member of <code>[GlobalChildClass](#GlobalChildClass)</code>  
+**Scope**: instance property of <code>[GlobalChildClass](#GlobalChildClass)</code>  
 <a name="GlobalChildClass#methodTwo"></a>
 ### globalChildClass.methodTwo()
 overridden child methodTwo
 
-**Scope**: instance function of <code>[GlobalChildClass](#GlobalChildClass)</code>  
+**Scope**: instance method of <code>[GlobalChildClass](#GlobalChildClass)</code>  
 <a name="customClass"></a>
 ## customClass
 a class that has custom tags
@@ -542,7 +542,7 @@ Extends the built in XMLHttpRequest to send data encoded with a secret key.
 ### LendsClass.say()
 say something
 
-**Scope**: static function of <code>[LendsClass](#LendsClass)</code>  
+**Scope**: static method of <code>[LendsClass](#LendsClass)</code>  
 <a name="LendsClass2"></a>
 ## LendsClass2
 **Scope**: global class  
@@ -550,7 +550,7 @@ say something
 ### lendsClass2.say()
 say something
 
-**Scope**: instance function of <code>[LendsClass2](#LendsClass2)</code>  
+**Scope**: instance method of <code>[LendsClass2](#LendsClass2)</code>  
 <a name="EventfulClass"></a>
 ## EventfulClass
 a class which mixes in Eventful behaviour
@@ -567,7 +567,7 @@ a class which mixes in Eventful behaviour
 Register a handler function to be called whenever this event is fired.
 
 **Mixes**: <code>[on](#Eventful.on)</code>  
-**Scope**: instance function of <code>[EventfulClass](#EventfulClass)</code>  
+**Scope**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -579,7 +579,7 @@ Register a handler function to be called whenever this event is fired.
 Fire an event, causing all handlers for that event name to run.
 
 **Mixes**: <code>[fire](#Eventful.fire)</code>  
-**Scope**: instance function of <code>[EventfulClass](#EventfulClass)</code>  
+**Scope**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -601,7 +601,7 @@ be used directly.
 ### Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
-**Scope**: static function of <code>[Eventful](#Eventful)</code>  
+**Scope**: static method of <code>[Eventful](#Eventful)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -612,7 +612,7 @@ Register a handler function to be called whenever this event is fired.
 ### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
-**Scope**: static function of <code>[Eventful](#Eventful)</code>  
+**Scope**: static method of <code>[Eventful](#Eventful)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -695,7 +695,7 @@ a global var
 ### Documents.Newspaper
 An ordinary newspaper.
 
-**Scope**: static member of <code>[Documents](#Documents)</code>  
+**Scope**: static property of <code>[Documents](#Documents)</code>  
 <a name="config"></a>
 ## config → <code>object</code>
 **Scope**: global namespace  
@@ -737,7 +737,7 @@ the function
 ### functionObj.extra()
 a static method on the function
 
-**Scope**: static function of <code>[functionObj](#functionObj)</code>  
+**Scope**: static method of <code>[functionObj](#functionObj)</code>  
 <a name="globalFunction"></a>
 ## globalFunction(one, two, three, four)
 a global function
@@ -827,7 +827,7 @@ Both of these will link to the bar function.
 ## "docletEvent"
 an event defined in a doclet
 
-**Scope**: global event  
+**Scope**: event emitted  
 <a name="external_jQuery.fn"></a>
 ## jQuery.fn
 The jQuery plugin namespace.
@@ -838,7 +838,7 @@ The jQuery plugin namespace.
 ### jQuery.fn.starfairy()
 A jQuery plugin to make stars fly around your home page.
 
-**Scope**: static function of <code>[jQuery.fn](#external_jQuery.fn)</code>  
+**Scope**: static method of <code>[jQuery.fn](#external_jQuery.fn)</code>  
 <a name="external_XMLHttpRequest"></a>
 ## XMLHttpRequest
 Namespace provided by the browser.
