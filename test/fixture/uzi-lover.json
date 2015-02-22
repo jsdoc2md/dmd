@@ -84,6 +84,17 @@
     "order": 5
   },
   {
+    "id": "Rapper.train~School#bestStudent",
+    "longname": "Rapper.train~School#bestStudent",
+    "name": "bestStudent",
+    "scope": "instance",
+    "kind": "member",
+    "description": "best student",
+    "memberof": "Rapper.train~School",
+    "codeName": "this.bestStudent",
+    "order": 19
+  },
+  {
     "id": "FurQ#LOVE",
     "longname": "FurQ#LOVE",
     "name": "LOVE",
@@ -144,7 +155,7 @@
     "description": "battle",
     "memberof": "FurQ",
     "codeName": "this.battle",
-    "order": 19
+    "order": 20
   },
   {
     "id": "FurQ#punch",
@@ -155,7 +166,7 @@
     "description": "to plant ones fist in a buster's mush",
     "memberof": "FurQ",
     "codeName": "plant",
-    "order": 20
+    "order": 21
   },
   {
     "id": "FurQ#event:pop",

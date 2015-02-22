@@ -43,6 +43,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "arrayify",
     "order": 3
   },
@@ -87,6 +88,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "exists",
     "order": 4
   },
@@ -131,6 +133,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "without",
     "order": 7
   },
@@ -184,6 +187,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "union",
     "order": 8
   },
@@ -228,6 +232,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "commonSequence",
     "order": 9
   },
@@ -263,6 +268,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "unique",
     "order": 10
   },
@@ -325,6 +331,7 @@
         }
       }
     ],
+    "category": "General",
     "codeName": "spliceWhile",
     "order": 11
   },
@@ -368,6 +375,7 @@
         "description": "the extracted items."
       }
     ],
+    "category": "General",
     "codeName": "extract",
     "order": 12
   },
@@ -392,6 +400,7 @@
       }
     ],
     "since": "1.4.0",
+    "category": "General",
     "codeName": "flatten",
     "todoList": [
       {
