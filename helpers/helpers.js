@@ -163,11 +163,18 @@ function _groupChildren(groupByFields, options){
 takes the children of this, groups them, inserts group headings.. 
 */
 function _groupBy(identifiers, groupByFields){
-    /* insert title items */
+    /* don't modify the input array */
     groupByFields = groupByFields.slice(0);
+    
     groupByFields.forEach(function(group){
-        var groupValues = a.unique(identifiers.map(function(i){ return i[group]; }));
+        var groupValues = a.unique(identifiers.filter(function(identifier){
+            /* exclude constructors from grouping.. re-implement to work off a `null` group value */
+            return identifier.kind !== "constructor";
+        }).map(function(i){ return i[group]; }));
         if (groupValues.length <= 1) groupByFields = a.without(groupByFields, group);
+        // if (groupValues.length > 1){
+        //     console.error(identifiers[0].memberof, group, groupValues);
+        // }
     });
     identifiers = _addGroup(identifiers, groupByFields);
 
@@ -193,6 +200,7 @@ function _groupBy(identifiers, groupByFields){
         delete identifier._group;
     });
 
+    /* insert title items */
     inserts.reverse().forEach(function(insert){
         identifiers.splice(insert.index, 0, { _title: insert._title, level: insert.level });
     });

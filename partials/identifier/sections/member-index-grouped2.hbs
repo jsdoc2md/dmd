@@ -1,7 +1,0 @@
-{{#if title}}{{string-repeat "  " level}}* {{title}}
-{{else~}}
-{{string-repeat "  " level}}* [{{scope}}] {{kind}}: {{name}} {{#if memberof}}*{{memberof}}*{{/if}}
-{{/if~}}
-{{#children~}}
-{{>member-index-grouped2~}}
-{{/children~}}
