@@ -33,7 +33,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 - converts array-like object (e.g. `arguments`) to a real array
 - converts `null` or `undefined` to an empty array
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -56,7 +56,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 ### a.exists(array, value) ⇒ <code>boolean</code>
 returns true if a value, or nested object value exists in an array
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -79,7 +79,7 @@ true
 ### a.without(array, toRemove) ⇒ <code>Array</code>
 Returns the input minus the specified values.
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -98,7 +98,7 @@ Returns the input minus the specified values.
 ### a.union(array1, array2, idKey) ⇒ <code>Array</code>
 merge two arrays into a single array of unique values
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -128,7 +128,7 @@ merge two arrays into a single array of unique values
 ### a.commonSequence(a, b) ⇒ <code>Array</code>
 Returns the initial elements which both input arrays have in common
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -145,7 +145,7 @@ Returns the initial elements which both input arrays have in common
 ### a.unique(array) ⇒ <code>Array</code>
 returns an array of unique values
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -163,7 +163,7 @@ returns an array of unique values
 ### a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
 splice from `index` until `test` fails
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 
 | Param | Type | Description |
@@ -186,7 +186,7 @@ splice from `index` until `test` fails
 ### a.extract(array, query) ⇒ <code>Array</code>
 Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Returns**: <code>Array</code> - the extracted items.  
 **Category**: General  
 
@@ -199,7 +199,7 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 ### a.flatten() ⇒ <code>Array</code>
 flatten an array of arrays into a single array
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: General  
 **Since**: 1.4.0  
 **Todo**
@@ -216,7 +216,7 @@ flatten an array of arrays into a single array
 ### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: Record sets  
 
 | Param | Type | Description |
@@ -242,7 +242,7 @@ Plucks the value of the specified property from each object in the input array
 ### a.pick(arrayOfObjects, ...property) ⇒ <code>Array.&lt;object&gt;</code>
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: Record sets  
 
 | Param | Type | Description |
@@ -268,7 +268,7 @@ return a copy of the input `arrayOfObjects` containing objects having only the c
 returns an array containing items from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: Record sets  
 
 | Param | Type | Description |
@@ -291,7 +291,7 @@ from `query` are matched identically
 returns the first item from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: Record sets  
 
 | Param | Type | Description |
@@ -312,7 +312,7 @@ from `query` are matched identically
 ### a.sortBy(arrayOfObjects, columns, customOrder) ⇒ <code>Array</code>
 Sort an array of objects by one or more fields
 
-**Scope**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
 **Category**: Record sets  
 **Since**: 1.5.0  
 

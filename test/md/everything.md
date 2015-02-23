@@ -177,15 +177,15 @@ exports animals
 ### cjs/animals.cat : <code>Animal</code>
 the exported cat
 
-**Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
+**Kind**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals.dog"></a>
 ### cjs/animals.dog : <code>Animal</code>
 the exported dog
 
-**Scope**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
+**Kind**: static property of <code>[cjs/animals](#module_cjs/animals)</code>  
 <a name="module_cjs/animals..Animal"></a>
 ### cjs/animals~Animal
-**Scope**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
+**Kind**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
 
   * [~Animal](#module_cjs/animals..Animal)
     * _instance_
@@ -198,15 +198,15 @@ the exported dog
 #### animal.type : <code>Quadroped</code>
 animal type
 
-**Scope**: instance property of <code>[Animal](#module_cjs/animals..Animal)</code>  
+**Kind**: instance property of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped"></a>
 #### Animal~Quadroped
-**Scope**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
+**Kind**: inner class of <code>[Animal](#module_cjs/animals..Animal)</code>  
 <a name="module_cjs/animals..Animal..Quadroped#legs"></a>
 ##### quadroped.legs
 leg count
 
-**Scope**: instance property of <code>[Quadroped](#module_cjs/animals..Animal..Quadroped)</code>  
+**Kind**: instance property of <code>[Quadroped](#module_cjs/animals..Animal..Quadroped)</code>  
 <a name="module_cjs/class"></a>
 ## cjs/class
 exports a class
@@ -226,7 +226,7 @@ exports a class
 ### ExportedClass ⏏
 the exported class
 
-**Scope**: Exported class  
+**Kind**: Exported class  
 <a name="new_module_cjs/class--ExportedClass_new"></a>
 #### new ExportedClass()
 the exported contructor
@@ -235,17 +235,17 @@ the exported contructor
 #### exportedClass.prop
 instance property
 
-**Scope**: instance property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Kind**: instance property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/class--ExportedClass.staticProp"></a>
 #### ExportedClass.staticProp
 a static property for the exported class
 
-**Scope**: static property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Kind**: static property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/class--ExportedClass..innerProp"></a>
 #### ExportedClass~innerProp
 inner module property
 
-**Scope**: inner property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
+**Kind**: inner property of <code>[ExportedClass](#exp_module_cjs/class--ExportedClass)</code>  
 <a name="module_cjs/falias-obj"></a>
 ## cjs/falias-obj
 exports a pointer to a function
@@ -259,12 +259,12 @@ exports a pointer to a function
 ### sum() ⏏
 the function
 
-**Scope**: Exported function  
+**Kind**: Exported function  
 <a name="module_cjs/falias-obj--sum.extra"></a>
 #### sum.extra()
 a static method on the exported function
 
-**Scope**: static method of <code>[sum](#exp_module_cjs/falias-obj--sum)</code>  
+**Kind**: static method of <code>[sum](#exp_module_cjs/falias-obj--sum)</code>  
 <a name="module_cjs/function-alias"></a>
 ## cjs/function-alias
 exports a pointer to a function
@@ -278,7 +278,7 @@ exports a pointer to a function
 ### sum(one, two) ⇒ <code>number</code> ⏏
 the function
 
-**Scope**: Exported function  
+**Kind**: Exported function  
 **Returns**: <code>number</code> - the calculation result  
 
 | Param | Type | Description |
@@ -290,7 +290,7 @@ the function
 #### sum.sumthingStatic
 an additional static property
 
-**Scope**: static property of <code>[sum](#exp_module_cjs/function-alias--sum)</code>  
+**Kind**: static property of <code>[sum](#exp_module_cjs/function-alias--sum)</code>  
 <a name="module_cjs/human"></a>
 ## cjs/human
 exports a class
@@ -312,7 +312,7 @@ exports a class
 ### Human ⏏
 the exported class
 
-**Scope**: Exported class  
+**Kind**: Exported class  
 <a name="new_module_cjs/human--Human_new"></a>
 #### new Human()
 the exported contructor
@@ -321,12 +321,12 @@ the exported contructor
 #### human.liver : <code>[Organ](#module_cjs/human--Human..Organ)</code>
 an instance of Organ
 
-**Scope**: instance property of <code>[Human](#exp_module_cjs/human--Human)</code>  
+**Kind**: instance property of <code>[Human](#exp_module_cjs/human--Human)</code>  
 <a name="module_cjs/human--Human..Organ"></a>
 #### Human~Organ
 a class inside a class
 
-**Scope**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
+**Kind**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 
   * [~Organ](#module_cjs/human--Human..Organ)
     * _instance_
@@ -338,12 +338,12 @@ a class inside a class
 ##### organ.redCell : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
 an instance of Cell
 
-**Scope**: instance property of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
+**Kind**: instance property of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_cjs/human--Human..Organ..Cell"></a>
 ##### Organ~Cell
 a class inside a class inside a class
 
-**Scope**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
+**Kind**: inner class of <code>[Organ](#module_cjs/human--Human..Organ)</code>  
 <a name="module_linkMod"></a>
 ## linkMod
 A module. Refer to it using [this link](#module_linkMod).
@@ -362,11 +362,11 @@ A module. Refer to it using [this link](#module_linkMod).
 ### "event:MyEvent"
 An event. Refer to with [this link](#module_linkMod.event_MyEvent).
 
-**Scope**: event emitted by <code>[linkMod](#module_linkMod)</code>  
+**Kind**: event emitted by <code>[linkMod](#module_linkMod)</code>  
 <a name="module_linkMod..linksYeah"></a>
 ### linkMod~linksYeah ⇐ <code>[Math](#external_Math)</code>
 **Extends:** <code>[Math](#external_Math)</code>  
-**Scope**: inner class of <code>[linkMod](#module_linkMod)</code>  
+**Kind**: inner class of <code>[linkMod](#module_linkMod)</code>  
 **Emits**: <code>[event:MyEvent](#module_linkMod.event_MyEvent)</code>  
 <a name="new_module_linkMod..linksYeah_new"></a>
 #### new linksYeah()
@@ -376,13 +376,13 @@ this is from [linkMod](#module_linkMod).. it also references [Math](#external_Ma
 ### linkMod~Math
 The built in Math object. Refer to it with [Math](#external_Math).
 
-**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
+**Kind**: inner external of <code>[linkMod](#module_linkMod)</code>  
 **See**: http://www.math.com  
 <a name="external_Date"></a>
 ### linkMod~Date
 The built in Date object, it has no see tag. Refer to it with [Date](#external_Date).
 
-**Scope**: inner external of <code>[linkMod](#module_linkMod)</code>  
+**Kind**: inner external of <code>[linkMod](#module_linkMod)</code>  
 <a name="module_cjs/object-alias"></a>
 ## cjs/object-alias
 a module exporting an object
@@ -391,7 +391,7 @@ a module exporting an object
 ### teams ⏏
 the teams
 
-**Scope**: Exported member  
+**Kind**: Exported member  
 <a name="module_cjs/object"></a>
 ## cjs/object
 a module exporting `exports` directly
@@ -405,12 +405,12 @@ a module exporting `exports` directly
 ### obj.one : <code>number</code>
 the first property
 
-**Scope**: static property of <code>[cjs/object](#module_cjs/object)</code>  
+**Kind**: static property of <code>[cjs/object](#module_cjs/object)</code>  
 <a name="module_cjs/object.two"></a>
 ### obj.two()
 the second property, a function
 
-**Scope**: static method of <code>[cjs/object](#module_cjs/object)</code>  
+**Kind**: static method of <code>[cjs/object](#module_cjs/object)</code>  
 **Example**  
 this is the example
 
@@ -418,18 +418,18 @@ this is the example
 ## Chainable
 has a chainable method
 
-**Scope**: global class  
+**Kind**: global class  
 <a name="Chainable#method"></a>
 ### chainable.method() ↩︎
 returns itself
 
 **Chainable**  
-**Scope**: instance method of <code>[Chainable](#Chainable)</code>  
+**Kind**: instance method of <code>[Chainable](#Chainable)</code>  
 <a name="GlobalClass"></a>
 ## GlobalClass
 a global class
 
-**Scope**: global class  
+**Kind**: global class  
 
 * [GlobalClass](#GlobalClass)
   * [new GlobalClass(one, two)](#new_GlobalClass_new)
@@ -454,28 +454,28 @@ the global class constructor
 ### globalClass.propOne
 an instance property
 
-**Scope**: instance property of <code>[GlobalClass](#GlobalClass)</code>  
+**Kind**: instance property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass#methodOne"></a>
 ### globalClass.methodOne()
 parent method one
 
-**Scope**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
+**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass#methodTwo"></a>
 ### globalClass.methodTwo()
 parent method two
 
-**Scope**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
+**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalClass.propTwo"></a>
 ### GlobalClass.propTwo
 a static property
 
-**Scope**: static property of <code>[GlobalClass](#GlobalClass)</code>  
+**Kind**: static property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalChildClass"></a>
 ## GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
 the child of global class
 
 **Extends:** <code>[GlobalClass](#GlobalClass)</code>  
-**Scope**: global class  
+**Kind**: global class  
 
 * [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
   * [.propThree](#GlobalChildClass#propThree)
@@ -487,18 +487,18 @@ the child of global class
 ### globalChildClass.propThree
 an instance property
 
-**Scope**: instance property of <code>[GlobalChildClass](#GlobalChildClass)</code>  
+**Kind**: instance property of <code>[GlobalChildClass](#GlobalChildClass)</code>  
 <a name="GlobalChildClass#methodTwo"></a>
 ### globalChildClass.methodTwo()
 overridden child methodTwo
 
-**Scope**: instance method of <code>[GlobalChildClass](#GlobalChildClass)</code>  
+**Kind**: instance method of <code>[GlobalChildClass](#GlobalChildClass)</code>  
 **Overrides:** <code>[methodTwo](#GlobalClass#methodTwo)</code>  
 <a name="customClass"></a>
 ## customClass
 a class that has custom tags
 
-**Scope**: global class  
+**Kind**: global class  
 **sitcom**: Only Fools  
 **character**: Rodney Trotter  
 <a name="new_customClass_new"></a>
@@ -508,33 +508,33 @@ the constructor
 <a name="EncryptedRequest"></a>
 ## EncryptedRequest ⇐ <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>
 **Extends:** <code>[XMLHttpRequest](#external_XMLHttpRequest)</code>  
-**Scope**: global class  
+**Kind**: global class  
 <a name="new_EncryptedRequest_new"></a>
 ### new EncryptedRequest()
 Extends the built in XMLHttpRequest to send data encoded with a secret key.
 
 <a name="LendsClass"></a>
 ## LendsClass
-**Scope**: global class  
+**Kind**: global class  
 <a name="LendsClass.say"></a>
 ### LendsClass.say()
 say something
 
-**Scope**: static method of <code>[LendsClass](#LendsClass)</code>  
+**Kind**: static method of <code>[LendsClass](#LendsClass)</code>  
 <a name="LendsClass2"></a>
 ## LendsClass2
-**Scope**: global class  
+**Kind**: global class  
 <a name="LendsClass2#say"></a>
 ### lendsClass2.say()
 say something
 
-**Scope**: instance method of <code>[LendsClass2](#LendsClass2)</code>  
+**Kind**: instance method of <code>[LendsClass2](#LendsClass2)</code>  
 <a name="EventfulClass"></a>
 ## EventfulClass
 a class which mixes in Eventful behaviour
 
 **Mixes**: <code>[Eventful](#Eventful)</code>  
-**Scope**: global class  
+**Kind**: global class  
 
 * [EventfulClass](#EventfulClass)
   * [.on(eventName, handler)](#EventfulClass#on)
@@ -545,7 +545,7 @@ a class which mixes in Eventful behaviour
 Register a handler function to be called whenever this event is fired.
 
 **Mixes**: <code>[on](#Eventful.on)</code>  
-**Scope**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
+**Kind**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -557,7 +557,7 @@ Register a handler function to be called whenever this event is fired.
 Fire an event, causing all handlers for that event name to run.
 
 **Mixes**: <code>[fire](#Eventful.fire)</code>  
-**Scope**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
+**Kind**: instance method of <code>[EventfulClass](#EventfulClass)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -569,7 +569,7 @@ Fire an event, causing all handlers for that event name to run.
 This provides methods used for event handling. It's not meant to
 be used directly.
 
-**Scope**: global mixin  
+**Kind**: global mixin  
 
 * [Eventful](#Eventful)
   * [.on(eventName, handler)](#Eventful.on)
@@ -579,7 +579,7 @@ be used directly.
 ### Eventful.on(eventName, handler)
 Register a handler function to be called whenever this event is fired.
 
-**Scope**: static method of <code>[Eventful](#Eventful)</code>  
+**Kind**: static method of <code>[Eventful](#Eventful)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -590,7 +590,7 @@ Register a handler function to be called whenever this event is fired.
 ### Eventful.fire(eventName, eventData)
 Fire an event, causing all handlers for that event name to run.
 
-**Scope**: static method of <code>[Eventful](#Eventful)</code>  
+**Kind**: static method of <code>[Eventful](#Eventful)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -601,28 +601,28 @@ Fire an event, causing all handlers for that event name to run.
 ## phantom
 phantom mixin
 
-**Scope**: global mixin  
+**Kind**: global mixin  
 <a name="customTagged"></a>
 ## customTagged
 a global var with custom tags
 
-**Scope**: global member  
+**Kind**: global member  
 **sitcom**: The Office  
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne : <code>object</code>
 **Default**: <code>{ one: 1, two: &quot;yeah?&quot; }</code>  
-**Scope**: global member  
+**Kind**: global member  
 <a name="defaultedTwo"></a>
 ## defaultedTwo : <code>function</code>
 **Default**: <code>function f(n){ return something(n); }</code>  
-**Scope**: global member  
+**Kind**: global member  
 <a name="exampleVar"></a>
 ## exampleVar : <code>string</code>
 an example var
 
 **Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
-**Scope**: global member  
+**Kind**: global member  
 **Example**  
 var thisVar = funtion(){
     return "a value";
@@ -630,53 +630,53 @@ var thisVar = funtion(){
 
 <a name="cliveExternal"></a>
 ## cliveExternal : <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="stringExternal"></a>
 ## stringExternal : <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="fileVar"></a>
 ## fileVar
 a variable in the file
 
-**Scope**: global member  
+**Kind**: global member  
 <a name="seeableVar"></a>
 ## seeableVar
 a global var with a @see
 
-**Scope**: global member  
+**Kind**: global member  
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
 ## returnsArrayOfType : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="returnsArrayOfType2"></a>
 ## returnsArrayOfType2 : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="nullableNumber"></a>
 ## nullableNumber : <code>number</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="nonNullableNumber"></a>
 ## nonNullableNumber : <code>number</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="objectType"></a>
 ## objectType : <code>Object</code>
-**Scope**: global member  
+**Kind**: global member  
 <a name="globalVar"></a>
 ## globalVar : <code>string</code>
 a global var
 
 **Default**: <code>&quot;something&quot;</code>  
-**Scope**: global member  
+**Kind**: global member  
 <a name="Documents"></a>
 ## Documents : <code>object</code>
-**Scope**: global namespace  
+**Kind**: global namespace  
 <a name="Documents.Newspaper"></a>
 ### Documents.Newspaper
 An ordinary newspaper.
 
-**Scope**: static property of <code>[Documents](#Documents)</code>  
+**Kind**: static property of <code>[Documents](#Documents)</code>  
 <a name="config"></a>
 ## config : <code>object</code>
-**Scope**: global namespace  
+**Kind**: global namespace  
 **Properties**
 
 | Name | Type | Description |
@@ -691,36 +691,36 @@ An ordinary newspaper.
 ## customFunction()
 a global function with custom tags
 
-**Scope**: global function  
+**Kind**: global function  
 **sitcom**: Brass Eye  
 **character**: Noel Edmonds  
 <a name="firesError"></a>
 ## firesError()
-**Scope**: global function  
+**Kind**: global function  
 **Emits**: <code>event:error</code>  
 <a name="firesMany"></a>
 ## firesMany()
-**Scope**: global function  
+**Kind**: global function  
 **Emits**: <code>event:error</code>, <code>event:begin</code>, <code>event:end</code>  
 <a name="firesDefinedEvent"></a>
 ## firesDefinedEvent()
-**Scope**: global function  
+**Kind**: global function  
 **Emits**: <code>[docletEvent](#event_docletEvent)</code>  
 <a name="functionObj"></a>
 ## functionObj()
 the function
 
-**Scope**: global function  
+**Kind**: global function  
 <a name="functionObj.extra"></a>
 ### functionObj.extra()
 a static method on the function
 
-**Scope**: static method of <code>[functionObj](#functionObj)</code>  
+**Kind**: static method of <code>[functionObj](#functionObj)</code>  
 <a name="globalFunction"></a>
 ## globalFunction(one, two, three, four)
 a global function
 
-**Scope**: global function  
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -733,18 +733,18 @@ a global function
 ## globalFunction() ⇒ <code>string</code> \| <code>object</code> \| <code>function</code>
 a global function returning multiple stuff
 
-**Scope**: global function  
+**Kind**: global function  
 **Returns**: <code>string</code> - if something you get a string back<code>object</code> \| <code>function</code> - or an object, or function  
 <a name="returnsSomething"></a>
 ## returnsSomething() ⇒ <code>string</code>
 returns has no desc
 
-**Scope**: global function  
+**Kind**: global function  
 <a name="seefoo"></a>
 ## seefoo()
 Both of these will link to the bar function.
 
-**Scope**: global function  
+**Kind**: global function  
 **See**
 
 - [seebar](#seebar)
@@ -752,7 +752,7 @@ Both of these will link to the bar function.
 
 <a name="seebar"></a>
 ## seebar()
-**Scope**: global function  
+**Kind**: global function  
 **See**
 
 - [seefoo](#seefoo) for further information.
@@ -760,7 +760,7 @@ Both of these will link to the bar function.
 
 <a name="throwingFunction"></a>
 ## throwingFunction()
-**Scope**: global function  
+**Kind**: global function  
 **Throws**:
 
 - Will throw an error if the argument is null
@@ -769,7 +769,7 @@ Both of these will link to the bar function.
 
 <a name="todoFunction1"></a>
 ## todoFunction1()
-**Scope**: global function  
+**Kind**: global function  
 **Todo**
 
 - [ ] Write the documentation.
@@ -777,7 +777,7 @@ Both of these will link to the bar function.
 
 <a name="todoFunction2"></a>
 ## todoFunction2()
-**Scope**: global function  
+**Kind**: global function  
 **Todo**
 
 - [ ] Write the documentation.
@@ -787,7 +787,7 @@ Both of these will link to the bar function.
 
 <a name="todoFunction3"></a>
 ## todoFunction3()
-**Scope**: global function  
+**Kind**: global function  
 **Todo**
 
 - [x] this one is done
@@ -795,7 +795,7 @@ Both of these will link to the bar function.
 
 <a name="nullableArrayTypeParam"></a>
 ## nullableArrayTypeParam(one)
-**Scope**: global function  
+**Kind**: global function  
 
 | Param | Type |
 | --- | --- |
@@ -805,21 +805,21 @@ Both of these will link to the bar function.
 ## "docletEvent"
 an event defined in a doclet
 
-**Scope**: event emitted  
+**Kind**: event emitted  
 <a name="external_jQuery.fn"></a>
 ## jQuery.fn
 The jQuery plugin namespace.
 
-**Scope**: global external  
+**Kind**: global external  
 **See**: [The jQuery Plugin Guide](http://docs.jquery.com/Plugins/Authoring)  
 <a name="external_jQuery.fn.starfairy"></a>
 ### jQuery.fn.starfairy()
 A jQuery plugin to make stars fly around your home page.
 
-**Scope**: static method of <code>[jQuery.fn](#external_jQuery.fn)</code>  
+**Kind**: static method of <code>[jQuery.fn](#external_jQuery.fn)</code>  
 <a name="external_XMLHttpRequest"></a>
 ## XMLHttpRequest
 Namespace provided by the browser.
 
-**Scope**: global external  
+**Kind**: global external  
 **See**: https://developer.mozilla.org/en/xmlhttprequest  

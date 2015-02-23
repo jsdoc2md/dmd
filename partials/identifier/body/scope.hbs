@@ -1,10 +1,10 @@
 {{#if scope}}
-**Scope**: {{#if (equal kind "event") ~}}
+**Kind**: {{#if (equal kind "event") ~}}
 event emitted{{#if memberof}} by {{>linked-type input=memberof}}{{/if}}  
 {{else~}}
 {{scope}} {{kindInThisContext}}{{#if memberof}} of {{>linked-type input=memberof}}{{/if}}  
 {{/if~}}
 {{else~}}
-{{#if isExported}}**Scope**: Exported {{kind}}  
+{{#if isExported}}**Kind**: Exported {{kind}}  
 {{/if~}}
 {{/if~}}
