@@ -1083,7 +1083,7 @@
     "description": "an instance property",
     "memberof": "GlobalChildClass",
     "codeName": "this.propOne",
-    "order": 102
+    "order": 104
   },
   {
     "chainable": true,
@@ -1156,19 +1156,6 @@
     "order": 76
   },
   {
-    "id": "GlobalChildClass#methodOne",
-    "longname": "GlobalChildClass#methodOne",
-    "name": "methodOne",
-    "scope": "instance",
-    "kind": "function",
-    "inherits": "GlobalClass#methodOne",
-    "inherited": true,
-    "description": "parent method one",
-    "memberof": "GlobalChildClass",
-    "codeName": "GlobalClass.prototype.methodOne",
-    "order": 103
-  },
-  {
     "id": "EventfulClass#on",
     "longname": "EventfulClass#on",
     "name": "on",
@@ -1201,7 +1188,7 @@
       }
     ],
     "codeName": "on",
-    "order": 104
+    "order": 102
   },
   {
     "id": "EventfulClass#fire",
@@ -1236,6 +1223,19 @@
       }
     ],
     "codeName": "fire",
+    "order": 103
+  },
+  {
+    "id": "GlobalChildClass#methodOne",
+    "longname": "GlobalChildClass#methodOne",
+    "name": "methodOne",
+    "scope": "instance",
+    "kind": "function",
+    "inherits": "GlobalClass#methodOne",
+    "inherited": true,
+    "description": "parent method one",
+    "memberof": "GlobalChildClass",
+    "codeName": "GlobalClass.prototype.methodOne",
     "order": 105
   },
   {
