@@ -76,19 +76,21 @@ $ cat examples/doclet.json | dmd
     
 #API Reference
 <a name="exp_module_dmd--dmd"></a>
-###dmd(options) ⇒ <code>stream</code> ⏏
+### dmd(options) ⇒ <code>stream</code> ⏏
 Transforms doclet data into markdown documentation
 
-| Param | Type | Description |
-| ----- | ---- | ----------- |
-| options | <code>object</code> | The render options |
-| \[options.template\] | <code>string</code> | A handlebars template to insert your documentation into. |
-| \[options.heading-depth\] | <code>number</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). Defaults to `2`. |
-| \[options.partial\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
-| \[options.helper\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
-| \[options.plugin\] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | packages containing overrides |
-
+**Kind**: Exported function  
 **Returns**: <code>stream</code> - A transform stream - pipe doclet data in to receive rendered markdown.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>object</code> | The render options |
+| [options.template] | <code>string</code> | A handlebars template to insert your documentation into. |
+| [options.heading-depth] | <code>number</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). Defaults to `2`. |
+| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
+| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
+| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | packages containing overrides |
+
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
 
 &copy; 2015 Lloyd Brookes <75pound@gmail.com>
