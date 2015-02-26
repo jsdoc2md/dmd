@@ -1,5 +1,16 @@
 {{#if name~}}
-{{#deprecated~}}
-{{>name-code}}{{>name-prefix}}{{>name-parent}}{{>name-main}}{{>name-code}}{{>return-sig}}{{>name-suffix~}}
-{{/deprecated~}}
-{{/if}}
+{{#sig}}
+{{depOpen~}}
+{{{codeOpen}~}}
+{{#if prefix}}{{prefix}} {{/if~}}
+{{parent~}}
+{{accessSymbol~}}
+{{{name}~}}
+{{#if methodSign}}{{#if (isEvent)}} {{methodSign}}{{else}}{{methodSign}}{{/if}}{{/if~}}
+{{{codeClose}~}}
+{{#if returnSymbol}} {{returnSymbol}}{{/if~}}
+{{#if returnTypes}} {{>linked-type-list types=returnTypes delimiter=" \| " }}{{/if~}}
+{{#if suffix}} {{suffix}}{{/if~}}
+{{depClose~}}
+{{~/sig}}
+{{/if~}}

@@ -18,7 +18,6 @@ exports._groupBy = _groupBy;
 exports._addGroup = _addGroup;
 exports.add = add;
 exports.kindInThisContext = kindInThisContext;
-exports.sig = sig;
 
 /**
 Escape special markdown characters
@@ -231,21 +230,4 @@ function kindInThisContext(options){
     } else {
         return this.kind;
     }
-}
-
-function sig(options){
-    return options.fn({
-        code: true,
-        prefix: "new",
-        parent: "parent.",
-        name: "someFunc",
-        methodSig: "(one, two)",
-        returnSymbol: ":",
-        returnTypes: [ "string", "string[]" ],
-        suffix: "®",
-        depOpen: "~~",
-        depClose: "~~",
-        clodeOpen: "`",
-        clodeClose: "`"
-    })
 }
