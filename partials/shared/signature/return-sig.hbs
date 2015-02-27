@@ -1,5 +1,0 @@
-{{#if chainable}} ↩︎{{/if~}}
-{{#if augments}} ⇐ {{#with augments.[0]}}{{>linked-type input=this html=../../html}}{{/with~}}
-{{else~}}
-{{#returnSig2}} {{symbol}} {{#if ../../html}}{{>linked-type-list types=types delimiter=" | " html=true}}{{else}}{{>linked-type-list types=types delimiter=" \| "}}{{/if}}{{/returnSig2~}}
-{{/if}}

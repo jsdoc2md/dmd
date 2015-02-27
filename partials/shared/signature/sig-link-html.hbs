@@ -1,12 +1,14 @@
-{{#if name}}{{#sig~}}
+{{#if name}}{{#sig no-gfm=true ~}}
 {{{@depOpen}~}}
-[{{{@codeOpen}~}}
+<a href="#{{{anchorName}}}">
+{{~{@codeOpen}~}}
 {{#if @prefix}}{{@prefix}} {{/if~}}
 {{@accessSymbol}}{{#if (isEvent)}}"{{{name}}}"{{else}}{{{name}}}{{/if~}}
 {{~#if @methodSign}}{{#if (isEvent)}} {{@methodSign}}{{else}}{{@methodSign}}{{/if}}{{/if~}}
-{{{@codeClose}}}](#{{{anchorName}}})
+{{{@codeClose}~}}
+</a>
 {{~#if @returnSymbol}} {{@returnSymbol}}{{/if~}}
-{{#if @returnTypes}} {{>linked-type-list types=@returnTypes delimiter=" \| " }}{{/if~}}
+{{#if @returnTypes}} {{>linked-type-list types=@returnTypes html=true delimiter=" | " }}{{/if~}}
 {{#if @suffix}} {{@suffix}}{{/if~}}
 {{{@depClose}~}}
 {{~/sig}}{{/if~}}

@@ -1,5 +1,5 @@
 {{#if name}}{{#sig~}}
-{{@depOpen~}}
+{{{@depOpen}~}}
 {{{@codeOpen}~}}
 {{#if @prefix}}{{@prefix}} {{/if~}}
 {{@parent~}}
@@ -9,5 +9,5 @@
 {{#if @returnSymbol}} {{@returnSymbol}}{{/if~}}
 {{#if @returnTypes}} {{>linked-type-list types=@returnTypes delimiter=" \| " }}{{/if~}}
 {{#if @suffix}} {{@suffix}}{{/if~}}
-{{@depClose~}}
+{{{@depClose}~}}
 {{~/sig}}{{/if~}}
