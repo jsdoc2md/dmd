@@ -8,24 +8,7 @@ dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial 
 
 The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) template, outputing all documentation and an index (if there are enough items):
 ```hbs
-<a name="module_dmd"></a>
-## dmd
-<a name="exp_module_dmd--dmd"></a>
-### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
-Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
-
-**Kind**: Exported function  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [options] | <code>object</code> |  | The render options |
-| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
-| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
-
+{{>main}}
 ```
 
 You can supply your own template, for example a README, and insert your API docs:
@@ -37,24 +20,7 @@ This is the readme for a module.
 Install it using the power of thought. 
 
 # API Documentation
-<a name="module_dmd"></a>
-## dmd
-<a name="exp_module_dmd--dmd"></a>
-### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
-Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
-
-**Kind**: Exported function  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [options] | <code>object</code> |  | The render options |
-| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
-| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
-
+{{>main}}
 ```
 
 ## Customise
