@@ -6,41 +6,6 @@
 # dmd
 dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial and helper pack for generating markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed [jsdoc-parse](http://handlebarsjs.com) data and a template. 
 
-The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) template, outputing all documentation and an index (if there are enough items):
-```hbs
-{{>main}}
-```
-
-You can supply your own template, for example a README, and insert your API docs:
-```hbs
-# A Module
-This is the readme for a module. 
-
-## Install
-Install it using the power of thought. 
-
-# API Documentation
-{{>main}}
-```
-
-## Customise
-No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.
-
-| Helper name  | Description |
-| ------------ | ----------- |
-
-
-## Default Template
-
-### Partials
-
-| Partial name  | Description |
-| ------------- | ----------- |
-| main.hbs | The template that is rendered, taking the doclet json as input. The jsdoc2md `--json` option will display that data. |
-| main-index.hbs | The main index. Will only be display if at least 2 "parent" identifiers are documented. |
-
-
-
 ## Synopsis
 `examples/input/doclet.json`:
 ```json
@@ -59,6 +24,24 @@ $ cat examples/input/doclet.json | dmd
 
 ## fatUse
 I am a global variable
+```
+
+## Templates
+The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial. This partial outputs all documentation and an index (if there are enough items):
+```hbs
+{{>main}}
+```
+
+If you supply your own template, you can customise the output:
+```hbs
+# A Module
+This is the readme for a module. 
+
+## Install
+Install it using the power of thought. 
+
+# API Documentation
+{{>main}}
 ```
 
 ## Usage
