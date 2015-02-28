@@ -11,13 +11,3 @@ test("@type {module:yeah}")
 test("@param {module:yeah}")
 test("@extends {module:yeah}")
 test("@emits {module:yeah}")
-
-
-test("@link", function(t){
-    t.plan(1);
-    
-    fs.createReadStream("test/fixture/everything.json").pipe(dmd()).on("readable", function(){
-        var md = this.read();
-        if (md) t.ok(/exports a class/.test(md.toString()));
-    });
-});

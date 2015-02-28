@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 "use strict";
-
-var cliArgs = require("command-line-args"),
-    dope = require("console-dope"),
-    dmd = require("../"),
-    domain = require("domain"),
-    fs = require("fs");
+var cliArgs = require("command-line-args");
+var dope = require("console-dope");
+var dmd = require("../");
+var domain = require("domain");
+var fs = require("fs");
 
 var cli = cliArgs(dmd.cliOptions);
 var usage = cli.getUsage({

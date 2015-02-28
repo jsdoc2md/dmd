@@ -76,8 +76,6 @@ test("_groupBy scope, cat", function(t){
 
     var result = helpers._groupBy(fixture, [ "scope", "cat" ]);
     t.deepEqual(result, expected);
-    // console.log(expected);
-    // console.log(result);
     t.end();
 });
 
@@ -96,9 +94,6 @@ test("_groupBy skips if only one group", function(t){
 
     var result = helpers._groupBy(fixture, [ "scope", "cat" ]);
     t.deepEqual(result, expected);
-
-    // console.log(expected);
-    // console.log(result);
     t.end();
 });
 
@@ -118,8 +113,5 @@ test("_groupBy skips if only one group, where there are subgroups", function(t){
 
     var result = helpers._groupBy(fixture, [ "scope", "cat" ]);
     t.deepEqual(result, expected);
-
-    // console.log(expected);
-    // console.log(result);
     t.end();
 });

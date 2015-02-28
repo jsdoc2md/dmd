@@ -3,23 +3,70 @@
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
-***preview release, not much documentation.. new version and docs coming soon***
+# dmd
+dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial and helper pack for generating markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed [jsdoc-parse](http://handlebarsjs.com) data and a template. 
 
-#dmd
-dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.
+The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) template, outputing all documentation and an index (if there are enough items):
+```hbs
+<a name="module_dmd"></a>
+## dmd
+<a name="exp_module_dmd--dmd"></a>
+### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
+Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
-dmd  exposes a Transform stream class which, when fed [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data, outputs documentation in markdown format. The data at input is fed into the main template and rendered by handlebars. 
+**Kind**: Exported function  
 
-##Customise
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> |  | The render options |
+| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
+| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
+| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
+| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
+
+```
+
+You can supply your own template, for example a README, and insert your API docs:
+```hbs
+# A Module
+This is the readme for a module. 
+
+## Install
+Install it using the power of thought. 
+
+# API Documentation
+<a name="module_dmd"></a>
+## dmd
+<a name="exp_module_dmd--dmd"></a>
+### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
+Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
+
+**Kind**: Exported function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> |  | The render options |
+| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
+| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
+| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
+| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
+
+```
+
+## Customise
 No doubt there is something about the default template you don't like, there normally is. Use these block helpers to do it yourself.
 
 | Helper name  | Description |
 | ------------ | ----------- |
 
 
-##Default Template
+## Default Template
 
-###Partials
+### Partials
 
 | Partial name  | Description |
 | ------------- | ----------- |
@@ -28,7 +75,7 @@ No doubt there is something about the default template you don't like, there nor
 
 
 
-##Synopsis
+## Synopsis
 `examples/input/doclet.json`:
 ```json
 [
@@ -42,14 +89,14 @@ No doubt there is something about the default template you don't like, there nor
 ```
 ```
 $ cat examples/input/doclet.json | dmd
-#Global
+# Global
 
-##fatUse
+## fatUse
 I am a global variable
 ```
 
-##Usage
-###As a library
+## Usage
+### As a library
 Install:
 ```sh
 $ npm install dmd --save
@@ -61,7 +108,7 @@ var dmd = require("dmd");
 process.stdin.pipe(dmd()).pipe(process.stdout);
 ```
 
-###At the command line
+### At the command line
 Install the `dmd` tool globally: 
 ```sh
 $ npm install -g dmd
@@ -71,26 +118,26 @@ Example:
 $ cat examples/doclet.json | dmd
 ```
 
-##Plugins
+## Plugins
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
     
-#API Reference
+# API Reference
 <a name="exp_module_dmd--dmd"></a>
-### dmd(options) ⇒ <code>stream</code> ⏏
-Transforms doclet data into markdown documentation
+### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
+Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
-**Returns**: <code>stream</code> - A transform stream - pipe doclet data in to receive rendered markdown.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| options | <code>object</code> | The render options |
-| [options.template] | <code>string</code> | A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). Defaults to `2`. |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> | packages containing overrides |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> |  | The render options |
+| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
+| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
+| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
+| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
 
-*documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
+* * *
 
-&copy; 2015 Lloyd Brookes <75pound@gmail.com>
+&copy; 2015 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).

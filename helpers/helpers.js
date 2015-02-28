@@ -27,6 +27,9 @@ function escape(input){
     return input.replace(/([\*|])/g, "\\$1");
 }
 
+/**
+replaces {@link} tags with markdown links in the suppied input text
+*/
 function linkify(text, options){
     if (text){
         var links = ddata.parseLink(text);
@@ -40,6 +43,9 @@ function linkify(text, options){
     return text;
 }
 
+/**
+returns a gfm table header row.. only columns which contain data are included in the output
+*/
 function tableHead(){
     var args = a.arrayify(arguments);
     var data = args.shift();
@@ -76,6 +82,9 @@ function containsData(rows, col){
     });
 }
 
+/**
+returns a gfm table row.. only columns which contain data are included in the output
+*/
 function tableRow(){
     var args = a.arrayify(arguments);
     var rows = args.shift();
@@ -142,6 +151,9 @@ function deprecated(options){
     }
 }
 
+/**
+
+*/
 function groupBy(groupByFields, options){
     return handlebars.helpers.each(_groupChildren.call(this, groupByFields, options), options);
 }
@@ -173,9 +185,6 @@ function _groupBy(identifiers, groupByFields){
             return identifier.kind !== "constructor";
         }).map(function(i){ return i[group]; }));
         if (groupValues.length <= 1) groupByFields = a.without(groupByFields, group);
-        // if (groupValues.length > 1){
-        //     console.error(identifiers[0].memberof, group, groupValues);
-        // }
     });
     identifiers = _addGroup(identifiers, groupByFields);
 
@@ -218,6 +227,10 @@ function deepEqual(a, b){
     return JSON.stringify(a) === JSON.stringify(b);
 }
 
+/**
+returns a more appropriate 'kind', depending on context
+@return {string}
+*/
 function kindInThisContext(options){
     if (this.kind === "function" && this.memberof){
         return "method";
