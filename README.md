@@ -7,10 +7,11 @@
 dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial and helper pack for generating markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed [jsdoc-parse](http://handlebarsjs.com) data and a template. 
 
 ## Synopsis
-`examples/input/doclet.json`:
+With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
 ```json
 [
     {
+        "id": "fatUse",
         "name": "fatUse",
         "kind": "member",
         "description": "I am a global variable",
@@ -18,21 +19,26 @@ dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial 
     }
 ]
 ```
+this command :
 ```
 $ cat examples/input/doclet.json | dmd
-# Global
-
+```
+produces this output: 
+```
+<a name="fatUse"></a>
 ## fatUse
 I am a global variable
+
+**Kind**: global member
 ```
 
 ## Templates
-The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial. This partial outputs all documentation and an index (if there are enough items):
+The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
 
-If you supply your own template, you can customise the output:
+This partial outputs all documentation and an index (if there are enough items). If you supply your own template, you can customise the output:
 ```hbs
 # A Module
 This is the readme for a module. 
@@ -76,17 +82,15 @@ $ cat examples/doclet.json | dmd
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
+**Params**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [options] | <code>object</code> |  | The render options |
-| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`). |
-| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
-
+- \[options\] <code>object</code> - The render options  
+  - \[template =<code>&quot;\{\{&gt;main\}\}&quot;</code>\]  - {string} - A handlebars template to insert your documentation into.  
+  - \[heading-depth =<code>2</code>\] <code>number</code> - the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`).  
+  - \[example-lang\] <code>string</code> - for syntax highlighting on github  
+  - \[partial\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - \[helper\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - \[plugin\] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
 * * *
 
 &copy; 2015 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
