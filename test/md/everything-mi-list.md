@@ -579,23 +579,23 @@ phantom mixin
 ## customTagged
 a global var with custom tags
 
-**Kind**: global member  
+**Kind**: global variable  
 **sitcom**: The Office  
 **character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne : <code>object</code>
 **Default**: <code>{ one: 1, two: &quot;yeah?&quot; }</code>  
-**Kind**: global member  
+**Kind**: global variable  
 <a name="defaultedTwo"></a>
 ## defaultedTwo : <code>function</code>
 **Default**: <code>function f(n){ return something(n); }</code>  
-**Kind**: global member  
+**Kind**: global variable  
 <a name="exampleVar"></a>
 ## exampleVar : <code>string</code>
 an example var
 
 **Default**: <code>&quot;\&quot;something\&quot;&quot;</code>  
-**Kind**: global member  
+**Kind**: global variable  
 **Example**  
 var thisVar = funtion(){
     return "a value";
@@ -603,42 +603,42 @@ var thisVar = funtion(){
 
 <a name="cliveExternal"></a>
 ## cliveExternal : <code>[Clive](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="stringExternal"></a>
 ## stringExternal : <code>[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="fileVar"></a>
 ## fileVar
 a variable in the file
 
-**Kind**: global member  
+**Kind**: global variable  
 <a name="seeableVar"></a>
 ## seeableVar
 a global var with a @see
 
-**Kind**: global member  
+**Kind**: global variable  
 **See**: something or other  
 <a name="returnsArrayOfType"></a>
 ## returnsArrayOfType : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="returnsArrayOfType2"></a>
 ## returnsArrayOfType2 : <code>[Array.&lt;Human&gt;](#exp_module_cjs/human--Human)</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="nullableNumber"></a>
 ## nullableNumber : <code>number</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="nonNullableNumber"></a>
 ## nonNullableNumber : <code>number</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="objectType"></a>
 ## objectType : <code>Object</code>
-**Kind**: global member  
+**Kind**: global variable  
 <a name="globalVar"></a>
 ## globalVar : <code>string</code>
 a global var
 
 **Default**: <code>&quot;something&quot;</code>  
-**Kind**: global member  
+**Kind**: global variable  
 <a name="Documents"></a>
 ## Documents : <code>object</code>
 **Kind**: global namespace  

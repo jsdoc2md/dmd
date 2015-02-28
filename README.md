@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a [handlebars](http://handlebarsjs.com) partial and helper pack for generating markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed [jsdoc-parse](http://handlebarsjs.com) data and a template. 
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers designed to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed data and a template. 
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -82,15 +82,18 @@ $ cat examples/doclet.json | dmd
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
-**Params**
 
-- \[options\] <code>object</code> - The render options  
-  - \[template =<code>&quot;\{\{&gt;main\}\}&quot;</code>\]  - {string} - A handlebars template to insert your documentation into.  
-  - \[heading-depth =<code>2</code>\] <code>number</code> - the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `##`).  
-  - \[example-lang\] <code>string</code> - for syntax highlighting on github  
-  - \[partial\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
-  - \[helper\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
-  - \[plugin\] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> |  | The render options |
+| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
+| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`). |
+| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
+| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
+| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
+
+
 * * *
 
 &copy; 2015 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).

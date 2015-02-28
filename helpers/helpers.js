@@ -240,6 +240,8 @@ function kindInThisContext(options){
         return "enum property";
     } else if (this.kind === "member" && this.isEnum && !this.memberof){
         return "enum";
+    } else if (this.kind === "member" && this.scope === "global"){
+        return "variable";
     } else {
         return this.kind;
     }
