@@ -33,18 +33,18 @@ I am a global variable
 ```
 
 ## Templates
-The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
+The default template contains a single call to the  [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 \{{>main}}
 ```
 
-This partial outputs all documentation and an index (if there are enough items). If you supply your own template, you can customise the output:
+This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template, for example:
 ```hbs
 # A Module
 This is the readme for a module. 
 
 ## Install
-Install it using the power of thought. 
+Install it using the power of thought. While breakdancing.
 
 # API Documentation
 \{{>main}}
@@ -74,9 +74,9 @@ $ cat examples/doclet.json | dmd
 ```
 
 ## Customising 
-You can customise the generated documentation to taste by overriding the default, or adding new partials or helpers.
+You can customise the generated documentation to taste by overriding or adding partials and/or helpers.
 
-For example, let's say you wanted a datestamp at the bottom of your generated docs:
+For example, let's say you wanted this datestamp at the bottom of your generated docs:
 
 ```
 **documentation generated on Sun, 01 Mar 2015 09:30:17 GMT**
@@ -102,17 +102,27 @@ exports.generatedDate = function(){
 Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial containing your new footer:
 
 ```hbs
-{{>main-index~}}
-{{>all-docs~}}
+\{{>main-index~}}
+\{{>all-docs~}}
 
-**documentation generated on {{generatedDate}}**
+**documentation generated on \{{generatedDate}}**
 ```
 
-### Use
+### Employ
+To use the overrides, pass their file names as options to dmd:
 ```
 $ cat your-parsed-docs.json | dmd --partial main-override.hbs --helper generatedDate.js
 ```
 
+If you have multiple overrides, the syntax is 
+```
+$ cat your-parsed-docs.json | dmd --partial override1.hbs override2.hbs
+```
+
+Globbing also works:
+```
+$ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
+```
 
 ### Plugins
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)

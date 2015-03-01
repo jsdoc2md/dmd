@@ -33,18 +33,18 @@ I am a global variable
 ```
 
 ## Templates
-The default template simply renders the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
+The default template contains a single call to the  [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
 
-This partial outputs all documentation and an index (if there are enough items). If you supply your own template, you can customise the output:
+This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template, for example:
 ```hbs
 # A Module
 This is the readme for a module. 
 
 ## Install
-Install it using the power of thought. 
+Install it using the power of thought. While breakdancing.
 
 # API Documentation
 {{>main}}
@@ -74,9 +74,9 @@ $ cat examples/doclet.json | dmd
 ```
 
 ## Customising 
-You can customise the generated documentation to taste by overriding the default, or adding new partials or helpers.
+You can customise the generated documentation to taste by overriding or adding partials and/or helpers.
 
-For example, let's say you wanted a datestamp at the bottom of your generated docs:
+For example, let's say you wanted this datestamp at the bottom of your generated docs:
 
 ```
 **documentation generated on Sun, 01 Mar 2015 09:30:17 GMT**
@@ -102,32 +102,27 @@ exports.generatedDate = function(){
 Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial containing your new footer:
 
 ```hbs
-<a name="module_dmd"></a>
-## dmd
-<a name="exp_module_dmd--dmd"></a>
-### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
-Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
+{{>main-index~}}
+{{>all-docs~}}
 
-**Kind**: Exported function  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [options] | <code>object</code> |  | The render options |
-| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`). |
-| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
-
-**documentation generated on **
+**documentation generated on {{generatedDate}}**
 ```
 
-### Use
+### Employ
+To use the overrides, pass their file names as options to dmd:
 ```
 $ cat your-parsed-docs.json | dmd --partial main-override.hbs --helper generatedDate.js
 ```
 
+If you have multiple overrides, the syntax is 
+```
+$ cat your-parsed-docs.json | dmd --partial override1.hbs override2.hbs
+```
+
+Globbing also works:
+```
+$ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
+```
 
 ### Plugins
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
