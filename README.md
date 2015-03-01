@@ -107,7 +107,7 @@ exports.generatedDate = function(){
 [Read more about helpers in the handlebars documentation](http://handlebarsjs.com).
 
 ### Write a new [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial
-Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial containing your new footer:
+Create a duplicate (typically in the project you are documenting) of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial containing your new footer:
 
 ```hbs
 {{>main-index~}}
@@ -119,7 +119,7 @@ Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partial
 *the file basename of a partial is significant - to override `main` the filename must be `main.hbs`.*
 
 ### Employ
-To use the overrides, pass their file names as options to dmd:
+To use the overrides, pass their file names as options to dmd (or [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) if you're using that):
 ```
 $ cat your-parsed-docs.json | dmd --partial custom/main.hbs --helper custom/generatedDate.js
 ```
@@ -135,7 +135,7 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ```
 
 ### Plugins
-* [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
+* [dmd-plugin-example](https://github.com/75lb/dmd-plugin-example)
     
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
