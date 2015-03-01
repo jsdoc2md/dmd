@@ -25,7 +25,7 @@
   "scripts": {
     "test": "tape test/*.js |tap-spec",
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list lib/*.js > README.md; echo",
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*' > test/fixture/everything.json",
     "p2": "jsdoc-parse ../file-set/lib/file-set.js > test/fixture/file-set.json",
     "p3": "jsdoc-parse ../handbrake-js/lib/* > test/fixture/handbrake.json",

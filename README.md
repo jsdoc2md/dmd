@@ -93,7 +93,7 @@ For example, let's say you wanted this datestamp at the bottom of your generated
 You need to do two things:
 
 1. Write a helper method to return the date in your preferred format
-2. Override the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial so it includes your new footer
+2. Override the appropriate partial where you would like it to appear. We'll override the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial.
 
 ### Write a new helper
 A helper file is just a plain commonJS module. Each method exposed on the module will be available to your templates. So, our new helper file:
@@ -116,10 +116,12 @@ Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partial
 **documentation generated on {{generatedDate}}**
 ```
 
+*the file basename of a partial is significant - to override `main` the filename must be `main.hbs`.*
+
 ### Employ
 To use the overrides, pass their file names as options to dmd:
 ```
-$ cat your-parsed-docs.json | dmd --partial main-override.hbs --helper generatedDate.js
+$ cat your-parsed-docs.json | dmd --partial custom/main.hbs --helper custom/generatedDate.js
 ```
 
 If you have multiple overrides, the syntax is 
@@ -137,21 +139,19 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
     
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
-### 
+### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
+**Params**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [options] | <code>object</code> |  | The render options |
-| [options.template] |  | <code>&quot;\{\{&gt;main\}\}&quot;</code> | {string} - A handlebars template to insert your documentation into. |
-| [options.heading-depth] | <code>number</code> | <code>2</code> | the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`). |
-| [options.example-lang] | <code>string</code> |  | for syntax highlighting on github |
-| [options.partial] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.helper] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | overrides |
-| [options.plugin] | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | packages containing overrides |
-
+- \[options\] <code>object</code> - The render options  
+  - \[template =<code>&quot;\{\{&gt;main\}\}&quot;</code>\]  - {string} - A handlebars template to insert your documentation into.  
+  - \[heading-depth =<code>2</code>\] <code>number</code> - the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`).  
+  - \[example-lang\] <code>string</code> - for syntax highlighting on github  
+  - \[partial\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - \[helper\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - \[plugin\] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
 
 * * *
 
