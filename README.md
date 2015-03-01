@@ -1,10 +1,10 @@
 [![view on npm](http://img.shields.io/npm/v/dmd.svg)](https://www.npmjs.org/package/dmd)
 [![npm module downloads per month](http://img.shields.io/npm/dm/dmd.svg)](https://www.npmjs.org/package/dmd)
-[![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
+[![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=next)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers designed to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[single function](#module_dmd)</code> which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[single function](#module_dmd)</code> which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -32,13 +32,39 @@ I am a global variable
 **Kind**: global variable
 ```
 
+## Usage
+### As a library
+Install:
+```sh
+$ npm install dmd --save
+```
+Example:
+```js
+var dmd = require("dmd");
+
+var options = {
+   template: "my-template.hbs"
+};
+process.stdin.pipe(dmd(options)).pipe(process.stdout);
+```
+
+### At the command line
+Install the `dmd` tool globally: 
+```sh
+$ npm install -g dmd
+```
+Example:
+```sh
+$ cat examples/doclet.json | dmd
+```
+
 ## Templates
 The default template contains a single call to the  [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
 
-This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template, for example:
+This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template. For example, you could write a template like this:
 ```hbs
 # A Module
 This is the readme for a module. 
@@ -50,27 +76,9 @@ Install it using the power of thought. While breakdancing.
 {{>main}}
 ```
 
-## Usage
-### As a library
-Install:
-```sh
-$ npm install dmd --save
+and employ it like this: 
 ```
-Example:
-```js
-var dmd = require("dmd");
-
-process.stdin.pipe(dmd()).pipe(process.stdout);
-```
-
-### At the command line
-Install the `dmd` tool globally: 
-```sh
-$ npm install -g dmd
-```
-Example:
-```sh
-$ cat examples/doclet.json | dmd
+$ cat your-docs.json | dmd --template readme-template.hbs
 ```
 
 ## Customising 
@@ -129,7 +137,7 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
     
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
-### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
+### 
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
