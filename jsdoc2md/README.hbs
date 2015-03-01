@@ -3,12 +3,12 @@
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=master)](https://travis-ci.org/75lb/dmd)
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
-***preview release, not much documentation.. new version and docs coming soon***
+***new version very close to release! see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)***
 
-#dmd
+# dmd
 A transform stream taking javascript doclet data in (produced by [jsdoc-parse](https://github.com/75lb/jsdoc-parse) or any source), outputing markdown documentation. Essentially, the library is collection of Handlebars templates and helpers, any of which can be overridden to taste. The `main` template is rendered using the data received at stdin. 
 
-##Synopsis
+## Synopsis
 ```
 $ cat examples/input/doclet.json
 [
@@ -21,14 +21,14 @@ $ cat examples/input/doclet.json
 ]
 
 $ cat examples/input/doclet.json | dmd
-#Global
+# Global
 
-##fatUse
+## fatUse
 I am a global variable
 ```
 
-##Usage
-###As a library
+## Usage
+### As a library
 Install:
 ```sh
 $ npm install dmd --save
@@ -40,7 +40,7 @@ var dmd = require("dmd");
 process.stdin.pipe(dmd()).pipe(process.stdout);
 ```
 
-###At the command line
+### At the command line
 Install the `dmd` tool globally: 
 ```sh
 $ npm install -g dmd
@@ -50,10 +50,10 @@ Example:
 $ cat examples/doclet.json | dmd
 ```
 
-##Plugins
+## Plugins
 * [dmd-examples-highlight](https://github.com/75lb/dmd-examples-highlight)
     
-#API Reference
+# API Reference
 {{#module name="dmd"}}{{>exported}}{{/module}}
 
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
