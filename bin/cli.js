@@ -6,7 +6,10 @@ var dmd = require("../");
 var domain = require("domain");
 var fs = require("fs");
 
-var cli = cliArgs(dmd.cliOptions);
+var cli = cliArgs(dmd.cliOptions.concat([
+    { name: "help", alias: "h", type: Boolean }
+]));
+
 var usage = cli.getUsage({
     title: "dmd",
     header: "API docs with markdown",
