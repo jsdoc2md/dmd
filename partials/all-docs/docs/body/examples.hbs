@@ -1,19 +1,19 @@
 {{#if examples}}{{#each examples}}**Example**  
-{{#if (regexp-test this "```")}}{{{linkify this}}}
+{{#if (regexp-test this "```")}}{{{inlineLinks this}}}
 {{else~}}
 
 {{#if (optionIsSet "example-lang")~}}
 {{#if (optionEquals "example-lang" "none")~}}
 ```
-{{{linkify this}}}
+{{{inlineLinks this}}}
 ```
 {{else~}}
 ```{{option "example-lang"}}
-{{{linkify this}}}
+{{{inlineLinks this}}}
 ```
 {{/if~}}
 {{else~}}
-{{{linkify this}}}
+{{{inlineLinks this}}}
 
 {{/if~}}
 

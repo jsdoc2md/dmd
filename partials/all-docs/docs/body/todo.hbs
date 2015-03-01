@@ -4,16 +4,16 @@
 {{#if (option "no-gfm")~}}
 
 {{#each todoList~}}
-{{#if done}}- {{{linkify task}}} ✓
-{{else}}- {{{linkify task}}}
+{{#if done}}- {{{inlineLinks task}}} ✓
+{{else}}- {{{inlineLinks task}}}
 {{/if~}}
 {{/each~}}
 
 {{else~}}
 
 {{#each todoList~}}
-{{#if done}}- [x] {{{linkify task}}}
-{{else}}- [ ] {{{linkify task}}}
+{{#if done}}- [x] {{{inlineLinks task}}}
+{{else}}- [ ] {{{inlineLinks task}}}
 {{/if~}}
 {{/each~}}
 

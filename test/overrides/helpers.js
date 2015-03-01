@@ -1,8 +1,8 @@
 "use strict";
 
-exports.linkify = linkify;
+exports.inlineLinks = inlineLinks;
 
-/* override linkify */
-function linkify(text, options){
+/* override inlineLinks */
+function inlineLinks(text, options){
     return "get me?";
 }

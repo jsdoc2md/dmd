@@ -8,7 +8,7 @@ A library of helpers used exclusively by dmd.. dmd also registers helpers from d
 @module
 */
 exports.escape = escape;
-exports.linkify = linkify;
+exports.inlineLinks = inlineLinks;
 exports.tableHead = tableHead;
 exports.tableHeadHtml = tableHeadHtml;
 exports.tableRow = tableRow;
@@ -30,7 +30,7 @@ function escape(input){
 /**
 replaces {@link} tags with markdown links in the suppied input text
 */
-function linkify(text, options){
+function inlineLinks(text, options){
     if (text){
         var links = ddata.parseLink(text);
         links.forEach(function(link){

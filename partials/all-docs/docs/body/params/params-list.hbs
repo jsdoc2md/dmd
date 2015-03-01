@@ -1,6 +1,6 @@
 {{#if params}}**Params**
 
 {{#each params~}}
-{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{>param-list-name}} {{>linked-type-list types=type.names delimiter=" | " }}{{#if description}} - {{{linkify description}}}{{/if}}  
+{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{>param-list-name}} {{>linked-type-list types=type.names delimiter=" | " }}{{#if description}} - {{{inlineLinks description}}}{{/if}}  
 {{/each}}
 {{/if~}}

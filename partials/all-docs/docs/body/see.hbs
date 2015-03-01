@@ -1,11 +1,11 @@
 {{#if see~}}
 
 {{#if (equal see.length 1)~}}
-**See**: {{{linkify see.[0]}}}  
+**See**: {{{inlineLinks see.[0]}}}  
 {{else~}}
 **See**
 
-{{#each see}}- {{{linkify this}}}
+{{#each see}}- {{{inlineLinks this}}}
 {{/each}}
 
 {{/if~}}
