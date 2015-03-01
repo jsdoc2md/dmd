@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers designed to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation (see [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output). It has <code>[one function](#module_dmd)</code> into which you feed data and a template. 
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers designed to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[single function](#module_dmd)</code> which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -29,7 +29,7 @@ produces this output:
 ## fatUse
 I am a global variable
 
-**Kind**: global member
+**Kind**: global variable
 ```
 
 ## Templates

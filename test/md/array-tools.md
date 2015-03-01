@@ -2,28 +2,26 @@
 ## array-tools
 Useful functions for working with arrays
 
-**Example**  
-```js
-var a = require("array-tools");
-```
 
 * [array-tools](#module_array-tools)
-  * _General_
+  * _any value in_
     * [.arrayify(any)](#module_array-tools.arrayify) ⇒ <code>Array</code>
-    * [.exists(array, value)](#module_array-tools.exists) ⇒ <code>boolean</code>
-    * [.without(array, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
+  * _multiple arrays in_
     * [.union(array1, array2, idKey)](#module_array-tools.union) ⇒ <code>Array</code>
     * [.commonSequence(a, b)](#module_array-tools.commonSequence) ⇒ <code>Array</code>
-    * [.unique(array)](#module_array-tools.unique) ⇒ <code>Array</code>
-    * [.spliceWhile(array, index, test, ...elementN)](#module_array-tools.spliceWhile) ⇒ <code>Array</code>
-    * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
-    * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
-  * _Record sets_
+  * _record set in_
     * [.pluck(arrayOfObjects, ...property)](#module_array-tools.pluck) ⇒ <code>Array</code>
     * [.pick(arrayOfObjects, ...property)](#module_array-tools.pick) ⇒ <code>Array.&lt;object&gt;</code>
     * [.where(arrayOfObjects, query)](#module_array-tools.where) ⇒ <code>Array</code>
     * [.findWhere(arrayOfObjects, query)](#module_array-tools.findWhere) ⇒ <code>object</code>
     * [.sortBy(arrayOfObjects, columns, customOrder)](#module_array-tools.sortBy) ⇒ <code>Array</code>
+  * _single array in_
+    * [.exists(array, value)](#module_array-tools.exists) ⇒ <code>boolean</code>
+    * [.without(array, toRemove)](#module_array-tools.without) ⇒ <code>Array</code>
+    * [.unique(array)](#module_array-tools.unique) ⇒ <code>Array</code>
+    * [.spliceWhile(array, index, test, ...elementN)](#module_array-tools.spliceWhile) ⇒ <code>Array</code>
+    * [.extract(array, query)](#module_array-tools.extract) ⇒ <code>Array</code>
+    * [.flatten()](#module_array-tools.flatten) ⇒ <code>Array</code>
 
 <a name="module_array-tools.arrayify"></a>
 ### a.arrayify(any) ⇒ <code>Array</code>
@@ -34,7 +32,7 @@ Takes input and guarantees an array back. Result can be one of three things:
 - converts `null` or `undefined` to an empty array
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
+**Category**: any value in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -52,54 +50,12 @@ Takes input and guarantees an array back. Result can be one of three things:
 > f(1,2,3)
 [ 1, 2, 3 ]
 ```
-<a name="module_array-tools.exists"></a>
-### a.exists(array, value) ⇒ <code>boolean</code>
-returns true if a value, or nested object value exists in an array
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>Array</code> | the array to search |
-| value | <code>\*</code> | the value to search for |
-
-**Example**  
-```js
-> a.exists([ 1, 2, 3 ], 2)
-true
-> a.exists([ { result: false }, { result: false } ], { result: true })
-false
-> a.exists([ { result: true }, { result: false } ], { result: true })
-true
-> a.exists([ { result: true }, { result: true } ], { result: true })
-true
-```
-<a name="module_array-tools.without"></a>
-### a.without(array, toRemove) ⇒ <code>Array</code>
-Returns the input minus the specified values.
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>Array</code> | the input array |
-| toRemove | <code>\*</code> | a single, or array of values to omit |
-
-**Example**  
-```js
-> a.without([ 1, 2, 3 ], 2)
-[ 1, 3 ]
-> a.without([ 1, 2, 3 ], [ 2, 3 ])
-[ 1 ]
-```
 <a name="module_array-tools.union"></a>
 ### a.union(array1, array2, idKey) ⇒ <code>Array</code>
 merge two arrays into a single array of unique values
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
+**Category**: multiple arrays in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -129,7 +85,7 @@ merge two arrays into a single array of unique values
 Returns the initial elements which both input arrays have in common
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
+**Category**: multiple arrays in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -141,83 +97,12 @@ Returns the initial elements which both input arrays have in common
 > a.commonSequence([1,2,3], [1,2,4])
 [ 1, 2 ]
 ```
-<a name="module_array-tools.unique"></a>
-### a.unique(array) ⇒ <code>Array</code>
-returns an array of unique values
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>Array</code> | input array |
-
-**Example**  
-```js
-> n = [1,6,6,7,1]
-[ 1, 6, 6, 7, 1 ]
-> a.unique(n)
-[ 1, 6, 7 ]
-```
-<a name="module_array-tools.spliceWhile"></a>
-### a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
-splice from `index` until `test` fails
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>Array</code> | the input array |
-| index | <code>number</code> | the position to begin splicing from |
-| test | <code>RegExp</code> | the test to continue splicing while true |
-| ...elementN | <code>\*</code> | the elements to add to the array |
-
-**Example**  
-```js
-> letters = ["a", "a", "b"]
-[ 'a', 'a', 'b' ]
-> a.spliceWhile(letters, 0, /a/, "x")
-[ 'a', 'a' ]
-> letters
-[ 'x', 'b' ]
-```
-<a name="module_array-tools.extract"></a>
-### a.extract(array, query) ⇒ <code>Array</code>
-Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Returns**: <code>Array</code> - the extracted items.  
-**Category**: General  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>Array</code> | the input array, modified directly |
-| query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
-
-<a name="module_array-tools.flatten"></a>
-### a.flatten() ⇒ <code>Array</code>
-flatten an array of arrays into a single array
-
-**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: General  
-**Since**: 1.4.0  
-**Todo**
-
-- [ ] document
-
-**Example**  
-```js
-> numbers = [ 1, 2, [ 3, 4 ], 5 ]
-> a.flatten(numbers)
-[ 1, 2, 3, 4, 5 ]
-```
 <a name="module_array-tools.pluck"></a>
 ### a.pluck(arrayOfObjects, ...property) ⇒ <code>Array</code>
 Plucks the value of the specified property from each object in the input array
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: Record sets  
+**Category**: record set in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -243,7 +128,7 @@ Plucks the value of the specified property from each object in the input array
 return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: Record sets  
+**Category**: record set in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -269,7 +154,7 @@ returns an array containing items from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: Record sets  
+**Category**: record set in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -292,7 +177,7 @@ returns the first item from `arrayOfObjects` where key/value pairs
 from `query` are matched identically
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: Record sets  
+**Category**: record set in  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -313,7 +198,7 @@ from `query` are matched identically
 Sort an array of objects by one or more fields
 
 **Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
-**Category**: Record sets  
+**Category**: record set in  
 **Since**: 1.5.0  
 
 | Param | Type | Description |
@@ -345,4 +230,117 @@ Sort an array of objects by one or more fields
   { a: 4, b: 1, c: 1 },
   { a: 4, b: 3, c: 1 },
   { a: 4, b: 3, c: 1 } ]
+```
+<a name="module_array-tools.exists"></a>
+### a.exists(array, value) ⇒ <code>boolean</code>
+returns true if a value, or nested object value exists in an array
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Category**: single array in  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | the array to search |
+| value | <code>\*</code> | the value to search for |
+
+**Example**  
+```js
+> a.exists([ 1, 2, 3 ], 2)
+true
+> a.exists([ { result: false }, { result: false } ], { result: true })
+false
+> a.exists([ { result: true }, { result: false } ], { result: true })
+true
+> a.exists([ { result: true }, { result: true } ], { result: true })
+true
+```
+<a name="module_array-tools.without"></a>
+### a.without(array, toRemove) ⇒ <code>Array</code>
+Returns the input minus the specified values.
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Category**: single array in  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | the input array |
+| toRemove | <code>\*</code> | a single, or array of values to omit |
+
+**Example**  
+```js
+> a.without([ 1, 2, 3 ], 2)
+[ 1, 3 ]
+> a.without([ 1, 2, 3 ], [ 2, 3 ])
+[ 1 ]
+```
+<a name="module_array-tools.unique"></a>
+### a.unique(array) ⇒ <code>Array</code>
+returns an array of unique values
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Category**: single array in  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | input array |
+
+**Example**  
+```js
+> n = [1,6,6,7,1]
+[ 1, 6, 6, 7, 1 ]
+> a.unique(n)
+[ 1, 6, 7 ]
+```
+<a name="module_array-tools.spliceWhile"></a>
+### a.spliceWhile(array, index, test, ...elementN) ⇒ <code>Array</code>
+splice from `index` until `test` fails
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Category**: single array in  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | the input array |
+| index | <code>number</code> | the position to begin splicing from |
+| test | <code>RegExp</code> | the test to continue splicing while true |
+| ...elementN | <code>\*</code> | the elements to add to the array |
+
+**Example**  
+```js
+> letters = ["a", "a", "b"]
+[ 'a', 'a', 'b' ]
+> a.spliceWhile(letters, 0, /a/, "x")
+[ 'a', 'a' ]
+> letters
+[ 'x', 'b' ]
+```
+<a name="module_array-tools.extract"></a>
+### a.extract(array, query) ⇒ <code>Array</code>
+Removes items from `array` which satisfy the query. Modifies the input array, returns the extracted.
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Returns**: <code>Array</code> - the extracted items.  
+**Category**: single array in  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | the input array, modified directly |
+| query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
+
+<a name="module_array-tools.flatten"></a>
+### a.flatten() ⇒ <code>Array</code>
+flatten an array of arrays into a single array
+
+**Kind**: static method of <code>[array-tools](#module_array-tools)</code>  
+**Category**: single array in  
+**Since**: 1.4.0  
+**Todo**
+
+- [ ] document
+
+**Example**  
+```js
+> numbers = [ 1, 2, [ 3, 4 ], 5 ]
+> a.flatten(numbers)
+[ 1, 2, 3, 4, 5 ]
 ```

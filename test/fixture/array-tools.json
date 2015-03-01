@@ -5,9 +5,6 @@
     "name": "array-tools",
     "kind": "module",
     "description": "Useful functions for working with arrays",
-    "examples": [
-      "var a = require(\"array-tools\");"
-    ],
     "typicalname": "a",
     "order": 0
   },
@@ -43,99 +40,9 @@
         }
       }
     ],
-    "category": "General",
+    "category": "any value in",
     "codeName": "arrayify",
     "order": 3
-  },
-  {
-    "id": "module:array-tools.exists",
-    "longname": "module:array-tools.exists",
-    "name": "exists",
-    "scope": "static",
-    "kind": "function",
-    "description": "returns true if a value, or nested object value exists in an array",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.exists",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        },
-        "description": "the array to search",
-        "name": "array"
-      },
-      {
-        "type": {
-          "names": [
-            "*"
-          ]
-        },
-        "description": "the value to search for",
-        "name": "value"
-      }
-    ],
-    "examples": [
-      "> a.exists([ 1, 2, 3 ], 2)\ntrue\n> a.exists([ { result: false }, { result: false } ], { result: true })\nfalse\n> a.exists([ { result: true }, { result: false } ], { result: true })\ntrue\n> a.exists([ { result: true }, { result: true } ], { result: true })\ntrue"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "boolean"
-          ]
-        }
-      }
-    ],
-    "category": "General",
-    "codeName": "exists",
-    "order": 4
-  },
-  {
-    "id": "module:array-tools.without",
-    "longname": "module:array-tools.without",
-    "name": "without",
-    "scope": "static",
-    "kind": "function",
-    "description": "Returns the input minus the specified values.",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.without",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        },
-        "description": "the input array",
-        "name": "array"
-      },
-      {
-        "type": {
-          "names": [
-            "*"
-          ]
-        },
-        "description": "a single, or array of values to omit",
-        "name": "toRemove"
-      }
-    ],
-    "examples": [
-      "> a.without([ 1, 2, 3 ], 2)\n[ 1, 3 ]\n> a.without([ 1, 2, 3 ], [ 2, 3 ])\n[ 1 ]"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "category": "General",
-    "codeName": "without",
-    "order": 7
   },
   {
     "id": "module:array-tools.union",
@@ -187,7 +94,7 @@
         }
       }
     ],
-    "category": "General",
+    "category": "multiple arrays in",
     "codeName": "union",
     "order": 8
   },
@@ -232,9 +139,336 @@
         }
       }
     ],
-    "category": "General",
+    "category": "multiple arrays in",
     "codeName": "commonSequence",
     "order": 9
+  },
+  {
+    "id": "module:array-tools.pluck",
+    "longname": "module:array-tools.pluck",
+    "name": "pluck",
+    "scope": "static",
+    "kind": "function",
+    "description": "Plucks the value of the specified property from each object in the input array",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.pluck",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        },
+        "description": "the input array of objects",
+        "name": "arrayOfObjects"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "the property(s) to pluck",
+        "name": "property"
+      }
+    ],
+    "examples": [
+      "> var data = [\n    {one: 1, two: 2},\n    {two: \"two\"},\n    {one: \"one\", two: \"zwei\"},\n];\n> a.pluck(data, \"one\");\n[ 1, 'one' ]\n> a.pluck(data, \"two\");\n[ 2, 'two', 'zwei' ]\n> a.pluck(data, \"one\", \"two\");\n[ 1, 'two', 'one' ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "category": "record set in",
+    "codeName": "pluck",
+    "order": 1
+  },
+  {
+    "id": "module:array-tools.pick",
+    "longname": "module:array-tools.pick",
+    "name": "pick",
+    "scope": "static",
+    "kind": "function",
+    "description": "return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.pick",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        },
+        "description": "the input",
+        "name": "arrayOfObjects"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "variable": true,
+        "description": "the properties to include in the result",
+        "name": "property"
+      }
+    ],
+    "examples": [
+      "> data = [\n    { one: \"un\", two: \"deux\", three: \"trois\" },\n    { two: \"two\", one: \"one\" },\n    { four: \"quattro\" },\n    { two: \"zwei\" }\n]\n> a.pick(data, \"two\")\n[ { two: 'deux' },\n  { two: 'two' },\n  { two: 'zwei' } ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        }
+      }
+    ],
+    "category": "record set in",
+    "codeName": "pick",
+    "order": 2
+  },
+  {
+    "id": "module:array-tools.where",
+    "longname": "module:array-tools.where",
+    "name": "where",
+    "scope": "static",
+    "kind": "function",
+    "description": "returns an array containing items from `arrayOfObjects` where key/value pairs\nfrom `query` are matched identically",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.where",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        },
+        "description": "the array to search",
+        "name": "arrayOfObjects"
+      },
+      {
+        "type": {
+          "names": [
+            "query"
+          ]
+        },
+        "description": "an object containing the key/value pairs you want to match",
+        "name": "query"
+      }
+    ],
+    "examples": [
+      "> dudes = [{ name: \"Jim\", age: 8}, { name: \"Clive\", age: 8}, { name: \"Hater\", age: 9}]\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 },\n  { name: 'Hater', age: 9 } ]\n> a.where(dudes, { age: 8})\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 } ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "category": "record set in",
+    "codeName": "where",
+    "order": 5
+  },
+  {
+    "id": "module:array-tools.findWhere",
+    "longname": "module:array-tools.findWhere",
+    "name": "findWhere",
+    "scope": "static",
+    "kind": "function",
+    "description": "returns the first item from `arrayOfObjects` where key/value pairs\nfrom `query` are matched identically",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.findWhere",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        },
+        "description": "the array to search",
+        "name": "arrayOfObjects"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "an object containing the key/value pairs you want to match",
+        "name": "query"
+      }
+    ],
+    "examples": [
+      "> dudes = [{ name: \"Jim\", age: 8}, { name: \"Clive\", age: 8}, { name: \"Hater\", age: 9}]\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 },\n  { name: 'Hater', age: 9 } ]\n> a.findWhere(dudes, { age: 8})\n{ name: 'Jim', age: 8 }"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        }
+      }
+    ],
+    "category": "record set in",
+    "codeName": "findWhere",
+    "order": 6
+  },
+  {
+    "id": "module:array-tools.sortBy",
+    "longname": "module:array-tools.sortBy",
+    "name": "sortBy",
+    "scope": "static",
+    "kind": "function",
+    "description": "Sort an array of objects by one or more fields",
+    "memberof": "module:array-tools",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<object>"
+          ]
+        },
+        "description": "input array",
+        "name": "arrayOfObjects"
+      },
+      {
+        "type": {
+          "names": [
+            "string",
+            "Array.<string>"
+          ]
+        },
+        "description": "column name(s) to sort by",
+        "name": "columns"
+      },
+      {
+        "type": {
+          "names": [
+            "object"
+          ]
+        },
+        "description": "specific sort orders, per columns",
+        "name": "customOrder"
+      }
+    ],
+    "examples": [
+      ">  var fixture = [\n    { a: 4, b: 1, c: 1},\n    { a: 4, b: 3, c: 1},\n    { a: 2, b: 2, c: 3},\n    { a: 2, b: 2, c: 2},\n    { a: 1, b: 3, c: 4},\n    { a: 1, b: 1, c: 4},\n    { a: 1, b: 2, c: 4},\n    { a: 3, b: 3, c: 3},\n    { a: 4, b: 3, c: 1}\n];\n> a.sortBy(fixture, [\"a\", \"b\", \"c\"])\n[ { a: 1, b: 1, c: 4 },\n  { a: 1, b: 2, c: 4 },\n  { a: 1, b: 3, c: 4 },\n  { a: 2, b: 2, c: 2 },\n  { a: 2, b: 2, c: 3 },\n  { a: 3, b: 3, c: 3 },\n  { a: 4, b: 1, c: 1 },\n  { a: 4, b: 3, c: 1 },\n  { a: 4, b: 3, c: 1 } ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "since": "1.5.0",
+    "category": "record set in",
+    "codeName": "sortBy",
+    "order": 14
+  },
+  {
+    "id": "module:array-tools.exists",
+    "longname": "module:array-tools.exists",
+    "name": "exists",
+    "scope": "static",
+    "kind": "function",
+    "description": "returns true if a value, or nested object value exists in an array",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.exists",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        },
+        "description": "the array to search",
+        "name": "array"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "the value to search for",
+        "name": "value"
+      }
+    ],
+    "examples": [
+      "> a.exists([ 1, 2, 3 ], 2)\ntrue\n> a.exists([ { result: false }, { result: false } ], { result: true })\nfalse\n> a.exists([ { result: true }, { result: false } ], { result: true })\ntrue\n> a.exists([ { result: true }, { result: true } ], { result: true })\ntrue"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        }
+      }
+    ],
+    "category": "single array in",
+    "codeName": "exists",
+    "order": 4
+  },
+  {
+    "id": "module:array-tools.without",
+    "longname": "module:array-tools.without",
+    "name": "without",
+    "scope": "static",
+    "kind": "function",
+    "description": "Returns the input minus the specified values.",
+    "memberof": "module:array-tools",
+    "alias": "module:array-tools.without",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        },
+        "description": "the input array",
+        "name": "array"
+      },
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        },
+        "description": "a single, or array of values to omit",
+        "name": "toRemove"
+      }
+    ],
+    "examples": [
+      "> a.without([ 1, 2, 3 ], 2)\n[ 1, 3 ]\n> a.without([ 1, 2, 3 ], [ 2, 3 ])\n[ 1 ]"
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "category": "single array in",
+    "codeName": "without",
+    "order": 7
   },
   {
     "id": "module:array-tools.unique",
@@ -268,7 +502,7 @@
         }
       }
     ],
-    "category": "General",
+    "category": "single array in",
     "codeName": "unique",
     "order": 10
   },
@@ -331,7 +565,7 @@
         }
       }
     ],
-    "category": "General",
+    "category": "single array in",
     "codeName": "spliceWhile",
     "order": 11
   },
@@ -375,7 +609,7 @@
         "description": "the extracted items."
       }
     ],
-    "category": "General",
+    "category": "single array in",
     "codeName": "extract",
     "order": 12
   },
@@ -400,7 +634,7 @@
       }
     ],
     "since": "1.4.0",
-    "category": "General",
+    "category": "single array in",
     "codeName": "flatten",
     "todoList": [
       {
@@ -409,242 +643,5 @@
       }
     ],
     "order": 13
-  },
-  {
-    "id": "module:array-tools.pluck",
-    "longname": "module:array-tools.pluck",
-    "name": "pluck",
-    "scope": "static",
-    "kind": "function",
-    "description": "Plucks the value of the specified property from each object in the input array",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.pluck",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        },
-        "description": "the input array of objects",
-        "name": "arrayOfObjects"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "variable": true,
-        "description": "the property(s) to pluck",
-        "name": "property"
-      }
-    ],
-    "examples": [
-      "> var data = [\n    {one: 1, two: 2},\n    {two: \"two\"},\n    {one: \"one\", two: \"zwei\"},\n];\n> a.pluck(data, \"one\");\n[ 1, 'one' ]\n> a.pluck(data, \"two\");\n[ 2, 'two', 'zwei' ]\n> a.pluck(data, \"one\", \"two\");\n[ 1, 'two', 'one' ]"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "category": "Record sets",
-    "codeName": "pluck",
-    "order": 1
-  },
-  {
-    "id": "module:array-tools.pick",
-    "longname": "module:array-tools.pick",
-    "name": "pick",
-    "scope": "static",
-    "kind": "function",
-    "description": "return a copy of the input `arrayOfObjects` containing objects having only the cherry-picked properties",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.pick",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        },
-        "description": "the input",
-        "name": "arrayOfObjects"
-      },
-      {
-        "type": {
-          "names": [
-            "string"
-          ]
-        },
-        "variable": true,
-        "description": "the properties to include in the result",
-        "name": "property"
-      }
-    ],
-    "examples": [
-      "> data = [\n    { one: \"un\", two: \"deux\", three: \"trois\" },\n    { two: \"two\", one: \"one\" },\n    { four: \"quattro\" },\n    { two: \"zwei\" }\n]\n> a.pick(data, \"two\")\n[ { two: 'deux' },\n  { two: 'two' },\n  { two: 'zwei' } ]"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        }
-      }
-    ],
-    "category": "Record sets",
-    "codeName": "pick",
-    "order": 2
-  },
-  {
-    "id": "module:array-tools.where",
-    "longname": "module:array-tools.where",
-    "name": "where",
-    "scope": "static",
-    "kind": "function",
-    "description": "returns an array containing items from `arrayOfObjects` where key/value pairs\nfrom `query` are matched identically",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.where",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        },
-        "description": "the array to search",
-        "name": "arrayOfObjects"
-      },
-      {
-        "type": {
-          "names": [
-            "query"
-          ]
-        },
-        "description": "an object containing the key/value pairs you want to match",
-        "name": "query"
-      }
-    ],
-    "examples": [
-      "> dudes = [{ name: \"Jim\", age: 8}, { name: \"Clive\", age: 8}, { name: \"Hater\", age: 9}]\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 },\n  { name: 'Hater', age: 9 } ]\n> a.where(dudes, { age: 8})\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 } ]"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "category": "Record sets",
-    "codeName": "where",
-    "order": 5
-  },
-  {
-    "id": "module:array-tools.findWhere",
-    "longname": "module:array-tools.findWhere",
-    "name": "findWhere",
-    "scope": "static",
-    "kind": "function",
-    "description": "returns the first item from `arrayOfObjects` where key/value pairs\nfrom `query` are matched identically",
-    "memberof": "module:array-tools",
-    "alias": "module:array-tools.findWhere",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        },
-        "description": "the array to search",
-        "name": "arrayOfObjects"
-      },
-      {
-        "type": {
-          "names": [
-            "object"
-          ]
-        },
-        "description": "an object containing the key/value pairs you want to match",
-        "name": "query"
-      }
-    ],
-    "examples": [
-      "> dudes = [{ name: \"Jim\", age: 8}, { name: \"Clive\", age: 8}, { name: \"Hater\", age: 9}]\n[ { name: 'Jim', age: 8 },\n  { name: 'Clive', age: 8 },\n  { name: 'Hater', age: 9 } ]\n> a.findWhere(dudes, { age: 8})\n{ name: 'Jim', age: 8 }"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "object"
-          ]
-        }
-      }
-    ],
-    "category": "Record sets",
-    "codeName": "findWhere",
-    "order": 6
-  },
-  {
-    "id": "module:array-tools.sortBy",
-    "longname": "module:array-tools.sortBy",
-    "name": "sortBy",
-    "scope": "static",
-    "kind": "function",
-    "description": "Sort an array of objects by one or more fields",
-    "memberof": "module:array-tools",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Array.<object>"
-          ]
-        },
-        "description": "input array",
-        "name": "arrayOfObjects"
-      },
-      {
-        "type": {
-          "names": [
-            "string",
-            "Array.<string>"
-          ]
-        },
-        "description": "column name(s) to sort by",
-        "name": "columns"
-      },
-      {
-        "type": {
-          "names": [
-            "object"
-          ]
-        },
-        "description": "specific sort orders, per columns",
-        "name": "customOrder"
-      }
-    ],
-    "examples": [
-      ">  var fixture = [\n    { a: 4, b: 1, c: 1},\n    { a: 4, b: 3, c: 1},\n    { a: 2, b: 2, c: 3},\n    { a: 2, b: 2, c: 2},\n    { a: 1, b: 3, c: 4},\n    { a: 1, b: 1, c: 4},\n    { a: 1, b: 2, c: 4},\n    { a: 3, b: 3, c: 3},\n    { a: 4, b: 3, c: 1}\n];\n> a.sortBy(fixture, [\"a\", \"b\", \"c\"])\n[ { a: 1, b: 1, c: 4 },\n  { a: 1, b: 2, c: 4 },\n  { a: 1, b: 3, c: 4 },\n  { a: 2, b: 2, c: 2 },\n  { a: 2, b: 2, c: 3 },\n  { a: 3, b: 3, c: 3 },\n  { a: 4, b: 1, c: 1 },\n  { a: 4, b: 3, c: 1 },\n  { a: 4, b: 3, c: 1 } ]"
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "since": "1.5.0",
-    "category": "Record sets",
-    "codeName": "sortBy",
-    "order": 14
   }
 ]
