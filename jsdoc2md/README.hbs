@@ -76,7 +76,42 @@ $ cat examples/doclet.json | dmd
 ## Customising 
 You can customise the generated documentation to taste by overriding the default, or adding new partials or helpers.
 
-## Override or add partials 
+For example, let's say you wanted a datestamp at the bottom of your generated docs:
+
+```
+**documentation generated on Sun, 01 Mar 2015 09:30:17 GMT**
+```
+
+You need to do two things:
+
+1. Write a helper method to return the date in your preferred format
+2. Override the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial so it includes your new footer
+
+### Write a new helper
+A helper file is just a plain commonJS module. Each method exposed on the module will be available to your templates. So, our new helper file:
+
+```js
+exports.generatedDate = function(){
+    return new Date().toUTCString();
+}
+```
+
+[Read more about helpers in the handlebars documentation](http://handlebarsjs.com).
+
+### Write a new [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial
+Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial containing your new footer:
+
+```hbs
+{{>main-index~}}
+{{>all-docs~}}
+
+**documentation generated on {{generatedDate}}**
+```
+
+### Use
+```
+$ cat your-parsed-docs.json | dmd --partial main-override.hbs --helper generatedDate.js
+```
 
 
 ### Plugins
