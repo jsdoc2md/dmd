@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[single function](#module_dmd)</code> which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
