@@ -55,7 +55,8 @@
   },
   "devDependencies": {
     "tap-spec": "^2.2.1",
-    "tape": "^3"
+    "tape": "^3",
+    "dmd-plugin-example": "~0.1"
   },
   "local-web-server": {
     "port": 8080

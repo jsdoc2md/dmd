@@ -12,9 +12,9 @@ var cli = cliArgs(dmd.cliOptions.concat([
 
 var usage = cli.getUsage({
     title: "dmd",
-    header: "API docs with markdown",
+    header: "Generate markdown API documentation",
     forms: [
-        "$ cat <doc_json> | dmd [<options>]"
+        "$ cat jsdoc-parse-output.json | dmd [<options>]"
     ]
 });
 

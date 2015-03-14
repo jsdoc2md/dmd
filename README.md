@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) data into markdown API documentation. It exposes a <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) output into markdown API documentation. It exposes a <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -19,11 +19,13 @@ With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
     }
 ]
 ```
-this command :
+
+this command:
 ```
 $ cat examples/input/doclet.json | dmd
 ```
-produces this output: 
+
+produces this markdown output: 
 ```
 <a name="fatUse"></a>
 ## fatUse
@@ -32,12 +34,13 @@ I am a global variable
 **Kind**: global variable
 ```
 
-## Usage
+## Install and use
 ### As a library
 Install:
 ```sh
 $ npm install dmd --save
 ```
+
 Example:
 ```js
 var dmd = require("dmd");
@@ -70,7 +73,7 @@ This partial outputs all documentation and an index (if there are enough items).
 This is the readme for a module. 
 
 ## Install
-Install it using the power of thought. While breakdancing.
+Install it using the power of thought. While body-popping.
 
 # API Documentation
 {{>main}}
@@ -81,7 +84,7 @@ and employ it like this:
 $ cat your-docs.json | dmd --template readme-template.hbs
 ```
 
-## Customising 
+## Customising
 You can customise the generated documentation to taste by overriding or adding partials and/or helpers.
 
 For example, let's say you wanted this datestamp at the bottom of your generated docs:
