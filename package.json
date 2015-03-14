@@ -46,17 +46,22 @@
     "all": "npm run p && npm run m; "
   },
   "dependencies": {
+    "ansi-escape-sequences": "^1.0.2",
     "array-tools": "^1.3.0",
-    "boil": "~0.4.0",
     "command-line-args": "~0.5.1",
-    "console-dope": "~0.3.6",
     "ddata": "~0.1.0",
-    "object-tools": "^1.1.1"
+    "file-set": "^0.2.6",
+    "handlebars-comparison": "^2.0.0",
+    "handlebars-json": "^1.0.0",
+    "handlebars-regexp": "^1.0.0",
+    "handlebars-string": "^2.0.1",
+    "object-tools": "^1.1.1",
+    "stream-handlebars": "^0.1.1"
   },
   "devDependencies": {
-    "tap-spec": "^2.2.1",
-    "tape": "^3",
-    "dmd-plugin-example": "~0.1"
+    "dmd-plugin-example": "~0.1",
+    "tap-spec": "^2.2.2",
+    "tape": "^3"
   },
   "local-web-server": {
     "port": 8080

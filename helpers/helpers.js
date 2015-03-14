@@ -1,10 +1,10 @@
 "use strict";
 var ddata = require("ddata");
 var a = require("array-tools");
-var handlebars = require("boil")._handlebars;
+var handlebars = require("stream-handlebars");
 
 /**
-A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata and boil.
+A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
 @module
 */
 exports.escape = escape;

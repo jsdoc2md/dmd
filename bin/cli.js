@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 "use strict";
 var cliArgs = require("command-line-args");
-var dope = require("console-dope");
+var ansi = require("ansi-escape-sequences");
 var dmd = require("../");
 var domain = require("domain");
 var fs = require("fs");
 
 var cli = cliArgs(dmd.cliOptions.concat([
-    { name: "help", alias: "h", type: Boolean }
+    { name: "help", alias: "h", type: Boolean },
+    { name: "verbose", alias: "v", type: Boolean }
 ]));
 
 var usage = cli.getUsage({
@@ -25,7 +26,7 @@ try{
 }
 
 if (argv.help){
-    dope.log(usage);
+    console.log(usage);
     process.exit(0);
 }
 
@@ -33,22 +34,29 @@ if (argv.template){
     argv.template = fs.readFileSync(argv.template, "utf8");
 }
 
-process.stdin.pipe(dmd(argv)).pipe(process.stdout);
+var dmdStream = dmd(argv);
+dmdStream.on("error", halt);
+
+process.stdin.pipe(dmdStream).pipe(process.stdout);
 
 function halt(err){
     if (err.code === "EPIPE") process.exit(0); /* no big deal */
     
     if (argv){
         if (argv.verbose){
-            dope.red.error(err.stack || err);
+            logError("Error: " + err.message);
+            logError(err.stack || err);
         } else {
-            dope.red.error("Error: " + err.message);
-            dope.red.error("(run dmd with --verbose for a stack trace)");
+            logError("Error: " + err.message);
+            logError("(run dmd with --verbose for a stack trace)");
         }
     } else {
-        dope.red.error(err.stack);
+        logError(err.stack);
     }
-    dope.error(usage);
+    console.error(usage);
     process.exit(1);
 }
 
+function logError(msg){
+    console.error(ansi.sgr.format(msg, "red"));
+}
