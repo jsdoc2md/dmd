@@ -1,0 +1,19 @@
+[
+  {
+    "id": "module:cjs/animals",
+    "longname": "module:cjs/animals",
+    "name": "cjs/animals",
+    "kind": "module",
+    "description": "exports animals",
+    "order": 2
+  },
+  {
+    "id": "module:cjs/class",
+    "longname": "module:cjs/class",
+    "name": "cjs/class",
+    "kind": "module",
+    "description": "exports a class",
+    "typicalname": "exp",
+    "order": 9
+  }
+]
