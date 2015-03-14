@@ -30,10 +30,7 @@
 <dt><a href="#Chainable">Chainable</a></dt>
 <dd><p>has a chainable method</p>
 </dd>
-<dt><a href="#GlobalClass">GlobalClass</a></dt>
-<dd><p>a global class</p>
-</dd>
-<dt><a href="#GlobalChildClass">GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dt><a href="#GlobalChildClass">GlobalChildClass</a> ⇐ <code><a href="#new_GlobalClass_new">GlobalClass</a></code></dt>
 <dd><p>the child of global class</p>
 </dd>
 <dt><a href="#customClass">customClass</a></dt>
@@ -162,16 +159,12 @@ exports animals
 
 
 * [cjs/animals](#module_cjs/animals)
-  * _static_
-    * [.cat](#module_cjs/animals.cat) : <code>Animal</code>
-    * [.dog](#module_cjs/animals.dog) : <code>Animal</code>
-  * _inner_
-    * [~Animal](#module_cjs/animals..Animal)
-      * _instance_
-        * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
-      * _inner_
-        * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
-          * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+  * [.cat](#module_cjs/animals.cat) : <code>Animal</code>
+  * [.dog](#module_cjs/animals.dog) : <code>Animal</code>
+  * [~Animal](#module_cjs/animals..Animal)
+    * [animal.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
+    * [Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
+      * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals.cat"></a>
 ### cjs/animals.cat : <code>Animal</code>
@@ -187,12 +180,10 @@ the exported dog
 ### cjs/animals~Animal
 **Kind**: inner class of <code>[cjs/animals](#module_cjs/animals)</code>  
 
-  * [~Animal](#module_cjs/animals..Animal)
-    * _instance_
-      * [.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
-    * _inner_
-      * [~Quadroped](#module_cjs/animals..Animal..Quadroped)
-        * [.legs](#module_cjs/animals..Animal..Quadroped#legs)
+* [~Animal](#module_cjs/animals..Animal)
+  * [animal.type](#module_cjs/animals..Animal#type) : <code>Quadroped</code>
+  * [Animal~Quadroped](#module_cjs/animals..Animal..Quadroped)
+    * [quadroped.legs](#module_cjs/animals..Animal..Quadroped#legs)
 
 <a name="module_cjs/animals..Animal#type"></a>
 #### animal.type : <code>Quadroped</code>
@@ -215,12 +206,9 @@ exports a class
 * [cjs/class](#module_cjs/class)
   * [ExportedClass](#exp_module_cjs/class--ExportedClass) ⏏
     * [new ExportedClass()](#new_module_cjs/class--ExportedClass_new)
-    * _instance_
-      * [.prop](#module_cjs/class--ExportedClass#prop)
-    * _static_
-      * [.staticProp](#module_cjs/class--ExportedClass.staticProp)
-    * _inner_
-      * [~innerProp](#module_cjs/class--ExportedClass..innerProp)
+    * [exportedClass.prop](#module_cjs/class--ExportedClass#prop)
+    * [ExportedClass.staticProp](#module_cjs/class--ExportedClass.staticProp)
+    * [ExportedClass~innerProp](#module_cjs/class--ExportedClass..innerProp)
 
 <a name="exp_module_cjs/class--ExportedClass"></a>
 ### ExportedClass ⏏
@@ -299,14 +287,10 @@ exports a class
 * [cjs/human](#module_cjs/human)
   * [Human](#exp_module_cjs/human--Human) ⏏
     * [new Human()](#new_module_cjs/human--Human_new)
-    * _instance_
-      * [.liver](#module_cjs/human--Human#liver) : <code>[Organ](#module_cjs/human--Human..Organ)</code>
-    * _inner_
-      * [~Organ](#module_cjs/human--Human..Organ)
-        * _instance_
-          * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-        * _inner_
-          * [~Cell](#module_cjs/human--Human..Organ..Cell)
+    * [human.liver](#module_cjs/human--Human#liver) : <code>[Organ](#module_cjs/human--Human..Organ)</code>
+    * [Human~Organ](#module_cjs/human--Human..Organ)
+      * [organ.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+      * [Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="exp_module_cjs/human--Human"></a>
 ### Human ⏏
@@ -328,11 +312,9 @@ a class inside a class
 
 **Kind**: inner class of <code>[Human](#exp_module_cjs/human--Human)</code>  
 
-  * [~Organ](#module_cjs/human--Human..Organ)
-    * _instance_
-      * [.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
-    * _inner_
-      * [~Cell](#module_cjs/human--Human..Organ..Cell)
+* [Human~Organ](#module_cjs/human--Human..Organ)
+  * [organ.redCell](#module_cjs/human--Human..Organ#redCell) : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
+  * [Organ~Cell](#module_cjs/human--Human..Organ..Cell)
 
 <a name="module_cjs/human--Human..Organ#redCell"></a>
 ##### organ.redCell : <code>[Cell](#module_cjs/human--Human..Organ..Cell)</code>
@@ -350,13 +332,11 @@ A module. Refer to it using [this link](#module_linkMod).
 
 
 * [linkMod](#module_linkMod)
-  * _static_
-    * ["event:MyEvent"](#module_linkMod.event_MyEvent)
-  * _inner_
-    * [~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
-      * [new linksYeah()](#new_module_linkMod..linksYeah_new)
-    * [~Math](#external_Math)
-    * [~Date](#external_Date)
+  * ["event:MyEvent"](#module_linkMod.event_MyEvent)
+  * [~linksYeah](#module_linkMod..linksYeah) ⇐ <code>[Math](#external_Math)</code>
+    * [new linksYeah()](#new_module_linkMod..linksYeah_new)
+  * [~Math](#external_Math)
+  * [~Date](#external_Date)
 
 <a name="module_linkMod.event_MyEvent"></a>
 ### "event:MyEvent"
@@ -425,63 +405,18 @@ returns itself
 
 **Chainable**  
 **Kind**: instance method of <code>[Chainable](#Chainable)</code>  
-<a name="GlobalClass"></a>
-## GlobalClass
-a global class
-
-**Kind**: global class  
-
-* [GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * _instance_
-    * [.propOne](#GlobalClass#propOne)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
-  * _static_
-    * [.propTwo](#GlobalClass.propTwo)
-
-<a name="new_GlobalClass_new"></a>
-### new GlobalClass(one, two)
-the global class constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| one | <code>number</code> | first param |
-| two | <code>string</code> | second param |
-
-<a name="GlobalClass#propOne"></a>
-### globalClass.propOne
-an instance property
-
-**Kind**: instance property of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass#methodOne"></a>
-### globalClass.methodOne()
-parent method one
-
-**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass#methodTwo"></a>
-### globalClass.methodTwo()
-parent method two
-
-**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass.propTwo"></a>
-### GlobalClass.propTwo
-a static property
-
-**Kind**: static property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalChildClass"></a>
-## GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
+## GlobalChildClass ⇐ <code>[GlobalClass](#new_GlobalClass_new)</code>
 the child of global class
 
-**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
+**Extends:** <code>[GlobalClass](#new_GlobalClass_new)</code>  
 **Kind**: global class  
 
-* [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
-  * [.propThree](#GlobalChildClass#propThree)
-  * [.propOne](#GlobalClass#propOne)
-  * [.methodTwo()](#GlobalChildClass#methodTwo)
-  * [.methodOne()](#GlobalClass#methodOne)
+* [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#new_GlobalClass_new)</code>
+  * [globalChildClass.propThree](#GlobalChildClass#propThree)
+  * [globalChildClass.propOne](#GlobalClass#propOne)
+  * [globalChildClass.methodTwo()](#GlobalChildClass#methodTwo)
+  * [globalChildClass.methodOne()](#GlobalClass#methodOne)
 
 <a name="GlobalChildClass#propThree"></a>
 ### globalChildClass.propThree
@@ -537,8 +472,8 @@ a class which mixes in Eventful behaviour
 **Kind**: global class  
 
 * [EventfulClass](#EventfulClass)
-  * [.on(eventName, handler)](#EventfulClass#on)
-  * [.fire(eventName, eventData)](#EventfulClass#fire)
+  * [eventfulClass.on(eventName, handler)](#EventfulClass#on)
+  * [eventfulClass.fire(eventName, eventData)](#EventfulClass#fire)
 
 <a name="EventfulClass#on"></a>
 ### eventfulClass.on(eventName, handler)

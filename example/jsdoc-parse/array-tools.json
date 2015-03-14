@@ -4,7 +4,7 @@
     "longname": "module:array-tools",
     "name": "array-tools",
     "kind": "module",
-    "description": "Useful functions for working with arrays",
+    "description": "Lightweight tool-kit for working with arrays.\n\n```js\n> var a = require(\"array-tools\");\n> a.exists([ 1, 2, 3 ], 1)\ntrue\n```\n\nYou can also chain together operations. The process: \n\n1. Pass your input array to array-tools as an argument. \n2. Chain together your operations. From array-tools, you may use {@link module:array-tools.pluck}, {@link module:array-tools.pick}, {@link module:array-tools.arrayify}, {@link module:array-tools.where}, {@link module:array-tools.findWhere}, {@link module:array-tools.without}, {@link module:array-tools.unique}, {@link module:array-tools.spliceWhile}, {@link module:array-tools.extract}, {@link module:array-tools.flatten}, {@link module:array-tools.exists} and {@link module:array-tools.sortBy} in the chain. From core Array methods you may use `filter`, `reverse`, `sort`, `concat`, `slice`, `every`, `some` and `map`.\n3. Finally, following all above methods except {@link module:array-tools.exists}, call `.val()` to extract the result. \n\n```js\n> var a = require(\"array-tools\");\n> a([ 1, 2, 2, 3 ]).exists(1)\ntrue\n> a([ 1, 2, 2, 3 ]).without(1).exists(1)\nfalse\n> a([ 1, 2, 2, 3 ]).without(1).unique().val()\n[ 2, 3 ]\n```",
     "typicalname": "a",
     "order": 0
   },

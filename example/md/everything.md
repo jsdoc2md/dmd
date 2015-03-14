@@ -1,62 +1,36 @@
 ## Modules
-<table>
-  <thead>
-    <tr>
-      <th>Module</th><th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td><a href="#module_cjs/animals">cjs/animals</a></td>
-    <td><p>exports animals</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/class">cjs/class</a></td>
-    <td><p>exports a class</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/falias-obj">cjs/falias-obj</a></td>
-    <td><p>exports a pointer to a function</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/function-alias">cjs/function-alias</a></td>
-    <td><p>exports a pointer to a function</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/human">cjs/human</a></td>
-    <td><p>exports a class</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_linkMod">linkMod</a></td>
-    <td><p>A module. Refer to it using <a href="#module_linkMod">this link</a>.</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/object-alias">cjs/object-alias</a></td>
-    <td><p>a module exporting an object</p>
-</td>
-    </tr>
-<tr>
-    <td><a href="#module_cjs/object">cjs/object</a></td>
-    <td><p>a module exporting <code>exports</code> directly</p>
-</td>
-    </tr>
-</tbody>
-</table>
+<dl>
+<dt><a href="#module_cjs/animals">cjs/animals</a></dt>
+<dd><p>exports animals</p>
+</dd>
+<dt><a href="#module_cjs/class">cjs/class</a></dt>
+<dd><p>exports a class</p>
+</dd>
+<dt><a href="#module_cjs/falias-obj">cjs/falias-obj</a></dt>
+<dd><p>exports a pointer to a function</p>
+</dd>
+<dt><a href="#module_cjs/function-alias">cjs/function-alias</a></dt>
+<dd><p>exports a pointer to a function</p>
+</dd>
+<dt><a href="#module_cjs/human">cjs/human</a></dt>
+<dd><p>exports a class</p>
+</dd>
+<dt><a href="#module_linkMod">linkMod</a></dt>
+<dd><p>A module. Refer to it using <a href="#module_linkMod">this link</a>.</p>
+</dd>
+<dt><a href="#module_cjs/object-alias">cjs/object-alias</a></dt>
+<dd><p>a module exporting an object</p>
+</dd>
+<dt><a href="#module_cjs/object">cjs/object</a></dt>
+<dd><p>a module exporting <code>exports</code> directly</p>
+</dd>
+</dl>
 ## Classes
 <dl>
 <dt><a href="#Chainable">Chainable</a></dt>
 <dd><p>has a chainable method</p>
 </dd>
-<dt><a href="#GlobalClass">GlobalClass</a></dt>
-<dd><p>a global class</p>
-</dd>
-<dt><a href="#GlobalChildClass">GlobalChildClass</a> ⇐ <code><a href="#GlobalClass">GlobalClass</a></code></dt>
+<dt><a href="#GlobalChildClass">GlobalChildClass</a> ⇐ <code><a href="#new_GlobalClass_new">GlobalClass</a></code></dt>
 <dd><p>the child of global class</p>
 </dd>
 <dt><a href="#customClass">customClass</a></dt>
@@ -448,59 +422,14 @@ returns itself
 
 **Chainable**  
 **Kind**: instance method of <code>[Chainable](#Chainable)</code>  
-<a name="GlobalClass"></a>
-## GlobalClass
-a global class
-
-**Kind**: global class  
-
-* [GlobalClass](#GlobalClass)
-  * [new GlobalClass(one, two)](#new_GlobalClass_new)
-  * _instance_
-    * [.propOne](#GlobalClass#propOne)
-    * [.methodOne()](#GlobalClass#methodOne)
-    * [.methodTwo()](#GlobalClass#methodTwo)
-  * _static_
-    * [.propTwo](#GlobalClass.propTwo)
-
-<a name="new_GlobalClass_new"></a>
-### new GlobalClass(one, two)
-the global class constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| one | <code>number</code> | first param |
-| two | <code>string</code> | second param |
-
-<a name="GlobalClass#propOne"></a>
-### globalClass.propOne
-an instance property
-
-**Kind**: instance property of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass#methodOne"></a>
-### globalClass.methodOne()
-parent method one
-
-**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass#methodTwo"></a>
-### globalClass.methodTwo()
-parent method two
-
-**Kind**: instance method of <code>[GlobalClass](#GlobalClass)</code>  
-<a name="GlobalClass.propTwo"></a>
-### GlobalClass.propTwo
-a static property
-
-**Kind**: static property of <code>[GlobalClass](#GlobalClass)</code>  
 <a name="GlobalChildClass"></a>
-## GlobalChildClass ⇐ <code>[GlobalClass](#GlobalClass)</code>
+## GlobalChildClass ⇐ <code>[GlobalClass](#new_GlobalClass_new)</code>
 the child of global class
 
-**Extends:** <code>[GlobalClass](#GlobalClass)</code>  
+**Extends:** <code>[GlobalClass](#new_GlobalClass_new)</code>  
 **Kind**: global class  
 
-* [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#GlobalClass)</code>
+* [GlobalChildClass](#GlobalChildClass) ⇐ <code>[GlobalClass](#new_GlobalClass_new)</code>
   * [.propThree](#GlobalChildClass#propThree)
   * [.propOne](#GlobalClass#propOne)
   * [.methodTwo()](#GlobalChildClass#methodTwo)

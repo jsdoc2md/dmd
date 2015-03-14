@@ -241,16 +241,6 @@
     "order": 0
   },
   {
-    "id": "GlobalClass",
-    "longname": "GlobalClass",
-    "name": "GlobalClass",
-    "scope": "global",
-    "kind": "class",
-    "description": "a global class",
-    "codeName": "GlobalClass",
-    "order": 39
-  },
-  {
     "id": "GlobalChildClass",
     "longname": "GlobalChildClass",
     "name": "GlobalChildClass",

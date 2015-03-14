@@ -1,7 +1,6 @@
 "use strict";
 var test = require("tape");
 var helpers = require("../helpers/helpers");
-var fs = require("fs");
 var a = require("array-tools");
 
 function makeOptions(data){
