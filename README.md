@@ -139,7 +139,7 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ```
 
 ### Create a plugin
-If you wish to version-control and/or share your customisations, then create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/75lb/dmd-plugin-example) as an example and boilerplate to get you started.
+If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/75lb/dmd-plugin-example) as an example and boilerplate to get you started.
 
 Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example: 
 ```
