@@ -150,19 +150,20 @@ $ jsdoc2md lib/my-module.js --plugin dmd-plugin-example
     
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
-### dmd([options]) ⇒ <code>[TransformStream](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
+### dmd([options]) ⇒ <code>[Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
 **Params**
 
-- \[options\] <code>object</code> - The render options  
-  - \[template =<code>&quot;\{\{&gt;main\}\}&quot;</code>\]  - {string} - A handlebars template to insert your documentation into.  
-  - \[heading-depth =<code>2</code>\] <code>number</code> - the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`).  
-  - \[example-lang\] <code>string</code> - for syntax highlighting on github  
-  - \[partial\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
-  - \[helper\] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
-  - \[plugin\] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
+- [options] <code>object</code> - The render options  
+  - [.template] <code>string</code> - A handlebars template to insert your documentation into, the default is `"{{>main}}"`.  
+  - [.heading-depth] <code>number</code> <code> = 2</code> - the heading depth to begin the docs from (e.g. `2` starts from a markdown heading of `"##"`).  
+  - [.example-lang] <code>string</code> - for syntax highlighting on github  
+  - [.partial] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - [.helper] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
+  - [.plugin] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
+
 
 * * *
 
