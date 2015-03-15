@@ -2,7 +2,7 @@
 **Kind**: {{#if (equal kind "event") ~}}
 event emitted{{#if memberof}} by {{>link to=memberof}}{{/if}}  
 {{else~}}
-{{scope}} {{kindInThisContext}}{{#if memberof}} of {{>link to=memberof}}{{/if}}  
+{{scope}} {{#if virtual}}abstract {{/if}}{{kindInThisContext}}{{#if memberof}} of {{>link to=memberof}}{{/if}}  
 {{/if~}}
 {{else~}}
 {{#if isExported}}**Kind**: Exported {{kind}}  
