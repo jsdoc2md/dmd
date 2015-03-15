@@ -41,7 +41,6 @@
       }
     ],
     "category": "any value in",
-    "codeName": "arrayify",
     "order": 3
   },
   {
@@ -95,7 +94,6 @@
       }
     ],
     "category": "multiple arrays in",
-    "codeName": "union",
     "order": 8
   },
   {
@@ -140,7 +138,6 @@
       }
     ],
     "category": "multiple arrays in",
-    "codeName": "commonSequence",
     "order": 9
   },
   {
@@ -186,7 +183,6 @@
       }
     ],
     "category": "record set in",
-    "codeName": "pluck",
     "order": 1
   },
   {
@@ -232,7 +228,6 @@
       }
     ],
     "category": "record set in",
-    "codeName": "pick",
     "order": 2
   },
   {
@@ -277,7 +272,6 @@
       }
     ],
     "category": "record set in",
-    "codeName": "where",
     "order": 5
   },
   {
@@ -322,7 +316,6 @@
       }
     ],
     "category": "record set in",
-    "codeName": "findWhere",
     "order": 6
   },
   {
@@ -377,7 +370,6 @@
     ],
     "since": "1.5.0",
     "category": "record set in",
-    "codeName": "sortBy",
     "order": 14
   },
   {
@@ -422,7 +414,6 @@
       }
     ],
     "category": "single array in",
-    "codeName": "exists",
     "order": 4
   },
   {
@@ -467,7 +458,6 @@
       }
     ],
     "category": "single array in",
-    "codeName": "without",
     "order": 7
   },
   {
@@ -503,7 +493,6 @@
       }
     ],
     "category": "single array in",
-    "codeName": "unique",
     "order": 10
   },
   {
@@ -566,7 +555,6 @@
       }
     ],
     "category": "single array in",
-    "codeName": "spliceWhile",
     "order": 11
   },
   {
@@ -610,7 +598,6 @@
       }
     ],
     "category": "single array in",
-    "codeName": "extract",
     "order": 12
   },
   {
@@ -635,7 +622,6 @@
     ],
     "since": "1.4.0",
     "category": "single array in",
-    "codeName": "flatten",
     "todoList": [
       {
         "done": false,

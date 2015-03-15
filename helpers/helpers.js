@@ -18,6 +18,8 @@ exports._groupBy = _groupBy;
 exports._addGroup = _addGroup;
 exports.add = add;
 exports.kindInThisContext = kindInThisContext;
+exports.titleCase = titleCase;
+exports.parseType = parseType;
 
 /**
 Escape special markdown characters
@@ -244,5 +246,16 @@ function kindInThisContext(options){
         return "variable";
     } else {
         return this.kind;
+    }
+}
+
+function titleCase(string){
+    return string[0].toUpperCase() + string.slice(1);
+}
+
+function parseType(string){
+    var matches = string.match(/{(.*?)}/);
+    if (matches){
+        return matches[1];
     }
 }

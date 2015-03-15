@@ -75,7 +75,6 @@
     "description": "the exported class",
     "memberof": "module:cjs/class",
     "alias": "module:cjs/class",
-    "codeName": "ExportedClass",
     "order": 10
   },
   {
@@ -87,7 +86,6 @@
     "description": "the exported class",
     "memberof": "module:cjs/human",
     "alias": "module:cjs/human",
-    "codeName": "Human",
     "order": 22
   },
   {
@@ -173,7 +171,6 @@
     "description": "the teams",
     "memberof": "module:cjs/object-alias",
     "alias": "module:cjs/object-alias",
-    "codeName": "teams",
     "order": 35
   },
   {
@@ -185,7 +182,6 @@
     "description": "the function",
     "memberof": "module:cjs/falias-obj",
     "alias": "module:cjs/falias-obj",
-    "codeName": "sum",
     "order": 16
   },
   {
@@ -227,7 +223,6 @@
         "description": "the calculation result"
       }
     ],
-    "codeName": "sum",
     "order": 19
   },
   {
@@ -237,7 +232,6 @@
     "scope": "global",
     "kind": "class",
     "description": "has a chainable method",
-    "codeName": "Chainable",
     "order": 0
   },
   {
@@ -250,7 +244,6 @@
       "GlobalClass"
     ],
     "description": "the child of global class",
-    "codeName": "GlobalChildClass",
     "order": 45
   },
   {
@@ -260,7 +253,6 @@
     "scope": "global",
     "kind": "class",
     "description": "a class that has custom tags",
-    "codeName": "customClass",
     "customTags": [
       {
         "tag": "sitcom",
@@ -290,7 +282,6 @@
     "name": "LendsClass",
     "scope": "global",
     "kind": "class",
-    "codeName": "LendsClass",
     "order": 73
   },
   {
@@ -300,7 +291,6 @@
     "scope": "global",
     "kind": "class",
     "alias": "LendsClass2",
-    "codeName": "initialize",
     "order": 75
   },
   {
@@ -313,7 +303,6 @@
       "Eventful"
     ],
     "description": "a class which mixes in Eventful behaviour",
-    "codeName": "EventfulClass",
     "order": 77
   },
   {
@@ -323,7 +312,6 @@
     "scope": "global",
     "kind": "mixin",
     "description": "This provides methods used for event handling. It's not meant to\nbe used directly.",
-    "codeName": "Eventful",
     "order": 78
   },
   {
@@ -342,7 +330,6 @@
     "scope": "global",
     "kind": "member",
     "description": "a global var with custom tags",
-    "codeName": "customTagged",
     "customTags": [
       {
         "tag": "sitcom",
@@ -367,7 +354,6 @@
       ]
     },
     "defaultvalue": "{ one: 1, two: \"yeah?\" }",
-    "codeName": "defaultedOne",
     "order": 52
   },
   {
@@ -382,7 +368,6 @@
       ]
     },
     "defaultvalue": "function f(n){ return something(n); }",
-    "codeName": "defaultedTwo",
     "order": 53
   },
   {
@@ -401,7 +386,6 @@
       ]
     },
     "defaultvalue": "\"something\"",
-    "codeName": "exampleVar",
     "order": 55
   },
   {
@@ -415,7 +399,6 @@
         "external:Clive"
       ]
     },
-    "codeName": "cliveExternal",
     "order": 64
   },
   {
@@ -429,7 +412,6 @@
         "external:String"
       ]
     },
-    "codeName": "stringExternal",
     "order": 65
   },
   {
@@ -439,7 +421,6 @@
     "scope": "global",
     "kind": "member",
     "description": "a variable in the file",
-    "codeName": "fileVar",
     "order": 66
   },
   {
@@ -452,7 +433,6 @@
     "see": [
       "something or other"
     ],
-    "codeName": "seeableVar",
     "order": 88
   },
   {
@@ -466,7 +446,6 @@
         "Array.<module:cjs/human--Human>"
       ]
     },
-    "codeName": "returnsArrayOfType",
     "order": 95
   },
   {
@@ -481,7 +460,6 @@
       ]
     },
     "nullable": true,
-    "codeName": "returnsArrayOfType2",
     "order": 96
   },
   {
@@ -496,7 +474,6 @@
       ]
     },
     "nullable": true,
-    "codeName": "nullableNumber",
     "order": 97
   },
   {
@@ -511,7 +488,6 @@
       ]
     },
     "nullable": false,
-    "codeName": "nonNullableNumber",
     "order": 98
   },
   {
@@ -525,7 +501,6 @@
         "Object"
       ]
     },
-    "codeName": "objectType",
     "order": 99
   },
   {
@@ -541,7 +516,6 @@
       ]
     },
     "defaultvalue": "something",
-    "codeName": "globalVar",
     "order": 101
   },
   {
@@ -550,7 +524,6 @@
     "name": "Documents",
     "scope": "global",
     "kind": "namespace",
-    "codeName": "Documents",
     "order": 82
   },
   {
@@ -606,7 +579,6 @@
         "name": "defaults.treasure.gold"
       }
     ],
-    "codeName": "config",
     "order": 85
   },
   {
@@ -616,7 +588,6 @@
     "scope": "global",
     "kind": "function",
     "description": "a global function with custom tags",
-    "codeName": "customFunction",
     "customTags": [
       {
         "tag": "sitcom",
@@ -638,7 +609,6 @@
     "fires": [
       "event:error"
     ],
-    "codeName": "firesError",
     "order": 67
   },
   {
@@ -652,7 +622,6 @@
       "event:begin",
       "event:end"
     ],
-    "codeName": "firesMany",
     "order": 68
   },
   {
@@ -664,7 +633,6 @@
     "fires": [
       "event:docletEvent"
     ],
-    "codeName": "firesDefinedEvent",
     "order": 69
   },
   {
@@ -674,7 +642,6 @@
     "scope": "global",
     "kind": "function",
     "description": "the function",
-    "codeName": "functionObj",
     "order": 70
   },
   {
@@ -723,7 +690,6 @@
         "name": "four"
       }
     ],
-    "codeName": "globalFunction",
     "order": 72
   },
   {
@@ -752,7 +718,6 @@
         "description": "or an object, or function"
       }
     ],
-    "codeName": "globalFunction",
     "order": 86
   },
   {
@@ -771,7 +736,6 @@
         }
       }
     ],
-    "codeName": "returnsSomething",
     "order": 87
   },
   {
@@ -785,7 +749,6 @@
       "{@link seebar}",
       "bar"
     ],
-    "codeName": "seefoo",
     "order": 89
   },
   {
@@ -798,7 +761,6 @@
       "{@link seefoo} for further information.",
       "{@link http://github.com|GitHub}"
     ],
-    "codeName": "seebar",
     "order": 90
   },
   {
@@ -827,7 +789,6 @@
         "description": "Argument x must be non-zero"
       }
     ],
-    "codeName": "throwingFunction",
     "order": 91
   },
   {
@@ -836,7 +797,6 @@
     "name": "todoFunction1",
     "scope": "global",
     "kind": "function",
-    "codeName": "todoFunction1",
     "todoList": [
       {
         "done": false,
@@ -855,7 +815,6 @@
     "name": "todoFunction2",
     "scope": "global",
     "kind": "function",
-    "codeName": "todoFunction2",
     "todoList": [
       {
         "done": false,
@@ -882,7 +841,6 @@
     "name": "todoFunction3",
     "scope": "global",
     "kind": "function",
-    "codeName": "todoFunction3",
     "todoList": [
       {
         "done": true,
@@ -912,7 +870,6 @@
         "name": "one"
       }
     ],
-    "codeName": "nullableArrayTypeParam",
     "order": 100
   },
   {
@@ -978,7 +935,6 @@
     "kind": "member",
     "description": "leg count",
     "memberof": "module:cjs/animals~Animal~Quadroped",
-    "codeName": "this.legs",
     "order": 7
   },
   {
@@ -994,7 +950,6 @@
         "Quadroped"
       ]
     },
-    "codeName": "this.type",
     "order": 8
   },
   {
@@ -1005,7 +960,6 @@
     "kind": "member",
     "description": "instance property",
     "memberof": "module:cjs/class--ExportedClass",
-    "codeName": "this.prop",
     "order": 12
   },
   {
@@ -1021,7 +975,6 @@
         "module:cjs/human--Human~Organ~Cell"
       ]
     },
-    "codeName": "this.redCell",
     "order": 26
   },
   {
@@ -1037,7 +990,6 @@
         "module:cjs/human--Human~Organ"
       ]
     },
-    "codeName": "this.liver",
     "order": 27
   },
   {
@@ -1048,7 +1000,6 @@
     "kind": "member",
     "description": "an instance property",
     "memberof": "GlobalClass",
-    "codeName": "this.propOne",
     "order": 41
   },
   {
@@ -1059,7 +1010,6 @@
     "kind": "member",
     "description": "an instance property",
     "memberof": "GlobalChildClass",
-    "codeName": "this.propThree",
     "order": 46
   },
   {
@@ -1072,7 +1022,6 @@
     "inherited": true,
     "description": "an instance property",
     "memberof": "GlobalChildClass",
-    "codeName": "this.propOne",
     "order": 104
   },
   {
@@ -1084,7 +1033,6 @@
     "kind": "function",
     "description": "returns itself",
     "memberof": "Chainable",
-    "codeName": "this.method",
     "order": 1
   },
   {
@@ -1095,7 +1043,6 @@
     "kind": "function",
     "description": "parent method one",
     "memberof": "GlobalClass",
-    "codeName": "GlobalClass.prototype.methodOne",
     "order": 43
   },
   {
@@ -1106,7 +1053,6 @@
     "kind": "function",
     "description": "parent method two",
     "memberof": "GlobalClass",
-    "codeName": "GlobalClass.prototype.methodTwo",
     "order": 44
   },
   {
@@ -1118,7 +1064,6 @@
     "overrides": "GlobalClass#methodTwo",
     "description": "overridden child methodTwo",
     "memberof": "GlobalChildClass",
-    "codeName": "GlobalChildClass.prototype.methodTwo",
     "order": 47
   },
   {
@@ -1142,7 +1087,6 @@
     "kind": "function",
     "description": "say something",
     "memberof": "LendsClass2",
-    "codeName": "say",
     "order": 76
   },
   {
@@ -1156,7 +1100,6 @@
     ],
     "description": "Register a handler function to be called whenever this event is fired.",
     "memberof": "EventfulClass",
-    "mixed": true,
     "params": [
       {
         "type": {
@@ -1177,7 +1120,7 @@
         "name": "handler"
       }
     ],
-    "codeName": "on",
+    "mixed": true,
     "order": 102
   },
   {
@@ -1191,7 +1134,6 @@
     ],
     "description": "Fire an event, causing all handlers for that event name to run.",
     "memberof": "EventfulClass",
-    "mixed": true,
     "params": [
       {
         "type": {
@@ -1212,7 +1154,7 @@
         "name": "eventData"
       }
     ],
-    "codeName": "fire",
+    "mixed": true,
     "order": 103
   },
   {
@@ -1225,7 +1167,6 @@
     "inherited": true,
     "description": "parent method one",
     "memberof": "GlobalChildClass",
-    "codeName": "GlobalClass.prototype.methodOne",
     "order": 105
   },
   {
@@ -1241,7 +1182,6 @@
         "Animal"
       ]
     },
-    "codeName": "exports.cat",
     "order": 3
   },
   {
@@ -1257,7 +1197,6 @@
         "Animal"
       ]
     },
-    "codeName": "exports.dog",
     "order": 4
   },
   {
@@ -1268,7 +1207,6 @@
     "kind": "member",
     "description": "a static property for the exported class",
     "memberof": "module:cjs/class--ExportedClass",
-    "codeName": "ExportedClass.staticProp",
     "order": 13
   },
   {
@@ -1279,7 +1217,6 @@
     "kind": "member",
     "description": "an additional static property",
     "memberof": "module:cjs/function-alias--sum",
-    "codeName": "sum.sumthingStatic",
     "order": 20
   },
   {
@@ -1295,7 +1232,6 @@
         "number"
       ]
     },
-    "codeName": "exports.one",
     "order": 37
   },
   {
@@ -1306,7 +1242,6 @@
     "kind": "member",
     "description": "a static property",
     "memberof": "GlobalClass",
-    "codeName": "GlobalClass.propTwo",
     "order": 42
   },
   {
@@ -1317,7 +1252,6 @@
     "kind": "member",
     "description": "An ordinary newspaper.",
     "memberof": "Documents",
-    "codeName": "Newspaper",
     "order": 83
   },
   {
@@ -1328,7 +1262,6 @@
     "kind": "function",
     "description": "a static method on the exported function",
     "memberof": "module:cjs/falias-obj--sum",
-    "codeName": "sum.extra",
     "order": 17
   },
   {
@@ -1342,7 +1275,6 @@
     "examples": [
       "this is the example"
     ],
-    "codeName": "exports.two",
     "order": 38
   },
   {
@@ -1363,7 +1295,6 @@
     "kind": "function",
     "description": "a static method on the function",
     "memberof": "functionObj",
-    "codeName": "functionObj.extra",
     "order": 71
   },
   {
@@ -1374,7 +1305,6 @@
     "kind": "function",
     "description": "say something",
     "memberof": "LendsClass",
-    "codeName": "say",
     "order": 74
   },
   {
@@ -1405,7 +1335,6 @@
         "name": "handler"
       }
     ],
-    "codeName": "on",
     "order": 79
   },
   {
@@ -1436,7 +1365,6 @@
         "name": "eventData"
       }
     ],
-    "codeName": "fire",
     "order": 80
   },
   {
@@ -1456,7 +1384,6 @@
     "scope": "inner",
     "kind": "class",
     "memberof": "module:cjs/animals",
-    "codeName": "Animal",
     "order": 5
   },
   {
@@ -1466,7 +1393,6 @@
     "scope": "inner",
     "kind": "class",
     "memberof": "module:cjs/animals~Animal",
-    "codeName": "Quadroped",
     "order": 6
   },
   {
@@ -1477,7 +1403,6 @@
     "kind": "class",
     "description": "a class inside a class",
     "memberof": "module:cjs/human--Human",
-    "codeName": "Organ",
     "order": 24
   },
   {
@@ -1488,7 +1413,6 @@
     "kind": "class",
     "description": "a class inside a class inside a class",
     "memberof": "module:cjs/human--Human~Organ",
-    "codeName": "Cell",
     "order": 25
   },
   {
@@ -1504,7 +1428,6 @@
     "fires": [
       "module:linkMod.event:MyEvent"
     ],
-    "codeName": "linksYeah",
     "order": 32
   },
   {
@@ -1515,7 +1438,6 @@
     "kind": "member",
     "description": "inner module property",
     "memberof": "module:cjs/class--ExportedClass",
-    "codeName": "innerProp",
     "order": 14
   },
   {

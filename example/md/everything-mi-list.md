@@ -424,8 +424,8 @@ overridden child methodTwo
 a class that has custom tags
 
 **Kind**: global class  
-**sitcom**: Only Fools  
-**character**: Rodney Trotter  
+**Sitcom**: Only Fools  
+**Character**: Rodney Trotter  
 <a name="new_customClass_new"></a>
 ### new customClass()
 the constructor
@@ -532,8 +532,8 @@ phantom mixin
 a global var with custom tags
 
 **Kind**: global variable  
-**sitcom**: The Office  
-**character**: Oggmeister  
+**Sitcom**: The Office  
+**Character**: Oggmeister  
 <a name="defaultedOne"></a>
 ## defaultedOne : <code>object</code>
 **Default**: <code>{ one: 1, two: &quot;yeah?&quot; }</code>  
@@ -617,8 +617,8 @@ An ordinary newspaper.
 a global function with custom tags
 
 **Kind**: global function  
-**sitcom**: Brass Eye  
-**character**: Noel Edmonds  
+**Sitcom**: Brass Eye  
+**Character**: Noel Edmonds  
 <a name="firesError"></a>
 ## firesError()
 **Kind**: global function  

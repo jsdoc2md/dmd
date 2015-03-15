@@ -17,7 +17,6 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.getFinalPosition",
     "order": 9
   },
   {
@@ -36,7 +35,6 @@
     "isExported": true,
     "memberof": "module:MapView",
     "alias": "module:MapView",
-    "codeName": "MapView",
     "order": 2
   },
   {
@@ -109,7 +107,6 @@
       }
     ],
     "access": "protected",
-    "codeName": "MapView.DEFAULT_OPTIONS",
     "order": 4
   },
   {
@@ -130,7 +127,6 @@
         "description": "Map object."
       }
     ],
-    "codeName": "MapView.prototype.getMap",
     "order": 6
   },
   {
@@ -172,7 +168,6 @@
         "name": "callback"
       }
     ],
-    "codeName": "MapView.prototype.setPosition",
     "order": 7
   },
   {
@@ -193,7 +188,6 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.getPosition",
     "order": 8
   },
   {
@@ -241,7 +235,6 @@
         "codeName": "LEAFLET"
       }
     ],
-    "codeName": "MapType",
     "order": 1
   },
   {
@@ -262,7 +255,6 @@
         "description": "Zoom-level."
       }
     ],
-    "codeName": "MapView.prototype.getZoom",
     "order": 10
   },
   {
@@ -294,7 +286,6 @@
         "description": "Position in pixels, relative to the left-top of the mapView."
       }
     ],
-    "codeName": "MapView.prototype.pointFromPosition",
     "order": 11
   },
   {
@@ -326,7 +317,6 @@
         "description": "Position in geographical coordinates."
       }
     ],
-    "codeName": "MapView.prototype.positionFromPoint",
     "order": 12
   },
   {
@@ -347,7 +337,6 @@
         "description": "Size of the mapView."
       }
     ],
-    "codeName": "MapView.prototype.getSize",
     "order": 13
   },
   {
@@ -358,7 +347,6 @@
     "kind": "function",
     "description": "Halts any pending transitions.",
     "memberof": "module:MapView--MapView",
-    "codeName": "MapView.prototype.halt",
     "order": 14
   },
   {
@@ -379,7 +367,6 @@
         "description": "True when there are active transitions running."
       }
     ],
-    "codeName": "MapView.prototype.isActive",
     "order": 15
   },
   {

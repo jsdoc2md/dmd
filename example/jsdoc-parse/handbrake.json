@@ -35,7 +35,6 @@
         "string"
       ]
     },
-    "codeName": "this.output",
     "order": 1
   },
   {
@@ -51,7 +50,6 @@
         "object"
       ]
     },
-    "codeName": "this.options",
     "order": 2
   },
   {
@@ -105,7 +103,6 @@
         "codeName": "NOT_FOUND"
       }
     ],
-    "codeName": "Handbrake.prototype.eError",
     "order": 10
   },
   {
@@ -331,7 +328,6 @@
         }
       }
     ],
-    "codeName": "spawn",
     "order": 13
   },
   {
@@ -367,7 +363,6 @@
     "examples": [
       "```js\nvar hbjs = require(\"handbrake-js\");\n\nhbjs.exec({ preset-list: true }, function(err, stdout, stderr){\n    if (err) throw err;\n    console.log(stdout);\n});\n```"
     ],
-    "codeName": "exec",
     "order": 14
   },
   {
@@ -390,7 +385,6 @@
       "module:handbrake-js~Handbrake#event:end",
       "module:handbrake-js~Handbrake#event:complete"
     ],
-    "codeName": "Handbrake",
     "order": 0
   }
 ]

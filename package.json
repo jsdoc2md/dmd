@@ -51,6 +51,7 @@
     "command-line-args": "~0.5.1",
     "ddata": "~0.1.0",
     "file-set": "^0.2.6",
+    "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",

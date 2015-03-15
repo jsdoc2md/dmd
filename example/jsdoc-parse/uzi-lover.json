@@ -41,7 +41,6 @@
     "see": [
       "https://www.youtube.com/watch?v=1sxZ4tsp8gc"
     ],
-    "codeName": "FurQ",
     "order": 0
   },
   {
@@ -50,7 +49,6 @@
     "name": "Rapper",
     "scope": "global",
     "kind": "class",
-    "codeName": "Rapper",
     "order": 13
   },
   {
@@ -60,7 +58,6 @@
     "scope": "global",
     "kind": "function",
     "description": "to plant ones fist in a buster's mush",
-    "codeName": "plant",
     "order": 11
   },
   {
@@ -80,7 +77,6 @@
       "\"Uzi like a metal dick in my hand.\"",
       "\"Magazine like a big testicle gland.\""
     ],
-    "codeName": "this.wannaTryIt",
     "order": 5
   },
   {
@@ -91,7 +87,6 @@
     "kind": "member",
     "description": "best student",
     "memberof": "Rapper.train~School",
-    "codeName": "this.bestStudent",
     "order": 19
   },
   {
@@ -107,7 +102,6 @@
       ]
     },
     "defaultvalue": "UZI",
-    "codeName": "this.LOVE",
     "order": 4
   },
   {
@@ -119,7 +113,6 @@
     "overrides": "Rapper#spit",
     "description": "override",
     "memberof": "FurQ",
-    "codeName": "this.spit",
     "order": 6
   },
   {
@@ -130,7 +123,6 @@
     "kind": "function",
     "description": "spit",
     "memberof": "Rapper",
-    "codeName": "this.spit",
     "order": 14
   },
   {
@@ -141,7 +133,6 @@
     "kind": "function",
     "description": "battle",
     "memberof": "Rapper",
-    "codeName": "this.battle",
     "order": 15
   },
   {
@@ -154,7 +145,6 @@
     "inherited": true,
     "description": "battle",
     "memberof": "FurQ",
-    "codeName": "this.battle",
     "order": 20
   },
   {
@@ -165,7 +155,6 @@
     "kind": "function",
     "description": "to plant ones fist in a buster's mush",
     "memberof": "FurQ",
-    "codeName": "plant",
     "order": 21
   },
   {
@@ -212,7 +201,6 @@
       "uziLover.kill();"
     ],
     "category": "standard",
-    "codeName": "this.kill",
     "order": 2
   },
   {
@@ -238,7 +226,6 @@
       "uziLover.respect(function(err, gain){\n    console.log(gain);\n});"
     ],
     "category": "standard",
-    "codeName": "this.respect",
     "order": 3
   },
   {
@@ -301,7 +288,6 @@
         "codeName": "MUTHAFUCKA"
       }
     ],
-    "codeName": "FurQ.enemy",
     "order": 10
   },
   {
@@ -316,7 +302,6 @@
       "var peace = FurQ.peace();"
     ],
     "deprecated": true,
-    "codeName": "FurQ.peace",
     "order": 9
   },
   {
@@ -327,7 +312,6 @@
     "kind": "function",
     "description": "train new rappers",
     "memberof": "Rapper",
-    "codeName": "Rapper.train",
     "order": 16
   },
   {
@@ -337,7 +321,6 @@
     "scope": "inner",
     "kind": "class",
     "memberof": "Rapper.train",
-    "codeName": "School",
     "order": 17
   },
   {
