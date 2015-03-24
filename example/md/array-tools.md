@@ -226,7 +226,7 @@ Sort an array of objects by one or more fields
 | Param | Type | Description |
 | --- | --- | --- |
 | arrayOfObjects | <code>Array.&lt;object&gt;</code> | input array |
-| columns | <code>string</code> \| <code>Array.&lt;string&gt;</code> | column name(s) to sort by |
+| columns | <code>string</code> &#124; <code>Array.&lt;string&gt;</code> | column name(s) to sort by |
 | customOrder | <code>object</code> | specific sort orders, per columns |
 
 **Example**  
@@ -347,7 +347,7 @@ Removes items from `array` which satisfy the query. Modifies the input array, re
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | the input array, modified directly |
-| query | <code>function</code> \| <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
+| query | <code>function</code> &#124; <code>object</code> | Per item in the array, if either the function returns truthy or the exists query is satisfied, the item is extracted |
 
 <a name="module_array-tools.flatten"></a>
 ### a.flatten() ⇒ <code>Array</code>

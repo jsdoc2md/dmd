@@ -29,7 +29,7 @@ Expands file patterns, returning the matched and unmatched files and directories
 
 | Param | Type | Description |
 | --- | --- | --- |
-| patternList | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
+| patternList | <code>string</code> &#124; <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet#list"></a>
 #### fileSet.list : <code>Array.&lt;string&gt;</code>
@@ -59,7 +59,7 @@ add file patterns to the set
 
 | Param | Type | Description |
 | --- | --- | --- |
-| files | <code>string</code> \| <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
+| files | <code>string</code> &#124; <code>Array.&lt;string&gt;</code> | A pattern, or array of patterns to expand |
 
 <a name="module_file-set--FileSet.eFileType"></a>
 #### FileSet.eFileType : <code>number</code>

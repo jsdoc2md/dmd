@@ -29,7 +29,7 @@
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*' > example/jsdoc-parse/everything.json",
     "p2": "jsdoc-parse ../file-set/lib/file-set.js > example/jsdoc-parse/file-set.json",
     "p3": "jsdoc-parse ../handbrake-js/lib/* > example/jsdoc-parse/handbrake.json",
-    "p4": "jsdoc-parse ../jsdoc-to-markdown/example/src/uzi-lover.js > example/jsdoc-parse/uzi-lover.json",
+    "p4": "jsdoc-parse ../jsdoc-to-markdown/example/src/class-furq.js > example/jsdoc-parse/uzi-lover.json",
     "p5": "jsdoc-parse ~/Documents/vendor/famous-map/MapView.js --sort-by none > example/jsdoc-parse/MapView.json",
     "p7": "jsdoc-parse ../array-tools/lib/array-tools.js > example/jsdoc-parse/array-tools.json",
     "m1": "cat example/jsdoc-parse/everything.json | dmd > example/md/everything.md;",
