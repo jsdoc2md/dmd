@@ -1,10 +1,10 @@
 [![view on npm](http://img.shields.io/npm/v/dmd.svg)](https://www.npmjs.org/package/dmd)
 [![npm module downloads per month](http://img.shields.io/npm/dm/dmd.svg)](https://www.npmjs.org/package/dmd)
 [![Build Status](https://travis-ci.org/75lb/dmd.svg?branch=next)](https://travis-ci.org/75lb/dmd)
-[![Dependency Status](https://david-dm.org/75lb/dmd.svg)](https://david-dm.org/75lb/dmd)
+[![Dependency Status](https://david-dm.org/jsdoc2md/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/75lb/jsdoc-parse) output into markdown API documentation. It exposes <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) for example output.
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2mdjsdoc-parse) output into markdown API documentation. It exposes <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -63,7 +63,7 @@ $ dmd --help
 ```
 
 ## Templates
-The default template contains a single call to the  [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial:
+The default template contains a single call to the  [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
@@ -97,7 +97,7 @@ For example, let's say you wanted this datestamp at the bottom of your generated
 You need to do two things:
 
 1. Write a helper method to return the date in your preferred format
-2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial.
+2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial.
 
 ### Write a new helper
 A helper file is just a plain commonJS module. Each method exposed on the module will be available as a helper in your templates. So, our new helper module:
@@ -110,8 +110,8 @@ exports.generatedDate = function(){
 
 [Read more about helpers in the handlebars documentation](http://handlebarsjs.com).
 
-### Write a new [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial
-Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
+### Write a new [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial
+Create a duplicate of the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
 
 ```hbs
 {{>main-index~}}
@@ -123,7 +123,7 @@ Create a duplicate of the [main](https://github.com/75lb/dmd/blob/master/partial
 *the file basename of a partial is significant - if you wish to override `main` (invoked by `{{>main}}`) then the filename of your partial must be `main.hbs`.*
 
 ### Employ
-To use the overrides, pass their file names as options to dmd (or [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown) if you're using that):
+To use the overrides, pass their file names as options to dmd (or [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown) if you're using that):
 ```
 $ cat your-parsed-docs.json | dmd --partial custom/main.hbs --helper custom/generatedDate.js
 ```
@@ -139,7 +139,7 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ```
 
 ### Create a plugin
-If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/75lb/dmd-plugin-example) as an example and boilerplate to get you started.
+If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2mddmd-plugin-example) as an example and boilerplate to get you started.
 
 Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example: 
 ```
@@ -163,8 +163,14 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
   - [.partial] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
   - [.helper] <code>string</code> | <code>Array.&lt;string&gt;</code> - overrides  
   - [.plugin] <code>string</code> | <code>Array.&lt;string&gt;</code> - packages containing overrides  
+  - [.module-index-format] <code>string</code> - -  
+  - [.global-index-format] <code>string</code> - -  
+  - [.param-list-format] <code>string</code> - -  
+  - [.property-list-format] <code>string</code> - -  
+  - [.member-index-format] <code>string</code> - -  
+  - [.group-by] <code>Array.&lt;string&gt;</code> - -  
 
 
 * * *
 
-&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown).
