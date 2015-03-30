@@ -25,7 +25,7 @@ this command:
 $ cat examples/input/doclet.json | dmd
 ```
 
-produces this markdown output:
+produces this markdown output: 
 ```
 <a name="fatUse"></a>
 ## fatUse
@@ -52,7 +52,7 @@ process.stdin.pipe(dmd(options)).pipe(process.stdout);
 ```
 
 ### At the command line
-Install the `dmd` tool globally:
+Install the `dmd` tool globally: 
 ```sh
 $ npm install -g dmd
 ```
@@ -71,7 +71,7 @@ The default template contains a single call to the  [main](https://github.com/js
 This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template. For example, you could write a template like this:
 ```hbs
 # A Module
-This is the readme for a module.
+This is the readme for a module. 
 
 ## Install
 Install it using the power of thought. While body-popping.
@@ -80,7 +80,7 @@ Install it using the power of thought. While body-popping.
 {{>main}}
 ```
 
-and employ it like this:
+and employ it like this: 
 ```
 $ cat your-docs.json | dmd --template readme-template.hbs
 ```
@@ -128,7 +128,7 @@ To use the overrides, pass their file names as options to dmd (or [jsdoc-to-mark
 $ cat your-parsed-docs.json | dmd --partial custom/main.hbs --helper custom/generatedDate.js
 ```
 
-If you have multiple overrides, the syntax is
+If you have multiple overrides, the syntax is 
 ```
 $ cat your-parsed-docs.json | dmd --partial override1.hbs override2.hbs
 ```
@@ -141,13 +141,13 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ### Create a plugin
 If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2md/dmd-plugin-example) as an example and boilerplate to get you started.
 
-Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example:
+Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example: 
 ```
 $ cd my-project
 $ npm install dmd-plugin-example --save-dev
 $ jsdoc2md lib/my-module.js --plugin dmd-plugin-example
 ```
-
+    
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
 ### dmd([options]) ⇒ <code>[Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
