@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/jsdoc2md/dmd.svg)](https://david-dm.org/75lb/dmd)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2mdjsdoc-parse) output into markdown API documentation. It exposes <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown) for example output.
+dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2md/jsdoc-parse) output into markdown API documentation. It exposes <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) for example output.
 
 ## Synopsis
 With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
@@ -25,7 +25,7 @@ this command:
 $ cat examples/input/doclet.json | dmd
 ```
 
-produces this markdown output: 
+produces this markdown output:
 ```
 <a name="fatUse"></a>
 ## fatUse
@@ -52,7 +52,7 @@ process.stdin.pipe(dmd(options)).pipe(process.stdout);
 ```
 
 ### At the command line
-Install the `dmd` tool globally: 
+Install the `dmd` tool globally:
 ```sh
 $ npm install -g dmd
 ```
@@ -63,7 +63,7 @@ $ dmd --help
 ```
 
 ## Templates
-The default template contains a single call to the  [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial:
+The default template contains a single call to the  [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
@@ -71,7 +71,7 @@ The default template contains a single call to the  [main](https://github.com/js
 This partial outputs all documentation and an index (if there are enough items). You can customise the output by supplying your own template. For example, you could write a template like this:
 ```hbs
 # A Module
-This is the readme for a module. 
+This is the readme for a module.
 
 ## Install
 Install it using the power of thought. While body-popping.
@@ -80,7 +80,7 @@ Install it using the power of thought. While body-popping.
 {{>main}}
 ```
 
-and employ it like this: 
+and employ it like this:
 ```
 $ cat your-docs.json | dmd --template readme-template.hbs
 ```
@@ -97,7 +97,7 @@ For example, let's say you wanted this datestamp at the bottom of your generated
 You need to do two things:
 
 1. Write a helper method to return the date in your preferred format
-2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial.
+2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial.
 
 ### Write a new helper
 A helper file is just a plain commonJS module. Each method exposed on the module will be available as a helper in your templates. So, our new helper module:
@@ -110,8 +110,8 @@ exports.generatedDate = function(){
 
 [Read more about helpers in the handlebars documentation](http://handlebarsjs.com).
 
-### Write a new [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial
-Create a duplicate of the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
+### Write a new [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial
+Create a duplicate of the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
 
 ```hbs
 {{>main-index~}}
@@ -123,12 +123,12 @@ Create a duplicate of the [main](https://github.com/jsdoc2mddmd/blob/master/part
 *the file basename of a partial is significant - if you wish to override `main` (invoked by `{{>main}}`) then the filename of your partial must be `main.hbs`.*
 
 ### Employ
-To use the overrides, pass their file names as options to dmd (or [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown) if you're using that):
+To use the overrides, pass their file names as options to dmd (or [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) if you're using that):
 ```
 $ cat your-parsed-docs.json | dmd --partial custom/main.hbs --helper custom/generatedDate.js
 ```
 
-If you have multiple overrides, the syntax is 
+If you have multiple overrides, the syntax is
 ```
 $ cat your-parsed-docs.json | dmd --partial override1.hbs override2.hbs
 ```
@@ -139,15 +139,15 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ```
 
 ### Create a plugin
-If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2mddmd-plugin-example) as an example and boilerplate to get you started.
+If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2md/dmd-plugin-example) as an example and boilerplate to get you started.
 
-Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example: 
+Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example:
 ```
 $ cd my-project
 $ npm install dmd-plugin-example --save-dev
 $ jsdoc2md lib/my-module.js --plugin dmd-plugin-example
 ```
-    
+
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
 ### dmd([options]) ⇒ <code>[Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
@@ -173,4 +173,4 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 
 * * *
 
-&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2mdjsdoc-to-markdown).
+&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
