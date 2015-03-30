@@ -63,7 +63,7 @@ $ dmd --help
 ```
 
 ## Templates
-The default template contains a single call to the  [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial:
+The default template contains a single call to the  [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
 {{>main}}
 ```
@@ -97,7 +97,7 @@ For example, let's say you wanted this datestamp at the bottom of your generated
 You need to do two things:
 
 1. Write a helper method to return the date in your preferred format
-2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial.
+2. Override the appropriate partial, inserting a mustache tag (e.g. ``) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial.
 
 ### Write a new helper
 A helper file is just a plain commonJS module. Each method exposed on the module will be available as a helper in your templates. So, our new helper module:
@@ -110,8 +110,8 @@ exports.generatedDate = function(){
 
 [Read more about helpers in the handlebars documentation](http://handlebarsjs.com).
 
-### Write a new [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial
-Create a duplicate of the [main](https://github.com/jsdoc2mddmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
+### Write a new [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial
+Create a duplicate of the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial (typically in the project you are documenting) containing your new footer:
 
 ```hbs
 {{>main-index~}}
@@ -139,7 +139,7 @@ $ cat your-parsed-docs.json | dmd --partial overrides/*.hbs
 ```
 
 ### Create a plugin
-If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2mddmd-plugin-example) as an example and boilerplate to get you started.
+If you wish to version-control and/or share your customisations you can create a plugin for distribution via npm. See [dmd-plugin-example](https://github.com/jsdoc2md/dmd-plugin-example) as an example and boilerplate to get you started.
 
 Once you have your plugin, install it where required as a dev-dependency. Then supply the plugin package name(s) to the `--plugin` option, for example:
 ```
