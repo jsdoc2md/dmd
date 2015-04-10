@@ -171,9 +171,9 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
   </thead>
   <tbody>
 <tr>
-    <td>template</td><td><code>string</code></td><td>A handlebars template to insert your documentation into, the default is `"{{>main}}"`.</td>
+    <td>template</td><td><code>string</code></td><td>A handlebars template to insert your documentation into, the default is <code>"{{>main}}"</code>.</td>
     </tr><tr>
-    <td>heading-depth</td><td><code>number</code></td><td>the heading depth to begin the docs from. For example, `2` (the default) starts from a markdown heading of `"##"`).</td>
+    <td>heading-depth</td><td><code>number</code></td><td>the heading depth to begin the docs from. For example, <code>2</code> (the default) starts from a markdown heading of <code>"##"</code>).</td>
     </tr><tr>
     <td>plugin</td><td><code>string</code> | <code>Array.&lt;string&gt;</code></td><td>Use an installed package containing helper and/or partial overrides</td>
     </tr><tr>
@@ -183,11 +183,11 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
     </tr><tr>
     <td>example-lang</td><td><code>string</code></td><td>the language to use in fenced-code blocks</td>
     </tr><tr>
-    <td>name-format</td><td><code>string</code></td><td>specify `code` to format identifier names as code</td>
+    <td>name-format</td><td><code>string</code></td><td>specify <code>code</code> to format identifier names as code</td>
     </tr><tr>
     <td>no-gfm</td><td><code>boolean</code></td><td>By default, dmd generates github-flavoured markdown. Not all markdown parsers render gfm correctly. If your generated docs look incorrect on sites other than Github (e.g. npmjs.org) try enabling this option to disable Github-specific syntax.</td>
     </tr><tr>
-    <td>separators</td><td><code>boolean</code></td><td>Put <hr> breaks between identifiers. Improves readability on bulky docs.</td>
+    <td>separators</td><td><code>boolean</code></td><td>Put <code><hr></code> breaks between identifiers. Improves readability on bulky docs.</td>
     </tr><tr>
     <td>module-index-format</td><td><code>string</code></td><td>-</td>
     </tr><tr>
