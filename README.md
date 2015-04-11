@@ -163,6 +163,11 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 All dmd options including defaults
 
 **Kind**: inner class of <code>[dmd](#exp_module_dmd--dmd)</code>  
+
+* [~DmdOptions](#module_dmd--dmd..DmdOptions)
+  * [.template](#module_dmd--dmd..DmdOptions#template) : <code>string</code>
+  * [.heading-depth](#module_dmd--dmd..DmdOptions#heading-depth) : <code>number</code>
+
 <a name="module_dmd--dmd..DmdOptions#template"></a>
 ##### dmdOptions.template : <code>string</code>
 The template the supplied documentation will be rendered into. Use the default or supply your own template for full control over the output.
@@ -184,6 +189,16 @@ outputs:
 ```
 The description from my class: MyClass is full of wonder
 ```
+the equivation operation using the command-line tool: 
+```
+$ dmd --template template.hbs --src template.js
+```
+<a name="module_dmd--dmd..DmdOptions#heading-depth"></a>
+##### dmdOptions.heading-depth : <code>number</code>
+The initial heading depth.
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>2</code>  
 
 * * *
 
