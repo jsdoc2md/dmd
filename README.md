@@ -170,60 +170,16 @@ The template the supplied documentation will be rendered into. Use the default o
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;{{&gt;main}}&quot;</code>  
 **Example**  
+```js
 var fs = require("fs");
-    var dmd = require("../");
+var dmd = require("../");
 
-    var template = "The description from my class: {{#class name='MyClass'}}{{description}}{{/class}}";
+var template = "The description from my class: {{#class name='MyClass'}}{{description}}{{/class}}";
 
-    fs.createReadStream(__dirname + "/my-class.json")
-        .pipe(dmd({ template: template }))
-        .pipe(process.stdout);
-
-<a name="module_dmd--dmd..dmdOptions1"></a>
-#### dmd~dmdOptions1 : <code>object</code>
-**Kind**: inner typedef of <code>[dmd](#exp_module_dmd--dmd)</code>  
-**Properties**
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th><th>Type</th><th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>template</td><td><code>string</code></td><td>A handlebars template to insert your documentation into, the default is <code>"{{>main}}"</code>.</td>
-    </tr><tr>
-    <td>heading-depth</td><td><code>number</code></td><td>the heading depth to begin the docs from. For example, <code>2</code> (the default) starts from a markdown heading of <code>"##"</code>).</td>
-    </tr><tr>
-    <td>plugin</td><td><code>string</code> | <code>Array.&lt;string&gt;</code></td><td>Use an installed package containing helper and/or partial overrides</td>
-    </tr><tr>
-    <td>helper</td><td><code>string</code> | <code>Array.&lt;string&gt;</code></td><td>handlebars helper files to override or extend the default set</td>
-    </tr><tr>
-    <td>partial</td><td><code>string</code> | <code>Array.&lt;string&gt;</code></td><td>handlebars partial files to override or extend the default set</td>
-    </tr><tr>
-    <td>example-lang</td><td><code>string</code></td><td>the language to use in fenced-code blocks</td>
-    </tr><tr>
-    <td>name-format</td><td><code>string</code></td><td>specify <code>code</code> to format identifier names as code</td>
-    </tr><tr>
-    <td>no-gfm</td><td><code>boolean</code></td><td>By default, dmd generates github-flavoured markdown. Not all markdown parsers render gfm correctly. If your generated docs look incorrect on sites other than Github (e.g. npmjs.org) try enabling this option to disable Github-specific syntax.</td>
-    </tr><tr>
-    <td>separators</td><td><code>boolean</code></td><td>Put <code>&lt;hr&gt;</code> breaks between identifiers. Improves readability on bulky docs.</td>
-    </tr><tr>
-    <td>module-index-format</td><td><code>string</code></td><td>-</td>
-    </tr><tr>
-    <td>global-index-format</td><td><code>string</code></td><td>-</td>
-    </tr><tr>
-    <td>param-list-format</td><td><code>string</code></td><td>-</td>
-    </tr><tr>
-    <td>property-list-format</td><td><code>string</code></td><td>-</td>
-    </tr><tr>
-    <td>member-index-format</td><td><code>string</code></td><td>-</td>
-    </tr><tr>
-    <td>group-by</td><td><code>Array.&lt;string&gt;</code></td><td>group member index</td>
-    </tr>  </tbody>
-</table>
-
+fs.createReadStream(__dirname + "/my-class.json")
+    .pipe(dmd({ template: template }))
+    .pipe(process.stdout);
+```
 
 * * *
 
