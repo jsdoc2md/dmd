@@ -208,13 +208,13 @@ $ dmd --template template.hbs --src my-class.json
 ```
 <a name="module_dmd--dmd..DmdOptions#heading-depth"></a>
 ##### dmdOptions.heading-depth : <code>number</code>
-The initial heading depth. For example, with a value of `2` the markdown headings begin from `"## The heading"`.
+The initial heading depth. For example, with a value of `2` the top-level markdown headings look like `"## The heading"`.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>2</code>  
 <a name="module_dmd--dmd..DmdOptions#example-lang"></a>
 ##### dmdOptions.example-lang : <code>string</code>
-The default language to use when [syntax highlighting fenced-code blocks](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting).
+The default language to use when [syntax highlighting fenced-code blocks](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting) in `@example` tags.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;js&quot;</code>  
@@ -245,7 +245,7 @@ By default, dmd generates github-flavoured markdown. Not all markdown parsers re
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions#separators"></a>
 ##### dmdOptions.separators : <code>boolean</code>
-Put <hr> breaks between identifiers. Improves readability on bulky docs.
+Put `<hr>` breaks between identifiers. Improves readability on bulky docs.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>false</code>  
