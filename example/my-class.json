@@ -1,0 +1,11 @@
+[
+  {
+    "id": "MyClass",
+    "longname": "MyClass",
+    "name": "MyClass",
+    "scope": "global",
+    "kind": "class",
+    "description": "MyClass is full of wonder",
+    "order": 0
+  }
+]

@@ -156,10 +156,31 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 **Kind**: Exported function  
 **Params**
 
-- [options] <code>[dmdOptions](#module_dmd--dmd..dmdOptions)</code> - The render options  
+- [options] <code>module:dmd~dmdOptions</code> - The render options  
 
-<a name="module_dmd--dmd..dmdOptions"></a>
-#### dmd~dmdOptions : <code>object</code>
+<a name="module_dmd--dmd..DmdOptions"></a>
+#### dmd~DmdOptions
+All dmd options including defaults
+
+**Kind**: inner class of <code>[dmd](#exp_module_dmd--dmd)</code>  
+<a name="module_dmd--dmd..DmdOptions#template"></a>
+##### dmdOptions.template : <code>string</code>
+The template the supplied documentation will be rendered into. Use the default or supply your own template for full control over the output.
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;{{&gt;main}}&quot;</code>  
+**Example**  
+var fs = require("fs");
+    var dmd = require("../");
+
+    var template = "The description from my class: {{#class name='MyClass'}}{{description}}{{/class}}";
+
+    fs.createReadStream(__dirname + "/my-class.json")
+        .pipe(dmd({ template: template }))
+        .pipe(process.stdout);
+
+<a name="module_dmd--dmd..dmdOptions1"></a>
+#### dmd~dmdOptions1 : <code>object</code>
 **Kind**: inner typedef of <code>[dmd](#exp_module_dmd--dmd)</code>  
 **Properties**
 
@@ -187,7 +208,7 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
     </tr><tr>
     <td>no-gfm</td><td><code>boolean</code></td><td>By default, dmd generates github-flavoured markdown. Not all markdown parsers render gfm correctly. If your generated docs look incorrect on sites other than Github (e.g. npmjs.org) try enabling this option to disable Github-specific syntax.</td>
     </tr><tr>
-    <td>separators</td><td><code>boolean</code></td><td>Put <code><hr></code> breaks between identifiers. Improves readability on bulky docs.</td>
+    <td>separators</td><td><code>boolean</code></td><td>Put <code>&lt;hr&gt;</code> breaks between identifiers. Improves readability on bulky docs.</td>
     </tr><tr>
     <td>module-index-format</td><td><code>string</code></td><td>-</td>
     </tr><tr>
