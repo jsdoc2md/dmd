@@ -156,17 +156,30 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 **Kind**: Exported function  
 **Params**
 
-- [options] <code>module:dmd~dmdOptions</code> - The render options  
+- [options] <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code> - The render options  
 
 <a name="module_dmd--dmd..DmdOptions"></a>
 #### dmd~DmdOptions
-All dmd options including defaults
+All dmd options and their defaults
 
 **Kind**: inner class of <code>[dmd](#exp_module_dmd--dmd)</code>  
 
 * [~DmdOptions](#module_dmd--dmd..DmdOptions)
   * [.template](#module_dmd--dmd..DmdOptions#template) : <code>string</code>
   * [.heading-depth](#module_dmd--dmd..DmdOptions#heading-depth) : <code>number</code>
+  * [.example-lang](#module_dmd--dmd..DmdOptions#example-lang) : <code>string</code>
+  * [.plugin](#module_dmd--dmd..DmdOptions#plugin) : <code>array</code>
+  * [.helper](#module_dmd--dmd..DmdOptions#helper) : <code>array</code>
+  * [.partial](#module_dmd--dmd..DmdOptions#partial) : <code>array</code>
+  * [.name-format](#module_dmd--dmd..DmdOptions#name-format) : <code>string</code>
+  * [.no-gfm](#module_dmd--dmd..DmdOptions#no-gfm) : <code>boolean</code>
+  * [.separators](#module_dmd--dmd..DmdOptions#separators) : <code>boolean</code>
+  * [.module-index-format](#module_dmd--dmd..DmdOptions#module-index-format) : <code>string</code>
+  * [.global-index-format](#module_dmd--dmd..DmdOptions#global-index-format) : <code>string</code>
+  * [.param-list-format](#module_dmd--dmd..DmdOptions#param-list-format) : <code>string</code>
+  * [.property-list-format](#module_dmd--dmd..DmdOptions#property-list-format) : <code>string</code>
+  * [.member-index-format](#module_dmd--dmd..DmdOptions#member-index-format) : <code>string</code>
+  * [.group-by](#module_dmd--dmd..DmdOptions#group-by) : <code>array</code>
 
 <a name="module_dmd--dmd..DmdOptions#template"></a>
 ##### dmdOptions.template : <code>string</code>
@@ -191,14 +204,81 @@ The description from my class: MyClass is full of wonder
 ```
 the equivation operation using the command-line tool: 
 ```
-$ dmd --template template.hbs --src template.js
+$ dmd --template template.hbs --src my-class.json
 ```
 <a name="module_dmd--dmd..DmdOptions#heading-depth"></a>
 ##### dmdOptions.heading-depth : <code>number</code>
-The initial heading depth.
+The initial heading depth. For example, with a value of `2` the markdown headings begin from `"## The heading"`.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>2</code>  
+<a name="module_dmd--dmd..DmdOptions#example-lang"></a>
+##### dmdOptions.example-lang : <code>string</code>
+The default language to use when [syntax highlighting fenced-code blocks](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting).
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;js&quot;</code>  
+<a name="module_dmd--dmd..DmdOptions#plugin"></a>
+##### dmdOptions.plugin : <code>array</code>
+Use an installed package containing helper and/or partial overrides
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#helper"></a>
+##### dmdOptions.helper : <code>array</code>
+handlebars helper files to override or extend the default set
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#partial"></a>
+##### dmdOptions.partial : <code>array</code>
+handlebars partial files to override or extend the default set
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#name-format"></a>
+##### dmdOptions.name-format : <code>string</code>
+Format identifier names in the [code](http://daringfireball.net/projects/markdown/syntax#code) style, (i.e. format using backticks or `<code></code>`)
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#no-gfm"></a>
+##### dmdOptions.no-gfm : <code>boolean</code>
+By default, dmd generates github-flavoured markdown. Not all markdown parsers render gfm correctly. If your generated docs look incorrect on sites other than Github (e.g. npmjs.org) try enabling this option to disable Github-specific syntax.
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#separators"></a>
+##### dmdOptions.separators : <code>boolean</code>
+Put <hr> breaks between identifiers. Improves readability on bulky docs.
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>false</code>  
+<a name="module_dmd--dmd..DmdOptions#module-index-format"></a>
+##### dmdOptions.module-index-format : <code>string</code>
+none, grouped, table, dl
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#global-index-format"></a>
+##### dmdOptions.global-index-format : <code>string</code>
+none, grouped, table, dl
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#param-list-format"></a>
+##### dmdOptions.param-list-format : <code>string</code>
+list, table
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#property-list-format"></a>
+##### dmdOptions.property-list-format : <code>string</code>
+list, table
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#member-index-format"></a>
+##### dmdOptions.member-index-format : <code>string</code>
+grouped, list
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+<a name="module_dmd--dmd..DmdOptions#group-by"></a>
+##### dmdOptions.group-by : <code>array</code>
+a list of fields to group member indexes by
+
+**Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 
 * * *
 
