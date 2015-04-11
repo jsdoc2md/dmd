@@ -180,6 +180,10 @@ fs.createReadStream(__dirname + "/my-class.json")
     .pipe(dmd({ template: template }))
     .pipe(process.stdout);
 ```
+outputs: 
+```
+The description from my class: MyClass is full of wonder
+```
 
 * * *
 
