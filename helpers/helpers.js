@@ -253,9 +253,12 @@ function titleCase(string){
     return string[0].toUpperCase() + string.slice(1);
 }
 
+/**
+@returns {{ type: string, description: string }}
+*/
 function parseType(string){
-    var matches = string.match(/{(.*?)}/);
+    var matches = string.match(/({(.*?)})?(.*)/);
     if (matches){
-        return matches[1];
+        return { type: matches[2], description: matches[3] };
     }
 }
