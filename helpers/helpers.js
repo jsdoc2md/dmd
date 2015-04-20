@@ -257,6 +257,7 @@ function titleCase(string){
 @returns {{ type: string, description: string }}
 */
 function parseType(string){
+    if (!string) return;
     var matches = string.match(/({(.*?)})?(.*)/);
     if (matches){
         return { type: matches[2], description: matches[3] };
