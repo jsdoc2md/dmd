@@ -1,4 +1,0 @@
-{{#if optional}}[{{/if~}}
-{{#if variable}}...{{/if~}}
-{{#if (regexp-test name "\w+\.\w+")}}.{{{slice (string-split name ".") -1}}}{{else}}{{{name}}}{{/if~}}
-{{#if optional}}]{{/if~}}

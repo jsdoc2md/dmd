@@ -57,7 +57,8 @@
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
     "object-tools": "^1.1.1",
-    "stream-handlebars": "^0.1.1"
+    "stream-handlebars": "^0.1.1",
+    "string-tools": "^0.1.8"
   },
   "devDependencies": {
     "dmd-plugin-example": "~0.1",

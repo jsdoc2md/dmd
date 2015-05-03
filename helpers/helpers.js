@@ -2,6 +2,7 @@
 var ddata = require("ddata");
 var a = require("array-tools");
 var handlebars = require("stream-handlebars");
+var s = require("string-tools");
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -20,6 +21,7 @@ exports.add = add;
 exports.kindInThisContext = kindInThisContext;
 exports.titleCase = titleCase;
 exports.parseType = parseType;
+exports.params = params;
 
 /**
 Escape special markdown characters
@@ -261,5 +263,25 @@ function parseType(string){
     var matches = string.match(/({(.*?)})?(.*)/);
     if (matches){
         return { type: matches[2], description: matches[3] };
+    }
+}
+
+function params(options){
+    if (this.params){
+        var list = this.params.map(function(param){
+            var nameSplit = param.name.split(".");
+            var name = a(nameSplit).last();
+            if (nameSplit.length > 1) name = "." + name;
+            if (param.variable) name = "..." + name;
+            if (param.optional) name = "[" + name + "]";
+            return { 
+                indent: s.repeat("  ", nameSplit.length - 1),
+                name: name,
+                type: param.type,
+                defaultvalue: param.defaultvalue,
+                description: param.description 
+            };
+        });
+        return options.fn(list);
     }
 }
