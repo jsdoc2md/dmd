@@ -155,8 +155,7 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 
 **Kind**: Exported function  
 **Params**
-
-- [options] <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code> - The render options  
+- [options] <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code> - The render options
 
 <a name="module_dmd--dmd..DmdOptions"></a>
 #### dmd~DmdOptions
@@ -214,7 +213,7 @@ The initial heading depth. For example, with a value of `2` the top-level markdo
 **Default**: <code>2</code>  
 <a name="module_dmd--dmd..DmdOptions#example-lang"></a>
 ##### dmdOptions.example-lang : <code>string</code>
-The default language to use when [syntax highlighting fenced-code blocks](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting) in `@example` tags.
+Specifies the default language used in @example blocks (for [syntax-highlighting](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting) purposes). In gfm mode, each @example is wrapped in a fenced-code block. Example usage: `--example-lang js`. Use the special value `none` for no specific language. While using this option, you can override the supplied language for any @example by specifying the `@lang` subtag, e.g `@example @lang hbs`. Specifying `@example @lang off` will disable code blocks for that example.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;js&quot;</code>  

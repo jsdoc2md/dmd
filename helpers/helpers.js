@@ -3,6 +3,7 @@ var ddata = require("ddata");
 var a = require("array-tools");
 var handlebars = require("stream-handlebars");
 var s = require("string-tools");
+var util = require("util");
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -22,6 +23,7 @@ exports.kindInThisContext = kindInThisContext;
 exports.titleCase = titleCase;
 exports.parseType = parseType;
 exports.params = params;
+exports.examples = examples;
 
 /**
 Escape special markdown characters
@@ -266,6 +268,9 @@ function parseType(string){
     }
 }
 
+/**
+block helper.. provides the data to render the @params tag
+*/
 function params(options){
     if (this.params){
         var list = this.params.map(function(param){
@@ -283,5 +288,25 @@ function params(options){
             };
         });
         return options.fn(list);
+    }
+}
+
+
+function examples(options){
+    if (this.examples){
+        return this.examples.reduce(function(prev, example){
+            var exampleLangOptions = ddata.option("example-lang", options);
+            var matches = example.match(/@lang\s+(\w+)\s*/);
+            if (matches){
+                var exampleLangSubtag = matches[1];
+                example = example.replace(matches[0], "");
+            }
+            var exampleLang = exampleLangSubtag || exampleLangOptions;
+            
+            if (!(/```/.test(example) || exampleLang === "off" )){
+                example = util.format("```%s\n%s\n```", exampleLang, example);
+            }
+            return prev + options.fn(example);
+        }, "");
     }
 }

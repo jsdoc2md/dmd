@@ -1,21 +1,4 @@
-{{#if examples}}{{#each examples}}**Example**  
-{{#if (regexp-test this "```")}}{{{inlineLinks this}}}
-{{else~}}
-
-{{#if (optionIsSet "example-lang")~}}
-{{#if (optionEquals "example-lang" "none")~}}
-```
+{{#examples}}
+**Example**  
 {{{inlineLinks this}}}
-```
-{{else~}}
-```{{option "example-lang"}}
-{{{inlineLinks this}}}
-```
-{{/if~}}
-{{else~}}
-{{{inlineLinks this}}}
-
-{{/if~}}
-
-{{/if~}}
-{{/each}}{{/if~}}
+{{/examples}}
