@@ -262,7 +262,7 @@ function titleCase(string){
 */
 function parseType(string){
     if (!string) return;
-    var matches = string.match(/({(.*?)})?(.*)/);
+    var matches = string.match(/({(.*?)})?([\s\S]*)/);
     if (matches){
         return { type: matches[2], description: matches[3] };
     }
