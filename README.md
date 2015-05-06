@@ -253,31 +253,37 @@ Put `<hr>` breaks between identifiers. Improves readability on bulky docs.
 none, grouped, table, dl
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;dl&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions#global-index-format"></a>
 ##### dmdOptions.global-index-format : <code>string</code>
 none, grouped, table, dl
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;dl&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions#param-list-format"></a>
 ##### dmdOptions.param-list-format : <code>string</code>
-list, table
+Two options to render parameter lists: 'list' or 'table' (default). Table format works well in most cases but switch to list if things begin to look crowded / squashed.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;table&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions#property-list-format"></a>
 ##### dmdOptions.property-list-format : <code>string</code>
 list, table
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;table&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions#member-index-format"></a>
 ##### dmdOptions.member-index-format : <code>string</code>
 grouped, list
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>&quot;grouped&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions#group-by"></a>
 ##### dmdOptions.group-by : <code>array</code>
 a list of fields to group member indexes by
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
+**Default**: <code>[&quot;scope&quot;,&quot;category&quot;]</code>  
 
 * * *
 
