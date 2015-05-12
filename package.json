@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "ansi-escape-sequences": "^1.0.2",
-    "array-tools": "^1.7.0",
+    "array-tools": "^1.8.0",
     "command-line-args": "~0.5.1",
     "ddata": "~0.1.0",
     "file-set": "^0.2.6",
@@ -56,7 +56,7 @@
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
-    "object-tools": "^1.1.1",
+    "object-tools": "^1.4",
     "stream-handlebars": "^0.1.1",
     "string-tools": "^0.1.8"
   },

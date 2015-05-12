@@ -1,9 +1,9 @@
 {{#if see~}}
 
 {{#if (equal see.length 1)~}}
-**See**: {{{inlineLinks see.[0]}}}  
+{{_ "md.bold"}}{{_ "See"}}{{_ ":"}}{{_ "md.bold"}} {{{inlineLinks see.[0]}}}  
 {{else~}}
-**See**
+{{_ "md.bold"}}{{_ "See"}}{{_ "md.bold"}}
 
 {{#each see}}- {{{inlineLinks this}}}
 {{/each}}

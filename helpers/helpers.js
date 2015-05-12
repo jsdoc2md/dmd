@@ -4,6 +4,7 @@ var a = require("array-tools");
 var handlebars = require("stream-handlebars");
 var s = require("string-tools");
 var util = require("util");
+var _ = require("./locale").locale;
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -24,6 +25,7 @@ exports.titleCase = titleCase;
 exports.parseType = parseType;
 exports.params = params;
 exports.examples = examples;
+exports.scopeText = scopeText;
 
 /**
 Escape special markdown characters
@@ -309,4 +311,26 @@ function examples(options){
             return prev + options.fn(example);
         }, "");
     }
+}
+
+function scopeText(options){
+    var text = localeFormat("%s%s%s%s ", "md.bold", "Kind", ":", "md.bold");
+    if (ddata.isEvent.call(this)){
+        text += localeFormat("event emitted");
+        if (this.memberof){
+            text += localeFormat(" %s ", "by", "{{>link to=memberof}}");
+        }
+    } else if (this.isExported){
+        text += localeFormat("%s %s", "Exported", this.kind);
+    }
+    return text;
+}
+
+function localeFormat(){
+    var args = a.arrayify(arguments);
+    var fmt = args.shift();
+    var fmtArgs = args.map(function(arg){
+        return _(arg);
+    });
+    return util.format.apply(null, fmt, fmtArgs);
 }

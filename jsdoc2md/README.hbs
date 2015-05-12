@@ -97,7 +97,7 @@ For example, let's say you wanted this datestamp at the bottom of your generated
 You need to do two things:
 
 1. Write a helper method to return the date in your preferred format
-2. Override the appropriate partial, inserting a mustache tag (e.g. `{{datestamp}}`) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial.
+2. Override the appropriate partial, inserting a mustache tag (e.g. `\{{datestamp}}`) where you would like it to appear. We'll override the [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial.
 
 ### Write a new helper
 A helper file is just a plain commonJS module. Each method exposed on the module will be available as a helper in your templates. So, our new helper module:

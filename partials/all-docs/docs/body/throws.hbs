@@ -1,5 +1,5 @@
 {{#if exceptions~}}
-**Throws**:
+{{_ "md.bold"}}{{_ "Throws"}}{{_ ":"}}{{_ "md.bold"}}
 
 {{#each exceptions~}}
 - {{#if type.names}}{{>linked-type-list types=type.names}} {{/if}}{{{inlineLinks description}}}

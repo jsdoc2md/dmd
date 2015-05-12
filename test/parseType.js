@@ -18,7 +18,6 @@ test("no type, single-line description", function(t){
 test("no type, multi-line description", function(t){
     var input = "1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield";
     var result = helpers.parseType(input);
-    // console.log(result);
     t.deepEqual(result, { 
         type: undefined, 
         description: "1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield" 
@@ -37,7 +36,6 @@ test("type, single-line description", function(t){
 test("type, multi-line description", function(t){
     var input = "{boolean} 1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield";
     var result = helpers.parseType(input);
-    // console.log(result);
     t.deepEqual(result, { 
         type: "boolean", 
         description: " 1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield" 
@@ -48,7 +46,6 @@ test("type, multi-line description", function(t){
 test("type, newline, multi-line description", function(t){
     var input = "{boolean} \n1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield";
     var result = helpers.parseType(input);
-    // console.log(result);
     t.deepEqual(result, { 
         type: "boolean", 
         description: " \n1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield" 

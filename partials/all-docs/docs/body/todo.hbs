@@ -1,10 +1,10 @@
 {{#if todoList~}}
-**Todo**
+{{_ "md.bold"}}{{_ "Todo"}}{{_ "md.bold"}}
 
 {{#if (option "no-gfm")~}}
 
 {{#each todoList~}}
-{{#if done}}- {{{inlineLinks task}}} ✓
+{{#if done}}- {{{inlineLinks task}}} {{_ "symbol.tick"}}
 {{else}}- {{{inlineLinks task}}}
 {{/if~}}
 {{/each~}}

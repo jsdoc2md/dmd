@@ -1,2 +1,2 @@
-{{#unless (equal defaultvalue undefined)}}**Default**: {{>defaultvalue}}  
+{{#unless (equal defaultvalue undefined)}}{{_ "md.bold"}}{{_ "Default"}}{{_ ":"}}{{_ "md.bold"}} {{>defaultvalue}}  
 {{/unless}}
