@@ -58,5 +58,5 @@ function halt(err){
 }
 
 function logError(msg){
-    console.error(ansi.sgr.format(msg, "red"));
+    console.error(ansi.format(msg, "red"));
 }
