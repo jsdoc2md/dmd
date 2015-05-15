@@ -49,7 +49,7 @@
     "array-tools": "^1.8.0",
     "ansi-escape-sequences": "^2",
     "command-line-args": "~0.5.1",
-    "ddata": "~0.2",
+    "ddata": "~0.3",
     "file-set": "^0.2.6",
     "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
