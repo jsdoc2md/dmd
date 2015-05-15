@@ -1,10 +1,10 @@
 {{#if scope}}
-{{_ "md.bold"}}{{_ "Kind"}}{{_ ":"}}{{_ "md.bold"}} {{#if (equal kind "event") ~}}
+{{_ "md.bold"}}{{_ "tag.Kind"}}{{_ "tag.:"}}{{_ "md.bold"}} {{#if (equal kind "event") ~}}
 event emitted{{#if memberof}} by {{>link to=memberof}}{{/if}}  
 {{else~}}
 {{scope}} {{#if virtual}}abstract {{/if}}{{kindInThisContext}}{{#if memberof}} of {{>link to=memberof}}{{/if}}  
 {{/if~}}
 {{else~}}
-{{#if isExported}}{{_ "md.bold"}}{{_ "Kind"}}{{_ ":"}}{{_ "md.bold"}} Exported {{kind}}  
+{{#if isExported}}{{_ "md.bold"}}{{_ "tag.Kind"}}{{_ "tag.:"}}{{_ "md.bold"}} Exported {{kind}}  
 {{/if~}}
 {{/if~}}

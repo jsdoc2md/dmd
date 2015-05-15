@@ -446,7 +446,7 @@ function sig(options){
     }
 
     if (this.deprecated){
-        if (optionEquals("no-gfm", true, options) || options.hash["no-gfm"]){
+        if (ddata.optionEquals("no-gfm", true, options) || options.hash["no-gfm"]){
             data.depOpen = "<del>";
             data.depClose = "</del>";
         } else {
