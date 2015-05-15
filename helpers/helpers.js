@@ -4,7 +4,7 @@ var a = require("array-tools");
 var handlebars = require("stream-handlebars");
 var s = require("string-tools");
 var util = require("util");
-var _ = require("./locale").locale;
+var _ = require("./locale")._;
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -26,6 +26,9 @@ exports.parseType = parseType;
 exports.params = params;
 exports.examples = examples;
 exports.scopeText = scopeText;
+exports.sig = sig;
+exports.returnSig2 = returnSig2;
+exports.showMainIndex = showMainIndex;
 
 /**
 Escape special markdown characters
@@ -334,3 +337,139 @@ function localeFormat(){
     });
     return util.format.apply(null, fmt, fmtArgs);
 }
+
+/**
+@static
+@returns {{symbol: string, types: array}}
+@category Block helper: util
+*/
+function returnSig2(options){
+    if (!ddata.isConstructor.call(this)){
+        if (this.returns){
+            var typeNames = a.arrayify(this.returns).map(function(ret){
+                return ret.type && ret.type.names;
+            });
+            typeNames = typeNames.filter(function(name){
+                return name;
+            });
+            if (typeNames.length){
+                return options.fn({
+                    symbol: _("symbol.returns"),
+                    types: a.flatten(typeNames)
+                });
+            } else {
+                return options.fn({
+                    symbol: null,
+                    types: null
+                });
+            }
+        } else if ((this.type || this.kind === "namespace") && this.kind !== "event"){
+            if (this.kind === "namespace"){
+                return options.fn({
+                    symbol: _("symbol.type"),
+                    types: [ "object" ]
+                });
+            } else {
+                return options.fn({
+                    symbol: _("symbol.type"),
+                    types: this.type.names
+                });
+            }
+        }
+    }
+}
+
+/**
+@category Block helper: util
+*/
+function sig(options){
+    var data;
+
+    if (options.data) {
+        data = handlebars.createFrame(options.data || {});
+    }
+
+    data.prefix = this.kind === "constructor" ? "new" : "";
+    data.parent = null;
+    data.accessSymbol = null;
+    data.name = ddata.isEvent.call(this) ? '"' + this.name + '"' : this.name;
+    data.methodSign = null;
+    data.returnSymbol = null;
+    data.returnTypes = null;
+    data.suffix = this.isExported ? _("symbol.exported") : ddata.isPrivate.call(this) ? _("symbol.private") : "";
+    data.depOpen = null;
+    data.depClose = null;
+    data.codeOpen = null;
+    data.codeClose = null;
+
+    var mSig = ddata.methodSig.call(this);
+    if (ddata.isConstructor.call(this) || ddata.isFunction.call(this)){
+        data.methodSign = "(" + mSig + ")";
+    } else if (ddata.isEvent.call(this)){
+        if (mSig) data.methodSign = "(" + mSig + ")";
+    }
+
+    if (!ddata.isEvent.call(this)){
+        data.parent = ddata.parentName.call(this, options);
+        data.accessSymbol = (this.scope === "static" || this.scope === "instance") ? "." : this.scope === "inner" ? "~" : "";
+    }
+
+    if (!ddata.isConstructor.call(this)){
+        if (this.returns){
+            data.returnSymbol = _("symbol.returns");
+            var typeNames = a.arrayify(this.returns)
+                .map(function(ret){
+                    return ret.type && ret.type.names;
+                })
+                .filter(function(name){
+                    return name;
+                });
+            if (typeNames.length){
+                data.returnTypes = a.flatten(typeNames);
+            }
+        } else if ((this.type || this.kind === "namespace") && this.kind !== "event"){
+            data.returnSymbol = _("symbol.type");
+
+            if (ddata.isEnum.call(this)){
+                data.returnTypes = [ "enum" ];
+            } else if (this.kind === "namespace"){
+                data.returnTypes = [ "object" ];
+            } else {
+                data.returnTypes = this.type.names;
+            }
+        } else if (this.chainable){
+            data.returnSymbol = _("symbol.chainable");
+        } else if (this.augments){
+            data.returnSymbol = _("symbol.extends");
+            data.returnTypes = [this.augments[0]];
+        }
+    }
+
+    if (this.deprecated){
+        if (optionEquals("no-gfm", true, options) || options.hash["no-gfm"]){
+            data.depOpen = "<del>";
+            data.depClose = "</del>";
+        } else {
+            data.depOpen = "~~";
+            data.depClose = "~~";
+        }
+    }
+
+    if (ddata.option("name-format", options) && !ddata.isClass.call(this) && !ddata.isModule.call(this)){
+        data.codeOpen = "`";
+        data.codeClose = "`";
+    }
+
+    return options.fn(this, { data: data })
+}
+
+/**
+True if there at least two top-level identifiers (i.e. globals or modules)
+@category returns boolean
+@returns {boolean}
+@static
+*/
+function showMainIndex(options){
+    return ddata._orphans(options).length > 1;
+}
+

@@ -23,7 +23,7 @@
     "partials"
   ],
   "scripts": {
-    "test": "tape test/*.js |tap-spec",
+    "test": "tape test/*.js",
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo",
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*' > example/jsdoc-parse/everything.json",
@@ -49,7 +49,7 @@
     "array-tools": "^1.8.0",
     "ansi-escape-sequences": "^2",
     "command-line-args": "~0.5.1",
-    "ddata": "~0.1.18",
+    "ddata": "~0.2",
     "file-set": "^0.2.6",
     "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
@@ -58,11 +58,11 @@
     "handlebars-string": "^2.0.1",
     "object-tools": "^1.4",
     "stream-handlebars": "^0.1.1",
-    "string-tools": "^0.1.8"
+    "string-tools": "^0.1.8",
+    "dmd-locale-en-gb": "^1"
   },
   "devDependencies": {
     "dmd-plugin-example": "~0.1",
-    "tap-spec": "^3",
     "tape": "^4"
   },
   "local-web-server": {

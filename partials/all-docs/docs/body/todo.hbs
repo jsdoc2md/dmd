@@ -4,7 +4,7 @@
 {{#if (option "no-gfm")~}}
 
 {{#each todoList~}}
-{{#if done}}- {{{inlineLinks task}}} {{_ "symbol.tick"}}
+{{#if done}}- {{{inlineLinks task}}} {{_ "symbol.done"}}
 {{else}}- {{{inlineLinks task}}}
 {{/if~}}
 {{/each~}}

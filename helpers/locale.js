@@ -1,5 +1,5 @@
 "use strict";
-var catalogue = require("../locale/en-gb");
+var catalogue = require("dmd-locale-en-gb");
 var o = require("object-tools");
 
 /**
