@@ -46,20 +46,22 @@
     "all": "npm run p && npm run m; "
   },
   "dependencies": {
-    "array-tools": "^1.8.0",
     "ansi-escape-sequences": "^2",
+    "array-tools": "^1.8.0",
     "command-line-args": "~0.5.1",
+    "config-master": "^1.0.1",
     "ddata": "~0.3",
+    "dmd-locale-en-gb": "^1",
     "file-set": "^0.2.6",
     "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
-    "object-tools": "^1.4",
+    "home-path": "^0.1.2",
+    "object-tools": "^1.6",
     "stream-handlebars": "^0.1.1",
-    "string-tools": "^0.1.8",
-    "dmd-locale-en-gb": "^1"
+    "string-tools": "^0.1.8"
   },
   "devDependencies": {
     "dmd-plugin-example": "~0.1",
