@@ -29,6 +29,7 @@ exports.scopeText = scopeText;
 exports.sig = sig;
 exports.returnSig2 = returnSig2;
 exports.showMainIndex = showMainIndex;
+exports.link = link;
 
 /**
 Escape special markdown characters
@@ -80,8 +81,8 @@ function tableHead(){
     });
     toSplice.reverse().forEach(function(index){
         colHeaders.splice(index, 1);
-    }); 
-    
+    });
+
     var table = "| " + colHeaders.join(" | ") + " |\n";
     table += cols.reduce(function(p){ return p + " --- |" }, "|") + "\n";
     return table;
@@ -104,7 +105,7 @@ function tableRow(){
     var cols = args;
     var output = "";
     var self = this;
-    
+
     if (options.data){
         var data = handlebars.createFrame(options.data);
         cols.forEach(function(col, index){
@@ -145,8 +146,8 @@ function tableHeadHtml(){
     });
     toSplice.reverse().forEach(function(index){
         colHeaders.splice(index, 1);
-    }); 
-    
+    });
+
     return colHeaders;
 }
 
@@ -184,12 +185,12 @@ function _groupChildren(groupByFields, options){
 }
 
 /**
-takes the children of this, groups them, inserts group headings.. 
+takes the children of this, groups them, inserts group headings..
 */
 function _groupBy(identifiers, groupByFields){
     /* don't modify the input array */
     groupByFields = groupByFields.slice(0);
-    
+
     groupByFields.forEach(function(group){
         var groupValues = a.unique(identifiers.filter(function(identifier){
             /* exclude constructors from grouping.. re-implement to work off a `null` group value */
@@ -230,7 +231,7 @@ function _groupBy(identifiers, groupByFields){
 
 function add(){
     var args = a.arrayify(arguments);
-    args.pop(); 
+    args.pop();
     return args.reduce(function(p, c){ return p + (c || 0); }, 0);
 }
 
@@ -242,7 +243,7 @@ function deepEqual(a, b){
 returns a more appropriate 'kind', depending on context
 @return {string}
 */
-function kindInThisContext(options){
+function kindInThisContext(){
     if (this.kind === "function" && this.memberof){
         return "method";
     } else if (this.kind === "member" && !this.isEnum && this.memberof){
@@ -284,12 +285,12 @@ function params(options){
             if (nameSplit.length > 1) name = "." + name;
             if (param.variable) name = "..." + name;
             if (param.optional) name = "[" + name + "]";
-            return { 
+            return {
                 indent: s.repeat("  ", nameSplit.length - 1),
                 name: name,
                 type: param.type,
                 defaultvalue: param.defaultvalue,
-                description: param.description 
+                description: param.description
             };
         });
         return options.fn(list);
@@ -307,7 +308,7 @@ function examples(options){
                 example = example.replace(matches[0], "");
             }
             var exampleLang = exampleLangSubtag || exampleLangOptions;
-            
+
             if (!(/```/.test(example) || exampleLang === "off" )){
                 example = util.format("```%s\n%s\n```", exampleLang, example);
             }
@@ -317,16 +318,54 @@ function examples(options){
 }
 
 function scopeText(options){
-    var text = localeFormat("%s%s%s%s ", "md.bold", "Kind", ":", "md.bold");
-    if (ddata.isEvent.call(this)){
-        text += localeFormat("event emitted");
-        if (this.memberof){
-            text += localeFormat(" %s ", "by", "{{>link to=memberof}}");
+    var heading = localeFormat("%s%s%s%s ", "md.bold", "tag.Kind", "tag.:", "md.bold");
+    var output;
+    options.hash.to = this.memberof;
+    
+    if (this.scope){
+        if (ddata.isEvent.call(this)){
+            output = heading += this.memberof
+                ? util.format(_("tag.event emitted by <parent>"), link(options))
+                : _("tag.event");
+        } else {
+            if (this.memberof){
+                if (this.virtual){
+                    output = heading += util.format(
+                        _("tag.<scope> abstract <kind> of <parent>"),
+                        this.scope,
+                        kindInThisContext.call(this),
+                        link(options)
+                    );
+                } else {
+                    output = heading += util.format(
+                        _("tag.<scope> <kind> of <parent>"),
+                        this.scope,
+                        kindInThisContext.call(this),
+                        link(options)
+                    );
+                }
+            } else {
+                if (this.virtual){
+                    output = heading += util.format(
+                        _("tag.<scope> abstract <kind>"),
+                        this.scope,
+                        kindInThisContext.call(this)
+                    );
+                } else {
+                    output = heading += util.format(
+                        "%s %s",
+                        this.scope,
+                        kindInThisContext.call(this)
+                    );
+                }
+            }
         }
-    } else if (this.isExported){
-        text += localeFormat("%s %s", "Exported", this.kind);
+    } else {
+        if (this.isExported){
+            output = heading += util.format(_("tag.exported <kind>"), this.kind);
+        }
     }
-    return text;
+    if (output) return output += "  \n";
 }
 
 function localeFormat(){
@@ -335,7 +374,8 @@ function localeFormat(){
     var fmtArgs = args.map(function(arg){
         return _(arg);
     });
-    return util.format.apply(null, fmt, fmtArgs);
+    fmtArgs.unshift(fmt);
+    return util.format.apply(util, fmtArgs);
 }
 
 /**
@@ -473,3 +513,25 @@ function showMainIndex(options){
     return ddata._orphans(options).length > 1;
 }
 
+/**
+options: to, html, caption
+*/
+function link(options){
+    var to = options.hash.to;
+    var html = options.hash.html;
+    var caption = options.hash.caption;
+    var l = ddata._link(to, options);
+    if (l.name) l.name = handlebars.Utils.escapeExpression(l.name);
+    var output = "";
+    
+    if (html){
+        output = l.url 
+            ? util.format("<code><a href='%s'>%s</a></code>", l.url, caption || l.name)
+            : util.format("<code>%s</code>", caption || l.name);
+    } else {
+        output = l.url 
+            ? util.format("<code>[%s](%s)</code>", escape(caption || l.name), l.url)
+            : util.format("<code>%s</code>", escape(caption || l.name));
+    }
+    return new handlebars.SafeString(output);
+}
