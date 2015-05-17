@@ -526,7 +526,7 @@ function link(options){
     
     if (html){
         output = l.url 
-            ? util.format("<code><a href='%s'>%s</a></code>", l.url, caption || l.name)
+            ? util.format("<code><a href=\"%s\">%s</a></code>", l.url, caption || l.name)
             : util.format("<code>%s</code>", caption || l.name);
     } else {
         output = l.url 
