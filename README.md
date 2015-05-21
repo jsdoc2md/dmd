@@ -157,6 +157,8 @@ Transforms doclet data into markdown documentation. Returns a transform stream -
 **Params**
 - [options] <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code> - The render options
 
+
+
 <a name="module_dmd--dmd..DmdOptions"></a>
 #### dmd~DmdOptions
 All dmd options and their defaults

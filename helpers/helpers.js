@@ -33,6 +33,7 @@ exports.link = link;
 exports.getParamsPartial = getParamsPartial;
 exports.getPropertiesPartial = getPropertiesPartial;
 exports.linkedTypeList = linkedTypeList;
+exports.memberIndex = memberIndex;
 
 /**
 Escape special markdown characters
@@ -548,9 +549,11 @@ function linkedTypeList(options){
     return new handlebars.SafeString(output);
 }
 
-function compilePartial(partial, context, options){
+function compilePartial(partialName, context, options){
+    var partial = handlebars.partials[partialName];
+    if (typeof partial === "function") partial = partial(context, { data: { root: options.data.root } });
     return new handlebars.SafeString(
-        handlebars.compile(handlebars.partials[partial])(
+        handlebars.compile(partial)(
             context,
             { data: { root: options.data.root } }
         )
@@ -578,5 +581,28 @@ function getPropertiesPartial(options){
             this,
             options
         );
+    }
+}
+
+function memberIndex(options){
+    var output = "";
+    options.hash.min = 2;
+    if (ddata.descendants.call(this, options)){
+        if (this.isExported){
+            if (ddata.depth(options) === 0){
+                if (ddata.optionEquals("member-index-format", "list", options)){
+                    output =compilePartial("member-index-list", this, options);
+                } else {
+                    output =compilePartial("member-index-grouped", this, options);
+                }
+            }
+        } else {
+            if (ddata.optionEquals("member-index-format", "list", options)){
+                output =compilePartial("member-index-list", this, options);
+            } else {
+                output =compilePartial("member-index-grouped", this, options);
+            }
+        }
+        return new handlebars.SafeString("\n" + output + "\n");
     }
 }
