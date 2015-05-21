@@ -32,6 +32,7 @@ exports.showMainIndex = showMainIndex;
 exports.link = link;
 exports.getParamsPartial = getParamsPartial;
 exports.getPropertiesPartial = getPropertiesPartial;
+exports.linkedTypeList = linkedTypeList;
 
 /**
 Escape special markdown characters
@@ -534,6 +535,16 @@ function link(options){
             ? util.format("<code>[%s](%s)</code>", escape(caption || l.name), l.url)
             : util.format("<code>%s</code>", escape(caption || l.name));
     }
+    return new handlebars.SafeString(output);
+}
+
+function linkedTypeList(options){
+    var types = options.hash.types;
+    var delimiter = options.hash.delimiter;
+    var output = types.map(function(type){
+        options.hash.to = type;
+        return link(options);
+    }).join(delimiter);
     return new handlebars.SafeString(output);
 }
 

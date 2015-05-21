@@ -1,6 +1,6 @@
 {{#params}}{{_ "md.bold"}}{{_ "tag.Params"}}{{_ "md.bold"}}
 {{#each this~}}
-{{indent}}- {{name}}{{#if type}} {{>linked-type-list types=type.names delimiter=" | " }}{{/if}}{{#unless (equal defaultvalue undefined)}} {{>defaultvalue equals=true ~}}{{/unless}}{{#if description}} - {{{inlineLinks description}}}{{/if}}
+{{indent}}- {{name}}{{#if type}} {{linkedTypeList types=type.names delimiter=" | " }}{{/if}}{{#unless (equal defaultvalue undefined)}} {{>defaultvalue equals=true ~}}{{/unless}}{{#if description}} - {{{inlineLinks description}}}{{/if}}
 {{/each}}
 
 {{/params~}}

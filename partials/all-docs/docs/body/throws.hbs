@@ -2,7 +2,7 @@
 {{_ "md.bold"}}{{_ "tag.Throws"}}{{_ "tag.:"}}{{_ "md.bold"}}
 
 {{#each exceptions~}}
-- {{#if type.names}}{{>linked-type-list types=type.names}} {{/if}}{{{inlineLinks description}}}
+- {{#if type.names}}{{linkedTypeList types=type.names}} {{/if}}{{{inlineLinks description}}}
 {{/each}}
 
 {{/if}}

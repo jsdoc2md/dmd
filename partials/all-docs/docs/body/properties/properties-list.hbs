@@ -1,7 +1,7 @@
 {{#if properties}}{{_ "md.bold"}}{{_ "tag.Properties"}}{{_ "md.bold"}}
 
 {{#each properties~}}
-{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{{name}}} {{>linked-type-list types=type.names delimiter=" &#124; " ~}}{{#if description}} - {{{inlineLinks description}}}{{/if}}  
+{{#if (regexp-test name "\w+\.\w+")}}  {{/if}}- {{{name}}} {{linkedTypeList types=type.names delimiter=" &#124; " ~}}{{#if description}} - {{{inlineLinks description}}}{{/if}}  
 {{/each}}
 
 {{/if~}}

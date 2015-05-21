@@ -2,7 +2,7 @@
 {{#if returns.[0].description~}}
 {{_ "md.bold"}}{{_ "tag.Returns"}}{{_ "tag.:"}}{{_ "md.bold"}} {{#each returns~}}
   {{#if type~}}
-  {{#if type.names}}{{>linked-type-list types=type.names delimiter=" &#124; " ~}}{{/if}}
+  {{#if type.names}}{{linkedTypeList types=type.names delimiter=" &#124; " ~}}{{/if}}
   {{~#if description}} - {{{inlineLinks description}}}{{/if~}}
   {{else~}}
   {{{inlineLinks description}~}}
