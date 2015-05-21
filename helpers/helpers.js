@@ -30,6 +30,8 @@ exports.sig = sig;
 exports.returnSig2 = returnSig2;
 exports.showMainIndex = showMainIndex;
 exports.link = link;
+exports.getParamsPartial = getParamsPartial;
+exports.getPropertiesPartial = getPropertiesPartial;
 
 /**
 Escape special markdown characters
@@ -321,7 +323,7 @@ function scopeText(options){
     var heading = localeFormat("%s%s%s%s ", "md.bold", "tag.Kind", "tag.:", "md.bold");
     var output;
     options.hash.to = this.memberof;
-    
+
     if (this.scope){
         if (ddata.isEvent.call(this)){
             output = heading += this.memberof
@@ -523,15 +525,47 @@ function link(options){
     var l = ddata._link(to, options);
     if (l.name) l.name = handlebars.Utils.escapeExpression(l.name);
     var output = "";
-    
     if (html){
-        output = l.url 
+        output = l.url
             ? util.format("<code><a href=\"%s\">%s</a></code>", l.url, caption || l.name)
             : util.format("<code>%s</code>", caption || l.name);
     } else {
-        output = l.url 
+        output = l.url
             ? util.format("<code>[%s](%s)</code>", escape(caption || l.name), l.url)
             : util.format("<code>%s</code>", escape(caption || l.name));
     }
     return new handlebars.SafeString(output);
+}
+
+function compilePartial(partial, context, options){
+    return new handlebars.SafeString(
+        handlebars.compile(handlebars.partials[partial])(
+            context,
+            { data: { root: options.data.root } }
+        )
+    );
+}
+
+function getParamsPartial(options){
+    if (ddata.optionEquals("param-list-format", "list", options)){
+        return compilePartial("params-list", this, options);
+    } else {
+        return compilePartial(
+            ddata.optionEquals("no-gfm", true, options) ? "params-table-html" : "params-table",
+            this,
+            options
+        );
+    }
+}
+
+function getPropertiesPartial(options){
+    if (ddata.optionEquals("property-list-format", "list", options)){
+        return compilePartial("properties-list", this, options);
+    } else {
+        return compilePartial(
+            ddata.optionEquals("no-gfm", true, options) ? "properties-table-html" : "properties-table",
+            this,
+            options
+        );
+    }
 }
