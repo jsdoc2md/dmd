@@ -305,18 +305,30 @@ function params(options){
 function examples(options){
     if (this.examples){
         return this.examples.reduce(function(prev, example){
+            var lines = example.split('\n');
+            var matches = lines[0].match(/\s*<caption>(.*?)<\/caption>\s*/);
+            var caption;
+
+            if (matches) {
+                caption = matches[1];
+                example = lines.slice(1).join('\n');
+            }
+
             var exampleLangOptions = ddata.option("example-lang", options);
-            var matches = example.match(/@lang\s+(\w+)\s*/);
+            matches = example.match(/@lang\s+(\w+)\s*/);
+
             if (matches){
                 var exampleLangSubtag = matches[1];
                 example = example.replace(matches[0], "");
             }
+
             var exampleLang = exampleLangSubtag || exampleLangOptions;
 
             if (!(/```/.test(example) || exampleLang === "off" )){
                 example = util.format("```%s\n%s\n```", exampleLang, example);
             }
-            return prev + options.fn(example);
+
+            return prev + options.fn({caption: caption, example: example});
         }, "");
     }
 }
