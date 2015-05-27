@@ -190,7 +190,7 @@ function _groupBy (identifiers, groupByFields) {
     var groupValues = a.unique(identifiers.filter(function (identifier) {
       /* exclude constructors from grouping.. re-implement to work off a `null` group value */
       return identifier.kind !== 'constructor'
-    }).map(function (i) { return i[group] }))
+    }).map(function (i) { return i[group]}))
     if (groupValues.length <= 1) groupByFields = a.without(groupByFields, group)
   })
   identifiers = _addGroup(identifiers, groupByFields)
@@ -265,7 +265,7 @@ function parseType (string) {
   if (!string) return
   var matches = string.match(/({(.*?)})?([\s\S]*)/)
   if (matches) {
-    return { type: matches[2], description: matches[3] }
+    return { type: matches[2], description: matches[3]}
   }
 }
 
@@ -292,7 +292,7 @@ function params (options) {
   }
 }
 
-function examples (options) {
+function examplesOld (options) {
   if (this.examples) {
     return this.examples.reduce(function (prev, example) {
       var exampleLangOptions = ddata.option('example-lang', options)
@@ -307,6 +307,37 @@ function examples (options) {
         example = util.format('```%s\n%s\n```', exampleLang, example)
       }
       return prev + options.fn(example)
+    }, '')
+  }
+}
+
+function examples (options) {
+  if (this.examples) {
+    return this.examples.reduce(function (prev, example) {
+      var lines = example.split('\n')
+      var matches = lines[0].match(/\s*<caption>(.*?)<\/caption>\s*/)
+      var caption
+
+      if (matches) {
+        caption = matches[1]
+        example = lines.slice(1).join('\n')
+      }
+
+      var exampleLangOptions = ddata.option('example-lang', options)
+      matches = example.match(/@lang\s+(\w+)\s*/)
+
+      if (matches) {
+        var exampleLangSubtag = matches[1]
+        example = example.replace(matches[0], '')
+      }
+
+      var exampleLang = exampleLangSubtag || exampleLangOptions
+
+      if (!(/```/.test(example) || exampleLang === 'off')) {
+        example = util.format('```%s\n%s\n```', exampleLang, example)
+      }
+
+      return prev + options.fn({caption: caption, example: example})
     }, '')
   }
 }
