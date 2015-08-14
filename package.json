@@ -46,9 +46,9 @@
     "all": "npm run p && npm run m; "
   },
   "dependencies": {
-    "ansi-escape-sequences": "^2",
-    "array-tools": "^1.7.0",
-    "command-line-args": "~0.5.1",
+    "ansi-escape-sequences": "^2.2.1",
+    "array-tools": "^2",
+    "command-line-args": "^1",
     "ddata": "~0.1.18",
     "file-set": "^0.2.6",
     "handlebars-array": "^0.2.0",
@@ -56,7 +56,7 @@
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
-    "object-tools": "^1.1.1",
+    "object-tools": "^2",
     "stream-handlebars": "^0.1.1",
     "string-tools": "^0.1.8"
   },

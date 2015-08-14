@@ -13,9 +13,12 @@ var cli = cliArgs(dmd.cliOptions.concat([
 
 var usage = cli.getUsage({
     title: "dmd",
-    header: "Generate markdown API documentation",
+    description: "Generate markdown API documentation",
+    footer: "Project home: [underline]{https://github.com/jsdoc2md/dmd}",
     forms: [
-        "$ cat jsdoc-parse-output.json | dmd [<options>]"
+        "$ cat jsdoc-parse-output.json | dmd [<options>]",
+        "$ dmd --help",
+        "$ dmd --config"
     ]
 });
 
@@ -34,16 +37,16 @@ if (argv.template){
     argv.template = fs.readFileSync(argv.template, "utf8");
 }
 
-var dmdStream = dmd(argv);
+var dmdStream = dmd(config);
 dmdStream.on("error", halt);
 
 process.stdin.pipe(dmdStream).pipe(process.stdout);
 
 function halt(err){
     if (err.code === "EPIPE") process.exit(0); /* no big deal */
-    
-    if (argv){
-        if (argv.verbose){
+
+    if (config){
+        if (config.verbose){
             logError("Error: " + err.message);
             logError(err.stack || err);
         } else {
