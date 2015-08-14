@@ -1,10 +1,13 @@
 "use strict";
 var ddata = require("ddata");
 var a = require("array-tools");
+var o = require("object-tools");
 var handlebars = require("stream-handlebars");
 var s = require("string-tools");
 var util = require("util");
 var _ = require("./locale")._;
+var Identifier = require("ddata/lib/identifier");
+var Identifiers = require("ddata/lib/identifiers");
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -48,7 +51,7 @@ replaces {@link} tags with markdown links in the suppied input text
 */
 function inlineLinks(text, options){
     if (text){
-        var links = ddata.parseLink(text);
+        var links = options.data.root.parseLink(text);
         links.forEach(function(link){
             var linked = ddata._link(link.url, options);
             if (link.caption === link.url) link.caption = linked.name;
@@ -439,84 +442,10 @@ function returnSig2(options){
 @category Block helper: util
 */
 function sig(options){
-    var data;
-
-    if (options.data) {
-        data = handlebars.createFrame(options.data || {});
-    }
-
-    data.prefix = this.kind === "constructor" ? "new" : "";
-    data.parent = null;
-    data.accessSymbol = null;
-    data.name = ddata.isEvent.call(this) ? '"' + this.name + '"' : this.name;
-    data.methodSign = null;
-    data.returnSymbol = null;
-    data.returnTypes = null;
-    data.suffix = this.isExported ? _("symbol.exported") : ddata.isPrivate.call(this) ? _("symbol.private") : "";
-    data.depOpen = null;
-    data.depClose = null;
-    data.codeOpen = null;
-    data.codeClose = null;
-
-    var mSig = ddata.methodSig.call(this);
-    if (ddata.isConstructor.call(this) || ddata.isFunction.call(this)){
-        data.methodSign = "(" + mSig + ")";
-    } else if (ddata.isEvent.call(this)){
-        if (mSig) data.methodSign = "(" + mSig + ")";
-    }
-
-    if (!ddata.isEvent.call(this)){
-        data.parent = ddata.parentName.call(this, options);
-        data.accessSymbol = (this.scope === "static" || this.scope === "instance") ? "." : this.scope === "inner" ? "~" : "";
-    }
-
-    if (!ddata.isConstructor.call(this)){
-        if (this.returns){
-            data.returnSymbol = _("symbol.returns");
-            var typeNames = a.arrayify(this.returns)
-                .map(function(ret){
-                    return ret.type && ret.type.names;
-                })
-                .filter(function(name){
-                    return name;
-                });
-            if (typeNames.length){
-                data.returnTypes = a.flatten(typeNames);
-            }
-        } else if ((this.type || this.kind === "namespace") && this.kind !== "event"){
-            data.returnSymbol = _("symbol.type");
-
-            if (ddata.isEnum.call(this)){
-                data.returnTypes = [ "enum" ];
-            } else if (this.kind === "namespace"){
-                data.returnTypes = [ "object" ];
-            } else {
-                data.returnTypes = this.type.names;
-            }
-        } else if (this.chainable){
-            data.returnSymbol = _("symbol.chainable");
-        } else if (this.augments){
-            data.returnSymbol = _("symbol.extends");
-            data.returnTypes = [this.augments[0]];
-        }
-    }
-
-    if (this.deprecated){
-        if (ddata.optionEquals("no-gfm", true, options) || options.hash["no-gfm"]){
-            data.depOpen = "<del>";
-            data.depClose = "</del>";
-        } else {
-            data.depOpen = "~~";
-            data.depClose = "~~";
-        }
-    }
-
-    if (ddata.option("name-format", options) && !ddata.isClass.call(this) && !ddata.isModule.call(this)){
-        data.codeOpen = "`";
-        data.codeClose = "`";
-    }
-
-    return options.fn(this, { data: data })
+    var data = handlebars.createFrame(options.data);
+    data = o.extend(data, this.sig(options.options));
+    // console.error("WHHHHHHAT", data);
+    return options.fn(this, { data: data });
 }
 
 /**
@@ -536,7 +465,7 @@ function link(options){
     var to = options.hash.to;
     var html = options.hash.html;
     var caption = options.hash.caption;
-    var l = ddata._link(to, options);
+    var l = options.data.root.link(to, options);
     if (l.name) l.name = handlebars.Utils.escapeExpression(l.name);
     var output = "";
     if (html){
@@ -551,6 +480,10 @@ function link(options){
     return new handlebars.SafeString(output);
 }
 
+/**
+@param types
+@param delimiter
+*/
 function linkedTypeList(options){
     var types = options.hash.types;
     var delimiter = options.hash.delimiter;
