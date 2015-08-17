@@ -16,25 +16,24 @@ var usage = cli.getUsage({
     description: "Generate markdown API documentation",
     footer: "Project home: [underline]{https://github.com/jsdoc2md/dmd}",
     forms: [
-        "$ cat jsdoc-parse-output.json | dmd [<options>]",
-        "$ dmd --help",
-        "$ dmd --config"
+        "$ cat jsdoc-parse-output.json | dmd <options>",
+        "$ dmd --help"
     ]
 });
 
 try{
-    var argv = cli.parse();
+    var config = cli.parse();
 } catch(err){
     halt(err);
 }
 
-if (argv.help){
+if (config.help){
     console.log(usage);
     process.exit(0);
 }
 
-if (argv.template){
-    argv.template = fs.readFileSync(argv.template, "utf8");
+if (config.template){
+    config.template = fs.readFileSync(config.template, "utf8");
 }
 
 var dmdStream = dmd(config);

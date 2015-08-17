@@ -4,6 +4,7 @@ var a = require("array-tools");
 var handlebars = require("stream-handlebars");
 var s = require("string-tools");
 var util = require("util");
+var commonSequence = require("common-sequence");
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -199,7 +200,7 @@ function _groupBy(identifiers, groupByFields){
     var level = 0;
     identifiers.forEach(function(identifier, index){
         if (!deepEqual(identifier._group, prevGroup)){
-            var common = a.commonSequence(identifier._group, prevGroup);
+            var common = commonSequence(identifier._group, prevGroup);
             level = common.length;
             identifier._group.forEach(function(group, i){
                 if (group !== common[i] && group !== null){
