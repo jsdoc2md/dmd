@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 "use strict";
-var cliArgs = require("command-line-args");
+var commandLineArgs = require("command-line-args");
 var ansi = require("ansi-escape-sequences");
 var dmd = require("../");
 var domain = require("domain");
 var fs = require("fs");
 
-var cli = cliArgs(dmd.cliOptions.concat([
+var cli = commandLineArgs(dmd.cliOptions.concat([
     { name: "help", alias: "h", type: Boolean },
     { name: "verbose", alias: "v", type: Boolean }
 ]));
@@ -15,7 +15,7 @@ var usage = cli.getUsage({
     title: "dmd",
     description: "Generate markdown API documentation",
     footer: "Project home: [underline]{https://github.com/jsdoc2md/dmd}",
-    forms: [
+    synopsis: [
         "$ cat jsdoc-parse-output.json | dmd <options>",
         "$ dmd --help"
     ]
