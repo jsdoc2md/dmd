@@ -1,64 +1,119 @@
 #!/usr/bin/env node
-"use strict";
-var commandLineArgs = require("command-line-args");
-var ansi = require("ansi-escape-sequences");
-var dmd = require("../");
-var domain = require("domain");
-var fs = require("fs");
+'use strict'
+const Identifier = require('../template/identifier')
 
-var cli = commandLineArgs(dmd.cliOptions.concat([
-    { name: "help", alias: "h", type: Boolean },
-    { name: "verbose", alias: "v", type: Boolean }
-]));
-
-var usage = cli.getUsage({
-    title: "dmd",
-    description: "Generate markdown API documentation",
-    footer: "Project home: [underline]{https://github.com/jsdoc2md/dmd}",
-    synopsis: [
-        "$ cat jsdoc-parse-output.json | dmd <options>",
-        "$ dmd --help"
-    ]
-});
-
-try{
-    var config = cli.parse();
-} catch(err){
-    halt(err);
+const context = {
+  lang: 'en-GB',
 }
 
-if (config.help){
-    console.log(usage);
-    process.exit(0);
-}
+const catalogEnGB = {}
 
-if (config.template){
-    config.template = fs.readFileSync(config.template, "utf8");
-}
-
-var dmdStream = dmd(config);
-dmdStream.on("error", halt);
-
-process.stdin.pipe(dmdStream).pipe(process.stdout);
-
-function halt(err){
-    if (err.code === "EPIPE") process.exit(0); /* no big deal */
-
-    if (config){
-        if (config.verbose){
-            logError("Error: " + err.message);
-            logError(err.stack || err);
-        } else {
-            logError("Error: " + err.message);
-            logError("(run dmd with --verbose for a stack trace)");
-        }
-    } else {
-        logError(err.stack);
+const input = [
+  {
+    kind: 'module',
+    id: 'module_handbrake-js',
+    title: 'handbrake-js',
+    sig: {
+      name: 'handbrake-js'
+    },
+    description: 'Handbrake for node.js.',
+    example: '```js\nvar hbjs = require("handbrake-js")\n```'
+  },
+  {
+    kind: 'function',
+    id: 'module_handbrake-js.spawn',
+    title: 'hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>',
+    sig: {
+      name: 'hbjs.spawn(options)',
+      symbol: '⇒',
+      type: 'Handbrake',
+      link: '#module_handbrake-js..Handbrake'
+    },
+    description: 'Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options), returning an instance of `Handbrake` on which you can listen for events.',
+    example: '```js\nvar hbjs = require("handbrake-js")\n```',
+    type: {
+      name: 'static method',
+      parent: {
+        id: 'module_handbrake-js',
+        name: 'handbrake-js'
+      }
+    },
+    params: [
+      {
+        name: 'options',
+        type: 'Object',
+        description: '[Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI'
+      },
+      {
+        name: 'gets?',
+        type: 'string',
+        description: 'one two'
+      }
+    ],
+    example: '```js\nvar hbjs = require("handbrake-js")\nhbjs.spawn(options)\n  .on("error",console.error)\n  .on("output", console.log)\n```'
+  },
+  {
+    kind: 'class',
+    id: 'module_handbrake-js..Handbrake',
+    title: 'hbjs~Handbrake ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>',
+    sig: {
+      name: 'hbjs~Handbrake',
+      symbol: '⇐',
+      type: 'EventEmitter',
+      link: 'http://nodejs.org/api/events.html'
+    },
+    description: 'A handle on the HandbrakeCLI process. Emits events you can monitor to track progress. An instance of this class is returned by [spawn](#module_handbrake-js.spawn).',
+    type: {
+      name: 'inner class',
+      parent: {
+        id: 'module_handbrake-js',
+        name: 'handbrake-js'
+      }
+    },
+    extends: '<code>[EventEmitter](http://nodejs.org/api/events.html)</code>',
+    emits: '<code>[start](#module_handbrake-js..Handbrake+event_start)</code>,\n<code>[begin](#module_handbrake-js..Handbrake+event_begin)</code>,\n<code>[progress](#module_handbrake-js..Handbrake+event_progress)</code>,\n<code>[output](#module_handbrake-js..Handbrake+event_output)</code>,\n<code>[error](#module_handbrake-js..Handbrake+event_error)</code>,\n<code>[end](#module_handbrake-js..Handbrake+event_end)</code>,\n<code>[complete](#module_handbrake-js..Handbrake+event_complete)</code>'
+  },
+  {
+    kind: 'property',
+    id: 'module_handbrake-js..Handbrake+output',
+    title: 'handbrake.output : <code>string</code>',
+    sig: {
+      name: 'handbrake.output',
+      symbol: ':',
+      type: 'string'
+    },
+    description: 'A `string` containing all handbrakeCLI output',
+    type: {
+      name: 'instance property',
+      parent: {
+        id: 'module_handbrake-js..Handbrake',
+        name: 'Handbrake'
+      }
     }
-    console.error(usage);
-    process.exit(1);
-}
+  },
+  {
+    kind: '',
+    id: '',
+    title: '',
+    sig: {
+      name: ''
+    },
+    description: '',
+    example: '',
+    type: '',
+    params: [
+      {
+        name: '',
+        type: '',
+        description: ''
+      }
+    ],
+    example: ''
+  }
+]
 
-function logError(msg){
-    console.error(ansi.format(msg, "red"));
-}
+
+input.forEach(i => {
+  const identifier = new Identifier(i)
+  console.log(identifier.render());
+})
