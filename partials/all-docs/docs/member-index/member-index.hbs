@@ -1,4 +1,4 @@
-{{#if (descendants min=2)~}}
+{{#if (descendants min=(option 'memberIndex.minDescendents'))~}}
 {{#if isExported~}}
 {{#if (equal (depth) 0)}}
 {{#if (optionEquals "member-index-format" "list")}}
