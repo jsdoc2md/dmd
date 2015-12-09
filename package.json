@@ -23,7 +23,7 @@
     "partials"
   ],
   "scripts": {
-    "test": "tape test/*.js |tap-spec",
+    "test": "tape test/*.js",
     "lint": "jshint lib/*.js bin/*.js test/*.js helpers/*.js; echo",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo",
     "p1": "jsdoc-parse '../jsdoc-parse/test/fixture/**/*' > example/jsdoc-parse/everything.json",
@@ -63,10 +63,11 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "~0.1",
-    "tap-spec": "^3",
     "tape": "^4"
   },
-  "local-web-server": {
-    "port": 8080
+  "standard": {
+    "ignore": [
+      "example"
+    ]
   }
 }

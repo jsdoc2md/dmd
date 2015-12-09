@@ -1,8 +1,8 @@
-"use strict";
+'use strict'
 
-exports.inlineLinks = inlineLinks;
+exports.inlineLinks = inlineLinks
 
 /* override inlineLinks */
-function inlineLinks(text, options){
-    return "get me?";
+function inlineLinks (text, options) {
+  return 'get me?'
 }
