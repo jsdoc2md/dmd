@@ -280,7 +280,7 @@ function params (options) {
       if (param.variable) name = '...' + name
       if (param.optional) name = '[' + name + ']'
       return {
-        indent: s.repeat('  ', nameSplit.length - 1),
+        indent: s.repeat('    ', nameSplit.length - 1),
         name: name,
         type: param.type,
         defaultvalue: param.defaultvalue,
