@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/jsdoc2md/dmd.svg?branch=master)](https://travis-ci.org/jsdoc2md/dmd)
 [![Dependency Status](https://david-dm.org/jsdoc2md/dmd.svg)](https://david-dm.org/jsdoc2md/dmd)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
+[![Join the chat at https://gitter.im/jsdoc2md/jsdoc2md](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jsdoc2md/jsdoc2md?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # dmd
 dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2md/jsdoc-parse) output into markdown API documentation. It exposes <code>[dmd](#module_dmd)</code>, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) for example output.
@@ -165,21 +166,21 @@ All dmd options and their defaults
 **Kind**: inner class of <code>[dmd](#exp_module_dmd--dmd)</code>  
 
 * [~DmdOptions](#module_dmd--dmd..DmdOptions)
-  * [.template](#module_dmd--dmd..DmdOptions+template) : <code>string</code>
-  * [.heading-depth](#module_dmd--dmd..DmdOptions+heading-depth) : <code>number</code>
-  * [.example-lang](#module_dmd--dmd..DmdOptions+example-lang) : <code>string</code>
-  * [.plugin](#module_dmd--dmd..DmdOptions+plugin) : <code>array</code>
-  * [.helper](#module_dmd--dmd..DmdOptions+helper) : <code>array</code>
-  * [.partial](#module_dmd--dmd..DmdOptions+partial) : <code>array</code>
-  * [.name-format](#module_dmd--dmd..DmdOptions+name-format) : <code>string</code>
-  * [.no-gfm](#module_dmd--dmd..DmdOptions+no-gfm) : <code>boolean</code>
-  * [.separators](#module_dmd--dmd..DmdOptions+separators) : <code>boolean</code>
-  * [.module-index-format](#module_dmd--dmd..DmdOptions+module-index-format) : <code>string</code>
-  * [.global-index-format](#module_dmd--dmd..DmdOptions+global-index-format) : <code>string</code>
-  * [.param-list-format](#module_dmd--dmd..DmdOptions+param-list-format) : <code>string</code>
-  * [.property-list-format](#module_dmd--dmd..DmdOptions+property-list-format) : <code>string</code>
-  * [.member-index-format](#module_dmd--dmd..DmdOptions+member-index-format) : <code>string</code>
-  * [.group-by](#module_dmd--dmd..DmdOptions+group-by) : <code>array</code>
+    * [.template](#module_dmd--dmd..DmdOptions+template) : <code>string</code>
+    * [.heading-depth](#module_dmd--dmd..DmdOptions+heading-depth) : <code>number</code>
+    * [.example-lang](#module_dmd--dmd..DmdOptions+example-lang) : <code>string</code>
+    * [.plugin](#module_dmd--dmd..DmdOptions+plugin) : <code>array</code>
+    * [.helper](#module_dmd--dmd..DmdOptions+helper) : <code>array</code>
+    * [.partial](#module_dmd--dmd..DmdOptions+partial) : <code>array</code>
+    * [.name-format](#module_dmd--dmd..DmdOptions+name-format) : <code>string</code>
+    * [.no-gfm](#module_dmd--dmd..DmdOptions+no-gfm) : <code>boolean</code>
+    * [.separators](#module_dmd--dmd..DmdOptions+separators) : <code>boolean</code>
+    * [.module-index-format](#module_dmd--dmd..DmdOptions+module-index-format) : <code>string</code>
+    * [.global-index-format](#module_dmd--dmd..DmdOptions+global-index-format) : <code>string</code>
+    * [.param-list-format](#module_dmd--dmd..DmdOptions+param-list-format) : <code>string</code>
+    * [.property-list-format](#module_dmd--dmd..DmdOptions+property-list-format) : <code>string</code>
+    * [.member-index-format](#module_dmd--dmd..DmdOptions+member-index-format) : <code>string</code>
+    * [.group-by](#module_dmd--dmd..DmdOptions+group-by) : <code>array</code>
 
 <a name="module_dmd--dmd..DmdOptions+template"></a>
 ##### dmdOptions.template : <code>string</code>
@@ -189,14 +190,14 @@ The template the supplied documentation will be rendered into. Use the default o
 **Default**: <code>&quot;{{&gt;main}}&quot;</code>  
 **Example**  
 ```js
-var fs = require("fs");
-var dmd = require("../");
+var fs = require("fs")
+var dmd = require("../")
 
-var template = "The description from my class: {{#class name='MyClass'}}{{description}}{{/class}}";
+var template = "The description from my class: {{#class name='MyClass'}}{{description}}{{/class}}"
 
 fs.createReadStream(__dirname + "/my-class.json")
     .pipe(dmd({ template: template }))
-    .pipe(process.stdout);
+    .pipe(process.stdout)
 ```
 outputs:
 ```
