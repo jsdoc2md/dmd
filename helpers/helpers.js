@@ -25,6 +25,7 @@ exports.titleCase = titleCase
 exports.parseType = parseType
 exports.params = params
 exports.examples = examples
+exports.setLevel = setLevel
 
 /**
 Escape special markdown characters
@@ -308,4 +309,8 @@ function examples (options) {
       return prev + options.fn(example)
     }, '')
   }
+}
+
+function setLevel (identifier, level) {
+  identifier.level = level
 }
