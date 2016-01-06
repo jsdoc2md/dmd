@@ -11,19 +11,20 @@ class Identifier {
     _i.set(this, i)
     this.kind = i.kind
   }
-  get description () {
-    if (_i.get(this).description) {
-      return `${wrap(removeLinks(_i.get(this).description), { width: 80 })}\n\n`
-    } else {
-      return ''
-    }
-  }
   get isModule () {
     return this.kind === 'module'
   }
 }
 
 class TerminalIdentifier extends Identifier {
+
+  description () {
+    if (_i.get(this).description) {
+      return `${wrap(removeLinks(_i.get(this).description), { width: 80 })}\n\n`
+    } else {
+      return ''
+    }
+  }
 
   get signature () {
     const i = _i.get(this)
@@ -64,11 +65,10 @@ class TerminalIdentifier extends Identifier {
     } else {
       return ''
     }
-
   }
 
   render () {
-    const output = `${this.signature}${this.description}${this.type}${this.params}${this.example}`
+    const output = `\n\n${this.signature}${this.description()}${this.type}${this.params}${this.example}`
     return ansi.format(output)
   }
 }
@@ -76,14 +76,38 @@ class TerminalIdentifier extends Identifier {
 class MarkdownIdentifier extends Identifier {
   get signature () {
     const i = _i.get(this)
-    return `MD signature`
+    let returns = ''
+    if (i.sig.type && i.sig.link) {
+      returns = `<code>[${i.sig.type}](${i.sig.link})</code>`
+    } else if (i.sig.type) {
+      returns = `<code>${i.sig.type}</code>`
+    }
+    return clean`${i.sig.name} ${i.sig.symbol} ${returns}\n`
+  }
+
+  get heading () {
+    return '## '
+  }
+
+  get description () {
+    if (_i.get(this).description) {
+      return `${_i.get(this).description}\n\n`
+    } else {
+      return ''
+    }
+  }
+
+  get params () {
+    let params = _i.get(this).params
+    if (params) {
+      return `**Params**:\n\n${gfmt(params)}\n`
+    } else {
+      return ''
+    }
   }
 
   render () {
-    return
-`## ${this.signature}
-${this.description}
-`
+    return `${this.heading}${this.signature}${this.description}${this.params}`
   }
 }
 
@@ -106,3 +130,4 @@ function removeLinks (str) {
 }
 
 module.exports = isTTY ? TerminalIdentifier : MarkdownIdentifier
+// module.exports = MarkdownIdentifier
