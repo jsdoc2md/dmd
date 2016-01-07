@@ -10,6 +10,8 @@ const input = require('../data/handbrake-js')
 const Doclets = require('../lib/doclets')
 const doclets = new Doclets(input)
 
+// console.log(require('util').inspect(doclets, { depth: null }));
+
 const fs = require('fs')
 const templateString = fs.readFileSync('./template/main.md', 'utf8')
 

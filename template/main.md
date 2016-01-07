@@ -1,14 +1,14 @@
 ${
-  doclets.getByKind('module').length
+  doclets.filterByKind('module').length
     ? `# Module List \n\n` + doclets
-      .getByKind('module')
+      .filterByKind('module')
       .map(d => `- ${d.signature}`)
     : ''
 }
 ${
-  doclets.getByScope('global').length
+  doclets.filterByScope('global').length
     ? `# Global List \n\n` + doclets
-      .getByScope('global')
+      .filterByScope('global')
       .map(d => `- ${d.signature}`)
     : ''
 }
@@ -16,7 +16,7 @@ ${
 
 ${
   doclets
-    .getByKind('module')
+    .filterByKind('module')
     .map(d => d.render())
-    .join('')
+    .join('\n')
 }

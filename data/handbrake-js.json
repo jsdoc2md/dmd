@@ -12,7 +12,7 @@
   {
     "kind": "function",
     "id": "module_handbrake-js.spawn",
-    "title": "hbjs.spawn(options) ⇒ <code>[Handbrake](#module_handbrake-js..Handbrake)</code>",
+    "parentId": "module_handbrake-js",
     "sig": {
       "name": "hbjs.spawn(options)",
       "symbol": "⇒",
@@ -42,9 +42,38 @@
     ]
   },
   {
+    "kind": "function",
+    "id": "module_handbrake-js.exec",
+    "parentId": "module_handbrake-js",
+    "sig": {
+      "name": "hbjs.exec(options, [onComplete])"
+    },
+    "description": "Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLIGuide#options) calling the supplied callback on completion. The exec method is best suited for short duration tasks where you can wait until completion for the output.",
+    "example": "```js\n    var hbjs = require('handbrake-js')\n\n    hbjs.exec({ preset-list: true }, function(err, stdout, stderr){\n        if (err) throw err\n        console.log(stdout)\n    })\n    ```",
+    "type": {
+      "name": "static method",
+      "parent": {
+        "id": "module_handbrake-js",
+        "name": "handbrake-js"
+      }
+    },
+    "params": [
+      {
+        "name": "options",
+        "type": "Object",
+        "description": "[Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI"
+      },
+      {
+        "name": "[onComplete]",
+        "type": "function",
+        "description": "If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output."
+      }
+    ]
+  },
+  {
     "kind": "class",
     "id": "module_handbrake-js..Handbrake",
-    "title": "hbjs~Handbrake ⇐ <code>[EventEmitter](http://nodejs.org/api/events.html)</code>",
+    "parentId": "module_handbrake-js",
     "sig": {
       "name": "hbjs~Handbrake",
       "symbol": "⇐",
@@ -65,7 +94,7 @@
   {
     "kind": "property",
     "id": "module_handbrake-js..Handbrake+output",
-    "title": "handbrake.output : <code>string</code>",
+    "parentId": "module_handbrake-js..Handbrake",
     "sig": {
       "name": "handbrake.output",
       "symbol": ":",
