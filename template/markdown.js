@@ -1,6 +1,6 @@
 'use strict'
-const DocletBase = require('./doclet-base')
-const clean = require('./template-util').clean
+const TemplateBase = require('../lib/template-base')
+const clean = require('../lib/template-util').clean
 const wrap = require('wordwrapjs')
 const ansi = require('ansi-escape-sequences')
 const gfmt = require('gfmt')
@@ -9,7 +9,7 @@ const gfmt = require('gfmt')
  * @module markdown
  */
 
-class Doclet extends DocletBase {
+class Template extends TemplateBase {
   get anchor () {
     return `<a href="#${this.data.id}"></a>\n`
   }
@@ -46,18 +46,14 @@ class Doclet extends DocletBase {
   }
 }
 
-class Module extends Doclet {
+class Module extends Template {
   get signature () {
     return clean`${this.data.sig.name}\n`
   }
 }
 
-
-exports.Doclet = Doclet
+exports.Template = Template
 exports.Module = Module
-exports.Function = Doclet
-exports.Class = Doclet
-exports.Property = Doclet
 
 function removeMdLinks (str) {
   return str.replace(/\[(\S*)\]\(\S+\)/g, '$1')
