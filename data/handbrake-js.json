@@ -77,10 +77,9 @@
     "longname": "module:handbrake-js~Handbrake#eError",
     "name": "eError",
     "scope": "instance",
-    "kind": "member",
+    "kind": "enum",
     "description": "All operational errors are emitted via the {@link module:handbrake-js~Handbrake#event:error} event.",
     "memberof": "module:handbrake-js~Handbrake",
-    "isEnum": true,
     "properties": [
       {
         "description": "Thrown if you accidentally set identical input and output paths (which would clobber the input file), forget to specifiy an output path and other validation errors",

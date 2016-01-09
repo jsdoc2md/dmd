@@ -66,6 +66,15 @@ class MemberTerminalTemplate extends TerminalTemplate {
   }
 }
 
+class EnumTerminalTemplate extends TerminalTemplate {
+  get sigSymbol () {
+    return _('symbol.type')
+  }
+  get sigTypes () {
+    return 'enum'
+  }
+}
+
 class FunctionTerminalTemplate extends TerminalTemplate {
   get sigSymbol () {
     return this.data.returns && _('symbol.returns')
@@ -84,11 +93,19 @@ class ClassTerminalTemplate extends TerminalTemplate {
   }
 }
 
+class EventTerminalTemplate extends TerminalTemplate {
+  get signature () {
+    return clean`[bold]{"${this.data.name}"}\n`
+  }
+}
+
 exports.Template = TerminalTemplate
 exports.Module = ModuleTerminalTemplate
 exports.Member = MemberTerminalTemplate
 exports.Function = FunctionTerminalTemplate
 exports.Class = ClassTerminalTemplate
+exports.Enum = EnumTerminalTemplate
+exports.Event = EventTerminalTemplate
 
 function removeMdLinks (str) {
   return str.replace(/\[(\S*)\]\(\S+\)/g, '$1')

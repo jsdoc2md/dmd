@@ -1,14 +1,21 @@
 #!/usr/bin/env node
 'use strict'
 
-const context = {
-  lang: 'en-GB',
-}
+const markdown = require('../template/markdown')
+const terminal = require('../template/terminal')
+const markdownParamList = require('../template/markdown-param-list')
 
-const input = require('../data/handbrake-js')
+// let template = markdownParamList
+// let template = terminal
+let template = markdown
 
-const Doclets = require('../lib/doclets')
-const doclets = new Doclets(input)
+const doclets = require('../data/handbrake-js')
+
+const DocletCollectionBuilder = require('../lib/doclets')
+const docletCollection = new DocletCollectionBuilder({
+  doclets: doclets,
+  templatePackage: template
+})
 
 const fs = require('fs')
 const templateString = fs.readFileSync('./output-template/simple.md', 'utf8')
