@@ -6,13 +6,13 @@ const clean = require('../lib/template-util').clean
  * @module markdown
  */
 
-class ParamsList extends markdown.Template {
+class MarkdownTemplate extends markdown.Template {
   get params () {
     let params = this.data.params
     if (params) {
       const list = params.map(param => {
         const nameSplit = param.name.split('.')
-        const name = nameSplit[nameSplit.length - 1]
+        let name = nameSplit[nameSplit.length - 1]
         if (nameSplit.length > 1) name = '.' + name
         if (param.variable) name = '...' + name
         if (param.optional) name = '[' + name + ']'
@@ -40,12 +40,13 @@ function paramLine (p) {
   return `${p.indent}- ${p.name}${type}${defaultValue}${desc}`
 }
 
-function linkedTypeList (types) {
+function linkedTypeList (type) {
 //   {{#each types~}}
 // {{>link to=this html=../html ~}}
 // {{#unless @last}}{{{../../delimiter}}}{{/unless~}}
 // {{/each}}
-  return types.map(type => link(type.id, false)).join(' | ')
+  // return types.map(type => link(type.id, false)).join(' | ')
+  return type.names && type.names.join(' | ')
 }
 
 function link (to, html, caption) {
@@ -178,7 +179,7 @@ function anchorName (options) {
   )
 }
 
-exports.Doclet = ParamsList
+exports.Template = MarkdownTemplate
 
 // {{#params}}**Params**
 // {{#each this~}}

@@ -5,9 +5,9 @@ const markdown = require('../template/markdown')
 const terminal = require('../template/terminal')
 const markdownParamList = require('../template/markdown-param-list')
 
-// let template = markdownParamList
+let template = markdownParamList
 // let template = terminal
-let template = markdown
+// let template = markdown
 
 const doclets = require('../data/handbrake-js')
 
