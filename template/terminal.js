@@ -12,7 +12,7 @@ const _ = require('../lib/l18n')._
 
 class TerminalTemplate extends TemplateBase {
   get signature () {
-    return clean`[bold]{${this.data.name} SYMBOL} [underline]{TYPE}\n`
+    return clean`[bold]{${this.data.parentName}${this.data.accessSymbol}${this.data.name} ${this.sigSymbol}} [underline]{${this.sigTypes}}\n`
   }
 
   get description () {
@@ -51,37 +51,44 @@ class TerminalTemplate extends TemplateBase {
   }
 }
 
-class TerminalModuleTemplate extends TerminalTemplate {
+class ModuleTerminalTemplate extends TerminalTemplate {
   get signature () {
     return clean`[bold underline]{${this.data.name}}\n`
   }
 }
 
-class TerminalMemberTemplate extends TerminalTemplate {
-  get signature () {
-    return clean`[bold]{${this.data.name} ${_('symbol.type')}} [underline]{THE TYPE}\n`
+class MemberTerminalTemplate extends TerminalTemplate {
+  get sigSymbol () {
+    return _('symbol.type')
+  }
+  get sigTypes () {
+    return this.data.type && this.data.type.names.join(' | ')
   }
 }
 
-class TerminalFunctionTemplate extends TerminalTemplate {
-  get signature () {
-    const parentName = this.parent ? `${(this.parent.data.typicalname || this.parent.data.name)}.` : ''
-    return clean`[bold]{${parentName}${this.data.name} SYMBOL} [underline]{TYPE}\n`
+class FunctionTerminalTemplate extends TerminalTemplate {
+  get sigSymbol () {
+    return this.data.returns && _('symbol.returns')
+  }
+  get sigTypes () {
+    return this.data.returnTypeNames.join(' | ')
   }
 }
 
-class TerminalClassTemplate extends TerminalTemplate {
-  get signature () {
-    const parentName = this.parent ? `${(this.parent.data.typicalname || this.parent.data.name)}.` : ''
-    return clean`[bold]{${parentName}${this.data.name} SYMBOL} [underline]{TYPE}\n`
+class ClassTerminalTemplate extends TerminalTemplate {
+  get sigSymbol () {
+    return this.data.augments.length && _('symbol.extends')
+  }
+  get sigTypes () {
+    return this.data.augments.length && this.data.augments[0]
   }
 }
 
 exports.Template = TerminalTemplate
-exports.Module = TerminalModuleTemplate
-exports.Member = TerminalMemberTemplate
-exports.Function = TerminalFunctionTemplate
-exports.Class = TerminalClassTemplate
+exports.Module = ModuleTerminalTemplate
+exports.Member = MemberTerminalTemplate
+exports.Function = FunctionTerminalTemplate
+exports.Class = ClassTerminalTemplate
 
 function removeMdLinks (str) {
   return str.replace(/\[(\S*)\]\(\S+\)/g, '$1')
