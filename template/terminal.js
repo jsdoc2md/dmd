@@ -10,7 +10,7 @@ const _ = require('../lib/l18n')._
  * @module terminal
  */
 
-class Template extends TemplateBase {
+class TerminalTemplate extends TemplateBase {
   get signature () {
     return clean`[bold]{${this.data.name} SYMBOL} [underline]{TYPE}\n`
   }
@@ -45,42 +45,43 @@ class Template extends TemplateBase {
       return `  [bold]{Example}:\n${example}\n`
     }
   }
+
   _render () {
     return ansi.format(clean`${this.signature}${this.description}${this.type}${this.params}${this.example}`)
   }
 }
 
-class Module extends Template {
+class TerminalModuleTemplate extends TerminalTemplate {
   get signature () {
     return clean`[bold underline]{${this.data.name}}\n`
   }
 }
 
-class Member extends Template {
+class TerminalMemberTemplate extends TerminalTemplate {
   get signature () {
     return clean`[bold]{${this.data.name} ${_('symbol.type')}} [underline]{THE TYPE}\n`
   }
 }
 
-class Function_ extends Template {
+class TerminalFunctionTemplate extends TerminalTemplate {
   get signature () {
     const parentName = this.parent ? `${(this.parent.data.typicalname || this.parent.data.name)}.` : ''
     return clean`[bold]{${parentName}${this.data.name} SYMBOL} [underline]{TYPE}\n`
   }
 }
 
-class Class_ extends Template {
+class TerminalClassTemplate extends TerminalTemplate {
   get signature () {
     const parentName = this.parent ? `${(this.parent.data.typicalname || this.parent.data.name)}.` : ''
     return clean`[bold]{${parentName}${this.data.name} SYMBOL} [underline]{TYPE}\n`
   }
 }
 
-exports.Template = Template
-exports.Module = Module
-exports.Member = Member
-exports.Function = Function_
-exports.Class = Class_
+exports.Template = TerminalTemplate
+exports.Module = TerminalModuleTemplate
+exports.Member = TerminalMemberTemplate
+exports.Function = TerminalFunctionTemplate
+exports.Class = TerminalClassTemplate
 
 function removeMdLinks (str) {
   return str.replace(/\[(\S*)\]\(\S+\)/g, '$1')
