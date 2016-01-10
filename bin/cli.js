@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 'use strict'
 
-const markdown = require('../template/markdown')
-const terminal = require('../template/terminal')
-const markdownParamList = require('../template/markdown-param-list')
+const markdown = require('../template-dmd/markdown')
+const terminal = require('../template-term/terminal')
+const markdownParamList = require('../template-dmd/markdown-param-list')
 
-// let template = markdownParamList
-let template = terminal
+let template = markdownParamList
+// let template = terminal
 // let template = markdown
 
 const dataTreeBuilder = require('../lib/builder-doclet-data')
