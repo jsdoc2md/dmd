@@ -10,9 +10,15 @@ const _ = require('../lib/l18n')._
  * @module terminal
  */
 
+class RootTerminalTemplate extends TemplateBase {
+  _render () {
+    return ansi.format('[bold bg-black white]{API Documentation}\n')
+  }
+}
+
 class TerminalTemplate extends TemplateBase {
   get signature () {
-    return clean`[bold]{${this.data.parentName}${this.data.accessSymbol}${this.data.name} ${this.sigSymbol}} [underline]{${this.sigTypes}}\n`
+    return ansi.format(clean`[bold]{${this.data.parentName}${this.data.accessSymbol}${this.data.name} ${this.sigSymbol}} [underline]{${this.sigTypes}}\n`)
   }
 
   get description () {
@@ -53,7 +59,7 @@ class TerminalTemplate extends TemplateBase {
 
 class ModuleTerminalTemplate extends TerminalTemplate {
   get signature () {
-    return clean`[bold underline]{${this.data.name}}\n`
+    return ansi.format(clean`[bold underline]{${this.data.name}}\n`)
   }
 }
 
@@ -95,11 +101,12 @@ class ClassTerminalTemplate extends TerminalTemplate {
 
 class EventTerminalTemplate extends TerminalTemplate {
   get signature () {
-    return clean`[bold]{"${this.data.name}"}\n`
+    return ansi.format(clean`[bold]{"${this.data.name}"}\n`)
   }
 }
 
 exports.Template = TerminalTemplate
+exports.Root = RootTerminalTemplate
 exports.Module = ModuleTerminalTemplate
 exports.Member = MemberTerminalTemplate
 exports.Function = FunctionTerminalTemplate

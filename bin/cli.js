@@ -5,8 +5,8 @@ const markdown = require('../template/markdown')
 const terminal = require('../template/terminal')
 const markdownParamList = require('../template/markdown-param-list')
 
-let template = markdownParamList
-// let template = terminal
+// let template = markdownParamList
+let template = terminal
 // let template = markdown
 
 const dataTreeBuilder = require('../lib/builder-doclet-data')
@@ -21,11 +21,12 @@ const docletTree = dataTreeBuilder(doclets)
 // }
 
 
-const docs = templateTreeBuilder(docletTree)
+const docs = templateTreeBuilder(docletTree, template)
 // console.log(require('util').inspect(docs, { depth: null }));
-for (let doclet of docs) {
-  console.log(doclet.signature)
-}
+// for (let doclet of docs) {
+//   console.log(doclet.signature.trim())
+// }
+console.log(docs.render())
 return
 const fs = require('fs')
 const templateString = fs.readFileSync('./output-template/tree.md', 'utf8')
