@@ -56,7 +56,7 @@ class ModuleMarkdownTemplate extends MarkdownTemplate {
 
 class MemberMarkdownTemplate extends MarkdownTemplate {
   get sigSymbol () {
-    return _('symbol.type')
+    return _('symbol.type') + 'YEAH?'
   }
   get sigTypes () {
     return this.data.type && this.data.type.names.join(' | ')

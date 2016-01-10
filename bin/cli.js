@@ -9,13 +9,18 @@ let template = markdownParamList
 // let template = terminal
 // let template = markdown
 
-const doclets = require('../data/handbrake-js')
+const dataTreeBuilder = require('../lib/doclet-data-builder')
 
-const DocletCollectionBuilder = require('../lib/doclets')
-const docletCollection = new DocletCollectionBuilder({
-  doclets: doclets,
-  templatePackage: template
-})
+const doclets = require('../data/handbrake-js')
+const docletTree = dataTreeBuilder(doclets)
+
+// console.log(require('util').inspect(docletTree, { depth: null }));
+for (let doclet of docletTree) {
+  console.log(doclet.id)
+}
+return
+
+const docs = templateTreeBuilder.build(docletTree)
 
 const fs = require('fs')
 const templateString = fs.readFileSync('./output-template/simple.md', 'utf8')
