@@ -1,12 +1,18 @@
 'use strict'
 const markdown = require('./markdown')
 const clean = require('../lib/template-util').clean
+const _ = require('../lib/l18n')._
+const TemplateDecorator = require('../lib/template-decorator')
 
 /**
  * @module markdown
  */
 
-class MarkdownTemplate extends markdown.Template {
+class ParamListFormatList extends TemplateDecorator {
+  description () {
+    const desc = super.description()
+    return desc ? desc.replace('e', 'YEAH?') : desc
+  }
   get params () {
     let params = this.data.params
     if (params) {
@@ -17,7 +23,7 @@ class MarkdownTemplate extends markdown.Template {
         if (param.variable) name = '...' + name
         if (param.optional) name = '[' + name + ']'
         return {
-          indent: '    '.repeat(nameSplit.length - 1),
+          indent: _('md.indent').repeat(nameSplit.length - 1),
           name: name,
           type: param.type,
           defaultvalue: param.defaultvalue,
@@ -179,7 +185,7 @@ function anchorName (options) {
   )
 }
 
-exports.Template = MarkdownTemplate
+module.exports = ParamListFormatList
 
 // {{#params}}**Params**
 // {{#each this~}}

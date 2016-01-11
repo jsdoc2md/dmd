@@ -15,15 +15,15 @@ class MarkdownTemplate extends TemplateBase {
     return `<a href="#${this.data.id}"></a>\n`
   }
 
-  get heading () {
-    return '## '
+  heading () {
+    return `${'#'.repeat(this.level)} `
   }
 
   get signature () {
     return clean`${this.data.parentName}${this.data.accessSymbol}${this.data.name} ${this.sigSymbol} ${this.sigTypes}  \n`
   }
 
-  get description () {
+  description () {
     if (this.data.description) {
       return `${this.data.description}\n\n`
     }
@@ -43,8 +43,10 @@ class MarkdownTemplate extends TemplateBase {
     }
   }
 
+  get example () { return '' }
+
   _render () {
-    return clean`${this.anchor}${this.heading}${this.signature}${this.description}${this.type}${this.params}${this.example}`
+    return clean`${this.anchor}${this.heading()}${this.signature}${this.description()}${this.params}${this.example}`
   }
 }
 
