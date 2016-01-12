@@ -5,6 +5,7 @@ const wrap = require('wordwrapjs')
 const ansi = require('ansi-escape-sequences')
 const gfmt = require('gfmt')
 const _ = require('../lib/l18n')._
+const util = require('util')
 
 /**
  * @module markdown
@@ -12,7 +13,21 @@ const _ = require('../lib/l18n')._
 
 class MarkdownTemplate extends TemplateBase {
   get anchor () {
-    return `<a href="#${this.data.id}"></a>\n`
+    if (this.data.inherited) {
+      return 'the anchor of the super class'
+    }
+    const anchorName = util.format(
+      '%s%s%s',
+      this.data.isExported ? 'exp_' : '',
+      this.data.isConstructor ? 'new_' : '',
+      this.data.id
+        .replace(/:/g, '_')
+        .replace(/~/g, '..')
+        .replace(/\(\)/g, '_new')
+        .replace(/#/g, '+')
+    )
+
+    return `<a href="#${anchorName}"></a>\n`
   }
 
   heading () {
@@ -79,7 +94,7 @@ class FunctionMarkdownTemplate extends MarkdownTemplate {
     return this.data.returns && _('symbol.returns')
   }
   get sigTypes () {
-    return this.data.returnTypeNames.join(' | ')
+    return this.data.returnTypeNames.join(` ${_('symbol.typeSeparator')} `)
   }
 }
 

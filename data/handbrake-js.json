@@ -364,11 +364,12 @@
       {
         "type": {
           "names": [
-            "Object"
+            "String", "Clive", "TypeYeah?"
           ]
         },
         "description": "[Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI",
-        "name": "options"
+        "name": "options",
+        "defaultvalue": "Getme"
       }
     ],
     "examples": [

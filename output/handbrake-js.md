@@ -12,10 +12,7 @@ Spawns a HandbrakeCLI process with the supplied [options](https://trac.handbrake
 
 **Params**
 
-| name    | type | description                                                                                 |
-| ------- | ---- | ------------------------------------------------------------------------------------------- |
-| options | TYPE | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI |
-
+- options Object - [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI
 
 <a href="#module:handbrake-js.exec"></a>
 ## hbjs.exec    
@@ -23,11 +20,8 @@ Runs HandbrakeCLI with the supplied [options](https://trac.handbrake.fr/wiki/CLI
 
 **Params**
 
-| name       | type | description                                                                                                                                        |
-| ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options    | TYPE | [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI                                                        |
-| onComplete | TYPE | If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output. |
-
+- options Object - [Options](https://trac.handbrake.fr/wiki/CLIGuide#options) to pass directly to HandbrakeCLI
+- [onComplete] function - If passed, `onComplete(err, stdout, stderr)` will be called on completion, `stdout` and `stderr` being strings containing the HandbrakeCLI output.
 
 <a href="#module:handbrake-js~Handbrake"></a>
 ## hbjs~Handbrake ⇐ external:EventEmitter  
@@ -65,38 +59,29 @@ Fired at regular intervals passing a `progress` object.
 
 **Params**
 
-| name                     | type | description                                     |
-| ------------------------ | ---- | ----------------------------------------------- |
-| progress                 | TYPE | details of encode progress                      |
-| progress.taskNumber      | TYPE | current task index                              |
-| progress.taskCount       | TYPE | total tasks in the queue                        |
-| progress.percentComplete | TYPE | percent complete                                |
-| progress.fps             | TYPE | Frames per second                               |
-| progress.avgFps          | TYPE | Average frames per second                       |
-| progress.eta             | TYPE | Estimated time until completion                 |
-| progress.task            | TYPE | Task description, either "Encoding" or "Muxing" |
-
+- progress object - details of encode progress
+    - .taskNumber number - current task index
+    - .taskCount number - total tasks in the queue
+    - .percentComplete number - percent complete
+    - .fps number - Frames per second
+    - .avgFps number - Average frames per second
+    - .eta string - Estimated time until completion
+    - .task string - Task description, either "Encoding" or "Muxing"
 
 <a href="#module:handbrake-js~Handbrake#event:output"></a>
 ### "output"
 **Params**
 
-| name   | type | description                                                                            |
-| ------ | ---- | -------------------------------------------------------------------------------------- |
-| output | TYPE | An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process. |
-
+- output string - An aggregate of `stdout` and `stderr` output from the underlying HandbrakeCLI process.
 
 <a href="#module:handbrake-js~Handbrake#event:error"></a>
 ### "error"
 **Params**
 
-| name          | type | description                                              |
-| ------------- | ---- | -------------------------------------------------------- |
-| error         | TYPE | All operational exceptions are delivered via this event. |
-| error.name    | TYPE | The unique error identifier                              |
-| error.message | TYPE | Error description                                        |
-| error.errno   | TYPE | The HandbrakeCLI return code                             |
-
+- error Error - All operational exceptions are delivered via this event.
+    - .name module:handbrake-js~Handbrake#eError - The unique error identifier
+    - .message string - Error description
+    - .errno string - The HandbrakeCLI return code
 
 <a href="#module:handbrake-js~Handbrake#event:end"></a>
 ### "end"

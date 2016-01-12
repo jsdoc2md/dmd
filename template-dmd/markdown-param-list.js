@@ -1,6 +1,6 @@
 'use strict'
 const markdown = require('./markdown')
-const clean = require('../lib/template-util').clean
+const c = require('../lib/template-util').clean
 const _ = require('../lib/l18n')._
 const TemplateDecorator = require('../lib/template-decorator')
 
@@ -11,48 +11,43 @@ const TemplateDecorator = require('../lib/template-decorator')
 class ParamListFormatList extends TemplateDecorator {
   description () {
     const desc = super.description()
-    return desc ? desc.replace('e', 'YEAH?') : desc
+    return desc
   }
   get params () {
     let params = this.data.params
     if (params) {
-      const list = params.map(param => {
-        const nameSplit = param.name.split('.')
-        let name = nameSplit[nameSplit.length - 1]
-        if (nameSplit.length > 1) name = '.' + name
-        if (param.variable) name = '...' + name
-        if (param.optional) name = '[' + name + ']'
-        return {
-          indent: _('md.indent').repeat(nameSplit.length - 1),
-          name: name,
-          type: param.type,
-          defaultvalue: param.defaultvalue,
-          description: param.description
-        }
-      })
+      const paramList = params
+        .map(p => {
+          /* decorate the type.name to indicate variable, optional etc */
+          const nameSplit = p.name.split('.')
+          let name = nameSplit[nameSplit.length - 1]
+          if (nameSplit.length > 1) name = '.' + name
+          if (p.variable) name = '...' + name
+          if (p.optional) name = '[' + name + ']'
 
-      return `**Params**
+          return {
+            indent: _('md.indent').repeat(nameSplit.length - 1),
+            name: name,
+            type: p.type ? c` ${linkedTypeList(p.type.names)}` : '',
+            defaultvalue: p.defaultvalue ? c` ${getDefaultValue(p.defaultvalue, true, p.type.names)}` : '',
+            desc: p.description ? c` - ${p.description}` : ''
+          }
+        })
+        .map(p => c`${p.indent}- ${p.name}${p.type}${p.defaultvalue}${p.desc}`)
+        .join('\n')
 
-${list.map(paramLine).join('\n')}
-`
+      return c`**Params**\n\n${paramList}\n`
     }
   }
 }
 
-function paramLine (p) {
-  const type = p.type ? ` ${linkedTypeList(p.type)}` : ''
-  const defaultValue = p.defaultvalue ? ` ${p.defaultvalue}` : ''
-  const desc = p.description ? ` - ${p.description}` : ''
-  return `${p.indent}- ${p.name}${type}${defaultValue}${desc}`
-}
-
-function linkedTypeList (type) {
+function linkedTypeList (typeNames) {
 //   {{#each types~}}
 // {{>link to=this html=../html ~}}
 // {{#unless @last}}{{{../../delimiter}}}{{/unless~}}
 // {{/each}}
   // return types.map(type => link(type.id, false)).join(' | ')
-  return type.names && type.names.join(' | ')
+  return typeNames && typeNames.join(c` ${_('symbol.typeSeparator')} `)
 }
 
 function link (to, html, caption) {
@@ -77,8 +72,14 @@ function link (to, html, caption) {
   return `<code>${output}</code>`
 }
 
-function getDefaultValue () {
-  // {{#unless (equal defaultvalue undefined)}}<code>{{#if equals}} = {{/if}}{{#if (equal type.names.[0] "string")}}{{json-stringify defaultvalue}}{{else}}{{defaultvalue}}{{/if}}</code>{{/unless}}
+function getDefaultValue (defaultvalue, equals, typeNames) {
+  if (defaultvalue) {
+    const equalSymbol = equals ? ' = ' : ''
+    const defaultVal = typeNames[0].toLowerCase() === 'string'
+      ? JSON.stringify(defaultvalue)
+      : defaultvalue
+    return c`<code>${equalSymbol}${defaultVal}</code>`
+  }
 }
 
 /**
@@ -153,36 +154,6 @@ function _identifiers (options) {
     }
   }
   return a.where(options.data.root, query)
-}
-
-/**
-returns a unique ID string suitable for use as an `href`.
-@this {identifier}
-@returns {string}
-@static
-@category Returns string
-@example
-```js
-> ddata.anchorName.call({ id: "module:yeah--Yeah()" })
-'module_yeah--Yeah_new'
-```
-*/
-function anchorName (options) {
-  if (!this.id) throw new Error('[anchorName helper] cannot create a link without a id: ' + JSON.stringify(this))
-  if (this.inherited) {
-    options.hash.longname = this.inherits
-    return anchorName.call(_identifiers(options)[0])
-  }
-  return util.format(
-    '%s%s%s',
-    this.isExported ? 'exp_' : '',
-    this.kind === 'constructor' ? 'new_' : '',
-    this.id
-      .replace(/:/g, '_')
-      .replace(/~/g, '..')
-      .replace(/\(\)/g, '_new')
-      .replace(/#/g, '+')
-  )
 }
 
 module.exports = ParamListFormatList
