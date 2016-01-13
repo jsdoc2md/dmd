@@ -2,13 +2,10 @@
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "1.2.1",
-  "description": "dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.",
+  "description": "dmd",
   "license": "MIT",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
-  "bin": {
-    "dmd2": "bin/cli.js"
-  },
   "keywords": [
     "documentation",
     "markdown"
@@ -16,24 +13,15 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "files": [
-    "bin",
-    "helpers",
-    "lib",
-    "partials"
-  ],
   "scripts": {
-    "test": "tape test/*.js |tap-spec",
+    "test": "tape test/*.js",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "ansi-escape-sequences": "^2.2.1",
-    "command-line-args": "^2.1.3",
     "dmd-locale-en-gb": "^1.0.0",
     "gfmt": "^0.2.1",
-    "object-get": "^2.0.0",
-    "typical": "^2.4.0",
-    "wordwrapjs": "^1.2.0"
+    "template-clean": "^0.1.0",
+    "typical": "^2.4.0"
   },
   "devDependencies": {
     "tape": "^4.2.2"
