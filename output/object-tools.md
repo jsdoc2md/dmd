@@ -1,6 +1,6 @@
 
 <a href="#module_object-tools"></a>
-# object-tools
+## object-tools
 Useful functions for working with objects
 
 
@@ -22,7 +22,7 @@ Useful functions for working with objects
 
 
 <a href="#module_object-tools.extend"></a>
-## o.extend(...object) ⇒ object  
+### o.extend(...object) ⇒ object  
 Merge a list of objects, left to right, into one - to a maximum depth of 10.
 
 **Params**
@@ -37,7 +37,7 @@ Merge a list of objects, left to right, into one - to a maximum depth of 10.
 
 
 <a href="#module_object-tools.clone"></a>
-## o.clone(input) ⇒ object &#124; array  
+### o.clone(input) ⇒ object &#124; array  
 Clones an object or array
 
 **Params**
@@ -52,7 +52,7 @@ Clones an object or array
 
 
 <a href="#module_object-tools.every"></a>
-## o.every(object, iterator) ⇒ boolean  
+### o.every(object, iterator) ⇒ boolean  
 Returns true if the supplied iterator function returns true for every property in the object
 
 **Params**
@@ -68,7 +68,7 @@ Returns true if the supplied iterator function returns true for every property i
 
 
 <a href="#module_object-tools.each"></a>
-## o.each(object, callback)   
+### o.each(object, callback)   
 Runs the iterator function against every key/value pair in the input object
 
 **Params**
@@ -84,7 +84,7 @@ Runs the iterator function against every key/value pair in the input object
 
 
 <a href="#module_object-tools.exists"></a>
-## o.exists(object, query) ⇒ boolean  
+### o.exists(object, query) ⇒ boolean  
 returns true if the key/value pairs in `query` also exist identically in `object`.
 Also supports RegExp values in `query`. If the `query` property begins with `!` then test is negated.
 
@@ -101,7 +101,7 @@ Also supports RegExp values in `query`. If the `query` property begins with `!` 
 
 
 <a href="#module_object-tools.without"></a>
-## o.without(object, toRemove) ⇒ object  
+### o.without(object, toRemove) ⇒ object  
 Returns a clone of the object minus the specified properties. See also {@link module:object-tools.select}.
 
 **Params**
@@ -117,7 +117,7 @@ Returns a clone of the object minus the specified properties. See also {@link mo
 
 
 <a href="#module_object-tools.where"></a>
-## o.where(object, query) ⇒ object  
+### o.where(object, query) ⇒ object  
 Returns a new object containing the key/value pairs which satisfy the query
 
 **Params**
@@ -133,7 +133,7 @@ Returns a new object containing the key/value pairs which satisfy the query
 
 
 <a href="#module_object-tools.extract"></a>
-## o.extract(object, query) ⇒ object  
+### o.extract(object, query) ⇒ object  
 identical to `o.where(object, query)` with one exception - the found properties are removed from the input `object`
 
 **Params**
@@ -149,7 +149,7 @@ identical to `o.where(object, query)` with one exception - the found properties 
 
 
 <a href="#module_object-tools.select"></a>
-## o.select(object, fields) ⇒ object  
+### o.select(object, fields) ⇒ object  
 Returns a new object containing only the selected fields. See also {@link module:object-tools.without}.
 
 **Params**
@@ -165,7 +165,7 @@ Returns a new object containing only the selected fields. See also {@link module
 
 
 <a href="#module_object-tools.get"></a>
-## o.get(object, expression) ⇒ *  
+### o.get(object, expression) ⇒ *  
 Returns the value at the given property.
 
 **Params**
