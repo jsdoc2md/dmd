@@ -3,6 +3,8 @@
 ## object-tools
 Useful functions for working with objects
 
+**Example**:
+var o = require("object-tools")
 
 * object-tools
   * .extend(...object) ⇒ object  
@@ -31,6 +33,12 @@ Merge a list of objects, left to right, into one - to a maximum depth of 10.
 | ------ | ---- | --------------------------------------------- |
 | object | TYPE | a sequence of object instances to be extended |
 
+**Example**:
+> o.extend({ one: 1, three: 3 }, { one: "one", two: 2 }, { four: 4 })
+{ one: 'one',
+  three: 3,
+  two: 2,
+  four: 4 }
 
 
 * * *
@@ -46,6 +54,21 @@ Clones an object or array
 | ----- | ---- | ------------------ |
 | input | TYPE | the input to clone |
 
+**Example**:
+> date = new Date()
+Fri May 09 2014 13:54:34 GMT+0200 (CEST)
+> o.clone(date)
+{}  // a Date instance doesn't own any properties
+> date.clive = "hater"
+'hater'
+> o.clone(date)
+{ clive: 'hater' }
+> array = [1,2,3]
+[ 1, 2, 3 ]
+> newArray = o.clone(array)
+[ 1, 2, 3 ]
+> array === newArray
+false
 
 
 * * *
@@ -62,6 +85,12 @@ Returns true if the supplied iterator function returns true for every property i
 | object   | TYPE | the object to inspect                                                                  |
 | iterator | TYPE | the iterator function to run against each key/value pair, the args are `(value, key)`. |
 
+**Example**:
+> function aboveTen(input){ return input > 10; }
+> o.every({ eggs: 12, carrots: 30, peas: 100 }, aboveTen)
+true
+> o.every({ eggs: 6, carrots: 30, peas: 100 }, aboveTen)
+false
 
 
 * * *
@@ -78,6 +107,12 @@ Runs the iterator function against every key/value pair in the input object
 | object   | TYPE | the object to iterate                                                                  |
 | callback | TYPE | the iterator function to run against each key/value pair, the args are `(value, key)`. |
 
+**Example**:
+> var total = 0
+> function addToTotal(n){ total += n; }
+> o.each({ eggs: 3, celery: 2, carrots: 1 }, addToTotal)
+> total
+6
 
 
 * * *
@@ -95,6 +130,21 @@ Also supports RegExp values in `query`. If the `query` property begins with `!` 
 | object | TYPE | the object to examine           |
 | query  | TYPE | the key/value pairs to look for |
 
+**Example**:
+> o.exists({ a: 1, b: 2}, {a: 0})
+false
+> o.exists({ a: 1, b: 2}, {a: 1})
+true
+> o.exists({ a: 1, b: 2}, {"!a": 1})
+false
+> o.exists({ name: "clive hater" }, { name: /clive/ })
+true
+> o.exists({ name: "clive hater" }, { "!name": /ian/ })
+true
+> o.exists({ a: 1}, { a: function(n){ return n > 0; } })
+true
+> o.exists({ a: 1}, { a: function(n){ return n > 1; } })
+false
 
 
 * * *
@@ -111,6 +161,11 @@ Returns a clone of the object minus the specified properties. See also {@link mo
 | object   | TYPE | the input object                                  |
 | toRemove | TYPE | a single property, or array of properties to omit |
 
+**Example**:
+> o.without({ a: 1, b: 2, c: 3}, "b")
+{ a: 1, c: 3 }
+> o.without({ a: 1, b: 2, c: 3}, ["b", "a"])
+{ c: 3 }
 
 
 * * *
@@ -127,6 +182,17 @@ Returns a new object containing the key/value pairs which satisfy the query
 | object | TYPE | The input object                                                                                                                                  |
 | query  | TYPE | Either an array of property names, or a function. The function is called with `(value, key)` and must return `true` to be included in the output. |
 
+**Example**:
+> object = { a: 1, b: 0, c: 2 }
+{ a: 1, b: 0, c: 2 }
+> o.where(object, function(value, key){
+      return value > 0
+  })
+{ a: 1, c: 2 }
+> o.where(object, [ "b" ])
+{ b: 0 }
+> object
+{ a: 1, b: 0, c: 2 }
 
 
 * * *
@@ -143,6 +209,15 @@ identical to `o.where(object, query)` with one exception - the found properties 
 | object | TYPE | The input object                                                                                                                                  |
 | query  | TYPE | Either an array of property names, or a function. The function is called with `(value, key)` and must return `true` to be included in the output. |
 
+**Example**:
+> object = { a: 1, b: 0, c: 2 }
+{ a: 1, b: 0, c: 2 }
+> o.where(object, function(value, key){
+      return value > 0
+  })
+{ a: 1, c: 2 }
+> object
+{ b: 0 }
 
 
 * * *
