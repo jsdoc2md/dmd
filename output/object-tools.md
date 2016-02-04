@@ -9,16 +9,16 @@ var o = require("object-tools")
 ```
 
 * object-tools
-  * .extend(...object) ⇒ object  
-  * .clone(input) ⇒ object &#124; array  
-  * .every(object, iterator) ⇒ boolean  
-  * .each(object, callback)   
-  * .exists(object, query) ⇒ boolean  
-  * .without(object, toRemove) ⇒ object  
-  * .where(object, query) ⇒ object  
-  * .extract(object, query) ⇒ object  
-  * .select(object, fields) ⇒ object  
-  * .get(object, expression) ⇒ *  
+  * [.extend(...object)](#module_object-tools.extend) ⇒ object  
+  * [.clone(input)](#module_object-tools.clone) ⇒ object &#124; array  
+  * [.every(object, iterator)](#module_object-tools.every) ⇒ boolean  
+  * [.each(object, callback)](#module_object-tools.each)   
+  * [.exists(object, query)](#module_object-tools.exists) ⇒ boolean  
+  * [.without(object, toRemove)](#module_object-tools.without) ⇒ object  
+  * [.where(object, query)](#module_object-tools.where) ⇒ object  
+  * [.extract(object, query)](#module_object-tools.extract) ⇒ object  
+  * [.select(object, fields)](#module_object-tools.select) ⇒ object  
+  * [.get(object, expression)](#module_object-tools.get) ⇒ *  
 
 
 
