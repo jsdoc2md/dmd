@@ -7,8 +7,7 @@
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
   "keywords": [
-    "documentation",
-    "markdown"
+    "jsdoc2md"
   ],
   "engines": {
     "node": ">=0.10.0"
@@ -20,11 +19,12 @@
   "dependencies": {
     "array-back": "^1.0.2",
     "dmd-locale-en-gb": "^1.0.0",
+    "entities": "^1.1.1",
     "gfmt": "~0.2.1",
-    "jsdoc-parse-bowie": "file:///Users/lloyd/Documents/75lb/jsdoc-parse-bowie",
+    "jsdoc-parse-template": "~0.1.0",
     "template-clean": "~0.1.0",
-    "typical": "^2.4.0",
-    "text-catalogue": "file:///Users/lloyd/Documents/75lb/text-catalogue"
+    "text-catalogue": "file:///Users/lloyd/Documents/75lb/text-catalogue",
+    "typical": "^2.4.0"
   },
   "devDependencies": {
     "tape": "^4.2.2"
