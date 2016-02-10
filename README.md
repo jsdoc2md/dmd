@@ -1,5 +1,5 @@
 [![view on npm](http://img.shields.io/npm/v/dmd.svg)](https://www.npmjs.org/package/dmd)
-[![npm module downloads per month](http://img.shields.io/npm/dm/dmd.svg)](https://www.npmjs.org/package/dmd)
+[![npm module downloads](http://img.shields.io/npm/dt/dmd.svg)](https://www.npmjs.org/package/dmd)
 [![Build Status](https://travis-ci.org/jsdoc2md/dmd.svg?branch=master)](https://travis-ci.org/jsdoc2md/dmd)
 [![Dependency Status](https://david-dm.org/jsdoc2md/dmd.svg)](https://david-dm.org/jsdoc2md/dmd)
 
@@ -12,12 +12,12 @@ dmd is a template for create markdown API documentation from jsdoc-parse data. W
   
 
 <a name="module_dmd..Dmd"></a>
-### dmd~Dmd⇐modules:jsdoc-parse-template~doclet-template  
+### dmd~Dmd ⇐ modules:jsdoc-parse-template~doclet-template  
 A DocletTemplate for generating markdown documentation for a doclet.
 
 **Kind**: inner class of module:dmd  
 
-* [~Dmd](#module_dmd..Dmd)⇐modules:jsdoc-parse-template~doclet-template  
+* [~Dmd](#module_dmd..Dmd) ⇐ modules:jsdoc-parse-template~doclet-template  
     * [.anchor](#module_dmd..Dmd+anchor)   
     * [.heading](#module_dmd..Dmd+heading)   
     * [.signature([options], [options])](#module_dmd..Dmd+signature)   
@@ -50,8 +50,9 @@ the doclet heading.
 **Kind**: instance method of module:dmd~Dmd  
 **Params**
 
-- [options] object
-- [options] object
+- [options] `object`
+- [options] `object`
+
 **Example**
 ```js
 new ExampleClass(one, two) <= EventEmitter
@@ -68,15 +69,16 @@ Returns the method signature, e.g. `(options, [onComplete])`
 **Kind**: static method of module:dmd~Dmd  
 **Params**
 
-- names Array.<string> - list of type names
+- names `Array.<string>` - list of type names
+
 
 <a name="Class"></a>
-## Class⇐module:dmd  
+## Class ⇐ module:dmd  
 Tweaks for class doclets
 
 **Kind**: global class  
 
-* [Class](#Class)⇐module:dmd  
+* [Class](#Class) ⇐ module:dmd  
     * [.sigSymbol](#Class+sigSymbol)   
     * [.sigTypes](#Class+sigTypes)   
 
