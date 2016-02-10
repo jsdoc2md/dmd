@@ -18,15 +18,15 @@ A DocletTemplate for generating markdown documentation for a doclet.
 **Kind**: inner class of module:dmd  
 
 * [~Dmd](#module_dmd..Dmd) ⇐ modules:jsdoc-parse-template~doclet-template  
-    * [.anchor](#module_dmd..Dmd+anchor)   
-    * [.heading](#module_dmd..Dmd+heading)   
-    * [.signature([options], [options])](#module_dmd..Dmd+signature)   
-    * [.sigMethodSig](#module_dmd..Dmd+sigMethodSig) ⇒ `string`  
-    * [.typeList(names)](#module_dmd..Dmd.typeList)   
+    * [.anchor](#module_dmd..Dmd+anchor)  
+    * [.heading](#module_dmd..Dmd+heading)  
+    * [.signature([options], [options])](#module_dmd..Dmd+signature)  
+    * [.sigMethodSig](#module_dmd..Dmd+sigMethodSig) ⇒ [`string`](#string)  
+    * [.typeList(names)](#module_dmd..Dmd.typeList)  
 
 
 <a name="module_dmd..Dmd+anchor"></a>
-#### dmd.anchor   
+#### dmd.anchor  
 An anchor member-index items can link to
 
 **Kind**: instance method of module:dmd~Dmd  
@@ -36,7 +36,7 @@ An anchor member-index items can link to
 ```
 
 <a name="module_dmd..Dmd+heading"></a>
-#### dmd.heading   
+#### dmd.heading  
 the doclet heading.
 
 **Kind**: instance method of module:dmd~Dmd  
@@ -46,12 +46,12 @@ the doclet heading.
 ```
 
 <a name="module_dmd..Dmd+signature"></a>
-#### dmd.signature([options], [options])   
+#### dmd.signature([options], [options])  
 **Kind**: instance method of module:dmd~Dmd  
 **Params**
 
-- [options] `object`
-- [options] `object`
+- [options] [`object`](#object)
+- [options] [`object`](#object)
 
 **Example**
 ```js
@@ -59,17 +59,17 @@ new ExampleClass(one, two) <= EventEmitter
 ```
 
 <a name="module_dmd..Dmd+sigMethodSig"></a>
-#### dmd.sigMethodSig ⇒ `string`  
+#### dmd.sigMethodSig ⇒ [`string`](#string)  
 Returns the method signature, e.g. `(options, [onComplete])`
 
 **Kind**: instance method of module:dmd~Dmd  
 
 <a name="module_dmd..Dmd.typeList"></a>
-#### Dmd.typeList(names)   
+#### Dmd.typeList(names)  
 **Kind**: static method of module:dmd~Dmd  
 **Params**
 
-- names `Array.<string>` - list of type names
+- names [`Array.<string>`](#Array.<string>) - list of type names
 
 
 <a name="Class"></a>
@@ -79,18 +79,18 @@ Tweaks for class doclets
 **Kind**: global class  
 
 * [Class](#Class) ⇐ module:dmd  
-    * [.sigSymbol](#Class+sigSymbol)   
-    * [.sigTypes](#Class+sigTypes)   
+    * [.sigSymbol](#Class+sigSymbol)  
+    * [.sigTypes](#Class+sigTypes)  
 
 
 <a name="Class+sigSymbol"></a>
-### class.sigSymbol   
+### class.sigSymbol  
 show the augments symbol
 
 **Kind**: instance method of Class  
 
 <a name="Class+sigTypes"></a>
-### class.sigTypes   
+### class.sigTypes  
 show the augments type list
 
 **Kind**: instance method of Class  
