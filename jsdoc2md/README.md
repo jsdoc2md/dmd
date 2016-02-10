@@ -6,6 +6,8 @@
 # dmd
 dmd is a template for create markdown API documentation from jsdoc-parse data. WIP.
 
+${docs.renderAll()}
+
 * * *
 
 &copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
