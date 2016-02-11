@@ -18,11 +18,19 @@ A DocletTemplate for generating markdown documentation for a doclet.
 **Kind**: inner class of module:dmd  
 
 * [~Dmd](#module_dmd..Dmd) ⇐ modules:jsdoc-parse-template~doclet-template  
+    * [.typeList(names)](#module_dmd..Dmd+typeList)  
     * [.anchor](#module_dmd..Dmd+anchor)  
     * [.heading](#module_dmd..Dmd+heading)  
     * [.signature([options], [options])](#module_dmd..Dmd+signature)  
-    * [.sigMethodSig](#module_dmd..Dmd+sigMethodSig) ⇒ [`string`](#string)  
-    * [.typeList(names)](#module_dmd..Dmd.typeList)  
+    * [.sigMethodSig](#module_dmd..Dmd+sigMethodSig) ⇒ `string`  
+
+
+<a name="module_dmd..Dmd+typeList"></a>
+#### dmd.typeList(names)  
+**Kind**: instance method of module:dmd~Dmd  
+**Params**
+
+- names `Array.<string>` - list of type names
 
 
 <a name="module_dmd..Dmd+anchor"></a>
@@ -50,8 +58,8 @@ the doclet heading.
 **Kind**: instance method of module:dmd~Dmd  
 **Params**
 
-- [options] [`object`](#object)
-- [options] [`object`](#object)
+- [options] `object`
+- [options] `object`
 
 **Example**
 ```js
@@ -59,18 +67,10 @@ new ExampleClass(one, two) <= EventEmitter
 ```
 
 <a name="module_dmd..Dmd+sigMethodSig"></a>
-#### dmd.sigMethodSig ⇒ [`string`](#string)  
+#### dmd.sigMethodSig ⇒ `string`  
 Returns the method signature, e.g. `(options, [onComplete])`
 
 **Kind**: instance method of module:dmd~Dmd  
-
-<a name="module_dmd..Dmd.typeList"></a>
-#### Dmd.typeList(names)  
-**Kind**: static method of module:dmd~Dmd  
-**Params**
-
-- names [`Array.<string>`](#Array.<string>) - list of type names
-
 
 <a name="Class"></a>
 ## Class ⇐ module:dmd  
