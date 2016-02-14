@@ -1,7 +1,7 @@
 {
-  "name": "dmd",
+  "name": "dmd2",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "dmd",
   "license": "MIT",
   "repository": "https://github.com/75lb/dmd.git",
@@ -21,9 +21,9 @@
     "dmd-locale-en-gb": "^1.0.0",
     "entities": "^1.1.1",
     "gfmt": "~0.2.1",
-    "jsdoc-parse-template": "~0.1.0",
+    "jsdoc-parse-template": "file:///Users/lloyd/Documents/jsdoc2md/jsdoc-parse-template",
     "template-clean": "~0.1.0",
-    "text-catalogue": "file:///Users/lloyd/Documents/75lb/text-catalogue",
+    "text-catalogue": "file:///Users/lloyd/Documents/jsdoc2md/text-catalogue",
     "typical": "^2.4.0"
   },
   "devDependencies": {
