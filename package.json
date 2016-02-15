@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "tape test/*.js",
-    "docs": "jsdoc2md2 -t jsdoc2md/README.md -p list lib/*.js > README.md; echo"
+    "docs": "jsdoc2md2 -t jsdoc2md/README.md -p list --skip-heading lib/*.js > README.md; echo"
   },
   "dependencies": {
     "array-back": "^1.0.2",

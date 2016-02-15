@@ -6,32 +6,43 @@
 # dmd
 dmd is a template for create markdown API documentation from jsdoc-parse data. WIP.
 
-<a name="module_dmd"></a>
-## dmd
+<a name="module_class"></a>
+Tweaks for class doclets
+
   
-<a name="module_dmd..Dmd"></a>
-### dmd~Dmd ⇐ modules:jsdoc-parse-template~doclet-template  
-A DocletTemplate for generating markdown documentation for a doclet.
+<a name="exp_module_class--Class"></a>
+### Class ⇐ module:dmd ⏏  
+**Kind**: Exported class  
 
-**Kind**: inner class of [`dmd`](#module_dmd)  
+* [Class](#exp_module_class--Class) ⇐ module:dmd ⏏  
+    * [.sigSymbol()](#module_class--Class+sigSymbol)  
+    * [.sigTypes()](#module_class--Class+sigTypes)  
+    * [.typeList(names)](#the anchor of the super class)  
+    * [.getSignature([options], [options])](#the anchor of the super class)  
+    * [.anchor()](#the anchor of the super class)  
+    * [.heading()](#the anchor of the super class)  
+    * [.sigMethodSig()](#the anchor of the super class) ⇒ `string`  
 
-* [~Dmd](#module_dmd..Dmd) ⇐ modules:jsdoc-parse-template~doclet-template  
-    * [.typeList(names)](#module_dmd..Dmd+typeList)  
-    * [.getSignature([options], [options])](#module_dmd..Dmd+getSignature)  
-    * [.anchor()](#module_dmd..Dmd+anchor)  
-    * [.heading()](#module_dmd..Dmd+heading)  
-    * [.sigMethodSig()](#module_dmd..Dmd+sigMethodSig) ⇒ `string`  
+<a name="module_class--Class+sigSymbol"></a>
+#### class.sigSymbol()  
+show the augments symbol
 
-<a name="module_dmd..Dmd+typeList"></a>
-#### dmd.typeList(names)  
-**Kind**: instance method of [`Dmd`](#module_dmd..Dmd)  
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
+<a name="module_class--Class+sigTypes"></a>
+#### class.sigTypes()  
+show the augments type list
+
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
+<a name="the anchor of the super class"></a>
+#### class.typeList(names)  
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
 **Params**
 
 - names `Array.<string>` - list of type names
 
-<a name="module_dmd..Dmd+getSignature"></a>
-#### dmd.getSignature([options], [options])  
-**Kind**: instance method of [`Dmd`](#module_dmd..Dmd)  
+<a name="the anchor of the super class"></a>
+#### class.getSignature([options], [options])  
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
 **Params**
 
 - [options] `object`
@@ -41,49 +52,90 @@ A DocletTemplate for generating markdown documentation for a doclet.
 ```js
 new ExampleClass(one, two) <= EventEmitter
 ```
-<a name="module_dmd..Dmd+anchor"></a>
-#### dmd.anchor()  
+<a name="the anchor of the super class"></a>
+#### class.anchor()  
 An anchor member-index items can link to
 
-**Kind**: instance method of [`Dmd`](#module_dmd..Dmd)  
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
 **Example**
 ```js
 <a name="#ExampleClass"></a>
 ```
-<a name="module_dmd..Dmd+heading"></a>
-#### dmd.heading()  
+<a name="the anchor of the super class"></a>
+#### class.heading()  
 the doclet heading.
 
-**Kind**: instance method of [`Dmd`](#module_dmd..Dmd)  
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
 **Example**
 ```js
 # new ExampleClass(one, two) <= EventEmitter
 ```
-<a name="module_dmd..Dmd+sigMethodSig"></a>
+<a name="the anchor of the super class"></a>
+#### class.sigMethodSig() ⇒ `string`  
+Returns the method signature, e.g. `(options, [onComplete])`
+
+**Kind**: instance method of [`Class`](#exp_module_class--Class)  
+<a name="module_dmd"></a>
+  
+<a name="exp_module_dmd--Dmd"></a>
+### Dmd ⇐ DocletTemplate ⏏  
+A DocletTemplate for generating markdown documentation for a doclet.
+
+**Kind**: Exported class  
+
+* [Dmd](#exp_module_dmd--Dmd) ⇐ DocletTemplate ⏏  
+    * [.typeList(names)](#module_dmd--Dmd+typeList)  
+    * [.getSignature([options], [options])](#module_dmd--Dmd+getSignature)  
+    * [.anchor()](#module_dmd--Dmd+anchor)  
+    * [.heading()](#module_dmd--Dmd+heading)  
+    * [.sigMethodSig()](#module_dmd--Dmd+sigMethodSig) ⇒ `string`  
+    * [~DocletTemplate](#module_dmd--Dmd..DocletTemplate)  
+
+<a name="module_dmd--Dmd+typeList"></a>
+#### dmd.typeList(names)  
+**Kind**: instance method of [`Dmd`](#exp_module_dmd--Dmd)  
+**Params**
+
+- names `Array.<string>` - list of type names
+
+<a name="module_dmd--Dmd+getSignature"></a>
+#### dmd.getSignature([options], [options])  
+**Kind**: instance method of [`Dmd`](#exp_module_dmd--Dmd)  
+**Params**
+
+- [options] `object`
+- [options] `object`
+
+**Example**
+```js
+new ExampleClass(one, two) <= EventEmitter
+```
+<a name="module_dmd--Dmd+anchor"></a>
+#### dmd.anchor()  
+An anchor member-index items can link to
+
+**Kind**: instance method of [`Dmd`](#exp_module_dmd--Dmd)  
+**Example**
+```js
+<a name="#ExampleClass"></a>
+```
+<a name="module_dmd--Dmd+heading"></a>
+#### dmd.heading()  
+the doclet heading.
+
+**Kind**: instance method of [`Dmd`](#exp_module_dmd--Dmd)  
+**Example**
+```js
+# new ExampleClass(one, two) <= EventEmitter
+```
+<a name="module_dmd--Dmd+sigMethodSig"></a>
 #### dmd.sigMethodSig() ⇒ `string`  
 Returns the method signature, e.g. `(options, [onComplete])`
 
-**Kind**: instance method of [`Dmd`](#module_dmd..Dmd)  
-<a name="Class"></a>
-## Class ⇐ module:dmd  
-Tweaks for class doclets
-
-**Kind**: global class  
-
-* [Class](#Class) ⇐ module:dmd  
-    * [.sigSymbol()](#Class+sigSymbol)  
-    * [.sigTypes()](#Class+sigTypes)  
-
-<a name="Class+sigSymbol"></a>
-### class.sigSymbol()  
-show the augments symbol
-
-**Kind**: instance method of [`Class`](#Class)  
-<a name="Class+sigTypes"></a>
-### class.sigTypes()  
-show the augments type list
-
-**Kind**: instance method of [`Class`](#Class)  
+**Kind**: instance method of [`Dmd`](#exp_module_dmd--Dmd)  
+<a name="module_dmd--Dmd..DocletTemplate"></a>
+#### Dmd~DocletTemplate  
+**Kind**: inner typedef of [`Dmd`](#exp_module_dmd--Dmd)  
 
 
 * * *
