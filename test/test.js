@@ -1,6 +1,7 @@
 'use strict'
 const Dmd = require('../')
 const test = require('tape')
+const jsdocParse = require('jsdoc-parse2')
 
 test('member', function (t) {
   const member = {
