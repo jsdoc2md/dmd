@@ -314,7 +314,7 @@ function examplesOld (options) {
 function examples (options) {
   if (this.examples) {
     return this.examples.reduce(function (prev, example) {
-      var lines = example.split('\n')
+      var lines = example.split(/\r|\r\n|\n/)
       var matches = lines[0].match(/\s*<caption>(.*?)<\/caption>\s*/)
       var caption
 
