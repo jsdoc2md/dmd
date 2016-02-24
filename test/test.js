@@ -5,16 +5,16 @@ const jsdocParse = require('jsdoc-parse2')
 
 test('member', function (t) {
   const member = {
-    "id": "1",
-    "longname": "longname",
-    "name": "something",
-    "scope": "instance",
-    "kind": "member",
-    "memberof": "SomeClass",
-    "description": "yeah.",
-    "type": {
-      "names": [
-        "string"
+    'id': '1',
+    'longname': 'longname',
+    'name': 'something',
+    'scope': 'instance',
+    'kind': 'member',
+    'memberof': 'SomeClass',
+    'description': 'yeah.',
+    'type': {
+      'names': [
+        'string'
       ]
     }
   }
@@ -28,30 +28,30 @@ test('index', function (t) {
   const Group = require('../lib/group')
   const data = {
     namespace: {
-      "id": "missle",
-      "longname": "missle",
-      "name": "missle",
-      "scope": "global",
-      "kind": "namespace",
-      "description": "A missle object, with separate docs for each property."
+      'id': 'missle',
+      'longname': 'missle',
+      'name': 'missle',
+      'scope': 'global',
+      'kind': 'namespace',
+      'description': 'A missle object, with separate docs for each property.'
     },
     member1: {
-      "id": "missle.range",
-      "longname": "missle.range",
-      "name": "range",
-      "scope": "static",
-      "kind": "member",
-      "description": "missile range",
-      "memberof": "missle"
+      'id': 'missle.range',
+      'longname': 'missle.range',
+      'name': 'range',
+      'scope': 'static',
+      'kind': 'member',
+      'description': 'missile range',
+      'memberof': 'missle'
     },
     member2: {
-      "id": "missle.ballistic",
-      "longname": "missle.ballistic",
-      "name": "ballistic",
-      "scope": "static",
-      "kind": "member",
-      "description": "ballistic",
-      "memberof": "missle"
+      'id': 'missle.ballistic',
+      'longname': 'missle.ballistic',
+      'name': 'ballistic',
+      'scope': 'static',
+      'kind': 'member',
+      'description': 'ballistic',
+      'memberof': 'missle'
     }
   }
 
