@@ -1,10 +1,12 @@
 'use strict'
 var ddata = require('ddata')
-var a = require('array-tools')
+var arrayify = require('array-back')
 var handlebars = require('stream-handlebars')
 var s = require('string-tools')
 var util = require('util')
 var commonSequence = require('common-sequence')
+var unique = require('reduce-unique')
+var without = require('reduce-without')
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -55,7 +57,7 @@ function inlineLinks (text, options) {
 returns a gfm table header row.. only columns which contain data are included in the output
 */
 function tableHead () {
-  var args = a.arrayify(arguments)
+  var args = arrayify(arguments)
   var data = args.shift()
   if (!data) return
   args.pop()
@@ -94,7 +96,7 @@ function containsData (rows, col) {
 returns a gfm table row.. only columns which contain data are included in the output
 */
 function tableRow () {
-  var args = a.arrayify(arguments)
+  var args = arrayify(arguments)
   var rows = args.shift()
   if (!rows) return
   var options = args.pop()
@@ -119,7 +121,7 @@ function tableRow () {
 {{#each (tableHeadHtml params "name|Param" "type|Type" )}}<td>{{this}}</td>{{/each}}
 */
 function tableHeadHtml () {
-  var args = a.arrayify(arguments)
+  var args = arrayify(arguments)
   var data = args.shift()
   if (!data) return
   args.pop()
@@ -187,11 +189,14 @@ function _groupBy (identifiers, groupByFields) {
   groupByFields = groupByFields.slice(0)
 
   groupByFields.forEach(function (group) {
-    var groupValues = a.unique(identifiers.filter(function (identifier) {
-      /* exclude constructors from grouping.. re-implement to work off a `null` group value */
-      return identifier.kind !== 'constructor'
-    }).map(function (i) { return i[group]}))
-    if (groupValues.length <= 1) groupByFields = a.without(groupByFields, group)
+    var groupValues = identifiers
+      .filter(function (identifier) {
+        /* exclude constructors from grouping.. re-implement to work off a `null` group value */
+        return identifier.kind !== 'constructor'
+      })
+      .map(function (i) { return i[group]})
+      .reduce(unique, [])
+    if (groupValues.length <= 1) groupByFields = groupByFields.reduce(without(group), [])
   })
   identifiers = _addGroup(identifiers, groupByFields)
 
@@ -225,7 +230,7 @@ function _groupBy (identifiers, groupByFields) {
 }
 
 function add () {
-  var args = a.arrayify(arguments)
+  var args = arrayify(arguments)
   args.pop()
   return args.reduce(function (p, c) { return p + (c || 0) }, 0)
 }
