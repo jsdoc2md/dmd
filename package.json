@@ -32,7 +32,7 @@
     "command-line-args": "^2.1.6",
     "common-sequence": "^1.0.2",
     "ddata": "~0.1.23",
-    "file-set": "~0.2.8",
+    "file-set": "^1.0.0",
     "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
     "handlebars-json": "^1.0.0",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "~0.1",
-    "tape": "^4"
+    "tape": "^4.5.0"
   },
   "standard": {
     "ignore": [
