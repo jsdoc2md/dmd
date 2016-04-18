@@ -18,13 +18,10 @@
   },
   "dependencies": {
     "array-back": "^1.0.2",
-    "dmd-locale-en-gb": "^1.0.0",
-    "entities": "^1.1.1",
-    "gfmt": "~0.3.0",
+    "gfmt": "~0.3.1",
     "jsdoc-parse-template": "file:///Users/lloyd/Documents/jsdoc2md/jsdoc-parse-template",
     "template-clean": "~0.1.0",
-    "text-catalogue": "file:///Users/lloyd/Documents/jsdoc2md/text-catalogue",
-    "typical": "^2.4.0"
+    "typical": "^2.4.2"
   },
   "devDependencies": {
     "tape": "^4.4"
