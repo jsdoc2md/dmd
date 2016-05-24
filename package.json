@@ -38,14 +38,15 @@
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
-    "object-tools": "^2",
+    "object-tools": "^2.0.6",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
     "stream-handlebars": "~0.1.6",
-    "string-tools": "^1"
+    "string-tools": "^1.0.0",
+    "walk-back": "^2.0.0"
   },
   "devDependencies": {
-    "dmd-plugin-example": "~0.1",
+    "dmd-plugin-example": "~0.1.0",
     "tape": "^4.5.1"
   },
   "standard": {
