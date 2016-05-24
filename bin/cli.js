@@ -24,11 +24,12 @@ try {
   var config = cli.parse()
 } catch (err) {
   halt(err)
+  return
 }
 
 if (config.help) {
   console.log(usage)
-  process.exit(0)
+  return
 }
 
 if (config.template) {
@@ -41,7 +42,7 @@ dmdStream.on('error', halt)
 process.stdin.pipe(dmdStream).pipe(process.stdout)
 
 function halt (err) {
-  if (err.code === 'EPIPE') process.exit(0) /* no big deal */
+  if (err.code === 'EPIPE') return /* no big deal */
 
   if (config) {
     if (config.verbose) {
@@ -55,7 +56,7 @@ function halt (err) {
     logError(err.stack)
   }
   console.error(usage)
-  process.exit(1)
+  process.exitCode = 1
 }
 
 function logError (msg) {
