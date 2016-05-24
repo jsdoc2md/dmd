@@ -1,5 +1,5 @@
 [![view on npm](http://img.shields.io/npm/v/dmd.svg)](https://www.npmjs.org/package/dmd)
-[![npm module downloads per month](http://img.shields.io/npm/dm/dmd.svg)](https://www.npmjs.org/package/dmd)
+[![npm module downloads](http://img.shields.io/npm/dt/dmd.svg)](https://www.npmjs.org/package/dmd)
 [![Build Status](https://travis-ci.org/jsdoc2md/dmd.svg?branch=master)](https://travis-ci.org/jsdoc2md/dmd)
 [![Dependency Status](https://david-dm.org/jsdoc2md/dmd.svg)](https://david-dm.org/jsdoc2md/dmd)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
@@ -152,14 +152,17 @@ $ jsdoc2md lib/my-module.js --plugin dmd-plugin-example
 
 # API Reference
 <a name="exp_module_dmd--dmd"></a>
+
 ### dmd([options]) ⇒ <code>[Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform)</code> ⏏
 Transforms doclet data into markdown documentation. Returns a transform stream - pipe doclet data in to receive rendered markdown out.
 
 **Kind**: Exported function  
 **Params**
+
 - [options] <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code> - The render options
 
 <a name="module_dmd--dmd..DmdOptions"></a>
+
 #### dmd~DmdOptions
 All dmd options and their defaults
 
@@ -183,6 +186,7 @@ All dmd options and their defaults
     * [.group-by](#module_dmd--dmd..DmdOptions+group-by) : <code>array</code>
 
 <a name="module_dmd--dmd..DmdOptions+template"></a>
+
 ##### dmdOptions.template : <code>string</code>
 The template the supplied documentation will be rendered into. Use the default or supply your own template for full control over the output.
 
@@ -208,79 +212,93 @@ the equivation operation using the command-line tool:
 $ dmd --template template.hbs --src my-class.json
 ```
 <a name="module_dmd--dmd..DmdOptions+heading-depth"></a>
+
 ##### dmdOptions.heading-depth : <code>number</code>
 The initial heading depth. For example, with a value of `2` the top-level markdown headings look like `"## The heading"`.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>2</code>  
 <a name="module_dmd--dmd..DmdOptions+example-lang"></a>
+
 ##### dmdOptions.example-lang : <code>string</code>
 Specifies the default language used in @example blocks (for [syntax-highlighting](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting) purposes). In gfm mode, each @example is wrapped in a fenced-code block. Example usage: `--example-lang js`. Use the special value `none` for no specific language. While using this option, you can override the supplied language for any @example by specifying the `@lang` subtag, e.g `@example @lang hbs`. Specifying `@example @lang off` will disable code blocks for that example.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;js&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+plugin"></a>
+
 ##### dmdOptions.plugin : <code>array</code>
 Use an installed package containing helper and/or partial overrides
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions+helper"></a>
+
 ##### dmdOptions.helper : <code>array</code>
 handlebars helper files to override or extend the default set
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions+partial"></a>
+
 ##### dmdOptions.partial : <code>array</code>
 handlebars partial files to override or extend the default set
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions+name-format"></a>
+
 ##### dmdOptions.name-format : <code>string</code>
 Format identifier names in the [code](http://daringfireball.net/projects/markdown/syntax#code) style, (i.e. format using backticks or `<code></code>`)
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions+no-gfm"></a>
+
 ##### dmdOptions.no-gfm : <code>boolean</code>
 By default, dmd generates github-flavoured markdown. Not all markdown parsers render gfm correctly. If your generated docs look incorrect on sites other than Github (e.g. npmjs.org) try enabling this option to disable Github-specific syntax.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 <a name="module_dmd--dmd..DmdOptions+separators"></a>
+
 ##### dmdOptions.separators : <code>boolean</code>
 Put `<hr>` breaks between identifiers. Improves readability on bulky docs.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>false</code>  
 <a name="module_dmd--dmd..DmdOptions+module-index-format"></a>
+
 ##### dmdOptions.module-index-format : <code>string</code>
 none, grouped, table, dl
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;dl&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+global-index-format"></a>
+
 ##### dmdOptions.global-index-format : <code>string</code>
 none, grouped, table, dl
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;dl&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+param-list-format"></a>
+
 ##### dmdOptions.param-list-format : <code>string</code>
 Two options to render parameter lists: 'list' or 'table' (default). Table format works well in most cases but switch to list if things begin to look crowded / squashed.
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;table&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+property-list-format"></a>
+
 ##### dmdOptions.property-list-format : <code>string</code>
 list, table
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;table&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+member-index-format"></a>
+
 ##### dmdOptions.member-index-format : <code>string</code>
 grouped, list
 
 **Kind**: instance property of <code>[DmdOptions](#module_dmd--dmd..DmdOptions)</code>  
 **Default**: <code>&quot;grouped&quot;</code>  
 <a name="module_dmd--dmd..DmdOptions+group-by"></a>
+
 ##### dmdOptions.group-by : <code>array</code>
 a list of fields to group member indexes by
 
@@ -289,4 +307,4 @@ a list of fields to group member indexes by
 
 * * *
 
-&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
+&copy; 2014-2016 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
