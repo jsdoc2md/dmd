@@ -17,14 +17,14 @@
     "docs": "jsdoc2md2 -t jsdoc2md/README.md -p list --skip-heading lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "array-back": "^1.0.2",
-    "gfmt": "~0.3.1",
-    "jsdoc-parse-template": "file:///Users/lloyd/Documents/jsdoc2md/jsdoc-parse-template",
+    "array-back": "^1.0.3",
+    "gfmt": "~0.3.2",
+    "jsdoc-parse-template": "jsdoc2md/jsdoc-parse-template",
     "template-clean": "~0.1.0",
     "typical": "^2.4.2"
   },
   "devDependencies": {
-    "tape": "^4.4"
+    "tape": "^4.5.1"
   },
   "standard": {
     "ignore": [ "test/fixture" ]
