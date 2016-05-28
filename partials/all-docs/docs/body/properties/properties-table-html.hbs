@@ -10,9 +10,9 @@
     {{#tableRow properties "name" "type" "defaultvalue" "description" ~}}
     <tr>
     {{#if @col1}}<td>{{name}}</td>{{/if~}}
-    {{#if @col2}}<td>{{>linked-type-list types=type.names delimiter=" | " }}</td>{{/if~}}
+    {{#if @col2}}<td>{{>linked-type-list types=type.names delimiter=" | " html=true}}</td>{{/if~}}
     {{#if @col3}}<td>{{>defaultvalue}}</td>{{/if~}}
-    {{#if @col4}}<td>{{{stripNewlines (inlineLinks description)}}}</td>{{/if}}
+    {{#if @col4}}<td>{{{md (inlineLinks description)}}}</td>{{/if}}
     </tr>
     {{~/tableRow}}
   </tbody>
