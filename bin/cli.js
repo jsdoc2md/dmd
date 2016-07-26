@@ -1,64 +1,52 @@
 #!/usr/bin/env node
 'use strict'
-var commandLineArgs = require('command-line-args')
-var ansi = require('ansi-escape-sequences')
+var Tool = require('command-line-tool')
+var tool = new Tool()
 var dmd = require('../')
 var fs = require('fs')
 
-var cli = commandLineArgs(dmd.cliOptions.concat([
-  { name: 'help', alias: 'h', type: Boolean },
-  { name: 'verbose', alias: 'v', type: Boolean }
-]))
-
-var usage = cli.getUsage({
-  title: 'dmd',
-  description: 'Generate markdown API documentation',
-  footer: 'Project home: [underline]{https://github.com/jsdoc2md/dmd}',
-  synopsis: [
-    '$ cat jsdoc-parse-output.json | dmd <options>',
-    '$ dmd --help'
-  ]
-})
+var optionDefinitions = dmd.cliOptions.concat([
+  { name: 'help', alias: 'h', type: Boolean }
+])
+var usageSections = [
+  {
+    header: 'dmd',
+    content: 'Generate markdown API documentation'
+  },
+  {
+    header: 'Synopsis',
+    content: [
+      '$ cat jsdoc-parse-output.json | dmd <options>',
+      '$ dmd --help'
+    ]
+  },
+  {
+    header: 'Options',
+    optionList: optionDefinitions
+  },
+  {
+    content: 'Project home: [underline]{https://github.com/jsdoc2md/dmd}'
+  }
+]
 
 try {
-  var config = cli.parse()
+  var cli = tool.getCli(optionDefinitions, usageSections)
+  var options = cli.options
 } catch (err) {
-  halt(err)
-  return
+  tool.halt(err)
 }
 
-if (config.help) {
-  console.log(usage)
-  return
+if (options.help) {
+  tool.stop(cli.usage)
 }
 
-if (config.template) {
-  config.template = fs.readFileSync(config.template, 'utf8')
+if (options.template) {
+  options.template = fs.readFileSync(options.template, 'utf8')
 }
 
-var dmdStream = dmd(config)
-dmdStream.on('error', halt)
+var dmdStream = dmd(options)
+dmdStream.on('error', function (err) {
+  tool.halt(err, { stack: true })
+})
 
 process.stdin.pipe(dmdStream).pipe(process.stdout)
-
-function halt (err) {
-  if (err.code === 'EPIPE') return /* no big deal */
-
-  if (config) {
-    if (config.verbose) {
-      logError('Error: ' + err.message)
-      logError(err.stack || err)
-    } else {
-      logError('Error: ' + err.message)
-      logError('(run dmd with --verbose for a stack trace)')
-    }
-  } else {
-    logError(err.stack)
-  }
-  console.error(usage)
-  process.exitCode = 1
-}
-
-function logError (msg) {
-  console.error(ansi.format(msg, 'red'))
-}
