@@ -28,10 +28,12 @@
   },
   "dependencies": {
     "array-back": "^1.0.3",
-    "command-line-tool": "~0.5.0",
+    "collect-json": "^1.0.8",
+    "command-line-tool": "~0.5.2",
     "common-sequence": "^1.0.2",
     "ddata": "~0.1.25",
     "file-set": "^1.0.0",
+    "handlebars": "^4.0.5",
     "handlebars-array": "^0.2.0",
     "handlebars-comparison": "^2.0.0",
     "handlebars-json": "^1.0.0",
@@ -40,7 +42,6 @@
     "object-tools": "^2.0.6",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
-    "stream-handlebars": "~0.1.6",
     "string-tools": "^1.0.0",
     "walk-back": "^2.0.1"
   },

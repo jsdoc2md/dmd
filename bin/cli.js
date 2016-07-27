@@ -44,9 +44,13 @@ if (options.template) {
   options.template = fs.readFileSync(options.template, 'utf8')
 }
 
-var dmdStream = dmd(options)
-dmdStream.on('error', function (err) {
-  tool.halt(err, { stack: true })
-})
-
-process.stdin.pipe(dmdStream).pipe(process.stdout)
+var collectJson = require('collect-json')
+process.stdin
+  .pipe(collectJson(function (data) {
+    try {
+      return dmd(data, options)
+    } catch (err) {
+      tool.halt(err, { stack: true })
+    }
+  }))
+  .pipe(process.stdout)
