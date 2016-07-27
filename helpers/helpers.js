@@ -1,7 +1,7 @@
 'use strict'
 var ddata = require('ddata')
 var arrayify = require('array-back')
-var handlebars = require('stream-handlebars')
+var handlebars = require('handlebars')
 var s = require('string-tools')
 var util = require('util')
 var commonSequence = require('common-sequence')
