@@ -1,36 +1,16 @@
 #!/usr/bin/env node
 'use strict'
-var Tool = require('command-line-tool')
-var tool = new Tool()
+var tool = require('command-line-tool')
 var dmd = require('../')
 var fs = require('fs')
+var cliData = require('../lib/cli-data')
 
-var optionDefinitions = dmd.cliOptions.concat([
+var optionDefinitions = cliData.definitions.concat([
   { name: 'help', alias: 'h', type: Boolean }
 ])
-var usageSections = [
-  {
-    header: 'dmd',
-    content: 'Generate markdown API documentation'
-  },
-  {
-    header: 'Synopsis',
-    content: [
-      '$ cat jsdoc-parse-output.json | dmd <options>',
-      '$ dmd --help'
-    ]
-  },
-  {
-    header: 'Options',
-    optionList: optionDefinitions
-  },
-  {
-    content: 'Project home: [underline]{https://github.com/jsdoc2md/dmd}'
-  }
-]
 
 try {
-  var cli = tool.getCli(optionDefinitions, usageSections)
+  var cli = tool.getCli(optionDefinitions, cliData.usageSections)
   var options = cli.options
 } catch (err) {
   tool.halt(err)
