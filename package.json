@@ -6,9 +6,6 @@
   "license": "MIT",
   "repository": "https://github.com/75lb/dmd.git",
   "main": "./lib/dmd.js",
-  "bin": {
-    "dmd": "bin/cli.js"
-  },
   "keywords": [
     "documentation",
     "markdown"
@@ -17,7 +14,6 @@
     "node": ">=0.10.0"
   },
   "files": [
-    "bin",
     "helpers",
     "lib",
     "partials"
@@ -28,9 +24,8 @@
   },
   "dependencies": {
     "array-back": "^1.0.3",
-    "collect-json": "^1.0.8",
-    "command-line-tool": "~0.6.0",
     "common-sequence": "^1.0.2",
+    "core-js": "^2.4.1",
     "ddata": "~0.1.25",
     "file-set": "^1.0.1",
     "handlebars": "^4.0.5",
@@ -39,7 +34,6 @@
     "handlebars-json": "^1.0.0",
     "handlebars-regexp": "^1.0.0",
     "handlebars-string": "^2.0.1",
-    "object-tools": "^2.0.6",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
     "string-tools": "^1.0.0",
