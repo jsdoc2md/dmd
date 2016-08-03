@@ -1,11 +1,11 @@
-var test = require('tape')
+var test = require('test-runner')
 var ddata = require('../')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-test('_globals', function (t) {
+test('_globals', function () {
   var options = makeOptions([
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },
@@ -16,7 +16,7 @@ test('_globals', function (t) {
     { id: '7', scope: 'global', kind: 'function' }
   ])
   var result = ddata._globals(options)
-  t.deepEqual(result, [
+  a.deepEqual(result, [
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },
     { id: '3', scope: 'global', kind: 'external', description: 'clive' },

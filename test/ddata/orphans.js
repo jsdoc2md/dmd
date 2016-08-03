@@ -1,11 +1,11 @@
-var test = require('tape')
+var test = require('test-runner')
 var ddata = require('../')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-test('_orphans', function (t) {
+test('_orphans', function () {
   var options = makeOptions([
     { id: '1', memberof: 'something' },
     { id: '2', memberof: 'something' },
@@ -16,7 +16,7 @@ test('_orphans', function (t) {
     { id: '7', kind: 'external', description: 'clive' }
   ])
   var result = ddata._orphans(options)
-  t.deepEqual(result, [
+  a.deepEqual(result, [
     { id: '4' },
     { id: '6' },
     { id: '7', kind: 'external', description: 'clive' }

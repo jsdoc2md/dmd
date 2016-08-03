@@ -1,26 +1,26 @@
 'use strict'
-var test = require('tape')
+var test = require('test-runner')
 var ddata = require('../')
 
-test('{@link someSymbol}', function (t) {
+test('{@link someSymbol}', function () {
   var text = 'blah {@link someSymbol}'
   var result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('{@link http://some.url.com}', function (t) {
+test('{@link http://some.url.com}', function () {
   var text = 'blah {@link http://some.url.com} blah'
   var result = [{
     original: '{@link http://some.url.com}',
     caption: 'http://some.url.com',
     url: 'http://some.url.com'
   }]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('multiple {@link http://some.url.com}', function (t) {
+test('multiple {@link http://some.url.com}', function () {
   var text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
   var result = [
     {
@@ -34,22 +34,22 @@ test('multiple {@link http://some.url.com}', function (t) {
       url: 'http://two.url.com'
     }
   ]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('[caption here]{@link someSymbol}', function (t) {
+test('[caption here]{@link someSymbol}', function () {
   var text = 'blah [caption here]{@link someSymbol} blah'
   var result = [{
     original: '[caption here]{@link someSymbol}',
     caption: 'caption here',
     url: 'someSymbol'
   }]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('multiple [caption here]{@link someSymbol}', function (t) {
+test('multiple [caption here]{@link someSymbol}', function () {
   var text = 'blah [caption one]{@link thingOne} blah [caption two]{@link thingTwo} whatever'
   var result = [
     {
@@ -63,22 +63,22 @@ test('multiple [caption here]{@link someSymbol}', function (t) {
       url: 'thingTwo'
     }
   ]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('[caption here]{@link http://some.url.com}', function (t) {
+test('[caption here]{@link http://some.url.com}', function () {
   var text = 'blah [caption here]{@link http://some.url.com} blah'
   var result = [{
     original: '[caption here]{@link http://some.url.com}',
     caption: 'caption here',
     url: 'http://some.url.com'
   }]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('multiple {@link someSymbol|caption here}', function (t) {
+test('multiple {@link someSymbol|caption here}', function () {
   var text = 'blah {@link thingOne|caption one} blah {@link thingTwo|caption two} whatever'
   var result = [
     {
@@ -92,11 +92,11 @@ test('multiple {@link someSymbol|caption here}', function (t) {
       url: 'thingTwo'
     }
   ]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('multiple {@link someSymbol Caption here}', function (t) {
+test('multiple {@link someSymbol Caption here}', function () {
   var text = 'blah {@link thingOne Caption one} blah {@link thingTwo Caption two} whatever'
   var result = [
     {
@@ -110,6 +110,6 @@ test('multiple {@link someSymbol Caption here}', function (t) {
       url: 'thingTwo'
     }
   ]
-  t.deepEqual(ddata.parseLink(text), result)
+  a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })

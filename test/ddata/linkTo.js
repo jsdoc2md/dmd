@@ -1,5 +1,5 @@
 'use strict'
-var test = require('tape')
+var test = require('test-runner')
 var ddata = require('../')
 
 function makeOptions (data) {
@@ -13,26 +13,26 @@ var options = makeOptions([
   { id: 'module:cjs/class~innerProp', longname: 'module:cjs/class~innerProp', 'name': 'innerProp' }
 ])
 
-test('link', function (t) {
+test('link', function () {
   var result = ddata.link('module:handbrake-js~Handbrake', options)
-  t.deepEqual(result, { name: 'Handbrake', url: '#module_handbrake-js..Handbrake' })
+  a.deepEqual(result, { name: 'Handbrake', url: '#module_handbrake-js..Handbrake' })
   t.end()
 })
 
-test('link', function (t) {
+test('link', function () {
   var result = ddata.link('module:cjs/class~innerProp', options)
-  t.deepEqual(result, { name: 'innerProp', url: '#module_cjs/class..innerProp' })
+  a.deepEqual(result, { name: 'innerProp', url: '#module_cjs/class..innerProp' })
   t.end()
 })
 
-test('url', function (t) {
+test('url', function () {
   var result = ddata.link('http://example.com', options)
-  t.deepEqual(result, { name: 'http://example.com', url: null })
+  a.deepEqual(result, { name: 'http://example.com', url: null })
   t.end()
 })
 
-test('link', function (t) {
+test('link', function () {
   var result = ddata.link('clive', options)
-  t.deepEqual(result, { name: 'clive', url: null })
+  a.deepEqual(result, { name: 'clive', url: null })
   t.end()
 })

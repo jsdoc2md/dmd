@@ -1,7 +1,8 @@
 'use strict'
-var test = require('tape')
+var test = require('test-runner')
 var dmd = require('../')
 var path = require('path')
+var a = require('core-assert')
 
 var fixture = [{
   "id": "someclass",
@@ -11,21 +12,18 @@ var fixture = [{
   "description": "is a class"
 }]
 
-test('plugin', function (t) {
+test('plugin', function () {
   var result = dmd(fixture, { plugin: 'dmd-plugin-example' })
-  t.ok(/documentation generated on/.test(result))
-  t.end()
+  a.ok(/documentation generated on/.test(result))
 })
 
-test('plugin: absolute path', function (t) {
+test('plugin: absolute path', function () {
   var result = dmd(fixture, { plugin: path.resolve(__dirname, 'fixture', 'dmd-plugin-example', 'lib', 'dmd-plugin-example.js') })
-  t.ok(/documentation generated on/.test(result))
-  t.end()
+  a.ok(/documentation generated on/.test(result))
 })
 
-test('plugin: none-existent path', function (t) {
-  t.throws(function () {
+test('plugin: none-existent path', function () {
+  a.throws(function () {
     dmd(fixture, { plugin: 'forejfirweuhnvkljne' })
   })
-  t.end()
 })

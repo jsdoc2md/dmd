@@ -19,7 +19,7 @@
     "partials"
   ],
   "scripts": {
-    "test": "tape test/*.js",
+    "test": "test-runner test/*.js",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
@@ -43,8 +43,9 @@
     "walk-back": "^2.0.1"
   },
   "devDependencies": {
+    "core-assert": "^0.2.0",
     "dmd-plugin-example": "~0.1.0",
-    "tape": "^4.6.0"
+    "test-runner": "~0.1.9"
   },
   "standard": {
     "ignore": [

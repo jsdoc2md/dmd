@@ -1,8 +1,9 @@
 'use strict'
-var test = require('tape')
+var test = require('test-runner')
 var helpers = require('../helpers/helpers')
+var a = require('core-assert')
 
-test('_addGroup scope, cat', function (t) {
+test('_addGroup scope, cat', function () {
   var fixture = [
     { 'name': 'aaa', 'scope': 'global', 'cat': 'main' },
     { 'name': 'bbb', 'scope': 'global', 'cat': 'main' },
@@ -30,11 +31,10 @@ test('_addGroup scope, cat', function (t) {
   ]
 
   var result = helpers._addGroup(fixture, [ 'scope', 'cat' ])
-  t.deepEqual(result, expected)
-  t.end()
+  a.deepEqual(result, expected)
 })
 
-test('_groupBy scope, cat', function (t) {
+test('_groupBy scope, cat', function () {
   var fixture = [
     { 'name': 'aaa', 'scope': 'global', 'cat': 'main' },
     { 'name': 'bbb', 'scope': 'global', 'cat': 'main' },
@@ -69,11 +69,10 @@ test('_groupBy scope, cat', function (t) {
   ]
 
   var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
-  t.deepEqual(result, expected)
-  t.end()
+  a.deepEqual(result, expected)
 })
 
-test('_groupBy skips if only one group', function (t) {
+test('_groupBy skips if only one group', function () {
   var fixture = [
     { 'name': 'aaa', 'scope': 'global' },
     { 'name': 'bbb', 'scope': 'global' },
@@ -87,11 +86,10 @@ test('_groupBy skips if only one group', function (t) {
   ]
 
   var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
-  t.deepEqual(result, expected)
-  t.end()
+  a.deepEqual(result, expected)
 })
 
-test('_groupBy skips if only one group, where there are subgroups', function (t) {
+test('_groupBy skips if only one group, where there are subgroups', function () {
   var fixture = [
     { 'name': 'aaa', 'scope': 'global' },
     { 'name': 'bbb', 'scope': 'global', cat: 'yeah' },
@@ -106,6 +104,5 @@ test('_groupBy skips if only one group, where there are subgroups', function (t)
   ]
 
   var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
-  t.deepEqual(result, expected)
-  t.end()
+  a.deepEqual(result, expected)
 })

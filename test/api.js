@@ -1,8 +1,9 @@
 'use strict'
-var test = require('tape')
+var test = require('test-runner')
 var dmd = require('../')
+var a = require('core-assert')
 
-test('dmd() on readable returns correct data', function (t) {
+test('dmd() on readable returns correct data', function () {
   var result = dmd([{
     "id": "someclass",
     "longname": "someclass",
@@ -10,6 +11,5 @@ test('dmd() on readable returns correct data', function (t) {
     "kind": "class",
     "description": "is a class"
   }])
-  t.ok(/is a class/.test(result))
-  t.end()
+  a.ok(/is a class/.test(result))
 })
