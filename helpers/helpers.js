@@ -7,6 +7,7 @@ var util = require('util')
 var commonSequence = require('common-sequence')
 var unique = require('reduce-unique')
 var without = require('reduce-without')
+var state = require('../lib/state')
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.

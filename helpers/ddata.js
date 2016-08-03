@@ -7,6 +7,7 @@ var marked = require('marked')
 var objectGet = require('object-get')
 var where = require('test-value').where
 var flatten = require('reduce-flatten')
+var state = require('../lib/state')
 
 if (!Array.prototype.find) {
   require('core-js/modules/es6.array.find')
@@ -32,7 +33,7 @@ console.log(handlebars.compile(template)(docs))
 
 /* Selector block helpers */
 exports.identifiers = identifiers
-exports.orphans = orphans
+exports.topLevel = topLevel
 exports.globals = globals
 exports.modules = modules
 exports.module = module
@@ -73,7 +74,7 @@ exports.isProtected = isProtected
 exports.showMainIndex = showMainIndex
 
 /* helpers which return lists */
-exports._orphans = _orphans
+exports._topLevel = _topLevel
 exports._identifiers = _identifiers
 exports._children = _children
 exports._globals = _globals
@@ -120,8 +121,8 @@ render the supplied block for each parent (global identifier, or module)
 @static
 @category Block helper: selector
 */
-function orphans (options) {
-  return handlebars.helpers.each(_orphans(options), options)
+function topLevel (options) {
+  return handlebars.helpers.each(_topLevel(options), options)
 }
 
 /**
@@ -576,16 +577,16 @@ True if there at least two top-level identifiers (i.e. globals or modules)
 @static
 */
 function showMainIndex (options) {
-  return _orphans(options).length > 1
+  return _topLevel(options).length > 1
 }
 
 /**
-Returns an array of the top-level elements which have no parents. Output only includes externals which have a description.
-@returns {array}
-@static
-@category Returns list
-*/
-function _orphans (options) {
+ * Returns an array of the top-level elements which have no parents. Output only includes externals which have a description.
+ * @returns {array}
+ * @static
+ * @category Returns list
+ */
+function _topLevel (options) {
   options.hash.memberof = undefined
   return _identifiers(options).filter(function (identifier) {
     if (identifier.kind === 'external') {
@@ -597,10 +598,10 @@ function _orphans (options) {
 }
 
 /**
-Returns an array of identifiers matching the query
-@returns {array}
-@static
-*/
+ * Returns an array of identifiers matching the query
+ * @returns {array}
+ * @static
+ */
 function _identifiers (options) {
   var query = {}
 
@@ -613,7 +614,9 @@ function _identifiers (options) {
       query[prop] = options.hash[prop]
     }
   }
-  return arrayify(options.data.root).filter(where(query))
+  return arrayify(options.data.root).filter(where(query)).filter(function (doclet) {
+    return !doclet.ignore && (state.options.private ? true : doclet.access !== 'private')
+  })
 }
 
 /**
