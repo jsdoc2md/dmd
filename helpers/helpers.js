@@ -1,5 +1,5 @@
 'use strict'
-var ddata = require('ddata')
+var ddata = require('./ddata')
 var arrayify = require('array-back')
 var handlebars = require('handlebars')
 var s = require('string-tools')
