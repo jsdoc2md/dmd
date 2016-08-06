@@ -1,6 +1,5 @@
 'use strict'
 var arrayify = require('array-back')
-var s = require('string-tools')
 var util = require('util')
 var handlebars = require('handlebars')
 var marked = require('marked')
@@ -785,7 +784,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], s.fill(' ', matches[0].length))
+    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
   }
 
   while ((matches = link3.exec(text)) !== null) {
@@ -794,7 +793,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], s.fill(' ', matches[0].length))
+    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
   }
 
   while ((matches = link2.exec(text)) !== null) {
@@ -803,7 +802,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[2]
     })
-    text = text.replace(matches[0], s.fill(' ', matches[0].length))
+    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
   }
 
   while ((matches = link1.exec(text)) !== null) {
@@ -812,7 +811,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[1]
     })
-    text = text.replace(matches[0], s.fill(' ', matches[0].length))
+    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
   }
   return results
 }

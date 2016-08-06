@@ -2,7 +2,6 @@
 var ddata = require('./ddata')
 var arrayify = require('array-back')
 var handlebars = require('handlebars')
-var s = require('string-tools')
 var util = require('util')
 var commonSequence = require('common-sequence')
 var unique = require('reduce-unique')
@@ -287,7 +286,7 @@ function params (options) {
       if (param.variable) name = '...' + name
       if (param.optional) name = '[' + name + ']'
       return {
-        indent: s.repeat('    ', nameSplit.length - 1),
+        indent: '    '.repeat(nameSplit.length - 1),
         name: name,
         type: param.type,
         defaultvalue: param.defaultvalue,
