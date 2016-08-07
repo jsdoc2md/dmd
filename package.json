@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "array-back": "^1.0.3",
+    "cache-point": "~0.3.3",
     "common-sequence": "^1.0.2",
     "core-js": "^2.4.1",
     "file-set": "^1.0.1",
