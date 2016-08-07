@@ -32,7 +32,7 @@ console.log(handlebars.compile(template)(docs))
 
 /* Selector block helpers */
 exports.identifiers = identifiers
-exports.topLevel = topLevel
+exports.orphans = orphans
 exports.globals = globals
 exports.modules = modules
 exports.module = module
@@ -73,7 +73,7 @@ exports.isProtected = isProtected
 exports.showMainIndex = showMainIndex
 
 /* helpers which return lists */
-exports._topLevel = _topLevel
+exports._orphans = _orphans
 exports._identifiers = _identifiers
 exports._children = _children
 exports._globals = _globals
@@ -120,8 +120,8 @@ render the supplied block for each parent (global identifier, or module)
 @static
 @category Block helper: selector
 */
-function topLevel (options) {
-  return handlebars.helpers.each(_topLevel(options), options)
+function orphans (options) {
+  return handlebars.helpers.each(_orphans(options), options)
 }
 
 /**
@@ -576,7 +576,7 @@ True if there at least two top-level identifiers (i.e. globals or modules)
 @static
 */
 function showMainIndex (options) {
-  return _topLevel(options).length > 1
+  return _orphans(options).length > 1
 }
 
 /**
@@ -585,7 +585,7 @@ function showMainIndex (options) {
  * @static
  * @category Returns list
  */
-function _topLevel (options) {
+function _orphans (options) {
   options.hash.memberof = undefined
   return _identifiers(options).filter(function (identifier) {
     if (identifier.kind === 'external') {
