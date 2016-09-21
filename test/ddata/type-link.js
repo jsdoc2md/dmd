@@ -1,5 +1,5 @@
 'use strict'
-var test = require('test-runner')
+var TestRunner = require('test-runner')
 var ddata = require('../')
 
 /* construct a mock handlebars helper options object */
@@ -9,7 +9,7 @@ function makeOptions (data) {
   }}
 }
 
-test('Array.<module:Something>', function () {
+runner.test('Array.<module:Something>', function () {
   var input = [
     {
       'id': 'module:cjs/human--Human',
@@ -24,7 +24,7 @@ test('Array.<module:Something>', function () {
   t.end()
 })
 
-test('external:something', function () {
+runner.test('external:something', function () {
   var input = [
     {
       'id': 'external:String',
@@ -42,7 +42,7 @@ test('external:something', function () {
   t.end()
 })
 
-test('external:something with no description', function () {
+runner.test('external:something with no description', function () {
   var input = [
     {
       'id': 'external:String',

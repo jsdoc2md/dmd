@@ -27,25 +27,20 @@
     "cache-point": "~0.3.3",
     "common-sequence": "^1.0.2",
     "core-js": "^2.4.1",
-    "file-set": "^1.0.1",
-    "handlebars": "^3.0.3",
-    "handlebars-array": "~0.2.0",
-    "handlebars-comparison": "^2.0.0",
-    "handlebars-json": "^1.0.0",
-    "handlebars-regexp": "^1.0.0",
-    "handlebars-string": "^2.0.1",
+    "file-set": "^1.0.2",
+    "handlebars": "3.0.3",
     "marked": "~0.3.6",
     "object-get": "^2.1.0",
     "reduce-flatten": "^1.0.1",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
-    "test-value": "^2.0.0",
+    "test-value": "^2.1.0",
     "walk-back": "^2.0.1"
   },
   "devDependencies": {
     "core-assert": "~0.2.0",
     "dmd-plugin-example": "~0.1.0",
-    "test-runner": "~0.1.10"
+    "test-runner": "~0.2.3"
   },
   "standard": {
     "ignore": [

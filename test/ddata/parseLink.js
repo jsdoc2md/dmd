@@ -1,15 +1,15 @@
 'use strict'
-var test = require('test-runner')
+var TestRunner = require('test-runner')
 var ddata = require('../')
 
-test('{@link someSymbol}', function () {
+runner.test('{@link someSymbol}', function () {
   var text = 'blah {@link someSymbol}'
   var result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
   a.deepEqual(ddata.parseLink(text), result)
   t.end()
 })
 
-test('{@link http://some.url.com}', function () {
+runner.test('{@link http://some.url.com}', function () {
   var text = 'blah {@link http://some.url.com} blah'
   var result = [{
     original: '{@link http://some.url.com}',
@@ -20,7 +20,7 @@ test('{@link http://some.url.com}', function () {
   t.end()
 })
 
-test('multiple {@link http://some.url.com}', function () {
+runner.test('multiple {@link http://some.url.com}', function () {
   var text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
   var result = [
     {
@@ -38,7 +38,7 @@ test('multiple {@link http://some.url.com}', function () {
   t.end()
 })
 
-test('[caption here]{@link someSymbol}', function () {
+runner.test('[caption here]{@link someSymbol}', function () {
   var text = 'blah [caption here]{@link someSymbol} blah'
   var result = [{
     original: '[caption here]{@link someSymbol}',
@@ -49,7 +49,7 @@ test('[caption here]{@link someSymbol}', function () {
   t.end()
 })
 
-test('multiple [caption here]{@link someSymbol}', function () {
+runner.test('multiple [caption here]{@link someSymbol}', function () {
   var text = 'blah [caption one]{@link thingOne} blah [caption two]{@link thingTwo} whatever'
   var result = [
     {
@@ -67,7 +67,7 @@ test('multiple [caption here]{@link someSymbol}', function () {
   t.end()
 })
 
-test('[caption here]{@link http://some.url.com}', function () {
+runner.test('[caption here]{@link http://some.url.com}', function () {
   var text = 'blah [caption here]{@link http://some.url.com} blah'
   var result = [{
     original: '[caption here]{@link http://some.url.com}',
@@ -78,7 +78,7 @@ test('[caption here]{@link http://some.url.com}', function () {
   t.end()
 })
 
-test('multiple {@link someSymbol|caption here}', function () {
+runner.test('multiple {@link someSymbol|caption here}', function () {
   var text = 'blah {@link thingOne|caption one} blah {@link thingTwo|caption two} whatever'
   var result = [
     {
@@ -96,7 +96,7 @@ test('multiple {@link someSymbol|caption here}', function () {
   t.end()
 })
 
-test('multiple {@link someSymbol Caption here}', function () {
+runner.test('multiple {@link someSymbol Caption here}', function () {
   var text = 'blah {@link thingOne Caption one} blah {@link thingTwo Caption two} whatever'
   var result = [
     {

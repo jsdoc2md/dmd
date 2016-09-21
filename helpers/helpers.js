@@ -28,6 +28,10 @@ exports.parseType = parseType
 exports.params = params
 exports.examples = examples
 exports.setLevel = setLevel
+exports['string-repeat'] = stringRepeat
+exports['regexp-test'] = regexpTest
+exports.equal = equal
+exports["json-stringify"] = JSON.stringify
 
 /**
 Escape special markdown characters
@@ -349,4 +353,17 @@ function examples (options) {
 
 function setLevel (identifier, level) {
   identifier.level = level
+}
+
+function stringRepeat (string, times) {
+  return string.repeat(times)
+}
+
+function regexpTest (value, regex) {
+  var re = new RegExp(regex)
+  return re.test(value)
+}
+
+function equal (arg1, arg2) {
+  return arg1 === arg2
 }

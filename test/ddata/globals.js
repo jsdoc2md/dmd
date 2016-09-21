@@ -1,11 +1,11 @@
-var test = require('test-runner')
+var TestRunner = require('test-runner')
 var ddata = require('../')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-test('_globals', function () {
+runner.test('_globals', function () {
   var options = makeOptions([
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },

@@ -1,9 +1,11 @@
 'use strict'
-var test = require('test-runner')
+var TestRunner = require('test-runner')
 var dmd = require('../')
 var a = require('core-assert')
 
-test('dmd() on readable returns correct data', function () {
+var runner = new TestRunner()
+
+runner.test('dmd() on readable returns correct data', function () {
   var result = dmd([{
     "id": "someclass",
     "longname": "someclass",

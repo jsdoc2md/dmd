@@ -1,11 +1,11 @@
-var test = require('test-runner')
+var TestRunner = require('test-runner')
 var ddata = require('../')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-test('descendants', function () {
+runner.test('descendants', function () {
   var options = makeOptions([
     { id: 'one' }, { id: 'two', memberof: 'one' }, { id: 'three', memberof: 'two' }, { id: 'four' }
   ])
