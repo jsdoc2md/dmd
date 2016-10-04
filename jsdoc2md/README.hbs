@@ -36,34 +36,6 @@ I am a global variable
 **Kind**: global variable
 ```
 
-## Install and use
-### As a library
-Install:
-```sh
-$ npm install dmd --save
-```
-
-Example:
-```js
-var dmd = require("dmd");
-
-var options = {
-   template: "my-template.hbs"
-};
-process.stdin.pipe(dmd(options)).pipe(process.stdout);
-```
-
-### At the command line
-Install the `dmd` tool globally:
-```sh
-$ npm install -g dmd
-```
-Example:
-```sh
-$ cat examples/doclet.json | dmd
-$ dmd --help
-```
-
 ## Templates
 The default template contains a single call to the  [main](https://github.com/jsdoc2md/dmd/blob/master/partials/main.hbs) partial:
 ```hbs
@@ -149,12 +121,6 @@ $ cd my-project
 $ npm install dmd-plugin-example --save-dev
 $ jsdoc2md lib/my-module.js --plugin dmd-plugin-example
 ```
-
-# API Reference
-{{#module name="dmd"~}}
-{{>body~}}
-{{>members~}}
-{{/module}}
 
 * * *
 
