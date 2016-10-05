@@ -1,8 +1,7 @@
 'use strict'
-var ddata = require('ddata')
+var ddata = require('./ddata')
 var arrayify = require('array-back')
-var handlebars = require('stream-handlebars')
-var s = require('string-tools')
+var handlebars = require('handlebars')
 var util = require('util')
 var commonSequence = require('common-sequence')
 var unique = require('reduce-unique')
@@ -28,6 +27,10 @@ exports.parseType = parseType
 exports.params = params
 exports.examples = examples
 exports.setLevel = setLevel
+exports['string-repeat'] = stringRepeat
+exports['regexp-test'] = regexpTest
+exports.equal = equal
+exports['json-stringify'] = JSON.stringify
 
 /**
 Escape special markdown characters
@@ -194,7 +197,7 @@ function _groupBy (identifiers, groupByFields) {
         /* exclude constructors from grouping.. re-implement to work off a `null` group value */
         return identifier.kind !== 'constructor'
       })
-      .map(function (i) { return i[group]})
+      .map(function (i) { return i[group] })
       .reduce(unique, [])
     if (groupValues.length <= 1) groupByFields = groupByFields.reduce(without(group), [])
   })
@@ -286,7 +289,7 @@ function params (options) {
       if (param.variable) name = '...' + name
       if (param.optional) name = '[' + name + ']'
       return {
-        indent: s.repeat('    ', nameSplit.length - 1),
+        indent: '    '.repeat(nameSplit.length - 1),
         name: name,
         type: param.type,
         defaultvalue: param.defaultvalue,
@@ -294,25 +297,6 @@ function params (options) {
       }
     })
     return options.fn(list)
-  }
-}
-
-function examplesOld (options) {
-  if (this.examples) {
-    return this.examples.reduce(function (prev, example) {
-      var exampleLangOptions = ddata.option('example-lang', options)
-      var matches = example.match(/@lang\s+(\w+)\s*/)
-      if (matches) {
-        var exampleLangSubtag = matches[1]
-        example = example.replace(matches[0], '')
-      }
-      var exampleLang = exampleLangSubtag || exampleLangOptions
-
-      if (!(/```/.test(example) || exampleLang === 'off')) {
-        example = util.format('```%s\n%s\n```', exampleLang, example)
-      }
-      return prev + options.fn(example)
-    }, '')
   }
 }
 
@@ -349,4 +333,17 @@ function examples (options) {
 
 function setLevel (identifier, level) {
   identifier.level = level
+}
+
+function stringRepeat (string, times) {
+  return string.repeat(times)
+}
+
+function regexpTest (value, regex) {
+  var re = new RegExp(regex)
+  return re.test(value)
+}
+
+function equal (arg1, arg2) {
+  return arg1 === arg2
 }
