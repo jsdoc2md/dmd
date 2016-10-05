@@ -13,7 +13,7 @@ For more documentation see the [jsdoc2md wiki](https://github.com/jsdoc2md/jsdoc
 ## Synopsis
 
 To give the most basic example, this input data:
-```json
+```js
 const templateData = [
   {
     id: "fatUse",
