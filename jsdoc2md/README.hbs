@@ -6,12 +6,15 @@
 [![Join the chat at https://gitter.im/jsdoc2md/jsdoc2md](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jsdoc2md/jsdoc2md?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # dmd
-dmd (document with markdown) is a module containing [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2md/jsdoc-parse) output into markdown API documentation. It exposes {{>link to="module:dmd"}}, a function which requires data and a template. See [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) for example output.
+dmd (document with markdown) is the default output template for [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown). It contains [handlebars](http://handlebarsjs.com) partials and helpers intended to transform [jsdoc-parse](https://github.com/jsdoc2md/jsdoc-parse) output into markdown API documentation.
+
+For more documentation see the [jsdoc2md wiki](https://github.com/jsdoc2md/jsdoc-to-markdown/wiki).
 
 ## Synopsis
-With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
+
+To give a simple example, this input data:
 ```json
-[
+const templateData = [
     {
         "id": "fatUse",
         "name": "fatUse",
@@ -22,9 +25,9 @@ With this input file containing [jsdoc-parse](http://handlebarsjs.com) output:
 ]
 ```
 
-this command:
+run through this command:
 ```js
-dmd(templateData, options)
+dmd(templateData)
 ```
 
 produces this markdown output:
