@@ -12,16 +12,16 @@ For more documentation see the [jsdoc2md wiki](https://github.com/jsdoc2md/jsdoc
 
 ## Synopsis
 
-To give a simple example, this input data:
+To give the most basic example, this input data:
 ```json
 const templateData = [
-    {
-        "id": "fatUse",
-        "name": "fatUse",
-        "kind": "member",
-        "description": "I am a global variable",
-        "scope": "global"
-    }
+  {
+    id: "fatUse",
+    name: "fatUse",
+    kind: "member",
+    description: "I am a global variable",
+    scope: "global"
+  }
 ]
 ```
 

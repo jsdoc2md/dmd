@@ -6,7 +6,6 @@ var util = require('util')
 var commonSequence = require('common-sequence')
 var unique = require('reduce-unique')
 var without = require('reduce-without')
-var state = require('../lib/state')
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -31,7 +30,7 @@ exports.setLevel = setLevel
 exports['string-repeat'] = stringRepeat
 exports['regexp-test'] = regexpTest
 exports.equal = equal
-exports["json-stringify"] = JSON.stringify
+exports['json-stringify'] = JSON.stringify
 
 /**
 Escape special markdown characters
@@ -198,7 +197,7 @@ function _groupBy (identifiers, groupByFields) {
         /* exclude constructors from grouping.. re-implement to work off a `null` group value */
         return identifier.kind !== 'constructor'
       })
-      .map(function (i) { return i[group]})
+      .map(function (i) { return i[group] })
       .reduce(unique, [])
     if (groupValues.length <= 1) groupByFields = groupByFields.reduce(without(group), [])
   })
@@ -298,25 +297,6 @@ function params (options) {
       }
     })
     return options.fn(list)
-  }
-}
-
-function examplesOld (options) {
-  if (this.examples) {
-    return this.examples.reduce(function (prev, example) {
-      var exampleLangOptions = ddata.option('example-lang', options)
-      var matches = example.match(/@lang\s+(\w+)\s*/)
-      if (matches) {
-        var exampleLangSubtag = matches[1]
-        example = example.replace(matches[0], '')
-      }
-      var exampleLang = exampleLangSubtag || exampleLangOptions
-
-      if (!(/```/.test(example) || exampleLang === 'off')) {
-        example = util.format('```%s\n%s\n```', exampleLang, example)
-      }
-      return prev + options.fn(example)
-    }, '')
   }
 }
 
