@@ -1,5 +1,8 @@
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
@@ -23,5 +26,4 @@ runner.test('_globals', function () {
     { id: '5', scope: 'global', kind: 'member' },
     { id: '7', scope: 'global', kind: 'function' }
   ])
-  t.end()
 })

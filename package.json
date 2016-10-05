@@ -19,7 +19,7 @@
     "partials"
   ],
   "scripts": {
-    "test": "test-runner test/*.js",
+    "test": "test-runner test/*.js test/ddata/*.js",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
@@ -44,7 +44,7 @@
   },
   "standard": {
     "ignore": [
-      "example"
+      "example", "test/fixture", "test/overrides"
     ]
   }
 }

@@ -1,5 +1,8 @@
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
@@ -30,5 +33,4 @@ runner.test('descendants', function () {
   options.hash.min = 0
 
   a.deepEqual(ddata.descendants.call({ id: 'four' }, options), [])
-  t.end()
 })

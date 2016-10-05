@@ -764,11 +764,11 @@ function methodSig () {
 }
 
 /**
-extracts url and caption data from @link tags
-@param {string} - a string containing one or more {@link} tags
-@returns {Array.<{original: string, caption: string, url: string}>}
-@static
-*/
+ * extracts url and caption data from @link tags
+ * @param {string} - a string containing one or more {@link} tags
+ * @returns {Array.<{original: string, caption: string, url: string}>}
+ * @static
+ */
 function parseLink (text) {
   if (!text) return ''
   var results = []
@@ -784,7 +784,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
+    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
   }
 
   while ((matches = link3.exec(text)) !== null) {
@@ -793,7 +793,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
+    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
   }
 
   while ((matches = link2.exec(text)) !== null) {
@@ -802,7 +802,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[2]
     })
-    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
+    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
   }
 
   while ((matches = link1.exec(text)) !== null) {
@@ -811,7 +811,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(10).fill(' ').toString())
+    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
   }
   return results
 }

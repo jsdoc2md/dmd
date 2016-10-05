@@ -1,6 +1,9 @@
 'use strict'
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 function makeOptions (done) {
   return { fn: function (context) {
@@ -16,7 +19,6 @@ runner.test('multiple returns specified', function () {
 
   var options = makeOptions(function (context) {
     a.deepEqual(context, { symbol: '⇒', types: ['string', 'object', 'function'] })
-    t.end()
   })
   ddata.returnSig2.call(identifier, options)
 })
@@ -26,7 +28,6 @@ runner.test('no returns, one type', function () {
 
   var options = makeOptions(function (context) {
     a.deepEqual(context, { symbol: ':', types: ['string'] })
-    t.end()
   })
   ddata.returnSig2.call(identifier, options)
 })
@@ -37,7 +38,6 @@ runner.test('return with no type', function () {
   }
   var options = makeOptions(function (context) {
     a.deepEqual(context, { symbol: null, types: null })
-    t.end()
   })
   ddata.returnSig2.call(identifier, options)
 })

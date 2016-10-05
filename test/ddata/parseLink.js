@@ -1,12 +1,14 @@
 'use strict'
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 runner.test('{@link someSymbol}', function () {
   var text = 'blah {@link someSymbol}'
   var result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('{@link http://some.url.com}', function () {
@@ -17,12 +19,11 @@ runner.test('{@link http://some.url.com}', function () {
     url: 'http://some.url.com'
   }]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('multiple {@link http://some.url.com}', function () {
   var text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
-  var result = [
+  var expected = [
     {
       original: '{@link http://one.url.com}',
       caption: 'http://one.url.com',
@@ -34,8 +35,7 @@ runner.test('multiple {@link http://some.url.com}', function () {
       url: 'http://two.url.com'
     }
   ]
-  a.deepEqual(ddata.parseLink(text), result)
-  t.end()
+  a.deepEqual(ddata.parseLink(text), expected)
 })
 
 runner.test('[caption here]{@link someSymbol}', function () {
@@ -46,7 +46,6 @@ runner.test('[caption here]{@link someSymbol}', function () {
     url: 'someSymbol'
   }]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('multiple [caption here]{@link someSymbol}', function () {
@@ -64,7 +63,6 @@ runner.test('multiple [caption here]{@link someSymbol}', function () {
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('[caption here]{@link http://some.url.com}', function () {
@@ -75,7 +73,6 @@ runner.test('[caption here]{@link http://some.url.com}', function () {
     url: 'http://some.url.com'
   }]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('multiple {@link someSymbol|caption here}', function () {
@@ -93,7 +90,6 @@ runner.test('multiple {@link someSymbol|caption here}', function () {
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })
 
 runner.test('multiple {@link someSymbol Caption here}', function () {
@@ -111,5 +107,4 @@ runner.test('multiple {@link someSymbol Caption here}', function () {
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
-  t.end()
 })

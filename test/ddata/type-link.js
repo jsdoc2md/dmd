@@ -1,6 +1,9 @@
 'use strict'
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 /* construct a mock handlebars helper options object */
 function makeOptions (data) {
@@ -21,7 +24,6 @@ runner.test('Array.<module:Something>', function () {
 
   var expected = { name: 'Array.<Human>', url: '#module_cjs/human--Human' }
   a.deepEqual(ddata._link('Array.<module:cjs/human>', makeOptions(input)), expected)
-  t.end()
 })
 
 runner.test('external:something', function () {
@@ -39,7 +41,6 @@ runner.test('external:something', function () {
 
   var expected = { name: 'String', url: '#external_String' }
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
-  t.end()
 })
 
 runner.test('external:something with no description', function () {
@@ -56,5 +57,4 @@ runner.test('external:something with no description', function () {
 
   var expected = { name: 'String', url: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String' }
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
-  t.end()
 })

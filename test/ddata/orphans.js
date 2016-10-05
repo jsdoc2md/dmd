@@ -1,5 +1,8 @@
 var TestRunner = require('test-runner')
-var ddata = require('../')
+var ddata = require('../../helpers/ddata')
+var a = require('core-assert')
+
+var runner = new TestRunner()
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
@@ -21,5 +24,4 @@ runner.test('_orphans', function () {
     { id: '6' },
     { id: '7', kind: 'external', description: 'clive' }
   ])
-  t.end()
 })
