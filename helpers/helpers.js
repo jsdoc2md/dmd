@@ -167,6 +167,7 @@ function deprecated (options) {
 
 */
 function groupBy (groupByFields, options) {
+  groupByFields = arrayify(groupByFields)
   return handlebars.helpers.each(_groupChildren.call(this, groupByFields, options), options)
 }
 
