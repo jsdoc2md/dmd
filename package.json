@@ -11,7 +11,7 @@
     "markdown"
   ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
   },
   "files": [
     "helpers",
