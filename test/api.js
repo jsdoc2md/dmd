@@ -6,11 +6,11 @@ var a = require('core-assert')
 var runner = new TestRunner()
 
 var fixture = [{
-  id: "someclass",
-  longname: "someclass",
-  name: "someclass",
-  kind: "class",
-  description: "is a class"
+  id: 'someclass',
+  longname: 'someclass',
+  name: 'someclass',
+  kind: 'class',
+  description: 'is a class'
 }]
 
 runner.test('dmd() returns correct data', function () {
