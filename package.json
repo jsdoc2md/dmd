@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "array-back": "^1.0.3",
-    "cache-point": "^0.3.3",
+    "cache-point": "^0.3.4",
     "common-sequence": "^1.0.2",
     "core-js": "^2.4.1",
     "file-set": "^1.1.1",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "core-assert": "^0.2.1",
     "dmd-plugin-example": "^0.1.0",
-    "test-runner": "^0.2.4"
+    "test-runner": "^0.2.5"
   },
   "standard": {
     "ignore": [

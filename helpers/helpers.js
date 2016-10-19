@@ -274,7 +274,7 @@ function parseType (string) {
   if (!string) return
   var matches = string.match(/({(.*?)})?([\s\S]*)/)
   if (matches) {
-    return { type: matches[2], description: matches[3]}
+    return { type: matches[2], description: matches[3] }
   }
 }
 

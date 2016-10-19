@@ -13,44 +13,29 @@ if (!Array.prototype.find) {
 }
 
 /**
-ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
-@module
-@example
-```js
-var handlebars = require("handlebars")
-var ddata = require("ddata")
-var docs = require("./docs.json") // jsdoc-parse output
-
-handlebars.registerHelper(ddata)
-var template =
-"{{#module name='yeah-module'}}\
-The author of the module is: {{author}}.\
-{{/module}}"
-console.log(handlebars.compile(template)(docs))
-```
-*/
-
-/* Selector block helpers */
-exports.identifiers = identifiers
-exports.orphans = orphans
-exports.globals = globals
-exports.modules = modules
-exports.module = module
-exports.identifier = identifier
-exports.classes = classes
-exports.class = class_
-exports.functions = functions
-exports.function = function_
-exports.namespace = namespace
-exports.enum = enum_
-exports.misc = misc
-exports.children = children
-exports.indexChildren = indexChildren
+ * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
+ * @module
+ * @example
+ * ```js
+ * var handlebars = require("handlebars")
+ * var ddata = require("ddata")
+ * var docs = require("./docs.json") // jsdoc-parse output
+ *
+ * handlebars.registerHelper(ddata)
+ * var template =
+ * "{{#module name='yeah-module'}}\
+ * The author of the module is: {{author}}.\
+ * {{/module}}"
+ * console.log(handlebars.compile(template)(docs))
+ * ```
+ */
 
 /* utility block helpers */
 exports.link = link
 exports.returnSig2 = returnSig2
 exports.sig = sig
+exports.children = children
+exports.indexChildren = indexChildren
 
 /* helpers which return objects */
 exports._link = _link
@@ -107,33 +92,6 @@ exports.indexDepthIncrement = indexDepthIncrement
 exports.indexDepthDecrement = indexDepthDecrement
 
 /**
-render the supplied block for each identifier in the query
-@static
-@category Block helper: selector
-*/
-function identifiers (options) {
-  return handlebars.helpers.each(_identifiers(options), options)
-}
-
-/**
-render the supplied block for each parent (global identifier, or module)
-@static
-@category Block helper: selector
-*/
-function orphans (options) {
-  return handlebars.helpers.each(_orphans(options), options)
-}
-
-/**
-render the supplied block for each parent (global identifier, or module)
-@static
-@category Block helper: selector
-*/
-function globals (options) {
-  return handlebars.helpers.each(_globals(options), options)
-}
-
-/**
 omits externals without a description
 @static
 */
@@ -149,119 +107,9 @@ function _globals (options) {
 }
 
 /**
-render the supplied block for each module
-@static
-@category Block helper: selector
-*/
-function modules (options) {
-  options.hash.kind = 'module'
-  // console.log(_identifiers(options))
-  return handlebars.helpers.each(_identifiers(options), options)
-}
-
-/**
-render the supplied block for the specified module
-@static
-@category Block helper: selector
-*/
-function module (options) {
-  options.hash.kind = 'module'
-  var result = _identifiers(options)[0]
-  return result ? options.fn(result) : 'ERROR, Cannot find module.'
-}
-
-/**
-render the supplied block for the specified identifier
-@static
-@category Block helper: selector
-*/
-function identifier (options) {
-  var result = _identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find identifier.'
-}
-
-/**
-render the block for each class
-@static
-@category Block helper: selector
-*/
-function classes (options) {
-  options.hash.kind = 'class'
-  return handlebars.helpers.each(_identifiers(options), options)
-}
-
-/**
-render the block for each function/method
-@static
-@category Block helper: selector
-*/
-function functions (options) {
-  options.hash.kind = 'function'
-  return handlebars.helpers.each(_identifiers(options), options)
-}
-
-/**
-render the supplied block for the specified class
-@alias module:ddata.class
-@category Block helper: selector
-*/
-function class_ (options) {
-  options.hash.kind = 'class'
-  var result = _identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find class.'
-}
-
-/**
-render the supplied block for the specified function
-@alias module:ddata.function
-@category Block helper: selector
-*/
-function function_ (options) {
-  options.hash.kind = 'function'
-  var result = _identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find function.'
-}
-
-/**
-render the supplied block for the specified function
-@alias module:ddata.namespace
-@category Block helper: selector
-*/
-function namespace (options) {
-  options.hash.kind = 'namespace'
-  var result = _identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find namespace.'
-}
-
-/**
-render the supplied block for the specified enum
-@alias module:ddata.enum
-@category Block helper: selector
-*/
-function enum_ (options) {
-  options.hash.kind = 'member'
-  options.hash.isEnum = true
-  var result = _identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find enum.'
-}
-
-/**
-render the supplied block for each orphan with no scope set
-@static
-@category Block helper: selector
-*/
-function misc (options) {
-  options.hash.scope = undefined
-  options.hash['!kind'] = /module|constructor|external/
-  options.hash['!isExported'] = true
-  return handlebars.helpers.each(_identifiers(options), options)
-}
-
-/**
-render the supplied block for each child
-@alias module:ddata.children
-@category Block helper: selector
-*/
+ * This helper is a duplicate of the handlebars `each` helper with the one exception that `depthIncrement` is called on each iteration.
+ * @category Block helper: selector
+ */
 function children (options) {
   var context = _children.call(this, options)
   var fn = options.fn
@@ -299,9 +147,10 @@ function children (options) {
 }
 
 /**
-@static
-@category Block helper: selector
-*/
+ * This helper is a duplicate of the handlebars `each` helper with the one exception that `indexDepthIncrement` is called on each iteration.
+ * @static
+ * @category Block helper: selector
+ */
 function indexChildren (options) {
   var context = _children.call(this, options)
   var fn = options.fn
