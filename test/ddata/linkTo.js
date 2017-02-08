@@ -1,7 +1,7 @@
 'use strict'
 var TestRunner = require('test-runner')
 var ddata = require('../../helpers/ddata')
-var a = require('core-assert')
+var a = require('assert')
 
 var runner = new TestRunner()
 

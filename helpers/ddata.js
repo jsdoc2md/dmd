@@ -8,10 +8,6 @@ var where = require('test-value').where
 var flatten = require('reduce-flatten')
 var state = require('../lib/state')
 
-if (!Array.prototype.find) {
-  require('core-js/modules/es6.array.find')
-}
-
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
  * @module
@@ -92,9 +88,9 @@ exports.indexDepthIncrement = indexDepthIncrement
 exports.indexDepthDecrement = indexDepthDecrement
 
 /**
-omits externals without a description
-@static
-*/
+ * omits externals without a description
+ * @static
+ */
 function _globals (options) {
   options.hash.scope = 'global'
   return _identifiers(options).filter(function (identifier) {

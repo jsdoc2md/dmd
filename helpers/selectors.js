@@ -17,48 +17,51 @@ exports.enum = enum_
 exports.misc = misc
 
 /**
-render the supplied block for each identifier in the query
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for each identifier in the query
+ * @static
+ */
 function identifiers (options) {
   return handlebars.helpers.each(ddata._identifiers(options), options)
 }
 
 /**
-render the supplied block for each parent (global identifier, or module)
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for the specified identifier
+ * @static
+ */
+function identifier (options) {
+  var result = ddata._identifier(options)
+  return result ? options.fn(result) : 'ERROR, Cannot find identifier.'
+}
+
+/**
+ * render the supplied block for each parent (global identifier, or module)
+ * @static
+ */
 function orphans (options) {
   return handlebars.helpers.each(ddata._orphans(options), options)
 }
 
 /**
-render the supplied block for each parent (global identifier, or module)
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for each identifier in global scope
+ * @static
+ */
 function globals (options) {
   return handlebars.helpers.each(ddata._globals(options), options)
 }
 
 /**
-render the supplied block for each module
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for each module
+ * @static
+ */
 function modules (options) {
   options.hash.kind = 'module'
-  // console.log(ddata._identifiers(options))
   return handlebars.helpers.each(ddata._identifiers(options), options)
 }
 
 /**
-render the supplied block for the specified module
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for the specified module
+ * @static
+ */
 function module (options) {
   options.hash.kind = 'module'
   var result = ddata._identifiers(options)[0]
@@ -66,39 +69,17 @@ function module (options) {
 }
 
 /**
-render the supplied block for the specified identifier
-@static
-@category Block helper: selector
-*/
-function identifier (options) {
-  var result = ddata._identifier(options)
-  return result ? options.fn(result) : 'ERROR, Cannot find identifier.'
-}
-
-/**
-render the block for each class
-@static
-@category Block helper: selector
-*/
+ * render the block for each class
+ * @static
+ */
 function classes (options) {
   options.hash.kind = 'class'
   return handlebars.helpers.each(ddata._identifiers(options), options)
 }
 
 /**
-render the block for each function/method
-@static
-@category Block helper: selector
-*/
-function functions (options) {
-  options.hash.kind = 'function'
-  return handlebars.helpers.each(ddata._identifiers(options), options)
-}
-
-/**
-render the supplied block for the specified class
-@category Block helper: selector
-*/
+ * render the supplied block for the specified class
+ */
 function class_ (options) {
   options.hash.kind = 'class'
   var result = ddata._identifier(options)
@@ -106,9 +87,17 @@ function class_ (options) {
 }
 
 /**
-render the supplied block for the specified function
-@category Block helper: selector
-*/
+ * render the block for each function/method
+ * @static
+ */
+function functions (options) {
+  options.hash.kind = 'function'
+  return handlebars.helpers.each(ddata._identifiers(options), options)
+}
+
+/**
+ * render the supplied block for the specified function
+ */
 function function_ (options) {
   options.hash.kind = 'function'
   var result = ddata._identifier(options)
@@ -116,9 +105,8 @@ function function_ (options) {
 }
 
 /**
-render the supplied block for the specified function
-@category Block helper: selector
-*/
+ * render the supplied block for the specified function
+ */
 function namespace (options) {
   options.hash.kind = 'namespace'
   var result = ddata._identifier(options)
@@ -126,21 +114,18 @@ function namespace (options) {
 }
 
 /**
-render the supplied block for the specified enum
-@category Block helper: selector
-*/
+ * render the supplied block for the specified enum
+ */
 function enum_ (options) {
-  options.hash.kind = 'member'
-  options.hash.isEnum = true
+  options.hash.kind = 'enum'
   var result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find enum.'
 }
 
 /**
-render the supplied block for each orphan with no scope set
-@static
-@category Block helper: selector
-*/
+ * render the supplied block for each orphan with no scope set
+ * @static
+ */
 function misc (options) {
   options.hash.scope = undefined
   options.hash['!kind'] = /module|constructor|external/

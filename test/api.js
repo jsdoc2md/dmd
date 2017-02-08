@@ -1,11 +1,11 @@
 'use strict'
-var TestRunner = require('test-runner')
-var dmd = require('../')
-var a = require('core-assert')
+const TestRunner = require('test-runner')
+const dmd = require('../')
+const a = require('assert')
 
-var runner = new TestRunner()
+const runner = new TestRunner()
 
-var fixture = [{
+const fixture = [{
   id: 'someclass',
   longname: 'someclass',
   name: 'someclass',
@@ -14,13 +14,13 @@ var fixture = [{
 }]
 
 runner.test('dmd() returns correct data', function () {
-  var result = dmd(fixture)
+  const result = dmd(fixture)
   a.ok(/is a class/.test(result))
 })
 
 runner.test('dmd({ noCache }) returns correct data', function () {
-  var options = { noCache: true }
-  var result = dmd(fixture, options)
+  const options = { noCache: true }
+  const result = dmd(fixture, options)
   a.ok(/is a class/.test(result))
 })
 
@@ -31,7 +31,7 @@ runner.test('dmd.async() returns correct data', function () {
 })
 
 runner.test('dmd.async({ noCache }) returns correct data', function () {
-  var options = { noCache: true }
+  const options = { noCache: true }
   return dmd.async(fixture, options).then(function (result) {
     a.ok(/is a class/.test(result))
   })

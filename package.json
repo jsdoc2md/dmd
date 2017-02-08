@@ -11,7 +11,7 @@
     "markdown"
   ],
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.0.0"
   },
   "files": [
     "helpers",
@@ -23,10 +23,9 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "array-back": "^1.0.3",
-    "cache-point": "^0.3.4",
+    "array-back": "^1.0.4",
+    "cache-point": "^0.4.0",
     "common-sequence": "^1.0.2",
-    "core-js": "^2.4.1",
     "file-set": "^1.1.1",
     "handlebars": "3.0.3",
     "marked": "^0.3.6",
@@ -38,9 +37,8 @@
     "walk-back": "^2.0.1"
   },
   "devDependencies": {
-    "core-assert": "^0.2.1",
     "dmd-plugin-example": "^0.1.0",
-    "test-runner": "^0.2.5"
+    "test-runner": "^0.3.0"
   },
   "standard": {
     "ignore": [

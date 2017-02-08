@@ -1,12 +1,12 @@
 'use strict'
-var TestRunner = require('test-runner')
-var helpers = require('../helpers/helpers')
-var a = require('core-assert')
+const TestRunner = require('test-runner')
+const helpers = require('../helpers/helpers')
+const a = require('assert')
 
-var runner = new TestRunner()
+const runner = new TestRunner()
 
 runner.test('_addGroup scope, cat', function () {
-  var fixture = [
+  const fixture = [
     { 'name': 'aaa', 'scope': 'global', 'cat': 'main' },
     { 'name': 'bbb', 'scope': 'global', 'cat': 'main' },
     { 'name': 'ccc', 'scope': 'global', 'cat': 'main' },
@@ -19,7 +19,7 @@ runner.test('_addGroup scope, cat', function () {
     { 'name': 'jjj', 'scope': 'global' }
   ]
 
-  var expected = [
+  const expected = [
     { 'name': 'aaa', 'scope': 'global', 'cat': 'main', _group: [ 'global', 'main' ] },
     { 'name': 'bbb', 'scope': 'global', 'cat': 'main', _group: [ 'global', 'main' ] },
     { 'name': 'ccc', 'scope': 'global', 'cat': 'main', _group: [ 'global', 'main' ] },
@@ -32,12 +32,12 @@ runner.test('_addGroup scope, cat', function () {
     { 'name': 'jjj', 'scope': 'global', _group: [ 'global', null ] }
   ]
 
-  var result = helpers._addGroup(fixture, [ 'scope', 'cat' ])
+  const result = helpers._addGroup(fixture, [ 'scope', 'cat' ])
   a.deepEqual(result, expected)
 })
 
 runner.test('_groupBy scope, cat', function () {
-  var fixture = [
+  const fixture = [
     { 'name': 'aaa', 'scope': 'global', 'cat': 'main' },
     { 'name': 'bbb', 'scope': 'global', 'cat': 'main' },
     { 'name': 'ccc', 'scope': 'global', 'cat': 'main' },
@@ -50,7 +50,7 @@ runner.test('_groupBy scope, cat', function () {
     { 'name': 'jjj', 'scope': 'global' }
   ]
 
-  var expected = [
+  const expected = [
     { _title: 'global', level: 0 },
     { _title: 'main', level: 1 },
     { name: 'aaa', scope: 'global', cat: 'main', level: 2 },
@@ -70,41 +70,41 @@ runner.test('_groupBy scope, cat', function () {
     { name: 'jjj', scope: 'global', level: 1 }
   ]
 
-  var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
+  const result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
   a.deepEqual(result, expected)
 })
 
 runner.test('_groupBy skips if only one group', function () {
-  var fixture = [
+  const fixture = [
     { 'name': 'aaa', 'scope': 'global' },
     { 'name': 'bbb', 'scope': 'global' },
     { 'name': 'ccc', 'scope': 'global' }
   ]
 
-  var expected = [
+  const expected = [
     { 'name': 'aaa', 'scope': 'global', level: 0 },
     { 'name': 'bbb', 'scope': 'global', level: 0 },
     { 'name': 'ccc', 'scope': 'global', level: 0 }
   ]
 
-  var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
+  const result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
   a.deepEqual(result, expected)
 })
 
 runner.test('_groupBy skips if only one group, where there are subgroups', function () {
-  var fixture = [
+  const fixture = [
     { 'name': 'aaa', 'scope': 'global' },
     { 'name': 'bbb', 'scope': 'global', cat: 'yeah' },
     { 'name': 'ccc', 'scope': 'global', cat: 'yeah' }
   ]
 
-  var expected = [
+  const expected = [
     { 'name': 'aaa', 'scope': 'global', level: 0 },
     { _title: 'yeah', level: 0 },
     { 'name': 'bbb', 'scope': 'global', cat: 'yeah', level: 1 },
     { 'name': 'ccc', 'scope': 'global', cat: 'yeah', level: 1 }
   ]
 
-  var result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
+  const result = helpers._groupBy(fixture, [ 'scope', 'cat' ])
   a.deepEqual(result, expected)
 })
