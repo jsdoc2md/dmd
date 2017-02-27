@@ -684,9 +684,14 @@ function parentName (options) {
   if (this.memberof && this.kind !== 'constructor') {
     var parent = arrayify(options.data.root).find(where({ id: this.memberof }))
     if (parent) {
-      var name = parent.typicalname || parent.name
-      return this.scope === 'instance'
-        ? instantiate(name) : name
+      if (this.scope === 'instance') {
+        var name = parent.typicalname || parent.name
+        return instantiate(name)
+      } else if (this.scope === 'static' && !(parent.kind === 'class' || parent.kind === 'constructor')) {
+        return parent.typicalname || parent.name
+      } else {
+        return parent.name
+      }
     } else {
       return this.memberof
     }
