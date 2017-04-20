@@ -20,8 +20,7 @@
   ],
   "scripts": {
     "test": "test-runner test/*.js test/ddata/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo",
-    "lint:standard": "node_modules/.bin/standard --fix"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
     "array-back": "^1.0.4",
@@ -40,7 +39,6 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
-    "standard": "^10.0.2",
     "test-runner": "^0.3.0"
   },
   "standard": {
