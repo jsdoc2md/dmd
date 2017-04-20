@@ -7,6 +7,7 @@ var objectGet = require('object-get')
 var where = require('test-value').where
 var flatten = require('reduce-flatten')
 var state = require('../lib/state')
+var Buffer = require('safe-buffer').Buffer
 
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).

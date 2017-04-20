@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "test": "test-runner test/*.js test/ddata/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo",
+    "lint:standard": "node_modules/.bin/standard --fix"
   },
   "dependencies": {
     "array-back": "^1.0.4",
@@ -33,11 +34,13 @@
     "reduce-flatten": "^1.0.1",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
+    "safe-buffer": "^5.0.1",
     "test-value": "^2.1.0",
     "walk-back": "^2.0.1"
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
+    "standard": "^10.0.2",
     "test-runner": "^0.3.0"
   },
   "standard": {
