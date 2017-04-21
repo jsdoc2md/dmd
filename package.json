@@ -33,7 +33,6 @@
     "reduce-flatten": "^1.0.1",
     "reduce-unique": "^1.0.0",
     "reduce-without": "^1.0.1",
-    "safe-buffer": "^5.0.1",
     "test-value": "^2.1.0",
     "walk-back": "^2.0.1"
   },
