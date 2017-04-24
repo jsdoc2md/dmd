@@ -1,9 +1,9 @@
 {{! usage: link to="namepath" html=true/false caption="optional caption"~}}
 
-<code>
 {{~#if html~}}
+<code>
 
-{{#link to~}}
+{{~#link to~}}
 {{#if url~}}
 <a href="{{{url}}}">{{#if ../../caption}}{{../../../caption}}{{else}}{{name}}{{/if}}</a>
 {{~else~}}
@@ -11,15 +11,15 @@
 {{/if~}}
 {{/link~}}
 
-{{else~}}
+</code>
+{{~else~}}
 
 {{#link to~}}
 {{#if url~}}
-[{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if}}]({{{url}}})
+[<code>{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if}}</code>]({{{url}}})
 {{~else~}}
-{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if~}}
-{{/if~}}
+<code>{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if~}}</code>
+{{~/if~}}
 {{/link~}}
 
 {{/if~}}
-</code>
