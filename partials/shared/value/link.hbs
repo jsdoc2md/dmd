@@ -3,7 +3,7 @@
 {{~#if html~}}
 <code>
 
-{{#link to~}}
+{{~#link to~}}
 {{#if url~}}
 <a href="{{{url}}}">{{#if ../../caption}}{{../../../caption}}{{else}}{{name}}{{/if}}</a>
 {{~else~}}
@@ -12,14 +12,14 @@
 {{/link~}}
 
 </code>
-{{else~}}
+{{~else~}}
 
 {{#link to~}}
 {{#if url~}}
 [<code>{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if}}</code>]({{{url}}})
 {{~else~}}
 <code>{{#if ../../caption}}{{escape ../../../caption}}{{else}}{{escape name}}{{/if~}}</code>
-{{/if~}}
+{{~/if~}}
 {{/link~}}
 
 {{/if~}}
