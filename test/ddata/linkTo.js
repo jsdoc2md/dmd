@@ -6,9 +6,11 @@ var a = require('assert')
 var runner = new TestRunner()
 
 function makeOptions (data) {
-  return { data: { root: data }, hash: {}, fn: function (context) {
-    return context
-  }}
+  return { data: { root: data },
+    hash: {},
+    fn: function (context) {
+      return context
+    }}
 }
 
 var options = makeOptions([

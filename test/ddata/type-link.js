@@ -7,9 +7,11 @@ var runner = new TestRunner()
 
 /* construct a mock handlebars helper options object */
 function makeOptions (data) {
-  return { data: { root: data }, hash: {}, fn: function (context) {
-    return context
-  }}
+  return { data: { root: data },
+    hash: {},
+    fn: function (context) {
+      return context
+    }}
 }
 
 runner.test('Array.<module:Something>', function () {
