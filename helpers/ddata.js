@@ -28,6 +28,7 @@ var state = require('../lib/state')
 
 /* utility block helpers */
 exports.link = link
+exports.typeLinks = typeLinks
 exports.returnSig2 = returnSig2
 exports.sig = sig
 exports.children = children
@@ -195,6 +196,26 @@ function indexChildren (options) {
 */
 function link (longname, options) {
   return options.fn(_link(longname, options))
+}
+
+/**
+Iterates over multiple namepaths in format Namepath.<Namepath> or Namepath.<Namepath, Namepath...>
+@static
+@param {string} - namepath or type expression
+@param {object} - the handlebars helper options object
+@category Block helper: util
+*/
+function typeLinks (longname, options) {
+  var ret = ""
+  var matches
+  if ((matches = longname.match(/(.*?).<(.*?)>/))) {
+    ret = options.fn(matches[1], options)
+    ret = ret + '.&lt;'
+    ret = ret + matches[2].split(', ').map(function(e){return options.fn(e, options)}).join(', ')
+    ret = ret + '&gt;'
+    return ret
+  }
+  return options.fn(longname, options)
 }
 
 /**
