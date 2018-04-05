@@ -312,6 +312,9 @@ function examples (options) {
       if (matches) {
         var exampleLangSubtag = matches[1]
         lines[0] = lines[0].replace(matches[0], '')
+        if (lines[0].length === 0) {
+          lines.splice(0, 1)
+        }
       }
       var exampleLang = exampleLangSubtag || exampleLangOptions
 
@@ -326,7 +329,7 @@ function examples (options) {
       }
 
       if (!(/```/.test(example) || exampleLang === 'off')) {
-        example = util.format('```%s\n%s\n```', exampleLang, example)
+        example = util.format('```%s%s```', exampleLang ? exampleLang + '\n' : '', example ? example + '\n' : '')
       }
 
       return prev + options.fn({caption: caption, example: example})
