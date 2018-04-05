@@ -185,26 +185,26 @@ function indexChildren (options) {
 }
 
 /**
-@param id {string} - the ID to link to, e.g. `external:XMLHttpRequest`, `GlobalClass#propOne` etc.
-@static
-@category Block helper: util
-@example
-{{#link "module:someModule.property"~}}
-  {{name}} {{!-- prints 'property' --}}
-  {{url}}  {{!-- prints 'module-someModule-property' --}}
-{{/link}}
-*/
+ * @param id {string} - the ID to link to, e.g. `external:XMLHttpRequest`, `GlobalClass#propOne` etc.
+ * @static
+ * @category Block helper: util
+ * @example
+ * {{#link "module:someModule.property"~}}
+ *   {{name}} {{!-- prints 'property' --}}
+ *   {{url}}  {{!-- prints 'module-someModule-property' --}}
+ * {{/link}}
+ */
 function link (longname, options) {
   return options.fn(_link(longname, options))
 }
 
 /**
-Iterates over multiple namepaths in format Namepath.<Namepath> or Namepath.<Namepath, Namepath...>
-@static
-@param {string} - namepath or type expression
-@param {object} - the handlebars helper options object
-@category Block helper: util
-*/
+ * Iterates over multiple namepaths in format Namepath.<Namepath> or Namepath.<Namepath, Namepath...>
+ * @static
+ * @param {string} - namepath or type expression
+ * @param {object} - the handlebars helper options object
+ * @category Block helper: util
+ */
 function typeLinks (longname, options) {
   var ret = ""
   var matches
@@ -219,11 +219,11 @@ function typeLinks (longname, options) {
 }
 
 /**
-e.g. namepaths `module:Something` or type expression `Array.<module:Something>`
-@static
-@param {string} - namepath or type expression
-@param {object} - the handlebars helper options object
-*/
+ * e.g. namepaths `module:Something` or type expression `Array.<module:Something>`
+ * @static
+ * @param {string} - namepath or type expression
+ * @param {object} - the handlebars helper options object
+ */
 function _link (input, options) {
   if (typeof input !== 'string') return null
 
@@ -249,7 +249,7 @@ function _link (input, options) {
     linked = _identifier(options)
   }
   if (!linked) {
-    return { name: input, url: null }
+    output = { name: input, url: null }
   } else {
     output.name = input.replace(namepath, linked.name)
     if (isExternal.call(linked)) {
@@ -266,8 +266,8 @@ function _link (input, options) {
     } else {
       output.url = '#' + anchorName.call(linked, options)
     }
-    return output
   }
+  return output
 }
 
 /**
