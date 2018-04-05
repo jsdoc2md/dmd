@@ -307,18 +307,21 @@ function examples (options) {
       var lines = example.split(/\r\n|\r|\n/)
       var matches = lines[0].match(/\s*<caption>(.*?)<\/caption>\s*/)
       var caption
+      var exampleLangSubtag
 
       if (matches) {
         caption = matches[1]
-        example = lines.slice(1).join('\n')
       }
 
       var exampleLangOptions = ddata.option('example-lang', options)
-      matches = example.match(/@lang\s+(\w+)\s*/)
+      matches = lines[0].match(/@lang\s+(\w+)\s*/)
 
       if (matches) {
-        var exampleLangSubtag = matches[1]
-        example = example.replace(matches[0], '')
+        exampleLangSubtag = matches[1]
+      }
+
+      if (caption || exampleLangSubtag) {
+        example = lines.slice(1).join('\n')
       }
 
       var exampleLang = exampleLangSubtag || exampleLangOptions
