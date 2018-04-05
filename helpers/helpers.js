@@ -314,7 +314,7 @@ function examples (options) {
       }
 
       var exampleLangOptions = ddata.option('example-lang', options)
-      matches = example.match(/@lang\s+(\w+)\s*/)
+      matches = lines[0].match(/@lang\s+(\w+)\s*/)
 
       if (matches) {
         exampleLangSubtag = matches[1]
