@@ -37,7 +37,7 @@ Escape special markdown characters
 */
 function escape (input) {
   if (typeof input !== 'string') return null
-  return input.replace(/([\*|])/g, '\\$1')
+  return input.replace(/([\*|_])/g, '\\$1')
 }
 
 /**
