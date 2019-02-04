@@ -687,8 +687,6 @@ function parentName (options) {
       if (this.scope === 'instance') {
         var name = parent.typicalname || parent.name
         return instantiate(name)
-      } else if (this.scope === 'static' && !(parent.kind === 'class' || parent.kind === 'constructor')) {
-        return parent.typicalname || parent.name
       } else {
         return parent.name
       }
