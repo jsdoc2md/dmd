@@ -23,18 +23,18 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "array-back": "^2.0.0",
+    "array-back": "^3.1.0",
     "cache-point": "^0.4.1",
     "common-sequence": "^1.0.2",
     "file-set": "^2.0.0",
-    "handlebars": "^4.0.11",
-    "marked": "^0.3.16",
+    "handlebars": "^4.1.2",
+    "marked": "^0.6.2",
     "object-get": "^2.1.0",
-    "reduce-flatten": "^1.0.1",
-    "reduce-unique": "^1.0.0",
+    "reduce-flatten": "^2.0.0",
+    "reduce-unique": "^2.0.1",
     "reduce-without": "^1.0.1",
     "test-value": "^3.0.0",
-    "walk-back": "^3.0.0"
+    "walk-back": "^3.0.1"
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
