@@ -1,15 +1,15 @@
-var TestRunner = require('test-runner')
-var ddata = require('../../helpers/ddata')
-var a = require('assert')
+const Tom = require('test-runner').Tom
+const ddata = require('../../helpers/ddata')
+const a = require('assert')
 
-var runner = new TestRunner()
+const tom = module.exports = new Tom('globals')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-runner.test('_globals', function () {
-  var options = makeOptions([
+tom.test('_globals', function () {
+  const options = makeOptions([
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },
     { id: '3', scope: 'global', kind: 'external', description: 'clive' },
@@ -18,7 +18,7 @@ runner.test('_globals', function () {
     { id: '6' },
     { id: '7', scope: 'global', kind: 'function' }
   ])
-  var result = ddata._globals(options)
+  const result = ddata._globals(options)
   a.deepEqual(result, [
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },

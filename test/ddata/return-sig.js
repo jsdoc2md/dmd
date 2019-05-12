@@ -1,9 +1,8 @@
-'use strict'
-var TestRunner = require('test-runner')
+const Tom = require('test-runner').Tom
 var ddata = require('../../helpers/ddata')
 var a = require('assert')
 
-var runner = new TestRunner()
+const tom = module.exports = new Tom('return-sig')
 
 function makeOptions (done) {
   return { fn: function (context) {
@@ -11,7 +10,7 @@ function makeOptions (done) {
   }}
 }
 
-runner.test('multiple returns specified', function () {
+tom.test('multiple returns specified', function () {
   var identifier = { 'returns': [
       { 'type': { 'names': [ 'string' ] }, 'description': 'desc 1' },
       { 'type': { 'names': [ 'object', 'function' ] }, 'description': 'desc 2' }
@@ -23,7 +22,7 @@ runner.test('multiple returns specified', function () {
   ddata.returnSig2.call(identifier, options)
 })
 
-runner.test('no returns, one type', function () {
+tom.test('no returns, one type', function () {
   var identifier = { 'type': { 'names': [ 'string' ] } }
 
   var options = makeOptions(function (context) {
@@ -32,7 +31,7 @@ runner.test('no returns, one type', function () {
   ddata.returnSig2.call(identifier, options)
 })
 
-runner.test('return with no type', function () {
+tom.test('return with no type', function () {
   var identifier = {
     'returns': [ { 'description': 'A string representation of the argument.' } ]
   }

@@ -1,19 +1,18 @@
-'use strict'
-var TestRunner = require('test-runner')
-var ddata = require('../../helpers/ddata')
-var a = require('assert')
+const Tom = require('test-runner').Tom
+const ddata = require('../../helpers/ddata')
+const a = require('assert')
 
-var runner = new TestRunner()
+const tom = module.exports = new Tom('parseLink')
 
-runner.test('{@link someSymbol}', function () {
-  var text = 'blah {@link someSymbol}'
-  var result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
+tom.test('{@link someSymbol}', function () {
+  const text = 'blah {@link someSymbol}'
+  const result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('{@link http://some.url.com}', function () {
-  var text = 'blah {@link http://some.url.com} blah'
-  var result = [{
+tom.test('{@link http://some.url.com}', function () {
+  const text = 'blah {@link http://some.url.com} blah'
+  const result = [{
     original: '{@link http://some.url.com}',
     caption: 'http://some.url.com',
     url: 'http://some.url.com'
@@ -21,9 +20,9 @@ runner.test('{@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('multiple {@link http://some.url.com}', function () {
-  var text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
-  var expected = [
+tom.test('multiple {@link http://some.url.com}', function () {
+  const text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
+  const expected = [
     {
       original: '{@link http://one.url.com}',
       caption: 'http://one.url.com',
@@ -38,9 +37,9 @@ runner.test('multiple {@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), expected)
 })
 
-runner.test('[caption here]{@link someSymbol}', function () {
-  var text = 'blah [caption here]{@link someSymbol} blah'
-  var result = [{
+tom.test('[caption here]{@link someSymbol}', function () {
+  const text = 'blah [caption here]{@link someSymbol} blah'
+  const result = [{
     original: '[caption here]{@link someSymbol}',
     caption: 'caption here',
     url: 'someSymbol'
@@ -48,9 +47,9 @@ runner.test('[caption here]{@link someSymbol}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('multiple [caption here]{@link someSymbol}', function () {
-  var text = 'blah [caption one]{@link thingOne} blah [caption two]{@link thingTwo} whatever'
-  var result = [
+tom.test('multiple [caption here]{@link someSymbol}', function () {
+  const text = 'blah [caption one]{@link thingOne} blah [caption two]{@link thingTwo} whatever'
+  const result = [
     {
       original: '[caption one]{@link thingOne}',
       caption: 'caption one',
@@ -65,9 +64,9 @@ runner.test('multiple [caption here]{@link someSymbol}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('[caption here]{@link http://some.url.com}', function () {
-  var text = 'blah [caption here]{@link http://some.url.com} blah'
-  var result = [{
+tom.test('[caption here]{@link http://some.url.com}', function () {
+  const text = 'blah [caption here]{@link http://some.url.com} blah'
+  const result = [{
     original: '[caption here]{@link http://some.url.com}',
     caption: 'caption here',
     url: 'http://some.url.com'
@@ -75,9 +74,9 @@ runner.test('[caption here]{@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('multiple {@link someSymbol|caption here}', function () {
-  var text = 'blah {@link thingOne|caption one} blah {@link thingTwo|caption two} whatever'
-  var result = [
+tom.test('multiple {@link someSymbol|caption here}', function () {
+  const text = 'blah {@link thingOne|caption one} blah {@link thingTwo|caption two} whatever'
+  const result = [
     {
       original: '{@link thingOne|caption one}',
       caption: 'caption one',
@@ -92,9 +91,9 @@ runner.test('multiple {@link someSymbol|caption here}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-runner.test('multiple {@link someSymbol Caption here}', function () {
-  var text = 'blah {@link thingOne Caption one} blah {@link thingTwo Caption two} whatever'
-  var result = [
+tom.test('multiple {@link someSymbol Caption here}', function () {
+  const text = 'blah {@link thingOne Caption one} blah {@link thingTwo Caption two} whatever'
+  const result = [
     {
       original: '{@link thingOne Caption one}',
       caption: 'Caption one',

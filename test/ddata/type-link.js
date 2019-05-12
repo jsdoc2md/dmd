@@ -1,9 +1,8 @@
-'use strict'
-var TestRunner = require('test-runner')
-var ddata = require('../../helpers/ddata')
-var a = require('assert')
+const Tom = require('test-runner').Tom
+const ddata = require('../../helpers/ddata')
+const a = require('assert')
 
-var runner = new TestRunner()
+const tom = module.exports = new Tom('type-link')
 
 /* construct a mock handlebars helper options object */
 function makeOptions (data) {
@@ -12,8 +11,8 @@ function makeOptions (data) {
   }}
 }
 
-runner.test('Array.<module:Something>', function () {
-  var input = [
+tom.test('Array.<module:Something>', function () {
+  const input = [
     {
       'id': 'module:cjs/human--Human',
       'longname': 'module:cjs/human',
@@ -22,12 +21,12 @@ runner.test('Array.<module:Something>', function () {
     }
   ]
 
-  var expected = { name: 'Array.<Human>', url: '#module_cjs/human--Human' }
+  const expected = { name: 'Array.<Human>', url: '#module_cjs/human--Human' }
   a.deepEqual(ddata._link('Array.<module:cjs/human>', makeOptions(input)), expected)
 })
 
-runner.test('external:something', function () {
-  var input = [
+tom.test('external:something', function () {
+  const input = [
     {
       'id': 'external:String',
       'name': 'String',
@@ -39,12 +38,12 @@ runner.test('external:something', function () {
     }
   ]
 
-  var expected = { name: 'String', url: '#external_String' }
+  const expected = { name: 'String', url: '#external_String' }
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
 })
 
-runner.test('external:something with no description', function () {
-  var input = [
+tom.test('external:something with no description', function () {
+  const input = [
     {
       'id': 'external:String',
       'name': 'String',
@@ -55,6 +54,6 @@ runner.test('external:something with no description', function () {
     }
   ]
 
-  var expected = { name: 'String', url: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String' }
+  const expected = { name: 'String', url: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String' }
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
 })

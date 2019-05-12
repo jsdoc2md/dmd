@@ -5,22 +5,21 @@
   "description": "dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.",
   "license": "MIT",
   "repository": "https://github.com/75lb/dmd.git",
-  "main": "./lib/dmd.js",
   "keywords": [
     "documentation",
     "markdown"
   ],
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "files": [
-    "helpers",
-    "lib",
+    "index.js",
+    "helpers/*.js",
+    "lib/*.js",
     "partials"
   ],
   "scripts": {
-    "test": "test-runner test/*.js test/ddata/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs -p list -l js lib/*.js > README.md; echo"
+    "test": "test-runner test/*.js test/ddata/*.js"
   },
   "dependencies": {
     "array-back": "^3.1.0",
@@ -38,7 +37,8 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
-    "test-runner": "^0.5.0"
+    "nyc": "^14.1.1",
+    "test-runner": "^0.6.0"
   },
   "standard": {
     "ignore": [

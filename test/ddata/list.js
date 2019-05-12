@@ -1,15 +1,15 @@
-var TestRunner = require('test-runner')
-var ddata = require('../../helpers/ddata')
-var a = require('assert')
+const Tom = require('test-runner').Tom
+const ddata = require('../../helpers/ddata')
+const a = require('assert')
 
-var runner = new TestRunner()
+const tom = module.exports = new Tom('list')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-runner.test('descendants', function () {
-  var options = makeOptions([
+tom.test('descendants', function () {
+  let options = makeOptions([
     { id: 'one' }, { id: 'two', memberof: 'one' }, { id: 'three', memberof: 'two' }, { id: 'four' }
   ])
   options.hash.min = 0

@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * @module dmd
  */
@@ -7,8 +5,8 @@ module.exports = dmd
 
 const path = require('path')
 const Cache = require('cache-point')
-const DmdOptions = require('./dmd-options')
-const dmdVersion = require('../package').version
+const DmdOptions = require('./lib/dmd-options')
+const dmdVersion = require('./package').version
 
 /**
  * Transforms doclet data into markdown documentation.
@@ -51,7 +49,7 @@ function generate (templateData, options) {
   const arrayify = require('array-back')
   const handlebars = require('handlebars')
   const walkBack = require('walk-back')
-  const DmdOptions = require('./dmd-options')
+  const DmdOptions = require('./lib/dmd-options')
   const FileSet = require('file-set')
 
   function registerPartials (paths) {
@@ -72,7 +70,7 @@ function generate (templateData, options) {
   }
 
   /* Register handlebars helper modules */
-  ;[ '../helpers/helpers', '../helpers/ddata', '../helpers/selectors' ].forEach(function (modulePath) {
+  ;[ './helpers/helpers', './helpers/ddata', './helpers/selectors' ].forEach(function (modulePath) {
     handlebars.registerHelper(require(modulePath))
   })
 
@@ -88,12 +86,12 @@ function generate (templateData, options) {
   options._indexDepth = 0
 
   /* state module, for sharing with the helpers */
-  const state = require('./state')
+  const state = require('./lib/state')
   state.templateData = templateData
   state.options = options
 
   /* register all dmd partials. */
-  registerPartials(path.resolve(__dirname, '..', 'partials/**/*.hbs'))
+  registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {
