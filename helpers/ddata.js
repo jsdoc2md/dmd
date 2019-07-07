@@ -554,24 +554,81 @@ returns a unique ID string suitable for use as an `href`.
 function anchorName (options) {
   if (!this.id) throw new Error('[anchorName helper] cannot create a link without a id: ' + JSON.stringify(this))
   if (this.inherited) {
-    options.hash.id = this.inherits
+    options.hash.id = this.inherits;
     var inherits = _identifier(options)
     if (inherits) {
-      return anchorName.call(inherits, options)
+      return anchorName.call(inherits, options);
     } else {
-      return ''
+      return '';
     }
   }
-  return util.format(
-    '%s%s%s',
-    this.isExported ? 'exp_' : '',
-    this.kind === 'constructor' ? 'new_' : '',
-    this.id
-      .replace(/:/g, '_')
-      .replace(/~/g, '..')
-      .replace(/\(\)/g, '_new')
-      .replace(/#/g, '+')
-  )
+
+  if (option('id-headings', options) && !isClass.call(this) && !isModule.call(this)) {
+    console.warn("Experimental heading features enabled, builds will not inlcude `name` attributes now!");
+    let anchor_id = this.id.trim()
+    if (this.kind == 'typedef') {
+      anchor_id += ' code' + this.type.names + 'code';
+      /* Eventually it would be nice if the following where needed instead... */
+      // if (option('name-format', options) && !isClass.call(this) && !isModule.call(this)) {
+      //   anchor_id += this.type.names;
+      // } else {
+      //   anchor_id += ' code' + this.type.names + 'code';
+      // }
+    }
+
+    if (this.params) {
+      const paramNames = arrayify(this.params).filter(function (param) {
+        return param.name && !/\./.test(param.name);
+      }).map(function (param) {
+        if (param.variable) {
+          return param.optional ? param.name : param.name;
+        } else {
+          return param.optional ? param.name : param.name;
+        }
+      }).join(' ');
+
+      if (paramNames) {
+        anchor_id += paramNames;
+      }
+    }
+
+    if (this.returns && this.kind !== 'constructor') {
+      const typeNames = arrayify(this.returns).map(function (ret) {
+        return ret.type && ret.type.names;
+      })
+      if (typeNames) {
+        anchor_id += ' code' + typeNames + 'code';
+        /* ... but I totally get how that would be a different set of changes */
+        // if (option('name-format', options) && !isClass.call(this) && !isModule.call(this)) {
+        //   anchor_id += typeNames
+        // } else {
+        //   anchor_id += ' code' + typeNames + 'code';
+        // }
+      }
+    }
+
+    return util.format(
+      '%s%s%s',
+      this.isExported ? 'exp_' : '',
+      this.kind === 'constructor' ? 'new-' : '',
+      anchor_id
+        .replace(/[^a-zA-Z0-9_\- ]/g, '')
+        .replace(/ +/g, '-')
+        .toLowerCase()
+    );
+
+  } else {
+    return util.format(
+      '%s%s%s',
+      this.isExported ? 'exp_' : '',
+      this.kind === 'constructor' ? 'new_' : '',
+      this.id
+        .replace(/:/g, '_')
+        .replace(/~/g, '..')
+        .replace(/\(\)/g, '_new')
+        .replace(/#/g, '+')
+    )
+  }
 }
 
 /**
