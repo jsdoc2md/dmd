@@ -2,7 +2,7 @@
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "4.0.3",
-  "description": "dmd (document with markdown) is a collection of handlebars templates for generating markdown documentation from jsdoc-parse input data. It is the default template set used by jsdoc-to-markdown.",
+  "description": "The default output template for jsdoc-to-markdown",
   "license": "MIT",
   "repository": "https://github.com/jsdoc2md/dmd",
   "keywords": [
