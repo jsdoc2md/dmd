@@ -1,4 +1,3 @@
-'use strict'
 var arrayify = require('array-back')
 var util = require('util')
 var handlebars = require('handlebars')

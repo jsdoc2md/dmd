@@ -1,7 +1,6 @@
 /**
  * @module dmd
  */
-module.exports = dmd
 
 const path = require('path')
 const Cache = require('cache-point')
@@ -136,3 +135,5 @@ function generate (templateData, options) {
 function skipCache (options) {
   return options.noCache || options.plugin.length || options.partial.length || options.helper.length
 }
+
+module.exports = dmd

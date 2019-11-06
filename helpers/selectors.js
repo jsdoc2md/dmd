@@ -1,4 +1,3 @@
-'use strict'
 var handlebars = require('handlebars')
 var ddata = require('./ddata')
 

@@ -1,4 +1,3 @@
-'use strict'
 var ddata = require('./ddata')
 var arrayify = require('array-back')
 var handlebars = require('handlebars')
