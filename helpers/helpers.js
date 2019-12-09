@@ -292,6 +292,7 @@ function params (options) {
         indent: '    '.repeat(nameSplit.length - 1),
         name: name,
         type: param.type,
+        optional: param.optional,
         defaultvalue: param.defaultvalue,
         description: param.description
       }
