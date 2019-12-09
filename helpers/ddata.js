@@ -617,10 +617,10 @@ function parseLink (text) {
   if (!text) return ''
   var results = []
   var matches = null
-  var link1 = /{@link (\S+?)}/g // {@link someSymbol}
-  var link2 = /\[(.+?)\]{@link (\S+?)}/g // [caption here]{@link someSymbol}
-  var link3 = /{@link ([^\s}]+?)\|(.+?)}/g // {@link someSymbol|caption here}
-  var link4 = /{@link ([^\s}\|]+?) (.+?)}/g // {@link someSymbol Caption Here}
+  var link1 = /{@link\s+([^\s}|]+?)\s*}/g // {@link someSymbol}
+  var link2 = /\[([^\]]+?)\]{@link\s+([^\s}|]+?)\s*}/g // [caption here]{@link someSymbol}
+  var link3 = /{@link\s+([^\s}|]+?)\s*\|([^}]+?)}/g // {@link someSymbol|caption here}
+  var link4 = /{@link\s+([^\s}|]+?)\s+([^}|]+?)}/g // {@link someSymbol Caption Here}
 
   while ((matches = link4.exec(text)) !== null) {
     results.push({
