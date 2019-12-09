@@ -332,7 +332,7 @@ function examples (options) {
         example = util.format('```%s%s```', exampleLang ? exampleLang + '\n' : '', example ? example + '\n' : '')
       }
 
-      return prev + options.fn({caption: caption, example: example})
+      return prev + options.fn({ caption: caption, example: example })
     }, '')
   }
 }

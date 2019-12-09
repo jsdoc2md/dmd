@@ -1,7 +1,7 @@
 const Tom = require('test-runner').Tom
 const dmd = require('../')
 const path = require('path')
-const a = require('assert')
+const a = require('assert').strict
 
 const tom = module.exports = new Tom('plugin')
 

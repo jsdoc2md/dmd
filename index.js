@@ -19,7 +19,7 @@ function dmd (templateData, options) {
   if (skipCache(options)) {
     return generate(templateData, options)
   } else {
-    const cached = dmd.cache.readSync([ templateData, options, dmdVersion ])
+    const cached = dmd.cache.readSync([templateData, options, dmdVersion])
     if (cached) {
       return cached
     } else {
@@ -33,7 +33,7 @@ dmd.async = function (templateData, options) {
   if (skipCache(options)) {
     return Promise.resolve(generate(templateData, options))
   } else {
-    return dmd.cache.read([ templateData, options, dmdVersion ])
+    return dmd.cache.read([templateData, options, dmdVersion])
       .catch(function () {
         return generate(templateData, options)
       })
@@ -69,7 +69,7 @@ function generate (templateData, options) {
   }
 
   /* Register handlebars helper modules */
-  ;[ './helpers/helpers', './helpers/ddata', './helpers/selectors' ].forEach(function (modulePath) {
+  ;['./helpers/helpers', './helpers/ddata', './helpers/selectors'].forEach(function (modulePath) {
     handlebars.registerHelper(require(modulePath))
   })
 
@@ -127,7 +127,7 @@ function generate (templateData, options) {
   })
   templateData.options = options
   const output = compiled(templateData)
-  dmd.cache.writeSync([ inputData, inputOptions, dmdVersion ], output)
+  dmd.cache.writeSync([inputData, inputOptions, dmdVersion], output)
   return output
 }
 

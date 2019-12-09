@@ -6,7 +6,7 @@ const tom = module.exports = new Tom('parseLink')
 
 tom.test('{@link someSymbol}', function () {
   const text = 'blah {@link someSymbol}'
-  const result = [ { original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' } ]
+  const result = [{ original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' }]
   a.deepEqual(ddata.parseLink(text), result)
 })
 

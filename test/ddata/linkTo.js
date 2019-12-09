@@ -5,14 +5,18 @@ const a = require('assert')
 const tom = module.exports = new Tom('linkTo')
 
 function makeOptions (data) {
-  return { data: { root: data }, hash: {}, fn: function (context) {
-    return context
-  }}
+  return {
+    data: { root: data },
+    hash: {},
+    fn: function (context) {
+      return context
+    }
+  }
 }
 
 const options = makeOptions([
-  { id: 'module:handbrake-js~Handbrake', longname: 'module:handbrake-js~Handbrake', 'name': 'Handbrake' },
-  { id: 'module:cjs/class~innerProp', longname: 'module:cjs/class~innerProp', 'name': 'innerProp' }
+  { id: 'module:handbrake-js~Handbrake', longname: 'module:handbrake-js~Handbrake', name: 'Handbrake' },
+  { id: 'module:cjs/class~innerProp', longname: 'module:cjs/class~innerProp', name: 'innerProp' }
 ])
 
 tom.test('link', function () {

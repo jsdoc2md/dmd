@@ -277,7 +277,7 @@ function returnSig2 (options) {
       if (this.kind === 'namespace') {
         return options.fn({
           symbol: ':',
-          types: [ 'object' ]
+          types: ['object']
         })
       } else {
         return options.fn({
@@ -341,9 +341,9 @@ function sig (options) {
       data.returnSymbol = ':'
 
       if (isEnum.call(this)) {
-        data.returnTypes = [ 'enum' ]
+        data.returnTypes = ['enum']
       } else if (this.kind === 'namespace') {
-        data.returnTypes = [ 'object' ]
+        data.returnTypes = ['object']
       } else {
         data.returnTypes = this.type.names
       }
@@ -628,7 +628,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
+    text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
 
   while ((matches = link3.exec(text)) !== null) {
@@ -637,7 +637,7 @@ function parseLink (text) {
       caption: matches[2],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
+    text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
 
   while ((matches = link2.exec(text)) !== null) {
@@ -646,7 +646,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[2]
     })
-    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
+    text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
 
   while ((matches = link1.exec(text)) !== null) {
@@ -655,7 +655,7 @@ function parseLink (text) {
       caption: matches[1],
       url: matches[1]
     })
-    text = text.replace(matches[0], Buffer(matches[0].length).fill(' ').toString())
+    text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
   return results
 }

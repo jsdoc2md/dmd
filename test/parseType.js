@@ -1,8 +1,8 @@
 const Tom = require('test-runner').Tom
 const helpers = require('../helpers/helpers')
-const a = require('assert')
+const a = require('assert').strict
 
-const tom = module.exports = new Tom('parseType')
+const tom = module.exports = new Tom()
 
 tom.test('no type, single-line description', function () {
   const input = 'description'
