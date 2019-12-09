@@ -10,7 +10,7 @@
     "markdown"
   ],
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10"
   },
   "files": [
     "index.js",
@@ -22,11 +22,11 @@
     "test": "test-runner test/*.js test/ddata/*.js"
   },
   "dependencies": {
-    "array-back": "^4.0.0",
-    "cache-point": "^1.0.0",
+    "array-back": "^4.0.1",
+    "cache-point": "^2.0.0",
     "common-sequence": "^2.0.0",
     "file-set": "^3.0.0",
-    "handlebars": "^4.5.1",
+    "handlebars": "^4.5.3",
     "marked": "^0.7.0",
     "object-get": "^2.1.0",
     "reduce-flatten": "^3.0.0",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
     "nyc": "^14.1.1",
-    "test-runner": "^0.7.2"
+    "test-runner": "^0.8.9"
   },
   "standard": {
     "ignore": [
