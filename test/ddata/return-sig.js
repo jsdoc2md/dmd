@@ -1,6 +1,6 @@
 const Tom = require('test-runner').Tom
 var ddata = require('../../helpers/ddata')
-var a = require('assert')
+var a = require('assert').strict
 
 const tom = module.exports = new Tom('return-sig')
 

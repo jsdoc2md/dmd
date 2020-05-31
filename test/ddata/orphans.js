@@ -1,7 +1,6 @@
 const Tom = require('test-runner').Tom
-const TestRunner = require('test-runner')
 const ddata = require('../../helpers/ddata')
-const a = require('assert')
+const a = require('assert').strict
 
 const tom = module.exports = new Tom('orphans')
 

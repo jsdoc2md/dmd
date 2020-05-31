@@ -25,10 +25,10 @@
     "array-back": "^4.0.1",
     "cache-point": "^2.0.0",
     "common-sequence": "^2.0.0",
-    "file-set": "^3.0.0",
-    "handlebars": "^4.5.3",
-    "marked": "^0.7.0",
-    "object-get": "^2.1.0",
+    "file-set": "^4.0.1",
+    "handlebars": "^4.7.6",
+    "marked": "^1.1.0",
+    "object-get": "^2.1.1",
     "reduce-flatten": "^3.0.0",
     "reduce-unique": "^2.0.1",
     "reduce-without": "^1.0.1",
@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
-    "nyc": "^14.1.1",
-    "test-runner": "^0.8.9"
+    "nyc": "^15.0.1",
+    "test-runner": "^0.8.13"
   },
   "standard": {
     "ignore": [
