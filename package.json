@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
-    "nyc": "^15.0.1",
     "test-runner": "^0.8.13"
   },
   "standard": {
