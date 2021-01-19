@@ -89,8 +89,12 @@ function generate (templateData, options) {
   state.templateData = templateData
   state.options = options
 
-  /* register all dmd partials. */
-  registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
+  /* register all dmd partials from custom dir or the default ones. */
+  if(options.customPartialsDir) {
+    registerPartials(path.resolve(options.customPartialsDir, './**/*.hbs'))
+  } else {
+    registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
+  }
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {
