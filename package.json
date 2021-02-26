@@ -22,12 +22,12 @@
     "test": "test-runner test/*.js test/ddata/*.js"
   },
   "dependencies": {
-    "array-back": "^4.0.1",
+    "array-back": "^5.0.0",
     "cache-point": "^2.0.0",
     "common-sequence": "^2.0.0",
     "file-set": "^4.0.1",
-    "handlebars": "^4.7.6",
-    "marked": "^1.1.0",
+    "handlebars": "^4.7.7",
+    "marked": "^2.0.0",
     "object-get": "^2.1.1",
     "reduce-flatten": "^3.0.0",
     "reduce-unique": "^2.0.1",
