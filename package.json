@@ -10,7 +10,7 @@
     "markdown"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "files": [
     "index.js",
@@ -33,7 +33,7 @@
     "reduce-unique": "^2.0.1",
     "reduce-without": "^1.0.1",
     "test-value": "^3.0.0",
-    "walk-back": "^4.0.0"
+    "walk-back": "^5.0.0"
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
