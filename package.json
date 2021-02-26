@@ -1,7 +1,7 @@
 {
   "name": "dmd",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "description": "The default output template for jsdoc-to-markdown",
   "license": "MIT",
   "repository": "https://github.com/jsdoc2md/dmd",
