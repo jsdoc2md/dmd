@@ -1,10 +1,10 @@
 {
-  "name": "dmd",
-  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "name": "@coranos/dmd",
+  "author": "coranos",
   "version": "6.0.1",
   "description": "The default output template for jsdoc-to-markdown",
   "license": "MIT",
-  "repository": "https://github.com/jsdoc2md/dmd",
+  "repository": "https://github.com/coranos/dmd",
   "keywords": [
     "documentation",
     "markdown"
