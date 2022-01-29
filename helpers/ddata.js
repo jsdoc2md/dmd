@@ -1,7 +1,7 @@
 var arrayify = require('array-back')
 var util = require('util')
 var handlebars = require('handlebars')
-var marked = require('marked')
+var { marked } = require('marked')
 var objectGet = require('object-get')
 var where = require('test-value').where
 var flatten = require('reduce-flatten')
