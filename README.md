@@ -46,6 +46,6 @@ I am a global variable
 
 * * *
 
-&copy; 2014-23 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2014-24 Lloyd Brookes \<75pound@gmail.com\>.
 
 Tested by [test-runner](https://github.com/test-runner-js/test-runner). Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
