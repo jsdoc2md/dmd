@@ -1,5 +1,5 @@
-var handlebars = require('handlebars')
-var ddata = require('./ddata')
+const handlebars = require('handlebars')
+const ddata = require('./ddata')
 
 exports.identifiers = identifiers
 exports.identifier = identifier
@@ -28,7 +28,7 @@ function identifiers (options) {
  * @static
  */
 function identifier (options) {
-  var result = ddata._identifier(options)
+  const result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find identifier.'
 }
 
@@ -63,7 +63,7 @@ function modules (options) {
  */
 function module (options) {
   options.hash.kind = 'module'
-  var result = ddata._identifiers(options)[0]
+  const result = ddata._identifiers(options)[0]
   return result ? options.fn(result) : 'ERROR, Cannot find module.'
 }
 
@@ -81,7 +81,7 @@ function classes (options) {
  */
 function class_ (options) {
   options.hash.kind = 'class'
-  var result = ddata._identifier(options)
+  const result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find class.'
 }
 
@@ -99,7 +99,7 @@ function functions (options) {
  */
 function function_ (options) {
   options.hash.kind = 'function'
-  var result = ddata._identifier(options)
+  const result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find function.'
 }
 
@@ -108,7 +108,7 @@ function function_ (options) {
  */
 function namespace (options) {
   options.hash.kind = 'namespace'
-  var result = ddata._identifier(options)
+  const result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find namespace.'
 }
 
@@ -117,7 +117,7 @@ function namespace (options) {
  */
 function enum_ (options) {
   options.hash.kind = 'enum'
-  var result = ddata._identifier(options)
+  const result = ddata._identifier(options)
   return result ? options.fn(result) : 'ERROR, Cannot find enum.'
 }
 

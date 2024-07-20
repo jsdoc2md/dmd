@@ -1,10 +1,10 @@
-var ddata = require('./ddata')
-var arrayify = require('array-back')
-var handlebars = require('handlebars')
-var util = require('util')
-var commonSequence = require('common-sequence')
-var unique = require('reduce-unique')
-var without = require('reduce-without')
+const ddata = require('./ddata')
+const arrayify = require('array-back')
+const handlebars = require('handlebars')
+const util = require('util')
+const commonSequence = require('common-sequence')
+const unique = require('reduce-unique')
+const without = require('reduce-without')
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -44,9 +44,9 @@ replaces {@link} tags with markdown links in the suppied input text
 */
 function inlineLinks (text, options) {
   if (text) {
-    var links = ddata.parseLink(text)
+    const links = ddata.parseLink(text)
     links.forEach(function (link) {
-      var linked = ddata._link(link.url, options)
+      const linked = ddata._link(link.url, options)
       if (link.caption === link.url) link.caption = linked.name
       if (linked.url) link.url = linked.url
       text = text.replace(link.original, '[' + link.caption + '](' + link.url + ')')
@@ -59,21 +59,21 @@ function inlineLinks (text, options) {
 returns a gfm table header row.. only columns which contain data are included in the output
 */
 function tableHead () {
-  var args = arrayify(arguments)
-  var data = args.shift()
+  const args = arrayify(arguments)
+  const data = args.shift()
   if (!data) return
   args.pop()
-  var cols = args
-  var colHeaders = cols.map(function (col) {
-    var spl = col.split('|')
+  let cols = args
+  const colHeaders = cols.map(function (col) {
+    const spl = col.split('|')
     return spl[1] || spl[0]
   })
   cols = cols.map(function (col) {
     return col.split('|')[0]
   })
-  var toSplice = []
+  const toSplice = []
   cols = cols.filter(function (col, index) {
-    var hasValue = data.some(function (row) {
+    const hasValue = data.some(function (row) {
       return typeof row[col] !== 'undefined'
     })
     if (!hasValue) toSplice.push(index)
@@ -83,7 +83,7 @@ function tableHead () {
     colHeaders.splice(index, 1)
   })
 
-  var table = '| ' + colHeaders.join(' | ') + ' |\n'
+  let table = '| ' + colHeaders.join(' | ') + ' |\n'
   table += cols.reduce(function (p) { return p + ' --- |' }, '|') + '\n'
   return table
 }
@@ -98,22 +98,22 @@ function containsData (rows, col) {
 returns a gfm table row.. only columns which contain data are included in the output
 */
 function tableRow () {
-  var args = arrayify(arguments)
-  var rows = args.shift()
+  const args = arrayify(arguments)
+  const rows = args.shift()
   if (!rows) return
-  var options = args.pop()
-  var cols = args
-  var output = ''
+  const options = args.pop()
+  const cols = args
+  let output = ''
 
   if (options.data) {
     var data = handlebars.createFrame(options.data)
     cols.forEach(function (col, index) {
-      var colNumber = index + 1
+      const colNumber = index + 1
       data['col' + colNumber] = containsData(rows, col)
     })
   }
   rows.forEach(function (row) {
-    output += options.fn(row, { data: data })
+    output += options.fn(row, { data })
   })
   return output
 }
@@ -123,21 +123,21 @@ function tableRow () {
 {{#each (tableHeadHtml params "name|Param" "type|Type" )}}<td>{{this}}</td>{{/each}}
 */
 function tableHeadHtml () {
-  var args = arrayify(arguments)
-  var data = args.shift()
+  const args = arrayify(arguments)
+  const data = args.shift()
   if (!data) return
   args.pop()
-  var cols = args
-  var colHeaders = cols.map(function (col) {
-    var spl = col.split('|')
+  let cols = args
+  const colHeaders = cols.map(function (col) {
+    const spl = col.split('|')
     return spl[1] || spl[0]
   })
   cols = cols.map(function (col) {
     return col.split('|')[0]
   })
-  var toSplice = []
+  const toSplice = []
   cols = cols.filter(function (col, index) {
-    var hasValue = data.some(function (row) {
+    const hasValue = data.some(function (row) {
       return typeof row[col] !== 'undefined'
     })
     if (!hasValue) toSplice.push(index)
@@ -180,7 +180,7 @@ function _addGroup (identifiers, groupByFields) {
 }
 
 function _groupChildren (groupByFields, options) {
-  var children = ddata._children.call(this, options)
+  const children = ddata._children.call(this, options)
   return _groupBy(children, groupByFields)
 }
 
@@ -192,7 +192,7 @@ function _groupBy (identifiers, groupByFields) {
   groupByFields = groupByFields.slice(0)
 
   groupByFields.forEach(function (group) {
-    var groupValues = identifiers
+    const groupValues = identifiers
       .filter(function (identifier) {
         /* exclude constructors from grouping.. re-implement to work off a `null` group value */
         return identifier.kind !== 'constructor'
@@ -203,17 +203,17 @@ function _groupBy (identifiers, groupByFields) {
   })
   identifiers = _addGroup(identifiers, groupByFields)
 
-  var inserts = []
-  var prevGroup = []
-  var level = 0
+  const inserts = []
+  let prevGroup = []
+  let level = 0
   identifiers.forEach(function (identifier, index) {
     if (!deepEqual(identifier._group, prevGroup)) {
-      var common = commonSequence(identifier._group, prevGroup)
+      const common = commonSequence(identifier._group, prevGroup)
       level = common.length
       identifier._group.forEach(function (group, i) {
         if (group !== common[i] && group !== null) {
           inserts.push({
-            index: index,
+            index,
             _title: group,
             level: level++
           })
@@ -233,7 +233,7 @@ function _groupBy (identifiers, groupByFields) {
 }
 
 function add () {
-  var args = arrayify(arguments)
+  const args = arrayify(arguments)
   args.pop()
   return args.reduce(function (p, c) { return p + (c || 0) }, 0)
 }
@@ -271,7 +271,7 @@ function titleCase (string) {
 */
 function parseType (string) {
   if (!string) return
-  var matches = string.match(/({(.*?)})?([\s\S]*)/)
+  const matches = string.match(/({(.*?)})?([\s\S]*)/)
   if (matches) {
     return { type: matches[2], description: matches[3] }
   }
@@ -282,15 +282,15 @@ block helper.. provides the data to render the @params tag
 */
 function params (options) {
   if (this.params) {
-    var list = this.params.map(function (param) {
-      var nameSplit = param.name.split('.')
-      var name = nameSplit[nameSplit.length - 1]
+    const list = this.params.map(function (param) {
+      const nameSplit = param.name.split('.')
+      let name = nameSplit[nameSplit.length - 1]
       if (nameSplit.length > 1) name = '.' + name
       if (param.variable) name = '...' + name
       if (param.optional) name = '[' + name + ']'
       return {
         indent: '    '.repeat(nameSplit.length - 1),
-        name: name,
+        name,
         type: param.type,
         optional: param.optional,
         defaultvalue: param.defaultvalue,
@@ -304,11 +304,11 @@ function params (options) {
 function examples (options) {
   if (this.examples) {
     return this.examples.reduce(function (prev, example) {
-      var lines = example.split(/\r\n|\r|\n/)
+      const lines = example.split(/\r\n|\r|\n/)
 
       /* Process @lang */
-      var exampleLangOptions = ddata.option('example-lang', options)
-      var matches = lines[0].match(/@lang\s+(\w+)\s*/)
+      const exampleLangOptions = ddata.option('example-lang', options)
+      let matches = lines[0].match(/@lang\s+(\w+)\s*/)
       if (matches) {
         var exampleLangSubtag = matches[1]
         lines[0] = lines[0].replace(matches[0], '')
@@ -316,11 +316,11 @@ function examples (options) {
           lines.splice(0, 1)
         }
       }
-      var exampleLang = exampleLangSubtag || exampleLangOptions
+      const exampleLang = exampleLangSubtag || exampleLangOptions
 
       /* Process <caption> and update example */
       matches = lines[0].match(/\s*<caption>(.*?)<\/caption>\s*/)
-      var caption
+      let caption
       if (matches) {
         caption = matches[1]
         example = lines.slice(1).join('\n')
@@ -332,7 +332,7 @@ function examples (options) {
         example = util.format('```%s%s```', exampleLang ? exampleLang + '\n' : '', example ? example + '\n' : '')
       }
 
-      return prev + options.fn({ caption: caption, example: example })
+      return prev + options.fn({ caption, example })
     }, '')
   }
 }
@@ -346,7 +346,7 @@ function stringRepeat (string, times) {
 }
 
 function regexpTest (value, regex) {
-  var re = new RegExp(regex)
+  const re = new RegExp(regex)
   return re.test(value)
 }
 

@@ -1,11 +1,11 @@
-var arrayify = require('array-back')
-var util = require('util')
-var handlebars = require('handlebars')
-var { marked } = require('marked')
-var objectGet = require('object-get')
-var where = require('test-value').where
-var flatten = require('reduce-flatten')
-var state = require('../lib/state')
+const arrayify = require('array-back')
+const util = require('util')
+const handlebars = require('handlebars')
+const { marked } = require('marked')
+const objectGet = require('object-get')
+const where = require('test-value').where
+const flatten = require('reduce-flatten')
+const state = require('../lib/state')
 
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
@@ -106,20 +106,20 @@ function _globals (options) {
  * @category Block helper: selector
  */
 function children (options) {
-  var context = _children.call(this, options)
-  var fn = options.fn
-  var inverse = options.inverse
-  var i = 0
-  var ret = ''
-  var data
+  const context = _children.call(this, options)
+  const fn = options.fn
+  const inverse = options.inverse
+  let i = 0
+  let ret = ''
+  let data
 
-  var contextPath
+  let contextPath
 
   if (options.data) {
     data = handlebars.createFrame(options.data)
   }
 
-  for (var j = context.length; i < j; i++) {
+  for (let j = context.length; i < j; i++) {
     depthIncrement(options)
     if (data) {
       data.index = i
@@ -130,7 +130,7 @@ function children (options) {
         data.contextPath = contextPath + i
       }
     }
-    ret = ret + fn(context[i], { data: data })
+    ret = ret + fn(context[i], { data })
     depthDecrement(options)
   }
 
@@ -147,20 +147,20 @@ function children (options) {
  * @category Block helper: selector
  */
 function indexChildren (options) {
-  var context = _children.call(this, options)
-  var fn = options.fn
-  var inverse = options.inverse
-  var i = 0
-  var ret = ''
-  var data
+  const context = _children.call(this, options)
+  const fn = options.fn
+  const inverse = options.inverse
+  let i = 0
+  let ret = ''
+  let data
 
-  var contextPath
+  let contextPath
 
   if (options.data) {
     data = handlebars.createFrame(options.data)
   }
 
-  for (var j = context.length; i < j; i++) {
+  for (let j = context.length; i < j; i++) {
     indexDepthIncrement(options)
     if (data) {
       data.index = i
@@ -171,7 +171,7 @@ function indexChildren (options) {
         data.contextPath = contextPath + i
       }
     }
-    ret = ret + fn(context[i], { data: data })
+    ret = ret + fn(context[i], { data })
     indexDepthDecrement(options)
   }
 
@@ -205,8 +205,8 @@ function link (longname, options) {
 function _link (input, options) {
   if (typeof input !== 'string') return null
 
-  var linked, matches, namepath
-  var output = {}
+  let linked, matches, namepath
+  let output = {}
 
   /*
   test input for
@@ -235,7 +235,7 @@ function _link (input, options) {
         output.url = '#' + anchorName.call(linked, options)
       } else {
         if (linked.see && linked.see.length) {
-          var firstLink = parseLink(linked.see[0])[0]
+          const firstLink = parseLink(linked.see[0])[0]
           output.url = firstLink ? firstLink.url : linked.see[0]
         } else {
           output.url = null
@@ -256,7 +256,7 @@ function _link (input, options) {
 function returnSig2 (options) {
   if (!isConstructor.call(this)) {
     if (this.returns) {
-      var typeNames = arrayify(this.returns).map(function (ret) {
+      let typeNames = arrayify(this.returns).map(function (ret) {
         return ret.type && ret.type.names
       })
       typeNames = typeNames.filter(function (name) {
@@ -293,7 +293,7 @@ function returnSig2 (options) {
 @category Block helper: util
 */
 function sig (options) {
-  var data
+  let data
 
   if (options.data) {
     data = handlebars.createFrame(options.data || {})
@@ -312,7 +312,7 @@ function sig (options) {
   data.codeOpen = null
   data.codeClose = null
 
-  var mSig = methodSig.call(this)
+  const mSig = methodSig.call(this)
   if (isConstructor.call(this) || isFunction.call(this)) {
     data.methodSign = '(' + mSig + ')'
   } else if (isEvent.call(this)) {
@@ -327,7 +327,7 @@ function sig (options) {
   if (!isConstructor.call(this)) {
     if (this.returns) {
       data.returnSymbol = '⇒'
-      var typeNames = arrayify(this.returns)
+      const typeNames = arrayify(this.returns)
         .map(function (ret) {
           return ret.type && ret.type.names
         })
@@ -370,7 +370,7 @@ function sig (options) {
     data.codeClose = '`'
   }
 
-  return options.fn(this, { data: data })
+  return options.fn(this, { data })
 }
 
 /**
@@ -386,7 +386,7 @@ returns true if the parent of the current identifier is a class
 @static
 */
 function isClassMember (options) {
-  var parent = arrayify(options.data.root).find(where({ id: this.memberof }))
+  const parent = arrayify(options.data.root).find(where({ id: this.memberof }))
   if (parent) {
     return parent.kind === 'class'
   }
@@ -446,9 +446,9 @@ function _orphans (options) {
  * @static
  */
 function _identifiers (options) {
-  var query = {}
+  const query = {}
 
-  for (var prop in options.hash) {
+  for (const prop in options.hash) {
     if (/^-/.test(prop)) {
       query[prop.replace(/^-/, '!')] = options.hash[prop]
     } else if (/^_/.test(prop)) {
@@ -472,10 +472,10 @@ return the identifiers which are a `memberof` this one. Exclude externals withou
 */
 function _children (options) {
   if (!this.id) return []
-  var min = options.hash.min
+  const min = options.hash.min
   delete options.hash.min
   options.hash.memberof = this.id
-  var output = _identifiers(options)
+  let output = _identifiers(options)
   output = output.filter(function (identifier) {
     if (identifier.kind === 'external') {
       return identifier.description && identifier.description.length > 0
@@ -495,10 +495,10 @@ return a flat list containing all decendants
 @static
 */
 function descendants (options) {
-  var min = typeof options.hash.min !== 'undefined' ? options.hash.min : 2
+  const min = typeof options.hash.min !== 'undefined' ? options.hash.min : 2
   delete options.hash.min
   options.hash.memberof = this.id
-  var output = []
+  const output = []
   function iterate (childrenList) {
     if (childrenList.length) {
       childrenList.forEach(function (child) {
@@ -518,7 +518,7 @@ returns the exported identifier of this module
 @static
 */
 function exported (options) {
-  var exp = arrayify(options.data.root).find(where({ '!kind': 'module', id: this.id }))
+  const exp = arrayify(options.data.root).find(where({ '!kind': 'module', id: this.id }))
   return exp || this
 }
 
@@ -554,7 +554,7 @@ function anchorName (options) {
   if (!this.id) throw new Error('[anchorName helper] cannot create a link without a id: ' + JSON.stringify(this))
   if (this.inherited) {
     options.hash.id = this.inherits
-    var inherits = _identifier(options)
+    const inherits = _identifier(options)
     if (inherits) {
       return anchorName.call(inherits, options)
     } else {
@@ -580,7 +580,7 @@ converts the supplied text to markdown
 */
 function md (string, options) {
   if (string) {
-    var result = marked(string).replace('lang-js', 'language-javascript')
+    const result = marked(string).replace('lang-js', 'language-javascript')
     return result
   }
 }
@@ -615,12 +615,12 @@ function methodSig () {
  */
 function parseLink (text) {
   if (!text) return ''
-  var results = []
-  var matches = null
-  var link1 = /{@link\s+([^\s}|]+?)\s*}/g // {@link someSymbol}
-  var link2 = /\[([^\]]+?)\]{@link\s+([^\s}|]+?)\s*}/g // [caption here]{@link someSymbol}
-  var link3 = /{@link\s+([^\s}|]+?)\s*\|([^}]+?)}/g // {@link someSymbol|caption here}
-  var link4 = /{@link\s+([^\s}|]+?)\s+([^}|]+?)}/g // {@link someSymbol Caption Here}
+  const results = []
+  let matches = null
+  const link1 = /{@link\s+([^\s}|]+?)\s*}/g // {@link someSymbol}
+  const link2 = /\[([^\]]+?)\]{@link\s+([^\s}|]+?)\s*}/g // [caption here]{@link someSymbol}
+  const link3 = /{@link\s+([^\s}|]+?)\s*\|([^}]+?)}/g // {@link someSymbol|caption here}
+  const link4 = /{@link\s+([^\s}|]+?)\s+([^}|]+?)}/g // {@link someSymbol Caption Here}
 
   while ((matches = link4.exec(text)) !== null) {
     results.push({
@@ -681,10 +681,10 @@ function parentName (options) {
   if (this.isExported) return ''
 
   if (this.memberof && this.kind !== 'constructor') {
-    var parent = arrayify(options.data.root).find(where({ id: this.memberof }))
+    const parent = arrayify(options.data.root).find(where({ id: this.memberof }))
     if (parent) {
       if (this.scope === 'instance') {
-        var name = parent.typicalname || parent.name
+        const name = parent.typicalname || parent.name
         return instantiate(name)
       } else if (this.scope === 'static' && !(parent.kind === 'class' || parent.kind === 'constructor')) {
         return parent.typicalname || parent.name

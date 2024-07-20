@@ -50,7 +50,6 @@ function generate (templateData, options) {
   const handlebars = require('handlebars')
   const walkBack = require('walk-back')
   const DmdOptions = require('./lib/dmd-options')
-  const FileSet = require('file-set')
 
   function registerPartials (paths) {
     const files = fastGlob.globSync(paths, { onlyFiles: true })
