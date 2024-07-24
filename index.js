@@ -6,7 +6,7 @@ const path = require('path')
 const Cache = require('cache-point')
 const DmdOptions = require('./lib/dmd-options')
 const dmdVersion = require('./package').version
-const fastGlob = require('fast-glob')
+const FileSet = require('file-set')
 
 /**
  * Transforms doclet data into markdown documentation.
@@ -52,8 +52,8 @@ function generate (templateData, options) {
   const DmdOptions = require('./lib/dmd-options')
 
   function registerPartials (paths) {
-    const files = fastGlob.globSync(paths, { onlyFiles: true })
-    for (const file of files) {
+    const fileSet = new FileSet(paths)
+    for (const file of fileSet.files) {
       handlebars.registerPartial(
         path.basename(file, '.hbs'),
         fs.readFileSync(file, 'utf8') || ''
@@ -62,8 +62,8 @@ function generate (templateData, options) {
   }
 
   function registerHelpers (helpers) {
-    const files = fastGlob.globSync(helpers, { onlyFiles: true })
-    for (const file of files) {
+    const fileSet = new FileSet(helpers)
+    for (const file of fileSet.files) {
       handlebars.registerHelper(require(path.resolve(process.cwd(), file)))
     }
   }
