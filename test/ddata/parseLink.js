@@ -213,112 +213,129 @@ tom.test('multiple {@link(plain/code) someSymbol Caption here}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test("'clever-links' true, 'monospace-links' undefined", function() {
-  // {@link symbol catption} style
-  const text = 'blah {@linkplain thingOne Caption one} blah {@linkcode ftp://url-two.tld Caption two} whatever {@link thingThree Caption three} !@ {@link https://url-four.com Caption four} ok '
+// {@link symbol catption} style
+const allLinksText = 'blah {@linkplain thingOne Caption one} blah {@linkcode ftp://url-two.tld Caption two} whatever {@link thingThree Caption three} !@ {@link https://url-four.com Caption four} ok '
   // {@link symbol|caption} style
   + '{@linkplain thingFive|caption five} nah {@linkcode git://url-six.com|caption six} ??? {@link thingSeven|caption seven} {@link https://url-eight.net|caption eight} @typedef '
   // [caption]{@link symbol} style
   + '[caption nine]{@linkplain symbolNine} ach [caption ten]{@linkcode http://url.ten.com} 2434 [caption eleven]{@link symbolEleven} http://foo.com [caption twelve]{@link http://url.12.com} whawha'
   // {@link symbol} style
   + '{@linkplain symbolThirteen} fee {@linkcode proto://fourteen.asbf} blb {@link symbolFifteen} geez {@link telnet://16.123.123.123}'
-  const result = [
-    { 
-      original: '{@linkplain thingOne Caption one}',
-      caption: 'Caption one',
-      url: 'thingOne',
-      format: 'plain'
-    },
-    {
-      original: '{@linkcode ftp://url-two.tld Caption two}',
-      caption: 'Caption two',
-      url: 'ftp://url-two.tld',
-      format: 'code'
-    },
-    {
-      original: '{@link thingThree Caption three}',
-      caption: 'Caption three',
-      url: 'thingThree',
-      format: 'code',
-    },
-    {
-      original: '{@link https://url-four.com Caption four}',
-      caption: 'Caption four',
-      url: 'https://url-four.com',
-      format: 'plain'
-    },
-    {
-      original: '{@linkplain thingFive|caption five}',
-      caption: 'caption five',
-      url: 'thingFive',
-      format: 'plain'
-    },
-    {
-      original: '{@linkcode git://url-six.com|caption six}',
-      caption: 'caption six',
-      url: 'git://url-six.com',
-      format: 'code'
-    },
-    {
-      original: '{@link thingSeven|caption seven}',
-      caption: 'caption seven',
-      url: 'thingSeven',
-      format: 'code',
-    },
-    {
-      original: '{@link https://url-eight.net|caption eight}',
-      caption: 'caption eight',
-      url: 'https://url-eight.net',
-      format: 'plain'
-    },
-    {
-      original: '[caption nine]{@linkplain symbolNine}',
-      caption: 'caption nine',
-      url: 'symbolNine',
-      format: 'plain'
-    },
-    {
-      original: '[caption ten]{@linkcode http://url.ten.com}',
-      caption: 'caption ten',
-      url: 'http://url.ten.com',
-      format: 'code'
-    },
-    {
-      original: '[caption eleven]{@link symbolEleven}',
-      caption: 'caption eleven',
-      url: 'symbolEleven',
-      format: 'code'
-    },
-    {
-      original: '[caption twelve]{@link http://url.12.com}',
-      caption: 'caption twelve',
-      url: 'http://url.12.com',
-      format: 'plain'
-    },
-    {
-      original: '{@linkplain symbolThirteen}',
-      caption: 'symbolThirteen',
-      url: 'symbolThirteen',
-      format: 'plain',
-    },
-    {
-      original: '{@linkcode proto://fourteen.asbf}',
-      caption: 'proto://fourteen.asbf',
-      url: 'proto://fourteen.asbf',
-      format: 'code'
-    },
-    {
-      original: '{@link symbolFifteen}',
-      caption: 'symbolFifteen',
-      url: 'symbolFifteen',
-      format: 'code'
-    },
-    {
-      original: '{@link telnet://16.123.123.123}',
-      caption: 'telnet://16.123.123.123',
-      url: 'telnet://16.123.123.123',
-      format: 'plain'
+
+const cleverLinksResults = [
+  { 
+    original: '{@linkplain thingOne Caption one}',
+    caption: 'Caption one',
+    url: 'thingOne',
+    format: 'plain'
+  },
+  {
+    original: '{@linkcode ftp://url-two.tld Caption two}',
+    caption: 'Caption two',
+    url: 'ftp://url-two.tld',
+    format: 'code'
+  },
+  {
+    original: '{@link thingThree Caption three}',
+    caption: 'Caption three',
+    url: 'thingThree',
+    format: 'code',
+  },
+  {
+    original: '{@link https://url-four.com Caption four}',
+    caption: 'Caption four',
+    url: 'https://url-four.com',
+    format: 'plain'
+  },
+  {
+    original: '{@linkplain thingFive|caption five}',
+    caption: 'caption five',
+    url: 'thingFive',
+    format: 'plain'
+  },
+  {
+    original: '{@linkcode git://url-six.com|caption six}',
+    caption: 'caption six',
+    url: 'git://url-six.com',
+    format: 'code'
+  },
+  {
+    original: '{@link thingSeven|caption seven}',
+    caption: 'caption seven',
+    url: 'thingSeven',
+    format: 'code',
+  },
+  {
+    original: '{@link https://url-eight.net|caption eight}',
+    caption: 'caption eight',
+    url: 'https://url-eight.net',
+    format: 'plain'
+  },
+  {
+    original: '[caption nine]{@linkplain symbolNine}',
+    caption: 'caption nine',
+    url: 'symbolNine',
+    format: 'plain'
+  },
+  {
+    original: '[caption ten]{@linkcode http://url.ten.com}',
+    caption: 'caption ten',
+    url: 'http://url.ten.com',
+    format: 'code'
+  },
+  {
+    original: '[caption eleven]{@link symbolEleven}',
+    caption: 'caption eleven',
+    url: 'symbolEleven',
+    format: 'code'
+  },
+  {
+    original: '[caption twelve]{@link http://url.12.com}',
+    caption: 'caption twelve',
+    url: 'http://url.12.com',
+    format: 'plain'
+  },
+  {
+    original: '{@linkplain symbolThirteen}',
+    caption: 'symbolThirteen',
+    url: 'symbolThirteen',
+    format: 'plain',
+  },
+  {
+    original: '{@linkcode proto://fourteen.asbf}',
+    caption: 'proto://fourteen.asbf',
+    url: 'proto://fourteen.asbf',
+    format: 'code'
+  },
+  {
+    original: '{@link symbolFifteen}',
+    caption: 'symbolFifteen',
+    url: 'symbolFifteen',
+    format: 'code'
+  },
+  {
+    original: '{@link telnet://16.123.123.123}',
+    caption: 'telnet://16.123.123.123',
+    url: 'telnet://16.123.123.123',
+    format: 'plain'
+  }
+]
+
+tom.test("'clever-links' true, 'monospace-links' undefined", function() {
+  a.deepEqual(ddata.parseLink(allLinksText, { 'clever-links': true }), cleverLinksResults)
+})
+
+tom.test("'clever-links' true overrides 'monospace-links' true", function() {
+  a.deepEqual(ddata.parseLink(allLinksText, { 'clever-links': true, 'monospace-links': true }), cleverLinksResults)
+})
+
+tom.test("'monospace-links' set all {@link}s to 'code' format", function() {
+  const monospaceLinkResults = cleverLinksResults.map((result) => {
+    const newResult = Object.assign({}, result)
+    if (!/@link(?:code|plain)/.test(result.original)) {
+      newResult.format = 'code'
     }
-  ]
-  a.deepEqual(ddata.parseLink(text, { 'clever-links': true }), result)
+    return newResult
+  })
+  a.deepEqual(ddata.parseLink(allLinksText, { 'monospace-links': true }), monospaceLinkResults)
 })
