@@ -31,7 +31,6 @@ function dmd (templateData, options) {
 
 dmd.async = function (templateData, options) {
   options = new DmdOptions(options)
-  console.error('options (a):', options) // DEBUG
   if (skipCache(options)) {
     return Promise.resolve(generate(templateData, options))
   } else {
@@ -45,7 +44,6 @@ dmd.async = function (templateData, options) {
 dmd.cache = new Cache({ dir: path.join(require('os').tmpdir(), 'dmd') })
 
 function generate (templateData, options) {
-  console.error('generate') // DEBUG
   const fs = require('fs')
   const path = require('path')
   const arrayify = require('array-back')
@@ -82,7 +80,6 @@ function generate (templateData, options) {
 
   templateData = arrayify(templateData)
   options = Object.assign(new DmdOptions(), options)
-  console.error('options (c):', options) // DEBUG
   options.plugin = arrayify(options.plugin)
   options._depth = 0
   options._indexDepth = 0
