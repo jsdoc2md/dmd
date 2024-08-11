@@ -6,7 +6,19 @@ const tom = module.exports = new Tom('parseLink')
 
 tom.test('{@link someSymbol}', function () {
   const text = 'blah {@link someSymbol}'
-  const result = [{ original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' }]
+  const result = [{ original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol', format: 'plain' }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('{@linkcode someSymbol}', function () {
+  const text = 'blah {@linkcode someSymbol}'
+  const result = [{ original: '{@linkcode someSymbol}', caption: 'someSymbol', url: 'someSymbol', format: 'code' }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('{@linkplain someSymbol}', function () {
+  const text = 'blah {@linkplain someSymbol}'
+  const result = [{ original: '{@linkplain someSymbol}', caption: 'someSymbol', url: 'someSymbol', format: 'plain' }]
   a.deepEqual(ddata.parseLink(text), result)
 })
 
@@ -15,7 +27,30 @@ tom.test('{@link http://some.url.com}', function () {
   const result = [{
     original: '{@link http://some.url.com}',
     caption: 'http://some.url.com',
-    url: 'http://some.url.com'
+    url: 'http://some.url.com',
+    format: 'plain'
+  }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('{@linkcode http://some.url.com}', function () {
+  const text = 'blah {@linkcode http://some.url.com} blah'
+  const result = [{
+    original: '{@linkcode http://some.url.com}',
+    caption: 'http://some.url.com',
+    url: 'http://some.url.com',
+    format: 'code'
+  }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('{@linkplain http://some.url.com}', function () {
+  const text = 'blah {@linkplain http://some.url.com} blah'
+  const result = [{
+    original: '{@linkplain http://some.url.com}',
+    caption: 'http://some.url.com',
+    url: 'http://some.url.com',
+    format: 'plain'
   }]
   a.deepEqual(ddata.parseLink(text), result)
 })
@@ -26,12 +61,14 @@ tom.test('multiple {@link http://some.url.com}', function () {
     {
       original: '{@link http://one.url.com}',
       caption: 'http://one.url.com',
-      url: 'http://one.url.com'
+      url: 'http://one.url.com',
+      format: 'plain'
     },
     {
       original: '{@link http://two.url.com}',
       caption: 'http://two.url.com',
-      url: 'http://two.url.com'
+      url: 'http://two.url.com',
+      format: 'plain'
     }
   ]
   a.deepEqual(ddata.parseLink(text), expected)
@@ -42,7 +79,30 @@ tom.test('[caption here]{@link someSymbol}', function () {
   const result = [{
     original: '[caption here]{@link someSymbol}',
     caption: 'caption here',
-    url: 'someSymbol'
+    url: 'someSymbol',
+    format: 'plain'
+  }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('[caption here]{@linkcode someSymbol}', function () {
+  const text = 'blah [caption here]{@linkcode someSymbol} blah'
+  const result = [{
+    original: '[caption here]{@linkcode someSymbol}',
+    caption: 'caption here',
+    url: 'someSymbol',
+    format: 'code'
+  }]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('[caption here]{@linkplain someSymbol}', function () {
+  const text = 'blah [caption here]{@linkplain someSymbol} blah'
+  const result = [{
+    original: '[caption here]{@linkplain someSymbol}',
+    caption: 'caption here',
+    url: 'someSymbol',
+    format: 'plain'
   }]
   a.deepEqual(ddata.parseLink(text), result)
 })
@@ -53,12 +113,14 @@ tom.test('multiple [caption here]{@link someSymbol}', function () {
     {
       original: '[caption one]{@link thingOne}',
       caption: 'caption one',
-      url: 'thingOne'
+      url: 'thingOne',
+      format: 'plain'
     },
     {
       original: '[caption two]{@link thingTwo}',
       caption: 'caption two',
-      url: 'thingTwo'
+      url: 'thingTwo',
+      format: 'plain'
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
@@ -69,7 +131,8 @@ tom.test('[caption here]{@link http://some.url.com}', function () {
   const result = [{
     original: '[caption here]{@link http://some.url.com}',
     caption: 'caption here',
-    url: 'http://some.url.com'
+    url: 'http://some.url.com',
+    format: 'plain'
   }]
   a.deepEqual(ddata.parseLink(text), result)
 })
@@ -80,12 +143,33 @@ tom.test('multiple {@link someSymbol|caption here}', function () {
     {
       original: '{@link thingOne|caption one}',
       caption: 'caption one',
-      url: 'thingOne'
+      url: 'thingOne',
+      format: 'plain'
     },
     {
       original: '{@link thingTwo|caption two}',
       caption: 'caption two',
-      url: 'thingTwo'
+      url: 'thingTwo',
+      format: 'plain'
+    }
+  ]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('mixed {@link(plain/code) someSymbol|caption here}', function () {
+  const text = 'blah {@linkplain thingOne|caption one} blah {@linkcode thingTwo|caption two} whatever'
+  const result = [
+    {
+      original: '{@linkplain thingOne|caption one}',
+      caption: 'caption one',
+      url: 'thingOne',
+      format: 'plain'
+    },
+    {
+      original: '{@linkcode thingTwo|caption two}',
+      caption: 'caption two',
+      url: 'thingTwo',
+      format: 'code'
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
@@ -97,13 +181,144 @@ tom.test('multiple {@link someSymbol Caption here}', function () {
     {
       original: '{@link thingOne Caption one}',
       caption: 'Caption one',
-      url: 'thingOne'
+      url: 'thingOne',
+      format: 'plain'
     },
     {
       original: '{@link thingTwo Caption two}',
       caption: 'Caption two',
-      url: 'thingTwo'
+      url: 'thingTwo',
+      format: 'plain'
     }
   ]
   a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test('multiple {@link(plain/code) someSymbol Caption here}', function () {
+  const text = 'blah {@linkplain thingOne Caption one} blah {@linkcode thingTwo Caption two} whatever'
+  const result = [
+    {
+      original: '{@linkplain thingOne Caption one}',
+      caption: 'Caption one',
+      url: 'thingOne',
+      format: 'plain'
+    },
+    {
+      original: '{@linkcode thingTwo Caption two}',
+      caption: 'Caption two',
+      url: 'thingTwo',
+      format: 'code'
+    }
+  ]
+  a.deepEqual(ddata.parseLink(text), result)
+})
+
+tom.test("'clever-links' true, 'monospace-links' undefined", function() {
+  // {@link symbol catption} style
+  const text = 'blah {@linkplain thingOne Caption one} blah {@linkcode ftp://url-two.tld Caption two} whatever {@link thingThree Caption three} !@ {@link https://url-four.com Caption four} ok '
+  // {@link symbol|caption} style
+  + '{@linkplain thingFive|caption five} nah {@linkcode git://url-six.com|caption six} ??? {@link thingSeven|caption seven} {@link https://url-eight.net|caption eight} @typedef '
+  // [caption]{@link symbol} style
+  + '[caption nine]{@linkplain symbolNine} ach [caption ten]{@linkcode http://url.ten.com} 2434 [caption eleven]{@link symbolEleven} http://foo.com [caption twelve]{@link http://url.12.com} whawha'
+  // {@link symbol} style
+  + '{@linkplain symbolThirteen} fee {@linkcode proto://fourteen.asbf} blb {@link symbolFifteen} geez {@link telnet://16.123.123.123}'
+  const result = [
+    { 
+      original: '{@linkplain thingOne Caption one}',
+      caption: 'Caption one',
+      url: 'thingOne',
+      format: 'plain'
+    },
+    {
+      original: '{@linkcode ftp://url-two.tld Caption two}',
+      caption: 'Caption two',
+      url: 'ftp://url-two.tld',
+      format: 'code'
+    },
+    {
+      original: '{@link thingThree Caption three}',
+      caption: 'Caption three',
+      url: 'thingThree',
+      format: 'code',
+    },
+    {
+      original: '{@link https://url-four.com Caption four}',
+      caption: 'Caption four',
+      url: 'https://url-four.com',
+      format: 'plain'
+    },
+    {
+      original: '{@linkplain thingFive|caption five}',
+      caption: 'caption five',
+      url: 'thingFive',
+      format: 'plain'
+    },
+    {
+      original: '{@linkcode git://url-six.com|caption six}',
+      caption: 'caption six',
+      url: 'git://url-six.com',
+      format: 'code'
+    },
+    {
+      original: '{@link thingSeven|caption seven}',
+      caption: 'caption seven',
+      url: 'thingSeven',
+      format: 'code',
+    },
+    {
+      original: '{@link https://url-eight.net|caption eight}',
+      caption: 'caption eight',
+      url: 'https://url-eight.net',
+      format: 'plain'
+    },
+    {
+      original: '[caption nine]{@linkplain symbolNine}',
+      caption: 'caption nine',
+      url: 'symbolNine',
+      format: 'plain'
+    },
+    {
+      original: '[caption ten]{@linkcode http://url.ten.com}',
+      caption: 'caption ten',
+      url: 'http://url.ten.com',
+      format: 'code'
+    },
+    {
+      original: '[caption eleven]{@link symbolEleven}',
+      caption: 'caption eleven',
+      url: 'symbolEleven',
+      format: 'code'
+    },
+    {
+      original: '[caption twelve]{@link http://url.12.com}',
+      caption: 'caption twelve',
+      url: 'http://url.12.com',
+      format: 'plain'
+    },
+    {
+      original: '{@linkplain symbolThirteen}',
+      caption: 'symbolThirteen',
+      url: 'symbolThirteen',
+      format: 'plain',
+    },
+    {
+      original: '{@linkcode proto://fourteen.asbf}',
+      caption: 'proto://fourteen.asbf',
+      url: 'proto://fourteen.asbf',
+      format: 'code'
+    },
+    {
+      original: '{@link symbolFifteen}',
+      caption: 'symbolFifteen',
+      url: 'symbolFifteen',
+      format: 'code'
+    },
+    {
+      original: '{@link telnet://16.123.123.123}',
+      caption: 'telnet://16.123.123.123',
+      url: 'telnet://16.123.123.123',
+      format: 'plain'
+    }
+  ]
+  a.deepEqual(ddata.parseLink(text, { 'clever-links': true }), result)
 })

@@ -44,12 +44,14 @@ replaces {@link} tags with markdown links in the suppied input text
 */
 function inlineLinks (text, options) {
   if (text) {
-    const links = ddata.parseLink(text)
+    const dmdOptions = options.data.root.options
+    const links = ddata.parseLink(text, dmdOptions)
     links.forEach(function (link) {
+      const captionFmt = link.format === 'code' ? '`' : ''
       const linked = ddata._link(link.url, options)
       if (link.caption === link.url) link.caption = linked.name
       if (linked.url) link.url = linked.url
-      text = text.replace(link.original, '[' + link.caption + '](' + link.url + ')')
+      text = text.replace(link.original, '[' + captionFmt + link.caption + captionFmt + '](' + link.url + ')')
     })
   }
   return text

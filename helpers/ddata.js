@@ -6,6 +6,7 @@ const objectGet = require('object-get')
 const where = require('test-value').where
 const flatten = require('reduce-flatten')
 const state = require('../lib/state')
+const urlRe = require('regex-repo').urlRe
 
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
@@ -613,20 +614,22 @@ function methodSig () {
  * @returns {Array.<{original: string, caption: string, url: string}>}
  * @static
  */
-function parseLink (text) {
+function parseLink (text, dmdOptions) {
+  dmdOptions = dmdOptions || {}
   if (!text) return ''
   const results = []
   let matches = null
-  const link1 = /{@link\s+([^\s}|]+?)\s*}/g // {@link someSymbol}
-  const link2 = /\[([^\]]+?)\]{@link\s+([^\s}|]+?)\s*}/g // [caption here]{@link someSymbol}
-  const link3 = /{@link\s+([^\s}|]+?)\s*\|([^}]+?)}/g // {@link someSymbol|caption here}
-  const link4 = /{@link\s+([^\s}|]+?)\s+([^}|]+?)}/g // {@link someSymbol Caption Here}
+  const link1 = /{@link(code|plain)?\s+([^\s}|]+?)\s*}/g // {@link someSymbol}
+  const link2 = /\[([^\]]+?)\]{@link(code|plain)?\s+([^\s}|]+?)\s*}/g // [caption here]{@link someSymbol}
+  const link3 = /{@link(code|plain)?\s+([^\s}|]+?)\s*\|([^}]+?)}/g // {@link someSymbol|caption here}
+  const link4 = /{@link(code|plain)?\s+([^\s}|]+?)\s+([^}|]+?)}/g // {@link someSymbol Caption Here}
 
   while ((matches = link4.exec(text)) !== null) {
     results.push({
       original: matches[0],
-      caption: matches[2],
-      url: matches[1]
+      caption: matches[3],
+      url: matches[2],
+      format: matches[1]
     })
     text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
@@ -634,8 +637,9 @@ function parseLink (text) {
   while ((matches = link3.exec(text)) !== null) {
     results.push({
       original: matches[0],
-      caption: matches[2],
-      url: matches[1]
+      caption: matches[3],
+      url: matches[2],
+      format: matches[1] 
     })
     text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
@@ -644,7 +648,8 @@ function parseLink (text) {
     results.push({
       original: matches[0],
       caption: matches[1],
-      url: matches[2]
+      url: matches[3],
+      format: matches[2]
     })
     text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
@@ -652,11 +657,26 @@ function parseLink (text) {
   while ((matches = link1.exec(text)) !== null) {
     results.push({
       original: matches[0],
-      caption: matches[1],
-      url: matches[1]
+      caption: matches[2],
+      url: matches[2],
+      format: matches[1]
     })
     text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
+
+  results.forEach((result) => {
+    const format = result.format
+    if (format === undefined) {
+      result.format = format // if tag is @linkplain or @linkcode, then that determines the format
+        // else, if 'clever-links' is true, then if the link is a URL, it's plain, otherwise code format
+        || (dmdOptions['clever-links'] && (urlRe.test(result.url) ? 'plain' : 'code'))
+        // else, if 'monospace-links' is true, then all links are code format
+        || (dmdOptions['monospace-links'] && 'code')
+        // else, it's a plain
+        || 'plain'
+    }
+  })
+
   return results
 }
 
