@@ -40,7 +40,7 @@ function escape (input) {
 }
 
 /**
-replaces {@link} tags with markdown links in the suppied input text
+replaces {@link}, {@linkplain}, and {@linkcode} tags with markdown links in the supplied input text
 */
 function inlineLinks (text, options) {
   if (text) {

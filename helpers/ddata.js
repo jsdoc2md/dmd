@@ -611,7 +611,8 @@ function methodSig () {
 /**
  * extracts url and caption data from @link tags
  * @param {string} - a string containing one or more {@link} tags
- * @returns {Array.<{original: string, caption: string, url: string}>}
+ * @param {object} - `dmdOptions`; link formatting is influenced by the `clever-links` and `monospace-links` values
+ * @returns {Array.<{original: string, caption: string, url: string, format: 'code'|'plain'}>}
  * @static
  */
 function parseLink (text, dmdOptions) {
