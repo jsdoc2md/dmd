@@ -176,7 +176,6 @@ function groupBy (groupByFields, options) {
 function groupGlobalsBy(groupByFields, options) {
   groupByFields = arrayify(groupByFields)
   return handlebars.helpers.each(_groupBy(ddata._globals(options), groupByFields), options)
-  // return handlebars.helpers.each(_groupBy(ddata._globals.call(this, options), groupByFields), options)
 }
 
 function _addGroup (identifiers, groupByFields) {
