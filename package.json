@@ -22,7 +22,7 @@
     "partials"
   ],
   "scripts": {
-    "test": "test-runner test/*.js test/ddata/*.js"
+    "test": "test-runner test/*.js test/ddata/*.js test/helpers/*.js"
   },
   "dependencies": {
     "array-back": "^6.2.2",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0",
+    "mock-require": "^3.0.3",
     "test-runner": "^0.10.1"
   },
   "standard": {
