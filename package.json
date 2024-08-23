@@ -19,7 +19,7 @@
   "dependencies": {
     "array-back": "^1.0.3",
     "gfmt": "~0.3.2",
-    "jsdoc-parse-template": "jsdoc2md/jsdoc-parse-template",
+    "jsdoc-parse-template": "^0.1",
     "template-clean": "~0.1.0",
     "typical": "^2.4.2"
   },
