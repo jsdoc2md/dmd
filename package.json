@@ -8,12 +8,13 @@
     "type": "git",
     "url": "git+https://github.com/jsdoc2md/dmd.git"
   },
+  "exports": "./index.js",
   "keywords": [
     "documentation",
     "markdown"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=20"
   },
   "files": [
     "index.js",
@@ -22,25 +23,24 @@
     "partials"
   ],
   "scripts": {
-    "test": "test-runner test/*.js test/ddata/*.js"
+    "test": "75lb-nature test-runner test/*.js test/ddata/*.js"
   },
   "dependencies": {
     "array-back": "^6.2.2",
-    "cache-point": "^2.0.0",
+    "cache-point": "^3.0.0",
     "common-sequence": "^2.0.2",
-    "file-set": "^4.0.2",
+    "file-set": "^6.0.0",
     "handlebars": "^4.7.8",
-    "marked": "^4.3.0",
+    "marked": "^14.0.0",
     "object-get": "^2.1.1",
     "reduce-flatten": "^3.0.1",
     "reduce-unique": "^2.0.1",
     "reduce-without": "^1.0.1",
     "test-value": "^3.0.0",
-    "walk-back": "^5.1.0"
+    "walk-back": "^5.1.1"
   },
   "devDependencies": {
-    "dmd-plugin-example": "^0.1.0",
-    "test-runner": "^0.10.1"
+    "dmd-plugin-example": "^0.1.0"
   },
   "standard": {
     "ignore": [

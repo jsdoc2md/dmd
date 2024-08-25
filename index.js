@@ -12,27 +12,13 @@ const FileSet = require('file-set')
  * Transforms doclet data into markdown documentation.
  * @param {object[]}
  * @param [options] {module:dmd-options} - The render options
- * @return {string}
+ * @return {Promise<string>}
  * @alias module:dmd
  */
-function dmd (templateData, options) {
+async function dmd (templateData, options) {
   options = new DmdOptions(options)
   if (skipCache(options)) {
     return generate(templateData, options)
-  } else {
-    const cached = dmd.cache.readSync([templateData, options, dmdVersion])
-    if (cached) {
-      return cached
-    } else {
-      return generate(templateData, options)
-    }
-  }
-}
-
-dmd.async = function (templateData, options) {
-  options = new DmdOptions(options)
-  if (skipCache(options)) {
-    return Promise.resolve(generate(templateData, options))
   } else {
     return dmd.cache.read([templateData, options, dmdVersion])
       .catch(function () {
@@ -43,7 +29,7 @@ dmd.async = function (templateData, options) {
 
 dmd.cache = new Cache({ dir: path.join(require('os').tmpdir(), 'dmd') })
 
-function generate (templateData, options) {
+async function generate (templateData, options) {
   const fs = require('fs')
   const path = require('path')
   const arrayify = require('array-back')
@@ -51,8 +37,9 @@ function generate (templateData, options) {
   const walkBack = require('walk-back')
   const DmdOptions = require('./lib/dmd-options')
 
-  function registerPartials (paths) {
-    const fileSet = new FileSet(paths)
+  async function registerPartials (paths) {
+    const fileSet = new FileSet()
+    await fileSet.add(paths)
     for (const file of fileSet.files) {
       handlebars.registerPartial(
         path.basename(file, '.hbs'),
@@ -61,8 +48,9 @@ function generate (templateData, options) {
     }
   }
 
-  function registerHelpers (helpers) {
-    const fileSet = new FileSet(helpers)
+  async function registerHelpers (helpers) {
+    const fileSet = new FileSet()
+    await fileSet.add(helpers)
     for (const file of fileSet.files) {
       handlebars.registerHelper(require(path.resolve(process.cwd(), file)))
     }
@@ -90,7 +78,7 @@ function generate (templateData, options) {
   state.options = options
 
   /* register all dmd partials. */
-  registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
+  await registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {
@@ -118,8 +106,8 @@ function generate (templateData, options) {
   }
 
   /* if additional partials/helpers paths were specified, register them too */
-  if (options.partial.length) registerPartials(options.partial)
-  if (options.helper.length) registerHelpers(options.helper)
+  if (options.partial.length) await registerPartials(options.partial)
+  if (options.helper.length) await registerHelpers(options.helper)
 
   const compiled = handlebars.compile(options.template, {
     preventIndent: true,

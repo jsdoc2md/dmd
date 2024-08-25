@@ -1,9 +1,8 @@
-const Tom = require('test-runner').Tom
-const dmd = require('../')
+const dmd = require('dmd')
 const path = require('path')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom('plugin')
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
 const fixture = [{
   id: 'someclass',
@@ -13,18 +12,22 @@ const fixture = [{
   description: 'is a class'
 }]
 
-tom.test('plugin: simple', function () {
-  const result = dmd(fixture, { plugin: 'dmd-plugin-example' })
+test.set('plugin: simple', async function () {
+  const result = await dmd(fixture, { plugin: 'dmd-plugin-example' })
   a.ok(/documentation generated on/.test(result))
 })
 
-tom.test('plugin: absolute path', function () {
-  const result = dmd(fixture, { plugin: path.resolve(__dirname, 'fixture', 'dmd-plugin-example', 'lib', 'dmd-plugin-example.js') })
+test.set('plugin: absolute path', async function () {
+  const result = await dmd(fixture, {
+    plugin: path.resolve(__dirname, 'fixture', 'dmd-plugin-example', 'lib', 'dmd-plugin-example.js')
+  })
   a.ok(/documentation generated on/.test(result))
 })
 
-tom.test('plugin: none-existent path', function () {
-  a.throws(function () {
-    dmd(fixture, { plugin: 'forejfirweuhnvkljne' })
+test.set('plugin: none-existent path', async function () {
+  a.rejects(async function () {
+    return dmd(fixture, { plugin: 'forejfirweuhnvkljne' })
   })
 })
+
+module.exports = { test, only, skip }

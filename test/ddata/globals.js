@@ -1,14 +1,13 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom('globals')
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-tom.test('_globals', function () {
+test.set('_globals', function () {
   const options = makeOptions([
     { id: '1', scope: 'global' },
     { id: '2', scope: 'global', kind: 'function' },
@@ -27,3 +26,5 @@ tom.test('_globals', function () {
     { id: '7', scope: 'global', kind: 'function' }
   ])
 })
+
+module.exports = { test, only, skip }

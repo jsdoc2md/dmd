@@ -1,8 +1,5 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
-
-const tom = module.exports = new Tom('return-sig')
 
 function makeOptions (done) {
   return {
@@ -12,7 +9,9 @@ function makeOptions (done) {
   }
 }
 
-tom.test('multiple returns specified', function () {
+const [test, only, skip] = [new Map(), new Map(), new Map()]
+
+test.set('multiple returns specified', function () {
   const identifier = {
     returns: [
       { type: { names: ['string'] }, description: 'desc 1' },
@@ -26,7 +25,7 @@ tom.test('multiple returns specified', function () {
   ddata.returnSig2.call(identifier, options)
 })
 
-tom.test('no returns, one type', function () {
+test.set('no returns, one type', function () {
   const identifier = { type: { names: ['string'] } }
 
   const options = makeOptions(function (context) {
@@ -35,7 +34,7 @@ tom.test('no returns, one type', function () {
   ddata.returnSig2.call(identifier, options)
 })
 
-tom.test('return with no type', function () {
+test.set('return with no type', function () {
   const identifier = {
     returns: [{ description: 'A string representation of the argument.' }]
   }
@@ -44,3 +43,5 @@ tom.test('return with no type', function () {
   })
   ddata.returnSig2.call(identifier, options)
 })
+
+module.exports = { test, only, skip }

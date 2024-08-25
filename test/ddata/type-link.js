@@ -1,8 +1,5 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
-
-const tom = module.exports = new Tom('type-link')
 
 /* construct a mock handlebars helper options object */
 function makeOptions (data) {
@@ -15,7 +12,9 @@ function makeOptions (data) {
   }
 }
 
-tom.test('Array.<module:Something>', function () {
+const [test, only, skip] = [new Map(), new Map(), new Map()]
+
+test.set('Array.<module:Something>', function () {
   const input = [
     {
       id: 'module:cjs/human--Human',
@@ -29,7 +28,7 @@ tom.test('Array.<module:Something>', function () {
   a.deepEqual(ddata._link('Array.<module:cjs/human>', makeOptions(input)), expected)
 })
 
-tom.test('external:something', function () {
+test.set('external:something', function () {
   const input = [
     {
       id: 'external:String',
@@ -46,7 +45,7 @@ tom.test('external:something', function () {
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
 })
 
-tom.test('external:something with no description', function () {
+test.set('external:something with no description', function () {
   const input = [
     {
       id: 'external:String',
@@ -61,3 +60,5 @@ tom.test('external:something with no description', function () {
   const expected = { name: 'String', url: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String' }
   a.deepEqual(ddata._link('external:String', makeOptions(input)), expected)
 })
+
+module.exports = { test, only, skip }

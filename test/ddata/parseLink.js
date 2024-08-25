@@ -1,16 +1,15 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom('parseLink')
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
-tom.test('{@link someSymbol}', function () {
+test.set('{@link someSymbol}', function () {
   const text = 'blah {@link someSymbol}'
   const result = [{ original: '{@link someSymbol}', caption: 'someSymbol', url: 'someSymbol' }]
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('{@link http://some.url.com}', function () {
+test.set('{@link http://some.url.com}', function () {
   const text = 'blah {@link http://some.url.com} blah'
   const result = [{
     original: '{@link http://some.url.com}',
@@ -20,7 +19,7 @@ tom.test('{@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('multiple {@link http://some.url.com}', function () {
+test.set('multiple {@link http://some.url.com}', function () {
   const text = 'blah {@link http://one.url.com} blah {@link http://two.url.com} whatever'
   const expected = [
     {
@@ -37,7 +36,7 @@ tom.test('multiple {@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), expected)
 })
 
-tom.test('[caption here]{@link someSymbol}', function () {
+test.set('[caption here]{@link someSymbol}', function () {
   const text = 'blah [caption here]{@link someSymbol} blah'
   const result = [{
     original: '[caption here]{@link someSymbol}',
@@ -47,7 +46,7 @@ tom.test('[caption here]{@link someSymbol}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('multiple [caption here]{@link someSymbol}', function () {
+test.set('multiple [caption here]{@link someSymbol}', function () {
   const text = 'blah [caption one]{@link thingOne} blah [caption two]{@link thingTwo} whatever'
   const result = [
     {
@@ -64,7 +63,7 @@ tom.test('multiple [caption here]{@link someSymbol}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('[caption here]{@link http://some.url.com}', function () {
+test.set('[caption here]{@link http://some.url.com}', function () {
   const text = 'blah [caption here]{@link http://some.url.com} blah'
   const result = [{
     original: '[caption here]{@link http://some.url.com}',
@@ -74,7 +73,7 @@ tom.test('[caption here]{@link http://some.url.com}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('multiple {@link someSymbol|caption here}', function () {
+test.set('multiple {@link someSymbol|caption here}', function () {
   const text = 'blah {@link thingOne|caption one} blah {@link thingTwo|caption two} whatever'
   const result = [
     {
@@ -91,7 +90,7 @@ tom.test('multiple {@link someSymbol|caption here}', function () {
   a.deepEqual(ddata.parseLink(text), result)
 })
 
-tom.test('multiple {@link someSymbol Caption here}', function () {
+test.set('multiple {@link someSymbol Caption here}', function () {
   const text = 'blah {@link thingOne Caption one} blah {@link thingTwo Caption two} whatever'
   const result = [
     {
@@ -107,3 +106,5 @@ tom.test('multiple {@link someSymbol Caption here}', function () {
   ]
   a.deepEqual(ddata.parseLink(text), result)
 })
+
+module.exports = { test, only, skip }

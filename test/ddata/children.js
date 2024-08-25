@@ -1,14 +1,13 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom('children')
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-tom.test('_children', function () {
+test.set('_children', function () {
   const parent = { id: 'something' }
   const options = makeOptions([
     { id: '1', memberof: 'something' },
@@ -26,3 +25,6 @@ tom.test('_children', function () {
     { id: '6', memberof: 'something', kind: 'external', description: 'clive' }
   ])
 })
+
+module.exports = { test, only, skip }
+

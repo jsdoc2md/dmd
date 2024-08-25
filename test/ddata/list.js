@@ -1,14 +1,13 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
-
-const tom = module.exports = new Tom('list')
 
 function makeOptions (data) {
   return { data: { root: data }, hash: {} }
 }
 
-tom.test('descendants', function () {
+const [test, only, skip] = [new Map(), new Map(), new Map()]
+
+test.set('descendants', function () {
   let options = makeOptions([
     { id: 'one' }, { id: 'two', memberof: 'one' }, { id: 'three', memberof: 'two' }, { id: 'four' }
   ])
@@ -34,3 +33,5 @@ tom.test('descendants', function () {
 
   a.deepEqual(ddata.descendants.call({ id: 'four' }, options), [])
 })
+
+module.exports = { test, only, skip }

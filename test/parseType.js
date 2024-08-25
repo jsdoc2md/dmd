@@ -1,16 +1,15 @@
-const Tom = require('test-runner').Tom
 const helpers = require('../helpers/helpers')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom()
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
-tom.test('no type, single-line description', function () {
+test.set('no type, single-line description', function () {
   const input = 'description'
   const result = helpers.parseType(input)
   a.deepEqual(result, { type: undefined, description: 'description' })
 })
 
-tom.test('no type, multi-line description', function () {
+test.set('no type, multi-line description', function () {
   const input = '1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield'
   const result = helpers.parseType(input)
   a.deepEqual(result, {
@@ -19,13 +18,13 @@ tom.test('no type, multi-line description', function () {
   })
 })
 
-tom.test('type, single-line description', function () {
+test.set('type, single-line description', function () {
   const input = '{string} description'
   const result = helpers.parseType(input)
   a.deepEqual(result, { type: 'string', description: ' description' })
 })
 
-tom.test('type, multi-line description', function () {
+test.set('type, multi-line description', function () {
   const input = '{boolean} 1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield'
   const result = helpers.parseType(input)
   a.deepEqual(result, {
@@ -34,7 +33,7 @@ tom.test('type, multi-line description', function () {
   })
 })
 
-tom.test('type, newline, multi-line description', function () {
+test.set('type, newline, multi-line description', function () {
   const input = '{boolean} \n1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield'
   const result = helpers.parseType(input)
   a.deepEqual(result, {
@@ -42,3 +41,5 @@ tom.test('type, newline, multi-line description', function () {
     description: ' \n1. David Jason\n2. Nicholas Lyndhurst\n3. Buster Merryfield'
   })
 })
+
+module.exports = { test, only, skip }

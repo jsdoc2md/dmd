@@ -1,10 +1,9 @@
-const Tom = require('test-runner').Tom
 const helpers = require('../helpers/helpers')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom()
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
-tom.test('_addGroup scope, cat', function () {
+test.set('_addGroup scope, cat', function () {
   const fixture = [
     { name: 'aaa', scope: 'global', cat: 'main' },
     { name: 'bbb', scope: 'global', cat: 'main' },
@@ -35,7 +34,7 @@ tom.test('_addGroup scope, cat', function () {
   a.deepEqual(result, expected)
 })
 
-tom.test('_groupBy scope, cat', function () {
+test.set('_groupBy scope, cat', function () {
   const fixture = [
     { name: 'aaa', scope: 'global', cat: 'main' },
     { name: 'bbb', scope: 'global', cat: 'main' },
@@ -73,7 +72,7 @@ tom.test('_groupBy scope, cat', function () {
   a.deepEqual(result, expected)
 })
 
-tom.test('_groupBy skips if only one group', function () {
+test.set('_groupBy skips if only one group', function () {
   const fixture = [
     { name: 'aaa', scope: 'global' },
     { name: 'bbb', scope: 'global' },
@@ -90,7 +89,7 @@ tom.test('_groupBy skips if only one group', function () {
   a.deepEqual(result, expected)
 })
 
-tom.test('_groupBy skips if only one group, where there are subgroups', function () {
+test.set('_groupBy skips if only one group, where there are subgroups', function () {
   const fixture = [
     { name: 'aaa', scope: 'global' },
     { name: 'bbb', scope: 'global', cat: 'yeah' },
@@ -107,3 +106,5 @@ tom.test('_groupBy skips if only one group, where there are subgroups', function
   const result = helpers._groupBy(fixture, ['scope', 'cat'])
   a.deepEqual(result, expected)
 })
+
+module.exports = { test, only, skip }

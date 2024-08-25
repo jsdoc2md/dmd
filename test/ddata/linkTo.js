@@ -1,8 +1,7 @@
-const Tom = require('test-runner').Tom
 const ddata = require('../../helpers/ddata')
 const a = require('assert').strict
 
-const tom = module.exports = new Tom('linkTo')
+const [test, only, skip] = [new Map(), new Map(), new Map()]
 
 function makeOptions (data) {
   return {
@@ -19,22 +18,24 @@ const options = makeOptions([
   { id: 'module:cjs/class~innerProp', longname: 'module:cjs/class~innerProp', name: 'innerProp' }
 ])
 
-tom.test('link', function () {
+test.set('link', function () {
   const result = ddata.link('module:handbrake-js~Handbrake', options)
   a.deepStrictEqual(result, { name: 'Handbrake', url: '#module_handbrake-js..Handbrake' })
 })
 
-tom.test('link2', function () {
+test.set('link2', function () {
   const result = ddata.link('module:cjs/class~innerProp', options)
   a.deepStrictEqual(result, { name: 'innerProp', url: '#module_cjs/class..innerProp' })
 })
 
-tom.test('url', function () {
+test.set('url', function () {
   const result = ddata.link('http://example.com', options)
   a.deepStrictEqual(result, { name: 'http://example.com', url: null })
 })
 
-tom.test('link3', function () {
+test.set('link3', function () {
   const result = ddata.link('clive', options)
   a.deepStrictEqual(result, { name: 'clive', url: null })
 })
+
+module.exports = { test, only, skip }
