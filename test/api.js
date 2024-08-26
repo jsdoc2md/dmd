@@ -27,4 +27,30 @@ test.set('dmd.async({ noCache }) returns correct data', async function () {
   a.ok(/is a class/.test(result))
 })
 
+test.set('Dmd issue #89 - Max callstack size exceeded bug', async function () {
+  const templateData = [
+    {
+      id: 'Foo',
+      longname: 'Foo',
+      name: 'Foo',
+      kind: 'class',
+      scope: 'global',
+      memberof: 'Foo',
+      thisvalue: undefined,
+      meta: {
+        lineno: 2,
+        filename: 'foo.js',
+        path: '/Users/lloyd/Documents/jsdoc2md/dmd/tmp/issue-89'
+      },
+      order: 0
+    }
+  ]
+  const options = {
+    files: [ 'foo.js' ],
+    template: '{{#class name="Foo"}}{{>docs}}{{/class}}\n',
+    noCache: true
+  }
+  a.doesNotReject(() => dmd(templateData, options))
+})
+
 module.exports = { test, only, skip }

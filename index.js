@@ -4,6 +4,7 @@ const DmdOptions = require('./lib/dmd-options')
 const dmdVersion = require('./package').version
 const FileSet = require('file-set')
 const os = require('os')
+const partialCache = require('./partials/partial-cache.js')
 
 /**
  * Transforms doclet data into markdown documentation.
@@ -77,8 +78,10 @@ async function generate (templateData, options) {
   state.templateData = templateData
   state.options = options
 
-  /* register all dmd partials. */
-  await registerPartials(path.resolve(__dirname, 'partials', '**', '*.hbs'))
+  /* register all internal dmd partials. */
+  for (const [name, content] of partialCache) {
+    handlebars.registerPartial(name, content)
+  }
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {

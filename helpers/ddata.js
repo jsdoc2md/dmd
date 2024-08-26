@@ -7,6 +7,8 @@ const where = require('test-value').where
 const flatten = require('reduce-flatten')
 const state = require('../lib/state')
 
+let malformedDataWarningIssued = false
+
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
  * @module
@@ -447,7 +449,6 @@ function _orphans (options) {
  */
 function _identifiers (options) {
   const query = {}
-
   for (const prop in options.hash) {
     if (/^-/.test(prop)) {
       query[prop.replace(/^-/, '!')] = options.hash[prop]
@@ -472,6 +473,15 @@ return the identifiers which are a `memberof` this one. Exclude externals withou
 */
 function _children (options) {
   if (!this.id) return []
+  if (this.id === this.memberof) {
+    if (!malformedDataWarningIssued) {
+      console.warn('Jsdoc data looks malformed. Typically, this can be fixed by ensuring the sourcecode file has a `@module tag`. ')
+      console.warn('Please see the "Document an ES2015 module" section in the wiki')
+      console.warn('https://github.com/jsdoc2md/jsdoc-to-markdown/wiki')
+      malformedDataWarningIssued = true
+    }
+    return []
+  }
   const min = options.hash.min
   delete options.hash.min
   options.hash.memberof = this.id
@@ -501,10 +511,10 @@ function descendants (options) {
   const output = []
   function iterate (childrenList) {
     if (childrenList.length) {
-      childrenList.forEach(function (child) {
+      for (const child of childrenList) {
         output.push(child)
         iterate(_children.call(child, options))
-      })
+      }
     }
   }
   iterate(_children.call(this, options))

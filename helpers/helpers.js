@@ -104,9 +104,10 @@ function tableRow () {
   const options = args.pop()
   const cols = args
   let output = ''
+  let data
 
   if (options.data) {
-    var data = handlebars.createFrame(options.data)
+    data = handlebars.createFrame(options.data)
     cols.forEach(function (col, index) {
       const colNumber = index + 1
       data['col' + colNumber] = containsData(rows, col)
@@ -305,12 +306,13 @@ function examples (options) {
   if (this.examples) {
     return this.examples.reduce(function (prev, example) {
       const lines = example.split(/\r\n|\r|\n/)
+      let exampleLangSubtag
 
       /* Process @lang */
       const exampleLangOptions = ddata.option('example-lang', options)
       let matches = lines[0].match(/@lang\s+(\w+)\s*/)
       if (matches) {
-        var exampleLangSubtag = matches[1]
+        exampleLangSubtag = matches[1]
         lines[0] = lines[0].replace(matches[0], '')
         if (lines[0].length === 0) {
           lines.splice(0, 1)
