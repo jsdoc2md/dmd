@@ -23,13 +23,13 @@
     "partials"
   ],
   "scripts": {
-    "test": "75lb-nature test-runner test/*.js test/ddata/*.js"
+    "test": "75lb-nature test-runner test/api.js test/grouping.js test/parseType.js test/plugin.js test/ddata/children.js test/ddata/globals.js test/ddata/linkTo.js test/ddata/list.js test/ddata/orphans.js test/ddata/parseLink.js test/ddata/return-sig.js test/ddata/type-link.js"
   },
   "dependencies": {
     "array-back": "^6.2.2",
     "cache-point": "^3.0.0",
     "common-sequence": "^2.0.2",
-    "file-set": "^6.0.0",
+    "file-set": "^6.0.1",
     "handlebars": "^4.7.8",
     "marked": "^14.0.0",
     "object-get": "^2.1.1",

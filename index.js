@@ -1,12 +1,9 @@
-/**
- * @module dmd
- */
-
 const path = require('path')
 const Cache = require('cache-point')
 const DmdOptions = require('./lib/dmd-options')
 const dmdVersion = require('./package').version
 const FileSet = require('file-set')
+const os = require('os')
 
 /**
  * Transforms doclet data into markdown documentation.
@@ -20,14 +17,17 @@ async function dmd (templateData, options) {
   if (skipCache(options)) {
     return generate(templateData, options)
   } else {
-    return dmd.cache.read([templateData, options, dmdVersion])
-      .catch(function () {
-        return generate(templateData, options)
-      })
+    try {
+      const result = await dmd.cache.read([templateData, options, dmdVersion])
+      return result
+    } catch (err) {
+      /* cache miss */
+      return generate(templateData, options)
+    }
   }
 }
 
-dmd.cache = new Cache({ dir: path.join(require('os').tmpdir(), 'dmd') })
+dmd.cache = new Cache({ dir: path.join(os.tmpdir(), 'dmd') })
 
 async function generate (templateData, options) {
   const fs = require('fs')
@@ -78,7 +78,7 @@ async function generate (templateData, options) {
   state.options = options
 
   /* register all dmd partials. */
-  await registerPartials(path.resolve(__dirname, './partials/**/*.hbs'))
+  await registerPartials(path.resolve(__dirname, 'partials', '**', '*.hbs'))
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {
