@@ -23,7 +23,8 @@
     "partials"
   ],
   "scripts": {
-    "test": "75lb-nature test-runner test/api.js test/grouping.js test/parseType.js test/plugin.js test/ddata/children.js test/ddata/globals.js test/ddata/linkTo.js test/ddata/list.js test/ddata/orphans.js test/ddata/parseLink.js test/ddata/return-sig.js test/ddata/type-link.js"
+    "test": "75lb-nature test-runner test/api.js test/grouping.js test/parseType.js test/plugin.js test/ddata/children.js test/ddata/globals.js test/ddata/linkTo.js test/ddata/list.js test/ddata/orphans.js test/ddata/parseLink.js test/ddata/return-sig.js test/ddata/type-link.js",
+    "partials": "node bin/generate-partial-cache.js > partials/partial-cache.js"
   },
   "dependencies": {
     "array-back": "^6.2.2",

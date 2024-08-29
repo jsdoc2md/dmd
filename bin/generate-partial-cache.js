@@ -1,6 +1,7 @@
 const FileSet = require('file-set')
 const fs = require('fs')
 const path = require('path')
+const util = require('util')
 
 const fileSet = new FileSet()
 
@@ -13,7 +14,7 @@ async function start () {
       fs.readFileSync(file, 'utf8') || ''
     )
   }
-  console.log('module.exports = ' + JSON.stringify(Array.from(map), null, '  '))
+  console.log('module.exports = ' + util.inspect(Array.from(map), { compact: false, maxStringLength: Infinity, maxArrayLength: Infinity }))
 }
 start()
 
