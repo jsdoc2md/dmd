@@ -1,10 +1,13 @@
 const path = require('path')
 const Cache = require('cache-point')
 const DmdOptions = require('./lib/dmd-options')
-const dmdVersion = require('./package').version
 const FileSet = require('file-set')
 const os = require('os')
+const fs = require('fs')
 const partialCache = require('./partials/partial-cache.js')
+
+const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, './package.json'), 'utf8'))
+const dmdVersion = pkg.version
 
 /**
  * Transforms doclet data into markdown documentation.
