@@ -213,13 +213,13 @@ test.set('multiple {@link(plain/code) someSymbol Caption here}', function () {
 })
 
 // {@link symbol catption} style
-const allLinksText = 'blah {@linkplain thingOne Caption one} blah {@linkcode ftp://url-two.tld Caption two} whatever {@link thingThree Caption three} !@ {@link https://url-four.com Caption four} ok '
+const allLinksText = 'blah {@linkplain thingOne Caption one} blah {@linkcode ftp://url-two.tld Caption two} whatever {@link thingThree Caption three} !@ {@link https://url-four.com Caption four} ok ' +
   // {@link symbol|caption} style
-  + '{@linkplain thingFive|caption five} nah {@linkcode git://url-six.com|caption six} ??? {@link thingSeven|caption seven} {@link https://url-eight.net|caption eight} @typedef '
+  '{@linkplain thingFive|caption five} nah {@linkcode git://url-six.com|caption six} ??? {@link thingSeven|caption seven} {@link https://url-eight.net|caption eight} @typedef ' +
   // [caption]{@link symbol} style
-  + '[caption nine]{@linkplain symbolNine} ach [caption ten]{@linkcode http://url.ten.com} 2434 [caption eleven]{@link symbolEleven} http://foo.com [caption twelve]{@link http://url.12.com} whawha'
+  '[caption nine]{@linkplain symbolNine} ach [caption ten]{@linkcode http://url.ten.com} 2434 [caption eleven]{@link symbolEleven} http://foo.com [caption twelve]{@link http://url.12.com} whawha' +
   // {@link symbol} style
-  + '{@linkplain symbolThirteen} fee {@linkcode proto://fourteen.asbf} blb {@link symbolFifteen} geez {@link telnet://16.123.123.123}'
+  '{@linkplain symbolThirteen} fee {@linkcode proto://fourteen.asbf} blb {@link symbolFifteen} geez {@link telnet://16.123.123.123}'
 
 const cleverLinksResults = [
   {
@@ -238,7 +238,7 @@ const cleverLinksResults = [
     original: '{@link thingThree Caption three}',
     caption: 'Caption three',
     url: 'thingThree',
-    format: 'code',
+    format: 'code'
   },
   {
     original: '{@link https://url-four.com Caption four}',
@@ -262,7 +262,7 @@ const cleverLinksResults = [
     original: '{@link thingSeven|caption seven}',
     caption: 'caption seven',
     url: 'thingSeven',
-    format: 'code',
+    format: 'code'
   },
   {
     original: '{@link https://url-eight.net|caption eight}',
@@ -298,7 +298,7 @@ const cleverLinksResults = [
     original: '{@linkplain symbolThirteen}',
     caption: 'symbolThirteen',
     url: 'symbolThirteen',
-    format: 'plain',
+    format: 'plain'
   },
   {
     original: '{@linkcode proto://fourteen.asbf}',
@@ -320,15 +320,15 @@ const cleverLinksResults = [
   }
 ]
 
-test.set("'clever-links' true, 'monospace-links' undefined", function() {
+test.set("'clever-links' true, 'monospace-links' undefined", function () {
   a.deepEqual(ddata.parseLink(allLinksText, { 'clever-links': true }), cleverLinksResults)
 })
 
-test.set("'clever-links' true overrides 'monospace-links' true", function() {
+test.set("'clever-links' true overrides 'monospace-links' true", function () {
   a.deepEqual(ddata.parseLink(allLinksText, { 'clever-links': true, 'monospace-links': true }), cleverLinksResults)
 })
 
-test.set("'monospace-links' set all {@link}s to 'code' format", function() {
+test.set("'monospace-links' set all {@link}s to 'code' format", function () {
   const monospaceLinkResults = cleverLinksResults.map((result) => {
     const newResult = Object.assign({}, result)
     if (!/@link(?:code|plain)/.test(result.original)) {

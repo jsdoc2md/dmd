@@ -4,11 +4,22 @@ const handlebars = require('handlebars')
 const { marked } = require('marked')
 const objectGet = require('object-get')
 const where = require('test-value').where
-const flatten = require('reduce-flatten')
 const state = require('../lib/state')
-const urlRe = require('regex-repo').urlRe
 
 let malformedDataWarningIssued = false
+
+function isValidURL (url) {
+  try {
+    new URL(url)
+    return true
+  } catch (err) {
+    if (err.code === 'ERR_INVALID_URL') {
+      return false
+    } else {
+      throw err
+    }
+  }
+}
 
 /**
  * ddata is a collection of handlebars helpers for working with the documentation data output by [jsdoc-parse](https://github.com/75lb/jsdoc-parse).
@@ -268,7 +279,7 @@ function returnSig2 (options) {
       if (typeNames.length) {
         return options.fn({
           symbol: '⇒',
-          types: typeNames.reduce(flatten, [])
+          types: typeNames.flat()
         })
       } else {
         return options.fn({
@@ -338,7 +349,7 @@ function sig (options) {
           return name
         })
       if (typeNames.length) {
-        data.returnTypes = typeNames.reduce(flatten, [])
+        data.returnTypes = typeNames.flat()
       }
     } else if ((this.type || this.kind === 'namespace') && this.kind !== 'event') {
       data.returnSymbol = ':'
@@ -649,7 +660,7 @@ function parseLink (text, dmdOptions = {}) {
       original: matches[0],
       caption: matches[3],
       url: matches[2],
-      format: matches[1] 
+      format: matches[1]
     })
     text = text.replace(matches[0], ' '.repeat(matches[0].length))
   }
@@ -677,13 +688,13 @@ function parseLink (text, dmdOptions = {}) {
   results.forEach((result) => {
     const format = result.format
     if (format === undefined) {
-      result.format = format // if tag is @linkplain or @linkcode, then that determines the format
+      result.format = format || // if tag is @linkplain or @linkcode, then that determines the format
         // else, if 'clever-links' is true, then if the link is a URL, it's plain, otherwise code format
-        || (dmdOptions['clever-links'] && (urlRe.test(result.url) ? 'plain' : 'code'))
+        (dmdOptions['clever-links'] && (isValidURL(result.url) ? 'plain' : 'code')) ||
         // else, if 'monospace-links' is true, then all links are code format
-        || (dmdOptions['monospace-links'] && 'code')
+        (dmdOptions['monospace-links'] && 'code') ||
         // else, it's a plain
-        || 'plain'
+        'plain'
     }
   })
 

@@ -46,7 +46,7 @@ test.set('Dmd issue #89 - Max callstack size exceeded bug', async function () {
     }
   ]
   const options = {
-    files: [ 'foo.js' ],
+    files: ['foo.js'],
     template: '{{#class name="Foo"}}{{>docs}}{{/class}}\n',
     noCache: true
   }

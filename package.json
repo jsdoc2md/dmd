@@ -34,15 +34,20 @@
     "handlebars": "^4.7.8",
     "marked": "^14.1.0",
     "object-get": "^2.1.1",
-    "reduce-flatten": "^3.0.1",
     "reduce-unique": "^2.0.1",
-    "reduce-without": "^1.0.1",
-    "regex-repo": "^5.0.0",
     "test-value": "^3.0.0",
     "walk-back": "^5.1.1"
   },
   "devDependencies": {
     "dmd-plugin-example": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@75lb/nature": "latest"
+  },
+  "peerDependenciesMeta": {
+    "@75lb/nature": {
+      "optional": true
+    }
   },
   "standard": {
     "ignore": [

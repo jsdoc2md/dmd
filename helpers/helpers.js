@@ -4,7 +4,6 @@ const handlebars = require('handlebars')
 const util = require('util')
 const commonSequence = require('common-sequence')
 const unique = require('reduce-unique')
-const without = require('reduce-without')
 
 /**
 A library of helpers used exclusively by dmd.. dmd also registers helpers from ddata.
@@ -202,7 +201,7 @@ function _groupBy (identifiers, groupByFields) {
       })
       .map(function (i) { return i[group] })
       .reduce(unique, [])
-    if (groupValues.length <= 1) groupByFields = groupByFields.reduce(without(group), [])
+    if (groupValues.length <= 1) groupByFields = groupByFields.filter(g => g !== group)
   })
   identifiers = _addGroup(identifiers, groupByFields)
 
