@@ -36,6 +36,7 @@
     "reduce-flatten": "^3.0.1",
     "reduce-unique": "^2.0.1",
     "reduce-without": "^1.0.1",
+    "regex-repo": "^5.0.0",
     "test-value": "^3.0.0",
     "walk-back": "^5.1.1"
   },
