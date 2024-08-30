@@ -35,7 +35,6 @@
     "marked": "^14.1.0",
     "object-get": "^2.1.1",
     "reduce-unique": "^2.0.1",
-    "test-value": "^3.0.0",
     "walk-back": "^5.1.1"
   },
   "devDependencies": {

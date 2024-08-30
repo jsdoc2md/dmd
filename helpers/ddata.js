@@ -3,7 +3,6 @@ const util = require('util')
 const handlebars = require('handlebars')
 const { marked } = require('marked')
 const objectGet = require('object-get')
-const where = require('test-value').where
 const state = require('../lib/state')
 
 let malformedDataWarningIssued = false
@@ -400,7 +399,7 @@ returns true if the parent of the current identifier is a class
 @static
 */
 function isClassMember (options) {
-  const parent = arrayify(options.data.root).find(where({ id: this.memberof }))
+  const parent = arrayify(options.data.root).find(i => i.id === this.memberof)
   if (parent) {
     return parent.kind === 'class'
   }
@@ -462,15 +461,15 @@ function _orphans (options) {
 function _identifiers (options) {
   const query = {}
   for (const prop in options.hash) {
-    if (/^-/.test(prop)) {
-      query[prop.replace(/^-/, '!')] = options.hash[prop]
-    } else if (/^_/.test(prop)) {
-      query[prop.replace(/^_/, '')] = new RegExp(options.hash[prop])
-    } else {
-      query[prop] = options.hash[prop]
-    }
+    query[prop] = options.hash[prop]
   }
-  return arrayify(options.data.root).filter(where(query)).filter(function (doclet) {
+  return arrayify(options.data.root)
+    .filter(doclet => {
+      return Object.keys(query).every(prop => {
+        return doclet[prop] === query[prop]
+      })
+    })
+    .filter(function (doclet) {
     return !doclet.ignore && (state.options.private ? true : doclet.access !== 'private')
   })
 }
@@ -540,7 +539,7 @@ returns the exported identifier of this module
 @static
 */
 function exported (options) {
-  const exp = arrayify(options.data.root).find(where({ '!kind': 'module', id: this.id }))
+  const exp = arrayify(options.data.root).find(d => d.kind !== 'module' && d.id === this.id)
   return exp || this
 }
 
@@ -557,7 +556,7 @@ Returns the parent
 @static
 */
 function parentObject (options) {
-  return arrayify(options.data.root).find(where({ id: this.memberof }))
+  return arrayify(options.data.root).find(d => d.id === this.memberof)
 }
 
 /**
@@ -722,7 +721,7 @@ function parentName (options) {
   if (this.isExported) return ''
 
   if (this.memberof && this.kind !== 'constructor') {
-    const parent = arrayify(options.data.root).find(where({ id: this.memberof }))
+    const parent = arrayify(options.data.root).find(d => d.id === this.memberof)
     if (parent) {
       if (this.scope === 'instance') {
         const name = parent.typicalname || parent.name
