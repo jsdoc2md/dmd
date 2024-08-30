@@ -53,4 +53,11 @@ test.set('Dmd issue #89 - Max callstack size exceeded bug', async function () {
   a.doesNotReject(() => dmd(templateData, options))
 })
 
+test.set('dmd.async({ noCache }) with custom line endings', async function () {
+  const options = { noCache: true, EOL: 'win32' }
+  const result = await dmd(fixture, options)
+  a.equal(result, '<a name="someclass"></a>\r\n\r\n## someclass\r\nis a class\r\n\r\n')
+})
+
+
 module.exports = { test, only, skip }

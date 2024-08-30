@@ -121,8 +121,14 @@ async function generate (templateData, options) {
   })
   templateData.options = options
   const output = compiled(templateData)
-  dmd.cache.writeSync([inputData, inputOptions, dmdVersion], output)
-  return output
+
+  let adjOutput = output
+  if (options.EOL) {
+    adjOutput = output.replace(/\r?\n/gm, options.EOL === 'posix' ? '\n' : '\r\n')
+  }
+
+  dmd.cache.writeSync([inputData, inputOptions, dmdVersion], adjOutput)
+  return adjOutput
 }
 
 /* always skip the cache when custom plugins, partials or helpers are used */
