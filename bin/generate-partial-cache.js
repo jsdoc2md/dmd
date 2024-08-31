@@ -8,7 +8,7 @@ const fileSet = new FileSet()
 async function start () {
   await fileSet.add('./partials/**/*.hbs')
   const map = new Map()
-  for (const file of fileSet.files) {
+  for (const file of fileSet.files.sort()) {
     map.set(
       path.basename(file, '.hbs'),
       fs.readFileSync(file, 'utf8') || ''

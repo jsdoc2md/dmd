@@ -1,8 +1,11 @@
-'use strict'
+const overrides = {
+  inlineLinks: function (text, options) {
+    return 'get me?'
+  },
 
-exports.inlineLinks = inlineLinks
-
-/* override inlineLinks */
-function inlineLinks (text, options) {
-  return 'get me?'
+  orphans: function () {
+    return 'whatever'
+  }
 }
+
+module.exports = overrides

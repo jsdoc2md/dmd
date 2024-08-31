@@ -17,7 +17,6 @@ exports.misc = misc
 
 /**
  * render the supplied block for each identifier in the query
- * @static
  */
 function identifiers (options) {
   return handlebars.helpers.each(ddata._identifiers(options), options)
@@ -25,7 +24,6 @@ function identifiers (options) {
 
 /**
  * render the supplied block for the specified identifier
- * @static
  */
 function identifier (options) {
   const result = ddata._identifier(options)
@@ -34,7 +32,6 @@ function identifier (options) {
 
 /**
  * render the supplied block for each parent (global identifier, or module)
- * @static
  */
 function orphans (options) {
   return handlebars.helpers.each(ddata._orphans(options), options)
@@ -42,7 +39,6 @@ function orphans (options) {
 
 /**
  * render the supplied block for each identifier in global scope
- * @static
  */
 function globals (options) {
   return handlebars.helpers.each(ddata._globals(options), options)
@@ -50,7 +46,6 @@ function globals (options) {
 
 /**
  * render the supplied block for each module
- * @static
  */
 function modules (options) {
   options.hash.kind = 'module'
@@ -59,7 +54,6 @@ function modules (options) {
 
 /**
  * render the supplied block for the specified module
- * @static
  */
 function module (options) {
   options.hash.kind = 'module'
@@ -69,7 +63,6 @@ function module (options) {
 
 /**
  * render the block for each class
- * @static
  */
 function classes (options) {
   options.hash.kind = 'class'
@@ -87,7 +80,6 @@ function class_ (options) {
 
 /**
  * render the block for each function/method
- * @static
  */
 function functions (options) {
   options.hash.kind = 'function'
@@ -123,7 +115,6 @@ function enum_ (options) {
 
 /**
  * render the supplied block for each orphan with no scope set
- * @static
  */
 function misc (options) {
   options.hash.scope = undefined

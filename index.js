@@ -1,22 +1,26 @@
 const path = require('path')
+const fs = require('fs')
 const Cache = require('cache-point')
 const DmdOptions = require('./lib/dmd-options')
 const FileSet = require('file-set')
 const os = require('os')
-const fs = require('fs')
 const partialCache = require('./partials/partial-cache.js')
+const handlebars = require('handlebars')
+const arrayify = require('array-back')
+const walkBack = require('walk-back')
+const HandlebarsTemplate = require('./lib/handlebars-template.js')
 
 const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, './package.json'), 'utf8'))
 const dmdVersion = pkg.version
 
 /**
- * Transforms doclet data into markdown documentation.
+ * Transforms jsdoc-parse data into markdown documentation.
  * @param {object[]}
  * @param [options] {module:dmd-options} - The render options
  * @return {Promise<string>}
  * @alias module:dmd
  */
-async function dmd (templateData, options) {
+async function dmd (templateData = [], options) {
   options = new DmdOptions(options)
   if (skipCache(options)) {
     return generate(templateData, options)
@@ -31,60 +35,47 @@ async function dmd (templateData, options) {
   }
 }
 
+/* Expose cache so `jsdoc2md --clear` command can access it */
 dmd.cache = new Cache({ dir: path.join(os.tmpdir(), 'dmd') })
 
+async function loadPartialFiles (paths) {
+  const fileSet = new FileSet()
+  await fileSet.add(paths)
+  return fileSet.files.map(file => {
+    return [
+      path.basename(file, '.hbs'),
+      fs.readFileSync(file, 'utf8') || ''
+    ]
+  })
+}
+
+async function loadHelperFiles (helpers) {
+  const fileSet = new FileSet()
+  await fileSet.add(helpers)
+  return fileSet.files.map(file => {
+    return require(path.resolve(process.cwd(), file))
+  })
+}
+
 async function generate (templateData, options) {
-  const fs = require('fs')
-  const path = require('path')
-  const arrayify = require('array-back')
-  const handlebars = require('handlebars')
-  const walkBack = require('walk-back')
-  const DmdOptions = require('./lib/dmd-options')
+  const handlebarsTemplate = new HandlebarsTemplate()
 
-  async function registerPartials (paths) {
-    const fileSet = new FileSet()
-    await fileSet.add(paths)
-    for (const file of fileSet.files) {
-      handlebars.registerPartial(
-        path.basename(file, '.hbs'),
-        fs.readFileSync(file, 'utf8') || ''
-      )
-    }
-  }
-
-  async function registerHelpers (helpers) {
-    const fileSet = new FileSet()
-    await fileSet.add(helpers)
-    for (const file of fileSet.files) {
-      handlebars.registerHelper(require(path.resolve(process.cwd(), file)))
-    }
-  }
-
-  /* Register handlebars helper modules */
-  ;['./helpers/helpers', './helpers/ddata', './helpers/selectors'].forEach(function (modulePath) {
-    handlebars.registerHelper(require(modulePath))
-  })
-
-  const inputData = templateData.map(function (row) {
-    return Object.assign({}, row)
-  })
+  /* Copy input data */
+  const inputData = templateData.map(row => Object.assign({}, row))
   const inputOptions = Object.assign({}, options)
 
-  templateData = arrayify(templateData)
   options = Object.assign(new DmdOptions(), options)
   options.plugin = arrayify(options.plugin)
+  /* used by helpers.headingDepth */
   options._depth = 0
+  /* used by helpers.indexDepth */
   options._indexDepth = 0
+  templateData.options = options
 
-  /* state module, for sharing with the helpers */
+  /* state module, for sharing data between the helpers - functions as a global object */
   const state = require('./lib/state')
   state.templateData = templateData
   state.options = options
-
-  /* register all internal dmd partials. */
-  for (const [name, content] of partialCache) {
-    handlebars.registerPartial(name, content)
-  }
 
   /* if plugins were specified, register the helpers/partials from them too */
   if (options.plugin) {
@@ -111,24 +102,28 @@ async function generate (templateData, options) {
     }
   }
 
-  /* if additional partials/helpers paths were specified, register them too */
-  if (options.partial.length) await registerPartials(options.partial)
-  if (options.helper.length) await registerHelpers(options.helper)
-
-  const compiled = handlebars.compile(options.template, {
-    preventIndent: true,
-    strict: false
-  })
-  templateData.options = options
-  const output = compiled(templateData)
-
-  let adjOutput = output
-  if (options.EOL) {
-    adjOutput = output.replace(/\r?\n/gm, options.EOL === 'posix' ? '\n' : '\r\n')
+  /* register all internal and external dmd partials. */
+  const internalPartials = Array.from(partialCache)
+  const externalPartials = await loadPartialFiles(options.partial)
+  for (const [name, content] of [...internalPartials, ...externalPartials]) {
+    handlebars.registerPartial(name, content)
   }
 
-  dmd.cache.writeSync([inputData, inputOptions, dmdVersion], adjOutput)
-  return adjOutput
+  /* Register internal helpers first so they can be overriden by user-defined helpers */
+  const internalHelpers = [require('./helpers/helpers.js'), require('./helpers/ddata.js'), require('./helpers/selectors.js')]
+  const externalHelpers = await loadHelperFiles(options.helper)
+  for (const helper of [...internalHelpers, ...externalHelpers]) {
+    handlebarsTemplate.handlebars.registerHelper(helper)
+  }
+
+  let output = handlebarsTemplate.generate(options.template, templateData)
+
+  if (options.EOL) {
+    output = output.replace(/\r?\n/gm, options.EOL === 'posix' ? '\n' : '\r\n')
+  }
+
+  dmd.cache.writeSync([inputData, inputOptions, dmdVersion], output)
+  return output
 }
 
 /* always skip the cache when custom plugins, partials or helpers are used */

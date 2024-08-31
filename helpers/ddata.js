@@ -739,85 +739,51 @@ function parentName (options) {
 
 /**
 returns a dmd option, e.g. "sort-by", "heading-depth" etc.
-@static
 */
 function option (name, options) {
   return objectGet(options.data.root.options, name)
 }
 
-/**
-@static
-*/
 function optionEquals (name, value, options) {
   return options.data.root.options[name] === value
 }
 
-/**
-@static
-*/
 function optionSet (name, value, options) {
   options.data.root.options[name] = value
 }
 
-/**
-@static
-*/
 function optionIsSet (name, options) {
   return options.data.root.options[name] !== undefined
 }
 
-/**
-@static
-*/
 function stripNewlines (input) {
   if (input) return input.replace(/[\r\n]+/g, ' ')
 }
 
-/**
-@static
-*/
 function headingDepth (options) {
   return options.data.root.options._depth + (options.data.root.options['heading-depth'])
 }
 
-/**
-@static
-*/
 function depth (options) {
   return options.data.root.options._depth
 }
 
-/**
-@static
-*/
 function depthIncrement (options) {
   options.data.root.options._depth++
 }
 
-/**
-@static
-*/
 function depthDecrement (options) {
   options.data.root.options._depth--
 }
 
-/**
-@static
-*/
 function indexDepth (options) {
   return options.data.root.options._indexDepth
 }
 
-/**
-@static
-*/
 function indexDepthIncrement (options) {
   options.data.root.options._indexDepth++
 }
 
-/**
-@static
-*/
 function indexDepthDecrement (options) {
   options.data.root.options._indexDepth--
 }
