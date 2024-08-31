@@ -470,8 +470,8 @@ function _identifiers (options) {
       })
     })
     .filter(function (doclet) {
-    return !doclet.ignore && (state.options.private ? true : doclet.access !== 'private')
-  })
+      return !doclet.ignore && (state.options.private ? true : doclet.access !== 'private')
+    })
 }
 
 /**

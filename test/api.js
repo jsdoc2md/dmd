@@ -59,5 +59,4 @@ test.set('dmd.async({ noCache }) with custom line endings', async function () {
   a.equal(result, '<a name="someclass"></a>\r\n\r\n## someclass\r\nis a class\r\n\r\n')
 })
 
-
 module.exports = { test, only, skip }

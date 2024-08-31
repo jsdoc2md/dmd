@@ -30,9 +30,9 @@
     "array-back": "^6.2.2",
     "cache-point": "^3.0.0",
     "common-sequence": "^2.0.2",
-    "file-set": "^5.2.0",
+    "file-set": "^5.2.2",
     "handlebars": "^4.7.8",
-    "marked": "^14.1.0",
+    "marked": "^4.3.0",
     "object-get": "^2.1.1",
     "reduce-unique": "^2.0.1",
     "walk-back": "^5.1.1"
@@ -50,9 +50,9 @@
   },
   "standard": {
     "ignore": [
-      "example",
       "test/fixture",
-      "test/overrides"
+      "test/overrides",
+      "tmp"
     ]
   }
 }
