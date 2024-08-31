@@ -14,6 +14,10 @@ const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, './package.json')
 const dmdVersion = pkg.version
 
 /**
+ * @module dmd
+ */
+
+/**
  * Transforms jsdoc-parse data into markdown documentation.
  * @param {object[]}
  * @param [options] {module:dmd-options} - The render options
@@ -64,12 +68,11 @@ async function generate (templateData, options) {
   const inputData = templateData.map(row => Object.assign({}, row))
   const inputOptions = Object.assign({}, options)
 
-  options = Object.assign(new DmdOptions(), options)
-  options.plugin = arrayify(options.plugin)
   /* used by helpers.headingDepth */
   options._depth = 0
   /* used by helpers.indexDepth */
   options._indexDepth = 0
+  /* This gives all helper code access to the dmd options */
   templateData.options = options
 
   /* state module, for sharing data between the helpers - functions as a global object */

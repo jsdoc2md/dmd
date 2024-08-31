@@ -4,3 +4,10 @@ module.exports = function(options){
         helper: __dirname + "/../helper/*.js"
     };
 };
+
+/*
+Command to test this plugin:
+
+jsdoc2md --plugin test/fixture/dmd-plugin-example/lib/dmd-plugin-example.js --files index.js
+ */
+
