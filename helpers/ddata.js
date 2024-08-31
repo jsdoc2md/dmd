@@ -2,7 +2,6 @@ const arrayify = require('array-back')
 const util = require('util')
 const handlebars = require('handlebars')
 const { marked } = require('marked')
-const objectGet = require('object-get')
 const state = require('../lib/state')
 
 let malformedDataWarningIssued = false
@@ -741,7 +740,15 @@ function parentName (options) {
 returns a dmd option, e.g. "sort-by", "heading-depth" etc.
 */
 function option (name, options) {
-  return objectGet(options.data.root.options, name)
+  /* name could potentially be an object accessor like `memberIndex.minDescendants` */
+  const nameSplit = name.split('.')
+  if (nameSplit.length === 1) {
+    return options.data.root.options[name]
+  } else if (nameSplit.length === 2) {
+    return options.data.root.options[nameSplit[0]] && options.data.root.options[nameSplit[0]][nameSplit[1]]
+  } else {
+    throw new Error('Invalid option name: ' + name)
+  }
 }
 
 function optionEquals (name, value, options) {
