@@ -496,9 +496,12 @@ function _children (options) {
   delete options.hash.min
   options.hash.memberof = this.id
   let output = _identifiers(options)
-  output = output.filter(function (identifier) {
+  output = output.filter(identifier => {
     if (identifier.kind === 'external') {
       return identifier.description && identifier.description.length > 0
+    /* @hideconstructor support: https://github.com/jsdoc2md/dmd/issues/94 */
+    } else if (this.hideconstructor === true) {
+      return identifier.kind !== 'constructor'
     } else {
       return true
     }
