@@ -5,7 +5,6 @@ const DmdOptions = require('./lib/dmd-options')
 const FileSet = require('file-set')
 const os = require('os')
 const partialCache = require('./partials/partial-cache.js')
-const handlebars = require('handlebars')
 const arrayify = require('array-back')
 const walkBack = require('walk-back')
 const HandlebarsTemplate = require('./lib/handlebars-template.js')
@@ -61,7 +60,18 @@ async function loadHelperFiles (helpers) {
   })
 }
 
+function validateIncomingTemplateData (templateData) {
+  const moduleTagRequired = templateData.filter(d => d.id === 'module.exports' && d.memberof === 'module')
+  if (moduleTagRequired.length) {
+    for (const doclet of moduleTagRequired) {
+      console.warn(`Module tag required in this file: ${doclet.meta.path}${path.sep}${doclet.meta.filename}`)
+      console.warn('See the wiki for an explanation: https://github.com/jsdoc2md/jsdoc-to-markdown/wiki/How-to-document-an-ES2015-module-(single-default-export)')
+    }
+  }
+}
+
 async function generate (templateData, options) {
+  validateIncomingTemplateData(templateData)
   const handlebarsTemplate = new HandlebarsTemplate()
 
   /* Copy input data */
@@ -109,7 +119,7 @@ async function generate (templateData, options) {
   const internalPartials = Array.from(partialCache)
   const externalPartials = await loadPartialFiles(options.partial)
   for (const [name, content] of [...internalPartials, ...externalPartials]) {
-    handlebars.registerPartial(name, content)
+    handlebarsTemplate.handlebars.registerPartial(name, content)
   }
 
   /* Register internal helpers first so they can be overriden by user-defined helpers */
