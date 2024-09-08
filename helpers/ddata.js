@@ -483,7 +483,7 @@ return the identifiers which are a `memberof` this one. Exclude externals withou
 */
 function _children (options) {
   if (!this.id) return []
-  if (this.id === this.memberof) {
+  if (this.id && this.memberof && this.id === this.memberof) {
     if (!malformedDataWarningIssued) {
       console.warn('Jsdoc data looks malformed. Typically, this can be fixed by ensuring the sourcecode file has a `@module tag`. ')
       console.warn('Please see the "Document an ES2015 module" section in the wiki')
