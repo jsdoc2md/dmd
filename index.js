@@ -133,6 +133,9 @@ async function generate (templateData, options) {
 
   if (options.EOL) {
     output = output.replace(/\r?\n/gm, options.EOL === 'posix' ? '\n' : '\r\n')
+    /* Additional check for naked \r characters created by jsdoc */
+    /* See: https://github.com/jsdoc2md/dmd/issues/102 */
+    output = output.replace(/\r(?!\n)/g, options.EOL === 'posix' ? '\n' : '\r\n')
   }
 
   dmd.cache.writeSync([inputData, inputOptions, dmdVersion], output)
