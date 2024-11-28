@@ -74,7 +74,9 @@ module.exports = [
   ],
   [
     'deprecated',
-    '{{#if deprecated}}***Deprecated***\n\n{{/if~}}'
+    '{{#if deprecated}}{{#if (equal deprecated true)}}***Deprecated***{{else}}***{{deprecated}}***{{/if}}\n' +
+      '\n' +
+      '{{/if~}}\n'
   ],
   [
     'description',

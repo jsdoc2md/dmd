@@ -12,7 +12,6 @@ exports.inlineLinks = inlineLinks
 exports.tableHead = tableHead
 exports.tableHeadHtml = tableHeadHtml
 exports.tableRow = tableRow
-exports.deprecated = deprecated
 exports.groupBy = groupBy
 exports._groupBy = _groupBy
 exports._addGroup = _addGroup
@@ -150,21 +149,6 @@ function tableHeadHtml () {
   return colHeaders
 }
 
-function deprecated (options) {
-  if (this.deprecated) {
-    if (ddata.optionEquals('no-gfm', true, options) || options.hash['no-gfm']) {
-      return '<del>' + options.fn(this) + '</del>'
-    } else {
-      return '~~' + options.fn(this) + '~~'
-    }
-  } else {
-    return options.fn(this)
-  }
-}
-
-/**
-
-*/
 function groupBy (groupByFields, options) {
   groupByFields = arrayify(groupByFields)
   return handlebars.helpers.each(_groupChildren.call(this, groupByFields, options), options)
